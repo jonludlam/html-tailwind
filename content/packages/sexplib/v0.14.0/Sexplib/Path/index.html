@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head><title>Path (packages.sexplib.v0.14.0.Sexplib.Path)</title>
+  <link rel="stylesheet" href="../../../../tailwind.css"/>
+  <link rel="stylesheet" href="../../../../extra.css"/>
+  <meta charset="utf-8"/><meta name="generator" content="odoc 3dfb7aef2f"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <script src="../../../../highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="../../../../voodoo_client.js"></script>
+  <script
+   src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+   defer="defer">
+  </script>
+ </head>
+ <body class="mx-auto max-w-screen-2xl">
+  <div class="relative">
+   <div class="relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+     <div class="flex justify-between items-center md:justify-start py-6
+      md:space-x-10">
+      <div class="flex justify-start">
+       <a href="https://v3.ocaml.org/">
+        <img src="/colour-logo.svg" alt="" class="h-8 w-auto sm:h-10"/>
+       </a>
+      </div>
+      <nav class="hidden md:flex space-x-10">
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Industry</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/whatisocaml">
+            <p class="text-base font-medium text-gray-900">What is OCaml</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/users">
+            <p class="text-base font-medium text-gray-900">Industrial Users
+            </p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/successstories">
+            <p class="text-base font-medium text-gray-900">Success Stories
+            </p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Resources</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/releases">
+            <p class="text-base font-medium text-gray-900">Releases</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/applications">
+            <p class="text-base font-medium text-gray-900">Applications</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/language">
+            <p class="text-base font-medium text-gray-900">Language</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/archive">
+            <p class="text-base font-medium text-gray-900">Archive</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Community</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/opportunities">
+            <p class="text-base font-medium text-gray-900">Opportunities</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/news">
+            <p class="text-base font-medium text-gray-900">News</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/aroundweb">
+            <p class="text-base font-medium text-gray-900">Around the Web</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="h-screen flex bg-white font-sans">
+   <div class="flex flex-col w-full h-full">
+    <div class="flex-row flex-1">
+     <nav class="bg-orange border-t border-b border-orange flex flex-row">
+      <ol class="max-w-screen-xl w-full px-4 flex space-x-4 sm:px-6 lg:px-8">
+       <li class="flex">
+        <div class="flex items-center">
+         <a href="#" class="text-gray-100 hover:text-gray-500">
+          
+  <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+        </svg>
+  
+          <span class="sr-only">Home</span>
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">packages
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">sexplib
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">v0.14.0
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">Sexplib
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="#" class="ml-4 text-sm font-medium text-gray-100
+          hover:text-gray-500">Path
+         </a>
+        </div>
+       </li>
+      </ol>
+     </nav>
+    </div>
+    <div class="flex flex-row flex-1">
+     <div class="w-72 flex-none bg-gray-100 h-screen border-r border-gray-200
+      sticky top-0 hidden lg:block">
+      <div class="flex h-20 border-b relative">
+       <h2 class="text-xl absolute inset-x-0 p-3 px-5 bottom-0 mt-7
+        border-gray-200 font-semibold text-gray-500 font-sans">On this page
+       </h2>
+      </div>
+      <nav class="bg-gray-100 p-5">
+       <ul>
+        <li><a href="#types" class="cursor-pointer text-orange">Types</a>
+        </li>
+        <li>
+         <a href="#high-level-functions" class="cursor-pointer text-orange">
+          High-level functions
+         </a>
+        </li>
+        <li>
+         <a href="#low-level-functions" class="cursor-pointer text-orange">
+          Low-level functions
+         </a>
+        </li>
+       </ul>
+      </nav>
+     </div>
+     <div class="flex flex-1 flex-col lg:flex-row">
+      <div class="flex-1">
+       <div class="lg:max-w-5xl mx-auto px-3 lg:px-10 mb-10 text-sm">
+        <div class="flex h-20 relative border-b border-gray-200">
+         <div class="relative flex-1 h-20">
+          <h1 class="text-3xl absolute inset-x-0 py-3 bottom-0 font-semibold
+           text-gray-500 font-sans w-full truncate">
+           <code class="font-mono text-gray-800">Sexplib.Path</code>
+          </h1>
+         </div>
+         <div class="relative flex-none w-28">
+          <h1 class="text-3xl absolute py-3 bottom-0 right-0 font-semibold
+           text-gray-500 font-sans">Module
+          </h1>
+         </div>
+        </div>
+        <p class="mt-4">Path: Module for Substitutions within S-expressions
+        </p>
+        <h6 class="text-gray-800 font-sans anchored" id="types">
+         <a href="#types" class="hover-link inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Types
+        </h6>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-el">
+          <a href="#type-el" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> el</span>
+           <span> = </span>
+          </code>
+          <table>
+           <tr id="type-el.Pos">
+            <td class="anchored pl-4">
+             <a href="#type-el.Pos" class="hover-link inline-block -ml-7
+              pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pos</span> 
+               <span class="font-semibold">of</span> int
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>
+             <code class="font-normal text-sm">Pos n</code> denotes 
+             <code class="font-normal text-sm">n</code>th element in 
+             a tuple<span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-el.Match">
+            <td class="anchored pl-4">
+             <a href="#type-el.Match" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Match</span> 
+               <span class="font-semibold">of</span> string * int
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>
+             <code class="font-normal text-sm">Match (tag, n)</code> 
+             denotes <code class="font-normal text-sm">n</code>th argument
+              of sum matching <code class="font-normal text-sm">tag</code>
+             <span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-el.Rec">
+            <td class="anchored pl-4">
+             <a href="#type-el.Rec" class="hover-link inline-block -ml-7
+              pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Rec</span> 
+               <span class="font-semibold">of</span> string
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>
+             <code class="font-normal text-sm">Rec name</code> denotes
+              the record field having 
+             <code class="font-normal text-sm">name</code>
+             <span class="sr-only">*)</span>
+            </td>
+           </tr>
+          </table>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Type of substitution elements</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-t">
+          <a href="#type-t" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> t</span>
+           <span> = 
+            <span>
+             <a href="#type-el" class="cursor-pointer text-orange">el</a>
+              list
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc"><p class="mt-4">Type of substitution paths</p>
+         </div>
+        </div>
+        <h6 class="text-gray-800 font-sans anchored"
+         id="high-level-functions">
+         <a href="#high-level-functions" class="hover-link inline-block 
+          -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>High-level functions
+        </h6>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-parse">
+          <a href="#val-parse" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> parse : 
+            <span>string <span class="">&#45;&gt;</span></span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">parse str</code> 
+          </p>
+          <ul class="at-tags">
+           <li class="returns">returns 
+            <p class="mt-4">a substitution path represented by string
+              <code class="font-normal text-sm">str</code>.
+            </p><p class="mt-4">Syntax:</p>
+            <p class="mt-4">&quot;.&quot; -&gt; separates path elements;
+              must be present at start of string.
+            </p>
+            <p class="mt-4">&quot;[4]&quot; -&gt; specifies the 4th element
+              in a tuple.
+            </p>
+            <p class="mt-4">&quot;some_tag[4]&quot; -&gt; tries to match
+              <code class="font-normal text-sm">some_tag</code>, then
+              denotes its 4th argument.
+            </p>
+            <p class="mt-4">&quot;name&quot; -&gt; denotes record field
+              having <code class="font-normal text-sm">name</code>
+            </p><p class="mt-4">Example from test code:</p>
+            <p class="mt-4">&quot;.t.x.B
+             <code class="font-normal text-sm">1</code>&quot; -&gt; choose
+              record field with name 
+             <code class="font-normal text-sm">t</code>, then subfield
+              <code class="font-normal text-sm">x</code>. Match this 
+             value against <code class="font-normal text-sm">B</code>
+             , and denote its first argument.
+            </p>
+           </li>
+          </ul>
+          <ul class="at-tags">
+           <li class="raises">raises Failure 
+            <p class="mt-4">if the path is syntactically invalid.</p>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-get">
+          <a href="#val-get" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> get : 
+            <span>?path:
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> <span>?str:string <span class="">&#45;&gt;</span></span>
+             
+            <span>
+             <a href="../Sexp/index.html#type-t" class="cursor-pointer
+              text-orange">Sexp.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Sexp/index.html#type-t" class="cursor-pointer
+             text-orange">Sexp.t
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">get ?path ?str sexp</code>
+            if <code class="font-normal text-sm">path</code> is provided,
+            use it as path. Otherwise, if 
+           <code class="font-normal text-sm">str</code> is provided, 
+           parse it as a path. If neither is provided, assume an empty
+            path. 
+          </p>
+          <ul class="at-tags">
+           <li class="returns">returns 
+            <p class="mt-4">the sub-expression from S-expression 
+             <code class="font-normal text-sm">sexp</code> denoted by
+              the path.
+            </p>
+           </li>
+          </ul>
+          <ul class="at-tags">
+           <li class="raises">raises Failure 
+            <p class="mt-4">if path is syntactically invalid or if the
+              path structure clashes with the structure of the data.
+            </p>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-replace">
+          <a href="#val-replace" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> replace : 
+            <span>?path:
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> <span>?str:string <span class="">&#45;&gt;</span></span>
+             
+            <span>
+             <a href="../Sexp/index.html#type-t" class="cursor-pointer
+              text-orange">Sexp.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>subst:
+             <a href="../Sexp/index.html#type-t" class="cursor-pointer
+              text-orange">Sexp.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Sexp/index.html#type-t" class="cursor-pointer
+             text-orange">Sexp.t
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">replace ?path ?str sexp ~subst
+           </code> like <code class="font-normal text-sm">get</code>,
+            but does not extract a sub-expression but substitutes it 
+           with <code class="font-normal text-sm">subst</code>. 
+          </p>
+          <ul class="at-tags">
+           <li class="returns">returns 
+            <p class="mt-4">resulting S-expression.</p>
+           </li>
+          </ul>
+          <ul class="at-tags">
+           <li class="raises">raises Failure 
+            <p class="mt-4">if path is syntactically invalid or if the
+              path structure clashes with the structure of the data.
+            </p>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-replace_no_path">
+          <a href="#val-replace_no_path" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> replace_no_path
+             : <span>str:string <span class="">&#45;&gt;</span></span>
+             
+            <span>
+             <a href="../Sexp/index.html#type-t" class="cursor-pointer
+              text-orange">Sexp.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>subst:
+             <a href="../Sexp/index.html#type-t" class="cursor-pointer
+              text-orange">Sexp.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Sexp/index.html#type-t" class="cursor-pointer
+             text-orange">Sexp.t
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">replace_no_path ~str sexp ~subst
+           </code> like <code class="font-normal text-sm">replace</code>
+           , but does not take optional arguments. 
+           <code class="font-normal text-sm">str</code> must be specified.
+          </p>
+          <ul class="at-tags">
+           <li class="raises">raises Failure 
+            <p class="mt-4">if path is syntactically invalid or if the
+              path structure clashes with the structure of the data.
+            </p>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-subst_path">
+          <a href="#val-subst_path" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> subst_path : 
+            <span>
+             <a href="../Sexp/index.html#type-t" class="cursor-pointer
+              text-orange">Sexp.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>(
+             <span>
+              <a href="../Sexp/index.html#type-t" class="cursor-pointer
+               text-orange">Sexp.t
+              </a> <span class="">&#45;&gt;</span>
+             </span> 
+             <a href="../Sexp/index.html#type-t" class="cursor-pointer
+              text-orange">Sexp.t
+             </a>)
+            </span> * 
+            <a href="../Sexp/index.html#type-t" class="cursor-pointer
+             text-orange">Sexp.t
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">subst_path sexp path</code>
+            
+          </p>
+          <ul class="at-tags">
+           <li class="returns">returns 
+            <p class="mt-4">the tuple 
+             <code class="font-normal text-sm">(subst, sub)</code>, where
+              <code class="font-normal text-sm">subst</code> is a function
+              that returns an S-expression in which the subexpression
+              denoted by <code class="font-normal text-sm">path</code>
+              in <code class="font-normal text-sm">sexp</code> has been
+              substituted by its argument. 
+             <code class="font-normal text-sm">sub</code> is the denoted
+              subexpression. Note that 
+             <code class="font-normal text-sm">subst sub = sexp</code>
+             .
+            </p>
+           </li>
+          </ul>
+          <ul class="at-tags">
+           <li class="raises">raises Failure 
+            <p class="mt-4">if path is syntactically invalid or if the
+              path structure clashes with the structure of the data.
+            </p>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <h6 class="text-gray-800 font-sans anchored" id="low-level-functions">
+         <a href="#low-level-functions" class="hover-link inline-block 
+          -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Low-level functions
+        </h6>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-extract_pos">
+          <a href="#val-extract_pos" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> extract_pos : 
+            <span>int <span class="">&#45;&gt;</span></span> 
+            <span>
+             <a href="../Sexp/index.html#type-t" class="cursor-pointer
+              text-orange">Sexp.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>(
+             <span>
+              <span>
+               <a href="../Sexp/index.html#type-t" class="cursor-pointer
+                text-orange">Sexp.t
+               </a> option
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <a href="../Sexp/index.html#type-t" class="cursor-pointer
+              text-orange">Sexp.t
+             </a>)
+            </span> * 
+            <a href="../Sexp/index.html#type-t" class="cursor-pointer
+             text-orange">Sexp.t
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">extract_pos n sexp</code>
+            
+          </p>
+          <ul class="at-tags">
+           <li class="returns">returns 
+            <p class="mt-4">the tuple 
+             <code class="font-normal text-sm">(subst, sub)</code>, where
+              <code class="font-normal text-sm">subst</code> is a function
+              that returns an S-expression in which the subexpression
+              denoted at position <code class="font-normal text-sm">n</code>
+              in <code class="font-normal text-sm">sexp</code>, which
+              must be a list, has been substituted by 
+             <code class="font-normal text-sm">value</code> if the optional
+              argument is <code class="font-normal text-sm">Some value</code>
+             , or removes the denoted subexpression if the optional argument
+              is <code class="font-normal text-sm">None</code>. 
+             <code class="font-normal text-sm">sub</code> is the denoted
+              subexpression. Note that 
+             <code class="font-normal text-sm">subst (Some sub) =
+                                                   sexp
+             </code>.
+            </p>
+           </li>
+          </ul>
+          <ul class="at-tags">
+           <li class="raises">raises Failure 
+            <p class="mt-4">if the position cannot be resolved within
+              the given S-expression.
+            </p>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-extract_match">
+          <a href="#val-extract_match" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> extract_match
+             : <span>string <span class="">&#45;&gt;</span></span> 
+            <span>int <span class="">&#45;&gt;</span></span> 
+            <span>
+             <a href="../Sexp/index.html#type-t" class="cursor-pointer
+              text-orange">Sexp.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>(
+             <span>
+              <span>
+               <a href="../Sexp/index.html#type-t" class="cursor-pointer
+                text-orange">Sexp.t
+               </a> option
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <a href="../Sexp/index.html#type-t" class="cursor-pointer
+              text-orange">Sexp.t
+             </a>)
+            </span> * 
+            <a href="../Sexp/index.html#type-t" class="cursor-pointer
+             text-orange">Sexp.t
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">extract_match tag n sexp</code>
+            
+          </p>
+          <ul class="at-tags">
+           <li class="returns">returns 
+            <p class="mt-4">the tuple 
+             <code class="font-normal text-sm">(subst, sub)</code>, where
+              <code class="font-normal text-sm">subst</code> is a function
+              that returns an S-expression in which the subexpression
+              denoted by matching 
+             <code class="font-normal text-sm">tag</code> and taking 
+             its <code class="font-normal text-sm">n</code>th argument
+              in <code class="font-normal text-sm">sexp</code> has been
+              substituted by <code class="font-normal text-sm">value</code>
+              if the argument is 
+             <code class="font-normal text-sm">Some
+                                                   value</code>
+             , or removes the denoted subexpression if the optional argument
+              is <code class="font-normal text-sm">None</code>. 
+             <code class="font-normal text-sm">sub</code> is the denoted
+              subexpression. Note that 
+             <code class="font-normal text-sm">subst
+                                                   (Some sub) = sexp
+             </code>.
+            </p>
+           </li>
+          </ul>
+          <ul class="at-tags">
+           <li class="raises">raises Failure 
+            <p class="mt-4">if the S-expression does not represent a sum tag.
+            </p>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-extract_rec">
+          <a href="#val-extract_rec" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> extract_rec : 
+            <span>string <span class="">&#45;&gt;</span></span> 
+            <span>
+             <a href="../Sexp/index.html#type-t" class="cursor-pointer
+              text-orange">Sexp.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>(
+             <span>
+              <a href="../Sexp/index.html#type-t" class="cursor-pointer
+               text-orange">Sexp.t
+              </a> <span class="">&#45;&gt;</span>
+             </span> 
+             <a href="../Sexp/index.html#type-t" class="cursor-pointer
+              text-orange">Sexp.t
+             </a>)
+            </span> * 
+            <a href="../Sexp/index.html#type-t" class="cursor-pointer
+             text-orange">Sexp.t
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">extract_rec name sexp</code>
+            
+          </p>
+          <ul class="at-tags">
+           <li class="returns">returns 
+            <p class="mt-4">the tuple 
+             <code class="font-normal text-sm">(subst, sub)</code>, where
+              <code class="font-normal text-sm">subst</code> is a function
+              that returns an S-expression in which the subexpression
+              denoted by matching field name 
+             <code class="font-normal text-sm">name</code> in 
+             <code class="font-normal text-sm">sexp</code> has been 
+             substituted by its argument. 
+             <code class="font-normal text-sm">sub</code> is the denoted
+              subexpression. Note that 
+             <code class="font-normal text-sm">subst (Some sub) = sexp</code>
+             .
+            </p>
+           </li>
+          </ul>
+          <ul class="at-tags">
+           <li class="raises">raises Failure 
+            <p class="mt-4">if the S-expression does not represent a record.
+            </p>
+           </li>
+          </ul>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="w-full flex-none lg:w-72 border-t lg:border-l bg-gray-100">
+       <div class="flex h-20 border-b relative">
+        <h2 class="text-xl absolute inset-x-0 p-3 bottom-0 mt-7 font-semibold
+         text-gray-500">sexplib.v0.14.0
+        </h2>
+       </div>
+       <div class="m-3">
+        <p class="mb-5 italic text-sm">
+         Library for serializing OCaml values to and from S-expressions
+        </p>
+        <div class="mb-3">
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="https://github.com/janestreet/sexplib">
+           github.com/janestreet/sexplib
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1.323l3.954 1.582 1.599-.8a1 1 0 01.894 1.79l-1.233.616 1.738 5.42a1 1 0 01-.285 1.05A3.989 3.989 0 0115 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.715-5.349L11 6.477V16h2a1 1 0 110 2H7a1 1 0 110-2h2V6.477L6.237 7.582l1.715 5.349a1 1 0 01-.285 1.05A3.989 3.989 0 015 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.738-5.42-1.233-.617a1 1 0 01.894-1.788l1.599.799L9 4.323V3a1 1 0 011-1zm-5 8.274l-.818 2.552c.25.112.526.174.818.174.292 0 .569-.062.818-.174L5 10.274zm10 0l-.818 2.552c.25.112.526.174.818.174.292 0 .569-.062.818-.174L15 10.274z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="../../LICENSE-Tywith.txt.html">LICENSE-Tywith.txt
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1.323l3.954 1.582 1.599-.8a1 1 0 01.894 1.79l-1.233.616 1.738 5.42a1 1 0 01-.285 1.05A3.989 3.989 0 0115 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.715-5.349L11 6.477V16h2a1 1 0 110 2H7a1 1 0 110-2h2V6.477L6.237 7.582l1.715 5.349a1 1 0 01-.285 1.05A3.989 3.989 0 015 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.738-5.42-1.233-.617a1 1 0 01.894-1.788l1.599.799L9 4.323V3a1 1 0 011-1zm-5 8.274l-.818 2.552c.25.112.526.174.818.174.292 0 .569-.062.818-.174L5 10.274zm10 0l-.818 2.552c.25.112.526.174.818.174.292 0 .569-.062.818-.174L15 10.274z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="../../LICENSE.md.html">LICENSE.md
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
+</svg>
+    
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="../../README.org.html">README.org
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" />
+</svg>
+  
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="../../CHANGES.md.html">CHANGES.md
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" />
+</svg>
+  
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="../../CHANGES.txt.html">CHANGES.txt
+          </a>
+         </div>
+        </div>
+        <details class="font-normal mb-2 text-sm">
+         <summary>Other versions</summary><div id="versions_container"></div>
+        </details><h2 class="font-semibold mb-2 text-sm">Authors</h2>
+        <p class="mb-3 text-sm">Jane Street Group, LLC</p>
+        <h2 class="font-semibold mb-2 text-sm">Issues</h2>
+        <div class="mb-3">
+         <a class="text-orange cursor-pointer mb-2 text-sm"
+          href="https://github.com/janestreet/sexplib/issues">
+          github.com/janestreet/sexplib/issues
+         </a>
+        </div>
+        <details class="font-semibold mb-2 text-sm">
+         <summary>Package dependencies</summary>
+         <div class="font-normal">
+          <ul>
+           <li>
+            <a href="../../../../ocaml/index.html" class="text-orange
+             cursor-pointer">ocaml
+            </a>
+           </li>
+           <li>
+            <a href="../../../../parsexp/index.html" class="text-orange
+             cursor-pointer">parsexp
+            </a>
+           </li>
+           <li>
+            <a href="../../../../sexplib0/index.html" class="text-orange
+             cursor-pointer">sexplib0
+            </a>
+           </li>
+           <li>
+            <a href="../../../../dune/index.html" class="text-orange
+             cursor-pointer">dune
+            </a>
+           </li>
+           <li>
+            <a href="../../../../num/index.html" class="text-orange
+             cursor-pointer">num
+            </a>
+           </li>
+          </ul>
+         </div>
+        </details>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div><script>Voodoo.update('../../../version.json')</script>
+ </body>
+</html>

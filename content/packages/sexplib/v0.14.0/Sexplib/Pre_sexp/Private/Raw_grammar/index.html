@@ -1,0 +1,1699 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>
+   Raw_grammar
+   (packages.sexplib.v0.14.0.Sexplib.Pre_sexp.Private.Raw_grammar)
+  </title><link rel="stylesheet" href="../../../../../../tailwind.css"/>
+  <link rel="stylesheet" href="../../../../../../extra.css"/>
+  <meta charset="utf-8"/><meta name="generator" content="odoc 3dfb7aef2f"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <script src="../../../../../../highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="../../../../../../voodoo_client.js"></script>
+  <script
+   src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+   defer="defer">
+  </script>
+ </head>
+ <body class="mx-auto max-w-screen-2xl">
+  <div class="relative">
+   <div class="relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+     <div class="flex justify-between items-center md:justify-start py-6
+      md:space-x-10">
+      <div class="flex justify-start">
+       <a href="https://v3.ocaml.org/">
+        <img src="/colour-logo.svg" alt="" class="h-8 w-auto sm:h-10"/>
+       </a>
+      </div>
+      <nav class="hidden md:flex space-x-10">
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Industry</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/whatisocaml">
+            <p class="text-base font-medium text-gray-900">What is OCaml</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/users">
+            <p class="text-base font-medium text-gray-900">Industrial Users
+            </p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/successstories">
+            <p class="text-base font-medium text-gray-900">Success Stories
+            </p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Resources</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/releases">
+            <p class="text-base font-medium text-gray-900">Releases</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/applications">
+            <p class="text-base font-medium text-gray-900">Applications</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/language">
+            <p class="text-base font-medium text-gray-900">Language</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/archive">
+            <p class="text-base font-medium text-gray-900">Archive</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Community</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/opportunities">
+            <p class="text-base font-medium text-gray-900">Opportunities</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/news">
+            <p class="text-base font-medium text-gray-900">News</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/aroundweb">
+            <p class="text-base font-medium text-gray-900">Around the Web</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="h-screen flex bg-white font-sans">
+   <div class="flex flex-col w-full h-full">
+    <div class="flex-row flex-1">
+     <nav class="bg-orange border-t border-b border-orange flex flex-row">
+      <ol class="max-w-screen-xl w-full px-4 flex space-x-4 sm:px-6 lg:px-8">
+       <li class="flex">
+        <div class="flex items-center">
+         <a href="#" class="text-gray-100 hover:text-gray-500">
+          
+  <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+        </svg>
+  
+          <span class="sr-only">Home</span>
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../../../../index.html" class="ml-4 text-sm
+          font-medium text-gray-100 hover:text-gray-500">packages
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">sexplib
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">v0.14.0
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">Sexplib
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">Pre_sexp
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">Private
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="#" class="ml-4 text-sm font-medium text-gray-100
+          hover:text-gray-500">Raw_grammar
+         </a>
+        </div>
+       </li>
+      </ol>
+     </nav>
+    </div>
+    <div class="flex flex-row flex-1">
+     <div class="w-72 flex-none bg-gray-100 h-screen border-r border-gray-200
+      sticky top-0 hidden lg:block">
+      <div class="flex h-20 border-b relative">
+       <h2 class="text-xl absolute inset-x-0 p-3 px-5 bottom-0 mt-7
+        border-gray-200 font-semibold text-gray-500 font-sans">On this page
+       </h2>
+      </div>
+      <nav class="bg-gray-100 p-5">
+       <ul>
+        <li>
+         <a href="#goals-and-non-goals" class="cursor-pointer text-orange">
+          Goals and non-goals
+         </a>
+        </li>
+        <li>
+         <a href="#encoding-of-generated-grammars-to-maximize-sharing"
+          class="cursor-pointer text-orange">Encoding of generated grammars
+           to maximize sharing
+         </a>
+        </li>
+        <li>
+         <a href="#processing-of-grammars" class="cursor-pointer text-orange">
+          Processing of grammars
+         </a>
+        </li>
+       </ul>
+      </nav>
+     </div>
+     <div class="flex flex-1 flex-col lg:flex-row">
+      <div class="flex-1">
+       <div class="lg:max-w-5xl mx-auto px-3 lg:px-10 mb-10 text-sm">
+        <div class="flex h-20 relative border-b border-gray-200">
+         <div class="relative flex-1 h-20">
+          <h1 class="text-3xl absolute inset-x-0 py-3 bottom-0 font-semibold
+           text-gray-500 font-sans w-full truncate">
+           <code class="font-mono text-gray-800">Private.Raw_grammar</code>
+          </h1>
+         </div>
+         <div class="relative flex-none w-28">
+          <h1 class="text-3xl absolute py-3 bottom-0 right-0 font-semibold
+           text-gray-500 font-sans">Module
+          </h1>
+         </div>
+        </div>
+        <div class="mt-8">
+         <p class="mt-4">This module defines the representation of 
+          S-expression grammars produced by 
+          <code class="font-normal text-sm">@@deriving sexp_grammar</code>
+          . It introduces an AST to represent these grammars and a notion
+           of &quot;group&quot; to represent the grammars of a mutually
+           recursive set of OCaml type declaration.
+         </p>
+         <p class="mt-4">The grammar for a given type expression can 
+          be constructed via: 
+         </p>
+         <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+          <code class="font-normal text-sm">[%sexp_grammar: &lt;type&gt;]
+          </code>
+         </pre>
+         <h4 class="text-lg text-gray-900 text-gray-800 font-sans anchored"
+          id="goals-and-non-goals">
+          <a href="#goals-and-non-goals" class="hover-link inline-block 
+           -ml-7 pr-4">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>Goals and non-goals
+         </h4>
+         <p class="mt-4">Functionality goals: With post-processing, sexp
+           grammars can be pretty-printed in a human-readable format 
+          and provides enough information to implement completion and
+           validation tools.
+         </p>
+         <p class="mt-4">Performance goals: 
+          <code class="font-normal text-sm">@@deriving sexp_grammar</code>
+           adds minimal overhead and introduces no toplevel side effect.
+           The compiler can lift the vast majority of ASTs generated 
+          by <code class="font-normal text-sm">@@deriving sexp_grammar</code>
+           as global constants. Common sub-grammars are usually shared,
+           particularly when they derive from multiple applications of
+           the same functor.
+         </p>
+         <p class="mt-4">Non-goals: Stability, although we will make 
+          changes backwards-compatible or at least provide a reasonable
+           upgrade path.
+         </p>
+         <p class="mt-4">In what follows, we describe how this is achieved.
+         </p>
+         <h4 class="text-lg text-gray-900 text-gray-800 font-sans anchored"
+          id="encoding-of-generated-grammars-to-maximize-sharing">
+          <a href="#encoding-of-generated-grammars-to-maximize-sharing"
+           class="hover-link inline-block -ml-7 pr-4">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>Encoding of generated grammars to maximize sharing
+         </h4>
+         <p class="mt-4">A <code class="font-normal text-sm">group</code>
+           contains the grammars for all types of a mutually recursive
+           group of OCaml type declarations.
+         </p>
+         <p class="mt-4">To ensure maximum sharing, a group is split 
+          into two parts:
+         </p>
+         <ul class="list-disc mt-2 mb-4">
+          <li class="ml-4">The 
+           <code class="font-normal text-sm">generic_group</code> depends
+            only on the textual type declarations. Where the type declaration
+            refers to an existing concrete type, the generic group takes
+            a variable to represent the grammar of that type. This means
+            that the compiler can lift each type declaration in the source
+            code to a shared global constant.
+          </li>
+         </ul>
+         <ul class="list-disc mt-2 mb-4">
+          <li class="ml-4">The <code class="font-normal text-sm">group</code>
+            binds the type variables of the 
+           <code class="font-normal text-sm">generic_group</code>, either
+            to concrete grammars where the type declaration refers to
+            a concrete type, or to another variable where the type 
+           declaration itself was polymorphic.
+          </li>
+         </ul>
+         <p class="mt-4">To understand this point better, imagine the
+           following type declaration 
+         </p>
+         <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+          <code class="font-normal text-sm">type t = X of u</code>
+         </pre>
+         <p class="mt-4">were explicitly split into its 
+          <code class="font-normal text-sm">generic_group</code> and 
+          <code class="font-normal text-sm">group</code> parts: 
+         </p>
+         <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+          <code class="font-normal text-sm">
+           type 'u t_generic = X of 'u
+           type t = u t_generic
+          </code>
+         </pre>
+         <p class="mt-4">If <code class="font-normal text-sm">u</code>
+           came from a functor argument, it's easy to see that 
+          <code class="font-normal text-sm">t_generic</code> would be
+           exactly the same in all applications of the functor and only
+           <code class="font-normal text-sm">t</code> would vary. The
+           grammar of <code class="font-normal text-sm">t_generic</code>
+          , which is the biggest part, would be shared between all 
+          applications of the functor.
+         </p>
+         <h4 class="text-lg text-gray-900 text-gray-800 font-sans anchored"
+          id="processing-of-grammars">
+          <a href="#processing-of-grammars" class="hover-link inline-block
+           -ml-7 pr-4">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>Processing of grammars
+         </h4>
+         <p class="mt-4">The 
+          <code class="font-normal text-sm">Raw_grammar.t</code> type
+           optimizes for performance over ease of use. To help users 
+          process the raw grammars into a more usable form, we keep two
+           identifiers in the generated grammars:
+         </p>
+         <ul class="list-disc mt-2 mb-4">
+          <li class="ml-4">The 
+           <code class="font-normal text-sm">generic_group_id</code> 
+           uniquely identifies a 
+           <code class="font-normal text-sm">generic_group</code>. It
+            is a hash of the generic group itself. (It is okay that this
+            scheme would conflate identical type declarations, because
+            the resulting generic groups would be identical as well.)
+          </li>
+         </ul>
+         <ul class="list-disc mt-2 mb-4">
+          <li class="ml-4">The 
+           <code class="font-normal text-sm">group_id</code> uniquely
+            identifies a <code class="font-normal text-sm">group</code>
+           . It is a unique integer, generated lazily so that we don't
+            create a side effect at module creation time.
+          </li>
+         </ul>
+         <p class="mt-4">The exact processing would depend on the final
+           application. We expect that a typical consumer of sexp grammars
+           would define less-indirected equivalents of the 
+          <code class="font-normal text-sm">t</code> and 
+          <code class="font-normal text-sm">group</code> types, possibly
+           re-using the <code class="font-normal text-sm">_ type_</code>
+           and <code class="font-normal text-sm">Atom.t</code> types.
+         </p>
+         <div class="mt-8">
+          <div class="spec type anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="type-label">
+           <a href="#type-label" class="hover-link inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">type</span> label</span>
+            <span> = string</span>
+           </code>
+          </div>
+          <div class="spec-doc">
+           <p class="mt-4">The label of a field, constructor, or constant.
+           </p>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec type anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="type-generic_group_id">
+           <a href="#type-generic_group_id" class="hover-link inline-block
+            -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">type</span> generic_group_id
+            </span><span> = string</span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec type anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="type-group_id">
+           <a href="#type-group_id" class="hover-link inline-block -ml-7
+            pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">type</span> group_id</span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec type anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="type-var_name">
+           <a href="#type-var_name" class="hover-link inline-block -ml-7
+            pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">type</span> var_name</span>
+            <span> = string</span>
+           </code>
+          </div>
+          <div class="spec-doc">
+           <p class="mt-4">Variable names. These are used to improve 
+            readability of the printed grammars. Internally, we use numerical
+             indices to represent variables; see 
+            <code class="font-normal text-sm">Implicit_var</code> below.
+           </p>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec type anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="type-type_name">
+           <a href="#type-type_name" class="hover-link inline-block -ml-7
+            pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">type</span> type_name</span>
+            <span> = string</span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec module anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="module-Atom">
+           <a href="#module-Atom" class="hover-link inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">module</span> </span>
+            <span>
+             <a href="Atom/index.html" class="cursor-pointer text-orange">
+              Atom
+             </a>
+            </span>
+            <span> : <span class="font-semibold">sig</span> ... 
+             <span class="font-semibold">end</span>
+            </span>
+           </code>
+          </div>
+          <div class="spec-doc">
+           <p class="mt-4">A grammatical type which classifies atoms.</p>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec type anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="type-type_">
+           <a href="#type-type_" class="hover-link inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">type</span> 
+             <span>'t type_</span>
+            </span><span> = </span>
+           </code>
+           <table>
+            <tr id="type-type_.Any">
+             <td class="anchored pl-4">
+              <a href="#type-type_.Any" class="hover-link inline-block 
+               -ml-7 pr-7">
+               <span class="align-middle text-gray-200 transition text-sm
+                font-sans opacity-0 hover:text-gray-700">#
+               </span>
+              </a>
+              <code class="font-normal text-sm"><span>| </span>
+               <span><span class="">Any</span></span>
+              </code>
+             </td>
+             <td class="def-doc pl-4"><span class="sr-only">(*</span>
+              Any list or atom.<span class="sr-only">*)</span>
+             </td>
+            </tr>
+            <tr id="type-type_.Apply">
+             <td class="anchored pl-4">
+              <a href="#type-type_.Apply" class="hover-link inline-block
+               -ml-7 pr-7">
+               <span class="align-middle text-gray-200 transition text-sm
+                font-sans opacity-0 hover:text-gray-700">#
+               </span>
+              </a>
+              <code class="font-normal text-sm"><span>| </span>
+               <span><span class="">Apply</span> 
+                <span class="font-semibold">of</span> 
+                <span><span class="">'t</span> 
+                 <a href="#type-type_" class="cursor-pointer text-orange">
+                  type_
+                 </a>
+                </span> * 
+                <span>
+                 <span><span class="">'t</span> 
+                  <a href="#type-type_" class="cursor-pointer text-orange">
+                   type_
+                  </a>
+                 </span> list
+                </span>
+               </span>
+              </code>
+             </td>
+             <td class="def-doc pl-4"><span class="sr-only">(*</span>
+              Assign types to (explicit) type variables.
+              <span class="sr-only">*)</span>
+             </td>
+            </tr>
+            <tr id="type-type_.Atom">
+             <td class="anchored pl-4">
+              <a href="#type-type_.Atom" class="hover-link inline-block 
+               -ml-7 pr-7">
+               <span class="align-middle text-gray-200 transition text-sm
+                font-sans opacity-0 hover:text-gray-700">#
+               </span>
+              </a>
+              <code class="font-normal text-sm"><span>| </span>
+               <span><span class="">Atom</span> 
+                <span class="font-semibold">of</span> 
+                <a href="Atom/index.html#type-t" class="cursor-pointer
+                 text-orange">Atom.t
+                </a>
+               </span>
+              </code>
+             </td>
+             <td class="def-doc pl-4"><span class="sr-only">(*</span>
+              An atom, in particular one of the given 
+              <a href="Atom/index.html#type-t" class="cursor-pointer
+               text-orange"><code class="font-normal text-sm">Atom.t</code>
+              </a>.<span class="sr-only">*)</span>
+             </td>
+            </tr>
+            <tr id="type-type_.Explicit_bind">
+             <td class="anchored pl-4">
+              <a href="#type-type_.Explicit_bind" class="hover-link
+               inline-block -ml-7 pr-7">
+               <span class="align-middle text-gray-200 transition text-sm
+                font-sans opacity-0 hover:text-gray-700">#
+               </span>
+              </a>
+              <code class="font-normal text-sm"><span>| </span>
+               <span><span class="">Explicit_bind</span> 
+                <span class="font-semibold">of</span> 
+                <span>
+                 <a href="#type-var_name" class="cursor-pointer text-orange">
+                  var_name
+                 </a> list
+                </span> * 
+                <span><span class="">'t</span> 
+                 <a href="#type-type_" class="cursor-pointer text-orange">
+                  type_
+                 </a>
+                </span>
+               </span>
+              </code>
+             </td>
+             <td class="def-doc pl-4"><span class="sr-only">(*</span>
+              In 
+              <code class="font-normal text-sm">
+               Bind ([ &quot;a&quot;; &quot;b&quot; ], Explicit_var 0)
+              </code>, 
+              <code class="font-normal text-sm">Explicit_var 0</code>
+               is <code class="font-normal text-sm">&quot;a&quot;</code>
+              . One must bind all available type variables: free variables
+               are not permitted.<span class="sr-only">*)</span>
+             </td>
+            </tr>
+            <tr id="type-type_.Explicit_var">
+             <td class="anchored pl-4">
+              <a href="#type-type_.Explicit_var" class="hover-link
+               inline-block -ml-7 pr-7">
+               <span class="align-middle text-gray-200 transition text-sm
+                font-sans opacity-0 hover:text-gray-700">#
+               </span>
+              </a>
+              <code class="font-normal text-sm"><span>| </span>
+               <span><span class="">Explicit_var</span> 
+                <span class="font-semibold">of</span> int
+               </span>
+              </code>
+             </td>
+            </tr>
+            <tr id="type-type_.Grammar">
+             <td class="anchored pl-4">
+              <a href="#type-type_.Grammar" class="hover-link inline-block
+               -ml-7 pr-7">
+               <span class="align-middle text-gray-200 transition text-sm
+                font-sans opacity-0 hover:text-gray-700">#
+               </span>
+              </a>
+              <code class="font-normal text-sm"><span>| </span>
+               <span><span class="">Grammar</span> 
+                <span class="font-semibold">of</span> 
+                <span class="">'t</span>
+               </span>
+              </code>
+             </td>
+             <td class="def-doc pl-4"><span class="sr-only">(*</span>
+              Embeds other types in a grammar.<span class="sr-only">*)</span>
+             </td>
+            </tr>
+            <tr id="type-type_.Implicit_var">
+             <td class="anchored pl-4">
+              <a href="#type-type_.Implicit_var" class="hover-link
+               inline-block -ml-7 pr-7">
+               <span class="align-middle text-gray-200 transition text-sm
+                font-sans opacity-0 hover:text-gray-700">#
+               </span>
+              </a>
+              <code class="font-normal text-sm"><span>| </span>
+               <span><span class="">Implicit_var</span> 
+                <span class="font-semibold">of</span> int
+               </span>
+              </code>
+             </td>
+             <td class="def-doc pl-4"><span class="sr-only">(*</span>
+              Indices for type constructors, e.g. 
+              <code class="font-normal text-sm">int</code>, in scope.
+               Unlike de Bruijn indices, these are always bound by the
+               <code class="font-normal text-sm">implicit_vars</code>
+               of the nearest enclosing 
+              <code class="font-normal text-sm">generic_groups</code>
+              .<span class="sr-only">*)</span>
+             </td>
+            </tr>
+            <tr id="type-type_.List">
+             <td class="anchored pl-4">
+              <a href="#type-type_.List" class="hover-link inline-block 
+               -ml-7 pr-7">
+               <span class="align-middle text-gray-200 transition text-sm
+                font-sans opacity-0 hover:text-gray-700">#
+               </span>
+              </a>
+              <code class="font-normal text-sm"><span>| </span>
+               <span><span class="">List</span> 
+                <span class="font-semibold">of</span> 
+                <span><span class="">'t</span> 
+                 <a href="#type-sequence_type" class="cursor-pointer
+                  text-orange">sequence_type
+                 </a>
+                </span>
+               </span>
+              </code>
+             </td>
+             <td class="def-doc pl-4"><span class="sr-only">(*</span>
+              A list of a certain form. Depending on the 
+              <a href="#type-sequence_type" class="cursor-pointer
+               text-orange">
+               <code class="font-normal text-sm">sequence_type</code>
+              </a>, this might correspond to an OCaml tuple, list, or
+               embedded record.<span class="sr-only">*)</span>
+             </td>
+            </tr>
+            <tr id="type-type_.Option">
+             <td class="anchored pl-4">
+              <a href="#type-type_.Option" class="hover-link inline-block
+               -ml-7 pr-7">
+               <span class="align-middle text-gray-200 transition text-sm
+                font-sans opacity-0 hover:text-gray-700">#
+               </span>
+              </a>
+              <code class="font-normal text-sm"><span>| </span>
+               <span><span class="">Option</span> 
+                <span class="font-semibold">of</span> 
+                <span><span class="">'t</span> 
+                 <a href="#type-type_" class="cursor-pointer text-orange">
+                  type_
+                 </a>
+                </span>
+               </span>
+              </code>
+             </td>
+             <td class="def-doc pl-4"><span class="sr-only">(*</span>
+              An optional value. Either syntax recognized by 
+              <code class="font-normal text-sm">option_of_sexp</code>
+               is supported: 
+              <code class="font-normal text-sm">(Some 42)</code> or 
+              <code class="font-normal text-sm">(42)</code> for a value
+               and <code class="font-normal text-sm">None</code> or 
+              <code class="font-normal text-sm">()</code> for no value.
+              <span class="sr-only">*)</span>
+             </td>
+            </tr>
+            <tr id="type-type_.Record">
+             <td class="anchored pl-4">
+              <a href="#type-type_.Record" class="hover-link inline-block
+               -ml-7 pr-7">
+               <span class="align-middle text-gray-200 transition text-sm
+                font-sans opacity-0 hover:text-gray-700">#
+               </span>
+              </a>
+              <code class="font-normal text-sm"><span>| </span>
+               <span><span class="">Record</span> 
+                <span class="font-semibold">of</span> 
+                <span><span class="">'t</span> 
+                 <a href="#type-record_type" class="cursor-pointer
+                  text-orange">record_type
+                 </a>
+                </span>
+               </span>
+              </code>
+             </td>
+             <td class="def-doc pl-4"><span class="sr-only">(*</span>
+              A list of lists, representing a record of the given 
+              <a href="#type-record_type" class="cursor-pointer text-orange">
+               <code class="font-normal text-sm">record_type</code>
+              </a>. For validation, 
+              <code class="font-normal text-sm">Record recty</code> is
+               equivalent to 
+              <code class="font-normal text-sm">List [Fields recty]</code>
+              .<span class="sr-only">*)</span>
+             </td>
+            </tr>
+            <tr id="type-type_.Recursive">
+             <td class="anchored pl-4">
+              <a href="#type-type_.Recursive" class="hover-link inline-block
+               -ml-7 pr-7">
+               <span class="align-middle text-gray-200 transition text-sm
+                font-sans opacity-0 hover:text-gray-700">#
+               </span>
+              </a>
+              <code class="font-normal text-sm"><span>| </span>
+               <span><span class="">Recursive</span> 
+                <span class="font-semibold">of</span> 
+                <a href="#type-type_name" class="cursor-pointer text-orange">
+                 type_name
+                </a>
+               </span>
+              </code>
+             </td>
+             <td class="def-doc pl-4"><span class="sr-only">(*</span>
+              A type in the same mutually recursive group, possibly the
+               current one.<span class="sr-only">*)</span>
+             </td>
+            </tr>
+            <tr id="type-type_.Union">
+             <td class="anchored pl-4">
+              <a href="#type-type_.Union" class="hover-link inline-block
+               -ml-7 pr-7">
+               <span class="align-middle text-gray-200 transition text-sm
+                font-sans opacity-0 hover:text-gray-700">#
+               </span>
+              </a>
+              <code class="font-normal text-sm"><span>| </span>
+               <span><span class="">Union</span> 
+                <span class="font-semibold">of</span> 
+                <span>
+                 <span><span class="">'t</span> 
+                  <a href="#type-type_" class="cursor-pointer text-orange">
+                   type_
+                  </a>
+                 </span> list
+                </span>
+               </span>
+              </code>
+             </td>
+            </tr>
+            <tr id="type-type_.Variant">
+             <td class="anchored pl-4">
+              <a href="#type-type_.Variant" class="hover-link inline-block
+               -ml-7 pr-7">
+               <span class="align-middle text-gray-200 transition text-sm
+                font-sans opacity-0 hover:text-gray-700">#
+               </span>
+              </a>
+              <code class="font-normal text-sm"><span>| </span>
+               <span><span class="">Variant</span> 
+                <span class="font-semibold">of</span> 
+                <span><span class="">'t</span> 
+                 <a href="#type-variant_type" class="cursor-pointer
+                  text-orange">variant_type
+                 </a>
+                </span>
+               </span>
+              </code>
+             </td>
+             <td class="def-doc pl-4"><span class="sr-only">(*</span>
+              A sexp which matches the given 
+              <a href="#type-variant_type" class="cursor-pointer text-orange">
+               <code class="font-normal text-sm">variant_type</code>
+              </a>.<span class="sr-only">*)</span>
+             </td>
+            </tr>
+           </table>
+          </div>
+          <div class="spec-doc">
+           <p class="mt-4">A grammatical type which classifies sexps.
+             Corresponds to a non-terminal in a context-free grammar.
+           </p>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec type anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="type-sequence_type">
+           <a href="#type-sequence_type" class="hover-link inline-block 
+            -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">and</span> 
+             <span>'t sequence_type</span>
+            </span>
+            <span> = 
+             <span>
+              <span><span class="">'t</span> 
+               <a href="#type-component" class="cursor-pointer text-orange">
+                component
+               </a>
+              </span> list
+             </span>
+            </span>
+           </code>
+          </div>
+          <div class="spec-doc">
+           <p class="mt-4">A grammatical type which classifies sequences
+             of sexps. Here, a &quot;sequence&quot; may mean either a
+             list on its own or, say, the sexps following a constructor
+             in a list matching a 
+            <a href="#type-variant_type" class="cursor-pointer text-orange">
+             <code class="font-normal text-sm">variant_type</code>
+            </a>.
+           </p>
+           <p class="mt-4">Certain operations may greatly favor simple
+             sequence types. For example, matching 
+            <code class="font-normal text-sm">List [ Many type_ ]</code>
+             is easy for any type 
+            <code class="font-normal text-sm">type_</code> (assuming 
+            <code class="font-normal text-sm">type_</code> itself is 
+            easy), but 
+            <code class="font-normal text-sm">List [ Many type1; Many type2 ]
+            </code> may require backtracking. Grammars derived from OCaml
+             types will only have &quot;nice&quot; sequence types.
+           </p>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec type anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="type-component">
+           <a href="#type-component" class="hover-link inline-block -ml-7
+            pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">and</span> 
+             <span>'t component</span>
+            </span><span> = </span>
+           </code>
+           <table>
+            <tr id="type-component.One">
+             <td class="anchored pl-4">
+              <a href="#type-component.One" class="hover-link inline-block
+               -ml-7 pr-7">
+               <span class="align-middle text-gray-200 transition text-sm
+                font-sans opacity-0 hover:text-gray-700">#
+               </span>
+              </a>
+              <code class="font-normal text-sm"><span>| </span>
+               <span><span class="">One</span> 
+                <span class="font-semibold">of</span> 
+                <span><span class="">'t</span> 
+                 <a href="#type-type_" class="cursor-pointer text-orange">
+                  type_
+                 </a>
+                </span>
+               </span>
+              </code>
+             </td>
+             <td class="def-doc pl-4"><span class="sr-only">(*</span>
+              Exactly one sexp of the given type.
+              <span class="sr-only">*)</span>
+             </td>
+            </tr>
+            <tr id="type-component.Optional">
+             <td class="anchored pl-4">
+              <a href="#type-component.Optional" class="hover-link
+               inline-block -ml-7 pr-7">
+               <span class="align-middle text-gray-200 transition text-sm
+                font-sans opacity-0 hover:text-gray-700">#
+               </span>
+              </a>
+              <code class="font-normal text-sm"><span>| </span>
+               <span><span class="">Optional</span> 
+                <span class="font-semibold">of</span> 
+                <span><span class="">'t</span> 
+                 <a href="#type-type_" class="cursor-pointer text-orange">
+                  type_
+                 </a>
+                </span>
+               </span>
+              </code>
+             </td>
+             <td class="def-doc pl-4"><span class="sr-only">(*</span>
+              One sexp of the given type, or nothing at all.
+              <span class="sr-only">*)</span>
+             </td>
+            </tr>
+            <tr id="type-component.Many">
+             <td class="anchored pl-4">
+              <a href="#type-component.Many" class="hover-link inline-block
+               -ml-7 pr-7">
+               <span class="align-middle text-gray-200 transition text-sm
+                font-sans opacity-0 hover:text-gray-700">#
+               </span>
+              </a>
+              <code class="font-normal text-sm"><span>| </span>
+               <span><span class="">Many</span> 
+                <span class="font-semibold">of</span> 
+                <span><span class="">'t</span> 
+                 <a href="#type-type_" class="cursor-pointer text-orange">
+                  type_
+                 </a>
+                </span>
+               </span>
+              </code>
+             </td>
+             <td class="def-doc pl-4"><span class="sr-only">(*</span>
+              Any number of sexps, each of the given type.
+              <span class="sr-only">*)</span>
+             </td>
+            </tr>
+            <tr id="type-component.Fields">
+             <td class="anchored pl-4">
+              <a href="#type-component.Fields" class="hover-link inline-block
+               -ml-7 pr-7">
+               <span class="align-middle text-gray-200 transition text-sm
+                font-sans opacity-0 hover:text-gray-700">#
+               </span>
+              </a>
+              <code class="font-normal text-sm"><span>| </span>
+               <span><span class="">Fields</span> 
+                <span class="font-semibold">of</span> 
+                <span><span class="">'t</span> 
+                 <a href="#type-record_type" class="cursor-pointer
+                  text-orange">record_type
+                 </a>
+                </span>
+               </span>
+              </code>
+             </td>
+             <td class="def-doc pl-4"><span class="sr-only">(*</span>
+              A succession of lists, collectively defining a record of
+               the given 
+              <a href="#type-record_type" class="cursor-pointer text-orange">
+               <code class="font-normal text-sm">record_type</code>
+              </a>. The fields may appear in any order. The number of
+               lists is not necessarily fixed, as some fields may be 
+              optional. In particular, if all fields are optional, there
+               may be zero lists.<span class="sr-only">*)</span>
+             </td>
+            </tr>
+           </table>
+          </div>
+          <div class="spec-doc">
+           <p class="mt-4">Part of a sequence of sexps.</p>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec type anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="type-variant_type">
+           <a href="#type-variant_type" class="hover-link inline-block 
+            -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">and</span> 
+             <span>'t variant_type</span>
+            </span><span> = </span><span>{</span>
+           </code>
+           <table>
+            <tr id="type-variant_type.ignore_capitalization">
+             <td class="anchored pl-4">
+              <a href="#type-variant_type.ignore_capitalization"
+               class="hover-link inline-block -ml-7 pr-7">
+               <span class="align-middle text-gray-200 transition text-sm
+                font-sans opacity-0 hover:text-gray-700">#
+               </span>
+              </a>
+              <code class="font-normal text-sm">
+               <span>ignore_capitalization : bool;</span>
+              </code>
+             </td>
+             <td class="def-doc pl-4"><span class="sr-only">(*</span>
+              If true, the grammar is insensitive to the case of the 
+              first letter of the label. This matches the behavior of
+               derived <code class="font-normal text-sm">sexp_of_t</code>
+               functions.<span class="sr-only">*)</span>
+             </td>
+            </tr>
+            <tr id="type-variant_type.alts">
+             <td class="anchored pl-4">
+              <a href="#type-variant_type.alts" class="hover-link
+               inline-block -ml-7 pr-7">
+               <span class="align-middle text-gray-200 transition text-sm
+                font-sans opacity-0 hover:text-gray-700">#
+               </span>
+              </a>
+              <code class="font-normal text-sm">
+               <span>alts : 
+                <span>
+                 <span>(
+                  <a href="#type-label" class="cursor-pointer text-orange">
+                   label
+                  </a> * 
+                  <span><span class="">'t</span> 
+                   <a href="#type-sequence_type" class="cursor-pointer
+                    text-orange">sequence_type
+                   </a>
+                  </span>)
+                 </span> list
+                </span>;
+               </span>
+              </code>
+             </td>
+            </tr>
+           </table><code class="font-normal text-sm"><span>}</span></code>
+          </div>
+          <div class="spec-doc">
+           <p class="mt-4">A tagged union of grammatical types. Grammars
+             derived from OCaml variants will have variant types.
+           </p>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec type anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="type-record_type">
+           <a href="#type-record_type" class="hover-link inline-block 
+            -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">and</span> 
+             <span>'t record_type</span>
+            </span><span> = </span><span>{</span>
+           </code>
+           <table>
+            <tr id="type-record_type.allow_extra_fields">
+             <td class="anchored pl-4">
+              <a href="#type-record_type.allow_extra_fields"
+               class="hover-link inline-block -ml-7 pr-7">
+               <span class="align-middle text-gray-200 transition text-sm
+                font-sans opacity-0 hover:text-gray-700">#
+               </span>
+              </a>
+              <code class="font-normal text-sm">
+               <span>allow_extra_fields : bool;</span>
+              </code>
+             </td>
+            </tr>
+            <tr id="type-record_type.fields">
+             <td class="anchored pl-4">
+              <a href="#type-record_type.fields" class="hover-link
+               inline-block -ml-7 pr-7">
+               <span class="align-middle text-gray-200 transition text-sm
+                font-sans opacity-0 hover:text-gray-700">#
+               </span>
+              </a>
+              <code class="font-normal text-sm">
+               <span>fields : 
+                <span>
+                 <span>(
+                  <a href="#type-label" class="cursor-pointer text-orange">
+                   label
+                  </a> * 
+                  <span><span class="">'t</span> 
+                   <a href="#type-field" class="cursor-pointer text-orange">
+                    field
+                   </a>
+                  </span>)
+                 </span> list
+                </span>;
+               </span>
+              </code>
+             </td>
+            </tr>
+           </table><code class="font-normal text-sm"><span>}</span></code>
+          </div>
+          <div class="spec-doc">
+           <p class="mt-4">A collection of field definitions specifying
+             a record type. Consists only of an association list from
+             labels to fields.
+           </p>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec type anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="type-field">
+           <a href="#type-field" class="hover-link inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">and</span> 
+             <span>'t field</span>
+            </span><span> = </span><span>{</span>
+           </code>
+           <table>
+            <tr id="type-field.optional">
+             <td class="anchored pl-4">
+              <a href="#type-field.optional" class="hover-link inline-block
+               -ml-7 pr-7">
+               <span class="align-middle text-gray-200 transition text-sm
+                font-sans opacity-0 hover:text-gray-700">#
+               </span>
+              </a>
+              <code class="font-normal text-sm"><span>optional : bool;</span>
+              </code>
+             </td>
+             <td class="def-doc pl-4"><span class="sr-only">(*</span>
+              If true, the field is optional.<span class="sr-only">*)</span>
+             </td>
+            </tr>
+            <tr id="type-field.args">
+             <td class="anchored pl-4">
+              <a href="#type-field.args" class="hover-link inline-block 
+               -ml-7 pr-7">
+               <span class="align-middle text-gray-200 transition text-sm
+                font-sans opacity-0 hover:text-gray-700">#
+               </span>
+              </a>
+              <code class="font-normal text-sm">
+               <span>args : 
+                <span><span class="">'t</span> 
+                 <a href="#type-sequence_type" class="cursor-pointer
+                  text-orange">sequence_type
+                 </a>
+                </span>;
+               </span>
+              </code>
+             </td>
+             <td class="def-doc pl-4"><span class="sr-only">(*</span>
+              A sequence type which the arguments to the field must match.
+               An empty sequence is permissible but would not be generated
+               for any OCaml type.<span class="sr-only">*)</span>
+             </td>
+            </tr>
+           </table><code class="font-normal text-sm"><span>}</span></code>
+          </div>
+          <div class="spec-doc"><p class="mt-4">A field in a record.</p>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec type anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="type-t">
+           <a href="#type-t" class="hover-link inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">type</span> t</span>
+            <span> = </span>
+           </code>
+           <table>
+            <tr id="type-t.Ref">
+             <td class="anchored pl-4">
+              <a href="#type-t.Ref" class="hover-link inline-block -ml-7
+               pr-7">
+               <span class="align-middle text-gray-200 transition text-sm
+                font-sans opacity-0 hover:text-gray-700">#
+               </span>
+              </a>
+              <code class="font-normal text-sm"><span>| </span>
+               <span><span class="">Ref</span> 
+                <span class="font-semibold">of</span> 
+                <a href="#type-type_name" class="cursor-pointer text-orange">
+                 type_name
+                </a> * 
+                <a href="#type-group" class="cursor-pointer text-orange">
+                 group
+                </a>
+               </span>
+              </code>
+             </td>
+            </tr>
+            <tr id="type-t.Inline">
+             <td class="anchored pl-4">
+              <a href="#type-t.Inline" class="hover-link inline-block 
+               -ml-7 pr-7">
+               <span class="align-middle text-gray-200 transition text-sm
+                font-sans opacity-0 hover:text-gray-700">#
+               </span>
+              </a>
+              <code class="font-normal text-sm"><span>| </span>
+               <span><span class="">Inline</span> 
+                <span class="font-semibold">of</span> 
+                <span>
+                 <a href="#type-t" class="cursor-pointer text-orange">t</a>
+                  
+                 <a href="#type-type_" class="cursor-pointer text-orange">
+                  type_
+                 </a>
+                </span>
+               </span>
+              </code>
+             </td>
+            </tr>
+           </table>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec type anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="type-group">
+           <a href="#type-group" class="hover-link inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">and</span> group</span>
+            <span> = </span><span>{</span>
+           </code>
+           <table>
+            <tr id="type-group.gid">
+             <td class="anchored pl-4">
+              <a href="#type-group.gid" class="hover-link inline-block 
+               -ml-7 pr-7">
+               <span class="align-middle text-gray-200 transition text-sm
+                font-sans opacity-0 hover:text-gray-700">#
+               </span>
+              </a>
+              <code class="font-normal text-sm">
+               <span>gid : 
+                <a href="#type-group_id" class="cursor-pointer text-orange">
+                 group_id
+                </a>;
+               </span>
+              </code>
+             </td>
+            </tr>
+            <tr id="type-group.generic_group">
+             <td class="anchored pl-4">
+              <a href="#type-group.generic_group" class="hover-link
+               inline-block -ml-7 pr-7">
+               <span class="align-middle text-gray-200 transition text-sm
+                font-sans opacity-0 hover:text-gray-700">#
+               </span>
+              </a>
+              <code class="font-normal text-sm">
+               <span>generic_group : 
+                <a href="#type-generic_group" class="cursor-pointer
+                 text-orange">generic_group
+                </a>;
+               </span>
+              </code>
+             </td>
+            </tr>
+            <tr id="type-group.origin">
+             <td class="anchored pl-4">
+              <a href="#type-group.origin" class="hover-link inline-block
+               -ml-7 pr-7">
+               <span class="align-middle text-gray-200 transition text-sm
+                font-sans opacity-0 hover:text-gray-700">#
+               </span>
+              </a>
+              <code class="font-normal text-sm"><span>origin : string;</span>
+              </code>
+             </td>
+            </tr>
+            <tr id="type-group.apply_implicit">
+             <td class="anchored pl-4">
+              <a href="#type-group.apply_implicit" class="hover-link
+               inline-block -ml-7 pr-7">
+               <span class="align-middle text-gray-200 transition text-sm
+                font-sans opacity-0 hover:text-gray-700">#
+               </span>
+              </a>
+              <code class="font-normal text-sm">
+               <span>apply_implicit : 
+                <span>
+                 <a href="#type-t" class="cursor-pointer text-orange">t</a>
+                  list
+                </span>;
+               </span>
+              </code>
+             </td>
+            </tr>
+           </table><code class="font-normal text-sm"><span>}</span></code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec type anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="type-generic_group">
+           <a href="#type-generic_group" class="hover-link inline-block 
+            -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">and</span> generic_group</span>
+            <span> = </span><span>{</span>
+           </code>
+           <table>
+            <tr id="type-generic_group.implicit_vars">
+             <td class="anchored pl-4">
+              <a href="#type-generic_group.implicit_vars" class="hover-link
+               inline-block -ml-7 pr-7">
+               <span class="align-middle text-gray-200 transition text-sm
+                font-sans opacity-0 hover:text-gray-700">#
+               </span>
+              </a>
+              <code class="font-normal text-sm">
+               <span>implicit_vars : 
+                <span>
+                 <a href="#type-var_name" class="cursor-pointer text-orange">
+                  var_name
+                 </a> list
+                </span>;
+               </span>
+              </code>
+             </td>
+            </tr>
+            <tr id="type-generic_group.ggid">
+             <td class="anchored pl-4">
+              <a href="#type-generic_group.ggid" class="hover-link
+               inline-block -ml-7 pr-7">
+               <span class="align-middle text-gray-200 transition text-sm
+                font-sans opacity-0 hover:text-gray-700">#
+               </span>
+              </a>
+              <code class="font-normal text-sm">
+               <span>ggid : 
+                <a href="#type-generic_group_id" class="cursor-pointer
+                 text-orange">generic_group_id
+                </a>;
+               </span>
+              </code>
+             </td>
+            </tr>
+            <tr id="type-generic_group.types">
+             <td class="anchored pl-4">
+              <a href="#type-generic_group.types" class="hover-link
+               inline-block -ml-7 pr-7">
+               <span class="align-middle text-gray-200 transition text-sm
+                font-sans opacity-0 hover:text-gray-700">#
+               </span>
+              </a>
+              <code class="font-normal text-sm">
+               <span>types : 
+                <span>
+                 <span>(
+                  <a href="#type-type_name" class="cursor-pointer
+                   text-orange">type_name
+                  </a> * 
+                  <span>
+                   <a href="#type-t" class="cursor-pointer text-orange">t</a>
+                    
+                   <a href="#type-type_" class="cursor-pointer text-orange">
+                    type_
+                   </a>
+                  </span>)
+                 </span> list
+                </span>;
+               </span>
+              </code>
+             </td>
+            </tr>
+           </table><code class="font-normal text-sm"><span>}</span></code>
+          </div>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec module anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="module-Builtin">
+          <a href="#module-Builtin" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">module</span> </span>
+           <span>
+            <a href="Builtin/index.html" class="cursor-pointer text-orange">
+             Builtin
+            </a>
+           </span>
+           <span> : <span class="font-semibold">sig</span> ... 
+            <span class="font-semibold">end</span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-empty_sexp_grammar">
+          <a href="#val-empty_sexp_grammar" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> empty_sexp_grammar
+             : <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opaque_sexp_grammar">
+          <a href="#val-opaque_sexp_grammar" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opaque_sexp_grammar
+             : <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-fun_sexp_grammar">
+          <a href="#val-fun_sexp_grammar" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> fun_sexp_grammar
+             : <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-tuple2_sexp_grammar">
+          <a href="#val-tuple2_sexp_grammar" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> tuple2_sexp_grammar
+             : <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="w-full flex-none lg:w-72 border-t lg:border-l bg-gray-100">
+       <div class="flex h-20 border-b relative">
+        <h2 class="text-xl absolute inset-x-0 p-3 bottom-0 mt-7 font-semibold
+         text-gray-500">sexplib.v0.14.0
+        </h2>
+       </div>
+       <div class="m-3">
+        <p class="mb-5 italic text-sm">
+         Library for serializing OCaml values to and from S-expressions
+        </p>
+        <div class="mb-3">
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="https://github.com/janestreet/sexplib">
+           github.com/janestreet/sexplib
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1.323l3.954 1.582 1.599-.8a1 1 0 01.894 1.79l-1.233.616 1.738 5.42a1 1 0 01-.285 1.05A3.989 3.989 0 0115 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.715-5.349L11 6.477V16h2a1 1 0 110 2H7a1 1 0 110-2h2V6.477L6.237 7.582l1.715 5.349a1 1 0 01-.285 1.05A3.989 3.989 0 015 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.738-5.42-1.233-.617a1 1 0 01.894-1.788l1.599.799L9 4.323V3a1 1 0 011-1zm-5 8.274l-.818 2.552c.25.112.526.174.818.174.292 0 .569-.062.818-.174L5 10.274zm10 0l-.818 2.552c.25.112.526.174.818.174.292 0 .569-.062.818-.174L15 10.274z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="../../../../LICENSE-Tywith.txt.html">LICENSE-Tywith.txt
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1.323l3.954 1.582 1.599-.8a1 1 0 01.894 1.79l-1.233.616 1.738 5.42a1 1 0 01-.285 1.05A3.989 3.989 0 0115 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.715-5.349L11 6.477V16h2a1 1 0 110 2H7a1 1 0 110-2h2V6.477L6.237 7.582l1.715 5.349a1 1 0 01-.285 1.05A3.989 3.989 0 015 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.738-5.42-1.233-.617a1 1 0 01.894-1.788l1.599.799L9 4.323V3a1 1 0 011-1zm-5 8.274l-.818 2.552c.25.112.526.174.818.174.292 0 .569-.062.818-.174L5 10.274zm10 0l-.818 2.552c.25.112.526.174.818.174.292 0 .569-.062.818-.174L15 10.274z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="../../../../LICENSE.md.html">LICENSE.md
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
+</svg>
+    
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="../../../../README.org.html">README.org
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" />
+</svg>
+  
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="../../../../CHANGES.md.html">CHANGES.md
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" />
+</svg>
+  
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="../../../../CHANGES.txt.html">CHANGES.txt
+          </a>
+         </div>
+        </div>
+        <details class="font-normal mb-2 text-sm">
+         <summary>Other versions</summary><div id="versions_container"></div>
+        </details><h2 class="font-semibold mb-2 text-sm">Authors</h2>
+        <p class="mb-3 text-sm">Jane Street Group, LLC</p>
+        <h2 class="font-semibold mb-2 text-sm">Issues</h2>
+        <div class="mb-3">
+         <a class="text-orange cursor-pointer mb-2 text-sm"
+          href="https://github.com/janestreet/sexplib/issues">
+          github.com/janestreet/sexplib/issues
+         </a>
+        </div>
+        <details class="font-semibold mb-2 text-sm">
+         <summary>Package dependencies</summary>
+         <div class="font-normal">
+          <ul>
+           <li>
+            <a href="../../../../../../ocaml/index.html" class="text-orange
+             cursor-pointer">ocaml
+            </a>
+           </li>
+           <li>
+            <a href="../../../../../../parsexp/index.html" class="text-orange
+             cursor-pointer">parsexp
+            </a>
+           </li>
+           <li>
+            <a href="../../../../../../sexplib0/index.html"
+             class="text-orange cursor-pointer">sexplib0
+            </a>
+           </li>
+           <li>
+            <a href="../../../../../../dune/index.html" class="text-orange
+             cursor-pointer">dune
+            </a>
+           </li>
+           <li>
+            <a href="../../../../../../num/index.html" class="text-orange
+             cursor-pointer">num
+            </a>
+           </li>
+          </ul>
+         </div>
+        </details>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div><script>Voodoo.update('../../../../../version.json')</script>
+ </body>
+</html>

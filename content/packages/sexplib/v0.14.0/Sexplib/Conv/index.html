@@ -1,0 +1,3340 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head><title>Conv (packages.sexplib.v0.14.0.Sexplib.Conv)</title>
+  <link rel="stylesheet" href="../../../../tailwind.css"/>
+  <link rel="stylesheet" href="../../../../extra.css"/>
+  <meta charset="utf-8"/><meta name="generator" content="odoc 3dfb7aef2f"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <script src="../../../../highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="../../../../voodoo_client.js"></script>
+  <script
+   src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+   defer="defer">
+  </script>
+ </head>
+ <body class="mx-auto max-w-screen-2xl">
+  <div class="relative">
+   <div class="relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+     <div class="flex justify-between items-center md:justify-start py-6
+      md:space-x-10">
+      <div class="flex justify-start">
+       <a href="https://v3.ocaml.org/">
+        <img src="/colour-logo.svg" alt="" class="h-8 w-auto sm:h-10"/>
+       </a>
+      </div>
+      <nav class="hidden md:flex space-x-10">
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Industry</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/whatisocaml">
+            <p class="text-base font-medium text-gray-900">What is OCaml</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/users">
+            <p class="text-base font-medium text-gray-900">Industrial Users
+            </p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/successstories">
+            <p class="text-base font-medium text-gray-900">Success Stories
+            </p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Resources</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/releases">
+            <p class="text-base font-medium text-gray-900">Releases</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/applications">
+            <p class="text-base font-medium text-gray-900">Applications</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/language">
+            <p class="text-base font-medium text-gray-900">Language</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/archive">
+            <p class="text-base font-medium text-gray-900">Archive</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Community</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/opportunities">
+            <p class="text-base font-medium text-gray-900">Opportunities</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/news">
+            <p class="text-base font-medium text-gray-900">News</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/aroundweb">
+            <p class="text-base font-medium text-gray-900">Around the Web</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="h-screen flex bg-white font-sans">
+   <div class="flex flex-col w-full h-full">
+    <div class="flex-row flex-1">
+     <nav class="bg-orange border-t border-b border-orange flex flex-row">
+      <ol class="max-w-screen-xl w-full px-4 flex space-x-4 sm:px-6 lg:px-8">
+       <li class="flex">
+        <div class="flex items-center">
+         <a href="#" class="text-gray-100 hover:text-gray-500">
+          
+  <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+        </svg>
+  
+          <span class="sr-only">Home</span>
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">packages
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">sexplib
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">v0.14.0
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">Sexplib
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="#" class="ml-4 text-sm font-medium text-gray-100
+          hover:text-gray-500">Conv
+         </a>
+        </div>
+       </li>
+      </ol>
+     </nav>
+    </div>
+    <div class="flex flex-row flex-1">
+     <div class="w-72 flex-none bg-gray-100 h-screen border-r border-gray-200
+      sticky top-0 hidden lg:block">
+      <div class="flex h-20 border-b relative">
+       <h2 class="text-xl absolute inset-x-0 p-3 px-5 bottom-0 mt-7
+        border-gray-200 font-semibold text-gray-500 font-sans">On this page
+       </h2>
+      </div>
+      <nav class="bg-gray-100 p-5">
+       <ul>
+        <li>
+         <a href="#type-aliases" class="cursor-pointer text-orange">Type
+           aliases
+         </a>
+        </li>
+        <li>
+         <a href="#conversion-of-ocaml-values-to-s-expressions"
+          class="cursor-pointer text-orange">Conversion of OCaml-values
+           to S-expressions
+         </a>
+        </li>
+        <li>
+         <a href="#conversion-of-s-expressions-to-ocaml-values"
+          class="cursor-pointer text-orange">Conversion of S-expressions
+           to OCaml-values
+         </a>
+        </li>
+       </ul>
+      </nav>
+     </div>
+     <div class="flex flex-1 flex-col lg:flex-row">
+      <div class="flex-1">
+       <div class="lg:max-w-5xl mx-auto px-3 lg:px-10 mb-10 text-sm">
+        <div class="flex h-20 relative border-b border-gray-200">
+         <div class="relative flex-1 h-20">
+          <h1 class="text-3xl absolute inset-x-0 py-3 bottom-0 font-semibold
+           text-gray-500 font-sans w-full truncate">
+           <code class="font-mono text-gray-800">Sexplib.Conv</code>
+          </h1>
+         </div>
+         <div class="relative flex-none w-28">
+          <h1 class="text-3xl absolute py-3 bottom-0 right-0 font-semibold
+           text-gray-500 font-sans">Module
+          </h1>
+         </div>
+        </div><p class="mt-4">Utility Module for S-expression Conversions</p>
+        <div class="mt-8">
+         <details open="open" class="relative">
+          <summary class="spec include p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100">
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">include</span> 
+             <span class="font-semibold">module</span> 
+             <span class="font-semibold">type</span> 
+             <span class="font-semibold">of</span> 
+             <a
+              href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp_conv/index.html"
+              class="cursor-pointer text-orange">Sexplib0.Sexp_conv
+             </a>
+            </span>
+           </code>
+          </summary>
+          <div class="mt-8">
+           <div class="spec type anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="type-sexp_bool">
+            <a href="#type-sexp_bool" class="hover-link inline-block 
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">type</span> sexp_bool</span>
+             <span> = bool</span>
+            </code>
+           </div>
+           <div class="spec-doc">
+            <p class="mt-4">Dummy definitions for &quot;optional&quot;
+              options, lists, and for opaque types
+            </p>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec type anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="type-sexp_option">
+            <a href="#type-sexp_option" class="hover-link inline-block 
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">type</span> 
+              <span>'a sexp_option</span>
+             </span>
+             <span> = <span><span class="">'a</span> option</span></span>
+            </code>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec type anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="type-sexp_list">
+            <a href="#type-sexp_list" class="hover-link inline-block 
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">type</span> 
+              <span>'a sexp_list</span>
+             </span>
+             <span> = <span><span class="">'a</span> list</span></span>
+            </code>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec type anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="type-sexp_array">
+            <a href="#type-sexp_array" class="hover-link inline-block 
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">type</span> 
+              <span>'a sexp_array</span>
+             </span>
+             <span> = <span><span class="">'a</span> array</span></span>
+            </code>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec type anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="type-sexp_opaque">
+            <a href="#type-sexp_opaque" class="hover-link inline-block 
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">type</span> 
+              <span>'a sexp_opaque</span>
+             </span><span> = <span class="">'a</span></span>
+            </code>
+           </div>
+          </div>
+          <h6 class="text-gray-800 font-sans anchored"
+           id="conversion-of-ocaml-values-to-s-expressions">
+           <a href="#conversion-of-ocaml-values-to-s-expressions"
+            class="hover-link inline-block -ml-7 pr-4">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>Conversion of OCaml-values to S-expressions
+          </h6>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-default_string_of_float">
+            <a href="#val-default_string_of_float" class="hover-link
+             inline-block -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> 
+              default_string_of_float : 
+              <span>
+               <span>(<span>float <span class="">&#45;&gt;</span></span>
+                 string)
+               </span> 
+               <a
+                href="../../../../ocaml-base-compiler/4.12.0/Stdlib/index.html#type-ref"
+                class="cursor-pointer text-orange">Stdlib.ref
+               </a>
+              </span>
+             </span>
+            </code>
+           </div>
+           <div class="spec-doc">
+            <p class="mt-4">
+             <code class="font-normal text-sm">default_string_of_float</code>
+              reference to the default function used to convert floats
+              to strings.
+            </p>
+            <p class="mt-4">Initially set to 
+             <code class="font-normal text-sm">
+              fun n -&gt; sprintf &quot;%.20G&quot; n
+             </code>.
+            </p>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-write_old_option_format">
+            <a href="#val-write_old_option_format" class="hover-link
+             inline-block -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> 
+              write_old_option_format : 
+              <span>bool 
+               <a
+                href="../../../../ocaml-base-compiler/4.12.0/Stdlib/index.html#type-ref"
+                class="cursor-pointer text-orange">Stdlib.ref
+               </a>
+              </span>
+             </span>
+            </code>
+           </div>
+           <div class="spec-doc">
+            <p class="mt-4">
+             <code class="font-normal text-sm">write_old_option_format</code>
+              reference for the default option format used to write option
+              values. If set to <code class="font-normal text-sm">true</code>
+             , the old-style option format will be used, the new-style
+              one otherwise.
+            </p>
+            <p class="mt-4">Initially set to 
+             <code class="font-normal text-sm">true</code>.
+            </p>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-read_old_option_format">
+            <a href="#val-read_old_option_format" class="hover-link
+             inline-block -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> 
+              read_old_option_format : 
+              <span>bool 
+               <a
+                href="../../../../ocaml-base-compiler/4.12.0/Stdlib/index.html#type-ref"
+                class="cursor-pointer text-orange">Stdlib.ref
+               </a>
+              </span>
+             </span>
+            </code>
+           </div>
+           <div class="spec-doc">
+            <p class="mt-4">
+             <code class="font-normal text-sm">read_old_option_format</code>
+              reference for the default option format used to read option
+              values. <code class="font-normal text-sm">Of_sexp_error</code>
+              will be raised with old-style option values if this reference
+              is set to <code class="font-normal text-sm">false</code>
+             . Reading new-style option values is always supported. Using
+              a global reference instead of changing the converter calling
+              conventions is the only way to avoid breaking old code 
+             with the standard macros.
+            </p>
+            <p class="mt-4">Initially set to 
+             <code class="font-normal text-sm">true</code>.
+            </p>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-list_map">
+            <a href="#val-list_map" class="hover-link inline-block -ml-7
+             pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> list_map : 
+              <span>
+               <span>(
+                <span><span class="">'a</span> 
+                 <span class="">&#45;&gt;</span>
+                </span> <span class="">'b</span>)
+               </span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span><span><span class="">'a</span> list</span> 
+               <span class="">&#45;&gt;</span>
+              </span> <span><span class="">'b</span> list</span>
+             </span>
+            </code>
+           </div>
+           <div class="spec-doc">
+            <p class="mt-4">We re-export a tail recursive map function,
+              because some modules override the standard library functions
+              (e.g. <code class="font-normal text-sm">StdLabels</code>
+             ) which wrecks havoc with the camlp4 extension.
+            </p>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-sexp_of_unit">
+            <a href="#val-sexp_of_unit" class="hover-link inline-block 
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> sexp_of_unit
+               : <span>unit <span class="">&#45;&gt;</span></span> 
+              <a
+               href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+               class="cursor-pointer text-orange">Sexplib0.Sexp.t
+              </a>
+             </span>
+            </code>
+           </div>
+           <div class="spec-doc">
+            <p class="mt-4">
+             <code class="font-normal text-sm">sexp_of_unit ()</code>
+              converts a value of type 
+             <code class="font-normal text-sm">unit</code> to an 
+             S-expression.
+            </p>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-sexp_of_bool">
+            <a href="#val-sexp_of_bool" class="hover-link inline-block 
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> sexp_of_bool
+               : <span>bool <span class="">&#45;&gt;</span></span> 
+              <a
+               href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+               class="cursor-pointer text-orange">Sexplib0.Sexp.t
+              </a>
+             </span>
+            </code>
+           </div>
+           <div class="spec-doc">
+            <p class="mt-4">
+             <code class="font-normal text-sm">sexp_of_bool b</code> 
+             converts the value <code class="font-normal text-sm">x</code>
+              of type <code class="font-normal text-sm">bool</code> to
+              an S-expression.
+            </p>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-sexp_of_string">
+            <a href="#val-sexp_of_string" class="hover-link inline-block
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> sexp_of_string
+               : <span>string <span class="">&#45;&gt;</span></span> 
+              <a
+               href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+               class="cursor-pointer text-orange">Sexplib0.Sexp.t
+              </a>
+             </span>
+            </code>
+           </div>
+           <div class="spec-doc">
+            <p class="mt-4">
+             <code class="font-normal text-sm">sexp_of_bool str</code>
+              converts the value <code class="font-normal text-sm">str</code>
+              of type <code class="font-normal text-sm">string</code>
+              to an S-expression.
+            </p>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-sexp_of_bytes">
+            <a href="#val-sexp_of_bytes" class="hover-link inline-block 
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> sexp_of_bytes
+               : <span>bytes <span class="">&#45;&gt;</span></span> 
+              <a
+               href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+               class="cursor-pointer text-orange">Sexplib0.Sexp.t
+              </a>
+             </span>
+            </code>
+           </div>
+           <div class="spec-doc">
+            <p class="mt-4">
+             <code class="font-normal text-sm">sexp_of_bool str</code>
+              converts the value <code class="font-normal text-sm">str</code>
+              of type <code class="font-normal text-sm">bytes</code> 
+             to an S-expression.
+            </p>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-sexp_of_char">
+            <a href="#val-sexp_of_char" class="hover-link inline-block 
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> sexp_of_char
+               : <span>char <span class="">&#45;&gt;</span></span> 
+              <a
+               href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+               class="cursor-pointer text-orange">Sexplib0.Sexp.t
+              </a>
+             </span>
+            </code>
+           </div>
+           <div class="spec-doc">
+            <p class="mt-4">
+             <code class="font-normal text-sm">sexp_of_char c</code> 
+             converts the value <code class="font-normal text-sm">c</code>
+              of type <code class="font-normal text-sm">char</code> to
+              an S-expression.
+            </p>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-sexp_of_int">
+            <a href="#val-sexp_of_int" class="hover-link inline-block 
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> sexp_of_int
+               : <span>int <span class="">&#45;&gt;</span></span> 
+              <a
+               href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+               class="cursor-pointer text-orange">Sexplib0.Sexp.t
+              </a>
+             </span>
+            </code>
+           </div>
+           <div class="spec-doc">
+            <p class="mt-4">
+             <code class="font-normal text-sm">sexp_of_int n</code> converts
+              the value <code class="font-normal text-sm">n</code> of
+              type <code class="font-normal text-sm">int</code> to an
+              S-expression.
+            </p>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-sexp_of_float">
+            <a href="#val-sexp_of_float" class="hover-link inline-block 
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> sexp_of_float
+               : <span>float <span class="">&#45;&gt;</span></span> 
+              <a
+               href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+               class="cursor-pointer text-orange">Sexplib0.Sexp.t
+              </a>
+             </span>
+            </code>
+           </div>
+           <div class="spec-doc">
+            <p class="mt-4">
+             <code class="font-normal text-sm">sexp_of_float n</code>
+              converts the value <code class="font-normal text-sm">n</code>
+              of type <code class="font-normal text-sm">float</code> 
+             to an S-expression.
+            </p>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-sexp_of_int32">
+            <a href="#val-sexp_of_int32" class="hover-link inline-block 
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> sexp_of_int32
+               : <span>int32 <span class="">&#45;&gt;</span></span> 
+              <a
+               href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+               class="cursor-pointer text-orange">Sexplib0.Sexp.t
+              </a>
+             </span>
+            </code>
+           </div>
+           <div class="spec-doc">
+            <p class="mt-4">
+             <code class="font-normal text-sm">sexp_of_int32 n</code>
+              converts the value <code class="font-normal text-sm">n</code>
+              of type <code class="font-normal text-sm">int32</code> 
+             to an S-expression.
+            </p>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-sexp_of_int64">
+            <a href="#val-sexp_of_int64" class="hover-link inline-block 
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> sexp_of_int64
+               : <span>int64 <span class="">&#45;&gt;</span></span> 
+              <a
+               href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+               class="cursor-pointer text-orange">Sexplib0.Sexp.t
+              </a>
+             </span>
+            </code>
+           </div>
+           <div class="spec-doc">
+            <p class="mt-4">
+             <code class="font-normal text-sm">sexp_of_int64 n</code>
+              converts the value <code class="font-normal text-sm">n</code>
+              of type <code class="font-normal text-sm">int64</code> 
+             to an S-expression.
+            </p>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-sexp_of_nativeint">
+            <a href="#val-sexp_of_nativeint" class="hover-link inline-block
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> sexp_of_nativeint
+               : <span>nativeint <span class="">&#45;&gt;</span></span>
+               
+              <a
+               href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+               class="cursor-pointer text-orange">Sexplib0.Sexp.t
+              </a>
+             </span>
+            </code>
+           </div>
+           <div class="spec-doc">
+            <p class="mt-4">
+             <code class="font-normal text-sm">sexp_of_nativeint n</code>
+              converts the value <code class="font-normal text-sm">n</code>
+              of type <code class="font-normal text-sm">nativeint</code>
+              to an S-expression.
+            </p>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-sexp_of_ref">
+            <a href="#val-sexp_of_ref" class="hover-link inline-block 
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> sexp_of_ref
+               : 
+              <span>
+               <span>(
+                <span><span class="">'a</span> 
+                 <span class="">&#45;&gt;</span>
+                </span> 
+                <a
+                 href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+                 class="cursor-pointer text-orange">Sexplib0.Sexp.t
+                </a>)
+               </span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span>
+               <span><span class="">'a</span> 
+                <a
+                 href="../../../../ocaml-base-compiler/4.12.0/Stdlib/index.html#type-ref"
+                 class="cursor-pointer text-orange">Stdlib.ref
+                </a>
+               </span> <span class="">&#45;&gt;</span>
+              </span> 
+              <a
+               href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+               class="cursor-pointer text-orange">Sexplib0.Sexp.t
+              </a>
+             </span>
+            </code>
+           </div>
+           <div class="spec-doc">
+            <p class="mt-4">
+             <code class="font-normal text-sm">sexp_of_ref conv r</code>
+              converts the value <code class="font-normal text-sm">r</code>
+              of type <code class="font-normal text-sm">'a ref</code>
+              to an S-expression. Uses 
+             <code class="font-normal text-sm">conv</code> to convert
+              values of type <code class="font-normal text-sm">'a</code>
+              to an S-expression.
+            </p>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-sexp_of_lazy_t">
+            <a href="#val-sexp_of_lazy_t" class="hover-link inline-block
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> sexp_of_lazy_t
+               : 
+              <span>
+               <span>(
+                <span><span class="">'a</span> 
+                 <span class="">&#45;&gt;</span>
+                </span> 
+                <a
+                 href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+                 class="cursor-pointer text-orange">Sexplib0.Sexp.t
+                </a>)
+               </span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span><span><span class="">'a</span> lazy_t</span> 
+               <span class="">&#45;&gt;</span>
+              </span> 
+              <a
+               href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+               class="cursor-pointer text-orange">Sexplib0.Sexp.t
+              </a>
+             </span>
+            </code>
+           </div>
+           <div class="spec-doc">
+            <p class="mt-4">
+             <code class="font-normal text-sm">sexp_of_lazy_t conv l</code>
+              converts the value <code class="font-normal text-sm">l</code>
+              of type <code class="font-normal text-sm">'a lazy_t</code>
+              to an S-expression. Uses 
+             <code class="font-normal text-sm">conv</code> to convert
+              values of type <code class="font-normal text-sm">'a</code>
+              to an S-expression.
+            </p>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-sexp_of_option">
+            <a href="#val-sexp_of_option" class="hover-link inline-block
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> sexp_of_option
+               : 
+              <span>
+               <span>(
+                <span><span class="">'a</span> 
+                 <span class="">&#45;&gt;</span>
+                </span> 
+                <a
+                 href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+                 class="cursor-pointer text-orange">Sexplib0.Sexp.t
+                </a>)
+               </span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span><span><span class="">'a</span> option</span> 
+               <span class="">&#45;&gt;</span>
+              </span> 
+              <a
+               href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+               class="cursor-pointer text-orange">Sexplib0.Sexp.t
+              </a>
+             </span>
+            </code>
+           </div>
+           <div class="spec-doc">
+            <p class="mt-4">
+             <code class="font-normal text-sm">sexp_of_option conv opt</code>
+              converts the value <code class="font-normal text-sm">opt</code>
+              of type <code class="font-normal text-sm">'a
+                                                            option</code>
+              to an S-expression. Uses 
+             <code class="font-normal text-sm">conv</code> to convert
+              values of type <code class="font-normal text-sm">'a</code>
+              to an S-expression.
+            </p>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-sexp_of_pair">
+            <a href="#val-sexp_of_pair" class="hover-link inline-block 
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> sexp_of_pair
+               : 
+              <span>
+               <span>(
+                <span><span class="">'a</span> 
+                 <span class="">&#45;&gt;</span>
+                </span> 
+                <a
+                 href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+                 class="cursor-pointer text-orange">Sexplib0.Sexp.t
+                </a>)
+               </span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span>
+               <span>(
+                <span><span class="">'b</span> 
+                 <span class="">&#45;&gt;</span>
+                </span> 
+                <a
+                 href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+                 class="cursor-pointer text-orange">Sexplib0.Sexp.t
+                </a>)
+               </span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span>
+               <span>(<span class="">'a</span> * <span class="">'b</span>)
+               </span> <span class="">&#45;&gt;</span>
+              </span> 
+              <a
+               href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+               class="cursor-pointer text-orange">Sexplib0.Sexp.t
+              </a>
+             </span>
+            </code>
+           </div>
+           <div class="spec-doc">
+            <p class="mt-4">
+             <code class="font-normal text-sm">sexp_of_pair conv1 conv2 pair
+             </code> converts a pair to an S-expression. It uses its 
+             first argument to convert the first element of the pair,
+              and its second argument to convert the second element of
+              the pair.
+            </p>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-sexp_of_triple">
+            <a href="#val-sexp_of_triple" class="hover-link inline-block
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> sexp_of_triple
+               : 
+              <span>
+               <span>(
+                <span><span class="">'a</span> 
+                 <span class="">&#45;&gt;</span>
+                </span> 
+                <a
+                 href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+                 class="cursor-pointer text-orange">Sexplib0.Sexp.t
+                </a>)
+               </span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span>
+               <span>(
+                <span><span class="">'b</span> 
+                 <span class="">&#45;&gt;</span>
+                </span> 
+                <a
+                 href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+                 class="cursor-pointer text-orange">Sexplib0.Sexp.t
+                </a>)
+               </span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span>
+               <span>(
+                <span><span class="">'c</span> 
+                 <span class="">&#45;&gt;</span>
+                </span> 
+                <a
+                 href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+                 class="cursor-pointer text-orange">Sexplib0.Sexp.t
+                </a>)
+               </span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span>
+               <span>(<span class="">'a</span> * <span class="">'b</span>
+                 * <span class="">'c</span>)
+               </span> <span class="">&#45;&gt;</span>
+              </span> 
+              <a
+               href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+               class="cursor-pointer text-orange">Sexplib0.Sexp.t
+              </a>
+             </span>
+            </code>
+           </div>
+           <div class="spec-doc">
+            <p class="mt-4">
+             <code class="font-normal text-sm">
+              sexp_of_triple conv1 conv2 conv3 triple
+             </code> converts a triple to an S-expression using 
+             <code class="font-normal text-sm">conv1</code>, 
+             <code class="font-normal text-sm">conv2</code>, and 
+             <code class="font-normal text-sm">conv3</code> to convert
+              its elements.
+            </p>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-sexp_of_list">
+            <a href="#val-sexp_of_list" class="hover-link inline-block 
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> sexp_of_list
+               : 
+              <span>
+               <span>(
+                <span><span class="">'a</span> 
+                 <span class="">&#45;&gt;</span>
+                </span> 
+                <a
+                 href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+                 class="cursor-pointer text-orange">Sexplib0.Sexp.t
+                </a>)
+               </span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span><span><span class="">'a</span> list</span> 
+               <span class="">&#45;&gt;</span>
+              </span> 
+              <a
+               href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+               class="cursor-pointer text-orange">Sexplib0.Sexp.t
+              </a>
+             </span>
+            </code>
+           </div>
+           <div class="spec-doc">
+            <p class="mt-4">
+             <code class="font-normal text-sm">sexp_of_list conv lst</code>
+              converts the value <code class="font-normal text-sm">lst</code>
+              of type <code class="font-normal text-sm">'a
+                                                            list</code>
+              to an S-expression. Uses 
+             <code class="font-normal text-sm">conv</code> to convert
+              values of type <code class="font-normal text-sm">'a</code>
+              to an S-expression.
+            </p>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-sexp_of_array">
+            <a href="#val-sexp_of_array" class="hover-link inline-block 
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> sexp_of_array
+               : 
+              <span>
+               <span>(
+                <span><span class="">'a</span> 
+                 <span class="">&#45;&gt;</span>
+                </span> 
+                <a
+                 href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+                 class="cursor-pointer text-orange">Sexplib0.Sexp.t
+                </a>)
+               </span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span><span><span class="">'a</span> array</span> 
+               <span class="">&#45;&gt;</span>
+              </span> 
+              <a
+               href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+               class="cursor-pointer text-orange">Sexplib0.Sexp.t
+              </a>
+             </span>
+            </code>
+           </div>
+           <div class="spec-doc">
+            <p class="mt-4">
+             <code class="font-normal text-sm">sexp_of_array conv ar</code>
+              converts the value <code class="font-normal text-sm">ar</code>
+              of type <code class="font-normal text-sm">'a
+                                                            array</code>
+              to an S-expression. Uses 
+             <code class="font-normal text-sm">conv</code> to convert
+              values of type <code class="font-normal text-sm">'a</code>
+              to an S-expression.
+            </p>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-sexp_of_hashtbl">
+            <a href="#val-sexp_of_hashtbl" class="hover-link inline-block
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> sexp_of_hashtbl
+               : 
+              <span>
+               <span>(
+                <span><span class="">'a</span> 
+                 <span class="">&#45;&gt;</span>
+                </span> 
+                <a
+                 href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+                 class="cursor-pointer text-orange">Sexplib0.Sexp.t
+                </a>)
+               </span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span>
+               <span>(
+                <span><span class="">'b</span> 
+                 <span class="">&#45;&gt;</span>
+                </span> 
+                <a
+                 href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+                 class="cursor-pointer text-orange">Sexplib0.Sexp.t
+                </a>)
+               </span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span>
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>)
+                </span> 
+                <a
+                 href="../../../../ocaml-base-compiler/4.12.0/Stdlib/Hashtbl/index.html#type-t"
+                 class="cursor-pointer text-orange">Stdlib.Hashtbl.t
+                </a>
+               </span> <span class="">&#45;&gt;</span>
+              </span> 
+              <a
+               href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+               class="cursor-pointer text-orange">Sexplib0.Sexp.t
+              </a>
+             </span>
+            </code>
+           </div>
+           <div class="spec-doc">
+            <p class="mt-4">
+             <code class="font-normal text-sm">
+              sexp_of_hashtbl conv_key conv_value htbl
+             </code> converts the value 
+             <code class="font-normal text-sm">htbl</code> of type 
+             <code class="font-normal text-sm">('a, 'b) Hashtbl.t</code>
+              to an S-expression. Uses 
+             <code class="font-normal text-sm">conv_key</code> to convert
+              the hashtable keys of type 
+             <code class="font-normal text-sm">'a</code>, and 
+             <code class="font-normal text-sm">conv_value</code> to convert
+              hashtable values of type 
+             <code class="font-normal text-sm">'b</code> to S-expressions.
+            </p>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-sexp_of_opaque">
+            <a href="#val-sexp_of_opaque" class="hover-link inline-block
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> sexp_of_opaque
+               : 
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> 
+              <a
+               href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+               class="cursor-pointer text-orange">Sexplib0.Sexp.t
+              </a>
+             </span>
+            </code>
+           </div>
+           <div class="spec-doc">
+            <p class="mt-4">
+             <code class="font-normal text-sm">sexp_of_opaque x</code>
+              converts the value <code class="font-normal text-sm">x</code>
+              of opaque type to an S-expression. This means the user 
+             need not provide converters, but the result cannot be 
+             interpreted.
+            </p>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-sexp_of_fun">
+            <a href="#val-sexp_of_fun" class="hover-link inline-block 
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> sexp_of_fun
+               : 
+              <span>
+               <span>(
+                <span><span class="">'a</span> 
+                 <span class="">&#45;&gt;</span>
+                </span> <span class="">'b</span>)
+               </span> <span class="">&#45;&gt;</span>
+              </span> 
+              <a
+               href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+               class="cursor-pointer text-orange">Sexplib0.Sexp.t
+              </a>
+             </span>
+            </code>
+           </div>
+           <div class="spec-doc">
+            <p class="mt-4">
+             <code class="font-normal text-sm">sexp_of_fun f</code> converts
+              the value <code class="font-normal text-sm">f</code> of
+              function type to a dummy S-expression. Functions cannot
+              be serialized as S-expressions, but at least a placeholder
+              can be generated for pretty-printing.
+            </p>
+           </div>
+          </div>
+          <h6 class="text-gray-800 font-sans anchored"
+           id="conversion-of-s-expressions-to-ocaml-values">
+           <a href="#conversion-of-s-expressions-to-ocaml-values"
+            class="hover-link inline-block -ml-7 pr-4">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>Conversion of S-expressions to OCaml-values
+          </h6>
+          <div class="mt-8">
+           <div class="spec exception anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="exception-Of_sexp_error">
+            <a href="#exception-Of_sexp_error" class="hover-link inline-block
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">exception</span> </span>
+             <span><span class="">Of_sexp_error</span> 
+              <span class="font-semibold">of</span> exn * 
+              <a
+               href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+               class="cursor-pointer text-orange">Sexplib0.Sexp.t
+              </a>
+             </span>
+            </code>
+           </div>
+           <div class="spec-doc">
+            <p class="mt-4">
+             <code class="font-normal text-sm">Of_sexp_error (exn, sexp)
+             </code> the exception raised when an S-expression could 
+             not be successfully converted to an OCaml-value.
+            </p>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100"
+            id="val-record_check_extra_fields">
+            <a href="#val-record_check_extra_fields" class="hover-link
+             inline-block -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> 
+              record_check_extra_fields : 
+              <span>bool 
+               <a
+                href="../../../../ocaml-base-compiler/4.12.0/Stdlib/index.html#type-ref"
+                class="cursor-pointer text-orange">Stdlib.ref
+               </a>
+              </span>
+             </span>
+            </code>
+           </div>
+           <div class="spec-doc">
+            <p class="mt-4">
+             <code class="font-normal text-sm">record_check_extra_fields
+             </code> checks for extra (= unknown) fields in record 
+             S-expressions.
+            </p>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-of_sexp_error">
+            <a href="#val-of_sexp_error" class="hover-link inline-block 
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> of_sexp_error
+               : <span>string <span class="">&#45;&gt;</span></span> 
+              <span>
+               <a
+                href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+                class="cursor-pointer text-orange">Sexplib0.Sexp.t
+               </a> <span class="">&#45;&gt;</span>
+              </span> <span class="">'a</span>
+             </span>
+            </code>
+           </div>
+           <div class="spec-doc">
+            <p class="mt-4">
+             <code class="font-normal text-sm">of_sexp_error reason sexp
+             </code> 
+            </p>
+            <ul class="at-tags">
+             <li class="raises">raises Of_sexp_error 
+              <p class="mt-4">(Failure reason, sexp).</p>
+             </li>
+            </ul>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-of_sexp_error_exn">
+            <a href="#val-of_sexp_error_exn" class="hover-link inline-block
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> of_sexp_error_exn
+               : <span>exn <span class="">&#45;&gt;</span></span> 
+              <span>
+               <a
+                href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+                class="cursor-pointer text-orange">Sexplib0.Sexp.t
+               </a> <span class="">&#45;&gt;</span>
+              </span> <span class="">'a</span>
+             </span>
+            </code>
+           </div>
+           <div class="spec-doc">
+            <p class="mt-4">
+             <code class="font-normal text-sm">of_sexp_error exc sexp</code>
+              
+            </p>
+            <ul class="at-tags">
+             <li class="raises">raises Of_sexp_error 
+              <p class="mt-4">(exc, sexp).</p>
+             </li>
+            </ul>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-unit_of_sexp">
+            <a href="#val-unit_of_sexp" class="hover-link inline-block 
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> unit_of_sexp
+               : 
+              <span>
+               <a
+                href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+                class="cursor-pointer text-orange">Sexplib0.Sexp.t
+               </a> <span class="">&#45;&gt;</span>
+              </span> unit
+             </span>
+            </code>
+           </div>
+           <div class="spec-doc">
+            <p class="mt-4">
+             <code class="font-normal text-sm">unit_of_sexp sexp</code>
+              converts S-expression 
+             <code class="font-normal text-sm">sexp</code> to a value
+              of type <code class="font-normal text-sm">unit</code>.
+            </p>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-bool_of_sexp">
+            <a href="#val-bool_of_sexp" class="hover-link inline-block 
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> bool_of_sexp
+               : 
+              <span>
+               <a
+                href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+                class="cursor-pointer text-orange">Sexplib0.Sexp.t
+               </a> <span class="">&#45;&gt;</span>
+              </span> bool
+             </span>
+            </code>
+           </div>
+           <div class="spec-doc">
+            <p class="mt-4">
+             <code class="font-normal text-sm">bool_of_sexp sexp</code>
+              converts S-expression 
+             <code class="font-normal text-sm">sexp</code> to a value
+              of type <code class="font-normal text-sm">bool</code>.
+            </p>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-string_of_sexp">
+            <a href="#val-string_of_sexp" class="hover-link inline-block
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> string_of_sexp
+               : 
+              <span>
+               <a
+                href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+                class="cursor-pointer text-orange">Sexplib0.Sexp.t
+               </a> <span class="">&#45;&gt;</span>
+              </span> string
+             </span>
+            </code>
+           </div>
+           <div class="spec-doc">
+            <p class="mt-4">
+             <code class="font-normal text-sm">string_of_sexp sexp</code>
+              converts S-expression 
+             <code class="font-normal text-sm">sexp</code> to a value
+              of type <code class="font-normal text-sm">string</code>
+             .
+            </p>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-bytes_of_sexp">
+            <a href="#val-bytes_of_sexp" class="hover-link inline-block 
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> bytes_of_sexp
+               : 
+              <span>
+               <a
+                href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+                class="cursor-pointer text-orange">Sexplib0.Sexp.t
+               </a> <span class="">&#45;&gt;</span>
+              </span> bytes
+             </span>
+            </code>
+           </div>
+           <div class="spec-doc">
+            <p class="mt-4">
+             <code class="font-normal text-sm">bytes_of_sexp sexp</code>
+              converts S-expression 
+             <code class="font-normal text-sm">sexp</code> to a value
+              of type <code class="font-normal text-sm">bytes</code>.
+            </p>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-char_of_sexp">
+            <a href="#val-char_of_sexp" class="hover-link inline-block 
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> char_of_sexp
+               : 
+              <span>
+               <a
+                href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+                class="cursor-pointer text-orange">Sexplib0.Sexp.t
+               </a> <span class="">&#45;&gt;</span>
+              </span> char
+             </span>
+            </code>
+           </div>
+           <div class="spec-doc">
+            <p class="mt-4">
+             <code class="font-normal text-sm">char_of_sexp sexp</code>
+              converts S-expression 
+             <code class="font-normal text-sm">sexp</code> to a value
+              of type <code class="font-normal text-sm">char</code>.
+            </p>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-int_of_sexp">
+            <a href="#val-int_of_sexp" class="hover-link inline-block 
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> int_of_sexp
+               : 
+              <span>
+               <a
+                href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+                class="cursor-pointer text-orange">Sexplib0.Sexp.t
+               </a> <span class="">&#45;&gt;</span>
+              </span> int
+             </span>
+            </code>
+           </div>
+           <div class="spec-doc">
+            <p class="mt-4">
+             <code class="font-normal text-sm">int_of_sexp sexp</code>
+              converts S-expression 
+             <code class="font-normal text-sm">sexp</code> to a value
+              of type <code class="font-normal text-sm">int</code>.
+            </p>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-float_of_sexp">
+            <a href="#val-float_of_sexp" class="hover-link inline-block 
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> float_of_sexp
+               : 
+              <span>
+               <a
+                href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+                class="cursor-pointer text-orange">Sexplib0.Sexp.t
+               </a> <span class="">&#45;&gt;</span>
+              </span> float
+             </span>
+            </code>
+           </div>
+           <div class="spec-doc">
+            <p class="mt-4">
+             <code class="font-normal text-sm">float_of_sexp sexp</code>
+              converts S-expression 
+             <code class="font-normal text-sm">sexp</code> to a value
+              of type <code class="font-normal text-sm">float</code>.
+            </p>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-int32_of_sexp">
+            <a href="#val-int32_of_sexp" class="hover-link inline-block 
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> int32_of_sexp
+               : 
+              <span>
+               <a
+                href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+                class="cursor-pointer text-orange">Sexplib0.Sexp.t
+               </a> <span class="">&#45;&gt;</span>
+              </span> int32
+             </span>
+            </code>
+           </div>
+           <div class="spec-doc">
+            <p class="mt-4">
+             <code class="font-normal text-sm">int32_of_sexp sexp</code>
+              converts S-expression 
+             <code class="font-normal text-sm">sexp</code> to a value
+              of type <code class="font-normal text-sm">int32</code>.
+            </p>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-int64_of_sexp">
+            <a href="#val-int64_of_sexp" class="hover-link inline-block 
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> int64_of_sexp
+               : 
+              <span>
+               <a
+                href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+                class="cursor-pointer text-orange">Sexplib0.Sexp.t
+               </a> <span class="">&#45;&gt;</span>
+              </span> int64
+             </span>
+            </code>
+           </div>
+           <div class="spec-doc">
+            <p class="mt-4">
+             <code class="font-normal text-sm">int64_of_sexp sexp</code>
+              converts S-expression 
+             <code class="font-normal text-sm">sexp</code> to a value
+              of type <code class="font-normal text-sm">int64</code>.
+            </p>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-nativeint_of_sexp">
+            <a href="#val-nativeint_of_sexp" class="hover-link inline-block
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> nativeint_of_sexp
+               : 
+              <span>
+               <a
+                href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+                class="cursor-pointer text-orange">Sexplib0.Sexp.t
+               </a> <span class="">&#45;&gt;</span>
+              </span> nativeint
+             </span>
+            </code>
+           </div>
+           <div class="spec-doc">
+            <p class="mt-4">
+             <code class="font-normal text-sm">nativeint_of_sexp sexp</code>
+              converts S-expression 
+             <code class="font-normal text-sm">sexp</code> to a value
+              of type <code class="font-normal text-sm">nativeint</code>
+             .
+            </p>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-ref_of_sexp">
+            <a href="#val-ref_of_sexp" class="hover-link inline-block 
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> ref_of_sexp
+               : 
+              <span>
+               <span>(
+                <span>
+                 <a
+                  href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+                  class="cursor-pointer text-orange">Sexplib0.Sexp.t
+                 </a> <span class="">&#45;&gt;</span>
+                </span> <span class="">'a</span>)
+               </span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span>
+               <a
+                href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+                class="cursor-pointer text-orange">Sexplib0.Sexp.t
+               </a> <span class="">&#45;&gt;</span>
+              </span> 
+              <span><span class="">'a</span> 
+               <a
+                href="../../../../ocaml-base-compiler/4.12.0/Stdlib/index.html#type-ref"
+                class="cursor-pointer text-orange">Stdlib.ref
+               </a>
+              </span>
+             </span>
+            </code>
+           </div>
+           <div class="spec-doc">
+            <p class="mt-4">
+             <code class="font-normal text-sm">ref_of_sexp conv sexp</code>
+              converts S-expression 
+             <code class="font-normal text-sm">sexp</code> to a value
+              of type <code class="font-normal text-sm">'a ref</code>
+              using conversion function 
+             <code class="font-normal text-sm">conv</code>, which converts
+              an S-expression to a value of type 
+             <code class="font-normal text-sm">'a</code>.
+            </p>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-lazy_t_of_sexp">
+            <a href="#val-lazy_t_of_sexp" class="hover-link inline-block
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> lazy_t_of_sexp
+               : 
+              <span>
+               <span>(
+                <span>
+                 <a
+                  href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+                  class="cursor-pointer text-orange">Sexplib0.Sexp.t
+                 </a> <span class="">&#45;&gt;</span>
+                </span> <span class="">'a</span>)
+               </span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span>
+               <a
+                href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+                class="cursor-pointer text-orange">Sexplib0.Sexp.t
+               </a> <span class="">&#45;&gt;</span>
+              </span> <span><span class="">'a</span> lazy_t</span>
+             </span>
+            </code>
+           </div>
+           <div class="spec-doc">
+            <p class="mt-4">
+             <code class="font-normal text-sm">lazy_t_of_sexp conv sexp
+             </code> converts S-expression 
+             <code class="font-normal text-sm">sexp</code> to a value
+              of type <code class="font-normal text-sm">'a lazy_t</code>
+              using conversion function 
+             <code class="font-normal text-sm">conv</code>, which converts
+              an S-expression to a value of type 
+             <code class="font-normal text-sm">'a</code>.
+            </p>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-option_of_sexp">
+            <a href="#val-option_of_sexp" class="hover-link inline-block
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> option_of_sexp
+               : 
+              <span>
+               <span>(
+                <span>
+                 <a
+                  href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+                  class="cursor-pointer text-orange">Sexplib0.Sexp.t
+                 </a> <span class="">&#45;&gt;</span>
+                </span> <span class="">'a</span>)
+               </span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span>
+               <a
+                href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+                class="cursor-pointer text-orange">Sexplib0.Sexp.t
+               </a> <span class="">&#45;&gt;</span>
+              </span> <span><span class="">'a</span> option</span>
+             </span>
+            </code>
+           </div>
+           <div class="spec-doc">
+            <p class="mt-4">
+             <code class="font-normal text-sm">option_of_sexp conv sexp
+             </code> converts S-expression 
+             <code class="font-normal text-sm">sexp</code> to a value
+              of type <code class="font-normal text-sm">'a option</code>
+              using conversion function 
+             <code class="font-normal text-sm">conv</code>, which converts
+              an S-expression to a value of type 
+             <code class="font-normal text-sm">'a</code>.
+            </p>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-pair_of_sexp">
+            <a href="#val-pair_of_sexp" class="hover-link inline-block 
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> pair_of_sexp
+               : 
+              <span>
+               <span>(
+                <span>
+                 <a
+                  href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+                  class="cursor-pointer text-orange">Sexplib0.Sexp.t
+                 </a> <span class="">&#45;&gt;</span>
+                </span> <span class="">'a</span>)
+               </span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span>
+               <span>(
+                <span>
+                 <a
+                  href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+                  class="cursor-pointer text-orange">Sexplib0.Sexp.t
+                 </a> <span class="">&#45;&gt;</span>
+                </span> <span class="">'b</span>)
+               </span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span>
+               <a
+                href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+                class="cursor-pointer text-orange">Sexplib0.Sexp.t
+               </a> <span class="">&#45;&gt;</span>
+              </span> <span class="">'a</span> * <span class="">'b</span>
+             </span>
+            </code>
+           </div>
+           <div class="spec-doc">
+            <p class="mt-4">
+             <code class="font-normal text-sm">pair_of_sexp conv1 conv2 sexp
+             </code> converts S-expression 
+             <code class="font-normal text-sm">sexp</code> to a pair 
+             of type <code class="font-normal text-sm">'a * 'b</code>
+              using conversion functions 
+             <code class="font-normal text-sm">conv1</code> and 
+             <code class="font-normal text-sm">conv2</code>, which convert
+              S-expressions to values of type 
+             <code class="font-normal text-sm">'a</code> and 
+             <code class="font-normal text-sm">'b</code> respectively.
+            </p>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-triple_of_sexp">
+            <a href="#val-triple_of_sexp" class="hover-link inline-block
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> triple_of_sexp
+               : 
+              <span>
+               <span>(
+                <span>
+                 <a
+                  href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+                  class="cursor-pointer text-orange">Sexplib0.Sexp.t
+                 </a> <span class="">&#45;&gt;</span>
+                </span> <span class="">'a</span>)
+               </span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span>
+               <span>(
+                <span>
+                 <a
+                  href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+                  class="cursor-pointer text-orange">Sexplib0.Sexp.t
+                 </a> <span class="">&#45;&gt;</span>
+                </span> <span class="">'b</span>)
+               </span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span>
+               <span>(
+                <span>
+                 <a
+                  href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+                  class="cursor-pointer text-orange">Sexplib0.Sexp.t
+                 </a> <span class="">&#45;&gt;</span>
+                </span> <span class="">'c</span>)
+               </span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span>
+               <a
+                href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+                class="cursor-pointer text-orange">Sexplib0.Sexp.t
+               </a> <span class="">&#45;&gt;</span>
+              </span> <span class="">'a</span> * <span class="">'b</span>
+               * <span class="">'c</span>
+             </span>
+            </code>
+           </div>
+           <div class="spec-doc">
+            <p class="mt-4">
+             <code class="font-normal text-sm">
+              triple_of_sexp conv1 conv2 conv3 sexp
+             </code> converts S-expression 
+             <code class="font-normal text-sm">sexp</code> to a triple
+              of type <code class="font-normal text-sm">'a * 'b * 'c</code>
+              using conversion functions 
+             <code class="font-normal text-sm">conv1</code>, 
+             <code class="font-normal text-sm">conv2</code>, and 
+             <code class="font-normal text-sm">conv3</code>, which convert
+              S-expressions to values of type 
+             <code class="font-normal text-sm">'a</code>, 
+             <code class="font-normal text-sm">'b</code>, and 
+             <code class="font-normal text-sm">'c</code> respectively.
+            </p>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-list_of_sexp">
+            <a href="#val-list_of_sexp" class="hover-link inline-block 
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> list_of_sexp
+               : 
+              <span>
+               <span>(
+                <span>
+                 <a
+                  href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+                  class="cursor-pointer text-orange">Sexplib0.Sexp.t
+                 </a> <span class="">&#45;&gt;</span>
+                </span> <span class="">'a</span>)
+               </span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span>
+               <a
+                href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+                class="cursor-pointer text-orange">Sexplib0.Sexp.t
+               </a> <span class="">&#45;&gt;</span>
+              </span> <span><span class="">'a</span> list</span>
+             </span>
+            </code>
+           </div>
+           <div class="spec-doc">
+            <p class="mt-4">
+             <code class="font-normal text-sm">list_of_sexp conv sexp</code>
+              converts S-expression 
+             <code class="font-normal text-sm">sexp</code> to a value
+              of type <code class="font-normal text-sm">'a list</code>
+              using conversion function 
+             <code class="font-normal text-sm">conv</code>, which converts
+              an S-expression to a value of type 
+             <code class="font-normal text-sm">'a</code>.
+            </p>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-array_of_sexp">
+            <a href="#val-array_of_sexp" class="hover-link inline-block 
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> array_of_sexp
+               : 
+              <span>
+               <span>(
+                <span>
+                 <a
+                  href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+                  class="cursor-pointer text-orange">Sexplib0.Sexp.t
+                 </a> <span class="">&#45;&gt;</span>
+                </span> <span class="">'a</span>)
+               </span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span>
+               <a
+                href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+                class="cursor-pointer text-orange">Sexplib0.Sexp.t
+               </a> <span class="">&#45;&gt;</span>
+              </span> <span><span class="">'a</span> array</span>
+             </span>
+            </code>
+           </div>
+           <div class="spec-doc">
+            <p class="mt-4">
+             <code class="font-normal text-sm">array_of_sexp conv sexp</code>
+              converts S-expression 
+             <code class="font-normal text-sm">sexp</code> to a value
+              of type <code class="font-normal text-sm">'a array</code>
+              using conversion function 
+             <code class="font-normal text-sm">conv</code>, which converts
+              an S-expression to a value of type 
+             <code class="font-normal text-sm">'a</code>.
+            </p>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-hashtbl_of_sexp">
+            <a href="#val-hashtbl_of_sexp" class="hover-link inline-block
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> hashtbl_of_sexp
+               : 
+              <span>
+               <span>(
+                <span>
+                 <a
+                  href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+                  class="cursor-pointer text-orange">Sexplib0.Sexp.t
+                 </a> <span class="">&#45;&gt;</span>
+                </span> <span class="">'a</span>)
+               </span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span>
+               <span>(
+                <span>
+                 <a
+                  href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+                  class="cursor-pointer text-orange">Sexplib0.Sexp.t
+                 </a> <span class="">&#45;&gt;</span>
+                </span> <span class="">'b</span>)
+               </span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span>
+               <a
+                href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+                class="cursor-pointer text-orange">Sexplib0.Sexp.t
+               </a> <span class="">&#45;&gt;</span>
+              </span> 
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a
+                href="../../../../ocaml-base-compiler/4.12.0/Stdlib/Hashtbl/index.html#type-t"
+                class="cursor-pointer text-orange">Stdlib.Hashtbl.t
+               </a>
+              </span>
+             </span>
+            </code>
+           </div>
+           <div class="spec-doc">
+            <p class="mt-4">
+             <code class="font-normal text-sm">
+              hashtbl_of_sexp conv_key conv_value sexp
+             </code> converts S-expression 
+             <code class="font-normal text-sm">sexp</code> to a value
+              of type 
+             <code class="font-normal text-sm">('a, 'b) Hashtbl.t</code>
+              using conversion function 
+             <code class="font-normal text-sm">conv_key</code>, which
+              converts an S-expression to hashtable key of type 
+             <code class="font-normal text-sm">'a</code>, and function
+              <code class="font-normal text-sm">conv_value</code>, which
+              converts an S-expression to hashtable value of type 
+             <code class="font-normal text-sm">'b</code>.
+            </p>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-opaque_of_sexp">
+            <a href="#val-opaque_of_sexp" class="hover-link inline-block
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> opaque_of_sexp
+               : 
+              <span>
+               <a
+                href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+                class="cursor-pointer text-orange">Sexplib0.Sexp.t
+               </a> <span class="">&#45;&gt;</span>
+              </span> <span class="">'a</span>
+             </span>
+            </code>
+           </div>
+           <div class="spec-doc">
+            <p class="mt-4">
+             <code class="font-normal text-sm">opaque_of_sexp sexp</code>
+              
+            </p>
+            <ul class="at-tags">
+             <li class="raises">raises Of_sexp_error 
+              <p class="mt-4">when attempting to convert an S-expression
+                to an opaque value.
+              </p>
+             </li>
+            </ul>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-fun_of_sexp">
+            <a href="#val-fun_of_sexp" class="hover-link inline-block 
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> fun_of_sexp
+               : 
+              <span>
+               <a
+                href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+                class="cursor-pointer text-orange">Sexplib0.Sexp.t
+               </a> <span class="">&#45;&gt;</span>
+              </span> <span class="">'a</span>
+             </span>
+            </code>
+           </div>
+           <div class="spec-doc">
+            <p class="mt-4">
+             <code class="font-normal text-sm">fun_of_sexp sexp</code>
+              
+            </p>
+            <ul class="at-tags">
+             <li class="raises">raises Of_sexp_error 
+              <p class="mt-4">when attempting to convert an S-expression
+                to a function.
+              </p>
+             </li>
+            </ul>
+           </div>
+          </div><p class="mt-4">Exception converters</p>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-sexp_of_exn">
+            <a href="#val-sexp_of_exn" class="hover-link inline-block 
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> sexp_of_exn
+               : <span>exn <span class="">&#45;&gt;</span></span> 
+              <a
+               href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+               class="cursor-pointer text-orange">Sexplib0.Sexp.t
+              </a>
+             </span>
+            </code>
+           </div>
+           <div class="spec-doc">
+            <p class="mt-4">
+             <code class="font-normal text-sm">sexp_of_exn exc</code>
+              converts exception <code class="font-normal text-sm">exc</code>
+              to an S-expression. If no suitable converter is found, 
+             the standard converter in 
+             <code class="font-normal text-sm">Printexc</code> will be
+              used to generate an atomic S-expression.
+            </p>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-sexp_of_exn_opt">
+            <a href="#val-sexp_of_exn_opt" class="hover-link inline-block
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> sexp_of_exn_opt
+               : <span>exn <span class="">&#45;&gt;</span></span> 
+              <span>
+               <a
+                href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+                class="cursor-pointer text-orange">Sexplib0.Sexp.t
+               </a> option
+              </span>
+             </span>
+            </code>
+           </div>
+           <div class="spec-doc">
+            <p class="mt-4">
+             <code class="font-normal text-sm">sexp_of_exn_opt exc</code>
+              converts exception <code class="font-normal text-sm">exc</code>
+              to <code class="font-normal text-sm">Some sexp</code>. 
+             If no suitable converter is found, 
+             <code class="font-normal text-sm">None</code> is returned
+              instead.
+            </p>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec module anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="module-Exn_converter">
+            <a href="#module-Exn_converter" class="hover-link inline-block
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">module</span> </span>
+             <span>
+              <a href="Exn_converter/index.html" class="cursor-pointer
+               text-orange">Exn_converter
+              </a>
+             </span>
+             <span> : <span class="font-semibold">sig</span> ... 
+              <span class="font-semibold">end</span>
+             </span>
+            </code>
+           </div>
+          </div>
+          <div class="absolute bg-gray-500 opacity-10 border-gray-500
+           rounded-lg border-r-8 rounded-l-none top-0 -right-6 bottom-0 
+           w-5">
+          </div>
+         </details>
+        </div>
+        <h6 class="text-gray-800 font-sans anchored" id="type-aliases">
+         <a href="#type-aliases" class="hover-link inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Type aliases
+        </h6>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-bigstring">
+          <a href="#type-bigstring" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> bigstring</span>
+           <span> = 
+            <span>
+             <span>(char, 
+              <a
+               href="../../../../ocaml-base-compiler/4.12.0/Stdlib/Bigarray/index.html#type-int8_unsigned_elt"
+               class="cursor-pointer text-orange">
+               Stdlib.Bigarray.int8_unsigned_elt
+              </a>, 
+              <a
+               href="../../../../ocaml-base-compiler/4.12.0/Stdlib/Bigarray/index.html#type-c_layout"
+               class="cursor-pointer text-orange">Stdlib.Bigarray.c_layout
+              </a>)
+             </span> 
+             <a
+              href="../../../../ocaml-base-compiler/4.12.0/Stdlib/Bigarray/Array1/index.html#type-t"
+              class="cursor-pointer text-orange">Stdlib.Bigarray.Array1.t
+             </a>
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-float32_vec">
+          <a href="#type-float32_vec" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> float32_vec</span>
+           <span> = 
+            <span>
+             <span>(float, 
+              <a
+               href="../../../../ocaml-base-compiler/4.12.0/Stdlib/Bigarray/index.html#type-float32_elt"
+               class="cursor-pointer text-orange">Stdlib.Bigarray.float32_elt
+              </a>, 
+              <a
+               href="../../../../ocaml-base-compiler/4.12.0/Stdlib/Bigarray/index.html#type-fortran_layout"
+               class="cursor-pointer text-orange">
+               Stdlib.Bigarray.fortran_layout
+              </a>)
+             </span> 
+             <a
+              href="../../../../ocaml-base-compiler/4.12.0/Stdlib/Bigarray/Array1/index.html#type-t"
+              class="cursor-pointer text-orange">Stdlib.Bigarray.Array1.t
+             </a>
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-float64_vec">
+          <a href="#type-float64_vec" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> float64_vec</span>
+           <span> = 
+            <span>
+             <span>(float, 
+              <a
+               href="../../../../ocaml-base-compiler/4.12.0/Stdlib/Bigarray/index.html#type-float64_elt"
+               class="cursor-pointer text-orange">Stdlib.Bigarray.float64_elt
+              </a>, 
+              <a
+               href="../../../../ocaml-base-compiler/4.12.0/Stdlib/Bigarray/index.html#type-fortran_layout"
+               class="cursor-pointer text-orange">
+               Stdlib.Bigarray.fortran_layout
+              </a>)
+             </span> 
+             <a
+              href="../../../../ocaml-base-compiler/4.12.0/Stdlib/Bigarray/Array1/index.html#type-t"
+              class="cursor-pointer text-orange">Stdlib.Bigarray.Array1.t
+             </a>
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-vec">
+          <a href="#type-vec" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> vec</span>
+           <span> = 
+            <a href="#type-float64_vec" class="cursor-pointer text-orange">
+             float64_vec
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-float32_mat">
+          <a href="#type-float32_mat" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> float32_mat</span>
+           <span> = 
+            <span>
+             <span>(float, 
+              <a
+               href="../../../../ocaml-base-compiler/4.12.0/Stdlib/Bigarray/index.html#type-float32_elt"
+               class="cursor-pointer text-orange">Stdlib.Bigarray.float32_elt
+              </a>, 
+              <a
+               href="../../../../ocaml-base-compiler/4.12.0/Stdlib/Bigarray/index.html#type-fortran_layout"
+               class="cursor-pointer text-orange">
+               Stdlib.Bigarray.fortran_layout
+              </a>)
+             </span> 
+             <a
+              href="../../../../ocaml-base-compiler/4.12.0/Stdlib/Bigarray/Array2/index.html#type-t"
+              class="cursor-pointer text-orange">Stdlib.Bigarray.Array2.t
+             </a>
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-float64_mat">
+          <a href="#type-float64_mat" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> float64_mat</span>
+           <span> = 
+            <span>
+             <span>(float, 
+              <a
+               href="../../../../ocaml-base-compiler/4.12.0/Stdlib/Bigarray/index.html#type-float64_elt"
+               class="cursor-pointer text-orange">Stdlib.Bigarray.float64_elt
+              </a>, 
+              <a
+               href="../../../../ocaml-base-compiler/4.12.0/Stdlib/Bigarray/index.html#type-fortran_layout"
+               class="cursor-pointer text-orange">
+               Stdlib.Bigarray.fortran_layout
+              </a>)
+             </span> 
+             <a
+              href="../../../../ocaml-base-compiler/4.12.0/Stdlib/Bigarray/Array2/index.html#type-t"
+              class="cursor-pointer text-orange">Stdlib.Bigarray.Array2.t
+             </a>
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-mat">
+          <a href="#type-mat" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> mat</span>
+           <span> = 
+            <a href="#type-float64_mat" class="cursor-pointer text-orange">
+             float64_mat
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <h6 class="text-gray-800 font-sans anchored"
+         id="conversion-of-ocaml-values-to-s-expressions">
+         <a href="#conversion-of-ocaml-values-to-s-expressions"
+          class="hover-link inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Conversion of OCaml-values to S-expressions
+        </h6>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-sexp_of_bigstring">
+          <a href="#val-sexp_of_bigstring" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sexp_of_bigstring
+             : 
+            <span>
+             <a href="#type-bigstring" class="cursor-pointer text-orange">
+              bigstring
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Sexp/index.html#type-t" class="cursor-pointer
+             text-orange">Sexp.t
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">sexp_of_bigstring bstr</code>
+            converts a bigstring (character bigarray in C-layout) to 
+           an S-expression.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-sexp_of_float32_vec">
+          <a href="#val-sexp_of_float32_vec" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sexp_of_float32_vec
+             : 
+            <span>
+             <a href="#type-float32_vec" class="cursor-pointer text-orange">
+              float32_vec
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Sexp/index.html#type-t" class="cursor-pointer
+             text-orange">Sexp.t
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">sexp_of_float32_vec vec</code>
+            converts the one-dimensional bigarray 
+           <code class="font-normal text-sm">vec</code> of 32-bit floats
+            in Fortran-layout to an S-expression.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-sexp_of_float64_vec">
+          <a href="#val-sexp_of_float64_vec" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sexp_of_float64_vec
+             : 
+            <span>
+             <a href="#type-float64_vec" class="cursor-pointer text-orange">
+              float64_vec
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Sexp/index.html#type-t" class="cursor-pointer
+             text-orange">Sexp.t
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">sexp_of_float64_vec vec</code>
+            converts the one-dimensional bigarray 
+           <code class="font-normal text-sm">vec</code> of 64-bit floats
+            in Fortran-layout to an S-expression.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-sexp_of_vec">
+          <a href="#val-sexp_of_vec" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sexp_of_vec : 
+            <span>
+             <a href="#type-vec" class="cursor-pointer text-orange">vec</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Sexp/index.html#type-t" class="cursor-pointer
+             text-orange">Sexp.t
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">sexp_of_vec vec</code> same
+            as 
+           <a href="#val-sexp_of_float64_vec" class="cursor-pointer
+            text-orange">
+            <code class="font-normal text-sm">Conv.sexp_of_float64_vec</code>
+           </a>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-sexp_of_float32_mat">
+          <a href="#val-sexp_of_float32_mat" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sexp_of_float32_mat
+             : 
+            <span>
+             <a href="#type-float32_mat" class="cursor-pointer text-orange">
+              float32_mat
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Sexp/index.html#type-t" class="cursor-pointer
+             text-orange">Sexp.t
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">sexp_of_float32_mat mat</code>
+            converts the two-dimensional bigarray 
+           <code class="font-normal text-sm">mat</code> of 32-bit floats
+            in Fortran-layout to an S-expression.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-sexp_of_float64_mat">
+          <a href="#val-sexp_of_float64_mat" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sexp_of_float64_mat
+             : 
+            <span>
+             <a href="#type-float64_mat" class="cursor-pointer text-orange">
+              float64_mat
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Sexp/index.html#type-t" class="cursor-pointer
+             text-orange">Sexp.t
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">sexp_of_float64_mat mat</code>
+            converts the two-dimensional bigarray 
+           <code class="font-normal text-sm">mat</code> of 64-bit floats
+            in Fortran-layout to an S-expression.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-sexp_of_mat">
+          <a href="#val-sexp_of_mat" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sexp_of_mat : 
+            <span>
+             <a href="#type-mat" class="cursor-pointer text-orange">mat</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Sexp/index.html#type-t" class="cursor-pointer
+             text-orange">Sexp.t
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">sexp_of_mat mat</code> same
+            as 
+           <a href="#val-sexp_of_float64_mat" class="cursor-pointer
+            text-orange">
+            <code class="font-normal text-sm">Conv.sexp_of_float64_mat</code>
+           </a>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-string_of__of__sexp_of">
+          <a href="#val-string_of__of__sexp_of" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            string_of__of__sexp_of : 
+            <span>
+             <span>(
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> 
+              <a href="../Sexp/index.html#type-t" class="cursor-pointer
+               text-orange">Sexp.t
+              </a>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">string_of__of__sexp_of conv x
+           </code> converts the OCaml-value 
+           <code class="font-normal text-sm">x</code> to an S-expression
+            represented as a string by using conversion function 
+           <code class="font-normal text-sm">conv</code>.
+          </p>
+         </div>
+        </div>
+        <h6 class="text-gray-800 font-sans anchored"
+         id="conversion-of-s-expressions-to-ocaml-values">
+         <a href="#conversion-of-s-expressions-to-ocaml-values"
+          class="hover-link inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Conversion of S-expressions to OCaml-values
+        </h6>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-bigstring_sexp_grammar">
+          <a href="#val-bigstring_sexp_grammar" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            bigstring_sexp_grammar : 
+            <a
+             href="../../../../sexplib0/v0.14.0/Sexplib0/Private/Raw_grammar/index.html#type-t"
+             class="cursor-pointer text-orange">
+             Sexplib0.Private.Raw_grammar.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-bigstring_of_sexp">
+          <a href="#val-bigstring_of_sexp" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> bigstring_of_sexp
+             : 
+            <span>
+             <a href="../Sexp/index.html#type-t" class="cursor-pointer
+              text-orange">Sexp.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-bigstring" class="cursor-pointer text-orange">
+             bigstring
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">bigstring_of_sexp sexp</code>
+            converts S-expression 
+           <code class="font-normal text-sm">sexp</code> to a bigstring
+            (character bigarray in C-layout).
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-float32_vec_sexp_grammar">
+          <a href="#val-float32_vec_sexp_grammar" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            float32_vec_sexp_grammar : 
+            <a
+             href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/Private/Raw_grammar/index.html#type-t"
+             class="cursor-pointer text-orange">
+             Sexplib0.Sexp.Private.Raw_grammar.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-float32_vec_of_sexp">
+          <a href="#val-float32_vec_of_sexp" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> float32_vec_of_sexp
+             : 
+            <span>
+             <a href="../Sexp/index.html#type-t" class="cursor-pointer
+              text-orange">Sexp.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-float32_vec" class="cursor-pointer text-orange">
+             float32_vec
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">float32_vec_of_sexp sexp</code>
+            converts S-expression 
+           <code class="font-normal text-sm">sexp</code> to a one-dimensional
+            bigarray of 32-bit floats in Fortran-layout.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-float64_vec_sexp_grammar">
+          <a href="#val-float64_vec_sexp_grammar" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            float64_vec_sexp_grammar : 
+            <a
+             href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/Private/Raw_grammar/index.html#type-t"
+             class="cursor-pointer text-orange">
+             Sexplib0.Sexp.Private.Raw_grammar.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-float64_vec_of_sexp">
+          <a href="#val-float64_vec_of_sexp" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> float64_vec_of_sexp
+             : 
+            <span>
+             <a href="../Sexp/index.html#type-t" class="cursor-pointer
+              text-orange">Sexp.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-float64_vec" class="cursor-pointer text-orange">
+             float64_vec
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">float64_vec_of_sexp sexp</code>
+            converts S-expression 
+           <code class="font-normal text-sm">sexp</code> to a one-dimensional
+            bigarray of 64-bit floats in Fortran-layout.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-vec_sexp_grammar">
+          <a href="#val-vec_sexp_grammar" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> vec_sexp_grammar
+             : 
+            <a
+             href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/Private/Raw_grammar/index.html#type-t"
+             class="cursor-pointer text-orange">
+             Sexplib0.Sexp.Private.Raw_grammar.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-vec_of_sexp">
+          <a href="#val-vec_of_sexp" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> vec_of_sexp : 
+            <span>
+             <a href="../Sexp/index.html#type-t" class="cursor-pointer
+              text-orange">Sexp.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-vec" class="cursor-pointer text-orange">vec</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">vec_of_sexp sexp</code> 
+           same as 
+           <a href="#val-float64_vec_of_sexp" class="cursor-pointer
+            text-orange">
+            <code class="font-normal text-sm">float64_vec_of_sexp</code>
+           </a>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-float32_mat_sexp_grammar">
+          <a href="#val-float32_mat_sexp_grammar" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            float32_mat_sexp_grammar : 
+            <a
+             href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/Private/Raw_grammar/index.html#type-t"
+             class="cursor-pointer text-orange">
+             Sexplib0.Sexp.Private.Raw_grammar.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-float32_mat_of_sexp">
+          <a href="#val-float32_mat_of_sexp" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> float32_mat_of_sexp
+             : 
+            <span>
+             <a href="../Sexp/index.html#type-t" class="cursor-pointer
+              text-orange">Sexp.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-float32_mat" class="cursor-pointer text-orange">
+             float32_mat
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">float32_mat_of_sexp sexp</code>
+            converts S-expression 
+           <code class="font-normal text-sm">sexp</code> to a two-dimensional
+            bigarray of 32-bit floats in Fortran-layout.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-float64_mat_sexp_grammar">
+          <a href="#val-float64_mat_sexp_grammar" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            float64_mat_sexp_grammar : 
+            <a
+             href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/Private/Raw_grammar/index.html#type-t"
+             class="cursor-pointer text-orange">
+             Sexplib0.Sexp.Private.Raw_grammar.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-float64_mat_of_sexp">
+          <a href="#val-float64_mat_of_sexp" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> float64_mat_of_sexp
+             : 
+            <span>
+             <a href="../Sexp/index.html#type-t" class="cursor-pointer
+              text-orange">Sexp.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-float64_mat" class="cursor-pointer text-orange">
+             float64_mat
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">float64_mat_of_sexp sexp</code>
+            converts S-expression 
+           <code class="font-normal text-sm">sexp</code> to a two-dimensional
+            bigarray of 64-bit floats in Fortran-layout.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-mat_sexp_grammar">
+          <a href="#val-mat_sexp_grammar" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> mat_sexp_grammar
+             : 
+            <a
+             href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/Private/Raw_grammar/index.html#type-t"
+             class="cursor-pointer text-orange">
+             Sexplib0.Sexp.Private.Raw_grammar.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-mat_of_sexp">
+          <a href="#val-mat_of_sexp" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> mat_of_sexp : 
+            <span>
+             <a href="../Sexp/index.html#type-t" class="cursor-pointer
+              text-orange">Sexp.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-mat" class="cursor-pointer text-orange">mat</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">mat_of_sexp sexp</code> 
+           same as 
+           <a href="#val-float64_mat_of_sexp" class="cursor-pointer
+            text-orange">
+            <code class="font-normal text-sm">Conv.float64_mat_of_sexp</code>
+           </a>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-of_string__of__of_sexp">
+          <a href="#val-of_string__of__of_sexp" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            of_string__of__of_sexp : 
+            <span>
+             <span>(
+              <span>
+               <a href="../Sexp/index.html#type-t" class="cursor-pointer
+                text-orange">Sexp.t
+               </a> <span class="">&#45;&gt;</span>
+              </span> <span class="">'a</span>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> <span>string <span class="">&#45;&gt;</span></span>
+             <span class="">'a</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">of_string__of__of_sexp conv str
+           </code> converts the S-expression 
+           <code class="font-normal text-sm">str</code> represented as
+            a string to an OCaml-value by using conversion function 
+           <code class="font-normal text-sm">conv</code>.
+          </p>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="w-full flex-none lg:w-72 border-t lg:border-l bg-gray-100">
+       <div class="flex h-20 border-b relative">
+        <h2 class="text-xl absolute inset-x-0 p-3 bottom-0 mt-7 font-semibold
+         text-gray-500">sexplib.v0.14.0
+        </h2>
+       </div>
+       <div class="m-3">
+        <p class="mb-5 italic text-sm">
+         Library for serializing OCaml values to and from S-expressions
+        </p>
+        <div class="mb-3">
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="https://github.com/janestreet/sexplib">
+           github.com/janestreet/sexplib
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1.323l3.954 1.582 1.599-.8a1 1 0 01.894 1.79l-1.233.616 1.738 5.42a1 1 0 01-.285 1.05A3.989 3.989 0 0115 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.715-5.349L11 6.477V16h2a1 1 0 110 2H7a1 1 0 110-2h2V6.477L6.237 7.582l1.715 5.349a1 1 0 01-.285 1.05A3.989 3.989 0 015 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.738-5.42-1.233-.617a1 1 0 01.894-1.788l1.599.799L9 4.323V3a1 1 0 011-1zm-5 8.274l-.818 2.552c.25.112.526.174.818.174.292 0 .569-.062.818-.174L5 10.274zm10 0l-.818 2.552c.25.112.526.174.818.174.292 0 .569-.062.818-.174L15 10.274z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="../../LICENSE-Tywith.txt.html">LICENSE-Tywith.txt
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1.323l3.954 1.582 1.599-.8a1 1 0 01.894 1.79l-1.233.616 1.738 5.42a1 1 0 01-.285 1.05A3.989 3.989 0 0115 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.715-5.349L11 6.477V16h2a1 1 0 110 2H7a1 1 0 110-2h2V6.477L6.237 7.582l1.715 5.349a1 1 0 01-.285 1.05A3.989 3.989 0 015 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.738-5.42-1.233-.617a1 1 0 01.894-1.788l1.599.799L9 4.323V3a1 1 0 011-1zm-5 8.274l-.818 2.552c.25.112.526.174.818.174.292 0 .569-.062.818-.174L5 10.274zm10 0l-.818 2.552c.25.112.526.174.818.174.292 0 .569-.062.818-.174L15 10.274z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="../../LICENSE.md.html">LICENSE.md
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
+</svg>
+    
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="../../README.org.html">README.org
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" />
+</svg>
+  
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="../../CHANGES.md.html">CHANGES.md
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" />
+</svg>
+  
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="../../CHANGES.txt.html">CHANGES.txt
+          </a>
+         </div>
+        </div>
+        <details class="font-normal mb-2 text-sm">
+         <summary>Other versions</summary><div id="versions_container"></div>
+        </details><h2 class="font-semibold mb-2 text-sm">Authors</h2>
+        <p class="mb-3 text-sm">Jane Street Group, LLC</p>
+        <h2 class="font-semibold mb-2 text-sm">Issues</h2>
+        <div class="mb-3">
+         <a class="text-orange cursor-pointer mb-2 text-sm"
+          href="https://github.com/janestreet/sexplib/issues">
+          github.com/janestreet/sexplib/issues
+         </a>
+        </div>
+        <details class="font-semibold mb-2 text-sm">
+         <summary>Package dependencies</summary>
+         <div class="font-normal">
+          <ul>
+           <li>
+            <a href="../../../../ocaml/index.html" class="text-orange
+             cursor-pointer">ocaml
+            </a>
+           </li>
+           <li>
+            <a href="../../../../parsexp/index.html" class="text-orange
+             cursor-pointer">parsexp
+            </a>
+           </li>
+           <li>
+            <a href="../../../../sexplib0/index.html" class="text-orange
+             cursor-pointer">sexplib0
+            </a>
+           </li>
+           <li>
+            <a href="../../../../dune/index.html" class="text-orange
+             cursor-pointer">dune
+            </a>
+           </li>
+           <li>
+            <a href="../../../../num/index.html" class="text-orange
+             cursor-pointer">num
+            </a>
+           </li>
+          </ul>
+         </div>
+        </details>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div><script>Voodoo.update('../../../version.json')</script>
+ </body>
+</html>

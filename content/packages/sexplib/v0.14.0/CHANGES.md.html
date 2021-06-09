@@ -1,0 +1,1662 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head><title>CHANGES.md (packages.sexplib.v0.14.0.CHANGES.md)</title>
+  <link rel="stylesheet" href="../../tailwind.css"/>
+  <link rel="stylesheet" href="../../extra.css"/><meta charset="utf-8"/>
+  <meta name="generator" content="odoc 3dfb7aef2f"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <script src="../../highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="../../voodoo_client.js"></script>
+  <script
+   src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+   defer="defer">
+  </script>
+ </head>
+ <body class="mx-auto max-w-screen-2xl">
+  <div class="relative">
+   <div class="relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+     <div class="flex justify-between items-center md:justify-start py-6
+      md:space-x-10">
+      <div class="flex justify-start">
+       <a href="https://v3.ocaml.org/">
+        <img src="/colour-logo.svg" alt="" class="h-8 w-auto sm:h-10"/>
+       </a>
+      </div>
+      <nav class="hidden md:flex space-x-10">
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Industry</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/whatisocaml">
+            <p class="text-base font-medium text-gray-900">What is OCaml</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/users">
+            <p class="text-base font-medium text-gray-900">Industrial Users
+            </p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/successstories">
+            <p class="text-base font-medium text-gray-900">Success Stories
+            </p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Resources</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/releases">
+            <p class="text-base font-medium text-gray-900">Releases</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/applications">
+            <p class="text-base font-medium text-gray-900">Applications</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/language">
+            <p class="text-base font-medium text-gray-900">Language</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/archive">
+            <p class="text-base font-medium text-gray-900">Archive</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Community</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/opportunities">
+            <p class="text-base font-medium text-gray-900">Opportunities</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/news">
+            <p class="text-base font-medium text-gray-900">News</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/aroundweb">
+            <p class="text-base font-medium text-gray-900">Around the Web</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="h-screen flex bg-white font-sans">
+   <div class="flex flex-col w-full h-full">
+    <div class="flex-row flex-1">
+     <nav class="bg-orange border-t border-b border-orange flex flex-row">
+      <ol class="max-w-screen-xl w-full px-4 flex space-x-4 sm:px-6 lg:px-8">
+       <li class="flex">
+        <div class="flex items-center">
+         <a href="#" class="text-gray-100 hover:text-gray-500">
+          
+  <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+        </svg>
+  
+          <span class="sr-only">Home</span>
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">packages
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">sexplib
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="index.html" class="ml-4 text-sm font-medium text-gray-100
+          hover:text-gray-500">v0.14.0
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="#" class="ml-4 text-sm font-medium text-gray-100
+          hover:text-gray-500">CHANGES.md
+         </a>
+        </div>
+       </li>
+      </ol>
+     </nav>
+    </div>
+    <div class="flex flex-row flex-1">
+     <div class="w-72 flex-none bg-gray-100 h-screen border-r border-gray-200
+      sticky top-0 hidden lg:block">
+      <div class="flex h-20 border-b relative">
+       <h2 class="text-xl absolute inset-x-0 p-3 px-5 bottom-0 mt-7
+        border-gray-200 font-semibold text-gray-500 font-sans">On this page
+       </h2>
+      </div>
+     </div>
+     <div class="flex flex-1 flex-col lg:flex-row">
+      <div class="flex-1">
+       <div class="lg:max-w-5xl mx-auto px-3 lg:px-10 mb-10 text-sm">
+        <div class="flex h-20 relative border-b border-gray-200">
+         <div class="relative flex-1 h-20">
+          <h1 class="text-3xl absolute inset-x-0 py-3 bottom-0 font-semibold
+           text-gray-500 font-sans w-full truncate">
+           <code class="font-mono text-gray-800">v0.11</code>
+          </h1>
+         </div>
+         <div class="relative flex-none w-20">
+          <h1 class="text-3xl absolute py-3 bottom-0 right-0 font-semibold
+           text-gray-500 font-sans">
+          </h1>
+         </div>
+        </div>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Switched 
+           <code class="font-normal text-sm">Sexplib</code>
+           's sexp parser to use the 
+           <code class="font-normal text-sm">Parsexp</code> library.<
+           br/>See https://github.com/janestreet/parsexp
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Remove the 
+           <code class="font-normal text-sm">location</code> field from the 
+           <code class="font-normal text-sm">parse_error</code> type.
+          </p>
+         </li>
+         <li class="ml-4"><p class="mt-4">Dropped dependency on Base.</p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">v0.10
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Added 
+           <code class="font-normal text-sm">val Sexp.is_unit : t -&gt; bool
+           </code>
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Enabled 
+           <code class="font-normal text-sm">-safe-string</code>
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">v0.9
+        </h3>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         113.43.00
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Sexps and EOF are a mess. Try to improve the situation somewhat!
+          </p>
+          <p class="mt-4">
+           In particular, this feature makes improvements to when<br/>
+           <code class="font-normal text-sm">Parsing_whitespace</code>
+            sexp parser state is reported: it now<br/>distinguishes the case 
+           <code class="font-normal text-sm">Parsing_toplevel_whitespace
+           </code> from<br/>
+           <code class="font-normal text-sm">Parsing_nested_whitespace</code>
+            and it's only a valid empty parse if<br/>
+           <code class="font-normal text-sm">eof</code> happens in 
+           <code class="font-normal text-sm">Parsing_toplevel_whitespace
+           </code>. See test diffs for<br/>
+           examples of strings that were previously valid empty parses, but
+           are<br/>
+           now incomplete. One of the craziest is probably &quot;(foo #|
+           bar&quot;.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         113.33.00
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Changes 
+           <code class="font-normal text-sm">Sexp.to_string</code>
+            to escape all non-ASCII characters.
+          </p>
+          <p class="mt-4">
+           Previously chars &gt;= 127 are escaped or not depending on:
+          </p>
+          <ol class="list-decimal mt-2 mb-4">
+           <li class="ml-4"><p class="mt-4">other character in the string</p>
+           </li><li class="ml-4"><p class="mt-4">the system</p></li>
+           <li class="ml-4"><p class="mt-4">environment variable settings</p>
+           </li>
+          </ol>
+          <p class="mt-4">(2) and (3) are because 
+           <code class="font-normal text-sm">String.escaped</code>
+            from the stdlib uses the C<br/>function 
+           <code class="font-normal text-sm">isprint</code>
+            which is locale and OS dependent.
+          </p>
+          <p class="mt-4">
+           This can cause invalid UTF-8 sequence to be printed by sexplib,
+           which<br/>is annoying:
+          </p>
+          <p class="mt-4">https://github.com/janestreet/sexplib/issues/18</p>
+          <p class="mt-4">Starting with this release, sexplib:</p>
+          <ol class="list-decimal mt-2 mb-4">
+           <li class="ml-4">
+            <p class="mt-4">copies the 
+             <code class="font-normal text-sm">String.escaped</code>
+              function of OCaml 4.03 which escapes<br/>
+             all non-ascii characters
+            </p>
+           </li>
+           <li class="ml-4">
+            <p class="mt-4">
+             make sure we escape the string when it contains characters &gt;=
+             127
+            </p>
+           </li>
+          </ol>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Clean up the documentation for sexplib, modernizing it to include
+           <br/><code class="font-normal text-sm">ppx_sexp_conv</code>
+           , and breaking up the documentation between sexplib and<br/>
+           <code class="font-normal text-sm">ppx_sexp_conv</code>
+           .  Also changed the formatting to use org-mode, so it<br/>
+           will render properly on github.  Markdown doesn't render well by
+           <br/>
+           default, unless you use quite different conventions about
+           linebeaks.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           In sexp macro library, avoid returning success when there is any
+           error<br/>reading a sexp. In particular, this prevents
+          </p><p class="mt-4">sexp resolve &lt;(echo '(:use x)')</p>
+          <p class="mt-4">from silently succeeding.</p>
+          <p class="mt-4">
+           Also, now we no longer read an included file multiple times.<
+           br/>This lets even crazy stuff like this to work:
+          </p>
+          <p class="mt-4">
+           $ echo 'hi ' | sexp resolve &lt;(echo '((:include /dev/stdin)
+           (:include /dev/stdin))')
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         113.24.00
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Switch code in 
+           <code class="font-normal text-sm">lib</code> subdir to ppx-style.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         112.35.00
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Inline some calls that js_of_
+           ocaml was unable to recognise as<br/>
+           tail-recursive (cf. issue #14)
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         112.24.00
+        </h3><p class="mt-4">Minor update: documentation.</p>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         112.17.00
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Added 
+           <code class="font-normal text-sm">sexp_of_</code>
+            support for GADTs, and remove the not-quite-working<br/>
+           support for <code class="font-normal text-sm">of_sexp</code>
+           .
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         112.06.00
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Improved the implementation of 
+           <code class="font-normal text-sm">Exn.sexp_of_t</code>
+           , using the unique id in<br/>exceptions in OCaml 4.02.
+          </p>
+          <p class="mt-4">
+           We use the identifier to map exception constructors to converters.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         112.01.00
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Replaced occurrences of 
+           <code class="font-normal text-sm">Obj.magic 0</code> with 
+           <code class="font-normal text-sm">Obj.magic None</code>.
+          </p>
+          <p class="mt-4">
+           With the former the compiler might think the destination type is
+           <br/>
+           always an integer and instruct the GC to ignore references to such
+           <br/>
+           values.  The latter doesn't have this problem as options are not
+           <br/>always integers.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         111.25.00
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Fix compatibility with OCaml 4.02</p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         111.17.00
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Make the camlp4 dependency optional</p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         111.13.00
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">In 
+           <code class="font-normal text-sm">Sexplib.Std</code>, renamed 
+           <code class="font-normal text-sm">Macro</code> as 
+           <code class="font-normal text-sm">Sexp_macro</code>.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         111.11.00
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Added error locations to 
+           <code class="font-normal text-sm">Macro</code>-expansion errors.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         110.01.00
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Added 
+           <code class="font-normal text-sm">with sexp</code>
+            support for mutually recursive types with common<br/>fields.
+          </p><p class="mt-4">For instance:</p>
+          <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+           <code class="font-normal text-sm">
+            type a = { fl : float } and b = { fl : int } with sexp
+            </code>
+          </pre><p class="mt-4">Closes #3</p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fixed the behavior of sexplib on 
+           <code class="font-normal text-sm">private</code> types.
+          </p>
+          <p class="mt-4">sexplib used to ignore the 
+           <code class="font-normal text-sm">private</code>
+            modifier, which means generated<br/>
+           functions had the wrong type.  Now, it generates a function with
+           the<br/>right type for 
+           <code class="font-normal text-sm">sexp_of</code>
+            and refuses to generate anything for<br/>
+           <code class="font-normal text-sm">of_sexp</code>.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Added 
+           <code class="font-normal text-sm">Macro.expand_local_macros</code>
+           , which macro expands sexps,<br/>failing on 
+           <code class="font-normal text-sm">:include</code> macros.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fixed 
+           <code class="font-normal text-sm">Macro</code>
+           's handling of nested 
+           <code class="font-normal text-sm">:include</code>
+           's which was broken<br/>with respect to paths.
+          </p>
+          <p class="mt-4">Prior to this fix, 
+           <code class="font-normal text-sm">:include</code>
+           's were broken with respect to the path<br/>
+           used to resolve the filename.  Including a file outside the
+           current<br/>
+           directory which included another file relative to that one would
+           <br/>break.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         109.60.00
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Moved unix-specific code to a new object section, sexplib_
+           unix
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         109.53.00
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Changed 
+           <code class="font-normal text-sm">sexp_of_float</code>
+            to (usually) use as few digits as possible,<br/>
+           without losing precision.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Split the part of 
+           <code class="font-normal text-sm">Sexplib</code> that depends on 
+           <code class="font-normal text-sm">Num</code> into a separate<
+           br/>library, <code class="font-normal text-sm">Sexplib_num</code>
+           .
+          </p>
+          <p class="mt-4">This was done to eliminate the dependence of 
+           <code class="font-normal text-sm">Core_kernel</code> on 
+           <code class="font-normal text-sm">Num</code>,<br/>
+           which is not usable on javascript.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         109.52.00
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Added a 
+           <code class="font-normal text-sm">Macro</code> module, with 
+           <code class="font-normal text-sm">load_sexp*</code>
+            functions that support<br/>file includes and templates.
+          </p><p class="mt-4">The following new syntaxes are supported:</p>
+          <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+           <code class="font-normal text-sm">
+            (:include filename)
+            (:let f (arg1 ... argn) sexp1 ... sexpn)
+            (:use f (arg1 valn) ... (argn valn))
+            (:concat a1 ... an)
+            </code>
+          </pre>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Added support to 
+           <code class="font-normal text-sm">with sexp</code>
+            for a subset of GADTs.
+          </p>
+          <p class="mt-4">
+           The new support is for types that use existentially quantified
+           <br/>variables or plain variants written with GADT syntax.
+          </p>
+          <p class="mt-4">
+           Existentially quantified variables still have to be wrapped with
+           <br/><code class="font-normal text-sm">sexp_opaque</code>
+            generate compiling code.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fixed a type error in the code generated by 
+           <code class="font-normal text-sm">with sexp</code> in some<
+           br/>cases of variant inclusions.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         109.20.00
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Renamed converter generated by 
+           <code class="font-normal text-sm">with sexp</code>
+            for polymorphic variants so it is hidden from the toplevel.
+          </p>
+          <p class="mt-4"><code class="font-normal text-sm">of_sexp</code>
+            created a value named 
+           <code class="font-normal text-sm">&lt;type&gt;_of_sexp__</code>
+            to handle<br/>
+           polymorphic variants.  To hide it from the toplevel, we renamed it
+           as<br/>
+           <code class="font-normal text-sm">__&lt;type&gt;_of_sexp__</code>
+           .  We kept the <code class="font-normal text-sm">__</code>
+            suffix to avoid any confusion<br/>with a type named 
+           <code class="font-normal text-sm">__&lt;type&gt;</code>.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         109.12.00
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">A tiny lexer improvement in 
+           <code class="font-normal text-sm">lexer.mll</code>.  Used<
+           br/>
+           <code class="font-normal text-sm">lexbuf.lex_{start|curr}_pos
+           </code> instead of<br/>
+           <code class="font-normal text-sm">
+            lexbuf.lex_{start|curr}_p.pos_cnum
+           </code> for computing the length of a<br/>
+           lexeme since the difference is the same.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         109.10.00
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Improved error messages in presence of GADTs.</p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Made 
+           <code class="font-normal text-sm">with sexp</code>
+            work with types containing 
+           <code class="font-normal text-sm">as</code> in signatures.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         109.09.00
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Fixed an 
+           <code class="font-normal text-sm">unused rec</code>
+            warning in the code generated by 
+           <code class="font-normal text-sm">pa_sexp</code> in<br/>
+           rare cases.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2012-07-15
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Added support for S-expression default record fields.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Added syntax for S-expression comments and for nested block
+           comments.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Fixed a few minor bugs and inconsistencies in the parsers and<
+           br/>updated their whitespace handling to conform with the upcoming
+           <br/>
+           OCaml 4.00 compiler.  The parser specification now also supports
+           <br/>Menhir.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Rewrote README in Markdown and improved documentation.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Minor bug fix in the preprocessing module.</p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Eliminated new warnings available in OCaml 4.00.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2011-09-18
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4"><p class="mt-4">Improved documentation.</p></li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2011-09-15
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Fixes to improve package dependency resolution.</p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2011-07-05
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Fixed a parser position bug.  Parser positions passed by the user
+           <br/>were not updated correctly.
+          </p>
+         </li>
+         <li class="ml-4"><p class="mt-4">Internal code beautification.</p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2011-07-04
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Internal updates to sync with Jane Street.</p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2011-01-30
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Fixed a code generation bug with toplevel entries.
+          </p>
+          <p class="mt-4">Thanks to Yong Lu 
+           <a href="mailto:lyongu@gmail.com" class="cursor-pointer
+            text-orange">lyongu@gmail.com
+           </a> for the report!
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2010-12-27
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Added support for MoreLabels.Hashtbl and improved reporting of
+           <br/>error locations with preprocessor.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2010-12-26
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Worked around a compiler bug that is expected to be fixed in<
+           br/>
+           OCaml 3.12.1.  This workaround temporarily removes the interface
+           <br/>for module Conv (conv.mli), thus exposing the internals.<
+           br/>This should not cause any problems for end users as long as
+           <br/>they do not depend on the exported internal representations.
+           <br/>The interface will become constrained again as soon as the
+           <br/>fixed compiler is out.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2010-12-22
+        </h3><p class="mt-4">Major release.</p>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Merged with Jane Street version.  This has caused an API-change
+           <br/>
+           that requires &quot;open Sexplib.Conv&quot; at the top of files
+           that use the<br/>syntax extension.
+          </p>
+         </li>
+         <li class="ml-4"><p class="mt-4">Renamed functions:</p>
+          <ul class="list-disc mt-2 mb-4">
+           <li class="ml-4">
+            <p class="mt-4">sexp_of_lazy -&gt; sexp_of_lazy_t</p>
+           </li>
+           <li class="ml-4">
+            <p class="mt-4">lazy_of_sexp -&gt; lazy_t_of_sexp</p>
+           </li>
+          </ul>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Some standard library modules are now re-exported with predefined
+           <br/>S-expression converters in module Conv.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2010-09-25
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Fixed inferred types of generated functions when dealing with
+           arrow<br/>types.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2010-08-26
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Fixed a lexer bug when parsing comments.</p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2010-05-21
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Added support for sexp_
+           bool record field annotations.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2010-05-18
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Improved performance of converting S-expressions to strings.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2010-04-12
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Changed API of Of_sexp_error exception.</p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2010-04-07
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Added of_(big)string_conv_exn functions.</p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2010-04-01
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Merged with Jane Street version.</p>
+          <p class="mt-4">Major new features (various functions):</p>
+          <ul class="list-disc mt-2 mb-4">
+           <li class="ml-4">
+            <p class="mt-4">Type-annotated parsing for better error messages
+            </p>
+           </li>
+           <li class="ml-4">
+            <p class="mt-4">
+             Greatly improved performance of exception converters
+            </p>
+           </li>
+          </ul>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2009-12-21
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4"><p class="mt-4">Improved saving of files.</p></li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2009-10-12
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Added sexp_array record field extension.</p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2009-09-19
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Added missing variant type cases.</p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fixed handling of variance annotations.</p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2009-09-15
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4"><p class="mt-4">Internal cleanups.</p></li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2009-07-28
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Added better support for conversion of exception types.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2009-06-23
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4"><p class="mt-4">Fixed build problem.</p>
+          <p class="mt-4">Thanks to Sylvain Le Gall 
+           <a href="mailto:gildor@ocamlcore.org" class="cursor-pointer
+            text-orange">gildor@ocamlcore.org
+           </a> for<br/>the patch!
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2009-05-08
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Fixed build problems on Windows and OCamlMakefile issues.
+          </p>
+          <p class="mt-4">Thanks to Sylvain Le Gall 
+           <a href="mailto:gildor@ocamlcore.org" class="cursor-pointer
+            text-orange">gildor@ocamlcore.org
+           </a> for<br/>the patch!
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2009-04-22
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Added macro support for all types of vectors, matrices,<br/>
+           and for bigstrings.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2009-04-21
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Merged with Jane Street version, no user-relevant changes.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2009-03-09
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Merged with Jane Street version, no user-relevant changes.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2009-03-01
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Fixed build problem on Mac OS X by updating OCamlMakefile.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2009-01-20
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Automatically add S-expression pretty-printers to toplevels.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2008-09-30
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Added a new feature: sexp_
+           opaque.  It prevents the need for /<br/>
+           use of type converters for a given type in a particular<br/>
+           type context.
+          </p>
+          <p class="mt-4">
+           Removed abstract types to unify them with this new concept.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2008-09-29
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Added a new feature: sexp_list.  This is similar to
+           <br/>the handling of sexp_option.  By default an empty list is
+           <br/>assumed for unspecified records using sexp_list as qualifier.
+           <br/>Such record fields bound to empty lists will also not be<
+           br/>printed anymore for better readability.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2008-09-23
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Added missing Not_
+           found-exception to standard exception<br/>converters.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2008-08-20
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Removed dependency on threads.  Fixed build problems.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2008-08-08
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Nifty new feature: exceptions can now be converted to<br/>
+           S-expressions, too!  The &quot;with sexp&quot; syntax extension
+           can be<br/>
+           used with exceptions, thus registering a conversion function.<
+           br/>A global exception conversion function can then be called<
+           br/>to convert an arbitrary exception into an S-expression,<
+           br/>which can then be printed out.  This should greatly<br/>
+           improve readability of uncaught exceptions while making<br/>
+           life extremely easy for the developer.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Renamed the ParseError exception to Parse_
+           error to be more<br/>
+           compliant with Jane Street naming conventions.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2008-07-25
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Added utilities for conversion error handling.  Minor fixes.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2008-04-24
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4"><p class="mt-4">Made Sexp-interface manifest.</p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2008-03-20
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Fixed META-file (missing num dependency).</p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2008-03-17
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4"><p class="mt-4">Improved META-file.</p></li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2008-03-13
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Fully allow function types in converters.  Raise runtime<br/>
+           exceptions on converting from S-expressions instead when<br/>
+           function type encountered.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2008-02-11
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Fixed code generation problems with variance annotations<br/>
+           in signatures, and empty types.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2007-12-17
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Added support for generating signature entries for
+           <br/>S-expression converters.  Thanks to Till Varoquaux<br/>
+           <a href="mailto:till.varoquaux@gmail.com" class="cursor-pointer
+            text-orange">till.varoquaux@gmail.com
+           </a> for the patch!
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2007-11-29
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Added support for converting big_
+           int, nat, num, and ratio.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2007-11-26
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Added support for parsing from bigstrings (char bigarrays).
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2007-11-02
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Added syntax support for option types to use the ordinary<
+           br/>sum type syntax.  This should improve readability.<br/>
+           The old syntax will be accepted, too, if<br/>Conv.read_old
+           _option_format is set to true (this is<br/>
+           currently the default).  The old format will be used for<br/>
+           writing if Conv.write_old_option_format is true (currently<
+           br/>the default).  The old syntax is deprecated and will<br/>
+           probably not be supported by default in the near future.<br/>
+           Reading new-style option values will always succeed.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2007-09-14
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Fixed bug in S-expression preprocessor concerning record<br/>
+           field names.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2007-08-06
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Added support for converting functions to S-expressions.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2007-07-20
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Fixed position information and improved speed of S-expression<
+           br/>parser.  Fixed S-expression macro bug concerning contained
+           <br/>polymorphic variants.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2007-06-28
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Improved Sexplib code generation.</p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2007-06-22
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Fixed escaping bug in S-expression parser.</p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2007-06-01
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Added correct handling of recursive types + test case.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2007-04-18
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Added missing conversion functions from S-expressions to<br/>
+           pairs and triples.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2007-03-21
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4"><p class="mt-4">Updated OCamlMakefile.</p></li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2007-03-02
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Improved error messages when parsing illegal type definitions.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2007-01-30
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4"><p class="mt-4">Added triple conversions.</p></li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2006-11-22
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4"><p class="mt-4">Updated OCamlMakefile.</p></li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2006-10-13
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Improved checking of records for extra or duplicate fields.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2006-09-06
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Added support for polymorphic record fields.</p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2006-09-05
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Added support for manifest types.</p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2006-08-16
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4"><p class="mt-4">Improved error messages.</p></li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2006-07-28
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Added a new, hand-written S-expression parser that supports<
+           br/>partial parsing and should be approx. 10x faster than the<
+           br/>previous one.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2006-06-20
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Fixed a code generation problem leading to compilation<br/>
+           errors concerning the use of type aliases within polymorphic<
+           br/>variant type definitions.
+          </p>
+          <p class="mt-4">
+           This fix also solves potential erroneous appearances of<br/>
+           backtracking exceptions in user code.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2006-03-21
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Added -for-pack option to Makefile and cleaned up
+           <br/>distribution for a new public release.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2006-03-13
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Sexplib now accepts capitalized booleans.</p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2006-03-03
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Added customizable indentation levels.</p>
+         </li>
+         <li class="ml-4"><p class="mt-4">Improved documentation.</p></li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Fixed API-problem concerning backward compatibility.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2006-03-01
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Added a missing flush for string conversions with a buffer.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2006-02-08
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Eliminated unused variable warnings in Sexplib-generated code.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2006-01-11
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Added functions for pretty-printing to buffers.</p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Improved performance of outputting S-expressions to channels.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2006-01-09
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Added functions load_sexp and load_sexps.</p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2006-01-04
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Changed float conversion from %E to %G (more readable).
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2005-12-28
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Made machine representation for S-expressions more compact
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2005-12-15
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Fixed a problem appearing with OCaml-release 3.08.4: CamlP4<
+           br/>obviously performs more strict checking on some constructs
+           <br/>now and crashed with an exception when generating<br/>
+           S-expression code for records containing only one field<br/>
+           (&quot;singleton tuple problem&quot;).  This problem is fixed now.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2005-11-25
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Fixed problem with type variables that could not be generalized.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2005-11-23
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Added a missing case in type definitions (path alias)
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2005-11-17
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4"><p class="mt-4">Major release: 2.0</p>
+          <p class="mt-4">
+           Fixed a major design problem.  The user now has to pass lex<
+           br/>buffers instead of channels to input-functions.  Reason:<
+           br/>trailing characters in channels were lost due to ocamllex<
+           br/>buffering them in the non-exposed lex buffer.  This lex<
+           br/>buffer is now exposed.  The functions have been renamed<
+           br/>(&quot;input_X&quot; -&gt; &quot;scan_
+           X&quot;) to reflect this change.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2005-11-16
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Added label to conversion function &quot;input
+           _cnv_sexps&quot;.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2005-11-11
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Fixed a bug in the pretty-printer: strings in atoms were<br/>
+           not escaped in the function &quot;to_string_
+           mach&quot; (and therefore<br/>also &quot;to_string&quot;).
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         2005-11-07
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4"><p class="mt-4">Initial release.</p></li>
+        </ul>
+       </div>
+      </div>
+      <div class="w-full flex-none lg:w-72 border-t lg:border-l bg-gray-100">
+       <div class="flex h-20 border-b relative">
+        <h2 class="text-xl absolute inset-x-0 p-3 bottom-0 mt-7 font-semibold
+         text-gray-500">sexplib.v0.14.0
+        </h2>
+       </div>
+       <div class="m-3">
+        <p class="mb-5 italic text-sm">
+         Library for serializing OCaml values to and from S-expressions
+        </p>
+        <div class="mb-3">
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="https://github.com/janestreet/sexplib">
+           github.com/janestreet/sexplib
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1.323l3.954 1.582 1.599-.8a1 1 0 01.894 1.79l-1.233.616 1.738 5.42a1 1 0 01-.285 1.05A3.989 3.989 0 0115 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.715-5.349L11 6.477V16h2a1 1 0 110 2H7a1 1 0 110-2h2V6.477L6.237 7.582l1.715 5.349a1 1 0 01-.285 1.05A3.989 3.989 0 015 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.738-5.42-1.233-.617a1 1 0 01.894-1.788l1.599.799L9 4.323V3a1 1 0 011-1zm-5 8.274l-.818 2.552c.25.112.526.174.818.174.292 0 .569-.062.818-.174L5 10.274zm10 0l-.818 2.552c.25.112.526.174.818.174.292 0 .569-.062.818-.174L15 10.274z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="LICENSE-Tywith.txt.html">LICENSE-Tywith.txt
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1.323l3.954 1.582 1.599-.8a1 1 0 01.894 1.79l-1.233.616 1.738 5.42a1 1 0 01-.285 1.05A3.989 3.989 0 0115 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.715-5.349L11 6.477V16h2a1 1 0 110 2H7a1 1 0 110-2h2V6.477L6.237 7.582l1.715 5.349a1 1 0 01-.285 1.05A3.989 3.989 0 015 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.738-5.42-1.233-.617a1 1 0 01.894-1.788l1.599.799L9 4.323V3a1 1 0 011-1zm-5 8.274l-.818 2.552c.25.112.526.174.818.174.292 0 .569-.062.818-.174L5 10.274zm10 0l-.818 2.552c.25.112.526.174.818.174.292 0 .569-.062.818-.174L15 10.274z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="LICENSE.md.html">LICENSE.md
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
+</svg>
+    
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="README.org.html">README.org
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" />
+</svg>
+  
+          <a class="text-orange cursor-pointer mb-2 text-sm" href="#">
+           CHANGES.md
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" />
+</svg>
+  
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="CHANGES.txt.html">CHANGES.txt
+          </a>
+         </div>
+        </div>
+        <details class="font-normal mb-2 text-sm">
+         <summary>Other versions</summary><div id="versions_container"></div>
+        </details><h2 class="font-semibold mb-2 text-sm">Authors</h2>
+        <p class="mb-3 text-sm">Jane Street Group, LLC</p>
+        <h2 class="font-semibold mb-2 text-sm">Issues</h2>
+        <div class="mb-3">
+         <a class="text-orange cursor-pointer mb-2 text-sm"
+          href="https://github.com/janestreet/sexplib/issues">
+          github.com/janestreet/sexplib/issues
+         </a>
+        </div>
+        <details class="font-semibold mb-2 text-sm">
+         <summary>Package dependencies</summary>
+         <div class="font-normal">
+          <ul>
+           <li>
+            <a href="../../ocaml/index.html" class="text-orange
+             cursor-pointer">ocaml
+            </a>
+           </li>
+           <li>
+            <a href="../../parsexp/index.html" class="text-orange
+             cursor-pointer">parsexp
+            </a>
+           </li>
+           <li>
+            <a href="../../sexplib0/index.html" class="text-orange
+             cursor-pointer">sexplib0
+            </a>
+           </li>
+           <li>
+            <a href="../../dune/index.html" class="text-orange
+             cursor-pointer">dune
+            </a>
+           </li>
+           <li>
+            <a href="../../num/index.html" class="text-orange cursor-pointer">
+             num
+            </a>
+           </li>
+          </ul>
+         </div>
+        </details>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div><script>Voodoo.update('../version.json')</script>
+ </body>
+</html>
