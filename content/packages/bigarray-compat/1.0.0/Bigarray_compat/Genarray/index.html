@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>Genarray (packages.bigarray-compat.1.0.0.Bigarray_compat.Genarray)
+  </title><link rel="stylesheet" href="../../../../tailwind.css"/>
+  <link rel="stylesheet" href="../../../../extra.css"/>
+  <meta charset="utf-8"/><meta name="generator" content="odoc 3dfb7aef2f"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <script src="../../../../highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="../../../../voodoo_client.js"></script>
+  <script
+   src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+   defer="defer">
+  </script>
+ </head>
+ <body class="mx-auto max-w-screen-2xl">
+  <div class="relative">
+   <div class="relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+     <div class="flex justify-between items-center md:justify-start py-6
+      md:space-x-10">
+      <div class="flex justify-start">
+       <a href="https://v3.ocaml.org/">
+        <img src="/colour-logo.svg" alt="" class="h-8 w-auto sm:h-10"/>
+       </a>
+      </div>
+      <nav class="hidden md:flex space-x-10">
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Industry</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/whatisocaml">
+            <p class="text-base font-medium text-gray-900">What is OCaml</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/users">
+            <p class="text-base font-medium text-gray-900">Industrial Users
+            </p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/successstories">
+            <p class="text-base font-medium text-gray-900">Success Stories
+            </p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Resources</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/releases">
+            <p class="text-base font-medium text-gray-900">Releases</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/applications">
+            <p class="text-base font-medium text-gray-900">Applications</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/language">
+            <p class="text-base font-medium text-gray-900">Language</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/archive">
+            <p class="text-base font-medium text-gray-900">Archive</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Community</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/opportunities">
+            <p class="text-base font-medium text-gray-900">Opportunities</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/news">
+            <p class="text-base font-medium text-gray-900">News</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/aroundweb">
+            <p class="text-base font-medium text-gray-900">Around the Web</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="h-screen flex bg-white font-sans">
+   <div class="flex flex-col w-full h-full">
+    <div class="flex-row flex-1">
+     <nav class="bg-orange border-t border-b border-orange flex flex-row">
+      <ol class="max-w-screen-xl w-full px-4 flex space-x-4 sm:px-6 lg:px-8">
+       <li class="flex">
+        <div class="flex items-center">
+         <a href="#" class="text-gray-100 hover:text-gray-500">
+          
+  <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+        </svg>
+  
+          <span class="sr-only">Home</span>
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">packages
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">bigarray-compat
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">1.0.0
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">Bigarray_compat
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="#" class="ml-4 text-sm font-medium text-gray-100
+          hover:text-gray-500">Genarray
+         </a>
+        </div>
+       </li>
+      </ol>
+     </nav>
+    </div>
+    <div class="flex flex-row flex-1">
+     <div class="w-72 flex-none bg-gray-100 h-screen border-r border-gray-200
+      sticky top-0 hidden lg:block">
+      <div class="flex h-20 border-b relative">
+       <h2 class="text-xl absolute inset-x-0 p-3 px-5 bottom-0 mt-7
+        border-gray-200 font-semibold text-gray-500 font-sans">On this page
+       </h2>
+      </div>
+     </div>
+     <div class="flex flex-1 flex-col lg:flex-row">
+      <div class="flex-1">
+       <div class="lg:max-w-5xl mx-auto px-3 lg:px-10 mb-10 text-sm">
+        <div class="flex h-20 relative border-b border-gray-200">
+         <div class="relative flex-1 h-20">
+          <h1 class="text-3xl absolute inset-x-0 py-3 bottom-0 font-semibold
+           text-gray-500 font-sans w-full truncate">
+           <code class="font-mono text-gray-800">Bigarray_compat.Genarray
+           </code>
+          </h1>
+         </div>
+         <div class="relative flex-none w-28">
+          <h1 class="text-3xl absolute py-3 bottom-0 right-0 font-semibold
+           text-gray-500 font-sans">Module
+          </h1>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-t">
+          <a href="#type-t" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> 
+            <span>(!'a, !'b, !'c) t</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">The type 
+           <code class="font-normal text-sm">Genarray.t</code> is the
+            type of Bigarrays with variable numbers of dimensions. Any
+            number of dimensions between 0 and 16 is supported.
+          </p>
+          <p class="mt-4">The three type parameters to 
+           <code class="font-normal text-sm">Genarray.t</code> identify
+            the array element kind and layout, as follows:
+          </p>
+          <ul class="list-disc mt-2 mb-4">
+           <li class="ml-4">the first parameter, 
+            <code class="font-normal text-sm">'a</code>, is the OCaml
+             type for accessing array elements (
+            <code class="font-normal text-sm">float</code>, 
+            <code class="font-normal text-sm">int</code>, 
+            <code class="font-normal text-sm">int32</code>, 
+            <code class="font-normal text-sm">int64</code>, 
+            <code class="font-normal text-sm">nativeint</code>);
+           </li>
+           <li class="ml-4">the second parameter, 
+            <code class="font-normal text-sm">'b</code>, is the actual
+             kind of array elements (
+            <code class="font-normal text-sm">float32_elt</code>, 
+            <code class="font-normal text-sm">float64_elt</code>, 
+            <code class="font-normal text-sm">int8_signed_elt</code>,
+             <code class="font-normal text-sm">int8_unsigned_elt</code>
+            , etc);
+           </li>
+           <li class="ml-4">the third parameter, 
+            <code class="font-normal text-sm">'c</code>, identifies the
+             array layout (<code class="font-normal text-sm">c_layout</code>
+             or <code class="font-normal text-sm">fortran_layout</code>
+            ).
+           </li>
+          </ul>
+          <p class="mt-4">For instance, 
+           <code class="font-normal text-sm">
+            (float, float32_elt, fortran_layout) Genarray.t
+           </code> is the type of generic Bigarrays containing 32-bit
+            floats in Fortran layout; reads and writes in this array 
+           use the OCaml type <code class="font-normal text-sm">float</code>
+           .
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-create">
+          <a href="#val-create" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> create : 
+            <span>
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'b</span>)
+              </span> 
+              <a href="../index.html#type-kind" class="cursor-pointer
+               text-orange">kind
+              </a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span><span class="">'c</span> 
+              <a href="../index.html#type-layout" class="cursor-pointer
+               text-orange">layout
+              </a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span>int array</span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>(<span class="">'a</span>, <span class="">'b</span>
+              , <span class="">'c</span>)
+             </span> 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">
+            Genarray.create kind layout dimensions
+           </code> returns a new Bigarray whose element kind is determined
+            by the parameter <code class="font-normal text-sm">kind</code>
+            (one of <code class="font-normal text-sm">float32</code>,
+            <code class="font-normal text-sm">float64</code>, 
+           <code class="font-normal text-sm">int8_signed</code>, etc)
+            and whose layout is determined by the parameter 
+           <code class="font-normal text-sm">layout</code> (one of 
+           <code class="font-normal text-sm">c_layout</code> or 
+           <code class="font-normal text-sm">fortran_layout</code>). 
+           The <code class="font-normal text-sm">dimensions</code> parameter
+            is an array of integers that indicate the size of the Bigarray
+            in each dimension. The length of 
+           <code class="font-normal text-sm">dimensions</code> determines
+            the number of dimensions of the Bigarray.
+          </p>
+          <p class="mt-4">For instance, 
+           <code class="font-normal text-sm">
+            Genarray.create int32 c_layout [|4;6;8|]
+           </code> returns a fresh Bigarray of 32-bit integers, in C 
+           layout, having three dimensions, the three dimensions being
+            4, 6 and 8 respectively.
+          </p>
+          <p class="mt-4">Bigarrays returned by 
+           <code class="font-normal text-sm">Genarray.create</code> are
+            not initialized: the initial values of array elements is 
+           unspecified.
+          </p>
+          <p class="mt-4">
+           <code class="font-normal text-sm">Genarray.create</code> raises
+            <code class="font-normal text-sm">Invalid_argument</code>
+            if the number of dimensions is not in the range 0 to 16 
+           inclusive, or if one of the dimensions is negative.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-init">
+          <a href="#val-init" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> init : 
+            <span>
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'b</span>)
+              </span> 
+              <a href="../index.html#type-kind" class="cursor-pointer
+               text-orange">kind
+              </a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span><span class="">'c</span> 
+              <a href="../index.html#type-layout" class="cursor-pointer
+               text-orange">layout
+              </a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span>int array</span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>(
+              <span><span>int array</span> <span class="">&#45;&gt;</span>
+              </span> <span class="">'a</span>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>(<span class="">'a</span>, <span class="">'b</span>
+              , <span class="">'c</span>)
+             </span> 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">
+            Genarray.init kind layout dimensions f
+           </code> returns a new Bigarray 
+           <code class="font-normal text-sm">b</code> whose element kind
+            is determined by the parameter 
+           <code class="font-normal text-sm">kind</code> (one of 
+           <code class="font-normal text-sm">float32</code>, 
+           <code class="font-normal text-sm">float64</code>, 
+           <code class="font-normal text-sm">int8_signed</code>, etc)
+            and whose layout is determined by the parameter 
+           <code class="font-normal text-sm">layout</code> (one of 
+           <code class="font-normal text-sm">c_layout</code> or 
+           <code class="font-normal text-sm">fortran_layout</code>). 
+           The <code class="font-normal text-sm">dimensions</code> parameter
+            is an array of integers that indicate the size of the Bigarray
+            in each dimension. The length of 
+           <code class="font-normal text-sm">dimensions</code> determines
+            the number of dimensions of the Bigarray.
+          </p>
+          <p class="mt-4">Each element 
+           <code class="font-normal text-sm">Genarray.get b i</code> 
+           is initialized to the result of 
+           <code class="font-normal text-sm">f i</code>. In other words,
+            
+           <code class="font-normal text-sm">
+            Genarray.init kind layout dimensions f
+           </code> tabulates the results of 
+           <code class="font-normal text-sm">f</code> applied to the 
+           indices of a new Bigarray whose layout is described by 
+           <code class="font-normal text-sm">kind</code>, 
+           <code class="font-normal text-sm">layout</code> and 
+           <code class="font-normal text-sm">dimensions</code>. The index
+            array <code class="font-normal text-sm">i</code> may be shared
+            and mutated between calls to f.
+          </p>
+          <p class="mt-4">For instance, 
+           <code class="font-normal text-sm">
+            Genarray.init int c_layout [|2; 1; 3|]
+                  (Array.fold_left (+) 0)
+           </code> returns a fresh Bigarray of integers, in C layout,
+            having three dimensions (2, 1, 3, respectively), with the
+            element values 0, 1, 2, 1, 2, 3.
+          </p>
+          <p class="mt-4">
+           <code class="font-normal text-sm">Genarray.init</code> raises
+            <code class="font-normal text-sm">Invalid_argument</code>
+            if the number of dimensions is not in the range 0 to 16 
+           inclusive, or if one of the dimensions is negative.
+          </p><ul class="at-tags"><li class="since">since 4.12.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-num_dims">
+          <a href="#val-num_dims" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> num_dims : 
+            <span>
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'b</span>
+               , <span class="">'c</span>)
+              </span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> int
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return the number of dimensions of the given
+            Bigarray.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-dims">
+          <a href="#val-dims" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> dims : 
+            <span>
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'b</span>
+               , <span class="">'c</span>)
+              </span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> <span>int array</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">Genarray.dims a</code> returns
+            all dimensions of the Bigarray 
+           <code class="font-normal text-sm">a</code>, as an array of
+            integers of length 
+           <code class="font-normal text-sm">Genarray.num_dims a</code>
+           .
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-nth_dim">
+          <a href="#val-nth_dim" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> nth_dim : 
+            <span>
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'b</span>
+               , <span class="">'c</span>)
+              </span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> <span>int <span class="">&#45;&gt;</span></span> 
+            int
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">Genarray.nth_dim a n</code>
+            returns the <code class="font-normal text-sm">n</code>-th
+            dimension of the Bigarray 
+           <code class="font-normal text-sm">a</code>. The first dimension
+            corresponds to <code class="font-normal text-sm">n = 0</code>
+           ; the second dimension corresponds to 
+           <code class="font-normal text-sm">n = 1</code>; the last 
+           dimension, to 
+           <code class="font-normal text-sm">n = Genarray.num_dims a - 1
+           </code>.
+          </p>
+          <ul class="at-tags">
+           <li class="raises">raises Invalid_argument 
+            <p class="mt-4">if <code class="font-normal text-sm">n</code>
+              is less than 0 or greater or equal than 
+             <code class="font-normal text-sm">Genarray.num_dims a</code>
+             .
+            </p>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-kind">
+          <a href="#val-kind" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> kind : 
+            <span>
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'b</span>
+               , <span class="">'c</span>)
+              </span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>(<span class="">'a</span>, <span class="">'b</span>)
+             </span> 
+             <a href="../index.html#type-kind" class="cursor-pointer
+              text-orange">kind
+             </a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return the kind of the given Bigarray.</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-layout">
+          <a href="#val-layout" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> layout : 
+            <span>
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'b</span>
+               , <span class="">'c</span>)
+              </span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span class="">'c</span> 
+             <a href="../index.html#type-layout" class="cursor-pointer
+              text-orange">layout
+             </a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return the layout of the given Bigarray.</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-change_layout">
+          <a href="#val-change_layout" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> change_layout
+             : 
+            <span>
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'b</span>
+               , <span class="">'c</span>)
+              </span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span><span class="">'d</span> 
+              <a href="../index.html#type-layout" class="cursor-pointer
+               text-orange">layout
+              </a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>(<span class="">'a</span>, <span class="">'b</span>
+              , <span class="">'d</span>)
+             </span> 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">Genarray.change_layout a layout
+           </code> returns a Bigarray with the specified 
+           <code class="font-normal text-sm">layout</code>, sharing the
+            data with <code class="font-normal text-sm">a</code> (and
+            hence having the same dimensions as 
+           <code class="font-normal text-sm">a</code>). No copying of
+            elements is involved: the new array and the original array
+            share the same storage space. The dimensions are reversed,
+            such that 
+           <code class="font-normal text-sm">get v [| a; b |]</code> 
+           in C layout becomes 
+           <code class="font-normal text-sm">get v [| b+1; a+1 |]</code>
+            in Fortran layout.
+          </p><ul class="at-tags"><li class="since">since 4.04.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-size_in_bytes">
+          <a href="#val-size_in_bytes" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> size_in_bytes
+             : 
+            <span>
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'b</span>
+               , <span class="">'c</span>)
+              </span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> int
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">size_in_bytes a</code> is
+            the number of elements in 
+           <code class="font-normal text-sm">a</code> multiplied by 
+           <code class="font-normal text-sm">a</code>'s 
+           <a href="../index.html#val-kind_size_in_bytes"
+            class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">kind_size_in_bytes</code>
+           </a>.
+          </p><ul class="at-tags"><li class="since">since 4.03.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-get">
+          <a href="#val-get" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> get : 
+            <span>
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'b</span>
+               , <span class="">'c</span>)
+              </span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span>int array</span> <span class="">&#45;&gt;</span>
+            </span> <span class="">'a</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Read an element of a generic Bigarray. 
+           <code class="font-normal text-sm">Genarray.get a [|i1; ...; iN|]
+           </code> returns the element of 
+           <code class="font-normal text-sm">a</code> whose coordinates
+            are <code class="font-normal text-sm">i1</code> in the first
+            dimension, <code class="font-normal text-sm">i2</code> in
+            the second dimension, ..., 
+           <code class="font-normal text-sm">iN</code> in the 
+           <code class="font-normal text-sm">N</code>-th dimension.
+          </p>
+          <p class="mt-4">If <code class="font-normal text-sm">a</code>
+            has C layout, the coordinates must be greater or equal than
+            0 and strictly less than the corresponding dimensions of 
+           <code class="font-normal text-sm">a</code>. If 
+           <code class="font-normal text-sm">a</code> has Fortran layout,
+            the coordinates must be greater or equal than 1 and less 
+           or equal than the corresponding dimensions of 
+           <code class="font-normal text-sm">a</code>.
+          </p>
+          <p class="mt-4">If 
+           <code class="font-normal text-sm">N &gt; 3</code>, alternate
+            syntax is provided: you can write 
+           <code class="font-normal text-sm">a.{i1, i2, ..., iN}</code>
+            instead of 
+           <code class="font-normal text-sm">Genarray.get a [|i1; ...; iN|]
+           </code>. (The syntax 
+           <code class="font-normal text-sm">a.{...}</code> with one,
+            two or three coordinates is reserved for accessing one-, 
+           two- and three-dimensional arrays as described below.)
+          </p>
+          <ul class="at-tags">
+           <li class="raises">raises Invalid_argument 
+            <p class="mt-4">if the array 
+             <code class="font-normal text-sm">a</code> does not have
+              exactly <code class="font-normal text-sm">N</code> dimensions,
+              or if the coordinates are outside the array bounds.
+            </p>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-set">
+          <a href="#val-set" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> set : 
+            <span>
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'b</span>
+               , <span class="">'c</span>)
+              </span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span>int array</span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Assign an element of a generic Bigarray. 
+           <code class="font-normal text-sm">Genarray.set a [|i1; ...; iN|] v
+           </code> stores the value 
+           <code class="font-normal text-sm">v</code> in the element 
+           of <code class="font-normal text-sm">a</code> whose coordinates
+            are <code class="font-normal text-sm">i1</code> in the first
+            dimension, <code class="font-normal text-sm">i2</code> in
+            the second dimension, ..., 
+           <code class="font-normal text-sm">iN</code> in the 
+           <code class="font-normal text-sm">N</code>-th dimension.
+          </p>
+          <p class="mt-4">The array 
+           <code class="font-normal text-sm">a</code> must have exactly
+            <code class="font-normal text-sm">N</code> dimensions, and
+            all coordinates must lie inside the array bounds, as described
+            for <code class="font-normal text-sm">Genarray.get</code>
+           ; otherwise, 
+           <code class="font-normal text-sm">Invalid_argument</code> 
+           is raised.
+          </p>
+          <p class="mt-4">If 
+           <code class="font-normal text-sm">N &gt; 3</code>, alternate
+            syntax is provided: you can write 
+           <code class="font-normal text-sm">a.{i1, i2, ..., iN} &lt;- v
+           </code> instead of 
+           <code class="font-normal text-sm">Genarray.set a [|i1; ...; iN|] v
+           </code>. (The syntax 
+           <code class="font-normal text-sm">a.{...} &lt;- v</code> with
+            one, two or three coordinates is reserved for updating one-,
+            two- and three-dimensional arrays as described below.)
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-sub_left">
+          <a href="#val-sub_left" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sub_left : 
+            <span>
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'b</span>
+               , 
+               <a href="../index.html#type-c_layout" class="cursor-pointer
+                text-orange">c_layout
+               </a>)
+              </span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> <span>int <span class="">&#45;&gt;</span></span> 
+            <span>int <span class="">&#45;&gt;</span></span> 
+            <span>
+             <span>(<span class="">'a</span>, <span class="">'b</span>
+              , 
+              <a href="../index.html#type-c_layout" class="cursor-pointer
+               text-orange">c_layout
+              </a>)
+             </span> 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Extract a sub-array of the given Bigarray by
+            restricting the first (left-most) dimension. 
+           <code class="font-normal text-sm">Genarray.sub_left a ofs len
+           </code> returns a Bigarray with the same number of dimensions
+            as <code class="font-normal text-sm">a</code>, and the same
+            dimensions as <code class="font-normal text-sm">a</code>,
+            except the first dimension, which corresponds to the interval
+            <code class="font-normal text-sm">[ofs ... ofs + len - 1]</code>
+            of the first dimension of 
+           <code class="font-normal text-sm">a</code>. No copying of 
+           elements is involved: the sub-array and the original array
+            share the same storage space. In other terms, the element
+            at coordinates 
+           <code class="font-normal text-sm">[|i1; ...; iN|]</code> of
+            the sub-array is identical to the element at coordinates 
+           <code class="font-normal text-sm">[|i1+ofs; ...; iN|]</code>
+            of the original array <code class="font-normal text-sm">a</code>
+           .
+          </p>
+          <p class="mt-4">
+           <code class="font-normal text-sm">Genarray.sub_left</code>
+            applies only to Bigarrays in C layout.
+          </p>
+          <ul class="at-tags">
+           <li class="raises">raises Invalid_argument 
+            <p class="mt-4">if <code class="font-normal text-sm">ofs</code>
+              and <code class="font-normal text-sm">len</code> do not
+              designate a valid sub-array of 
+             <code class="font-normal text-sm">a</code>, that is, if 
+             <code class="font-normal text-sm">ofs &lt; 0</code>, or 
+             <code class="font-normal text-sm">len &lt; 0</code>, or 
+             <code class="font-normal text-sm">
+              ofs + len &gt; Genarray.nth_dim a 0
+             </code>.
+            </p>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-sub_right">
+          <a href="#val-sub_right" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sub_right : 
+            <span>
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'b</span>
+               , 
+               <a href="../index.html#type-fortran_layout"
+                class="cursor-pointer text-orange">fortran_layout
+               </a>)
+              </span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> <span>int <span class="">&#45;&gt;</span></span> 
+            <span>int <span class="">&#45;&gt;</span></span> 
+            <span>
+             <span>(<span class="">'a</span>, <span class="">'b</span>
+              , 
+              <a href="../index.html#type-fortran_layout"
+               class="cursor-pointer text-orange">fortran_layout
+              </a>)
+             </span> 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Extract a sub-array of the given Bigarray by
+            restricting the last (right-most) dimension. 
+           <code class="font-normal text-sm">Genarray.sub_right a ofs len
+           </code> returns a Bigarray with the same number of dimensions
+            as <code class="font-normal text-sm">a</code>, and the same
+            dimensions as <code class="font-normal text-sm">a</code>,
+            except the last dimension, which corresponds to the interval
+            <code class="font-normal text-sm">[ofs ... ofs + len - 1]</code>
+            of the last dimension of 
+           <code class="font-normal text-sm">a</code>. No copying of 
+           elements is involved: the sub-array and the original array
+            share the same storage space. In other terms, the element
+            at coordinates 
+           <code class="font-normal text-sm">[|i1; ...; iN|]</code> of
+            the sub-array is identical to the element at coordinates 
+           <code class="font-normal text-sm">[|i1; ...; iN+ofs|]</code>
+            of the original array <code class="font-normal text-sm">a</code>
+           .
+          </p>
+          <p class="mt-4">
+           <code class="font-normal text-sm">Genarray.sub_right</code>
+            applies only to Bigarrays in Fortran layout.
+          </p>
+          <ul class="at-tags">
+           <li class="raises">raises Invalid_argument 
+            <p class="mt-4">if <code class="font-normal text-sm">ofs</code>
+              and <code class="font-normal text-sm">len</code> do not
+              designate a valid sub-array of 
+             <code class="font-normal text-sm">a</code>, that is, if 
+             <code class="font-normal text-sm">ofs &lt; 1</code>, or 
+             <code class="font-normal text-sm">len &lt; 0</code>, or 
+             <code class="font-normal text-sm">
+              ofs + len &gt; Genarray.nth_dim a (Genarray.num_dims a - 1)
+             </code>.
+            </p>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-slice_left">
+          <a href="#val-slice_left" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> slice_left : 
+            <span>
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'b</span>
+               , 
+               <a href="../index.html#type-c_layout" class="cursor-pointer
+                text-orange">c_layout
+               </a>)
+              </span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span>int array</span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>(<span class="">'a</span>, <span class="">'b</span>
+              , 
+              <a href="../index.html#type-c_layout" class="cursor-pointer
+               text-orange">c_layout
+              </a>)
+             </span> 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Extract a sub-array of lower dimension from
+            the given Bigarray by fixing one or several of the first 
+           (left-most) coordinates. 
+           <code class="font-normal text-sm">
+            Genarray.slice_left a [|i1; ... ; iM|]
+           </code> returns the 'slice' of 
+           <code class="font-normal text-sm">a</code> obtained by setting
+            the first <code class="font-normal text-sm">M</code> coordinates
+            to <code class="font-normal text-sm">i1</code>, ..., 
+           <code class="font-normal text-sm">iM</code>. If 
+           <code class="font-normal text-sm">a</code> has 
+           <code class="font-normal text-sm">N</code> dimensions, the
+            slice has dimension 
+           <code class="font-normal text-sm">N - M</code>, and the element
+            at coordinates 
+           <code class="font-normal text-sm">[|j1; ...; j(N-M)|]</code>
+            in the slice is identical to the element at coordinates 
+           <code class="font-normal text-sm">[|i1; ...; iM; j1; ...; j(N-M)|]
+           </code> in the original array 
+           <code class="font-normal text-sm">a</code>. No copying of 
+           elements is involved: the slice and the original array share
+            the same storage space.
+          </p>
+          <p class="mt-4">
+           <code class="font-normal text-sm">Genarray.slice_left</code>
+            applies only to Bigarrays in C layout.
+          </p>
+          <ul class="at-tags">
+           <li class="raises">raises Invalid_argument 
+            <p class="mt-4">if 
+             <code class="font-normal text-sm">M &gt;= N</code>, or if
+              <code class="font-normal text-sm">[|i1; ... ; iM|]</code>
+              is outside the bounds of 
+             <code class="font-normal text-sm">a</code>.
+            </p>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-slice_right">
+          <a href="#val-slice_right" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> slice_right : 
+            <span>
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'b</span>
+               , 
+               <a href="../index.html#type-fortran_layout"
+                class="cursor-pointer text-orange">fortran_layout
+               </a>)
+              </span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span>int array</span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>(<span class="">'a</span>, <span class="">'b</span>
+              , 
+              <a href="../index.html#type-fortran_layout"
+               class="cursor-pointer text-orange">fortran_layout
+              </a>)
+             </span> 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Extract a sub-array of lower dimension from
+            the given Bigarray by fixing one or several of the last 
+           (right-most) coordinates. 
+           <code class="font-normal text-sm">
+            Genarray.slice_right a [|i1; ... ; iM|]
+           </code> returns the 'slice' of 
+           <code class="font-normal text-sm">a</code> obtained by setting
+            the last <code class="font-normal text-sm">M</code> coordinates
+            to <code class="font-normal text-sm">i1</code>, ..., 
+           <code class="font-normal text-sm">iM</code>. If 
+           <code class="font-normal text-sm">a</code> has 
+           <code class="font-normal text-sm">N</code> dimensions, the
+            slice has dimension 
+           <code class="font-normal text-sm">N - M</code>, and the element
+            at coordinates 
+           <code class="font-normal text-sm">[|j1; ...; j(N-M)|]</code>
+            in the slice is identical to the element at coordinates 
+           <code class="font-normal text-sm">[|j1; ...; j(N-M); i1; ...; iM|]
+           </code> in the original array 
+           <code class="font-normal text-sm">a</code>. No copying of 
+           elements is involved: the slice and the original array share
+            the same storage space.
+          </p>
+          <p class="mt-4">
+           <code class="font-normal text-sm">Genarray.slice_right</code>
+            applies only to Bigarrays in Fortran layout.
+          </p>
+          <ul class="at-tags">
+           <li class="raises">raises Invalid_argument 
+            <p class="mt-4">if 
+             <code class="font-normal text-sm">M &gt;= N</code>, or if
+              <code class="font-normal text-sm">[|i1; ... ; iM|]</code>
+              is outside the bounds of 
+             <code class="font-normal text-sm">a</code>.
+            </p>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-blit">
+          <a href="#val-blit" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> blit : 
+            <span>
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'b</span>
+               , <span class="">'c</span>)
+              </span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'b</span>
+               , <span class="">'c</span>)
+              </span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Copy all elements of a Bigarray in another 
+           Bigarray. 
+           <code class="font-normal text-sm">Genarray.blit src dst</code>
+            copies all elements of 
+           <code class="font-normal text-sm">src</code> into 
+           <code class="font-normal text-sm">dst</code>. Both arrays 
+           <code class="font-normal text-sm">src</code> and 
+           <code class="font-normal text-sm">dst</code> must have the
+            same number of dimensions and equal dimensions. Copying a
+            sub-array of <code class="font-normal text-sm">src</code>
+            to a sub-array of <code class="font-normal text-sm">dst</code>
+            can be achieved by applying 
+           <code class="font-normal text-sm">Genarray.blit</code> to 
+           sub-array or slices of 
+           <code class="font-normal text-sm">src</code> and 
+           <code class="font-normal text-sm">dst</code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-fill">
+          <a href="#val-fill" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> fill : 
+            <span>
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'b</span>
+               , <span class="">'c</span>)
+              </span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Set all elements of a Bigarray to a given value.
+            <code class="font-normal text-sm">Genarray.fill a v</code>
+            stores the value <code class="font-normal text-sm">v</code>
+            in all elements of the Bigarray 
+           <code class="font-normal text-sm">a</code>. Setting only some
+            elements of <code class="font-normal text-sm">a</code> to
+            <code class="font-normal text-sm">v</code> can be achieved
+            by applying 
+           <code class="font-normal text-sm">Genarray.fill</code> to 
+           a sub-array or a slice of 
+           <code class="font-normal text-sm">a</code>.
+          </p>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="w-full flex-none lg:w-72 border-t lg:border-l bg-gray-100">
+       <div class="flex h-20 border-b relative">
+        <h2 class="text-xl absolute inset-x-0 p-3 bottom-0 mt-7 font-semibold
+         text-gray-500">bigarray-compat.1.0.0
+        </h2>
+       </div>
+       <div class="m-3">
+        <p class="mb-5 italic text-sm">
+         Compatibility library to use Stdlib.Bigarray when possible
+        </p>
+        <div class="mb-3">
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="https://github.com/mirage/bigarray-compat">
+           github.com/mirage/bigarray-compat
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
+</svg>
+    
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="../../README.md.html">README.md
+          </a>
+         </div>
+        </div>
+        <details class="font-normal mb-2 text-sm">
+         <summary>Other versions</summary><div id="versions_container"></div>
+        </details><h2 class="font-semibold mb-2 text-sm">Authors</h2>
+        <p class="mb-3 text-sm">
+         Lucas Pluvinage &lt;lucas.pluvinage@gmail.com&gt;
+        </p><h2 class="font-semibold mb-2 text-sm">Issues</h2>
+        <div class="mb-3">
+         <a class="text-orange cursor-pointer mb-2 text-sm"
+          href="https://github.com/mirage/bigarray-compat/issues">
+          github.com/mirage/bigarray-compat/issues
+         </a>
+        </div>
+        <details class="font-semibold mb-2 text-sm">
+         <summary>Package dependencies</summary>
+         <div class="font-normal">
+          <ul>
+           <li>
+            <a href="../../../../ocaml/index.html" class="text-orange
+             cursor-pointer">ocaml
+            </a>
+           </li>
+           <li>
+            <a href="../../../../dune/index.html" class="text-orange
+             cursor-pointer">dune
+            </a>
+           </li>
+          </ul>
+         </div>
+        </details>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div><script>Voodoo.update('../../../version.json')</script>
+ </body>
+</html>
