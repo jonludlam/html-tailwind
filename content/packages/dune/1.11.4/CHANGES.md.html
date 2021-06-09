@@ -1,0 +1,4516 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head><title>CHANGES.md (packages.dune.1.11.4.CHANGES.md)</title>
+  <link rel="stylesheet" href="../../tailwind.css"/>
+  <link rel="stylesheet" href="../../extra.css"/><meta charset="utf-8"/>
+  <meta name="generator" content="odoc 3dfb7aef2f"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <script src="../../highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="../../voodoo_client.js"></script>
+  <script
+   src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+   defer="defer">
+  </script>
+ </head>
+ <body class="mx-auto max-w-screen-2xl">
+  <div class="relative">
+   <div class="relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+     <div class="flex justify-between items-center md:justify-start py-6
+      md:space-x-10">
+      <div class="flex justify-start">
+       <a href="https://v3.ocaml.org/">
+        <img src="/colour-logo.svg" alt="" class="h-8 w-auto sm:h-10"/>
+       </a>
+      </div>
+      <nav class="hidden md:flex space-x-10">
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Industry</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/whatisocaml">
+            <p class="text-base font-medium text-gray-900">What is OCaml</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/users">
+            <p class="text-base font-medium text-gray-900">Industrial Users
+            </p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/successstories">
+            <p class="text-base font-medium text-gray-900">Success Stories
+            </p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Resources</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/releases">
+            <p class="text-base font-medium text-gray-900">Releases</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/applications">
+            <p class="text-base font-medium text-gray-900">Applications</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/language">
+            <p class="text-base font-medium text-gray-900">Language</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/archive">
+            <p class="text-base font-medium text-gray-900">Archive</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Community</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/opportunities">
+            <p class="text-base font-medium text-gray-900">Opportunities</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/news">
+            <p class="text-base font-medium text-gray-900">News</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/aroundweb">
+            <p class="text-base font-medium text-gray-900">Around the Web</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="h-screen flex bg-white font-sans">
+   <div class="flex flex-col w-full h-full">
+    <div class="flex-row flex-1">
+     <nav class="bg-orange border-t border-b border-orange flex flex-row">
+      <ol class="max-w-screen-xl w-full px-4 flex space-x-4 sm:px-6 lg:px-8">
+       <li class="flex">
+        <div class="flex items-center">
+         <a href="#" class="text-gray-100 hover:text-gray-500">
+          
+  <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+        </svg>
+  
+          <span class="sr-only">Home</span>
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">packages
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">dune
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="index.html" class="ml-4 text-sm font-medium text-gray-100
+          hover:text-gray-500">1.11.4
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="#" class="ml-4 text-sm font-medium text-gray-100
+          hover:text-gray-500">CHANGES.md
+         </a>
+        </div>
+       </li>
+      </ol>
+     </nav>
+    </div>
+    <div class="flex flex-row flex-1">
+     <div class="w-72 flex-none bg-gray-100 h-screen border-r border-gray-200
+      sticky top-0 hidden lg:block">
+      <div class="flex h-20 border-b relative">
+       <h2 class="text-xl absolute inset-x-0 p-3 px-5 bottom-0 mt-7
+        border-gray-200 font-semibold text-gray-500 font-sans">On this page
+       </h2>
+      </div>
+     </div>
+     <div class="flex flex-1 flex-col lg:flex-row">
+      <div class="flex-1">
+       <div class="lg:max-w-5xl mx-auto px-3 lg:px-10 mb-10 text-sm">
+        <div class="flex h-20 relative border-b border-gray-200">
+         <div class="relative flex-1 h-20">
+          <h1 class="text-3xl absolute inset-x-0 py-3 bottom-0 font-semibold
+           text-gray-500 font-sans w-full truncate">
+           <code class="font-mono text-gray-800">1.11.4 (09/10/2019)</code>
+          </h1>
+         </div>
+         <div class="relative flex-none w-20">
+          <h1 class="text-3xl absolute py-3 bottom-0 right-0 font-semibold
+           text-gray-500 font-sans">
+          </h1>
+         </div>
+        </div>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Allow to mark directories as 
+           <code class="font-normal text-sm">data_only_dirs</code>
+            without including them as 
+           <code class="font-normal text-sm">dirs</code><br/>
+           (#2619, fix #2584, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fix reading 
+           <code class="font-normal text-sm">.install</code>
+            files generated with an external 
+           <code class="font-normal text-sm">--build-dir</code>. (#2638,<
+           br/>fix #2629, @rgrinberg)
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         1.11.3 (23/08/2019)
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Fix a ppx hash collision in watch mode (#2546, fixes #2520, @diml)
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         1.11.2 (20/08/2019)
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Remove the optimisation of passing 
+           <code class="font-normal text-sm">-nodynlink</code>
+            for executalbes when<br/>
+           not necessary. It seems to be breaking things (see #2527, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fix invalid library names in 
+           <code class="font-normal text-sm">dune-package</code>
+            files. Only public names should<br/>
+           exist in such files. (#2558, fix #2425, @rgrinberg)
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         1.11.1 (09/08/2019)
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Fix config file dependencies of ocamlformat (#2471, fixes #2646,
+           <br/>@nojb)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Cleanup stale directories when using 
+           <code class="font-normal text-sm">(source_tree ...)</code>
+            in the<br/>
+           presence of directories with only sub-directories and no files
+           <br/>(#2514, fixes #2499, @diml)
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         1.11.0 (23/07/2019)
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Don't select all local implementations in 
+           <code class="font-normal text-sm">dune utop</code>
+           . Instead, let the<br/>
+           default implementation selection do its job. (#2327, fixes #2323,
+           @TheLortex,<br/>review by @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Check that selected implementations (either by variants or default
+           <br/>
+           implementations) are indeed implementations. (#2328, @TheLortex,
+           review by<br/>@rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Don't reserve the 
+           <code class="font-normal text-sm">Ppx</code>
+            toplevel module name for ppx rewriters (#2242, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Redesign of the library variant feature according to the #2134
+           proposal. The<br/>
+           set of variants is now computed when the virtual library is
+           installed.<br/>Introducing a new 
+           <code class="font-normal text-sm">external_variant</code>
+            stanza. (#2169, fixes #2134, @TheLortex,<br/>review by @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add proper line directives when copying 
+           <code class="font-normal text-sm">.cc</code> and 
+           <code class="font-normal text-sm">.cxx</code> sources (#2275,<
+           br/>@rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fix error message for missing C++ sources. The 
+           <code class="font-normal text-sm">.cc</code> extension was always
+           <br/>ignored before. (#2275, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add 
+           <code class="font-normal text-sm">$ dune init project</code>
+            subcommand to create project boilerplate according<br/>
+           to a common template. (#2185, fixes #159, @shonfeder)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Allow to run inline tests in javascript with nodejs (#2266,
+           @hhugo)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Build 
+           <code class="font-normal text-sm">ppx.exe</code>
+            as compiling host binary. (#2286, fixes #2252, @toots, review
+           <br/>by @rgrinberg and @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add a 
+           <code class="font-normal text-sm">cinaps</code>
+            extension and stanza for better integration with the<br/>
+           <a href="https://github.com/janestreet/cinaps"
+            class="cursor-pointer text-orange">cinaps tool
+           </a> tool (#2269,<br/>@diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Allow to embed build info in executables such as version and list
+           <br/>and version of statically linked libraries (#2224, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Set version in 
+           <code class="font-normal text-sm">META</code> and 
+           <code class="font-normal text-sm">dune-package</code>
+            files to the one read from<br/>
+           the vcs when no other version is available (#2224, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add a variable 
+           <code class="font-normal text-sm">%{target}</code>
+            to be used in situations where the context<br/>
+           requires at most one word, so 
+           <code class="font-normal text-sm">%{targets}</code>
+            can be confusing; stdout<br/>
+           redirections and &quot;-o&quot; arguments of various tools are the
+           main use<br/>case; also, introduce a separate field 
+           <code class="font-normal text-sm">target</code> that must be used
+           <br/>instead of <code class="font-normal text-sm">targets</code>
+            in those situations.  (#2341, @aalekseyev)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fix dependency graph of wrapped_
+           compat modules. Previously, the dependency on<br/>
+           the user written entry module was omitted. (#2305, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Allow to promote executables built with an 
+           <code class="font-normal text-sm">executable</code> stanza<
+           br/>(#2379, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           When instantiating an implementation with a variant, make sure it
+           matches<br/>
+           virtual library's list of known implementations. (#2361, fixes
+           #2322,<br/>@TheLortex, review by @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add a variable 
+           <code class="font-normal text-sm">%{ignoring_promoted_rules}
+           </code> that is <code class="font-normal text-sm">true</code>
+            when<br/>
+           <code class="font-normal text-sm">--ingore-promoted-rules</code>
+            is passed on the command line and false<br/>
+           otherwise (#2382, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fix a bug in 
+           <code class="font-normal text-sm">future_syntax</code>
+            where the characters <code class="font-normal text-sm">@</code>
+            and <code class="font-normal text-sm">&amp;</code> were<br/>
+           not distinguished in the names of binding operators (
+           <code class="font-normal text-sm">let@</code> was the<br/>
+           same as <code class="font-normal text-sm">let&amp;</code>
+           ) (#2376, @aalekseyev, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Workspaces with non unique project names are now supported.
+           (#2377, fix #2325,<br/>@rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Improve opam generation to include the 
+           <code class="font-normal text-sm">dune</code>
+            dependncies with the minimum<br/>
+           constraint set based on the dune language version specified in the
+           <br/><code class="font-normal text-sm">dune-project</code>
+            file. (2383, @avsm)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           The order of fields in the generated opam file now follows order
+           preferred in<br/>opam-lib. (@avsm, #2380)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Fix coloring of error messages from the compiler (@diml, #2384)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add warning 
+           <code class="font-normal text-sm">66</code>
+            to default set of warnings starting for dune projects with<
+           br/>language verison &gt;= 
+           <code class="font-normal text-sm">1.11</code>
+            (@rgrinberg, @diml, fixes #2299)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add (dialect ...) stanza<br/>(@nojb, #2404)</p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add a 
+           <code class="font-normal text-sm">--context</code> argument to 
+           <code class="font-normal text-sm">dune install/uninstall</code>
+            (@diml, #2412)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Do not warn about merlin files pre 1.9. This warning can only be
+           disabled in<br/>1.9 (#2421, fixes #2399, @emillon)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add a new 
+           <code class="font-normal text-sm">inline_tests</code>
+            field in the env stanza to control inline_tests<br/>
+           framework with a variable (#2313, @mlasson, original idea by
+           @diml, review<br/>by @rgrinberg).
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">New binary kind 
+           <code class="font-normal text-sm">js</code>
+            for executables in order to explicitly enable Javascript<
+           br/>targets, and a switch 
+           <code class="font-normal text-sm">(explicit_js_mode)</code>
+            to require this mode in order to<br/>
+           declare JS targets corresponding to executables. (#1941, @nojb)
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         1.10.0 (04/06/2019)
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Restricted the set of variables available for expansion in the
+           destination<br/>filename of 
+           <code class="font-normal text-sm">install</code>
+            stanza to simplify implementation and avoid dependency<br/>
+           cycles. (#2073, @aalekseyev, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">[menhir] call menhir from context root build
+           _dir (#2067, @ejgallego,<br/>review by @diml, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">[coq] Add 
+           <code class="font-normal text-sm">coq.pp</code>
+            stanza to help with pre-processing of grammar<br/>
+           files (#2054, @ejgallego, review by @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add a new more generic form for the 
+           <em>promote</em> mode: 
+           <code class="font-normal text-sm">
+            (promote (until-clean) (into &lt;dir&gt;))
+           </code> (#2068, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Allow to promote only a subset of the targets via 
+           <code class="font-normal text-sm">(promote (only &lt;pred&gt;))
+           </code>. For instance: 
+           <code class="font-normal text-sm">(promote (only *.mli))</code>
+            (#2068, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Improve the behavior when a strict subset of the targets of a rule
+           is already<br/>
+           in the source tree for projects using the dune language &lt; 1.10
+           (#2068, fixes<br/>#2061, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           With lang dune &gt;= 1.10, rules in standard mode are no longer
+           allowed to<br/>
+           produce targets that are present in the source tree. This has been
+           a warning<br/>for long enough (#2068, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Allow %{...} variables in pps flags (#2076, @mlasson review by
+           @diml and<br/>@aalekseyev).
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add a 'cookies' option to ppx_
+           rewriter/deriver flags in library stanzas. This<br/>
+           allow to specify cookie requests from variables expanded at each
+           invocation of<br/>the preprocessor. (#2106, @mlasson @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add more opam metadata and use it to generate 
+           <code class="font-normal text-sm">.opam</code>
+            files. In particular, a<br/>
+           <code class="font-normal text-sm">package</code>
+            field has been added to specify package specific information.
+           <br/>(#2017, #2091, @avsm, @jonludlam, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Clean up the special support for 
+           <code class="font-normal text-sm">findlib.dynload</code>
+           . Before, Dune would simply<br/>
+           match on the library name. Now, we only match on the findlib
+           package name when<br/>
+           the library doesn't come from Dune. Someone writing a library
+           called<br/>
+           <code class="font-normal text-sm">findlib.dynload</code>
+            with Dune would have to add 
+           <code class="font-normal text-sm">
+            (special_builtin_support findlib_dynload)
+           </code> to trigger the special behavior. (#2115, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Install the 
+           <code class="font-normal text-sm">future_syntax</code>
+            preprocessor as 
+           <code class="font-normal text-sm">ocaml-syntax-shims.exe</code>
+            (#2125,<br/>@rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Hide full command on errors and warnings in development and show
+           them in CI.<br/>(detected using the 
+           <code class="font-normal text-sm">CI</code>
+            environment variable). Commands for which the<br/>
+           invocation might be omitted must output an error prefixed with 
+           <code class="font-normal text-sm">File </code>. Add an<br/>
+           <code class="font-normal text-sm">--always-show-command-line
+           </code> option to disable this behavior and always show<br/>
+           the full command. (#2120, fixes #1733, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">In 
+           <code class="font-normal text-sm">dune-workspace</code>
+            files, add the ability to choose the host context and to<
+           br/>
+           create duplicates of the default context with different settings.
+           (#2098,<br/>
+           @TheLortex, review by @diml, @rgrinberg and @aalekseyev)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add support for hg in 
+           <code class="font-normal text-sm">dune subst</code> (#2135, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Don't build documentation for implementations of virtual libraries
+           (#2141,<br/>fixes #2138, @jonludlam)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fix generation of the 
+           <code class="font-normal text-sm">-pp</code>
+            flag in .merlin (#2142, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Make 
+           <code class="font-normal text-sm">dune subst</code> add a 
+           <code class="font-normal text-sm">(version ...)</code>
+            field to the 
+           <code class="font-normal text-sm">dune-project</code><br/>
+           file (#2148, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add the 
+           <code class="font-normal text-sm">%{os_type}</code>
+            variable, which is a short-hand for<br/>
+           <code class="font-normal text-sm">%{ocaml-config:os_type}</code>
+            (#1764, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Allow 
+           <code class="font-normal text-sm">enabled_if</code> fields in 
+           <code class="font-normal text-sm">library</code>
+            stanzas, restricted to the<br/>
+           <code class="font-normal text-sm">%{os_type}</code>, 
+           <code class="font-normal text-sm">%{model}</code>, 
+           <code class="font-normal text-sm">%{architecture}</code>, 
+           <code class="font-normal text-sm">%{system}</code>
+            variables (#1764,<br/>#2164 @diml, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fix <code class="font-normal text-sm">chdir</code>
+            on external and source paths. Dune will also fail gracefully if
+           <br/>
+           the external or source path does not exist (#2165, fixes #2158,
+           @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Support the 
+           <code class="font-normal text-sm">.cc</code>
+            extension fro C++ sources (#2195, fixes #83, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Run 
+           <code class="font-normal text-sm">ocamlformat</code>
+            relative to the context root. This improves the locations of<
+           br/>errors. (#2196, fixes #1370, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fix detection of 
+           <code class="font-normal text-sm">README</code>, 
+           <code class="font-normal text-sm">LICENSE</code>, 
+           <code class="font-normal text-sm">CHANGE</code>, and 
+           <code class="font-normal text-sm">HISTORY</code> files. These<
+           br/>
+           would be undetected whenever the project was nested in another
+           workspace.<br/>(#2194, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fix generation of 
+           <code class="font-normal text-sm">.merlin</code>
+            whenever there's more than one stanza with the<br/>
+           same ppx preprocessing specification (#2209 ,fixes #2206,
+           @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fix generation of 
+           <code class="font-normal text-sm">.merlin</code>
+            in the presence of the 
+           <code class="font-normal text-sm">copy_files</code> stanza and
+           <br/>
+           preprocessing specifications of other stanazs. (#2211, fixes
+           #2206,<br/>@rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Run <code class="font-normal text-sm">refmt</code>
+            from the context's root directory. This improves error messages
+           in<br/>case of syntax errors. (#2223, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">In .merlin files, don't pass 
+           <code class="font-normal text-sm">-dump-ast</code> to the 
+           <code class="font-normal text-sm">future_syntax</code>
+            preprocessor.<br/>
+           Merlin doesn't seem to like it when binary AST is generated by a 
+           <code class="font-normal text-sm">-pp</code><br/>
+           preprocessor. (#2236, @aalekseyev)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           <code class="font-normal text-sm">dune install</code>
+            will verify that all files mentioned in all .install files<
+           br/>
+           exist before trying to install anything. This prevents partial
+           installation of<br/>packages (#2230, @rgrinberg)
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         1.9.3 (06/05/2019)
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Fix 
+           <code class="font-normal text-sm">.install</code>
+            files not being generated (#2124, fixes #2123, @rgrinberg)
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         1.9.2 (02/05/2019)
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Put back library variants in development mode. We discovered a
+           <br/>
+           serious unexpected issue and we might need to adjust the design of
+           <br/>
+           this feature before we are ready to commit to a final version.
+           Users<br/>will need to write 
+           <code class="font-normal text-sm">(using library_variants 0.1)
+           </code> in their<br/>
+           <code class="font-normal text-sm">dune-project</code>
+            file if they want to use it before the design is<br/>
+           finalized. (#2116, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Forbid to attach a variant to a library that implements a virtual
+           <br/>library outside the current project (#2104, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fix a bug where 
+           <code class="font-normal text-sm">dune install</code>
+            would install man pages to incorrect<br/>paths when compared to 
+           <code class="font-normal text-sm">opam-installer</code>
+           . For example dune now<br/>installs 
+           <code class="font-normal text-sm">(foo.1 as man1/foo.1)</code>
+            correctly and previously that was<br/>installed to 
+           <code class="font-normal text-sm">man1/man1/foo.1</code>
+           . (#2105, @aalekseyev)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Do not fail when a findlib directory doesn't exist (#2101, fix
+           #2099, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">[coq] Rename 
+           <code class="font-normal text-sm">(coqlib ...)</code> to 
+           <code class="font-normal text-sm">(coq.theory ...)</code>
+           , support for<br/><code class="font-normal text-sm">coqlib</code>
+            will be dropped in the 1.0 version of the Coq language<br/>
+           (#2055, @ejgallego)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Fix crash when calculating library dependency closure (#2090,
+           fixes #2085,<br/>@rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Clean up the special support for 
+           <code class="font-normal text-sm">findlib.dynload</code>
+           . Before, Dune<br/>
+           would simply match on the library name. Now, we only match on the
+           <br/>findlib package name when the library doesn't come from<
+           br/>Dune. Someone writing a library called 
+           <code class="font-normal text-sm">findlib.dynload</code> with Dune
+           <br/>would have to add 
+           <code class="font-normal text-sm">
+            (special_builton_support findlib_dynload)
+           </code> to<br/>trigger the special behavior. (#2115, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Include permissions in the digest of targets and dependencies
+           (#2121, fix<br/>#1426, @rgrinberg, @xclerc)
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         1.9.1 (11/04/2019)
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Fix invocation of odoc to add previously missing include paths,
+           impacting<br/>
+           mld files that are not in directories containing libraries (#2016,
+           fixes<br/>#2007, @jonludlam)
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         1.9.0 (09/04/2019)
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Warn when generated 
+           <code class="font-normal text-sm">.merlin</code>
+            does not reflect the preprocessing<br/>
+           specification. This occurs when multiple stanzas in the same
+           directory use<br/>
+           different preprocessing specifications. This warning can now be
+           disabled with<br/>
+           <code class="font-normal text-sm">allow_approx_merlin</code>
+            (#1947, fix #1946, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Watch mode: display &quot;Success&quot; in green and &quot;Had
+           errors&quot; in red (#1956,<br/>@emillon)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Fix glob dependencies on installed directories (#1965, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Add support for library variants and default implementations.
+           (#1900,<br/>@TheLortex)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add experimental 
+           <code class="font-normal text-sm">$ dune init</code>
+            command. This command is used to create or<br/>
+           update project boilerplate. (#1448, fixes #159, @shonfeder)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Experimental Coq support (fix #1466, @ejgallego)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Install .cmi files of private modules in a 
+           <code class="font-normal text-sm">.private</code>
+            directory (#1983, fix<br/>#1973 @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fix 
+           <code class="font-normal text-sm">dune subst</code>
+            attempting to substitute on directories. (#2000, fix #1997,<
+           br/>@rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Do not list private modules in the generated index. (#2009, fix
+           #2008,<br/>@rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Warn instead of failing if an opam file fails to parse. This opam
+           file can<br/>still be used to define scope. (#2023, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Do not crash if unable to read a directory when traversing to find
+           root<br/>(#2024, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Do not exit dune if some source directories are unreadable.
+           Instead, warn the<br/>
+           user that such directories need to be ignored (#2004, fix #310,
+           @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fix nested 
+           <code class="font-normal text-sm">(binaries ..)</code>
+            fields in the <code class="font-normal text-sm">env</code>
+            stanza. Previously, parent<br/>
+           <code class="font-normal text-sm">binaries</code>
+            fields would be ignored, but instead they should be combined.
+           <br/>(#2029, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Allow &quot;.&quot; in 
+           <code class="font-normal text-sm">c_names</code> and 
+           <code class="font-normal text-sm">cxx_names</code>
+            (#2036, fix #2033, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Format rules: if a dune file uses OCaml syntax, do not format it.
+           <br/>(#2014, fix #2012, @emillon)
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         1.8.2 (10/03/2019)
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Fix auto-generated 
+           <code class="font-normal text-sm">index.mld</code>
+           . Use correct headings for the listing. (#1925,<br/>
+           @rgrinberg, @aantron)
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         1.8.1 (08/03/2019)
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Correctly write 
+           <code class="font-normal text-sm">dune-package</code>
+            when version is empty string (#1919, fix #1918,<br/>@rgrinberg)
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         1.8.0 (07/03/2019)
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Clean up watch mode polling loop: improves signal handling and
+           error handling<br/>
+           during polling (#1912, fix #1907, fix #1671, @aalekseyev)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Change status messages during polling to be one-line, so that the
+           messages are<br/>correctly erased by ^K. (#1912, @aalekseyev)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add support for 
+           <code class="font-normal text-sm">.cxx</code>
+            extension for C++ stubs (#1831, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add 
+           <code class="font-normal text-sm">DUNE_WORKSPACE</code>
+            variable. This variable is equivalent to setting<br/>
+           <code class="font-normal text-sm">--workspace</code>
+            in the command line. (#1711, fix #1503, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add 
+           <code class="font-normal text-sm">c_flags</code> and 
+           <code class="font-normal text-sm">cxx_flags</code>
+            to env profile settings (#1700 and #1800,<br/>@gretay-js)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Format 
+           <code class="font-normal text-sm">dune printenv</code>
+            output (#1867, fix #1862, @emillon)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add the 
+           <code class="font-normal text-sm">(promote-into &lt;dir&gt;)
+           </code> and `(promote-until-clean-into
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Improve error message when 
+           <code class="font-normal text-sm">dune subst</code>
+            fails (#1898, fix #1897, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Add more GC counters to catapult traces (fix908, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add a preprocessor shim for the 
+           <code class="font-normal text-sm">let+</code>
+            syntax of OCaml 4.08 (#1899,<br/>implements #1891, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fix generation of 
+           <code class="font-normal text-sm">.merlin</code> files on Windows. 
+           <code class="font-normal text-sm">\</code> characters needed<
+           br/>to be escaped (#1869, @mlasson)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fix 0 error code when 
+           <code class="font-normal text-sm">$ dune format-dune-file</code>
+            fails. (#1915, fix #1914,<br/>@rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Configurator: deprecated 
+           <code class="font-normal text-sm">query_expr</code> and introduced 
+           <code class="font-normal text-sm">query_expr_err</code> which is
+           <br/>
+           the same but with a better error in case it fails. (#1886,
+           @ejgallego)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Make sure 
+           <code class="font-normal text-sm">(menhir (mode promote) ...)
+           </code> stanzas are ignored when<br/>using 
+           <code class="font-normal text-sm">--ignore-promoted-rules</code>
+            or <code class="font-normal text-sm">-p</code> (#1917, @diml)
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         1.7.3 (27/02/2019)
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Fix interpretation of 
+           <code class="font-normal text-sm">META</code>
+            files containing archives with 
+           <code class="font-normal text-sm">/</code> in<br/>
+           the filename. For instance, this was causing llvm to be unusable
+           <br/>with dune (#1889, fix #1885, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Make errors about menhir stanzas be located (#1881, fix #1876,
+           <br/>@diml)
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         1.7.2 (21/02/2019)
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Add 
+           <code class="font-normal text-sm">${corrected-suffix}</code>
+           , <code class="font-normal text-sm">${library-name}</code>
+            and a few other<br/>
+           variables to the list of variables to upgrade. This fixes the<
+           br/>
+           support for various framework producing corrections (#1840, #1853,
+           <br/>@diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fix 
+           <code class="font-normal text-sm">$ dune subst</code>
+            failing because the build directory wasn't set. (#1854, fix<
+           br/>#1846, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Configurator: Add warning to 
+           <code class="font-normal text-sm">Pkg_config.query</code>
+            when a full package expression<br/>is used. Add 
+           <code class="font-normal text-sm">Pkg_config.query_expr</code>
+            for cases when the full power of<br/>
+           pkg-config's querying is needed (#1842, fix #1833, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Fix unavailable, optional implementations eagerly breaking the
+           build (#1857,<br/>fix #1856, @rgrinberg)
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         1.7.1 (13/02/2019)
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Fix the watch mode (#1837, #1839, fix #1836, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Configurator: Fix misquoting when running pkg-config (#1835, fix
+           #1833,<br/>@Chris00)
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         1.7.0 (12/02/2019)
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Second step of the deprecation of jbuilder: the 
+           <code class="font-normal text-sm">jbuilder</code> binary<br/>
+           now emits a warning on every startup and both 
+           <code class="font-normal text-sm">jbuilder</code> and 
+           <code class="font-normal text-sm">dune</code><br/>
+           emit warnings when encountering 
+           <code class="font-normal text-sm">jbuild</code>
+            files (#1752, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Change the layout of build artifacts inside 
+           _build. The new layout enables<br/>
+           optimizations that depend on the presence of 
+           <code class="font-normal text-sm">.cmx</code>
+            files of private modules<br/>(#1676, @bobot)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Fix merlin handling of private module visibility (#1653 @bobot)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           unstable-fmt: use boxes to wrap some lists (#1608, fix #1153,
+           @emillon,<br/>thanks to @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           skip directories when looking up programs in the PATH (#1628,
+           fixes<br/>#1616, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Use <code class="font-normal text-sm">lsof</code>
+            on macOS to implement 
+           <code class="font-normal text-sm">--stats</code>
+            (#1636, fixes #1634, @xclerc)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Generate 
+           <code class="font-normal text-sm">dune-package</code>
+            files for every package. These files are installed and<br/>
+           read instead of <code class="font-normal text-sm">META</code>
+            files whenever they are available (#1329, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fix preprocessing for libraries with 
+           <code class="font-normal text-sm">(include_subdirs ..)</code>
+            (#1624, fix #1626,<br/>@nojb, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Do not generate targets for archive that don't match the 
+           <code class="font-normal text-sm">modes</code> field.<br/>
+           (#1632, fix #1617, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           When executing actions, open files lazily and close them as soon
+           as<br/>
+           possible in order to reduce the maximum number of file descriptors
+           <br/>
+           opened by Dune (#1635, #1643, fixes #1633, @jonludlam, @rgrinberg,
+           <br/>@diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Reimplement the core of Dune using a new generic memoization
+           system<br/>(#1489, @rudihorn, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Replace the broken cycle detection algorithm by a state of the art
+           <br/>one from 
+           <a href="https://doi.org/10.1145/2756553" class="cursor-pointer
+            text-orange">this paper
+           </a> (#1489,<br/>@rudihorn)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Get the correct environment node for multi project workspaces
+           (#1648,<br/>@rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add 
+           <code class="font-normal text-sm">dune compute</code>
+            to call internal memoized functions (#1528,<br/>@rudihorn, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add 
+           <code class="font-normal text-sm">--trace-file</code>
+            option to trace dune internals (#1639, fix #1180, @emillon)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add 
+           <code class="font-normal text-sm">--no-print-directory</code>
+            (borrowed from GNU make) to suppress<br/>
+           <code class="font-normal text-sm">Entering directory</code>
+            messages. (#1668, @dra27)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Remove 
+           <code class="font-normal text-sm">--stats</code>
+            and track fd usage in 
+           <code class="font-normal text-sm">--trace-file</code>
+            (#1667, @emillon)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Add virtual libraries feature and enable it by default (#1430
+           fixes #921,<br/>@rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Fix handling of Control+C in watch mode (#1678, fixes #1671,
+           @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Look for jsoo runtime in the same dir as the 
+           <code class="font-normal text-sm">js_of_ocaml</code> binary<
+           br/>when the ocamlfind package is not available (#1467, @nojb)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Make the 
+           <code class="font-normal text-sm">seq</code>
+            package available for OCaml &gt;= 4.07 (#1714, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Add locations to error messages where a rule fails to generate
+           targets and<br/>
+           rules that require files outside the build/source directory.
+           (#1708, fixes<br/>#848, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Let 
+           <code class="font-normal text-sm">Configurator</code> handle 
+           <code class="font-normal text-sm">sizeof</code>
+            (in addition to negative numbers).<br/>
+           (#1726, fixes #1723, @Chris00)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Fix an issue causing menhir generated parsers to fail to build in
+           <br/>some cases. The fix is to systematically use 
+           <code class="font-normal text-sm">-short-paths</code> when<
+           br/>calling <code class="font-normal text-sm">ocamlc -i</code>
+            (#1743, fix #1504, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Never raise when printing located errors. The code that would
+           print the<br/>
+           location excerpts was prone to raising. (#1744, fix #1736,
+           @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add a 
+           <code class="font-normal text-sm">dune upgrade</code>
+            command for upgrading jbuilder projects to Dune<br/>
+           (#1749, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">When automatically creating a 
+           <code class="font-normal text-sm">dune-project</code>
+            file, insert the<br/>detected name in it (#1749, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add 
+           <code class="font-normal text-sm">
+            (implicit_transitive_deps &lt;bool&gt;)
+           </code> mode to dune projects. When this mode<br/>
+           is turned off, transitive dependencies are not accessible. Only
+           listed<br/>
+           dependencies are directly accessible. (#1734, #430, @rgrinberg,
+           @hnrgrgr)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add 
+           <code class="font-normal text-sm">toplevel</code>
+            stanza. This stanza is used to define toplevels with libraries
+           <br/>already preloaded. (#1713, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Generate 
+           <code class="font-normal text-sm">.merlin</code>
+            files that account for normal preprocessors defined using a<
+           br/>subset of the <code class="font-normal text-sm">action</code>
+            language. (#1768, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Emit 
+           <code class="font-normal text-sm">(orig_src_dir &lt;path&gt;)
+           </code> metadata in 
+           <code class="font-normal text-sm">dune-package</code>
+            for dune packages<br/>built with 
+           <code class="font-normal text-sm">--store-orig-source-dir</code>
+            command line flag (also controlled by<br/>
+           <code class="font-normal text-sm">DUNE_STORE_ORIG_SOURCE_DIR
+           </code> env variable). This is later used to generate<br/>
+           <code class="font-normal text-sm">.merlin</code> with 
+           <code class="font-normal text-sm">S</code>
+           -directives pointed to original source locations and thus<
+           br/>allowing merlin to see those. (#1750, @andreypopp)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Improve the behavior of 
+           <code class="font-normal text-sm">dune promote</code>
+            when the files to be promoted have been<br/>
+           deleted. (#1775, fixes #1772, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">unstable-fmt: preserve comments (#1766, @emillon)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Pass flags correctly when using 
+           <code class="font-normal text-sm">staged_pps</code>
+            (#1779, fixes #1774, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fix an issue with the use of 
+           <code class="font-normal text-sm">(mode promote)</code>
+            in the menhir<br/>stanza. It was previously causing intermediate 
+           <em>mock</em> files to be<br/>promoted (#1783, fixes #1781, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           unstable-fmt: ignore files using OCaml syntax (#1784, @emillon)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Configurator: Add 
+           <code class="font-normal text-sm">which</code>
+            function to replace the 
+           <code class="font-normal text-sm">which</code>
+            command line utility<br/>
+           in a cross platform way. (#1773, fixes #1705, @Chris00)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Make configurator append paths to 
+           <code class="font-normal text-sm">$PKG_CONFIG_PATH</code>
+            on macOS. Previously it<br/>was prepending paths and thus 
+           <code class="font-normal text-sm">$PKG_CONFIG_PATH</code>
+            set by users could have been<br/>
+           overridden by homebrew installed libraries (#1785, @andreypopp)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Disallow c/cxx sources that share an object file in the same stubs
+           archive.<br/>This means that 
+           <code class="font-normal text-sm">foo.c</code> and 
+           <code class="font-normal text-sm">foo.cpp</code>
+            can no longer exist in the same library.<br/>(#1788, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Forbid use of 
+           <code class="font-normal text-sm">%{targets}</code> (or 
+           <code class="font-normal text-sm">${@}</code>
+            in jbuild files) inside<br/>preprocessing actions<br/>
+           (#1812, fixes #1811, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add 
+           <code class="font-normal text-sm">DUNE_PROFILE</code>
+            environment variable to easily set the profile. (#1806,<br/>
+           @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Deprecate the undocumented 
+           <code class="font-normal text-sm">(no_keep_locs)</code>
+            field. It was only<br/>
+           necessary until virtual libraries were supported (#1822, fix
+           #1816,<br/>@diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Rename 
+           <code class="font-normal text-sm">unstable-fmt</code> to 
+           <code class="font-normal text-sm">format-dune-file</code>
+            and remove its <code class="font-normal text-sm">--inplace</code>
+            option.<br/>(#1821, @emillon).
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Autoformatting: 
+           <code class="font-normal text-sm">(using fmt 1.1)</code>
+            will also format dune files (#1821, @emillon).
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Autoformatting: record dependencies on 
+           <code class="font-normal text-sm">.ocamlformat-ignore</code>
+            files (#1824,<br/>fixes #1793, @emillon)
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         1.6.2 (05/12/2018)
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Fix regression introduced by #1554 reported in:
+           <br/>
+           https://github.com/ocaml/dune/issues/734#issuecomment-444177134
+           (#1612,<br/>@rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fix 
+           <code class="font-normal text-sm">dune external-lib-deps</code>
+            when preprocessors are not installed<br/>(#1607, @diml)
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         1.6.1 (04/12/2018)
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Fix hash collision for on-demand ppx rewriters once and for all
+           <br/>(#1602, fixes #1524, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add 
+           <code class="font-normal text-sm">
+            dune external-lib-deps --sexp --unstable-by-dir
+           </code> so that the output can<br/>
+           be easily processed by a machine (#1599, @diml)
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         1.6.0 (29/11/2018)
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Expand variables in 
+           <code class="font-normal text-sm">install</code>
+            stanzas (#1354, @mseri)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Add predicate language support for specifying sub directories.
+           This allows the<br/>
+           use globs, set operations, and special values in specifying the
+           sub<br/>directories used for the build. For example: 
+           <code class="font-normal text-sm">(dirs :standard \ lib*)</code>
+            will<br/>use all directories except those that start with 
+           <code class="font-normal text-sm">lib</code>. (#1517, #1568,<
+           br/>@rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add 
+           <code class="font-normal text-sm">binaries</code> field to the 
+           <code class="font-normal text-sm">(env ..)</code>
+            stanza. This field sets and overrides<br/>
+           binaries for rules defined in a directory. (#1521, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Fix a crash caused by using an extension in a project without<
+           br/>dune-project file (#1535, fix #1529, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Allow 
+           <code class="font-normal text-sm">%{bin:..}</code>, 
+           <code class="font-normal text-sm">%{exe:..}</code>
+           , and other static expansions in the 
+           <code class="font-normal text-sm">deps</code><br/>
+           field. (#1155, fix #1531, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Fix bad interaction between on-demand ppx rewriters and using
+           multiple build<br/>contexts (#1545, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Fix handling of installed .dune files when the backend is declared
+           via a<br/><code class="font-normal text-sm">dune</code>
+            file (#1551, fixes #1549, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add a 
+           <code class="font-normal text-sm">--stats</code>
+            command line option to record resource usage (#1543, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fix 
+           <code class="font-normal text-sm">dune build @doc</code> deleting 
+           <code class="font-normal text-sm">highlight.pack.js</code>
+            on rebuilds, after the<br/>first build (#1557, @aantron).
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Allow targets to be directories, which Dune will treat opaquely
+           <br/>(#1547, @jordwalke)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Support for OCaml 4.08: 
+           <code class="font-normal text-sm">List.t</code>
+            is now provided by OCaml (#1561, @ejgallego)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Exclude the local esy directory (
+           <code class="font-normal text-sm">_esy</code>
+           ) from the list of watched directories<br/>(#1578, @andreypopp)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fix the output of 
+           <code class="font-normal text-sm">dune external-lib-deps</code>
+            (#1594, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Introduce 
+           <code class="font-normal text-sm">data_only_dirs</code> to replace 
+           <code class="font-normal text-sm">ignored_subdirs</code>. 
+           <code class="font-normal text-sm">ignored_subdirs</code> is<
+           br/>deprecated since 1.6. (#1590, @rgrinberg)
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         1.5.1 (7/11/2018)
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Fix 
+           <code class="font-normal text-sm">dune utop &lt;dir&gt;</code>
+            when invoked from a sub-directory of the<br/>
+           project (#1520, fix #1518, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Fix bad interaction between on-demand ppx rewriters and polling
+           mode<br/>(#1525, fix #1524, @diml)
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         1.5.0 (1/11/2018)
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Filter out empty paths from 
+           <code class="font-normal text-sm">OCAMLPATH</code> and 
+           <code class="font-normal text-sm">PATH</code> (#1436, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Do not add the 
+           <code class="font-normal text-sm">lib.cma.js</code>
+            target in lib's directory. Put this target in a<br/>
+           sub directory instead. (#1435, fix #1302, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Install generated OCaml files with a 
+           <code class="font-normal text-sm">.ml</code> rather than a 
+           <code class="font-normal text-sm">.ml-gen</code> extension<
+           br/>(#1425, fix #1414, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Allow to use the 
+           <code class="font-normal text-sm">bigarray</code>
+            library in &gt;= 4.07 without ocamlfind and without<br/>
+           installing the corresponding 
+           <code class="font-normal text-sm">otherlib</code>. (#1455, @nojb)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add <code class="font-normal text-sm">@all</code>
+            alias to build all targets defined in a directory (#1409, fix
+           <br/>#1220, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add <code class="font-normal text-sm">@check</code>
+            alias to build all targets required for type checking and tooling
+           <br/>support. (#1447, fix #1220, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Produce the odoc index page with the content wrapper to make it
+           consistent<br/>with odoc's theming (#1469, @rizo)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Unblock signals in processes started by dune (#1461, fixes #1451,
+           <br/>@diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Respect 
+           <code class="font-normal text-sm">OCAMLFIND_TOOLCHAIN</code>
+            and add a <code class="font-normal text-sm">toolchain</code>
+            option to contexts in the<br/>
+           workspace file. (#1449, fix #1413, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fix error message when using 
+           <code class="font-normal text-sm">copy_files</code>
+            stanza to copy files from<br/>
+           a non sub directory with lang set to dune &lt; 1.3 (#1486, fixes
+           #1485,<br/>@NathanReb)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Install man pages in the correct subdirectory (#1483, fixes #1441,
+           @emillon)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fix version syntax check for 
+           <code class="font-normal text-sm">test</code> stanza's 
+           <code class="font-normal text-sm">action</code> field. Only<
+           br/>emits a warning for retro-compatibility (#1474, fixes #1471,
+           <br/>@NathanReb)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Interpret the 
+           <code class="font-normal text-sm">DESTDIR</code>
+            environment variable (#1475, @emillon)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fix interpretation of paths in 
+           <code class="font-normal text-sm">env</code>
+            stanzas (#1509, fixes #1508, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add 
+           <code class="font-normal text-sm">context_name</code>
+            expansion variable (#1507, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Use shorter paths for generated on-demand ppx drivers. This is to
+           <br/>
+           help Windows builds where paths are limited in length (#1511,
+           fixes<br/>#1497, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fix interpretation of environment variables under 
+           <code class="font-normal text-sm">setenv</code>. Also forbid<
+           br/>dynamic environment names or values (#1503, @rgrinberg).
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         1.4.0 (10/10/2018)
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Do not fail if the output of 
+           <code class="font-normal text-sm">ocamlc -config</code>
+            doesn't include<br/>
+           <code class="font-normal text-sm">standard_runtime</code>
+            (#1326, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Let 
+           <code class="font-normal text-sm">Configurator.V1.C_define.import
+           </code> handle negative integers<br/>(#1334, @Chris00)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Re-execute actions when a target is modified by the user inside
+           <br/><code class="font-normal text-sm">_build</code>
+            (#1343, fix #1342, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Pass 
+           <code class="font-normal text-sm">--set-switch</code>
+            to opam (#1341, fix #1337, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Fix bad interaction between multi-directory libraries the 
+           <code class="font-normal text-sm">menhir</code><br/>
+           stanza (#1373, fix #1372, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Integration with automatic formatters (#1252, fix #1201, @emillon)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Better error message when using 
+           <code class="font-normal text-sm">(self_build_stubs_archive ...)
+           </code> and<br/>
+           <code class="font-normal text-sm">(c_names ...)</code> or 
+           <code class="font-normal text-sm">(cxx_names ...)</code>
+            simultaneously.<br/>(#1375, fix #1306, @nojb)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Improve name detection for packages when the prefix isn't an
+           actual package<br/>(#1361, fix #1360, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Support for new menhir rules (#863, fix #305, @fpottier,
+           @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Do not remove flags when compiling compatibility modules for
+           wrapped mode<br/>(#1382, fix #1364, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fix reason support when using 
+           <code class="font-normal text-sm">staged_pps</code>
+            (#1384, @charlesetc)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add support for 
+           <code class="font-normal text-sm">enabled_if</code> in 
+           <code class="font-normal text-sm">rule</code>, 
+           <code class="font-normal text-sm">menhir</code>, 
+           <code class="font-normal text-sm">ocamllex</code>,<br/>
+           <code class="font-normal text-sm">ocamlyacc</code> (#1387, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Exit gracefully when a signal is received (#1366, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Load all defined libraries recursively into utop (#1384, fix
+           #1344,<br/>@rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Allow to use libraries 
+           <code class="font-normal text-sm">bytes</code>, 
+           <code class="font-normal text-sm">result</code> and 
+           <code class="font-normal text-sm">uchar</code> without 
+           <code class="font-normal text-sm">findlib</code><br/>
+           installed (#1391, @nojb)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Take argument to self_build_stubs_
+           archive into account. (#1395, @nojb)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fix bad interaction between 
+           <code class="font-normal text-sm">env</code>
+            customization and vendored<br/>
+           projects: when a vendored project didn't have its own 
+           <code class="font-normal text-sm">env</code> stanza,<br/>the 
+           <code class="font-normal text-sm">env</code>
+            stanza from the enclosing project was in effect (#1408,<br/>
+           @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Fix stop early bug when scanning for watermarks (#1423,
+           @struktured)
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         1.3.0 (23/09/2018)
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Support colors on Windows (#1290, @diml)</p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Allow 
+           <code class="font-normal text-sm">dune.configurator</code>
+            and <code class="font-normal text-sm">base</code>
+            to be used together (#1291, fix<br/>#1167, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Support interrupting and restarting builds on file changes (#1246,
+           <br/>@kodek16)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Fix findlib-dynload support with byte mode only (#1295, @bobot)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Make 
+           <code class="font-normal text-sm">dune rules -m</code>
+            output a valid makefile (#1293, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Expand variables in 
+           <code class="font-normal text-sm">(targets ..)</code>
+            field (#1301, #1320, fix #1189, @nojb,<br/>@rgrinberg, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Fix a race condition on Windows that was introduced in 1.2.0<
+           br/>(#1304, fix #1303, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Fix the generation of .merlin files to account for private modules
+           <br/>(@rgrinberg, fix #1314)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Exclude the local opam switch directory (
+           <code class="font-normal text-sm">_opam</code>
+           ) from the list of watched<br/>directories (#1315, @dysinger)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fix compilation of the module generated for 
+           <code class="font-normal text-sm">findlib.dynload</code><br/>
+           (#1317, fix #1310, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Lift restriction on 
+           <code class="font-normal text-sm">copy_files</code> and 
+           <code class="font-normal text-sm">copy_files#</code>
+            stanzas that files to be<br/>
+           copied should be in a subdirectory of the current directory.<
+           br/>(#1323, fix #911, @nojb)
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         1.2.1 (17/09/2018)
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Enrich the 
+           <code class="font-normal text-sm">dune</code>
+            Emacs mode with syntax highlighting and indentation. New<
+           br/>file <code class="font-normal text-sm">dune-flymake</code>
+            to provide a hook 
+           <code class="font-normal text-sm">dune-flymake-dune-mode-hook
+           </code> to enable<br/>linting of dune files. (#1265, @Chris00)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Pass 
+           <code class="font-normal text-sm">link_flags</code> to 
+           <code class="font-normal text-sm">cc</code> when compiling with 
+           <code class="font-normal text-sm">Configurator.V1.c_test</code>
+            (#1274,<br/>@rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Fix digest calculation of aliases. It should take into account
+           extra bindings<br/>
+           passed to the alias (#1277, fix #1276, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fix a bug causing 
+           <code class="font-normal text-sm">dune</code>
+            to fail eagerly when an optional library<br/>
+           isn't available (#1281, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           ocamlmklib should use response files only if ocaml &gt;= 4.08
+           (#1268, @bryphe)
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         1.2.0 (14/09/2018)
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Ignore stderr output when trying to find out the number of jobs
+           <br/>available (#1118, fix #1116, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fix error message when the source directory of 
+           <code class="font-normal text-sm">copy_files</code>
+            does not exist.<br/>(#1120, fix #1099, @emillon)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Highlight error locations in error messages (#1121, @emillon)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Display actual stanza when package is ambiguous (#1126, fix #1123,
+           @emillon)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add 
+           <code class="font-normal text-sm">dune unstable-fmt</code>
+            to format <code class="font-normal text-sm">dune</code>
+            files. The interface and syntax are<br/>
+           still subject to change, so use with caution. (#1130, fix #940,
+           @emillon)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Improve error message for 
+           <code class="font-normal text-sm">dune utop</code>
+            without a library name (#1154, fix<br/>#1149, @emillon)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fix parsing 
+           <code class="font-normal text-sm">ocamllex</code>
+            stanza in jbuild files (#1150, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Highlight multi-line errors (#1131, @anuragsoni)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Do no try to generate shared libraries when this is not supported
+           by<br/>the OS (#1165, fix #1051, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fix 
+           <code class="font-normal text-sm">Flags.write_{sexp,lines}</code>
+            in configurator by avoiding the use of<br/>
+           <code class="font-normal text-sm">Stdune.Path</code>
+            (#1175, fix #1161, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add support for 
+           <code class="font-normal text-sm">findlib.dynload</code>
+           : when linking an executable using<br/>
+           <code class="font-normal text-sm">findlib.dynload</code>
+           , automatically record linked in libraries and<br/>
+           findlib predicates (#1172, @bobot)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Add support for promoting a selected list of files (#1192, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Add an emacs mode providing helpers to promote correction files
+           <br/>(#1192, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Improve message suggesting to remove parentheses (#1196, fix
+           #1173, @emillon)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add 
+           <code class="font-normal text-sm">
+            (wrapped (transition &quot;..message..&quot;))
+           </code> as an option that will generate<br/>
+           wrapped modules but keep unwrapped modules with a deprecation
+           message to<br/>
+           preserve compatibility. (#1188, fix #985, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fix the flags passed to the ppx rewriter when using 
+           <code class="font-normal text-sm">staged_pps</code> (#1218, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add 
+           <code class="font-normal text-sm">(env var)</code>
+            to add a dependency to an environment variable.<br/>
+           (#1186, @emillon)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add a simple version of a polling mode: 
+           <code class="font-normal text-sm">dune build -w</code> keeps<
+           br/>running and restarts the build when something change on the
+           <br/>filesystem (#1140, @kodek16)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Cleanup the way we detect the library search path. We no longer
+           call<br/>
+           <code class="font-normal text-sm">opam config var lib</code>
+            in the default build context (#1226, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Make test stanzas honor the -p flag. (#1236, fix #1231, @emillon)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Test stanzas take an optional (action) field to customize how they
+           run (#1248,<br/>#1195, @emillon)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add support for private modules via the 
+           <code class="font-normal text-sm">private_modules</code>
+            field (#1241, fix<br/>#427, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Add support for passing arguments to the OCaml compiler via a<
+           br/>
+           response file when the list of arguments is too long (#1256,
+           @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Do not print diffs by default when running inside dune (#1260,
+           @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Interpret 
+           <code class="font-normal text-sm">$ dune build dir</code>
+            as building the default alias in 
+           <code class="font-normal text-sm">dir</code>. (#1259,<br/>
+           @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Make the 
+           <code class="font-normal text-sm">dynlink</code>
+            library available without findlib installed (#1270, fix<br/>
+           #1264, @rgrinberg)
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         1.1.1 (08/08/2018)
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Fix 
+           <code class="font-normal text-sm">$ jbuilder --dev</code>
+            (#1104, fixes #1103, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fix dune exec when 
+           <code class="font-normal text-sm">--build-dir</code>
+            is set to an absolute path (#1105, fixes<br/>#1101, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Fix duplicate profile argument in suggested command when an
+           external library<br/>is missing (#1109, #1106, @emillon)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4"><code class="font-normal text-sm">-opaque</code>
+            wasn't correctly being added to modules without an interface.
+           <br/>(#1108, fix #1107, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fix validation of library 
+           <code class="font-normal text-sm">name</code>
+            fields and make sure this validation also<br/>applies when the 
+           <code class="font-normal text-sm">name</code> is derived from the 
+           <code class="font-normal text-sm">public_name</code>
+           . (#1110, fix #1102,<br/>@rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fix a bug causing the toplevel 
+           <code class="font-normal text-sm">env</code>
+            stanza in the workspace file to<br/>
+           be ignored when at least one context had 
+           <code class="font-normal text-sm">(merlin)</code> (#1114, @diml)
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         1.1.0 (06/08/2018)
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Fix lookup of command line specified files when 
+           <code class="font-normal text-sm">--root</code>
+            is given. Previously,<br/>passing in 
+           <code class="font-normal text-sm">--root</code>
+            in conjunction with 
+           <code class="font-normal text-sm">--workspace</code> or 
+           <code class="font-normal text-sm">--config</code> would not<
+           br/>work correctly (#997, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Add support for customizing env nodes in workspace files. The 
+           <code class="font-normal text-sm">env</code> stanza is<br/>
+           now allowed in toplevel position in the workspace file, or for
+           individual<br/>contexts. This feature requires 
+           <code class="font-normal text-sm">(dune lang 1.1)</code>
+            (#1038, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add 
+           <code class="font-normal text-sm">enabled_if</code>
+            field for aliases and tests. This field controls whether the<
+           br/>
+           test will be ran using a boolean expression language. (#819,
+           @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Make <code class="font-normal text-sm">name</code>
+           , <code class="font-normal text-sm">names</code>
+            fields optional when a 
+           <code class="font-normal text-sm">public_name</code>, 
+           <code class="font-normal text-sm">public_names</code><br/>
+           field is provided. (#1041, fix #1000, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Interpret 
+           <code class="font-normal text-sm">X</code> in 
+           <code class="font-normal text-sm">--libdir X</code> as relative to 
+           <code class="font-normal text-sm">PREFIX</code> when 
+           <code class="font-normal text-sm">X</code> is relative<br/>
+           (#1072, fix #1070, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Add support for multi directory libraries by writing<br/>
+           <code class="font-normal text-sm">(include_subdirs unqualified)
+           </code> (#1034, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add 
+           <code class="font-normal text-sm">(staged_pps ...)</code>
+            to support staged ppx rewriters such as ones<br/>
+           using the OCaml typer like 
+           <code class="font-normal text-sm">ppx_import</code>
+            (#1080, fix #193, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Use 
+           <code class="font-normal text-sm">-opaque</code> in the 
+           <code class="font-normal text-sm">dev</code>
+            profile. This option trades off binary quality for<br/>
+           compilation speed when compiling .cmx files. (#1079, fix #1058,
+           @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fix placeholders in 
+           <code class="font-normal text-sm">dune subst</code>
+            documentation (#1090, @emillon, thanks<br/>
+           @trefis for the bug report)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Add locations to errors when a missing binary in PATH comes from a
+           dune file<br/>(#1096, fixes #1095, @rgrinberg)
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         1.0.1 (19/07/2018)
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Fix parsing of 
+           <code class="font-normal text-sm">%{lib:name:file}</code>
+            forms (#1022, fixes #1019, @diml)
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         1.0.0 (10/07/2018)
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Do not load the user configuration file when running inside dune
+           <br/>(#700 @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Do not infer ${null} to be a target (#693 fixes #694 @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Introduce jbuilder.configurator library. This is a revived version
+           of<br/>
+           janestreet's configurator library with better cross compilation
+           support, a<br/>
+           versioned API, and no external dependencies. (#673, #678 #692,
+           #695<br/>@rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Register the transitive dependencies of compilation units as the
+           <br/>compiler might read 
+           <code class="font-normal text-sm">.cm*</code>
+            files recursively (#666, fixes #660,<br/>@emillon)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fix a bug causing 
+           <code class="font-normal text-sm">jbuilder external-lib-deps
+           </code> to crash (#723,<br/>@diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4"><code class="font-normal text-sm">-j</code>
+            now defaults to the number of processing units available rather
+           <br/>4 (#726, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Fix attaching index.mld to documentation (#731, fixes #717
+           @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Scan the file system lazily (#732, fixes #718 and #228, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Add support for setting the default ocaml flags and for build<
+           br/>profiles (#419, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Display a better error messages when writing 
+           <code class="font-normal text-sm">(inline_tests)</code> in an<
+           br/>executable stanza (#748, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Restore promoted files when they are deleted or changed in the
+           <br/>source tree (#760, fix #759, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Fix a crash when using an invalid alias name (#762, fixes #761,
+           <br/>@diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Fix a crash when using c files from another directory (#758, fixes
+           <br/>#734, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add an 
+           <code class="font-normal text-sm">ignored_subdirs</code>
+            stanza to replace 
+           <code class="font-normal text-sm">jbuild-ignore</code> files<
+           br/>(#767, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Fix a bug where Dune ignored previous occurrences of duplicated
+           <br/>fields (#779, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Allow setting custom build directories using the 
+           <code class="font-normal text-sm">--build-dir</code> flag or<
+           br/><code class="font-normal text-sm">DUNE_BUILD_DIR</code>
+            environment variable (#846, fix #291, @diml @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">In dune files, remove support for block (
+           <code class="font-normal text-sm">#| ... |#)</code>) and sexp<
+           br/>(<code class="font-normal text-sm">#;</code>
+           ) comments. These were very rarely used and complicate the<
+           br/>language (#837, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           In dune files, add support for block strings, allowing to nicely
+           <br/>format blocks of texts (#837, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Remove hard-coded knowledge of ppx_driver and<
+           br/>ocaml-migrate-parsetree when using a 
+           <code class="font-normal text-sm">dune</code> file (#576, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Make the output of Dune slightly more deterministic when run from
+           <br/>inside Dune (#855, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Simplify quoting behavior of variables. All values are now
+           multi-valued and<br/>
+           whether a multi valued variable is allowed is determined by the
+           quoting and<br/>
+           substitution context it appears in. (#849, fix #701, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Fix documentation generation for private libraries. (#864, fix
+           #856,<br/>@rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Use 
+           <code class="font-normal text-sm">Marshal</code>
+            to store digest and incremental databases. This improves the<
+           br/>speed of 0 rebuilds. (#817, @diml)
+          </p>
+         </li>
+        </ul>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Allow setting environment variables in 
+           <code class="font-normal text-sm">findlib.conf</code>
+            for cross compilation<br/>contexts. (#733, @rgrinberg)
+          </p>
+         </li>
+        </ul>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Add a 
+           <code class="font-normal text-sm">link_deps</code>
+            field to executables, to specify link-time dependencies<br/>
+           like version scripts. (#879, fix #852, @emillon)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Rename 
+           <code class="font-normal text-sm">files_recursively_in</code>
+            to <code class="font-normal text-sm">source_tree</code>
+            to make it clearer it<br/>
+           doesn't include generated files (#899, fix #843, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Present the 
+           <code class="font-normal text-sm">menhir</code>
+            stanza as an extension with its own version<br/>(#901, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Improve the syntax of flags in 
+           <code class="font-normal text-sm">(pps ...)</code>. Now instead of 
+           <code class="font-normal text-sm">(pps (ppx1 -arg1 ppx2 (-foo x)))
+           </code> one should write 
+           <code class="font-normal text-sm">(pps ppx1 -arg ppx2 -- -foo x)
+           </code> which looks nicer (#910, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Make 
+           <code class="font-normal text-sm">(diff a b)</code>
+            ignore trailing cr on Windows and add 
+           <code class="font-normal text-sm">(cmp a b)</code> for<br/>
+           comparing binary files (#904, fix #844, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Make <code class="font-normal text-sm">dev</code>
+            the default build profile (#920, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Version 
+           <code class="font-normal text-sm">dune-workspace</code> and 
+           <code class="font-normal text-sm">~/.config/dune/config</code>
+            files (#932, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Add the ability to build an alias non-recursively from the command
+           <br/>line by writing 
+           <code class="font-normal text-sm">@@alias</code> (#926, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add a special 
+           <code class="font-normal text-sm">default</code>
+            alias that defaults to 
+           <code class="font-normal text-sm">(alias_rec install)</code><
+           br/>when not defined by the user and make 
+           <code class="font-normal text-sm">@@default</code> be the default
+           <br/>target (#926, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Forbid 
+           <code class="font-normal text-sm">#require</code> in 
+           <code class="font-normal text-sm">dune</code>
+            files in OCaml syntax (#938, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add 
+           <code class="font-normal text-sm">%{profile}</code>
+            variable. (#938, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Do not require opam-installer anymore (#941, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add the 
+           <code class="font-normal text-sm">lib_root</code> and 
+           <code class="font-normal text-sm">libexec_root</code>
+            install sections (#947, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Rename 
+           <code class="font-normal text-sm">path:file</code> to 
+           <code class="font-normal text-sm">dep:file</code> (#944, @emillon)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Remove 
+           <code class="font-normal text-sm">path-no-dep:file</code>
+            (#948, @emillon)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Adapt the behavior of 
+           <code class="font-normal text-sm">dune subst</code>
+            for dune projects (#960, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add the 
+           <code class="font-normal text-sm">lib_root</code> and 
+           <code class="font-normal text-sm">libexec_root</code>
+            sections to install stanzas<br/>(#947, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add a 
+           <code class="font-normal text-sm">Configurator.V1.Flags</code>
+            module that improves the flag reading/writing<br/>
+           API (#840, @avsm)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add a 
+           <code class="font-normal text-sm">tests</code>
+            stanza that simlpified defining regular and expect tests<
+           br/>(#822, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Change the 
+           <code class="font-normal text-sm">subst</code>
+            subcommand to lookup the project name from the<br/>
+           <code class="font-normal text-sm">dune-project</code>
+            whenever it's available. (#960, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">The <code class="font-normal text-sm">subst</code>
+            subcommand no longer looks up the root workspace. Previously this
+           <br/>detection would break the command whenever 
+           <code class="font-normal text-sm">-p</code>
+            wasn't passed. (#960, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add a 
+           <code class="font-normal text-sm"># DUNE_GEN</code>
+            in META template files. This is done for consistency with<
+           br/><code class="font-normal text-sm"># JBUILDER_GEN</code>
+           . (#958, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Rename the following variables in dune files:</p>
+          <ul class="list-disc mt-2 mb-4">
+           <li class="ml-4">
+            <p class="mt-4">
+             <code class="font-normal text-sm">SCOPE_ROOT</code> to 
+             <code class="font-normal text-sm">project_root</code>
+            </p>
+           </li>
+           <li class="ml-4">
+            <p class="mt-4"><code class="font-normal text-sm">@</code>
+              to <code class="font-normal text-sm">targets</code>
+            </p>
+           </li>
+           <li class="ml-4">
+            <p class="mt-4"><code class="font-normal text-sm">^</code>
+              to <code class="font-normal text-sm">deps</code><br/>
+             <code class="font-normal text-sm">&lt;</code>
+              was renamed in this PR and latter deleted in favor or named
+             dependencies.<br/>(#957, @rgrinberg)
+            </p>
+           </li>
+          </ul>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Rename 
+           <code class="font-normal text-sm">ROOT</code> to 
+           <code class="font-normal text-sm">workspace_root</code>
+            in dune files (#993, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Lowercase all built-in %{variables} in dune files (#956,
+           @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">New syntax for naming dependencies: 
+           <code class="font-normal text-sm">
+            (deps (:x a b) (:y (glob_files *.c*)))
+           </code>.<br/>This replaces the use for 
+           <code class="font-normal text-sm">${&lt;}</code>
+            in dune files. (#950, @diml, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Fix detection of dynamic cycles, which in particular may appear
+           when<br/>using 
+           <code class="font-normal text-sm">(package ..)</code>
+            dependencies (#988, @diml)
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         1.0+beta20 (10/04/2018)
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Add a 
+           <code class="font-normal text-sm">documentation</code>
+            stanza. This stanza allows one to attach .mld files to<br/>
+           opam packages. (#570 @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Execute all actions (defined using 
+           <code class="font-normal text-sm">(action ..)</code>
+           ) in the context's<br/>environment. (#623 @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add a 
+           <code class="font-normal text-sm">(universe)</code>
+            special dependency to specify that an action depend on<br/>
+           everything in the universe. Jbuilder cannot cache the result of an
+           action that<br/>depend on the universe (#603, fixes #255 @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add a 
+           <code class="font-normal text-sm">(package &lt;package&gt;)</code>
+            dependency specification to indicate dependency on<br/>
+           a whole package. Rules depending on whole package will be executed
+           in an<br/>
+           environment similar to the one we get once the package is
+           installed (#624,<br/>@rgrinberg and @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Don't pass 
+           <code class="font-normal text-sm">-runtime-variant _pic</code>
+            on Windows (#635, fixes #573 @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Display documentation in alphabetical order. This is relevant to
+           packages,<br/>
+           libraries, and modules. (#647, fixes #606 @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Missing asm in ocaml -config on bytecode only architecture is no
+           longer fatal.<br/>
+           The same kind of fix is preemptively applied to C compilers being
+           absent.<br/>(#646, fixes $637 @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Use the host's PATH variable when running actions during cross
+           compilation<br/>(#649, fixes #625 @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fix incorrect include (
+           <code class="font-normal text-sm">-I</code>
+           ) flags being passed to odoc. These flags should be<br/>
+           directories that include .odoc files, rather than the include
+           flags of the<br/>libraries. (#652 fixes #651 @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Fix a regression introduced by beta19 where the generated merlin
+           <br/>files didn't include the right 
+           <code class="font-normal text-sm">-ppx</code>
+            flags in some cases (#658<br/>fixes #657 @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Fix error message when a public library is defined twice. Before
+           <br/>
+           jbuilder would raise an uncaught exception (Fixes #661, @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fix several cases where 
+           <code class="font-normal text-sm">external-lib-deps</code>
+            was returning too little<br/>
+           dependencies (#667, fixes #644 @diml)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Place module list on own line in generated entry point mld (#670
+           @antron)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Cosmetic improvements to generated entry point mld (#653 @trefis)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Remove most useless parentheses from the syntax (#915, @diml)
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         1.0+beta19.1 (21/03/2018)
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Fix regression introduced by beta19 where duplicate environment
+           variables in<br/>
+           Unix.environ would cause a fatal error. The first defined
+           environment variable<br/>is now chosen. (#638 fixed by #640)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Use ';' as the path separator for OCAMLPATH on Cygwin (#630 fixed
+           by #636<br/>@diml).
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Use the contents of the 
+           <code class="font-normal text-sm">OCAMLPATH</code>
+            environment variable when not relying on<br/>
+           <code class="font-normal text-sm">ocamlfind</code> (#642 @diml)
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         1.0+beta19 (14/03/2018)
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Ignore errors during the generation of the .merlin (#569, fixes
+           #568 and #51)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Add a workaround for when a library normally installed by the<
+           br/>
+           compiler is not installed but still has a META file (#574, fixes
+           <br/>#563)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Do not depend on ocamlfind. Instead, hard-code the library path
+           when<br/>installing from opam (#575)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Change the default behavior regarding the check for overlaps
+           between<br/>
+           local and installed libraries. Now even if there is no link time
+           <br/>
+           conflict, we don't allow an external dependency to overlap with a
+           <br/>local library, unless the user specifies 
+           <code class="font-normal text-sm">allow_overlapping_dependencies
+           </code><br/>in the jbuild file (#587, fixes #562)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Expose a few more variables in jbuild files: 
+           <code class="font-normal text-sm">ext_obj</code>, 
+           <code class="font-normal text-sm">ext_asm</code>,<br/>
+           <code class="font-normal text-sm">ext_lib</code>, 
+           <code class="font-normal text-sm">ext_dll</code> and 
+           <code class="font-normal text-sm">ext_exe</code> as well as 
+           <code class="font-normal text-sm">${ocaml-config:XXX}</code><
+           br/>for most variables in the output of 
+           <code class="font-normal text-sm">ocamlc -config</code> (#590)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Add support for inline and inline expectation tests. The system is
+           <br/>
+           generic and should support several inline test systems such as
+           <br/><code class="font-normal text-sm">ppx_inline_test</code>
+           , <code class="font-normal text-sm">ppx_expect</code> or 
+           <code class="font-normal text-sm">qtest</code> (#547)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Make sure modules in the current directory always have precedence
+           <br/>over included directories (#597)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Add support for building executables as object or shared object
+           <br/>files (#23)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add a <code class="font-normal text-sm">best</code>
+            mode which is native with fallback to byte-code when<br/>
+           native compilation is not available (#23)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fix locations reported in error messages (#609)</p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Report error when a public library has a private dependency.
+           Previously, this<br/>
+           would be silently ignored and install broken artifacts (#607).
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fix display when output is not a tty (#518)</p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         1.0+beta18.1 (14/03/2018)
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Reduce the number of simultaneously opened fds (#578)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Always produce an implementation for the alias module, for<
+           br/>non-jbuilder users (Fix #576)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Reduce interleaving in the scheduler in an attempt to make
+           Jbuilder<br/>keep file descriptors open for less long (#586)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Accept and ignore upcoming new library fields: 
+           <code class="font-normal text-sm">ppx.driver</code>,<br/>
+           <code class="font-normal text-sm">inline_tests</code> and 
+           <code class="font-normal text-sm">inline_tests.backend</code>
+            (#588)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Add a hack to be able to build ppxlib, until beta20 which will
+           have<br/>generic support for ppx drivers
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         1.0+beta18 (25/02/2018)
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Fix generation of the implicit alias module with 4.02. With 4.02
+           it<br/>
+           must have an implementation while with OCaml &gt;= 4.03 it can be
+           an<br/>interface only module (#549)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Let the parser distinguish quoted strings from atoms.  This makes
+           <br/>
+           possible to use &quot;${v}&quot; to concatenate the list of values
+           provided by<br/>
+           a split-variable.  Concatenating split-variables with text is also
+           <br/>now required to be quoted.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Split calls to ocamldep. Before ocamldep would be called once per
+           <br/><code class="font-normal text-sm">library</code>/
+           <code class="font-normal text-sm">executables</code>
+            stanza. Now it is called once per file<br/>(#486)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Make sure to not pass 
+           <code class="font-normal text-sm">-I &lt;stdlib-dir&gt;</code>
+            to the compiler. It is<br/>
+           useless and it causes problems in some cases (#488)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Don't stop on the first error. Before, jbuilder would stop its
+           <br/>
+           execution after an error was encountered. Now it continues until
+           <br/>all branches have been explored (#477)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add support for a user configuration file (#490)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Add more display modes and change the default display of<br/>
+           Jbuilder. The mode can be set from the command line or from the
+           <br/>configuration file (#490)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Allow to set the concurrency level (
+           <code class="font-normal text-sm">-j N</code>
+           ) from the configuration file (#491)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Store artifacts for libraries and executables in separate<
+           br/>
+           directories. This ensure that Two libraries defined in the same
+           <br/>
+           directory can't see each other unless one of them depend on the
+           <br/>other (#472)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Better support for mli/rei only modules (#489)</p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Fix support for byte-code only architectures (#510, fixes #330)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fix a regression in 
+           <code class="font-normal text-sm">external-lib-deps</code>
+            introduced in 1.0+beta17<br/>(#512, fixes #485)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4"><code class="font-normal text-sm">@doc</code>
+            alias will now build only documentation for public libraries. A
+           new<br/><code class="font-normal text-sm">@doc-private</code>
+            alias has been added to build documentation for private<br/>
+           libraries.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Refactor internal library management. It should now be possible to
+           <br/>run 
+           <code class="font-normal text-sm">jbuilder build @lint</code>
+            in Base for instance (#516)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Fix invalid warning about non-existent directory (#536, fixes
+           #534)
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         1.0+beta17 (01/02/2018)
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Make jbuilder aware that 
+           <code class="font-normal text-sm">num</code>
+            is an external package in OCaml &gt;= 4.06.0<br/>(#358)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           <code class="font-normal text-sm">jbuilder exec</code>
+            will now rebuild the executable before running it if<br/>
+           necessary. This can be turned off by passing 
+           <code class="font-normal text-sm">--no-build</code> (#345)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fix 
+           <code class="font-normal text-sm">jbuilder utop</code>
+            to work in any working directory (#339)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Fix generation of META synopsis that contains double quotes (#337)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add <code class="font-normal text-sm">S .</code>
+            to .merlin by default (#284)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Improve 
+           <code class="font-normal text-sm">jbuilder exec</code>
+            to make it possible to execute non public executables.<br/>
+           <code class="font-normal text-sm">jbuilder exec path/bin</code>
+            will execute <code class="font-normal text-sm">bin</code>
+            inside default (or specified)<br/>context relative to 
+           <code class="font-normal text-sm">path</code>. 
+           <code class="font-normal text-sm">jbuilder exec /path</code>
+            will execute <code class="font-normal text-sm">/path</code>
+            as<br/>
+           absolute path but with the context's environment set
+           appropriately. Lastly,<br/>
+           <code class="font-normal text-sm">jbuilder exec</code>
+            will change the root as to which paths are relative using the
+           <br/><code class="font-normal text-sm">-root</code> option. (#286)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fix 
+           <code class="font-normal text-sm">jbuilder rules</code>
+            printing rules when some binaries are missing (#292)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Build documentation for non public libraries (#306)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Fix doc generation when several private libraries have the same
+           name (#369)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Fix copy# for C/C++ with Microsoft C compiler (#353)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Add support for cross-compilation. Currently we are supporting the
+           <br/>opam-cross-x repositories such as<br/>
+           <a href="https://github.com/whitequark/opam-cross-windows"
+            class="cursor-pointer text-orange">opam-cross-windows
+           </a><br/>(#355)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Simplify generated META files: do not generate the transitive<
+           br/>closure of dependencies in META files (#405)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Deprecated 
+           <code class="font-normal text-sm">${!...}</code>
+           : the split behavior is now a property of the<br/>
+           variable. For instance 
+           <code class="font-normal text-sm">${CC}</code>, 
+           <code class="font-normal text-sm">${^}</code>, 
+           <code class="font-normal text-sm">${read-lines:...}</code>
+            all<br/>
+           expand to lists unless used in the middle of a longer atom (#336)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add an 
+           <code class="font-normal text-sm">(include ...)</code>
+            stanza allowing one to include another<br/>
+           non-generated jbuild file in the current file (#402)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add a 
+           <code class="font-normal text-sm">
+            (diff &lt;file1&gt; &lt;file2&gt;)
+           </code> action allowing to diff files and<br/>
+           promote generated files in case of mismatch (#402, #421)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add 
+           <code class="font-normal text-sm">jbuilder promote</code> and 
+           <code class="font-normal text-sm">--auto-promote</code>
+            to promote files (#402,<br/>#421)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Report better errors when using 
+           <code class="font-normal text-sm">(glob_files ...)</code>
+            with a directory<br/>that doesn't exist (#413, Fix #412)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Jbuilder now properly handles correction files produced by<
+           br/>ppx_driver. This allows to use 
+           <code class="font-normal text-sm">[@@deriving_inline]</code>
+            in .ml/.mli<br/>files. This require 
+           <code class="font-normal text-sm">ppx_driver &gt;= v0.10.2</code>
+            to work properly (#415)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Make jbuilder load rules lazily instead of generating them all
+           <br/>
+           eagerly. This speeds up the initial startup time of jbuilder on
+           big<br/>workspaces (#370)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Now longer generate a 
+           <code class="font-normal text-sm">META.pkg.from-jbuilder</code>
+            file. Now the only<br/>way to customize the generated 
+           <code class="font-normal text-sm">META</code> file is through<
+           br/><code class="font-normal text-sm">META.pkg.template</code>
+           . This feature was unused and was making the code<br/>
+           complicated (#370)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Remove read-only attribute on Windows before unlink (#247)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Use /Fo instead of -o when invoking the Microsoft C compiler to
+           eliminate<br/>
+           deprecation warning when compiling C++ sources (#354)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add a mode field to 
+           <code class="font-normal text-sm">rule</code> stanzas:
+          </p>
+          <ul class="list-disc mt-2 mb-4">
+           <li class="ml-4">
+            <p class="mt-4">
+             <code class="font-normal text-sm">(mode standard)</code>
+              is the default
+            </p>
+           </li>
+           <li class="ml-4">
+            <p class="mt-4">
+             <code class="font-normal text-sm">(mode fallback)</code>
+              replaces <code class="font-normal text-sm">(fallback)</code>
+            </p>
+           </li>
+           <li class="ml-4">
+            <p class="mt-4">
+             <code class="font-normal text-sm">(mode promote)</code>
+              means that targets are copied to the source tree<br/>
+             after the rule has completed
+            </p>
+           </li>
+           <li class="ml-4">
+            <p class="mt-4">
+             <code class="font-normal text-sm">(mode promote-until-clean)
+             </code> is the same as 
+             <code class="font-normal text-sm">(mode promote)</code> except
+             <br/>that 
+             <code class="font-normal text-sm">jbuilder clean</code>
+              deletes the files copied to the source tree.<br/>(#437)
+            </p>
+           </li>
+          </ul>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add a flag 
+           <code class="font-normal text-sm">--ignore-promoted-rules</code>
+            to make jbuilder ignore rules<br/>with 
+           <code class="font-normal text-sm">(mode promote)</code>. 
+           <code class="font-normal text-sm">-p</code> implies 
+           <code class="font-normal text-sm">--ignore-promoted-rules</code>
+            (#437)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Display a warning for invalid lines in jbuild-ignore (#389)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Always build 
+           <code class="font-normal text-sm">boot.exe</code>
+            as a bytecode program. It makes the build of<br/>
+           jbuilder faster and fix the build on some architectures (#463,
+           fixes #446)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Fix bad interaction between promotion and incremental builds on
+           OSX<br/>(#460, fix #456)
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         1.0+beta16 (05/11/2017)
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Fix build on 32-bit OCaml (#313)</p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         1.0+beta15 (04/11/2017)
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Change the semantic of aliases: there are no longer aliases that
+           are<br/>recursive such as 
+           <code class="font-normal text-sm">install</code> or 
+           <code class="font-normal text-sm">runtest</code>. All aliases are
+           <br/>
+           non-recursive. However, when requesting an alias from the command
+           <br/>
+           line, this request the construction of the alias in the specified
+           <br/>
+           directory and all its children recursively. This allows users to
+           get<br/>
+           the same behavior as previous recursive aliases for their own<
+           br/>aliases, such as 
+           <code class="font-normal text-sm">example</code>
+           . Inside jbuild files, one can use 
+           <code class="font-normal text-sm">(deps (... (alias_rec xxx) ...))
+           </code> to get the same behavior as on the<br/>
+           command line. (#268)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Include sub libraries that have a 
+           <code class="font-normal text-sm">.</code>
+            in the generated documentation index<br/>(#280).
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Fix &quot;up&quot; links to the top-level index in the odoc
+           generated documentation<br/>(#282).
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fix 
+           <code class="font-normal text-sm">ARCH_SIXTYFOUR</code>
+            detection for OCaml 4.06.0 (#303)
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         1.0+beta14 (11/10/2017)
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Add (copy_files <glob>) and (copy_files# <glob>
+           ) stanzas. These<br/>
+           stanzas setup rules for copying files from a sub-directory to the
+           <br/>current directory. This provides a reasonable way to support
+           <br/>multi-directory library/executables in jbuilder (#35, @bobot)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">An empty 
+           <code class="font-normal text-sm">jbuild-workspace</code>
+            file is now interpreted the same as one<br/>containing just 
+           <code class="font-normal text-sm">(context default)</code>
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Better support for on-demand utop toplevels on Windows and when
+           the<br/>library has C stubs
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Print 
+           <code class="font-normal text-sm">Entering directory '...'</code>
+            when the workspace root is not the<br/>
+           current directory. This allows Emacs and Vim to know where
+           relative<br/>filenames should be interpreted from. Fixes #138
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fix a bug related to 
+           <code class="font-normal text-sm">menhir</code> stanzas: 
+           <code class="font-normal text-sm">menhir</code> stanzas with a
+           <br/><code class="font-normal text-sm">merge_into</code>
+            field that were in 
+           <code class="font-normal text-sm">jbuild</code>
+            files in sub-directories<br/>where incorrectly interpreted (#264)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Add support for locks in actions, for tests that can't be run<
+           br/>concurrently (#263)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Support 
+           <code class="font-normal text-sm">${..}</code> syntax in the 
+           <code class="font-normal text-sm">include</code> stanza. (#231)
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         1.0+beta13 (05/09/2017)
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Generate toplevel html index for documentation (#224, @samoht)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Fix recompilation of native artifacts. Regression introduced in
+           the last<br/>
+           version (1.0+beta12) when digests replaces timestamps for checking
+           staleness<br/>(#238, @dra27)
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         1.0+beta12 (18/08/2017)
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Fix the quoting of 
+           <code class="font-normal text-sm">FLG</code> lines in generated 
+           <code class="font-normal text-sm">.merlin</code> files (#200,<
+           br/>@mseri)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Use the full path of archive files when linking. Before jbuilder
+           <br/>would do: 
+           <code class="font-normal text-sm">-I &lt;path&gt; file.cmxa</code>
+           , now it does 
+           <code class="font-normal text-sm">
+            -I &lt;path&gt; &lt;path&gt;/file.cmxa
+           </code>. Fixes #118 and #177
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Use an absolute path for ppx drivers in 
+           <code class="font-normal text-sm">.merlin</code> files. Merlin
+           <br/>
+           &lt;3.0.0 used to run ppx commands from the directory where the
+           <br/><code class="font-normal text-sm">.merlin</code>
+            was present but this is no longer the case
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Allow to use 
+           <code class="font-normal text-sm">jbuilder install</code>
+            in contexts other than opam; if<br/>
+           <code class="font-normal text-sm">ocamlfind</code>
+            is present in the <code class="font-normal text-sm">PATH</code>
+            and the user didn't pass<br/>
+           <code class="font-normal text-sm">--prefix</code> or 
+           <code class="font-normal text-sm">--libdir</code>
+            explicitly, use the output of 
+           <code class="font-normal text-sm">ocamlfind printconf destdir
+           </code> as destination directory for library files (#179,<
+           br/>@bobot)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Allow 
+           <code class="font-normal text-sm">(:include ...)</code>
+            forms in all <code class="font-normal text-sm">*flags</code>
+            fields (#153, @dra27)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add a <code class="font-normal text-sm">utop</code>
+            subcommand. Running 
+           <code class="font-normal text-sm">jbuilder utop</code>
+            in a directory<br/>builds and executes a custom 
+           <code class="font-normal text-sm">utop</code>
+            toplevel with all libraries<br/>
+           defined in the current directory (#183, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Do not accept 
+           <code class="font-normal text-sm">per_file</code> anymore in 
+           <code class="font-normal text-sm">preprocess</code> field. 
+           <code class="font-normal text-sm">per_file</code><br/>was renamed 
+           <code class="font-normal text-sm">per_module</code>
+            and it is planned to reuse 
+           <code class="font-normal text-sm">per_file</code> for<br/>
+           another purpose
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Warn when a file is both present in the source tree and generated
+           by<br/>
+           a rule. Before, jbuilder would silently ignore the rule. One now
+           has<br/>to add a field 
+           <code class="font-normal text-sm">(fallback)</code>
+            to custom rules to keep the current<br/>behavior (#218)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Get rid of the 
+           <code class="font-normal text-sm">deprecated-ppx-method</code>
+            findlib package for ppx<br/>rewriters (#222, fixes #163)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Use digests (MD5) of files contents to detect changes rather than
+           <br/>
+           just looking at the timestamps. We still use timestamps to avoid
+           <br/>
+           recomputing digests. The performance difference is negligible and
+           we<br/>
+           avoid more useless recompilations, especially when switching
+           branches<br/>for instance (#209, fixes #158)
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         1.0+beta11 (21/07/2017)
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Fix the error message when there are more than one 
+           <code class="font-normal text-sm">&lt;package&gt;.opam</code><
+           br/>file for a given package
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Report an error when in a wrapped library, a module that is not
+           the<br/>
+           toplevel module depends on the toplevel module. This doesn't make
+           as<br/>
+           such a module would in theory be inaccessible from the outside
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add 
+           <code class="font-normal text-sm">${SCOPE_ROOT}</code>
+            pointing to the root of the current scope, to<br/>
+           fix some misuses of 
+           <code class="font-normal text-sm">${ROOT}</code>
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Fix useless hint when all missing dependencies are optional (#137)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fix a bug preventing one from generating 
+           <code class="font-normal text-sm">META.pkg.template</code>
+            with a<br/>custom rule (#190)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Fix compilation of reason projects: .rei files where ignored and
+           <br/>caused the build to fail (#184)
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         1.0+beta10 (08/06/2017)
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Add a 
+           <code class="font-normal text-sm">clean</code>
+            subcommand (@rdavison, #89)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Add support for generating API documentation with odoc (#74)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Don't use unix in the bootstrap script, to avoid surprises with
+           <br/>Cygwin
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Improve the behavior of 
+           <code class="font-normal text-sm">jbuilder exec</code> on Windows
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add a 
+           <code class="font-normal text-sm">--no-buffer</code>
+            option to see the output of commands in<br/>
+           real-time. Should only be used with 
+           <code class="font-normal text-sm">-j1</code>
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Deprecate 
+           <code class="font-normal text-sm">per_file</code>
+            in preprocessing specifications and<br/>rename it 
+           <code class="font-normal text-sm">per_module</code>
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Deprecate 
+           <code class="font-normal text-sm">copy-and-add-line-directive
+           </code> and rename it 
+           <code class="font-normal text-sm">copy#</code>
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Remove the ability to load arbitrary libraries in jbuild file in
+           <br/>OCaml syntax. Only 
+           <code class="font-normal text-sm">unix</code>
+            is supported since a few released packages<br/>
+           are using it. The OCaml syntax might eventually be replaced by a
+           <br/>simpler mechanism that plays better with incremental builds
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Properly define and implement scopes</p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Inside user actions, 
+           <code class="font-normal text-sm">${^}</code>
+            now includes files matches by<br/>
+           <code class="font-normal text-sm">(glob_files ...)</code> or 
+           <code class="font-normal text-sm">(file_recursively_in ...)</code>
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           When the dependencies and targets of a rule can be inferred<
+           br/>automatically, you no longer need to write them: 
+           <code class="font-normal text-sm">(rule (copy a b))</code>
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Inside 
+           <code class="font-normal text-sm">(run ...)</code>, 
+           <code class="font-normal text-sm">${xxx}</code>
+            forms that expands to lists can now be<br/>
+           split across multiple arguments by adding a 
+           <code class="font-normal text-sm">!</code>: 
+           <code class="font-normal text-sm">${!xxx}</code>. For<br/>
+           instance: <code class="font-normal text-sm">(run foo ${!^})</code>
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Add support for using the contents of a file inside an action:
+          </p>
+          <ul class="list-disc mt-2 mb-4">
+           <li class="ml-4">
+            <p class="mt-4">
+             <code class="font-normal text-sm">${read:&lt;file&gt;}</code>
+            </p>
+           </li>
+           <li class="ml-4">
+            <p class="mt-4">
+             <code class="font-normal text-sm">${read-lines:&lt;file&gt;}
+             </code>
+            </p>
+           </li>
+           <li class="ml-4">
+            <p class="mt-4">
+             <code class="font-normal text-sm">${read-strings:&lt;file&gt;}
+             </code> (same as 
+             <code class="font-normal text-sm">read-lines</code>
+              but lines are<br/>escaped using OCaml convention)
+            </p>
+           </li>
+          </ul>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           When exiting prematurely because of a failure, if there are other
+           <br/>
+           background processes running and they fail, print these failures
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">With msvc, 
+           <code class="font-normal text-sm">-lfoo</code>
+            is transparently replaced by 
+           <code class="font-normal text-sm">foo.lib</code> (@dra27, #127)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Automatically add the 
+           <code class="font-normal text-sm">.exe</code>
+            when installing executables on Windows<br/>(#123)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           <code class="font-normal text-sm">(run &lt;prog&gt; ...)</code>
+            now resolves 
+           <code class="font-normal text-sm">&lt;prog&gt;</code> locally if
+           <br/>possible. i.e. 
+           <code class="font-normal text-sm">(run ${bin:prog} ...)</code>
+            and <code class="font-normal text-sm">(run prog ...)</code>
+            behave<br/>the same. This seems like the right default
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fix a bug where 
+           <code class="font-normal text-sm">jbuild rules</code>
+            would crash instead of reporting a<br/>proper build error
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Fix a race condition in future.ml causing jbuilder to crash on
+           <br/>Windows in some cases (#101)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Fix a bug causing ppx rewriter to not work properly when using
+           <br/>multiple build contexts (#100)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Fix .merlin generation: projects in the same workspace are added
+           to<br/>merlin's source path, so &quot;locate&quot; works on them.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         1.0+beta9 (19/05/2017)
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Add support for building Reason projects (@rgrinberg, #58)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Add support for building javascript with js-of-ocaml (@hhugo, #60)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Better support for topkg release workflow. See<
+           br/>
+           <a href="https://github.com/diml/topkg-jbuilder"
+            class="cursor-pointer text-orange">topkg-jbuilder
+           </a> for more<br/>details
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Port the manual to rst and setup a jbuilder project on<br/>
+           readthedocs.org (@rgrinberg, #78)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Hint for mistyped targets. Only suggest correction on the basename
+           <br/>for now, otherwise it's slow when the workspace is big
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add a 
+           <code class="font-normal text-sm">(package ...)</code>
+            field for aliases, so that one can restrict<br/>
+           tests to a specific package (@rgrinberg, #64)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fix a couple of bugs on Windows:</p>
+          <ul class="list-disc mt-2 mb-4">
+           <li class="ml-4">
+            <p class="mt-4">fix parsing of end of lines in some cases</p>
+           </li>
+           <li class="ml-4">
+            <p class="mt-4">
+             do not take the case into account when comparing environment
+             <br/>variable names
+            </p>
+           </li>
+          </ul>
+         </li><li class="ml-4"><p class="mt-4">Add AppVeyor CI</p></li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Better error message in case a chain of dependencies 
+           <em>crosses</em> the<br/>installed world
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Better error messages for invalid dependency list in jbuild files
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Several improvements/fixes regarding the handling of findlib
+           packages:
+          </p>
+          <ul class="list-disc mt-2 mb-4">
+           <li class="ml-4">
+            <p class="mt-4">
+             Better error messages when a findlib package is unavailable
+            </p>
+           </li>
+           <li class="ml-4">
+            <p class="mt-4">
+             Don't crash when an installed findlib package has missing<
+             br/>dependencies
+            </p>
+           </li>
+           <li class="ml-4">
+            <p class="mt-4">
+             Handle the findlib alternative directory layout which is still
+             <br/>used by a few packages
+            </p>
+           </li>
+          </ul>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add 
+           <code class="font-normal text-sm">
+            jbuilder installed-libraries --not-available
+           </code> explaining why<br/>some libraries are not available
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           jbuilder now records dependencies on files of external<br/>
+           libraries. This mean that when you upgrade a library, jbuilder
+           will<br/>know what need to be rebuilt.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add a 
+           <code class="font-normal text-sm">jbuilder rules</code>
+            subcommand to dump internal compilation<br/>
+           rules, mostly for debugging purposes
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Ignore all directories starting with a 
+           <code class="font-normal text-sm">.</code> or 
+           <code class="font-normal text-sm">_</code>. This seems to be<
+           br/>a common pattern:
+          </p>
+          <ul class="list-disc mt-2 mb-4">
+           <li class="ml-4">
+            <p class="mt-4"><code class="font-normal text-sm">.git</code>
+             , <code class="font-normal text-sm">.hg</code>, 
+             <code class="font-normal text-sm">_darcs</code>
+            </p>
+           </li>
+           <li class="ml-4">
+            <p class="mt-4"><code class="font-normal text-sm">_build</code>
+            </p>
+           </li>
+           <li class="ml-4">
+            <p class="mt-4"><code class="font-normal text-sm">_opam</code>
+              (opam 2 local switches)
+            </p>
+           </li>
+          </ul>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fix the hint for 
+           <code class="font-normal text-sm">jbuilder external-lib-deps
+           </code> (#72)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Do not require 
+           <code class="font-normal text-sm">ocamllex</code> and 
+           <code class="font-normal text-sm">ocamlyacc</code>
+            to be at the same location<br/>as 
+           <code class="font-normal text-sm">ocamlc</code> (#75)
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         1.0+beta8 (17/04/2017)
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Added 
+           <code class="font-normal text-sm">
+            ${lib-available:&lt;library-name&gt;}
+           </code> which expands to 
+           <code class="font-normal text-sm">true</code> or<br/>
+           <code class="font-normal text-sm">false</code>
+            with the same semantic as literals in 
+           <code class="font-normal text-sm">(select ...)</code> stanzas
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Remove hard-coded knowledge of a few specific ppx rewriters to
+           ease<br/>maintenance moving forward
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Pass the library name to ppx rewriters via the 
+           <code class="font-normal text-sm">library-name</code> cookie
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Fix: make sure the action working directory exist before running
+           it
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         1.0+beta7 (12/04/2017)
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Make the output quieter by default and add a 
+           <code class="font-normal text-sm">--verbose</code> argument<
+           br/>(@stedolan, #40)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Various documentation fixes (@adrieng, #41)</p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Make 
+           <code class="font-normal text-sm">@install</code>
+            the default target when no targets are specified<br/>
+           (@stedolan, #47)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Add predefined support for menhir, similar to ocamlyacc support
+           <br/>(@rgrinberg, #42)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Add internal support for sandboxing actions and sandbox the build
+           of<br/>
+           the alias module with 4.02 to workaround the compiler trying to
+           read<br/>the cmi of the aliased modules
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Allow to disable dynlink support for libraries via 
+           <code class="font-normal text-sm">(no_dynlink)</code><br/>
+           (#55)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Add a -p/--for-release-of-packages command line argument to
+           simplify<br/>
+           the jbuilder invocation in opam files and make it more future
+           proof<br/>(#52)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fix the lookup of the executable in 
+           <code class="font-normal text-sm">jbuilder exec foo</code>
+           . Before,<br/>even if <code class="font-normal text-sm">foo</code>
+            was to be installed, the freshly built version wasn't<br/>
+           selected
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Don't generate a 
+           <code class="font-normal text-sm">exists_if ...</code>
+            lines in META files. These are<br/>
+           useless sine the META files are auto-generated
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         1.0+beta6 (29/03/2017)
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Add an 
+           <code class="font-normal text-sm">(executable ...)</code>
+            stanza for single executables (#33)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add a 
+           <code class="font-normal text-sm">(package ...)</code> and 
+           <code class="font-normal text-sm">
+            (public_name &lt;name&gt;)/(public_names (&lt;names))
+           </code> to 
+           <code class="font-normal text-sm">executable/executables</code>
+            stanzas to make it easier to<br/>install executables (#33)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Fix a bug when using specific rewriters that jbuilder knows about
+           <br/>without 
+           <code class="font-normal text-sm">ppx_driver.runner</code>
+            (#37). These problem should go away<br/>soon when we start using 
+           <code class="font-normal text-sm">--cookie</code>
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Fix the interpretation of META files when there is more than one
+           <br/>
+           applicable assignment. Before this fix, the one with the lowest
+           <br/>
+           number of formal predicates was selected instead of the one with
+           the<br/>biggest number of formal predicates
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         1.0+beta5 (22/03/2017)
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">When 
+           <code class="font-normal text-sm">ocamlfind</code>
+            is present in the <code class="font-normal text-sm">PATH</code>
+           , do not attempt to call<br/>
+           <code class="font-normal text-sm">opam config var lib</code>
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Make sure the build of jbuilder itself never calls 
+           <code class="font-normal text-sm">ocamlfind</code> or<br/>
+           <code class="font-normal text-sm">opam</code>
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Better error message when a jbuild file in OCaml syntax forgets to
+           <br/>call 
+           <code class="font-normal text-sm">Jbuild_plugin.V*.send</code>
+          </p>
+         </li><li class="ml-4"><p class="mt-4">Added examples of use</p></li>
+         <li class="ml-4">
+          <p class="mt-4">Don't drop inline tests/benchmarks by default</p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         1.0+beta4 (20/03/2017)
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Improve error messages about invalid/missing pkg.opam files
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Ignore all errors while running 
+           <code class="font-normal text-sm">ocamlfind printconf path</code>
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         1.0+beta3 (15/03/2017)
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Print optional dependencies as optional in the output of 
+           <code class="font-normal text-sm">
+            jbuilder external-lib-deps --missing
+           </code>
+          </p>
+         </li>
+         <li class="ml-4"><p class="mt-4">Added a few forms to the DSL:</p>
+          <ul class="list-disc mt-2 mb-4">
+           <li class="ml-4">
+            <p class="mt-4">
+             <code class="font-normal text-sm">with-{stderr,outputs}-to
+             </code>
+            </p>
+           </li>
+           <li class="ml-4">
+            <p class="mt-4">
+             <code class="font-normal text-sm">ignore-{stdout,stderr,outputs}
+             </code>
+            </p>
+           </li>
+          </ul>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Added 
+           <code class="font-normal text-sm">${null}</code> which expands to 
+           <code class="font-normal text-sm">/dev/null</code> on Unix and 
+           <code class="font-normal text-sm">NUL</code> on<br/>Windows
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Improve the doc generated by 
+           <code class="font-normal text-sm">odoc</code>
+            for wrapped libraries
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Improve the error reported when an installed package depends on a
+           <br/>library that is not installed
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Documented 
+           <code class="font-normal text-sm">(files_recursively_in ...)
+           </code>
+          </p>
+         </li><li class="ml-4"><p class="mt-4">Added black box tests</p></li>
+         <li class="ml-4">
+          <p class="mt-4">Fix a bug where 
+           <code class="font-normal text-sm">jbuilder</code>
+            would crash when there was no<br/>
+           <code class="font-normal text-sm">&lt;package&gt;.opam</code>
+            file
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fixed a bug where 
+           <code class="font-normal text-sm">.merlin</code>
+            files where not generated at the root of<br/>the workspace (#20)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fix a bug where a 
+           <code class="font-normal text-sm">(glob_files ...)</code>
+            would cause other dependencies<br/>to be ignored
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fix the generated 
+           <code class="font-normal text-sm">ppx(...)</code> line in 
+           <code class="font-normal text-sm">META</code> files
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fix 
+           <code class="font-normal text-sm">(optional)</code>
+            when a ppx runtime dependency is not available<br/>(#24)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Do not crash when an installed package that we don't need has<
+           br/>missing dependencies (#25)
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         1.0+beta2 (10/03/2017)
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           Simplified the rules for finding the root of the workspace as the
+           <br/>
+           old ones were often picking up the home directory. New rules are:
+          </p>
+          <ul class="list-disc mt-2 mb-4">
+           <li class="ml-4">
+            <p class="mt-4">look for a 
+             <code class="font-normal text-sm">jbuild-workspace</code>
+              file in parent directories
+            </p>
+           </li>
+           <li class="ml-4">
+            <p class="mt-4">look for a 
+             <code class="font-normal text-sm">jbuild-workspace*</code>
+              file in parent directories
+            </p>
+           </li>
+           <li class="ml-4"><p class="mt-4">use the current directory</p>
+           </li>
+          </ul>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fixed the expansion of 
+           <code class="font-normal text-sm">${ROOT}</code> in actions
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Install 
+           <code class="font-normal text-sm">quick-start.org</code>
+            in the documentation directory
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Add a few more things in the log file to help debugging
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         1.0+beta1 (07/03/2017)
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4"><p class="mt-4">Added a manual</p></li>
+         <li class="ml-4"><p class="mt-4">Support incremental compilation</p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Switched the CLI to cmdliner and added a 
+           <code class="font-normal text-sm">build</code>
+            command (#5, @rgrinberg)
+          </p>
+         </li>
+         <li class="ml-4"><p class="mt-4">Added a few commands:</p>
+          <ul class="list-disc mt-2 mb-4">
+           <li class="ml-4">
+            <p class="mt-4"><code class="font-normal text-sm">runtest</code>
+            </p>
+           </li>
+           <li class="ml-4">
+            <p class="mt-4"><code class="font-normal text-sm">install</code>
+            </p>
+           </li>
+           <li class="ml-4">
+            <p class="mt-4">
+             <code class="font-normal text-sm">uninstall</code>
+            </p>
+           </li>
+           <li class="ml-4">
+            <p class="mt-4">
+             <code class="font-normal text-sm">installed-libraries</code>
+            </p>
+           </li>
+           <li class="ml-4">
+            <p class="mt-4"><code class="font-normal text-sm">exec</code>
+             : execute a command in an environment similar to what you<
+             br/>would get after 
+             <code class="font-normal text-sm">jbuilder install</code>
+            </p>
+           </li>
+          </ul>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Removed the 
+           <code class="font-normal text-sm">build-package</code>
+            command in favor of a 
+           <code class="font-normal text-sm">--only-packages</code><br/>
+           option that is common to all commands
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Automatically generate 
+           <code class="font-normal text-sm">.merlin</code>
+            files (#2, @rdavison)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Improve the output of jbuilder, in particular don't mangle the
+           <br/>output of commands when using 
+           <code class="font-normal text-sm">-j N</code> with 
+           <code class="font-normal text-sm">N &gt; 1</code>
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Generate a log in 
+           <code class="font-normal text-sm">_build/log</code>
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Versioned the jbuild format and added a first stable version. You
+           <br/>should now put 
+           <code class="font-normal text-sm">(jbuilder_version 1)</code>
+            in a <code class="font-normal text-sm">jbuild</code>
+            file at the root<br/>
+           of your project to ensure forward compatibility
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Switch from 
+           <code class="font-normal text-sm">ppx_driver</code> to 
+           <code class="font-normal text-sm">ocaml-migrate-parsetree.driver
+           </code>. In<br/>
+           order to use ppx rewriters with Jbuilder, they need to use<
+           br/>
+           <code class="font-normal text-sm">ocaml-migrate-parsetree.driver
+           </code>
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Added support for aliases (#7, @rgrinberg)</p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Added support for compiling against multiple opam switch<br/>
+           simultaneously by writing a 
+           <code class="font-normal text-sm">jbuild-worspace</code> file
+          </p>
+         </li>
+         <li class="ml-4"><p class="mt-4">Added support for OCaml 4.02.3</p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Added support for architectures that don't have natdynlink
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Search the root according to the rules described in the manual
+           <br/>instead of always using the current directory
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           extended the action language to support common actions without
+           using<br/>a shell:
+          </p>
+          <ul class="list-disc mt-2 mb-4">
+           <li class="ml-4">
+            <p class="mt-4">
+             <code class="font-normal text-sm">
+              (with-stdout-to &lt;file&gt; &lt;DSL&gt;)
+             </code>
+            </p>
+           </li>
+           <li class="ml-4">
+            <p class="mt-4">
+             <code class="font-normal text-sm">(copy &lt;src&gt; &lt;dst&gt;)
+             </code>
+            </p>
+           </li><li class="ml-4"><p class="mt-4">...</p></li>
+          </ul>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Removed all implicit uses of bash or the system shell. Now one has
+           <br/>to write explicitly 
+           <code class="font-normal text-sm">(bash &quot;...&quot;)</code>
+            or 
+           <code class="font-normal text-sm">(system &quot;...&quot;)</code>
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Generate meaningful versions in 
+           <code class="font-normal text-sm">META</code> files
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Strengthen the scope of a package. Jbuilder knows about package
+           <br/><code class="font-normal text-sm">foo</code>
+            only in the sub-tree starting from where 
+           <code class="font-normal text-sm">foo.opam</code> lives
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         0.1.alpha1 (04/12/2016)
+        </h3><p class="mt-4">First release</p>
+       </div>
+      </div>
+      <div class="w-full flex-none lg:w-72 border-t lg:border-l bg-gray-100">
+       <div class="flex h-20 border-b relative">
+        <h2 class="text-xl absolute inset-x-0 p-3 bottom-0 mt-7 font-semibold
+         text-gray-500">dune.1.11.4
+        </h2>
+       </div>
+       <div class="m-3">
+        <p class="mb-5 italic text-sm">
+         Fast, portable and opinionated build system
+        </p>
+        <div class="mb-3">
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="https://github.com/ocaml/dune">github.com/ocaml/dune
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1.323l3.954 1.582 1.599-.8a1 1 0 01.894 1.79l-1.233.616 1.738 5.42a1 1 0 01-.285 1.05A3.989 3.989 0 0115 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.715-5.349L11 6.477V16h2a1 1 0 110 2H7a1 1 0 110-2h2V6.477L6.237 7.582l1.715 5.349a1 1 0 01-.285 1.05A3.989 3.989 0 015 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.738-5.42-1.233-.617a1 1 0 01.894-1.788l1.599.799L9 4.323V3a1 1 0 011-1zm-5 8.274l-.818 2.552c.25.112.526.174.818.174.292 0 .569-.062.818-.174L5 10.274zm10 0l-.818 2.552c.25.112.526.174.818.174.292 0 .569-.062.818-.174L15 10.274z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="LICENSE.md.html">LICENSE.md
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
+</svg>
+    
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="README.md.html">README.md
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" />
+</svg>
+  
+          <a class="text-orange cursor-pointer mb-2 text-sm" href="#">
+           CHANGES.md
+          </a>
+         </div>
+        </div>
+        <details class="font-normal mb-2 text-sm">
+         <summary>Other versions</summary><div id="versions_container"></div>
+        </details><h2 class="font-semibold mb-2 text-sm">Authors</h2>
+        <p class="mb-3 text-sm">Jane Street Group, LLC</p>
+        <h2 class="font-semibold mb-2 text-sm">Issues</h2>
+        <div class="mb-3">
+         <a class="text-orange cursor-pointer mb-2 text-sm"
+          href="https://github.com/ocaml/dune/issues">
+          github.com/ocaml/dune/issues
+         </a>
+        </div>
+        <details class="font-semibold mb-2 text-sm">
+         <summary>Package dependencies</summary>
+         <div class="font-normal">
+          <ul>
+           <li>
+            <a href="../../ocaml/index.html" class="text-orange
+             cursor-pointer">ocaml
+            </a>
+           </li>
+           <li>
+            <a href="../../base-unix/index.html" class="text-orange
+             cursor-pointer">base-unix
+            </a>
+           </li>
+           <li>
+            <a href="../../base-threads/index.html" class="text-orange
+             cursor-pointer">base-threads
+            </a>
+           </li>
+          </ul>
+         </div>
+        </details>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div><script>Voodoo.update('../version.json')</script>
+ </body>
+</html>
