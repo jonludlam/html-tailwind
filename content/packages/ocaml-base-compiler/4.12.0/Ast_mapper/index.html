@@ -1,0 +1,2212 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>Ast_mapper (packages.ocaml-base-compiler.4.12.0.Ast_mapper)</title>
+  <link rel="stylesheet" href="../../../tailwind.css"/>
+  <link rel="stylesheet" href="../../../extra.css"/><meta charset="utf-8"/>
+  <meta name="generator" content="odoc 3dfb7aef2f"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <script src="../../../highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="../../../voodoo_client.js"></script>
+  <script
+   src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+   defer="defer">
+  </script>
+ </head>
+ <body class="mx-auto max-w-screen-2xl">
+  <div class="relative">
+   <div class="relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+     <div class="flex justify-between items-center md:justify-start py-6
+      md:space-x-10">
+      <div class="flex justify-start">
+       <a href="https://v3.ocaml.org/">
+        <img src="/colour-logo.svg" alt="" class="h-8 w-auto sm:h-10"/>
+       </a>
+      </div>
+      <nav class="hidden md:flex space-x-10">
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Industry</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/whatisocaml">
+            <p class="text-base font-medium text-gray-900">What is OCaml</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/users">
+            <p class="text-base font-medium text-gray-900">Industrial Users
+            </p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/successstories">
+            <p class="text-base font-medium text-gray-900">Success Stories
+            </p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Resources</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/releases">
+            <p class="text-base font-medium text-gray-900">Releases</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/applications">
+            <p class="text-base font-medium text-gray-900">Applications</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/language">
+            <p class="text-base font-medium text-gray-900">Language</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/archive">
+            <p class="text-base font-medium text-gray-900">Archive</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Community</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/opportunities">
+            <p class="text-base font-medium text-gray-900">Opportunities</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/news">
+            <p class="text-base font-medium text-gray-900">News</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/aroundweb">
+            <p class="text-base font-medium text-gray-900">Around the Web</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="h-screen flex bg-white font-sans">
+   <div class="flex flex-col w-full h-full">
+    <div class="flex-row flex-1">
+     <nav class="bg-orange border-t border-b border-orange flex flex-row">
+      <ol class="max-w-screen-xl w-full px-4 flex space-x-4 sm:px-6 lg:px-8">
+       <li class="flex">
+        <div class="flex items-center">
+         <a href="#" class="text-gray-100 hover:text-gray-500">
+          
+  <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+        </svg>
+  
+          <span class="sr-only">Home</span>
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">packages
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">ocaml-base-compiler
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">4.12.0
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="#" class="ml-4 text-sm font-medium text-gray-100
+          hover:text-gray-500">Ast_mapper
+         </a>
+        </div>
+       </li>
+      </ol>
+     </nav>
+    </div>
+    <div class="flex flex-row flex-1">
+     <div class="w-72 flex-none bg-gray-100 h-screen border-r border-gray-200
+      sticky top-0 hidden lg:block">
+      <div class="flex h-20 border-b relative">
+       <h2 class="text-xl absolute inset-x-0 p-3 px-5 bottom-0 mt-7
+        border-gray-200 font-semibold text-gray-500 font-sans">On this page
+       </h2>
+      </div>
+      <nav class="bg-gray-100 p-5">
+       <ul>
+        <li>
+         <a href="#a-generic-parsetree-mapper" class="cursor-pointer
+          text-orange">A generic Parsetree mapper
+         </a>
+        </li>
+        <li>
+         <a href="#apply-mappers-to-compilation-units" class="cursor-pointer
+          text-orange">Apply mappers to compilation units
+         </a>
+        </li>
+        <li>
+         <a href="#registration-api" class="cursor-pointer text-orange">
+          Registration API
+         </a>
+        </li>
+        <li>
+         <a href="#convenience-functions-to-write-mappers"
+          class="cursor-pointer text-orange">Convenience functions to
+           write mappers
+         </a>
+        </li>
+        <li>
+         <a href="#helper-functions-to-call-external-mappers"
+          class="cursor-pointer text-orange">Helper functions to call
+           external mappers
+         </a>
+        </li>
+        <li><a href="#cookies" class="cursor-pointer text-orange">Cookies</a>
+        </li>
+       </ul>
+      </nav>
+     </div>
+     <div class="flex flex-1 flex-col lg:flex-row">
+      <div class="flex-1">
+       <div class="lg:max-w-5xl mx-auto px-3 lg:px-10 mb-10 text-sm">
+        <div class="flex h-20 relative border-b border-gray-200">
+         <div class="relative flex-1 h-20">
+          <h1 class="text-3xl absolute inset-x-0 py-3 bottom-0 font-semibold
+           text-gray-500 font-sans w-full truncate">
+           <code class="font-mono text-gray-800">Ast_mapper</code>
+          </h1>
+         </div>
+         <div class="relative flex-none w-28">
+          <h1 class="text-3xl absolute py-3 bottom-0 right-0 font-semibold
+           text-gray-500 font-sans">Module
+          </h1>
+         </div>
+        </div><p class="mt-4">The interface of a -ppx rewriter</p>
+        <p class="mt-4">A -ppx rewriter is a program that accepts a 
+         serialized abstract syntax tree and outputs another, possibly
+          modified, abstract syntax tree. This module encapsulates the
+          interface between the compiler and the -ppx rewriters, handling
+          such details as the serialization format, forwarding of 
+         command-line flags, and storing state.
+        </p>
+        <p class="mt-4">
+         <a href="#type-mapper" class="cursor-pointer text-orange">
+          <code class="font-normal text-sm">mapper</code>
+         </a> enables AST rewriting using open recursion. A typical mapper
+          would be based on 
+         <a href="#val-default_mapper" class="cursor-pointer text-orange">
+          <code class="font-normal text-sm">default_mapper</code>
+         </a>, a deep identity mapper, and will fall back on it for handling
+          the syntax it does not modify. For example:
+        </p>
+        <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+         <code class="font-normal text-sm">
+          open Asttypes
+          open Parsetree
+          open Ast_mapper
+          
+          let test_mapper argv =
+            { default_mapper with
+              expr = fun mapper expr -&gt;
+                match expr with
+                | { pexp_desc = Pexp_extension ({ txt = &quot;test&quot; },
+          PStr [])} -&gt;
+                  Ast_helper.Exp.constant (Const_int 42)
+                | other -&gt; default_mapper.expr mapper other; }
+          
+          let () =
+            register &quot;ppx_test&quot; test_mapper
+         </code>
+        </pre>
+        <p class="mt-4">This -ppx rewriter, which replaces 
+         <code class="font-normal text-sm">[%test]</code> in expressions
+          with the constant <code class="font-normal text-sm">42</code>
+         , can be compiled using 
+         <code class="font-normal text-sm">
+          ocamlc -o ppx_test -I +compiler-libs ocamlcommon.cma ppx_test.ml
+         </code>.
+        </p>
+        <p class="mt-4"><b>Warning:</b> this module is unstable and part
+          of <span class="xref-unresolved">compiler-libs</span>.
+        </p>
+        <h2 class="text-2xl my-4 text-gray-800 font-sans anchored"
+         id="a-generic-parsetree-mapper">
+         <a href="#a-generic-parsetree-mapper" class="hover-link inline-block
+          -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>A generic Parsetree mapper
+        </h2>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-mapper">
+          <a href="#type-mapper" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> mapper</span>
+           <span> = </span><span>{</span>
+          </code>
+          <table>
+           <tr id="type-mapper.attribute">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.attribute" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>attribute : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Parsetree/index.html#type-attribute"
+                 class="cursor-pointer text-orange">Parsetree.attribute
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Parsetree/index.html#type-attribute"
+                class="cursor-pointer text-orange">Parsetree.attribute
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.attributes">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.attributes" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>attributes : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <span>
+                 <a href="../Parsetree/index.html#type-attribute"
+                  class="cursor-pointer text-orange">Parsetree.attribute
+                 </a> list
+                </span> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Parsetree/index.html#type-attribute"
+                 class="cursor-pointer text-orange">Parsetree.attribute
+                </a> list
+               </span>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.binding_op">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.binding_op" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>binding_op : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Parsetree/index.html#type-binding_op"
+                 class="cursor-pointer text-orange">Parsetree.binding_op
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Parsetree/index.html#type-binding_op"
+                class="cursor-pointer text-orange">Parsetree.binding_op
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.case">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.case" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>case : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Parsetree/index.html#type-case"
+                 class="cursor-pointer text-orange">Parsetree.case
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Parsetree/index.html#type-case"
+                class="cursor-pointer text-orange">Parsetree.case
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.cases">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.cases" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>cases : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <span>
+                 <a href="../Parsetree/index.html#type-case"
+                  class="cursor-pointer text-orange">Parsetree.case
+                 </a> list
+                </span> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Parsetree/index.html#type-case"
+                 class="cursor-pointer text-orange">Parsetree.case
+                </a> list
+               </span>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.class_declaration">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.class_declaration" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>class_declaration : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Parsetree/index.html#type-class_declaration"
+                 class="cursor-pointer text-orange">
+                 Parsetree.class_declaration
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Parsetree/index.html#type-class_declaration"
+                class="cursor-pointer text-orange">
+                Parsetree.class_declaration
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.class_description">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.class_description" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>class_description : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Parsetree/index.html#type-class_description"
+                 class="cursor-pointer text-orange">
+                 Parsetree.class_description
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Parsetree/index.html#type-class_description"
+                class="cursor-pointer text-orange">
+                Parsetree.class_description
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.class_expr">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.class_expr" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>class_expr : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Parsetree/index.html#type-class_expr"
+                 class="cursor-pointer text-orange">Parsetree.class_expr
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Parsetree/index.html#type-class_expr"
+                class="cursor-pointer text-orange">Parsetree.class_expr
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.class_field">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.class_field" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>class_field : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Parsetree/index.html#type-class_field"
+                 class="cursor-pointer text-orange">Parsetree.class_field
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Parsetree/index.html#type-class_field"
+                class="cursor-pointer text-orange">Parsetree.class_field
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.class_signature">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.class_signature" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>class_signature : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Parsetree/index.html#type-class_signature"
+                 class="cursor-pointer text-orange">Parsetree.class_signature
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Parsetree/index.html#type-class_signature"
+                class="cursor-pointer text-orange">Parsetree.class_signature
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.class_structure">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.class_structure" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>class_structure : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Parsetree/index.html#type-class_structure"
+                 class="cursor-pointer text-orange">Parsetree.class_structure
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Parsetree/index.html#type-class_structure"
+                class="cursor-pointer text-orange">Parsetree.class_structure
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.class_type">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.class_type" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>class_type : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Parsetree/index.html#type-class_type"
+                 class="cursor-pointer text-orange">Parsetree.class_type
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Parsetree/index.html#type-class_type"
+                class="cursor-pointer text-orange">Parsetree.class_type
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.class_type_declaration">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.class_type_declaration" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>class_type_declaration : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Parsetree/index.html#type-class_type_declaration"
+                 class="cursor-pointer text-orange">
+                 Parsetree.class_type_declaration
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Parsetree/index.html#type-class_type_declaration"
+                class="cursor-pointer text-orange">
+                Parsetree.class_type_declaration
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.class_type_field">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.class_type_field" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>class_type_field : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Parsetree/index.html#type-class_type_field"
+                 class="cursor-pointer text-orange">
+                 Parsetree.class_type_field
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Parsetree/index.html#type-class_type_field"
+                class="cursor-pointer text-orange">Parsetree.class_type_field
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.constant">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.constant" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>constant : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Parsetree/index.html#type-constant"
+                 class="cursor-pointer text-orange">Parsetree.constant
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Parsetree/index.html#type-constant"
+                class="cursor-pointer text-orange">Parsetree.constant
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.constructor_declaration">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.constructor_declaration" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>constructor_declaration : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a
+                 href="../Parsetree/index.html#type-constructor_declaration"
+                 class="cursor-pointer text-orange">
+                 Parsetree.constructor_declaration
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Parsetree/index.html#type-constructor_declaration"
+                class="cursor-pointer text-orange">
+                Parsetree.constructor_declaration
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.expr">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.expr" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>expr : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Parsetree/index.html#type-expression"
+                 class="cursor-pointer text-orange">Parsetree.expression
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Parsetree/index.html#type-expression"
+                class="cursor-pointer text-orange">Parsetree.expression
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.extension">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.extension" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>extension : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Parsetree/index.html#type-extension"
+                 class="cursor-pointer text-orange">Parsetree.extension
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Parsetree/index.html#type-extension"
+                class="cursor-pointer text-orange">Parsetree.extension
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.extension_constructor">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.extension_constructor" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>extension_constructor : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Parsetree/index.html#type-extension_constructor"
+                 class="cursor-pointer text-orange">
+                 Parsetree.extension_constructor
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Parsetree/index.html#type-extension_constructor"
+                class="cursor-pointer text-orange">
+                Parsetree.extension_constructor
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.include_declaration">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.include_declaration" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>include_declaration : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Parsetree/index.html#type-include_declaration"
+                 class="cursor-pointer text-orange">
+                 Parsetree.include_declaration
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Parsetree/index.html#type-include_declaration"
+                class="cursor-pointer text-orange">
+                Parsetree.include_declaration
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.include_description">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.include_description" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>include_description : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Parsetree/index.html#type-include_description"
+                 class="cursor-pointer text-orange">
+                 Parsetree.include_description
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Parsetree/index.html#type-include_description"
+                class="cursor-pointer text-orange">
+                Parsetree.include_description
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.label_declaration">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.label_declaration" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>label_declaration : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Parsetree/index.html#type-label_declaration"
+                 class="cursor-pointer text-orange">
+                 Parsetree.label_declaration
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Parsetree/index.html#type-label_declaration"
+                class="cursor-pointer text-orange">
+                Parsetree.label_declaration
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.location">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.location" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>location : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Location/index.html#type-t" class="cursor-pointer
+                 text-orange">Location.t
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Location/index.html#type-t" class="cursor-pointer
+                text-orange">Location.t
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.module_binding">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.module_binding" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>module_binding : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Parsetree/index.html#type-module_binding"
+                 class="cursor-pointer text-orange">Parsetree.module_binding
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Parsetree/index.html#type-module_binding"
+                class="cursor-pointer text-orange">Parsetree.module_binding
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.module_declaration">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.module_declaration" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>module_declaration : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Parsetree/index.html#type-module_declaration"
+                 class="cursor-pointer text-orange">
+                 Parsetree.module_declaration
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Parsetree/index.html#type-module_declaration"
+                class="cursor-pointer text-orange">
+                Parsetree.module_declaration
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.module_substitution">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.module_substitution" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>module_substitution : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Parsetree/index.html#type-module_substitution"
+                 class="cursor-pointer text-orange">
+                 Parsetree.module_substitution
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Parsetree/index.html#type-module_substitution"
+                class="cursor-pointer text-orange">
+                Parsetree.module_substitution
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.module_expr">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.module_expr" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>module_expr : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Parsetree/index.html#type-module_expr"
+                 class="cursor-pointer text-orange">Parsetree.module_expr
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Parsetree/index.html#type-module_expr"
+                class="cursor-pointer text-orange">Parsetree.module_expr
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.module_type">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.module_type" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>module_type : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Parsetree/index.html#type-module_type"
+                 class="cursor-pointer text-orange">Parsetree.module_type
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Parsetree/index.html#type-module_type"
+                class="cursor-pointer text-orange">Parsetree.module_type
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.module_type_declaration">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.module_type_declaration" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>module_type_declaration : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a
+                 href="../Parsetree/index.html#type-module_type_declaration"
+                 class="cursor-pointer text-orange">
+                 Parsetree.module_type_declaration
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Parsetree/index.html#type-module_type_declaration"
+                class="cursor-pointer text-orange">
+                Parsetree.module_type_declaration
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.open_declaration">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.open_declaration" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>open_declaration : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Parsetree/index.html#type-open_declaration"
+                 class="cursor-pointer text-orange">
+                 Parsetree.open_declaration
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Parsetree/index.html#type-open_declaration"
+                class="cursor-pointer text-orange">Parsetree.open_declaration
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.open_description">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.open_description" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>open_description : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Parsetree/index.html#type-open_description"
+                 class="cursor-pointer text-orange">
+                 Parsetree.open_description
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Parsetree/index.html#type-open_description"
+                class="cursor-pointer text-orange">Parsetree.open_description
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.pat">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.pat" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>pat : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Parsetree/index.html#type-pattern"
+                 class="cursor-pointer text-orange">Parsetree.pattern
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Parsetree/index.html#type-pattern"
+                class="cursor-pointer text-orange">Parsetree.pattern
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.payload">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.payload" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>payload : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Parsetree/index.html#type-payload"
+                 class="cursor-pointer text-orange">Parsetree.payload
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Parsetree/index.html#type-payload"
+                class="cursor-pointer text-orange">Parsetree.payload
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.signature">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.signature" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>signature : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Parsetree/index.html#type-signature"
+                 class="cursor-pointer text-orange">Parsetree.signature
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Parsetree/index.html#type-signature"
+                class="cursor-pointer text-orange">Parsetree.signature
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.signature_item">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.signature_item" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>signature_item : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Parsetree/index.html#type-signature_item"
+                 class="cursor-pointer text-orange">Parsetree.signature_item
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Parsetree/index.html#type-signature_item"
+                class="cursor-pointer text-orange">Parsetree.signature_item
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.structure">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.structure" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>structure : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Parsetree/index.html#type-structure"
+                 class="cursor-pointer text-orange">Parsetree.structure
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Parsetree/index.html#type-structure"
+                class="cursor-pointer text-orange">Parsetree.structure
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.structure_item">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.structure_item" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>structure_item : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Parsetree/index.html#type-structure_item"
+                 class="cursor-pointer text-orange">Parsetree.structure_item
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Parsetree/index.html#type-structure_item"
+                class="cursor-pointer text-orange">Parsetree.structure_item
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.typ">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.typ" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>typ : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Parsetree/index.html#type-core_type"
+                 class="cursor-pointer text-orange">Parsetree.core_type
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Parsetree/index.html#type-core_type"
+                class="cursor-pointer text-orange">Parsetree.core_type
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.type_declaration">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.type_declaration" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>type_declaration : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Parsetree/index.html#type-type_declaration"
+                 class="cursor-pointer text-orange">
+                 Parsetree.type_declaration
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Parsetree/index.html#type-type_declaration"
+                class="cursor-pointer text-orange">Parsetree.type_declaration
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.type_extension">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.type_extension" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>type_extension : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Parsetree/index.html#type-type_extension"
+                 class="cursor-pointer text-orange">Parsetree.type_extension
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Parsetree/index.html#type-type_extension"
+                class="cursor-pointer text-orange">Parsetree.type_extension
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.type_exception">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.type_exception" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>type_exception : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Parsetree/index.html#type-type_exception"
+                 class="cursor-pointer text-orange">Parsetree.type_exception
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Parsetree/index.html#type-type_exception"
+                class="cursor-pointer text-orange">Parsetree.type_exception
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.type_kind">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.type_kind" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>type_kind : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Parsetree/index.html#type-type_kind"
+                 class="cursor-pointer text-orange">Parsetree.type_kind
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Parsetree/index.html#type-type_kind"
+                class="cursor-pointer text-orange">Parsetree.type_kind
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.value_binding">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.value_binding" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>value_binding : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Parsetree/index.html#type-value_binding"
+                 class="cursor-pointer text-orange">Parsetree.value_binding
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Parsetree/index.html#type-value_binding"
+                class="cursor-pointer text-orange">Parsetree.value_binding
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.value_description">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.value_description" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>value_description : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Parsetree/index.html#type-value_description"
+                 class="cursor-pointer text-orange">
+                 Parsetree.value_description
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Parsetree/index.html#type-value_description"
+                class="cursor-pointer text-orange">
+                Parsetree.value_description
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.with_constraint">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.with_constraint" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>with_constraint : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Parsetree/index.html#type-with_constraint"
+                 class="cursor-pointer text-orange">Parsetree.with_constraint
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Parsetree/index.html#type-with_constraint"
+                class="cursor-pointer text-orange">Parsetree.with_constraint
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+          </table><code class="font-normal text-sm"><span>}</span></code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">A mapper record implements one &quot;method&quot;
+            per syntactic category, using an open recursion style: each
+            method takes as its first argument the mapper to be applied
+            to children in the syntax tree.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-default_mapper">
+          <a href="#val-default_mapper" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> default_mapper
+             : 
+            <a href="#type-mapper" class="cursor-pointer text-orange">mapper
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">A default mapper, which implements a &quot;deep
+            identity&quot; mapping.
+          </p>
+         </div>
+        </div>
+        <h2 class="text-2xl my-4 text-gray-800 font-sans anchored"
+         id="apply-mappers-to-compilation-units">
+         <a href="#apply-mappers-to-compilation-units" class="hover-link
+          inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Apply mappers to compilation units
+        </h2>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-tool_name">
+          <a href="#val-tool_name" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> tool_name : 
+            <span>unit <span class="">&#45;&gt;</span></span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Can be used within a ppx preprocessor to know
+            which tool is calling it 
+           <code class="font-normal text-sm">&quot;ocamlc&quot;</code>
+           , <code class="font-normal text-sm">&quot;ocamlopt&quot;</code>
+           , <code class="font-normal text-sm">&quot;ocamldoc&quot;</code>
+           , <code class="font-normal text-sm">&quot;ocamldep&quot;</code>
+           , <code class="font-normal text-sm">&quot;ocaml&quot;</code>
+           , ... Some global variables that reflect command-line options
+            are automatically synchronized between the calling tool and
+            the ppx preprocessor: 
+           <a href="../Clflags/index.html#val-include_dirs"
+            class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Clflags.include_dirs</code>
+           </a>, 
+           <a href="../Load_path/index.html" class="cursor-pointer
+            text-orange"><code class="font-normal text-sm">Load_path</code>
+           </a>, 
+           <a href="../Clflags/index.html#val-open_modules"
+            class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Clflags.open_modules</code>
+           </a>, 
+           <a href="../Clflags/index.html#val-for_package"
+            class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Clflags.for_package</code>
+           </a>, 
+           <a href="../Clflags/index.html#val-debug" class="cursor-pointer
+            text-orange">
+            <code class="font-normal text-sm">Clflags.debug</code>
+           </a>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-apply">
+          <a href="#val-apply" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> apply : 
+            <span>source:string <span class="">&#45;&gt;</span></span>
+             <span>target:string <span class="">&#45;&gt;</span></span>
+             
+            <span>
+             <a href="#type-mapper" class="cursor-pointer text-orange">mapper
+             </a> <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Apply a mapper (parametrized by the unit name)
+            to a dumped parsetree found in the 
+           <code class="font-normal text-sm">source</code> file and put
+            the result in the <code class="font-normal text-sm">target</code>
+            file. The <code class="font-normal text-sm">structure</code>
+            or <code class="font-normal text-sm">signature</code> field
+            of the mapper is applied to the implementation or interface.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-run_main">
+          <a href="#val-run_main" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> run_main : 
+            <span>
+             <span>(
+              <span><span>string list</span> <span class="">&#45;&gt;</span>
+              </span> 
+              <a href="#type-mapper" class="cursor-pointer text-orange">
+               mapper
+              </a>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Entry point to call to implement a standalone
+            -ppx rewriter from a mapper, parametrized by the command 
+           line arguments. The current unit name can be obtained from
+            
+           <a href="../Location/index.html#val-input_name"
+            class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Location.input_name</code>
+           </a>. This function implements proper error reporting for 
+           uncaught exceptions.
+          </p>
+         </div>
+        </div>
+        <h2 class="text-2xl my-4 text-gray-800 font-sans anchored"
+         id="registration-api">
+         <a href="#registration-api" class="hover-link inline-block -ml-7
+          pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Registration API
+        </h2>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-register_function">
+          <a href="#val-register_function" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> register_function
+             : 
+            <span>
+             <span>(<span>string <span class="">&#45;&gt;</span></span>
+               
+              <span>
+               <span>(
+                <span><span>string list</span> 
+                 <span class="">&#45;&gt;</span>
+                </span> 
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a>)
+               </span> <span class="">&#45;&gt;</span>
+              </span> unit)
+             </span> 
+             <a href="../Stdlib/index.html#type-ref" class="cursor-pointer
+              text-orange">Stdlib.ref
+             </a>
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-register">
+          <a href="#val-register" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> register : 
+            <span>string <span class="">&#45;&gt;</span></span> 
+            <span>
+             <span>(
+              <span><span>string list</span> <span class="">&#45;&gt;</span>
+              </span> 
+              <a href="#type-mapper" class="cursor-pointer text-orange">
+               mapper
+              </a>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Apply the 
+           <code class="font-normal text-sm">register_function</code>
+           . The default behavior is to run the mapper immediately, taking
+            arguments from the process command line. This is to support
+            a scenario where a mapper is linked as a stand-alone executable.
+          </p>
+          <p class="mt-4">It is possible to overwrite the 
+           <code class="font-normal text-sm">register_function</code>
+            to define &quot;-ppx drivers&quot;, which combine several
+            mappers in a single process. Typically, a driver starts by
+            defining 
+           <code class="font-normal text-sm">register_function</code>
+            to a custom implementation, then lets ppx rewriters (linked
+            statically or dynamically) register themselves, and then 
+           run all or some of them. It is also possible to have -ppx 
+           drivers apply rewriters to only specific parts of an AST.
+          </p>
+          <p class="mt-4">The first argument to 
+           <code class="font-normal text-sm">register</code> is a symbolic
+            name to be used by the ppx driver.
+          </p>
+         </div>
+        </div>
+        <h2 class="text-2xl my-4 text-gray-800 font-sans anchored"
+         id="convenience-functions-to-write-mappers">
+         <a href="#convenience-functions-to-write-mappers" class="hover-link
+          inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Convenience functions to write mappers
+        </h2>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-map_opt">
+          <a href="#val-map_opt" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> map_opt : 
+            <span>
+             <span>(
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> <span class="">'b</span>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'a</span> option</span> 
+             <span class="">&#45;&gt;</span>
+            </span> <span><span class="">'b</span> option</span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-extension_of_error">
+          <a href="#val-extension_of_error" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> extension_of_error
+             : 
+            <span>
+             <a href="../Location/index.html#type-error"
+              class="cursor-pointer text-orange">Location.error
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Parsetree/index.html#type-extension"
+             class="cursor-pointer text-orange">Parsetree.extension
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Encode an error into an 'ocaml.error' extension
+            node which can be inserted in a generated Parsetree. The 
+           compiler will be responsible for reporting the error.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-attribute_of_warning">
+          <a href="#val-attribute_of_warning" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> attribute_of_warning
+             : 
+            <span>
+             <a href="../Location/index.html#type-t" class="cursor-pointer
+              text-orange">Location.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> <span>string <span class="">&#45;&gt;</span></span>
+             
+            <a href="../Parsetree/index.html#type-attribute"
+             class="cursor-pointer text-orange">Parsetree.attribute
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Encode a warning message into an 'ocaml.ppwarning'
+            attribute which can be inserted in a generated Parsetree.
+            The compiler will be responsible for reporting the warning.
+          </p>
+         </div>
+        </div>
+        <h2 class="text-2xl my-4 text-gray-800 font-sans anchored"
+         id="helper-functions-to-call-external-mappers">
+         <a href="#helper-functions-to-call-external-mappers"
+          class="hover-link inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Helper functions to call external mappers
+        </h2>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-add_ppx_context_str">
+          <a href="#val-add_ppx_context_str" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> add_ppx_context_str
+             : <span>tool_name:string <span class="">&#45;&gt;</span></span>
+             
+            <span>
+             <a href="../Parsetree/index.html#type-structure"
+              class="cursor-pointer text-orange">Parsetree.structure
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Parsetree/index.html#type-structure"
+             class="cursor-pointer text-orange">Parsetree.structure
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Extract information from the current environment
+            and encode it into an attribute which is prepended to the
+            list of structure items in order to pass the information 
+           to an external processor.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-add_ppx_context_sig">
+          <a href="#val-add_ppx_context_sig" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> add_ppx_context_sig
+             : <span>tool_name:string <span class="">&#45;&gt;</span></span>
+             
+            <span>
+             <a href="../Parsetree/index.html#type-signature"
+              class="cursor-pointer text-orange">Parsetree.signature
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Parsetree/index.html#type-signature"
+             class="cursor-pointer text-orange">Parsetree.signature
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Same as 
+           <code class="font-normal text-sm">add_ppx_context_str</code>
+           , but for signatures.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-drop_ppx_context_str">
+          <a href="#val-drop_ppx_context_str" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> drop_ppx_context_str
+             : <span>restore:bool <span class="">&#45;&gt;</span></span>
+             
+            <span>
+             <a href="../Parsetree/index.html#type-structure"
+              class="cursor-pointer text-orange">Parsetree.structure
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Parsetree/index.html#type-structure"
+             class="cursor-pointer text-orange">Parsetree.structure
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Drop the ocaml.ppx.context attribute from a
+            structure. If <code class="font-normal text-sm">restore</code>
+            is true, also restore the associated data in the current 
+           process.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-drop_ppx_context_sig">
+          <a href="#val-drop_ppx_context_sig" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> drop_ppx_context_sig
+             : <span>restore:bool <span class="">&#45;&gt;</span></span>
+             
+            <span>
+             <a href="../Parsetree/index.html#type-signature"
+              class="cursor-pointer text-orange">Parsetree.signature
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Parsetree/index.html#type-signature"
+             class="cursor-pointer text-orange">Parsetree.signature
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Same as 
+           <code class="font-normal text-sm">drop_ppx_context_str</code>
+           , but for signatures.
+          </p>
+         </div>
+        </div>
+        <h2 class="text-2xl my-4 text-gray-800 font-sans anchored"
+         id="cookies">
+         <a href="#cookies" class="hover-link inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Cookies
+        </h2>
+        <p class="mt-4">Cookies are used to pass information from a ppx
+          processor to a further invocation of itself, when called from
+          the OCaml toplevel (or other tools that support cookies).
+        </p>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-set_cookie">
+          <a href="#val-set_cookie" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> set_cookie : 
+            <span>string <span class="">&#45;&gt;</span></span> 
+            <span>
+             <a href="../Parsetree/index.html#type-expression"
+              class="cursor-pointer text-orange">Parsetree.expression
+             </a> <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-get_cookie">
+          <a href="#val-get_cookie" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> get_cookie : 
+            <span>string <span class="">&#45;&gt;</span></span> 
+            <span>
+             <a href="../Parsetree/index.html#type-expression"
+              class="cursor-pointer text-orange">Parsetree.expression
+             </a> option
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="w-full flex-none lg:w-72 border-t lg:border-l bg-gray-100">
+       <div class="flex h-20 border-b relative">
+        <h2 class="text-xl absolute inset-x-0 p-3 bottom-0 mt-7 font-semibold
+         text-gray-500">ocaml-base-compiler.4.12.0
+        </h2>
+       </div>
+       <div class="m-3">
+        <p class="mb-5 italic text-sm">Official release 4.12.0</p>
+        <div class="mb-3">
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="https://ocaml.org">ocaml.org
+          </a>
+         </div>
+        </div>
+        <details class="font-normal mb-2 text-sm">
+         <summary>Other versions</summary><div id="versions_container"></div>
+        </details><h2 class="font-semibold mb-2 text-sm">Authors</h2>
+        <p class="mb-3 text-sm">Xavier Leroy and many contributors</p>
+        <h2 class="font-semibold mb-2 text-sm">Issues</h2>
+        <div class="mb-3">
+         <a class="text-orange cursor-pointer mb-2 text-sm"
+          href="https://github.com/ocaml/opam-repository/issues">
+          github.com/ocaml/opam-repository/issues
+         </a>
+        </div>
+        <details class="font-semibold mb-2 text-sm">
+         <summary>Package dependencies</summary>
+         <div class="font-normal">
+          <ul>
+           <li>
+            <a href="../../../ocaml/index.html" class="text-orange
+             cursor-pointer">ocaml
+            </a>
+           </li>
+           <li>
+            <a href="../../../base-unix/index.html" class="text-orange
+             cursor-pointer">base-unix
+            </a>
+           </li>
+           <li>
+            <a href="../../../base-bigarray/index.html" class="text-orange
+             cursor-pointer">base-bigarray
+            </a>
+           </li>
+           <li>
+            <a href="../../../base-threads/index.html" class="text-orange
+             cursor-pointer">base-threads
+            </a>
+           </li>
+           <li>
+            <a href="../../../ocaml-options-vanilla/index.html"
+             class="text-orange cursor-pointer">ocaml-options-vanilla
+            </a>
+           </li>
+          </ul>
+         </div>
+        </details>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div><script>Voodoo.update('../../version.json')</script>
+ </body>
+</html>

@@ -1,0 +1,2439 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head><title>Opcodes (packages.ocaml-base-compiler.4.12.0.Opcodes)</title>
+  <link rel="stylesheet" href="../../../tailwind.css"/>
+  <link rel="stylesheet" href="../../../extra.css"/><meta charset="utf-8"/>
+  <meta name="generator" content="odoc 3dfb7aef2f"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <script src="../../../highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="../../../voodoo_client.js"></script>
+  <script
+   src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+   defer="defer">
+  </script>
+ </head>
+ <body class="mx-auto max-w-screen-2xl">
+  <div class="relative">
+   <div class="relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+     <div class="flex justify-between items-center md:justify-start py-6
+      md:space-x-10">
+      <div class="flex justify-start">
+       <a href="https://v3.ocaml.org/">
+        <img src="/colour-logo.svg" alt="" class="h-8 w-auto sm:h-10"/>
+       </a>
+      </div>
+      <nav class="hidden md:flex space-x-10">
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Industry</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/whatisocaml">
+            <p class="text-base font-medium text-gray-900">What is OCaml</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/users">
+            <p class="text-base font-medium text-gray-900">Industrial Users
+            </p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/successstories">
+            <p class="text-base font-medium text-gray-900">Success Stories
+            </p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Resources</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/releases">
+            <p class="text-base font-medium text-gray-900">Releases</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/applications">
+            <p class="text-base font-medium text-gray-900">Applications</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/language">
+            <p class="text-base font-medium text-gray-900">Language</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/archive">
+            <p class="text-base font-medium text-gray-900">Archive</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Community</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/opportunities">
+            <p class="text-base font-medium text-gray-900">Opportunities</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/news">
+            <p class="text-base font-medium text-gray-900">News</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/aroundweb">
+            <p class="text-base font-medium text-gray-900">Around the Web</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="h-screen flex bg-white font-sans">
+   <div class="flex flex-col w-full h-full">
+    <div class="flex-row flex-1">
+     <nav class="bg-orange border-t border-b border-orange flex flex-row">
+      <ol class="max-w-screen-xl w-full px-4 flex space-x-4 sm:px-6 lg:px-8">
+       <li class="flex">
+        <div class="flex items-center">
+         <a href="#" class="text-gray-100 hover:text-gray-500">
+          
+  <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+        </svg>
+  
+          <span class="sr-only">Home</span>
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">packages
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">ocaml-base-compiler
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">4.12.0
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="#" class="ml-4 text-sm font-medium text-gray-100
+          hover:text-gray-500">Opcodes
+         </a>
+        </div>
+       </li>
+      </ol>
+     </nav>
+    </div>
+    <div class="flex flex-row flex-1">
+     <div class="w-72 flex-none bg-gray-100 h-screen border-r border-gray-200
+      sticky top-0 hidden lg:block">
+      <div class="flex h-20 border-b relative">
+       <h2 class="text-xl absolute inset-x-0 p-3 px-5 bottom-0 mt-7
+        border-gray-200 font-semibold text-gray-500 font-sans">On this page
+       </h2>
+      </div>
+     </div>
+     <div class="flex flex-1 flex-col lg:flex-row">
+      <div class="flex-1">
+       <div class="lg:max-w-5xl mx-auto px-3 lg:px-10 mb-10 text-sm">
+        <div class="flex h-20 relative border-b border-gray-200">
+         <div class="relative flex-1 h-20">
+          <h1 class="text-3xl absolute inset-x-0 py-3 bottom-0 font-semibold
+           text-gray-500 font-sans w-full truncate">
+           <code class="font-mono text-gray-800">Opcodes</code>
+          </h1>
+         </div>
+         <div class="relative flex-none w-28">
+          <h1 class="text-3xl absolute py-3 bottom-0 right-0 font-semibold
+           text-gray-500 font-sans">Module
+          </h1>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opACC0">
+          <a href="#val-opACC0" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opACC0 : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opACC1">
+          <a href="#val-opACC1" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opACC1 : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opACC2">
+          <a href="#val-opACC2" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opACC2 : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opACC3">
+          <a href="#val-opACC3" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opACC3 : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opACC4">
+          <a href="#val-opACC4" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opACC4 : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opACC5">
+          <a href="#val-opACC5" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opACC5 : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opACC6">
+          <a href="#val-opACC6" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opACC6 : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opACC7">
+          <a href="#val-opACC7" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opACC7 : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opACC">
+          <a href="#val-opACC" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opACC : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opPUSH">
+          <a href="#val-opPUSH" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opPUSH : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opPUSHACC0">
+          <a href="#val-opPUSHACC0" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opPUSHACC0 : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opPUSHACC1">
+          <a href="#val-opPUSHACC1" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opPUSHACC1 : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opPUSHACC2">
+          <a href="#val-opPUSHACC2" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opPUSHACC2 : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opPUSHACC3">
+          <a href="#val-opPUSHACC3" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opPUSHACC3 : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opPUSHACC4">
+          <a href="#val-opPUSHACC4" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opPUSHACC4 : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opPUSHACC5">
+          <a href="#val-opPUSHACC5" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opPUSHACC5 : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opPUSHACC6">
+          <a href="#val-opPUSHACC6" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opPUSHACC6 : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opPUSHACC7">
+          <a href="#val-opPUSHACC7" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opPUSHACC7 : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opPUSHACC">
+          <a href="#val-opPUSHACC" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opPUSHACC : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opPOP">
+          <a href="#val-opPOP" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opPOP : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opASSIGN">
+          <a href="#val-opASSIGN" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opASSIGN : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opENVACC1">
+          <a href="#val-opENVACC1" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opENVACC1 : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opENVACC2">
+          <a href="#val-opENVACC2" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opENVACC2 : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opENVACC3">
+          <a href="#val-opENVACC3" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opENVACC3 : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opENVACC4">
+          <a href="#val-opENVACC4" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opENVACC4 : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opENVACC">
+          <a href="#val-opENVACC" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opENVACC : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opPUSHENVACC1">
+          <a href="#val-opPUSHENVACC1" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opPUSHENVACC1 : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opPUSHENVACC2">
+          <a href="#val-opPUSHENVACC2" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opPUSHENVACC2 : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opPUSHENVACC3">
+          <a href="#val-opPUSHENVACC3" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opPUSHENVACC3 : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opPUSHENVACC4">
+          <a href="#val-opPUSHENVACC4" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opPUSHENVACC4 : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opPUSHENVACC">
+          <a href="#val-opPUSHENVACC" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opPUSHENVACC : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opPUSH_RETADDR">
+          <a href="#val-opPUSH_RETADDR" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opPUSH_RETADDR : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opAPPLY">
+          <a href="#val-opAPPLY" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opAPPLY : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opAPPLY1">
+          <a href="#val-opAPPLY1" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opAPPLY1 : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opAPPLY2">
+          <a href="#val-opAPPLY2" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opAPPLY2 : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opAPPLY3">
+          <a href="#val-opAPPLY3" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opAPPLY3 : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opAPPTERM">
+          <a href="#val-opAPPTERM" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opAPPTERM : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opAPPTERM1">
+          <a href="#val-opAPPTERM1" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opAPPTERM1 : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opAPPTERM2">
+          <a href="#val-opAPPTERM2" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opAPPTERM2 : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opAPPTERM3">
+          <a href="#val-opAPPTERM3" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opAPPTERM3 : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opRETURN">
+          <a href="#val-opRETURN" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opRETURN : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opRESTART">
+          <a href="#val-opRESTART" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opRESTART : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opGRAB">
+          <a href="#val-opGRAB" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opGRAB : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opCLOSURE">
+          <a href="#val-opCLOSURE" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opCLOSURE : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opCLOSUREREC">
+          <a href="#val-opCLOSUREREC" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opCLOSUREREC : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opOFFSETCLOSUREM3">
+          <a href="#val-opOFFSETCLOSUREM3" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opOFFSETCLOSUREM3
+             : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opOFFSETCLOSURE0">
+          <a href="#val-opOFFSETCLOSURE0" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opOFFSETCLOSURE0
+             : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opOFFSETCLOSURE3">
+          <a href="#val-opOFFSETCLOSURE3" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opOFFSETCLOSURE3
+             : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opOFFSETCLOSURE">
+          <a href="#val-opOFFSETCLOSURE" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opOFFSETCLOSURE : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opPUSHOFFSETCLOSUREM3">
+          <a href="#val-opPUSHOFFSETCLOSUREM3" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opPUSHOFFSETCLOSUREM3
+             : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opPUSHOFFSETCLOSURE0">
+          <a href="#val-opPUSHOFFSETCLOSURE0" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opPUSHOFFSETCLOSURE0
+             : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opPUSHOFFSETCLOSURE3">
+          <a href="#val-opPUSHOFFSETCLOSURE3" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opPUSHOFFSETCLOSURE3
+             : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opPUSHOFFSETCLOSURE">
+          <a href="#val-opPUSHOFFSETCLOSURE" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opPUSHOFFSETCLOSURE
+             : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opGETGLOBAL">
+          <a href="#val-opGETGLOBAL" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opGETGLOBAL : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opPUSHGETGLOBAL">
+          <a href="#val-opPUSHGETGLOBAL" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opPUSHGETGLOBAL : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opGETGLOBALFIELD">
+          <a href="#val-opGETGLOBALFIELD" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opGETGLOBALFIELD
+             : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opPUSHGETGLOBALFIELD">
+          <a href="#val-opPUSHGETGLOBALFIELD" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opPUSHGETGLOBALFIELD
+             : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opSETGLOBAL">
+          <a href="#val-opSETGLOBAL" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opSETGLOBAL : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opATOM0">
+          <a href="#val-opATOM0" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opATOM0 : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opATOM">
+          <a href="#val-opATOM" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opATOM : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opPUSHATOM0">
+          <a href="#val-opPUSHATOM0" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opPUSHATOM0 : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opPUSHATOM">
+          <a href="#val-opPUSHATOM" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opPUSHATOM : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opMAKEBLOCK">
+          <a href="#val-opMAKEBLOCK" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opMAKEBLOCK : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opMAKEBLOCK1">
+          <a href="#val-opMAKEBLOCK1" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opMAKEBLOCK1 : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opMAKEBLOCK2">
+          <a href="#val-opMAKEBLOCK2" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opMAKEBLOCK2 : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opMAKEBLOCK3">
+          <a href="#val-opMAKEBLOCK3" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opMAKEBLOCK3 : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opMAKEFLOATBLOCK">
+          <a href="#val-opMAKEFLOATBLOCK" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opMAKEFLOATBLOCK
+             : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opGETFIELD0">
+          <a href="#val-opGETFIELD0" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opGETFIELD0 : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opGETFIELD1">
+          <a href="#val-opGETFIELD1" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opGETFIELD1 : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opGETFIELD2">
+          <a href="#val-opGETFIELD2" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opGETFIELD2 : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opGETFIELD3">
+          <a href="#val-opGETFIELD3" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opGETFIELD3 : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opGETFIELD">
+          <a href="#val-opGETFIELD" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opGETFIELD : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opGETFLOATFIELD">
+          <a href="#val-opGETFLOATFIELD" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opGETFLOATFIELD : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opSETFIELD0">
+          <a href="#val-opSETFIELD0" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opSETFIELD0 : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opSETFIELD1">
+          <a href="#val-opSETFIELD1" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opSETFIELD1 : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opSETFIELD2">
+          <a href="#val-opSETFIELD2" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opSETFIELD2 : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opSETFIELD3">
+          <a href="#val-opSETFIELD3" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opSETFIELD3 : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opSETFIELD">
+          <a href="#val-opSETFIELD" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opSETFIELD : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opSETFLOATFIELD">
+          <a href="#val-opSETFLOATFIELD" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opSETFLOATFIELD : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opVECTLENGTH">
+          <a href="#val-opVECTLENGTH" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opVECTLENGTH : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opGETVECTITEM">
+          <a href="#val-opGETVECTITEM" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opGETVECTITEM : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opSETVECTITEM">
+          <a href="#val-opSETVECTITEM" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opSETVECTITEM : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opGETBYTESCHAR">
+          <a href="#val-opGETBYTESCHAR" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opGETBYTESCHAR : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opSETBYTESCHAR">
+          <a href="#val-opSETBYTESCHAR" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opSETBYTESCHAR : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opBRANCH">
+          <a href="#val-opBRANCH" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opBRANCH : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opBRANCHIF">
+          <a href="#val-opBRANCHIF" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opBRANCHIF : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opBRANCHIFNOT">
+          <a href="#val-opBRANCHIFNOT" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opBRANCHIFNOT : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opSWITCH">
+          <a href="#val-opSWITCH" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opSWITCH : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opBOOLNOT">
+          <a href="#val-opBOOLNOT" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opBOOLNOT : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opPUSHTRAP">
+          <a href="#val-opPUSHTRAP" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opPUSHTRAP : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opPOPTRAP">
+          <a href="#val-opPOPTRAP" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opPOPTRAP : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opRAISE">
+          <a href="#val-opRAISE" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opRAISE : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opCHECK_SIGNALS">
+          <a href="#val-opCHECK_SIGNALS" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opCHECK_SIGNALS : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opC_CALL1">
+          <a href="#val-opC_CALL1" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opC_CALL1 : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opC_CALL2">
+          <a href="#val-opC_CALL2" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opC_CALL2 : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opC_CALL3">
+          <a href="#val-opC_CALL3" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opC_CALL3 : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opC_CALL4">
+          <a href="#val-opC_CALL4" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opC_CALL4 : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opC_CALL5">
+          <a href="#val-opC_CALL5" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opC_CALL5 : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opC_CALLN">
+          <a href="#val-opC_CALLN" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opC_CALLN : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opCONST0">
+          <a href="#val-opCONST0" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opCONST0 : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opCONST1">
+          <a href="#val-opCONST1" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opCONST1 : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opCONST2">
+          <a href="#val-opCONST2" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opCONST2 : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opCONST3">
+          <a href="#val-opCONST3" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opCONST3 : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opCONSTINT">
+          <a href="#val-opCONSTINT" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opCONSTINT : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opPUSHCONST0">
+          <a href="#val-opPUSHCONST0" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opPUSHCONST0 : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opPUSHCONST1">
+          <a href="#val-opPUSHCONST1" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opPUSHCONST1 : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opPUSHCONST2">
+          <a href="#val-opPUSHCONST2" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opPUSHCONST2 : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opPUSHCONST3">
+          <a href="#val-opPUSHCONST3" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opPUSHCONST3 : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opPUSHCONSTINT">
+          <a href="#val-opPUSHCONSTINT" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opPUSHCONSTINT : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opNEGINT">
+          <a href="#val-opNEGINT" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opNEGINT : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opADDINT">
+          <a href="#val-opADDINT" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opADDINT : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opSUBINT">
+          <a href="#val-opSUBINT" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opSUBINT : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opMULINT">
+          <a href="#val-opMULINT" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opMULINT : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opDIVINT">
+          <a href="#val-opDIVINT" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opDIVINT : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opMODINT">
+          <a href="#val-opMODINT" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opMODINT : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opANDINT">
+          <a href="#val-opANDINT" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opANDINT : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opORINT">
+          <a href="#val-opORINT" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opORINT : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opXORINT">
+          <a href="#val-opXORINT" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opXORINT : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opLSLINT">
+          <a href="#val-opLSLINT" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opLSLINT : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opLSRINT">
+          <a href="#val-opLSRINT" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opLSRINT : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opASRINT">
+          <a href="#val-opASRINT" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opASRINT : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opEQ">
+          <a href="#val-opEQ" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opEQ : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opNEQ">
+          <a href="#val-opNEQ" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opNEQ : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opLTINT">
+          <a href="#val-opLTINT" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opLTINT : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opLEINT">
+          <a href="#val-opLEINT" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opLEINT : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opGTINT">
+          <a href="#val-opGTINT" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opGTINT : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opGEINT">
+          <a href="#val-opGEINT" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opGEINT : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opOFFSETINT">
+          <a href="#val-opOFFSETINT" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opOFFSETINT : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opOFFSETREF">
+          <a href="#val-opOFFSETREF" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opOFFSETREF : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opISINT">
+          <a href="#val-opISINT" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opISINT : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opGETMETHOD">
+          <a href="#val-opGETMETHOD" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opGETMETHOD : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opBEQ">
+          <a href="#val-opBEQ" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opBEQ : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opBNEQ">
+          <a href="#val-opBNEQ" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opBNEQ : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opBLTINT">
+          <a href="#val-opBLTINT" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opBLTINT : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opBLEINT">
+          <a href="#val-opBLEINT" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opBLEINT : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opBGTINT">
+          <a href="#val-opBGTINT" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opBGTINT : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opBGEINT">
+          <a href="#val-opBGEINT" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opBGEINT : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opULTINT">
+          <a href="#val-opULTINT" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opULTINT : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opUGEINT">
+          <a href="#val-opUGEINT" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opUGEINT : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opBULTINT">
+          <a href="#val-opBULTINT" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opBULTINT : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opBUGEINT">
+          <a href="#val-opBUGEINT" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opBUGEINT : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opGETPUBMET">
+          <a href="#val-opGETPUBMET" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opGETPUBMET : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opGETDYNMET">
+          <a href="#val-opGETDYNMET" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opGETDYNMET : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opSTOP">
+          <a href="#val-opSTOP" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opSTOP : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opEVENT">
+          <a href="#val-opEVENT" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opEVENT : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opBREAK">
+          <a href="#val-opBREAK" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opBREAK : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opRERAISE">
+          <a href="#val-opRERAISE" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opRERAISE : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opRAISE_NOTRACE">
+          <a href="#val-opRAISE_NOTRACE" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opRAISE_NOTRACE : int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-opGETSTRINGCHAR">
+          <a href="#val-opGETSTRINGCHAR" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opGETSTRINGCHAR : int
+           </span>
+          </code>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="w-full flex-none lg:w-72 border-t lg:border-l bg-gray-100">
+       <div class="flex h-20 border-b relative">
+        <h2 class="text-xl absolute inset-x-0 p-3 bottom-0 mt-7 font-semibold
+         text-gray-500">ocaml-base-compiler.4.12.0
+        </h2>
+       </div>
+       <div class="m-3">
+        <p class="mb-5 italic text-sm">Official release 4.12.0</p>
+        <div class="mb-3">
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="https://ocaml.org">ocaml.org
+          </a>
+         </div>
+        </div>
+        <details class="font-normal mb-2 text-sm">
+         <summary>Other versions</summary><div id="versions_container"></div>
+        </details><h2 class="font-semibold mb-2 text-sm">Authors</h2>
+        <p class="mb-3 text-sm">Xavier Leroy and many contributors</p>
+        <h2 class="font-semibold mb-2 text-sm">Issues</h2>
+        <div class="mb-3">
+         <a class="text-orange cursor-pointer mb-2 text-sm"
+          href="https://github.com/ocaml/opam-repository/issues">
+          github.com/ocaml/opam-repository/issues
+         </a>
+        </div>
+        <details class="font-semibold mb-2 text-sm">
+         <summary>Package dependencies</summary>
+         <div class="font-normal">
+          <ul>
+           <li>
+            <a href="../../../ocaml/index.html" class="text-orange
+             cursor-pointer">ocaml
+            </a>
+           </li>
+           <li>
+            <a href="../../../base-unix/index.html" class="text-orange
+             cursor-pointer">base-unix
+            </a>
+           </li>
+           <li>
+            <a href="../../../base-bigarray/index.html" class="text-orange
+             cursor-pointer">base-bigarray
+            </a>
+           </li>
+           <li>
+            <a href="../../../base-threads/index.html" class="text-orange
+             cursor-pointer">base-threads
+            </a>
+           </li>
+           <li>
+            <a href="../../../ocaml-options-vanilla/index.html"
+             class="text-orange cursor-pointer">ocaml-options-vanilla
+            </a>
+           </li>
+          </ul>
+         </div>
+        </details>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div><script>Voodoo.update('../../version.json')</script>
+ </body>
+</html>

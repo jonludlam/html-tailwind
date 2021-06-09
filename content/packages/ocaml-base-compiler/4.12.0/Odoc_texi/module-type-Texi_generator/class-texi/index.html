@@ -1,0 +1,3106 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>
+   texi (packages.ocaml-base-compiler.4.12.0.Odoc_texi.Texi_generator.texi)
+  </title><link rel="stylesheet" href="../../../../../tailwind.css"/>
+  <link rel="stylesheet" href="../../../../../extra.css"/>
+  <meta charset="utf-8"/><meta name="generator" content="odoc 3dfb7aef2f"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <script src="../../../../../highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="../../../../../voodoo_client.js"></script>
+  <script
+   src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+   defer="defer">
+  </script>
+ </head>
+ <body class="mx-auto max-w-screen-2xl">
+  <div class="relative">
+   <div class="relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+     <div class="flex justify-between items-center md:justify-start py-6
+      md:space-x-10">
+      <div class="flex justify-start">
+       <a href="https://v3.ocaml.org/">
+        <img src="/colour-logo.svg" alt="" class="h-8 w-auto sm:h-10"/>
+       </a>
+      </div>
+      <nav class="hidden md:flex space-x-10">
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Industry</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/whatisocaml">
+            <p class="text-base font-medium text-gray-900">What is OCaml</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/users">
+            <p class="text-base font-medium text-gray-900">Industrial Users
+            </p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/successstories">
+            <p class="text-base font-medium text-gray-900">Success Stories
+            </p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Resources</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/releases">
+            <p class="text-base font-medium text-gray-900">Releases</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/applications">
+            <p class="text-base font-medium text-gray-900">Applications</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/language">
+            <p class="text-base font-medium text-gray-900">Language</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/archive">
+            <p class="text-base font-medium text-gray-900">Archive</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Community</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/opportunities">
+            <p class="text-base font-medium text-gray-900">Opportunities</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/news">
+            <p class="text-base font-medium text-gray-900">News</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/aroundweb">
+            <p class="text-base font-medium text-gray-900">Around the Web</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="h-screen flex bg-white font-sans">
+   <div class="flex flex-col w-full h-full">
+    <div class="flex-row flex-1">
+     <nav class="bg-orange border-t border-b border-orange flex flex-row">
+      <ol class="max-w-screen-xl w-full px-4 flex space-x-4 sm:px-6 lg:px-8">
+       <li class="flex">
+        <div class="flex items-center">
+         <a href="#" class="text-gray-100 hover:text-gray-500">
+          
+  <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+        </svg>
+  
+          <span class="sr-only">Home</span>
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">packages
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">ocaml-base-compiler
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">4.12.0
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">Odoc_texi
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">Texi_generator
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="#" class="ml-4 text-sm font-medium text-gray-100
+          hover:text-gray-500">texi
+         </a>
+        </div>
+       </li>
+      </ol>
+     </nav>
+    </div>
+    <div class="flex flex-row flex-1">
+     <div class="w-72 flex-none bg-gray-100 h-screen border-r border-gray-200
+      sticky top-0 hidden lg:block">
+      <div class="flex h-20 border-b relative">
+       <h2 class="text-xl absolute inset-x-0 p-3 px-5 bottom-0 mt-7
+        border-gray-200 font-semibold text-gray-500 font-sans">On this page
+       </h2>
+      </div>
+     </div>
+     <div class="flex flex-1 flex-col lg:flex-row">
+      <div class="flex-1">
+       <div class="lg:max-w-5xl mx-auto px-3 lg:px-10 mb-10 text-sm">
+        <div class="flex h-20 relative border-b border-gray-200">
+         <div class="relative flex-1 h-20">
+          <h1 class="text-3xl absolute inset-x-0 py-3 bottom-0 font-semibold
+           text-gray-500 font-sans w-full truncate">
+           <code class="font-mono text-gray-800">Texi_generator.texi</code>
+          </h1>
+         </div>
+         <div class="relative flex-none w-28">
+          <h1 class="text-3xl absolute py-3 bottom-0 right-0 font-semibold
+           text-gray-500 font-sans">Class
+          </h1>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value instance-variable anchored p-2 text-sm
+          rounded border-l-4 border-orange my-3 bg-gray-100"
+          id="val-tag_functions">
+          <a href="#val-tag_functions" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            <span class="font-semibold">mutable</span> tag_functions : 
+            <span>
+             <span>(string * 
+              <span>(
+               <span>
+                <a href="../../../Odoc_info/index.html#type-text"
+                 class="cursor-pointer text-orange">Odoc_info.text
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../../../Odoc_info/index.html#type-text"
+                class="cursor-pointer text-orange">Odoc_info.text
+               </a>)
+              </span>)
+             </span> list
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value instance-variable anchored p-2 text-sm
+          rounded border-l-4 border-orange my-3 bg-gray-100"
+          id="val-node_tbl">
+          <a href="#val-node_tbl" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> node_tbl : 
+            <span>
+             <span>(
+              <a href="../../../Odoc_info/Name/index.html#type-t"
+               class="cursor-pointer text-orange">Odoc_info.Name.t
+              </a>, unit)
+             </span> 
+             <a href="../../../Stdlib/Hashtbl/index.html#type-t"
+              class="cursor-pointer text-orange">Stdlib.Hashtbl.t
+             </a>
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value instance-variable anchored p-2 text-sm
+          rounded border-l-4 border-orange my-3 bg-gray-100" id="val-minus">
+          <a href="#val-minus" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> minus : 
+            <a href="../../../Odoc_info/index.html#type-text_element"
+             class="cursor-pointer text-orange">Odoc_info.text_element
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value instance-variable anchored p-2 text-sm
+          rounded border-l-4 border-orange my-3 bg-gray-100"
+          id="val-maxdepth">
+          <a href="#val-maxdepth" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> maxdepth : int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value instance-variable anchored p-2 text-sm
+          rounded border-l-4 border-orange my-3 bg-gray-100"
+          id="val-linebreak">
+          <a href="#val-linebreak" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> linebreak : 
+            <a href="../../../Odoc_info/index.html#type-text_element"
+             class="cursor-pointer text-orange">Odoc_info.text_element
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value instance-variable anchored p-2 text-sm
+          rounded border-l-4 border-orange my-3 bg-gray-100"
+          id="val-indices_to_build">
+          <a href="#val-indices_to_build" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            <span class="font-semibold">mutable</span> indices_to_build
+             : 
+            <span>
+             <span>[ `Class <span>| `Class_att</span> 
+              <span>| `Class_type</span> <span>| `Exception</span> 
+              <span>| `Extension</span> <span>| `Method</span> 
+              <span>| `Module</span> <span>| `Module_type</span> 
+              <span>| `Type</span> <span>| `Value</span> ]
+             </span> list
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value instance-variable anchored p-2 text-sm
+          rounded border-l-4 border-orange my-3 bg-gray-100" id="val-bullet">
+          <a href="#val-bullet" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> bullet : 
+            <a href="../../../Odoc_info/index.html#type-text_element"
+             class="cursor-pointer text-orange">Odoc_info.text_element
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-do_index">
+          <a href="#method-do_index" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> do_index : 
+            <span>
+             <span>[ `Class <span>| `Class_att</span> 
+              <span>| `Class_type</span> <span>| `Exception</span> 
+              <span>| `Extension</span> <span>| `Method</span> 
+              <span>| `Module</span> <span>| `Module_type</span> 
+              <span>| `Type</span> <span>| `Value</span> ]
+             </span> <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-escape">
+          <a href="#method-escape" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> escape : 
+            <span>
+             <a href="../../../Odoc_info/Name/index.html#type-t"
+              class="cursor-pointer text-orange">Odoc_info.Name.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../../../Odoc_info/Name/index.html#type-t"
+             class="cursor-pointer text-orange">Odoc_info.Name.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-fix_linebreaks">
+          <a href="#method-fix_linebreaks" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> 
+            <span class="font-semibold">private</span> fix_linebreaks
+             : 
+            <span>
+             <a href="../../../Odoc_info/index.html#type-text"
+              class="cursor-pointer text-orange">Odoc_info.text
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../../../Odoc_info/index.html#type-text"
+             class="cursor-pointer text-orange">Odoc_info.text
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-fixedblock">
+          <a href="#method-fixedblock" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> fixedblock
+             : 
+            <span>
+             <span>
+              <a href="../../../Odoc_info/index.html#type-text_element"
+               class="cursor-pointer text-orange">Odoc_info.text_element
+              </a> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../../../Odoc_info/index.html#type-text_element"
+             class="cursor-pointer text-orange">Odoc_info.text_element
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-generate">
+          <a href="#method-generate" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> generate : 
+            <span>
+             <span>
+              <a href="../../../Odoc_info/Module/index.html#type-t_module"
+               class="cursor-pointer text-orange">Odoc_info.Module.t_module
+              </a> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100"
+          id="method-generate_class_inheritance_info">
+          <a href="#method-generate_class_inheritance_info" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> 
+            generate_class_inheritance_info : 
+            <span>
+             <a href="../../../Stdlib/index.html#type-out_channel"
+              class="cursor-pointer text-orange">Stdlib.out_channel
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../../Odoc_info/Class/index.html#type-t_class"
+              class="cursor-pointer text-orange">Odoc_info.Class.t_class
+             </a> <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100"
+          id="method-generate_class_type_inheritance_info">
+          <a href="#method-generate_class_type_inheritance_info"
+           class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> 
+            generate_class_type_inheritance_info : 
+            <span>
+             <a href="../../../Stdlib/index.html#type-out_channel"
+              class="cursor-pointer text-orange">Stdlib.out_channel
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../../Odoc_info/Class/index.html#type-t_class_type"
+              class="cursor-pointer text-orange">Odoc_info.Class.t_class_type
+             </a> <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-generate_for_class">
+          <a href="#method-generate_for_class" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> generate_for_class
+             : 
+            <span>
+             <a href="../../../Stdlib/index.html#type-out_channel"
+              class="cursor-pointer text-orange">Stdlib.out_channel
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../../Odoc_info/Class/index.html#type-t_class"
+              class="cursor-pointer text-orange">Odoc_info.Class.t_class
+             </a> <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-generate_for_class_type">
+          <a href="#method-generate_for_class_type" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> 
+            generate_for_class_type : 
+            <span>
+             <a href="../../../Stdlib/index.html#type-out_channel"
+              class="cursor-pointer text-orange">Stdlib.out_channel
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../../Odoc_info/Class/index.html#type-t_class_type"
+              class="cursor-pointer text-orange">Odoc_info.Class.t_class_type
+             </a> <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-generate_for_module">
+          <a href="#method-generate_for_module" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> 
+            generate_for_module : 
+            <span>
+             <a href="../../../Stdlib/index.html#type-out_channel"
+              class="cursor-pointer text-orange">Stdlib.out_channel
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../../Odoc_info/Module/index.html#type-t_module"
+              class="cursor-pointer text-orange">Odoc_info.Module.t_module
+             </a> <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100"
+          id="method-generate_for_module_type">
+          <a href="#method-generate_for_module_type" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> 
+            generate_for_module_type : 
+            <span>
+             <a href="../../../Stdlib/index.html#type-out_channel"
+              class="cursor-pointer text-orange">Stdlib.out_channel
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a
+              href="../../../Odoc_info/Module/index.html#type-t_module_type"
+              class="cursor-pointer text-orange">
+              Odoc_info.Module.t_module_type
+             </a> <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100"
+          id="method-generate_inheritance_info">
+          <a href="#method-generate_inheritance_info" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> 
+            generate_inheritance_info : 
+            <span>
+             <a href="../../../Stdlib/index.html#type-out_channel"
+              class="cursor-pointer text-orange">Stdlib.out_channel
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>
+              <a
+               href="../../../Odoc_info/Class/index.html#type-inherited_class"
+               class="cursor-pointer text-orange">
+               Odoc_info.Class.inherited_class
+              </a> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-generate_texi_header">
+          <a href="#method-generate_texi_header" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> 
+            generate_texi_header : 
+            <span>
+             <a href="../../../Stdlib/index.html#type-out_channel"
+              class="cursor-pointer text-orange">Stdlib.out_channel
+             </a> <span class="">&#45;&gt;</span>
+            </span> <span>string <span class="">&#45;&gt;</span></span>
+             
+            <span>
+             <span>
+              <a href="../../../Odoc_info/Module/index.html#type-t_module"
+               class="cursor-pointer text-orange">Odoc_info.Module.t_module
+              </a> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-generate_texi_trailer">
+          <a href="#method-generate_texi_trailer" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> 
+            generate_texi_trailer : 
+            <span>
+             <a href="../../../Stdlib/index.html#type-out_channel"
+              class="cursor-pointer text-orange">Stdlib.out_channel
+             </a> <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-heading">
+          <a href="#method-heading" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> heading : 
+            <span>int <span class="">&#45;&gt;</span></span> 
+            <span>
+             <a href="../../../Odoc_info/index.html#type-text"
+              class="cursor-pointer text-orange">Odoc_info.text
+             </a> <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-index">
+          <a href="#method-index" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> index : 
+            <span>
+             <a href="../../index.html#type-indices" class="cursor-pointer
+              text-orange">indices
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../../Odoc_info/Name/index.html#type-t"
+              class="cursor-pointer text-orange">Odoc_info.Name.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../../../Odoc_info/index.html#type-text_element"
+             class="cursor-pointer text-orange">Odoc_info.text_element
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-label">
+          <a href="#method-label" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> label : 
+            <span>?no_:bool <span class="">&#45;&gt;</span></span> 
+            <span>string <span class="">&#45;&gt;</span></span> string
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-node">
+          <a href="#method-node" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> node : 
+            <span>int <span class="">&#45;&gt;</span></span> 
+            <span>
+             <a href="../../../Odoc_info/Name/index.html#type-t"
+              class="cursor-pointer text-orange">Odoc_info.Name.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../../../Odoc_info/index.html#type-text_element"
+             class="cursor-pointer text-orange">Odoc_info.text_element
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-normal_class_params">
+          <a href="#method-normal_class_params" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> 
+            normal_class_params : 
+            <span>
+             <a href="../../../Odoc_info/Name/index.html#type-t"
+              class="cursor-pointer text-orange">Odoc_info.Name.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../../Odoc_info/Class/index.html#type-t_class"
+              class="cursor-pointer text-orange">Odoc_info.Class.t_class
+             </a> <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-normal_class_type">
+          <a href="#method-normal_class_type" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> normal_class_type
+             : 
+            <span>
+             <a href="../../../Odoc_info/Name/index.html#type-t"
+              class="cursor-pointer text-orange">Odoc_info.Name.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../../Types/index.html#type-class_type"
+              class="cursor-pointer text-orange">Types.class_type
+             </a> <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100"
+          id="method-normal_class_type_param_list">
+          <a href="#method-normal_class_type_param_list" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> 
+            normal_class_type_param_list : 
+            <span>
+             <a href="../../../Odoc_info/Name/index.html#type-t"
+              class="cursor-pointer text-orange">Odoc_info.Name.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>
+              <a href="../../../Types/index.html#type-type_expr"
+               class="cursor-pointer text-orange">Types.type_expr
+              </a> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-normal_cstr_args">
+          <a href="#method-normal_cstr_args" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> normal_cstr_args
+             : <span>?par:bool <span class="">&#45;&gt;</span></span>
+             
+            <span>
+             <a href="../../../Odoc_info/Name/index.html#type-t"
+              class="cursor-pointer text-orange">Odoc_info.Name.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a
+              href="../../../Odoc_info/Type/index.html#type-constructor_args"
+              class="cursor-pointer text-orange">
+              Odoc_info.Type.constructor_args
+             </a> <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-normal_module_type">
+          <a href="#method-normal_module_type" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> normal_module_type
+             : <span>?code:string <span class="">&#45;&gt;</span></span>
+             
+            <span>
+             <a href="../../../Odoc_info/Name/index.html#type-t"
+              class="cursor-pointer text-orange">Odoc_info.Name.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../../Types/index.html#type-module_type"
+              class="cursor-pointer text-orange">Types.module_type
+             </a> <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-normal_type">
+          <a href="#method-normal_type" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> normal_type
+             : 
+            <span>
+             <a href="../../../Odoc_info/Name/index.html#type-t"
+              class="cursor-pointer text-orange">Odoc_info.Name.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../../Types/index.html#type-type_expr"
+              class="cursor-pointer text-orange">Types.type_expr
+             </a> <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-normal_type_list">
+          <a href="#method-normal_type_list" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> normal_type_list
+             : <span>?par:bool <span class="">&#45;&gt;</span></span>
+             
+            <span>
+             <a href="../../../Odoc_info/Name/index.html#type-t"
+              class="cursor-pointer text-orange">Odoc_info.Name.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> <span>string <span class="">&#45;&gt;</span></span>
+             
+            <span>
+             <span>
+              <a href="../../../Types/index.html#type-type_expr"
+               class="cursor-pointer text-orange">Types.type_expr
+              </a> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-relative_idents">
+          <a href="#method-relative_idents" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> relative_idents
+             : 
+            <span>
+             <a href="../../../Odoc_info/Name/index.html#type-t"
+              class="cursor-pointer text-orange">Odoc_info.Name.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> <span>string <span class="">&#45;&gt;</span></span>
+             string
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-relative_module_idents">
+          <a href="#method-relative_module_idents" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> 
+            relative_module_idents : 
+            <span>
+             <a href="../../../Odoc_info/Name/index.html#type-t"
+              class="cursor-pointer text-orange">Odoc_info.Name.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> <span>string <span class="">&#45;&gt;</span></span>
+             string
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-scan_for_index">
+          <a href="#method-scan_for_index" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> scan_for_index
+             : 
+            <span>
+             <a href="../../index.html#type-subparts" class="cursor-pointer
+              text-orange">subparts
+             </a> <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-scan_for_index_in_class">
+          <a href="#method-scan_for_index_in_class" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> 
+            scan_for_index_in_class : 
+            <span>
+             <a href="../../../Odoc_info/Class/index.html#type-class_element"
+              class="cursor-pointer text-orange">
+              Odoc_info.Class.class_element
+             </a> <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-scan_for_index_in_mod">
+          <a href="#method-scan_for_index_in_mod" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> 
+            scan_for_index_in_mod : 
+            <span>
+             <a
+              href="../../../Odoc_info/Module/index.html#type-module_element"
+              class="cursor-pointer text-orange">
+              Odoc_info.Module.module_element
+             </a> <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-soft_fix_linebreaks">
+          <a href="#method-soft_fix_linebreaks" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> 
+            <span class="font-semibold">private</span> soft_fix_linebreaks
+             : <span>int <span class="">&#45;&gt;</span></span> 
+            <span>
+             <span>
+              <a href="../../../Odoc_info/index.html#type-text_element"
+               class="cursor-pointer text-orange">Odoc_info.text_element
+              </a> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../../Odoc_info/index.html#type-text_element"
+              class="cursor-pointer text-orange">Odoc_info.text_element
+             </a> list
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-string_of_type_args">
+          <a href="#method-string_of_type_args" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> 
+            string_of_type_args : 
+            <span>
+             <a
+              href="../../../Odoc_info/Type/index.html#type-constructor_args"
+              class="cursor-pointer text-orange">
+              Odoc_info.Type.constructor_args
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>
+              <a href="../../../Types/index.html#type-type_expr"
+               class="cursor-pointer text-orange">Types.type_expr
+              </a> option
+             </span> <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100"
+          id="method-string_of_type_parameters">
+          <a href="#method-string_of_type_parameters" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> 
+            string_of_type_parameters : 
+            <span>
+             <a href="../../../Odoc_info/Type/index.html#type-t_type"
+              class="cursor-pointer text-orange">Odoc_info.Type.t_type
+             </a> <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-texi_of_Block">
+          <a href="#method-texi_of_Block" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> texi_of_Block
+             : 
+            <span>
+             <a href="../../../Odoc_info/index.html#type-text"
+              class="cursor-pointer text-orange">Odoc_info.text
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../../../Odoc_info/Name/index.html#type-t"
+             class="cursor-pointer text-orange">Odoc_info.Name.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-texi_of_Bold">
+          <a href="#method-texi_of_Bold" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> texi_of_Bold
+             : 
+            <span>
+             <a href="../../../Odoc_info/index.html#type-text"
+              class="cursor-pointer text-orange">Odoc_info.text
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../../../Odoc_info/Name/index.html#type-t"
+             class="cursor-pointer text-orange">Odoc_info.Name.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-texi_of_Center">
+          <a href="#method-texi_of_Center" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> texi_of_Center
+             : 
+            <span>
+             <a href="../../../Odoc_info/index.html#type-text"
+              class="cursor-pointer text-orange">Odoc_info.text
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../../../Odoc_info/Name/index.html#type-t"
+             class="cursor-pointer text-orange">Odoc_info.Name.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-texi_of_Code">
+          <a href="#method-texi_of_Code" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> texi_of_Code
+             : 
+            <span>
+             <a href="../../../Odoc_info/Name/index.html#type-t"
+              class="cursor-pointer text-orange">Odoc_info.Name.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../../../Odoc_info/Name/index.html#type-t"
+             class="cursor-pointer text-orange">Odoc_info.Name.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-texi_of_CodePre">
+          <a href="#method-texi_of_CodePre" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> texi_of_CodePre
+             : 
+            <span>
+             <a href="../../../Odoc_info/Name/index.html#type-t"
+              class="cursor-pointer text-orange">Odoc_info.Name.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../../../Odoc_info/Name/index.html#type-t"
+             class="cursor-pointer text-orange">Odoc_info.Name.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-texi_of_Emphasize">
+          <a href="#method-texi_of_Emphasize" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> texi_of_Emphasize
+             : 
+            <span>
+             <a href="../../../Odoc_info/index.html#type-text"
+              class="cursor-pointer text-orange">Odoc_info.text
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../../../Odoc_info/Name/index.html#type-t"
+             class="cursor-pointer text-orange">Odoc_info.Name.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-texi_of_Enum">
+          <a href="#method-texi_of_Enum" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> texi_of_Enum
+             : 
+            <span>
+             <span>
+              <a href="../../../Odoc_info/index.html#type-text"
+               class="cursor-pointer text-orange">Odoc_info.text
+              </a> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../../../Odoc_info/Name/index.html#type-t"
+             class="cursor-pointer text-orange">Odoc_info.Name.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-texi_of_Italic">
+          <a href="#method-texi_of_Italic" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> texi_of_Italic
+             : 
+            <span>
+             <a href="../../../Odoc_info/index.html#type-text"
+              class="cursor-pointer text-orange">Odoc_info.text
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../../../Odoc_info/Name/index.html#type-t"
+             class="cursor-pointer text-orange">Odoc_info.Name.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-texi_of_Left">
+          <a href="#method-texi_of_Left" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> texi_of_Left
+             : 
+            <span>
+             <a href="../../../Odoc_info/index.html#type-text"
+              class="cursor-pointer text-orange">Odoc_info.text
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../../../Odoc_info/Name/index.html#type-t"
+             class="cursor-pointer text-orange">Odoc_info.Name.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-texi_of_Link">
+          <a href="#method-texi_of_Link" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> texi_of_Link
+             : <span>string <span class="">&#45;&gt;</span></span> 
+            <span>
+             <a href="../../../Odoc_info/index.html#type-text"
+              class="cursor-pointer text-orange">Odoc_info.text
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../../../Odoc_info/Name/index.html#type-t"
+             class="cursor-pointer text-orange">Odoc_info.Name.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-texi_of_List">
+          <a href="#method-texi_of_List" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> texi_of_List
+             : 
+            <span>
+             <span>
+              <a href="../../../Odoc_info/index.html#type-text"
+               class="cursor-pointer text-orange">Odoc_info.text
+              </a> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../../../Odoc_info/Name/index.html#type-t"
+             class="cursor-pointer text-orange">Odoc_info.Name.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-texi_of_Newline">
+          <a href="#method-texi_of_Newline" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> texi_of_Newline
+             : 
+            <a href="../../../Odoc_info/Name/index.html#type-t"
+             class="cursor-pointer text-orange">Odoc_info.Name.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-texi_of_Raw">
+          <a href="#method-texi_of_Raw" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> texi_of_Raw
+             : 
+            <span>
+             <a href="../../../Odoc_info/Name/index.html#type-t"
+              class="cursor-pointer text-orange">Odoc_info.Name.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../../../Odoc_info/Name/index.html#type-t"
+             class="cursor-pointer text-orange">Odoc_info.Name.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-texi_of_Ref">
+          <a href="#method-texi_of_Ref" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> texi_of_Ref
+             : 
+            <span>
+             <a href="../../../Odoc_info/Name/index.html#type-t"
+              class="cursor-pointer text-orange">Odoc_info.Name.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>
+              <a href="../../../Odoc_info/index.html#type-ref_kind"
+               class="cursor-pointer text-orange">Odoc_info.ref_kind
+              </a> option
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../../../Odoc_info/Name/index.html#type-t"
+             class="cursor-pointer text-orange">Odoc_info.Name.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-texi_of_Right">
+          <a href="#method-texi_of_Right" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> texi_of_Right
+             : 
+            <span>
+             <a href="../../../Odoc_info/index.html#type-text"
+              class="cursor-pointer text-orange">Odoc_info.text
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../../../Odoc_info/Name/index.html#type-t"
+             class="cursor-pointer text-orange">Odoc_info.Name.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-texi_of_Subscript">
+          <a href="#method-texi_of_Subscript" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> texi_of_Subscript
+             : 
+            <span>
+             <a href="../../../Odoc_info/index.html#type-text"
+              class="cursor-pointer text-orange">Odoc_info.text
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../../../Odoc_info/Name/index.html#type-t"
+             class="cursor-pointer text-orange">Odoc_info.Name.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-texi_of_Superscript">
+          <a href="#method-texi_of_Superscript" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> 
+            texi_of_Superscript : 
+            <span>
+             <a href="../../../Odoc_info/index.html#type-text"
+              class="cursor-pointer text-orange">Odoc_info.text
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../../../Odoc_info/Name/index.html#type-t"
+             class="cursor-pointer text-orange">Odoc_info.Name.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-texi_of_Target">
+          <a href="#method-texi_of_Target" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> texi_of_Target
+             : <span>target:string <span class="">&#45;&gt;</span></span>
+             
+            <span>code:
+             <a href="../../../Odoc_info/Name/index.html#type-t"
+              class="cursor-pointer text-orange">Odoc_info.Name.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../../../Odoc_info/Name/index.html#type-t"
+             class="cursor-pointer text-orange">Odoc_info.Name.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-texi_of_Title">
+          <a href="#method-texi_of_Title" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> texi_of_Title
+             : <span>int <span class="">&#45;&gt;</span></span> 
+            <span>
+             <a href="../../../Odoc_info/index.html#type-text"
+              class="cursor-pointer text-orange">Odoc_info.text
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../../../Odoc_info/Name/index.html#type-t"
+             class="cursor-pointer text-orange">Odoc_info.Name.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-texi_of_Verbatim">
+          <a href="#method-texi_of_Verbatim" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> texi_of_Verbatim
+             : 
+            <span>
+             <a href="../../../Odoc_info/Name/index.html#type-t"
+              class="cursor-pointer text-orange">Odoc_info.Name.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../../../Odoc_info/Name/index.html#type-t"
+             class="cursor-pointer text-orange">Odoc_info.Name.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-texi_of_attribute">
+          <a href="#method-texi_of_attribute" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> texi_of_attribute
+             : 
+            <span>
+             <a href="../../../Odoc_info/Value/index.html#type-t_attribute"
+              class="cursor-pointer text-orange">Odoc_info.Value.t_attribute
+             </a> <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-texi_of_class">
+          <a href="#method-texi_of_class" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> texi_of_class
+             : 
+            <span>
+             <a href="../../../Odoc_info/Class/index.html#type-t_class"
+              class="cursor-pointer text-orange">Odoc_info.Class.t_class
+             </a> <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-texi_of_class_element">
+          <a href="#method-texi_of_class_element" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> 
+            texi_of_class_element : 
+            <span>
+             <a href="../../../Odoc_info/Name/index.html#type-t"
+              class="cursor-pointer text-orange">Odoc_info.Name.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../../Odoc_info/Class/index.html#type-class_element"
+              class="cursor-pointer text-orange">
+              Odoc_info.Class.class_element
+             </a> <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-texi_of_class_type">
+          <a href="#method-texi_of_class_type" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> texi_of_class_type
+             : 
+            <span>
+             <a href="../../../Odoc_info/Class/index.html#type-t_class_type"
+              class="cursor-pointer text-orange">Odoc_info.Class.t_class_type
+             </a> <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-texi_of_custom_text">
+          <a href="#method-texi_of_custom_text" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> 
+            texi_of_custom_text : 
+            <span>string <span class="">&#45;&gt;</span></span> 
+            <span>
+             <a href="../../../Odoc_info/index.html#type-text"
+              class="cursor-pointer text-orange">Odoc_info.text
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../../../Odoc_info/Name/index.html#type-t"
+             class="cursor-pointer text-orange">Odoc_info.Name.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-texi_of_exception">
+          <a href="#method-texi_of_exception" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> texi_of_exception
+             : 
+            <span>
+             <a
+              href="../../../Odoc_info/Exception/index.html#type-t_exception"
+              class="cursor-pointer text-orange">
+              Odoc_info.Exception.t_exception
+             </a> <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-texi_of_included_module">
+          <a href="#method-texi_of_included_module" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> 
+            texi_of_included_module : 
+            <span>
+             <a
+              href="../../../Odoc_info/Module/index.html#type-included_module"
+              class="cursor-pointer text-orange">
+              Odoc_info.Module.included_module
+             </a> <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-texi_of_info">
+          <a href="#method-texi_of_info" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> texi_of_info
+             : 
+            <span>
+             <span>
+              <a href="../../../Odoc_info/index.html#type-info"
+               class="cursor-pointer text-orange">Odoc_info.info
+              </a> option
+             </span> <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-texi_of_method">
+          <a href="#method-texi_of_method" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> texi_of_method
+             : 
+            <span>
+             <a href="../../../Odoc_info/Value/index.html#type-t_method"
+              class="cursor-pointer text-orange">Odoc_info.Value.t_method
+             </a> <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-texi_of_module">
+          <a href="#method-texi_of_module" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> texi_of_module
+             : 
+            <span>
+             <a href="../../../Odoc_info/Module/index.html#type-t_module"
+              class="cursor-pointer text-orange">Odoc_info.Module.t_module
+             </a> <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-texi_of_module_element">
+          <a href="#method-texi_of_module_element" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> 
+            texi_of_module_element : 
+            <span>
+             <a href="../../../Odoc_info/Name/index.html#type-t"
+              class="cursor-pointer text-orange">Odoc_info.Name.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a
+              href="../../../Odoc_info/Module/index.html#type-module_element"
+              class="cursor-pointer text-orange">
+              Odoc_info.Module.module_element
+             </a> <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-texi_of_module_type">
+          <a href="#method-texi_of_module_type" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> 
+            texi_of_module_type : 
+            <span>
+             <a
+              href="../../../Odoc_info/Module/index.html#type-t_module_type"
+              class="cursor-pointer text-orange">
+              Odoc_info.Module.t_module_type
+             </a> <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-texi_of_text">
+          <a href="#method-texi_of_text" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> texi_of_text
+             : 
+            <span>
+             <a href="../../../Odoc_info/index.html#type-text"
+              class="cursor-pointer text-orange">Odoc_info.text
+             </a> <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-texi_of_text_element">
+          <a href="#method-texi_of_text_element" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> 
+            texi_of_text_element : 
+            <span>
+             <a href="../../../Odoc_info/index.html#type-text_element"
+              class="cursor-pointer text-orange">Odoc_info.text_element
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../../../Odoc_info/Name/index.html#type-t"
+             class="cursor-pointer text-orange">Odoc_info.Name.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-texi_of_type">
+          <a href="#method-texi_of_type" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> texi_of_type
+             : 
+            <span>
+             <a href="../../../Odoc_info/Type/index.html#type-t_type"
+              class="cursor-pointer text-orange">Odoc_info.Type.t_type
+             </a> <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-texi_of_type_extension">
+          <a href="#method-texi_of_type_extension" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> 
+            texi_of_type_extension : 
+            <span>
+             <a href="../../../Odoc_info/Name/index.html#type-t"
+              class="cursor-pointer text-orange">Odoc_info.Name.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a
+              href="../../../Odoc_info/Extension/index.html#type-t_type_extension"
+              class="cursor-pointer text-orange">
+              Odoc_info.Extension.t_type_extension
+             </a> <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-texi_of_value">
+          <a href="#method-texi_of_value" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> texi_of_value
+             : 
+            <span>
+             <a href="../../../Odoc_info/Value/index.html#type-t_value"
+              class="cursor-pointer text-orange">Odoc_info.Value.t_value
+             </a> <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-text_el_of_type_expr">
+          <a href="#method-text_el_of_type_expr" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> 
+            text_el_of_type_expr : 
+            <span>
+             <a href="../../../Odoc_info/Name/index.html#type-t"
+              class="cursor-pointer text-orange">Odoc_info.Name.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../../Types/index.html#type-type_expr"
+              class="cursor-pointer text-orange">Types.type_expr
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../../../Odoc_info/index.html#type-text_element"
+             class="cursor-pointer text-orange">Odoc_info.text_element
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-text_of_attribute">
+          <a href="#method-text_of_attribute" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> text_of_attribute
+             : 
+            <span>
+             <a href="../../../Odoc_info/Value/index.html#type-t_attribute"
+              class="cursor-pointer text-orange">Odoc_info.Value.t_attribute
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../../Odoc_info/index.html#type-text_element"
+              class="cursor-pointer text-orange">Odoc_info.text_element
+             </a> list
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-text_of_author_list">
+          <a href="#method-text_of_author_list" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> 
+            text_of_author_list : 
+            <span><span>string list</span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../../Odoc_info/index.html#type-text_element"
+              class="cursor-pointer text-orange">Odoc_info.text_element
+             </a> list
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-text_of_before">
+          <a href="#method-text_of_before" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> text_of_before
+             : 
+            <span>
+             <span>
+              <span>(string * 
+               <a href="../../../Odoc_info/index.html#type-text"
+                class="cursor-pointer text-orange">Odoc_info.text
+               </a>)
+              </span> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../../Odoc_info/index.html#type-text_element"
+              class="cursor-pointer text-orange">Odoc_info.text_element
+             </a> list
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-text_of_class_kind">
+          <a href="#method-text_of_class_kind" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> text_of_class_kind
+             : 
+            <span>
+             <a href="../../../Odoc_info/Name/index.html#type-t"
+              class="cursor-pointer text-orange">Odoc_info.Name.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../../Odoc_info/Class/index.html#type-class_kind"
+              class="cursor-pointer text-orange">Odoc_info.Class.class_kind
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../../Odoc_info/index.html#type-text_element"
+              class="cursor-pointer text-orange">Odoc_info.text_element
+             </a> list
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-text_of_class_params">
+          <a href="#method-text_of_class_params" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> 
+            text_of_class_params : 
+            <span>
+             <a href="../../../Odoc_info/Name/index.html#type-t"
+              class="cursor-pointer text-orange">Odoc_info.Name.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../../Odoc_info/Class/index.html#type-t_class"
+              class="cursor-pointer text-orange">Odoc_info.Class.t_class
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../../../Odoc_types/index.html#type-text"
+             class="cursor-pointer text-orange">Odoc_types.text
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-text_of_class_type_kind">
+          <a href="#method-text_of_class_type_kind" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> 
+            text_of_class_type_kind : 
+            <span>
+             <a href="../../../Odoc_info/Name/index.html#type-t"
+              class="cursor-pointer text-orange">Odoc_info.Name.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a
+              href="../../../Odoc_info/Class/index.html#type-class_type_kind"
+              class="cursor-pointer text-orange">
+              Odoc_info.Class.class_type_kind
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../../Odoc_info/index.html#type-text_element"
+              class="cursor-pointer text-orange">Odoc_info.text_element
+             </a> list
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100"
+          id="method-text_of_class_type_param_expr_list">
+          <a href="#method-text_of_class_type_param_expr_list"
+           class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> 
+            text_of_class_type_param_expr_list : 
+            <span>
+             <a href="../../../Odoc_info/Name/index.html#type-t"
+              class="cursor-pointer text-orange">Odoc_info.Name.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>
+              <a href="../../../Types/index.html#type-type_expr"
+               class="cursor-pointer text-orange">Types.type_expr
+              </a> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../../Odoc_info/index.html#type-text_element"
+              class="cursor-pointer text-orange">Odoc_info.text_element
+             </a> list
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-text_of_custom">
+          <a href="#method-text_of_custom" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> text_of_custom
+             : 
+            <span>
+             <span>
+              <span>(string * 
+               <a href="../../../Odoc_info/index.html#type-text"
+                class="cursor-pointer text-orange">Odoc_info.text
+               </a>)
+              </span> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../../../Odoc_info/index.html#type-text"
+             class="cursor-pointer text-orange">Odoc_info.text
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-text_of_desc">
+          <a href="#method-text_of_desc" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> text_of_desc
+             : 
+            <span>
+             <span>
+              <a href="../../../Odoc_info/index.html#type-text"
+               class="cursor-pointer text-orange">Odoc_info.text
+              </a> option
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../../Odoc_info/index.html#type-text_element"
+              class="cursor-pointer text-orange">Odoc_info.text_element
+             </a> list
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-text_of_exception">
+          <a href="#method-text_of_exception" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> text_of_exception
+             : 
+            <span>
+             <a
+              href="../../../Odoc_info/Exception/index.html#type-t_exception"
+              class="cursor-pointer text-orange">
+              Odoc_info.Exception.t_exception
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../../Odoc_info/index.html#type-text_element"
+              class="cursor-pointer text-orange">Odoc_info.text_element
+             </a> list
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-text_of_info">
+          <a href="#method-text_of_info" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> text_of_info
+             : <span>?block:bool <span class="">&#45;&gt;</span></span>
+             
+            <span>
+             <span>
+              <a href="../../../Odoc_info/index.html#type-info"
+               class="cursor-pointer text-orange">Odoc_info.info
+              </a> option
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../../Odoc_info/index.html#type-text_element"
+              class="cursor-pointer text-orange">Odoc_info.text_element
+             </a> list
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-text_of_method">
+          <a href="#method-text_of_method" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> text_of_method
+             : 
+            <span>
+             <a href="../../../Odoc_info/Value/index.html#type-t_method"
+              class="cursor-pointer text-orange">Odoc_info.Value.t_method
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../../Odoc_info/index.html#type-text_element"
+              class="cursor-pointer text-orange">Odoc_info.text_element
+             </a> list
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-text_of_module_kind">
+          <a href="#method-text_of_module_kind" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> 
+            text_of_module_kind : 
+            <span>?with_def_syntax:bool <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../../Odoc_info/Module/index.html#type-module_kind"
+              class="cursor-pointer text-orange">Odoc_info.Module.module_kind
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../../Odoc_info/index.html#type-text_element"
+              class="cursor-pointer text-orange">Odoc_info.text_element
+             </a> list
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100"
+          id="method-text_of_module_parameter_list">
+          <a href="#method-text_of_module_parameter_list" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> 
+            text_of_module_parameter_list : 
+            <span>
+             <span>
+              <span>(
+               <a
+                href="../../../Odoc_info/Module/index.html#type-module_parameter"
+                class="cursor-pointer text-orange">
+                Odoc_info.Module.module_parameter
+               </a> * 
+               <span>
+                <span>
+                 <a href="../../../Odoc_info/index.html#type-text_element"
+                  class="cursor-pointer text-orange">Odoc_info.text_element
+                 </a> list
+                </span> option
+               </span>)
+              </span> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../../Odoc_info/index.html#type-text_element"
+              class="cursor-pointer text-orange">Odoc_info.text_element
+             </a> list
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-text_of_module_type">
+          <a href="#method-text_of_module_type" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> 
+            text_of_module_type : 
+            <span>
+             <a href="../../../Types/index.html#type-module_type"
+              class="cursor-pointer text-orange">Types.module_type
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../../Odoc_info/index.html#type-text_element"
+              class="cursor-pointer text-orange">Odoc_info.text_element
+             </a> list
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100"
+          id="method-text_of_module_type_kind">
+          <a href="#method-text_of_module_type_kind" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> 
+            text_of_module_type_kind : 
+            <span>?with_def_syntax:bool <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a
+              href="../../../Odoc_info/Module/index.html#type-module_type_kind"
+              class="cursor-pointer text-orange">
+              Odoc_info.Module.module_type_kind
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../../Odoc_info/index.html#type-text_element"
+              class="cursor-pointer text-orange">Odoc_info.text_element
+             </a> list
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100"
+          id="method-text_of_parameter_description">
+          <a href="#method-text_of_parameter_description" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> 
+            text_of_parameter_description : 
+            <span>
+             <a href="../../../Odoc_info/Parameter/index.html#type-parameter"
+              class="cursor-pointer text-orange">
+              Odoc_info.Parameter.parameter
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../../../Odoc_info/index.html#type-text"
+             class="cursor-pointer text-orange">Odoc_info.text
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-text_of_parameter_list">
+          <a href="#method-text_of_parameter_list" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> 
+            text_of_parameter_list : 
+            <span>
+             <a href="../../../Odoc_info/Name/index.html#type-t"
+              class="cursor-pointer text-orange">Odoc_info.Name.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>
+              <a
+               href="../../../Odoc_info/Parameter/index.html#type-parameter"
+               class="cursor-pointer text-orange">
+               Odoc_info.Parameter.parameter
+              </a> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../../Odoc_info/index.html#type-text_element"
+              class="cursor-pointer text-orange">Odoc_info.text_element
+             </a> list
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-text_of_params">
+          <a href="#method-text_of_params" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> text_of_params
+             : 
+            <span>
+             <span>
+              <a href="../../../Odoc_info/index.html#type-param"
+               class="cursor-pointer text-orange">Odoc_info.param
+              </a> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../../Odoc_info/index.html#type-text_element"
+              class="cursor-pointer text-orange">Odoc_info.text_element
+             </a> list
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100"
+          id="method-text_of_raised_exceptions">
+          <a href="#method-text_of_raised_exceptions" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> 
+            text_of_raised_exceptions : 
+            <span>
+             <span>
+              <a href="../../../Odoc_info/index.html#type-raised_exception"
+               class="cursor-pointer text-orange">Odoc_info.raised_exception
+              </a> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../../Odoc_info/index.html#type-text_element"
+              class="cursor-pointer text-orange">Odoc_info.text_element
+             </a> list
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-text_of_return_opt">
+          <a href="#method-text_of_return_opt" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> text_of_return_opt
+             : 
+            <span>
+             <span>
+              <a href="../../../Odoc_info/index.html#type-text"
+               class="cursor-pointer text-orange">Odoc_info.text
+              </a> option
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../../Odoc_info/index.html#type-text_element"
+              class="cursor-pointer text-orange">Odoc_info.text_element
+             </a> list
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-text_of_see">
+          <a href="#method-text_of_see" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> text_of_see
+             : 
+            <span>
+             <a href="../../../Odoc_info/index.html#type-see"
+              class="cursor-pointer text-orange">Odoc_info.see
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../../../Odoc_info/index.html#type-text"
+             class="cursor-pointer text-orange">Odoc_info.text
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-text_of_sees">
+          <a href="#method-text_of_sees" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> text_of_sees
+             : 
+            <span>
+             <span>
+              <a href="../../../Odoc_info/index.html#type-see"
+               class="cursor-pointer text-orange">Odoc_info.see
+              </a> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../../Odoc_info/index.html#type-text_element"
+              class="cursor-pointer text-orange">Odoc_info.text_element
+             </a> list
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-text_of_sees_opt">
+          <a href="#method-text_of_sees_opt" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> text_of_sees_opt
+             : 
+            <span>
+             <span>
+              <a href="../../../Odoc_info/index.html#type-see"
+               class="cursor-pointer text-orange">Odoc_info.see
+              </a> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../../Odoc_info/index.html#type-text_element"
+              class="cursor-pointer text-orange">Odoc_info.text_element
+             </a> list
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-text_of_short_type_expr">
+          <a href="#method-text_of_short_type_expr" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> 
+            text_of_short_type_expr : 
+            <span>
+             <a href="../../../Odoc_info/Name/index.html#type-t"
+              class="cursor-pointer text-orange">Odoc_info.Name.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../../Types/index.html#type-type_expr"
+              class="cursor-pointer text-orange">Types.type_expr
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../../Odoc_info/index.html#type-text_element"
+              class="cursor-pointer text-orange">Odoc_info.text_element
+             </a> list
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-text_of_since_opt">
+          <a href="#method-text_of_since_opt" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> text_of_since_opt
+             : 
+            <span><span>string option</span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../../Odoc_info/index.html#type-text_element"
+              class="cursor-pointer text-orange">Odoc_info.text_element
+             </a> list
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-text_of_type_expr">
+          <a href="#method-text_of_type_expr" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> text_of_type_expr
+             : 
+            <span>
+             <a href="../../../Odoc_info/Name/index.html#type-t"
+              class="cursor-pointer text-orange">Odoc_info.Name.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../../Types/index.html#type-type_expr"
+              class="cursor-pointer text-orange">Types.type_expr
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../../Odoc_info/index.html#type-text_element"
+              class="cursor-pointer text-orange">Odoc_info.text_element
+             </a> list
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-text_of_type_expr_list">
+          <a href="#method-text_of_type_expr_list" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> 
+            text_of_type_expr_list : 
+            <span>
+             <a href="../../../Odoc_info/Name/index.html#type-t"
+              class="cursor-pointer text-orange">Odoc_info.Name.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> <span>string <span class="">&#45;&gt;</span></span>
+             
+            <span>
+             <span>
+              <a href="../../../Types/index.html#type-type_expr"
+               class="cursor-pointer text-orange">Types.type_expr
+              </a> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../../Odoc_info/index.html#type-text_element"
+              class="cursor-pointer text-orange">Odoc_info.text_element
+             </a> list
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-text_of_value">
+          <a href="#method-text_of_value" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> text_of_value
+             : 
+            <span>
+             <a href="../../../Odoc_info/Value/index.html#type-t_value"
+              class="cursor-pointer text-orange">Odoc_info.Value.t_value
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../../Odoc_info/index.html#type-text_element"
+              class="cursor-pointer text-orange">Odoc_info.text_element
+             </a> list
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec method anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="method-text_of_version_opt">
+          <a href="#method-text_of_version_opt" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">method</span> 
+            text_of_version_opt : 
+            <span><span>string option</span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../../Odoc_info/index.html#type-text_element"
+              class="cursor-pointer text-orange">Odoc_info.text_element
+             </a> list
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="w-full flex-none lg:w-72 border-t lg:border-l bg-gray-100">
+       <div class="flex h-20 border-b relative">
+        <h2 class="text-xl absolute inset-x-0 p-3 bottom-0 mt-7 font-semibold
+         text-gray-500">ocaml-base-compiler.4.12.0
+        </h2>
+       </div>
+       <div class="m-3">
+        <p class="mb-5 italic text-sm">Official release 4.12.0</p>
+        <div class="mb-3">
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="https://ocaml.org">ocaml.org
+          </a>
+         </div>
+        </div>
+        <details class="font-normal mb-2 text-sm">
+         <summary>Other versions</summary><div id="versions_container"></div>
+        </details><h2 class="font-semibold mb-2 text-sm">Authors</h2>
+        <p class="mb-3 text-sm">Xavier Leroy and many contributors</p>
+        <h2 class="font-semibold mb-2 text-sm">Issues</h2>
+        <div class="mb-3">
+         <a class="text-orange cursor-pointer mb-2 text-sm"
+          href="https://github.com/ocaml/opam-repository/issues">
+          github.com/ocaml/opam-repository/issues
+         </a>
+        </div>
+        <details class="font-semibold mb-2 text-sm">
+         <summary>Package dependencies</summary>
+         <div class="font-normal">
+          <ul>
+           <li>
+            <a href="../../../../../ocaml/index.html" class="text-orange
+             cursor-pointer">ocaml
+            </a>
+           </li>
+           <li>
+            <a href="../../../../../base-unix/index.html" class="text-orange
+             cursor-pointer">base-unix
+            </a>
+           </li>
+           <li>
+            <a href="../../../../../base-bigarray/index.html"
+             class="text-orange cursor-pointer">base-bigarray
+            </a>
+           </li>
+           <li>
+            <a href="../../../../../base-threads/index.html"
+             class="text-orange cursor-pointer">base-threads
+            </a>
+           </li>
+           <li>
+            <a href="../../../../../ocaml-options-vanilla/index.html"
+             class="text-orange cursor-pointer">ocaml-options-vanilla
+            </a>
+           </li>
+          </ul>
+         </div>
+        </details>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div><script>Voodoo.update('../../../../version.json')</script>
+ </body>
+</html>

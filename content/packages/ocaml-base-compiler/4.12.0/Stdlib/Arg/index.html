@@ -1,0 +1,1612 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head><title>Arg (packages.ocaml-base-compiler.4.12.0.Stdlib.Arg)</title>
+  <link rel="stylesheet" href="../../../../tailwind.css"/>
+  <link rel="stylesheet" href="../../../../extra.css"/>
+  <meta charset="utf-8"/><meta name="generator" content="odoc 3dfb7aef2f"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <script src="../../../../highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="../../../../voodoo_client.js"></script>
+  <script
+   src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+   defer="defer">
+  </script>
+ </head>
+ <body class="mx-auto max-w-screen-2xl">
+  <div class="relative">
+   <div class="relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+     <div class="flex justify-between items-center md:justify-start py-6
+      md:space-x-10">
+      <div class="flex justify-start">
+       <a href="https://v3.ocaml.org/">
+        <img src="/colour-logo.svg" alt="" class="h-8 w-auto sm:h-10"/>
+       </a>
+      </div>
+      <nav class="hidden md:flex space-x-10">
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Industry</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/whatisocaml">
+            <p class="text-base font-medium text-gray-900">What is OCaml</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/users">
+            <p class="text-base font-medium text-gray-900">Industrial Users
+            </p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/successstories">
+            <p class="text-base font-medium text-gray-900">Success Stories
+            </p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Resources</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/releases">
+            <p class="text-base font-medium text-gray-900">Releases</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/applications">
+            <p class="text-base font-medium text-gray-900">Applications</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/language">
+            <p class="text-base font-medium text-gray-900">Language</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/archive">
+            <p class="text-base font-medium text-gray-900">Archive</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Community</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/opportunities">
+            <p class="text-base font-medium text-gray-900">Opportunities</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/news">
+            <p class="text-base font-medium text-gray-900">News</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/aroundweb">
+            <p class="text-base font-medium text-gray-900">Around the Web</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="h-screen flex bg-white font-sans">
+   <div class="flex flex-col w-full h-full">
+    <div class="flex-row flex-1">
+     <nav class="bg-orange border-t border-b border-orange flex flex-row">
+      <ol class="max-w-screen-xl w-full px-4 flex space-x-4 sm:px-6 lg:px-8">
+       <li class="flex">
+        <div class="flex items-center">
+         <a href="#" class="text-gray-100 hover:text-gray-500">
+          
+  <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+        </svg>
+  
+          <span class="sr-only">Home</span>
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">packages
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">ocaml-base-compiler
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">4.12.0
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">Stdlib
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="#" class="ml-4 text-sm font-medium text-gray-100
+          hover:text-gray-500">Arg
+         </a>
+        </div>
+       </li>
+      </ol>
+     </nav>
+    </div>
+    <div class="flex flex-row flex-1">
+     <div class="w-72 flex-none bg-gray-100 h-screen border-r border-gray-200
+      sticky top-0 hidden lg:block">
+      <div class="flex h-20 border-b relative">
+       <h2 class="text-xl absolute inset-x-0 p-3 px-5 bottom-0 mt-7
+        border-gray-200 font-semibold text-gray-500 font-sans">On this page
+       </h2>
+      </div>
+     </div>
+     <div class="flex flex-1 flex-col lg:flex-row">
+      <div class="flex-1">
+       <div class="lg:max-w-5xl mx-auto px-3 lg:px-10 mb-10 text-sm">
+        <div class="flex h-20 relative border-b border-gray-200">
+         <div class="relative flex-1 h-20">
+          <h1 class="text-3xl absolute inset-x-0 py-3 bottom-0 font-semibold
+           text-gray-500 font-sans w-full truncate">
+           <code class="font-mono text-gray-800">Stdlib.Arg</code>
+          </h1>
+         </div>
+         <div class="relative flex-none w-28">
+          <h1 class="text-3xl absolute py-3 bottom-0 right-0 font-semibold
+           text-gray-500 font-sans">Module
+          </h1>
+         </div>
+        </div><p class="mt-4">Parsing of command line arguments.</p>
+        <p class="mt-4">This module provides a general mechanism for 
+         extracting options and arguments from the command line to the
+          program. For example:
+        </p>
+        <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+         <code class="font-normal text-sm">
+          let usage_msg = &quot;append [-verbose] &lt;file1&gt;
+          [&lt;file2&gt;] ... -o &lt;output&gt;&quot;
+          let verbose = ref false
+          let input_files = ref []
+          let output_file = ref &quot;&quot;
+          
+          let anon_fun filename =
+            input_files := filename::!input_files
+          
+          let speclist =
+            [(&quot;-verbose&quot;, Arg.Set verbose, &quot;Output debug
+          information&quot;);
+             (&quot;-o&quot;, Arg.Set_string output_file, &quot;Set output
+          file name&quot;)]
+          
+          let () =
+            Arg.parse speclist anon_fun usage_msg;
+            (* Main functionality here *)
+         </code>
+        </pre>
+        <p class="mt-4">Syntax of command lines: A keyword is a character
+          string starting with a <code class="font-normal text-sm">-</code>
+         . An option is a keyword alone or followed by an argument. The
+          types of keywords are: 
+         <code class="font-normal text-sm">Unit</code>, 
+         <code class="font-normal text-sm">Bool</code>, 
+         <code class="font-normal text-sm">Set</code>, 
+         <code class="font-normal text-sm">Clear</code>, 
+         <code class="font-normal text-sm">String</code>, 
+         <code class="font-normal text-sm">Set_string</code>, 
+         <code class="font-normal text-sm">Int</code>, 
+         <code class="font-normal text-sm">Set_int</code>, 
+         <code class="font-normal text-sm">Float</code>, 
+         <code class="font-normal text-sm">Set_float</code>, 
+         <code class="font-normal text-sm">Tuple</code>, 
+         <code class="font-normal text-sm">Symbol</code>, 
+         <code class="font-normal text-sm">Rest</code>, 
+         <code class="font-normal text-sm">Rest_all</code> and 
+         <code class="font-normal text-sm">Expand</code>.
+        </p>
+        <p class="mt-4"><code class="font-normal text-sm">Unit</code>
+         , <code class="font-normal text-sm">Set</code> and 
+         <code class="font-normal text-sm">Clear</code> keywords take
+          no argument.
+        </p>
+        <p class="mt-4">A <code class="font-normal text-sm">Rest</code>
+          or <code class="font-normal text-sm">Rest_all</code> keyword
+          takes the remainder of the command line as arguments. (More
+          explanations below.)
+        </p>
+        <p class="mt-4">Every other keyword takes the following word 
+         on the command line as argument. For compatibility with GNU 
+         getopt_long, <code class="font-normal text-sm">keyword=arg</code>
+          is also allowed. Arguments not preceded by a keyword are called
+          anonymous arguments.
+        </p>
+        <p class="mt-4">Examples (
+         <code class="font-normal text-sm">cmd</code> is assumed to be
+          the command name):
+        </p>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <code class="font-normal text-sm">cmd -flag           </code>
+          (a unit option)
+         </li>
+         <li class="ml-4">
+          <code class="font-normal text-sm">cmd -int 1          </code>
+          (an int option with argument 
+          <code class="font-normal text-sm">1</code>)
+         </li>
+         <li class="ml-4">
+          <code class="font-normal text-sm">cmd -string foobar  </code>
+          (a string option with argument 
+          <code class="font-normal text-sm">&quot;foobar&quot;</code>
+          )
+         </li>
+         <li class="ml-4">
+          <code class="font-normal text-sm">cmd -float 12.34    </code>
+          (a float option with argument 
+          <code class="font-normal text-sm">12.34</code>)
+         </li>
+         <li class="ml-4">
+          <code class="font-normal text-sm">cmd a b c           </code>
+          (three anonymous arguments: 
+          <code class="font-normal text-sm">&quot;a&quot;</code>, 
+          <code class="font-normal text-sm">&quot;b&quot;</code>, and
+           <code class="font-normal text-sm">&quot;c&quot;</code>)
+         </li>
+         <li class="ml-4">
+          <code class="font-normal text-sm">cmd a b -- c d      </code>
+          (two anonymous arguments and a rest option with two arguments)
+         </li>
+        </ul>
+        <p class="mt-4"><code class="font-normal text-sm">Rest</code>
+          takes a function that is called repeatedly for each remaining
+          command line argument. 
+         <code class="font-normal text-sm">Rest_all</code> takes a function
+          that is called once, with the list of all remaining arguments.
+        </p>
+        <p class="mt-4">Note that if no arguments follow a 
+         <code class="font-normal text-sm">Rest</code> keyword then the
+          function is not called at all whereas the function for a 
+         <code class="font-normal text-sm">Rest_all</code> keyword is
+          called with an empty list.
+        </p>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-spec">
+          <a href="#type-spec" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> spec</span>
+           <span> = </span>
+          </code>
+          <table>
+           <tr id="type-spec.Unit">
+            <td class="anchored pl-4">
+             <a href="#type-spec.Unit" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Unit</span> 
+               <span class="font-semibold">of</span> 
+               <span>unit <span class="">&#45;&gt;</span></span> unit
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>Call
+              the function with unit argument<span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-spec.Bool">
+            <td class="anchored pl-4">
+             <a href="#type-spec.Bool" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Bool</span> 
+               <span class="font-semibold">of</span> 
+               <span>bool <span class="">&#45;&gt;</span></span> unit
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>Call
+              the function with a bool argument
+             <span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-spec.Set">
+            <td class="anchored pl-4">
+             <a href="#type-spec.Set" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Set</span> 
+               <span class="font-semibold">of</span> 
+               <span>bool 
+                <a href="../index.html#type-ref" class="cursor-pointer
+                 text-orange">Stdlib.ref
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>Set
+              the reference to true<span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-spec.Clear">
+            <td class="anchored pl-4">
+             <a href="#type-spec.Clear" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Clear</span> 
+               <span class="font-semibold">of</span> 
+               <span>bool 
+                <a href="../index.html#type-ref" class="cursor-pointer
+                 text-orange">Stdlib.ref
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>Set
+              the reference to false<span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-spec.String">
+            <td class="anchored pl-4">
+             <a href="#type-spec.String" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">String</span> 
+               <span class="font-semibold">of</span> 
+               <span>string <span class="">&#45;&gt;</span></span> unit
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>Call
+              the function with a string argument
+             <span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-spec.Set_string">
+            <td class="anchored pl-4">
+             <a href="#type-spec.Set_string" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Set_string</span> 
+               <span class="font-semibold">of</span> 
+               <span>string 
+                <a href="../index.html#type-ref" class="cursor-pointer
+                 text-orange">Stdlib.ref
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>Set
+              the reference to the string argument
+             <span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-spec.Int">
+            <td class="anchored pl-4">
+             <a href="#type-spec.Int" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Int</span> 
+               <span class="font-semibold">of</span> 
+               <span>int <span class="">&#45;&gt;</span></span> unit
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>Call
+              the function with an int argument
+             <span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-spec.Set_int">
+            <td class="anchored pl-4">
+             <a href="#type-spec.Set_int" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Set_int</span> 
+               <span class="font-semibold">of</span> 
+               <span>int 
+                <a href="../index.html#type-ref" class="cursor-pointer
+                 text-orange">Stdlib.ref
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>Set
+              the reference to the int argument
+             <span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-spec.Float">
+            <td class="anchored pl-4">
+             <a href="#type-spec.Float" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Float</span> 
+               <span class="font-semibold">of</span> 
+               <span>float <span class="">&#45;&gt;</span></span> unit
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>Call
+              the function with a float argument
+             <span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-spec.Set_float">
+            <td class="anchored pl-4">
+             <a href="#type-spec.Set_float" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Set_float</span> 
+               <span class="font-semibold">of</span> 
+               <span>float 
+                <a href="../index.html#type-ref" class="cursor-pointer
+                 text-orange">Stdlib.ref
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>Set
+              the reference to the float argument
+             <span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-spec.Tuple">
+            <td class="anchored pl-4">
+             <a href="#type-spec.Tuple" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Tuple</span> 
+               <span class="font-semibold">of</span> 
+               <span>
+                <a href="#type-spec" class="cursor-pointer text-orange">spec
+                </a> list
+               </span>
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>Take
+              several arguments according to the spec list
+             <span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-spec.Symbol">
+            <td class="anchored pl-4">
+             <a href="#type-spec.Symbol" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Symbol</span> 
+               <span class="font-semibold">of</span> <span>string list</span>
+                * <span>string <span class="">&#45;&gt;</span></span>
+                unit
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>Take
+              one of the symbols as argument and call the function with
+              the symbol<span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-spec.Rest">
+            <td class="anchored pl-4">
+             <a href="#type-spec.Rest" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Rest</span> 
+               <span class="font-semibold">of</span> 
+               <span>string <span class="">&#45;&gt;</span></span> unit
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>Stop
+              interpreting keywords and call the function with each remaining
+              argument<span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-spec.Rest_all">
+            <td class="anchored pl-4">
+             <a href="#type-spec.Rest_all" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Rest_all</span> 
+               <span class="font-semibold">of</span> 
+               <span><span>string list</span> <span class="">&#45;&gt;</span>
+               </span> unit
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>Stop
+              interpreting keywords and call the function with all remaining
+              arguments<span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-spec.Expand">
+            <td class="anchored pl-4">
+             <a href="#type-spec.Expand" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Expand</span> 
+               <span class="font-semibold">of</span> 
+               <span>string <span class="">&#45;&gt;</span></span> 
+               <span>string array</span>
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>If
+              the remaining arguments to process are of the form 
+             <code class="font-normal text-sm">
+              [&quot;-foo&quot;; &quot;arg&quot;] @ rest
+             </code> where &quot;foo&quot; is registered as 
+             <code class="font-normal text-sm">Expand f</code>, then 
+             the arguments 
+             <code class="font-normal text-sm">f &quot;arg&quot; @ rest
+             </code> are processed. Only allowed in 
+             <code class="font-normal text-sm">parse_and_expand_argv_dynamic
+             </code>.<span class="sr-only">*)</span>
+            </td>
+           </tr>
+          </table>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">The concrete type describing the behavior 
+           associated with a keyword.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-key">
+          <a href="#type-key" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> key</span>
+           <span> = string</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-doc">
+          <a href="#type-doc" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> doc</span>
+           <span> = string</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-usage_msg">
+          <a href="#type-usage_msg" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> usage_msg</span>
+           <span> = string</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-anon_fun">
+          <a href="#type-anon_fun" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> anon_fun</span>
+           <span> = <span>string <span class="">&#45;&gt;</span></span> unit
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-parse">
+          <a href="#val-parse" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> parse : 
+            <span>
+             <span>
+              <span>(
+               <a href="#type-key" class="cursor-pointer text-orange">key</a>
+                * 
+               <a href="#type-spec" class="cursor-pointer text-orange">spec
+               </a> * 
+               <a href="#type-doc" class="cursor-pointer text-orange">doc</a>
+               )
+              </span> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-anon_fun" class="cursor-pointer text-orange">
+              anon_fun
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-usage_msg" class="cursor-pointer text-orange">
+              usage_msg
+             </a> <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">
+            Arg.parse speclist anon_fun usage_msg
+           </code> parses the command line. 
+           <code class="font-normal text-sm">speclist</code> is a list
+            of triples 
+           <code class="font-normal text-sm">(key, spec, doc)</code>.
+            <code class="font-normal text-sm">key</code> is the option
+            keyword, it must start with a 
+           <code class="font-normal text-sm">'-'</code> character. 
+           <code class="font-normal text-sm">spec</code> gives the option
+            type and the function to call when this option is found on
+            the command line. <code class="font-normal text-sm">doc</code>
+            is a one-line description of this option. 
+           <code class="font-normal text-sm">anon_fun</code> is called
+            on anonymous arguments. The functions in 
+           <code class="font-normal text-sm">spec</code> and 
+           <code class="font-normal text-sm">anon_fun</code> are called
+            in the same order as their arguments appear on the command
+            line.
+          </p>
+          <p class="mt-4">If an error occurs, 
+           <code class="font-normal text-sm">Arg.parse</code> exits the
+            program, after printing to standard error an error message
+            as follows:
+          </p>
+          <ul class="list-disc mt-2 mb-4">
+           <li class="ml-4">The reason for the error: unknown option,
+             invalid or missing argument, etc.
+           </li>
+           <li class="ml-4">
+            <code class="font-normal text-sm">usage_msg</code>
+           </li>
+           <li class="ml-4">The list of options, each followed by the
+             corresponding <code class="font-normal text-sm">doc</code>
+             string. Beware: options that have an empty 
+            <code class="font-normal text-sm">doc</code> string will 
+            not be included in the list.
+           </li>
+          </ul>
+          <p class="mt-4">For the user to be able to specify anonymous
+            arguments starting with a 
+           <code class="font-normal text-sm">-</code>, include for example
+            
+           <code class="font-normal text-sm">
+            (&quot;-&quot;, String anon_fun, doc)
+           </code> in <code class="font-normal text-sm">speclist</code>
+           .
+          </p>
+          <p class="mt-4">By default, 
+           <code class="font-normal text-sm">parse</code> recognizes 
+           two unit options, <code class="font-normal text-sm">-help</code>
+            and <code class="font-normal text-sm">--help</code>, which
+            will print to standard output 
+           <code class="font-normal text-sm">usage_msg</code> and the
+            list of options, and exit the program. You can override this
+            behaviour by specifying your own 
+           <code class="font-normal text-sm">-help</code> and 
+           <code class="font-normal text-sm">--help</code> options in
+            <code class="font-normal text-sm">speclist</code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-parse_dynamic">
+          <a href="#val-parse_dynamic" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> parse_dynamic
+             : 
+            <span>
+             <span>
+              <span>
+               <span>(
+                <a href="#type-key" class="cursor-pointer text-orange">key
+                </a> * 
+                <a href="#type-spec" class="cursor-pointer text-orange">spec
+                </a> * 
+                <a href="#type-doc" class="cursor-pointer text-orange">doc
+                </a>)
+               </span> list
+              </span> 
+              <a href="../index.html#type-ref" class="cursor-pointer
+               text-orange">Stdlib.ref
+              </a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-anon_fun" class="cursor-pointer text-orange">
+              anon_fun
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-usage_msg" class="cursor-pointer text-orange">
+              usage_msg
+             </a> <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Same as 
+           <a href="#val-parse" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Arg.parse</code>
+           </a>, except that the 
+           <code class="font-normal text-sm">speclist</code> argument
+            is a reference and may be updated during the parsing. A typical
+            use for this feature is to parse command lines of the form:
+          </p>
+          <ul class="list-disc mt-2 mb-4">
+           <li class="ml-4">command subcommand 
+            <code class="font-normal text-sm">options</code> where the
+             list of options depends on the value of the subcommand argument.
+           </li>
+          </ul><ul class="at-tags"><li class="since">since 4.01.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-parse_argv">
+          <a href="#val-parse_argv" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> parse_argv : 
+            <span>?current:
+             <span>int 
+              <a href="../index.html#type-ref" class="cursor-pointer
+               text-orange">Stdlib.ref
+              </a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span>string array</span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>
+              <span>(
+               <a href="#type-key" class="cursor-pointer text-orange">key</a>
+                * 
+               <a href="#type-spec" class="cursor-pointer text-orange">spec
+               </a> * 
+               <a href="#type-doc" class="cursor-pointer text-orange">doc</a>
+               )
+              </span> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-anon_fun" class="cursor-pointer text-orange">
+              anon_fun
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-usage_msg" class="cursor-pointer text-orange">
+              usage_msg
+             </a> <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">
+            Arg.parse_argv ~current args speclist anon_fun usage_msg
+           </code> parses the array 
+           <code class="font-normal text-sm">args</code> as if it were
+            the command line. It uses and updates the value of 
+           <code class="font-normal text-sm">~current</code> (if given),
+            or 
+           <a href="#val-current" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Arg.current</code>
+           </a>. You must set it before calling 
+           <code class="font-normal text-sm">parse_argv</code>. The initial
+            value of <code class="font-normal text-sm">current</code>
+            is the index of the program name (argument 0) in the array.
+            If an error occurs, 
+           <code class="font-normal text-sm">Arg.parse_argv</code> raises
+            
+           <a href="#exception-Bad" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Arg.Bad</code>
+           </a> with the error message as argument. If option 
+           <code class="font-normal text-sm">-help</code> or 
+           <code class="font-normal text-sm">--help</code> is given, 
+           <code class="font-normal text-sm">Arg.parse_argv</code> raises
+            
+           <a href="#exception-Help" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Arg.Help</code>
+           </a> with the help message as argument.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-parse_argv_dynamic">
+          <a href="#val-parse_argv_dynamic" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> parse_argv_dynamic
+             : 
+            <span>?current:
+             <span>int 
+              <a href="../index.html#type-ref" class="cursor-pointer
+               text-orange">Stdlib.ref
+              </a>
+             </span> <span class="">&#45;&gt;</span>
+            </span>
+                   <span><span>string array</span> 
+                    <span class="">&#45;&gt;</span>
+                   </span>
+             
+            <span>
+             <span>
+              <span>
+               <span>(
+                <a href="#type-key" class="cursor-pointer text-orange">key
+                </a> * 
+                <a href="#type-spec" class="cursor-pointer text-orange">spec
+                </a> * 
+                <a href="#type-doc" class="cursor-pointer text-orange">doc
+                </a>)
+               </span> list
+              </span> 
+              <a href="../index.html#type-ref" class="cursor-pointer
+               text-orange">Stdlib.ref
+              </a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-anon_fun" class="cursor-pointer text-orange">
+              anon_fun
+             </a> <span class="">&#45;&gt;</span>
+            </span> <span>string <span class="">&#45;&gt;</span></span>
+             unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Same as 
+           <a href="#val-parse_argv" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Arg.parse_argv</code>
+           </a>, except that the 
+           <code class="font-normal text-sm">speclist</code> argument
+            is a reference and may be updated during the parsing. See
+            
+           <a href="#val-parse_dynamic" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Arg.parse_dynamic</code>
+           </a>.
+          </p><ul class="at-tags"><li class="since">since 4.01.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100"
+          id="val-parse_and_expand_argv_dynamic">
+          <a href="#val-parse_and_expand_argv_dynamic" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            parse_and_expand_argv_dynamic : 
+            <span>
+             <span>int 
+              <a href="../index.html#type-ref" class="cursor-pointer
+               text-orange">Stdlib.ref
+              </a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span><span>string array</span> 
+              <a href="../index.html#type-ref" class="cursor-pointer
+               text-orange">Stdlib.ref
+              </a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>
+              <span>
+               <span>(
+                <a href="#type-key" class="cursor-pointer text-orange">key
+                </a> * 
+                <a href="#type-spec" class="cursor-pointer text-orange">spec
+                </a> * 
+                <a href="#type-doc" class="cursor-pointer text-orange">doc
+                </a>)
+               </span> list
+              </span> 
+              <a href="../index.html#type-ref" class="cursor-pointer
+               text-orange">Stdlib.ref
+              </a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-anon_fun" class="cursor-pointer text-orange">
+              anon_fun
+             </a> <span class="">&#45;&gt;</span>
+            </span> <span>string <span class="">&#45;&gt;</span></span>
+             unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Same as 
+           <a href="#val-parse_argv_dynamic" class="cursor-pointer
+            text-orange">
+            <code class="font-normal text-sm">Arg.parse_argv_dynamic</code>
+           </a>, except that the 
+           <code class="font-normal text-sm">argv</code> argument is 
+           a reference and may be updated during the parsing of 
+           <code class="font-normal text-sm">Expand</code> arguments.
+            See 
+           <a href="#val-parse_argv_dynamic" class="cursor-pointer
+            text-orange">
+            <code class="font-normal text-sm">Arg.parse_argv_dynamic</code>
+           </a>.
+          </p><ul class="at-tags"><li class="since">since 4.05.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-parse_expand">
+          <a href="#val-parse_expand" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> parse_expand : 
+            <span>
+             <span>
+              <span>(
+               <a href="#type-key" class="cursor-pointer text-orange">key</a>
+                * 
+               <a href="#type-spec" class="cursor-pointer text-orange">spec
+               </a> * 
+               <a href="#type-doc" class="cursor-pointer text-orange">doc</a>
+               )
+              </span> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-anon_fun" class="cursor-pointer text-orange">
+              anon_fun
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-usage_msg" class="cursor-pointer text-orange">
+              usage_msg
+             </a> <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Same as 
+           <a href="#val-parse" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Arg.parse</code>
+           </a>, except that the 
+           <code class="font-normal text-sm">Expand</code> arguments 
+           are allowed and the 
+           <a href="#val-current" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">current</code>
+           </a> reference is not updated.
+          </p><ul class="at-tags"><li class="since">since 4.05.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec exception anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="exception-Help">
+          <a href="#exception-Help" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">exception</span> </span>
+           <span><span class="">Help</span> 
+            <span class="font-semibold">of</span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Raised by 
+           <code class="font-normal text-sm">Arg.parse_argv</code> when
+            the user asks for help.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec exception anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="exception-Bad">
+          <a href="#exception-Bad" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">exception</span> </span>
+           <span><span class="">Bad</span> 
+            <span class="font-semibold">of</span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Functions in 
+           <code class="font-normal text-sm">spec</code> or 
+           <code class="font-normal text-sm">anon_fun</code> can raise
+            <code class="font-normal text-sm">Arg.Bad</code> with an 
+           error message to reject invalid arguments. 
+           <code class="font-normal text-sm">Arg.Bad</code> is also raised
+            by 
+           <a href="#val-parse_argv" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Arg.parse_argv</code>
+           </a> in case of an error.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-usage">
+          <a href="#val-usage" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> usage : 
+            <span>
+             <span>
+              <span>(
+               <a href="#type-key" class="cursor-pointer text-orange">key</a>
+                * 
+               <a href="#type-spec" class="cursor-pointer text-orange">spec
+               </a> * 
+               <a href="#type-doc" class="cursor-pointer text-orange">doc</a>
+               )
+              </span> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-usage_msg" class="cursor-pointer text-orange">
+              usage_msg
+             </a> <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">Arg.usage speclist usage_msg
+           </code> prints to standard error an error message that includes
+            the list of valid options. This is the same message that 
+           <a href="#val-parse" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Arg.parse</code>
+           </a> prints in case of error. 
+           <code class="font-normal text-sm">speclist</code> and 
+           <code class="font-normal text-sm">usage_msg</code> are the
+            same as for 
+           <a href="#val-parse" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Arg.parse</code>
+           </a>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-usage_string">
+          <a href="#val-usage_string" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> usage_string : 
+            <span>
+             <span>
+              <span>(
+               <a href="#type-key" class="cursor-pointer text-orange">key</a>
+                * 
+               <a href="#type-spec" class="cursor-pointer text-orange">spec
+               </a> * 
+               <a href="#type-doc" class="cursor-pointer text-orange">doc</a>
+               )
+              </span> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-usage_msg" class="cursor-pointer text-orange">
+              usage_msg
+             </a> <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Returns the message that would have been printed
+            by 
+           <a href="#val-usage" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Arg.usage</code>
+           </a>, if provided with the same parameters.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-align">
+          <a href="#val-align" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> align : 
+            <span>?limit:int <span class="">&#45;&gt;</span></span> 
+            <span>
+             <span>
+              <span>(
+               <a href="#type-key" class="cursor-pointer text-orange">key</a>
+                * 
+               <a href="#type-spec" class="cursor-pointer text-orange">spec
+               </a> * 
+               <a href="#type-doc" class="cursor-pointer text-orange">doc</a>
+               )
+              </span> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>(
+              <a href="#type-key" class="cursor-pointer text-orange">key</a>
+               * 
+              <a href="#type-spec" class="cursor-pointer text-orange">spec
+              </a> * 
+              <a href="#type-doc" class="cursor-pointer text-orange">doc</a>
+              )
+             </span> list
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Align the documentation strings by inserting
+            spaces at the first alignment separator (tab or, if tab is
+            not found, space), according to the length of the keyword.
+            Use a alignment separator as the first character in a doc
+            string if you want to align the whole string. The doc strings
+            corresponding to <code class="font-normal text-sm">Symbol</code>
+            arguments are aligned on the next line.
+          </p>
+          <ul class="at-tags">
+           <li class="parameter">parameter limit 
+            <p class="mt-4">options with keyword and message longer than
+              <code class="font-normal text-sm">limit</code> will not
+              be used to compute the alignment.
+            </p>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-current">
+          <a href="#val-current" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> current : 
+            <span>int 
+             <a href="../index.html#type-ref" class="cursor-pointer
+              text-orange">Stdlib.ref
+             </a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Position (in 
+           <a href="../Sys/index.html#val-argv" class="cursor-pointer
+            text-orange"><code class="font-normal text-sm">Sys.argv</code>
+           </a>) of the argument being processed. You can change this
+            value, e.g. to force 
+           <a href="#val-parse" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Arg.parse</code>
+           </a> to skip some arguments. 
+           <a href="#val-parse" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Arg.parse</code>
+           </a> uses the initial value of 
+           <a href="#val-current" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Arg.current</code>
+           </a> as the index of argument 0 (the program name) and starts
+            parsing arguments at the next element.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-read_arg">
+          <a href="#val-read_arg" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> read_arg : 
+            <span>string <span class="">&#45;&gt;</span></span> 
+            <span>string array</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">Arg.read_arg file</code>
+            reads newline-terminated command line arguments from file
+            <code class="font-normal text-sm">file</code>.
+          </p><ul class="at-tags"><li class="since">since 4.05.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-read_arg0">
+          <a href="#val-read_arg0" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> read_arg0 : 
+            <span>string <span class="">&#45;&gt;</span></span> 
+            <span>string array</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Identical to 
+           <a href="#val-read_arg" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Arg.read_arg</code>
+           </a> but assumes null character terminated command line arguments.
+          </p><ul class="at-tags"><li class="since">since 4.05.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-write_arg">
+          <a href="#val-write_arg" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> write_arg : 
+            <span>string <span class="">&#45;&gt;</span></span> 
+            <span><span>string array</span> <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">Arg.write_arg file args</code>
+            writes the arguments 
+           <code class="font-normal text-sm">args</code> newline-terminated
+            into the file <code class="font-normal text-sm">file</code>
+           . If the any of the arguments in 
+           <code class="font-normal text-sm">args</code> contains a newline,
+            use 
+           <a href="#val-write_arg0" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Arg.write_arg0</code>
+           </a> instead.
+          </p><ul class="at-tags"><li class="since">since 4.05.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-write_arg0">
+          <a href="#val-write_arg0" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> write_arg0 : 
+            <span>string <span class="">&#45;&gt;</span></span> 
+            <span><span>string array</span> <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Identical to 
+           <a href="#val-write_arg" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Arg.write_arg</code>
+           </a> but uses the null character for terminator instead of
+            newline.
+          </p><ul class="at-tags"><li class="since">since 4.05.0</li></ul>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="w-full flex-none lg:w-72 border-t lg:border-l bg-gray-100">
+       <div class="flex h-20 border-b relative">
+        <h2 class="text-xl absolute inset-x-0 p-3 bottom-0 mt-7 font-semibold
+         text-gray-500">ocaml-base-compiler.4.12.0
+        </h2>
+       </div>
+       <div class="m-3">
+        <p class="mb-5 italic text-sm">Official release 4.12.0</p>
+        <div class="mb-3">
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="https://ocaml.org">ocaml.org
+          </a>
+         </div>
+        </div>
+        <details class="font-normal mb-2 text-sm">
+         <summary>Other versions</summary><div id="versions_container"></div>
+        </details><h2 class="font-semibold mb-2 text-sm">Authors</h2>
+        <p class="mb-3 text-sm">Xavier Leroy and many contributors</p>
+        <h2 class="font-semibold mb-2 text-sm">Issues</h2>
+        <div class="mb-3">
+         <a class="text-orange cursor-pointer mb-2 text-sm"
+          href="https://github.com/ocaml/opam-repository/issues">
+          github.com/ocaml/opam-repository/issues
+         </a>
+        </div>
+        <details class="font-semibold mb-2 text-sm">
+         <summary>Package dependencies</summary>
+         <div class="font-normal">
+          <ul>
+           <li>
+            <a href="../../../../ocaml/index.html" class="text-orange
+             cursor-pointer">ocaml
+            </a>
+           </li>
+           <li>
+            <a href="../../../../base-unix/index.html" class="text-orange
+             cursor-pointer">base-unix
+            </a>
+           </li>
+           <li>
+            <a href="../../../../base-bigarray/index.html" class="text-orange
+             cursor-pointer">base-bigarray
+            </a>
+           </li>
+           <li>
+            <a href="../../../../base-threads/index.html" class="text-orange
+             cursor-pointer">base-threads
+            </a>
+           </li>
+           <li>
+            <a href="../../../../ocaml-options-vanilla/index.html"
+             class="text-orange cursor-pointer">ocaml-options-vanilla
+            </a>
+           </li>
+          </ul>
+         </div>
+        </details>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div><script>Voodoo.update('../../../version.json')</script>
+ </body>
+</html>

@@ -1,0 +1,2982 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head><title>Typecore (packages.ocaml-base-compiler.4.12.0.Typecore)</title>
+  <link rel="stylesheet" href="../../../tailwind.css"/>
+  <link rel="stylesheet" href="../../../extra.css"/><meta charset="utf-8"/>
+  <meta name="generator" content="odoc 3dfb7aef2f"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <script src="../../../highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="../../../voodoo_client.js"></script>
+  <script
+   src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+   defer="defer">
+  </script>
+ </head>
+ <body class="mx-auto max-w-screen-2xl">
+  <div class="relative">
+   <div class="relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+     <div class="flex justify-between items-center md:justify-start py-6
+      md:space-x-10">
+      <div class="flex justify-start">
+       <a href="https://v3.ocaml.org/">
+        <img src="/colour-logo.svg" alt="" class="h-8 w-auto sm:h-10"/>
+       </a>
+      </div>
+      <nav class="hidden md:flex space-x-10">
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Industry</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/whatisocaml">
+            <p class="text-base font-medium text-gray-900">What is OCaml</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/users">
+            <p class="text-base font-medium text-gray-900">Industrial Users
+            </p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/successstories">
+            <p class="text-base font-medium text-gray-900">Success Stories
+            </p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Resources</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/releases">
+            <p class="text-base font-medium text-gray-900">Releases</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/applications">
+            <p class="text-base font-medium text-gray-900">Applications</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/language">
+            <p class="text-base font-medium text-gray-900">Language</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/archive">
+            <p class="text-base font-medium text-gray-900">Archive</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Community</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/opportunities">
+            <p class="text-base font-medium text-gray-900">Opportunities</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/news">
+            <p class="text-base font-medium text-gray-900">News</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/aroundweb">
+            <p class="text-base font-medium text-gray-900">Around the Web</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="h-screen flex bg-white font-sans">
+   <div class="flex flex-col w-full h-full">
+    <div class="flex-row flex-1">
+     <nav class="bg-orange border-t border-b border-orange flex flex-row">
+      <ol class="max-w-screen-xl w-full px-4 flex space-x-4 sm:px-6 lg:px-8">
+       <li class="flex">
+        <div class="flex items-center">
+         <a href="#" class="text-gray-100 hover:text-gray-500">
+          
+  <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+        </svg>
+  
+          <span class="sr-only">Home</span>
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">packages
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">ocaml-base-compiler
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">4.12.0
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="#" class="ml-4 text-sm font-medium text-gray-100
+          hover:text-gray-500">Typecore
+         </a>
+        </div>
+       </li>
+      </ol>
+     </nav>
+    </div>
+    <div class="flex flex-row flex-1">
+     <div class="w-72 flex-none bg-gray-100 h-screen border-r border-gray-200
+      sticky top-0 hidden lg:block">
+      <div class="flex h-20 border-b relative">
+       <h2 class="text-xl absolute inset-x-0 p-3 px-5 bottom-0 mt-7
+        border-gray-200 font-semibold text-gray-500 font-sans">On this page
+       </h2>
+      </div>
+     </div>
+     <div class="flex flex-1 flex-col lg:flex-row">
+      <div class="flex-1">
+       <div class="lg:max-w-5xl mx-auto px-3 lg:px-10 mb-10 text-sm">
+        <div class="flex h-20 relative border-b border-gray-200">
+         <div class="relative flex-1 h-20">
+          <h1 class="text-3xl absolute inset-x-0 py-3 bottom-0 font-semibold
+           text-gray-500 font-sans w-full truncate">
+           <code class="font-mono text-gray-800">Typecore</code>
+          </h1>
+         </div>
+         <div class="relative flex-none w-28">
+          <h1 class="text-3xl absolute py-3 bottom-0 right-0 font-semibold
+           text-gray-500 font-sans">Module
+          </h1>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-type_forcing_context">
+          <a href="#type-type_forcing_context" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> type_forcing_context
+           </span><span> = </span>
+          </code>
+          <table>
+           <tr id="type-type_forcing_context.If_conditional">
+            <td class="anchored pl-4">
+             <a href="#type-type_forcing_context.If_conditional"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">If_conditional</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-type_forcing_context.If_no_else_branch">
+            <td class="anchored pl-4">
+             <a href="#type-type_forcing_context.If_no_else_branch"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">If_no_else_branch</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-type_forcing_context.While_loop_conditional">
+            <td class="anchored pl-4">
+             <a href="#type-type_forcing_context.While_loop_conditional"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">While_loop_conditional</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-type_forcing_context.While_loop_body">
+            <td class="anchored pl-4">
+             <a href="#type-type_forcing_context.While_loop_body"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">While_loop_body</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-type_forcing_context.For_loop_start_index">
+            <td class="anchored pl-4">
+             <a href="#type-type_forcing_context.For_loop_start_index"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">For_loop_start_index</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-type_forcing_context.For_loop_stop_index">
+            <td class="anchored pl-4">
+             <a href="#type-type_forcing_context.For_loop_stop_index"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">For_loop_stop_index</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-type_forcing_context.For_loop_body">
+            <td class="anchored pl-4">
+             <a href="#type-type_forcing_context.For_loop_body"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">For_loop_body</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-type_forcing_context.Assert_condition">
+            <td class="anchored pl-4">
+             <a href="#type-type_forcing_context.Assert_condition"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Assert_condition</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-type_forcing_context.Sequence_left_hand_side">
+            <td class="anchored pl-4">
+             <a href="#type-type_forcing_context.Sequence_left_hand_side"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Sequence_left_hand_side</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-type_forcing_context.When_guard">
+            <td class="anchored pl-4">
+             <a href="#type-type_forcing_context.When_guard"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">When_guard</span></span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-type_expected">
+          <a href="#type-type_expected" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> type_expected</span>
+           <span> = <span class="font-semibold">private</span> </span>
+           <span>{</span>
+          </code>
+          <table>
+           <tr id="type-type_expected.ty">
+            <td class="anchored pl-4">
+             <a href="#type-type_expected.ty" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>ty : 
+               <a href="../Types/index.html#type-type_expr"
+                class="cursor-pointer text-orange">Types.type_expr
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-type_expected.explanation">
+            <td class="anchored pl-4">
+             <a href="#type-type_expected.explanation" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>explanation : 
+               <span>
+                <a href="#type-type_forcing_context" class="cursor-pointer
+                 text-orange">type_forcing_context
+                </a> option
+               </span>;
+              </span>
+             </code>
+            </td>
+           </tr>
+          </table><code class="font-normal text-sm"><span>}</span></code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-mk_expected">
+          <a href="#val-mk_expected" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> mk_expected : 
+            <span>?explanation:
+             <a href="#type-type_forcing_context" class="cursor-pointer
+              text-orange">type_forcing_context
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Types/index.html#type-type_expr"
+              class="cursor-pointer text-orange">Types.type_expr
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-type_expected" class="cursor-pointer text-orange">
+             type_expected
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-is_nonexpansive">
+          <a href="#val-is_nonexpansive" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> is_nonexpansive
+             : 
+            <span>
+             <a href="../Typedtree/index.html#type-expression"
+              class="cursor-pointer text-orange">Typedtree.expression
+             </a> <span class="">&#45;&gt;</span>
+            </span> bool
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec module anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="module-Datatype_kind">
+          <a href="#module-Datatype_kind" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">module</span> </span>
+           <span>
+            <a href="Datatype_kind/index.html" class="cursor-pointer
+             text-orange">Datatype_kind
+            </a>
+           </span>
+           <span> : <span class="font-semibold">sig</span> ... 
+            <span class="font-semibold">end</span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-wrong_name">
+          <a href="#type-wrong_name" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> wrong_name</span>
+           <span> = </span><span>{</span>
+          </code>
+          <table>
+           <tr id="type-wrong_name.type_path">
+            <td class="anchored pl-4">
+             <a href="#type-wrong_name.type_path" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>type_path : 
+               <a href="../Path/index.html#type-t" class="cursor-pointer
+                text-orange">Path.t
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-wrong_name.kind">
+            <td class="anchored pl-4">
+             <a href="#type-wrong_name.kind" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>kind : 
+               <a href="Datatype_kind/index.html#type-t"
+                class="cursor-pointer text-orange">Datatype_kind.t
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-wrong_name.name">
+            <td class="anchored pl-4">
+             <a href="#type-wrong_name.name" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>name : 
+               <span>string 
+                <a href="../Asttypes/index.html#type-loc"
+                 class="cursor-pointer text-orange">Asttypes.loc
+                </a>
+               </span>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-wrong_name.valid_names">
+            <td class="anchored pl-4">
+             <a href="#type-wrong_name.valid_names" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>valid_names : <span>string list</span>;</span>
+             </code>
+            </td>
+           </tr>
+          </table><code class="font-normal text-sm"><span>}</span></code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-existential_restriction">
+          <a href="#type-existential_restriction" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> 
+            existential_restriction
+           </span><span> = </span>
+          </code>
+          <table>
+           <tr id="type-existential_restriction.At_toplevel">
+            <td class="anchored pl-4">
+             <a href="#type-existential_restriction.At_toplevel"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">At_toplevel</span></span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>no
+              existential types at the toplevel
+             <span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-existential_restriction.In_group">
+            <td class="anchored pl-4">
+             <a href="#type-existential_restriction.In_group"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">In_group</span></span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>nor
+              with <code class="font-normal text-sm">let ... and ...</code>
+             <span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-existential_restriction.In_rec">
+            <td class="anchored pl-4">
+             <a href="#type-existential_restriction.In_rec" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">In_rec</span></span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>or
+              recursive definition<span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-existential_restriction.With_attributes">
+            <td class="anchored pl-4">
+             <a href="#type-existential_restriction.With_attributes"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">With_attributes</span></span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>or
+              
+             <code class="font-normal text-sm">let[@any_attribute] = ...
+             </code><span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-existential_restriction.In_class_args">
+            <td class="anchored pl-4">
+             <a href="#type-existential_restriction.In_class_args"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">In_class_args</span></span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>or
+              in class arguments 
+             <code class="font-normal text-sm">class c (...) = ...</code>
+             <span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-existential_restriction.In_class_def">
+            <td class="anchored pl-4">
+             <a href="#type-existential_restriction.In_class_def"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">In_class_def</span></span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>or
+              in 
+             <code class="font-normal text-sm">class c = let ... in ...
+             </code><span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-existential_restriction.In_self_pattern">
+            <td class="anchored pl-4">
+             <a href="#type-existential_restriction.In_self_pattern"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">In_self_pattern</span></span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>or
+              in self pattern<span class="sr-only">*)</span>
+            </td>
+           </tr>
+          </table>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-type_binding">
+          <a href="#val-type_binding" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> type_binding : 
+            <span>
+             <a href="../Env/index.html#type-t" class="cursor-pointer
+              text-orange">Env.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Asttypes/index.html#type-rec_flag"
+              class="cursor-pointer text-orange">Asttypes.rec_flag
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>
+              <a href="../Parsetree/index.html#type-value_binding"
+               class="cursor-pointer text-orange">Parsetree.value_binding
+              </a> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Typedtree/index.html#type-value_binding"
+              class="cursor-pointer text-orange">Typedtree.value_binding
+             </a> list
+            </span> * 
+            <a href="../Env/index.html#type-t" class="cursor-pointer
+             text-orange">Env.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-type_let">
+          <a href="#val-type_let" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> type_let : 
+            <span>
+             <a href="#type-existential_restriction" class="cursor-pointer
+              text-orange">existential_restriction
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Env/index.html#type-t" class="cursor-pointer
+              text-orange">Env.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Asttypes/index.html#type-rec_flag"
+              class="cursor-pointer text-orange">Asttypes.rec_flag
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>
+              <a href="../Parsetree/index.html#type-value_binding"
+               class="cursor-pointer text-orange">Parsetree.value_binding
+              </a> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Typedtree/index.html#type-value_binding"
+              class="cursor-pointer text-orange">Typedtree.value_binding
+             </a> list
+            </span> * 
+            <a href="../Env/index.html#type-t" class="cursor-pointer
+             text-orange">Env.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-type_expression">
+          <a href="#val-type_expression" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> type_expression
+             : 
+            <span>
+             <a href="../Env/index.html#type-t" class="cursor-pointer
+              text-orange">Env.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Parsetree/index.html#type-expression"
+              class="cursor-pointer text-orange">Parsetree.expression
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Typedtree/index.html#type-expression"
+             class="cursor-pointer text-orange">Typedtree.expression
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-type_class_arg_pattern">
+          <a href="#val-type_class_arg_pattern" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            type_class_arg_pattern : 
+            <span>string <span class="">&#45;&gt;</span></span> 
+            <span>
+             <a href="../Env/index.html#type-t" class="cursor-pointer
+              text-orange">Env.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Env/index.html#type-t" class="cursor-pointer
+              text-orange">Env.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Asttypes/index.html#type-arg_label"
+              class="cursor-pointer text-orange">Asttypes.arg_label
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Parsetree/index.html#type-pattern"
+              class="cursor-pointer text-orange">Parsetree.pattern
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Typedtree/index.html#type-pattern"
+             class="cursor-pointer text-orange">Typedtree.pattern
+            </a> * 
+            <span>
+             <span>(
+              <a href="../Ident/index.html#type-t" class="cursor-pointer
+               text-orange">Ident.t
+              </a> * 
+              <a href="../Ident/index.html#type-t" class="cursor-pointer
+               text-orange">Ident.t
+              </a> * 
+              <a href="../Types/index.html#type-type_expr"
+               class="cursor-pointer text-orange">Types.type_expr
+              </a>)
+             </span> list
+            </span> * 
+            <a href="../Env/index.html#type-t" class="cursor-pointer
+             text-orange">Env.t
+            </a> * 
+            <a href="../Env/index.html#type-t" class="cursor-pointer
+             text-orange">Env.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-type_self_pattern">
+          <a href="#val-type_self_pattern" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> type_self_pattern
+             : <span>string <span class="">&#45;&gt;</span></span> 
+            <span>
+             <a href="../Types/index.html#type-type_expr"
+              class="cursor-pointer text-orange">Types.type_expr
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Env/index.html#type-t" class="cursor-pointer
+              text-orange">Env.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Env/index.html#type-t" class="cursor-pointer
+              text-orange">Env.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Env/index.html#type-t" class="cursor-pointer
+              text-orange">Env.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Parsetree/index.html#type-pattern"
+              class="cursor-pointer text-orange">Parsetree.pattern
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Typedtree/index.html#type-pattern"
+             class="cursor-pointer text-orange">Typedtree.pattern
+            </a> * 
+            <span>
+             <span>
+              <span>(
+               <a href="../Ident/index.html#type-t" class="cursor-pointer
+                text-orange">Ident.t
+               </a> * 
+               <a href="../Types/index.html#type-type_expr"
+                class="cursor-pointer text-orange">Types.type_expr
+               </a>)
+              </span> 
+              <a href="../Types/Meths/index.html#type-t"
+               class="cursor-pointer text-orange">Types.Meths.t
+              </a>
+             </span> 
+             <a href="../Stdlib/index.html#type-ref" class="cursor-pointer
+              text-orange">Stdlib.ref
+             </a>
+            </span> * 
+            <span>
+             <span>
+              <span>(
+               <a href="../Ident/index.html#type-t" class="cursor-pointer
+                text-orange">Ident.t
+               </a> * 
+               <a href="../Asttypes/index.html#type-mutable_flag"
+                class="cursor-pointer text-orange">Asttypes.mutable_flag
+               </a> * 
+               <a href="../Asttypes/index.html#type-virtual_flag"
+                class="cursor-pointer text-orange">Asttypes.virtual_flag
+               </a> * 
+               <a href="../Types/index.html#type-type_expr"
+                class="cursor-pointer text-orange">Types.type_expr
+               </a>)
+              </span> 
+              <a href="../Types/Vars/index.html#type-t" class="cursor-pointer
+               text-orange">Types.Vars.t
+              </a>
+             </span> 
+             <a href="../Stdlib/index.html#type-ref" class="cursor-pointer
+              text-orange">Stdlib.ref
+             </a>
+            </span> * 
+            <a href="../Env/index.html#type-t" class="cursor-pointer
+             text-orange">Env.t
+            </a> * 
+            <a href="../Env/index.html#type-t" class="cursor-pointer
+             text-orange">Env.t
+            </a> * 
+            <a href="../Env/index.html#type-t" class="cursor-pointer
+             text-orange">Env.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-check_partial">
+          <a href="#val-check_partial" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> check_partial
+             : <span>?lev:int <span class="">&#45;&gt;</span></span> 
+            <span>
+             <a href="../Env/index.html#type-t" class="cursor-pointer
+              text-orange">Env.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Types/index.html#type-type_expr"
+              class="cursor-pointer text-orange">Types.type_expr
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Location/index.html#type-t" class="cursor-pointer
+              text-orange">Location.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>
+              <span>
+               <a href="../Typedtree/index.html#type-value"
+                class="cursor-pointer text-orange">Typedtree.value
+               </a> 
+               <a href="../Typedtree/index.html#type-case"
+                class="cursor-pointer text-orange">Typedtree.case
+               </a>
+              </span> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Typedtree/index.html#type-partial"
+             class="cursor-pointer text-orange">Typedtree.partial
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-type_expect">
+          <a href="#val-type_expect" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> type_expect : 
+            <span>?in_function:
+             <span>(
+              <a href="../Location/index.html#type-t" class="cursor-pointer
+               text-orange">Location.t
+              </a> * 
+              <a href="../Types/index.html#type-type_expr"
+               class="cursor-pointer text-orange">Types.type_expr
+              </a>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Env/index.html#type-t" class="cursor-pointer
+              text-orange">Env.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Parsetree/index.html#type-expression"
+              class="cursor-pointer text-orange">Parsetree.expression
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-type_expected" class="cursor-pointer text-orange">
+              type_expected
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Typedtree/index.html#type-expression"
+             class="cursor-pointer text-orange">Typedtree.expression
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-type_exp">
+          <a href="#val-type_exp" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> type_exp : 
+            <span>
+             <a href="../Env/index.html#type-t" class="cursor-pointer
+              text-orange">Env.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Parsetree/index.html#type-expression"
+              class="cursor-pointer text-orange">Parsetree.expression
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Typedtree/index.html#type-expression"
+             class="cursor-pointer text-orange">Typedtree.expression
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-type_approx">
+          <a href="#val-type_approx" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> type_approx : 
+            <span>
+             <a href="../Env/index.html#type-t" class="cursor-pointer
+              text-orange">Env.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Parsetree/index.html#type-expression"
+              class="cursor-pointer text-orange">Parsetree.expression
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Types/index.html#type-type_expr"
+             class="cursor-pointer text-orange">Types.type_expr
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-type_argument">
+          <a href="#val-type_argument" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> type_argument
+             : 
+            <span>
+             <a href="../Env/index.html#type-t" class="cursor-pointer
+              text-orange">Env.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Parsetree/index.html#type-expression"
+              class="cursor-pointer text-orange">Parsetree.expression
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Types/index.html#type-type_expr"
+              class="cursor-pointer text-orange">Types.type_expr
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Types/index.html#type-type_expr"
+              class="cursor-pointer text-orange">Types.type_expr
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Typedtree/index.html#type-expression"
+             class="cursor-pointer text-orange">Typedtree.expression
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-option_some">
+          <a href="#val-option_some" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> option_some : 
+            <span>
+             <a href="../Env/index.html#type-t" class="cursor-pointer
+              text-orange">Env.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Typedtree/index.html#type-expression"
+              class="cursor-pointer text-orange">Typedtree.expression
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Typedtree/index.html#type-expression"
+             class="cursor-pointer text-orange">Typedtree.expression
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-option_none">
+          <a href="#val-option_none" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> option_none : 
+            <span>
+             <a href="../Env/index.html#type-t" class="cursor-pointer
+              text-orange">Env.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Types/index.html#type-type_expr"
+              class="cursor-pointer text-orange">Types.type_expr
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Location/index.html#type-t" class="cursor-pointer
+              text-orange">Location.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Typedtree/index.html#type-expression"
+             class="cursor-pointer text-orange">Typedtree.expression
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-extract_option_type">
+          <a href="#val-extract_option_type" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> extract_option_type
+             : 
+            <span>
+             <a href="../Env/index.html#type-t" class="cursor-pointer
+              text-orange">Env.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Types/index.html#type-type_expr"
+              class="cursor-pointer text-orange">Types.type_expr
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Types/index.html#type-type_expr"
+             class="cursor-pointer text-orange">Types.type_expr
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-generalizable">
+          <a href="#val-generalizable" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> generalizable
+             : <span>int <span class="">&#45;&gt;</span></span> 
+            <span>
+             <a href="../Types/index.html#type-type_expr"
+              class="cursor-pointer text-orange">Types.type_expr
+             </a> <span class="">&#45;&gt;</span>
+            </span> bool
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-reset_delayed_checks">
+          <a href="#val-reset_delayed_checks" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> reset_delayed_checks
+             : <span>unit <span class="">&#45;&gt;</span></span> unit
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-force_delayed_checks">
+          <a href="#val-force_delayed_checks" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> force_delayed_checks
+             : <span>unit <span class="">&#45;&gt;</span></span> unit
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-name_pattern">
+          <a href="#val-name_pattern" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> name_pattern : 
+            <span>string <span class="">&#45;&gt;</span></span> 
+            <span>
+             <span>
+              <a href="../Typedtree/index.html#type-pattern"
+               class="cursor-pointer text-orange">Typedtree.pattern
+              </a> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ident/index.html#type-t" class="cursor-pointer
+             text-orange">Ident.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-name_cases">
+          <a href="#val-name_cases" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> name_cases : 
+            <span>string <span class="">&#45;&gt;</span></span> 
+            <span>
+             <span>
+              <span>
+               <a href="../Typedtree/index.html#type-value"
+                class="cursor-pointer text-orange">Typedtree.value
+               </a> 
+               <a href="../Typedtree/index.html#type-case"
+                class="cursor-pointer text-orange">Typedtree.case
+               </a>
+              </span> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ident/index.html#type-t" class="cursor-pointer
+             text-orange">Ident.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-self_coercion">
+          <a href="#val-self_coercion" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> self_coercion
+             : 
+            <span>
+             <span>
+              <span>(
+               <a href="../Path/index.html#type-t" class="cursor-pointer
+                text-orange">Path.t
+               </a> * 
+               <span>
+                <span>
+                 <a href="../Location/index.html#type-t"
+                  class="cursor-pointer text-orange">Location.t
+                 </a> list
+                </span> 
+                <a href="../Stdlib/index.html#type-ref" class="cursor-pointer
+                 text-orange">Stdlib.ref
+                </a>
+               </span>)
+              </span> list
+             </span> 
+             <a href="../Stdlib/index.html#type-ref" class="cursor-pointer
+              text-orange">Stdlib.ref
+             </a>
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-error">
+          <a href="#type-error" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> error</span>
+           <span> = </span>
+          </code>
+          <table>
+           <tr id="type-error.Constructor_arity_mismatch">
+            <td class="anchored pl-4">
+             <a href="#type-error.Constructor_arity_mismatch"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Constructor_arity_mismatch</span> 
+               <span class="font-semibold">of</span> 
+               <a href="../Longident/index.html#type-t" class="cursor-pointer
+                text-orange">Longident.t
+               </a> * int * int
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Label_mismatch">
+            <td class="anchored pl-4">
+             <a href="#type-error.Label_mismatch" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Label_mismatch</span> 
+               <span class="font-semibold">of</span> 
+               <a href="../Longident/index.html#type-t" class="cursor-pointer
+                text-orange">Longident.t
+               </a> * 
+               <a href="../Ctype/Unification_trace/index.html#type-t"
+                class="cursor-pointer text-orange">Ctype.Unification_trace.t
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Pattern_type_clash">
+            <td class="anchored pl-4">
+             <a href="#type-error.Pattern_type_clash" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pattern_type_clash</span> : 
+               <a href="../Ctype/Unification_trace/index.html#type-t"
+                class="cursor-pointer text-orange">Ctype.Unification_trace.t
+               </a> * 
+               <span>
+                <span><span class="">_</span> 
+                 <a href="../Typedtree/index.html#type-pattern_desc"
+                  class="cursor-pointer text-orange">Typedtree.pattern_desc
+                 </a>
+                </span> option
+               </span> <span class="">&#45;&gt;</span> 
+               <a href="#type-error" class="cursor-pointer text-orange">error
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Or_pattern_type_clash">
+            <td class="anchored pl-4">
+             <a href="#type-error.Or_pattern_type_clash" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Or_pattern_type_clash</span> 
+               <span class="font-semibold">of</span> 
+               <a href="../Ident/index.html#type-t" class="cursor-pointer
+                text-orange">Ident.t
+               </a> * 
+               <a href="../Ctype/Unification_trace/index.html#type-t"
+                class="cursor-pointer text-orange">Ctype.Unification_trace.t
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Multiply_bound_variable">
+            <td class="anchored pl-4">
+             <a href="#type-error.Multiply_bound_variable" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Multiply_bound_variable</span> 
+               <span class="font-semibold">of</span> string
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Orpat_vars">
+            <td class="anchored pl-4">
+             <a href="#type-error.Orpat_vars" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Orpat_vars</span> 
+               <span class="font-semibold">of</span> 
+               <a href="../Ident/index.html#type-t" class="cursor-pointer
+                text-orange">Ident.t
+               </a> * 
+               <span>
+                <a href="../Ident/index.html#type-t" class="cursor-pointer
+                 text-orange">Ident.t
+                </a> list
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Expr_type_clash">
+            <td class="anchored pl-4">
+             <a href="#type-error.Expr_type_clash" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Expr_type_clash</span> 
+               <span class="font-semibold">of</span> 
+               <a href="../Ctype/Unification_trace/index.html#type-t"
+                class="cursor-pointer text-orange">Ctype.Unification_trace.t
+               </a> * 
+               <span>
+                <a href="#type-type_forcing_context" class="cursor-pointer
+                 text-orange">type_forcing_context
+                </a> option
+               </span> * 
+               <span>
+                <a href="../Typedtree/index.html#type-expression_desc"
+                 class="cursor-pointer text-orange">Typedtree.expression_desc
+                </a> option
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Apply_non_function">
+            <td class="anchored pl-4">
+             <a href="#type-error.Apply_non_function" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Apply_non_function</span> 
+               <span class="font-semibold">of</span> 
+               <a href="../Types/index.html#type-type_expr"
+                class="cursor-pointer text-orange">Types.type_expr
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Apply_wrong_label">
+            <td class="anchored pl-4">
+             <a href="#type-error.Apply_wrong_label" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Apply_wrong_label</span> 
+               <span class="font-semibold">of</span> 
+               <a href="../Asttypes/index.html#type-arg_label"
+                class="cursor-pointer text-orange">Asttypes.arg_label
+               </a> * 
+               <a href="../Types/index.html#type-type_expr"
+                class="cursor-pointer text-orange">Types.type_expr
+               </a> * bool
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Label_multiply_defined">
+            <td class="anchored pl-4">
+             <a href="#type-error.Label_multiply_defined" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Label_multiply_defined</span> 
+               <span class="font-semibold">of</span> string
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Label_missing">
+            <td class="anchored pl-4">
+             <a href="#type-error.Label_missing" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Label_missing</span> 
+               <span class="font-semibold">of</span> 
+               <span>
+                <a href="../Ident/index.html#type-t" class="cursor-pointer
+                 text-orange">Ident.t
+                </a> list
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Label_not_mutable">
+            <td class="anchored pl-4">
+             <a href="#type-error.Label_not_mutable" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Label_not_mutable</span> 
+               <span class="font-semibold">of</span> 
+               <a href="../Longident/index.html#type-t" class="cursor-pointer
+                text-orange">Longident.t
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Wrong_name">
+            <td class="anchored pl-4">
+             <a href="#type-error.Wrong_name" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Wrong_name</span> 
+               <span class="font-semibold">of</span> string * 
+               <a href="#type-type_expected" class="cursor-pointer
+                text-orange">type_expected
+               </a> * 
+               <a href="#type-wrong_name" class="cursor-pointer text-orange">
+                wrong_name
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Name_type_mismatch">
+            <td class="anchored pl-4">
+             <a href="#type-error.Name_type_mismatch" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Name_type_mismatch</span> 
+               <span class="font-semibold">of</span> 
+               <a href="Datatype_kind/index.html#type-t"
+                class="cursor-pointer text-orange">Datatype_kind.t
+               </a> * 
+               <a href="../Longident/index.html#type-t" class="cursor-pointer
+                text-orange">Longident.t
+               </a> * 
+               <a href="../Path/index.html#type-t" class="cursor-pointer
+                text-orange">Path.t
+               </a> * 
+               <a href="../Path/index.html#type-t" class="cursor-pointer
+                text-orange">Path.t
+               </a> * 
+               <span>
+                <span>(
+                 <a href="../Path/index.html#type-t" class="cursor-pointer
+                  text-orange">Path.t
+                 </a> * 
+                 <a href="../Path/index.html#type-t" class="cursor-pointer
+                  text-orange">Path.t
+                 </a>)
+                </span> list
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Invalid_format">
+            <td class="anchored pl-4">
+             <a href="#type-error.Invalid_format" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Invalid_format</span> 
+               <span class="font-semibold">of</span> string
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Undefined_method">
+            <td class="anchored pl-4">
+             <a href="#type-error.Undefined_method" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Undefined_method</span> 
+               <span class="font-semibold">of</span> 
+               <a href="../Types/index.html#type-type_expr"
+                class="cursor-pointer text-orange">Types.type_expr
+               </a> * string * <span><span>string list</span> option</span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Undefined_inherited_method">
+            <td class="anchored pl-4">
+             <a href="#type-error.Undefined_inherited_method"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Undefined_inherited_method</span> 
+               <span class="font-semibold">of</span> string * 
+               <span>string list</span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Virtual_class">
+            <td class="anchored pl-4">
+             <a href="#type-error.Virtual_class" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Virtual_class</span> 
+               <span class="font-semibold">of</span> 
+               <a href="../Longident/index.html#type-t" class="cursor-pointer
+                text-orange">Longident.t
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Private_type">
+            <td class="anchored pl-4">
+             <a href="#type-error.Private_type" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Private_type</span> 
+               <span class="font-semibold">of</span> 
+               <a href="../Types/index.html#type-type_expr"
+                class="cursor-pointer text-orange">Types.type_expr
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Private_label">
+            <td class="anchored pl-4">
+             <a href="#type-error.Private_label" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Private_label</span> 
+               <span class="font-semibold">of</span> 
+               <a href="../Longident/index.html#type-t" class="cursor-pointer
+                text-orange">Longident.t
+               </a> * 
+               <a href="../Types/index.html#type-type_expr"
+                class="cursor-pointer text-orange">Types.type_expr
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Private_constructor">
+            <td class="anchored pl-4">
+             <a href="#type-error.Private_constructor" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Private_constructor</span> 
+               <span class="font-semibold">of</span> 
+               <a href="../Types/index.html#type-constructor_description"
+                class="cursor-pointer text-orange">
+                Types.constructor_description
+               </a> * 
+               <a href="../Types/index.html#type-type_expr"
+                class="cursor-pointer text-orange">Types.type_expr
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Unbound_instance_variable">
+            <td class="anchored pl-4">
+             <a href="#type-error.Unbound_instance_variable"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Unbound_instance_variable</span> 
+               <span class="font-semibold">of</span> string * 
+               <span>string list</span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Instance_variable_not_mutable">
+            <td class="anchored pl-4">
+             <a href="#type-error.Instance_variable_not_mutable"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Instance_variable_not_mutable</span>
+                <span class="font-semibold">of</span> string
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Not_subtype">
+            <td class="anchored pl-4">
+             <a href="#type-error.Not_subtype" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Not_subtype</span> 
+               <span class="font-semibold">of</span> 
+               <a href="../Ctype/Unification_trace/index.html#type-t"
+                class="cursor-pointer text-orange">Ctype.Unification_trace.t
+               </a> * 
+               <a href="../Ctype/Unification_trace/index.html#type-t"
+                class="cursor-pointer text-orange">Ctype.Unification_trace.t
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Outside_class">
+            <td class="anchored pl-4">
+             <a href="#type-error.Outside_class" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Outside_class</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Value_multiply_overridden">
+            <td class="anchored pl-4">
+             <a href="#type-error.Value_multiply_overridden"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Value_multiply_overridden</span> 
+               <span class="font-semibold">of</span> string
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Coercion_failure">
+            <td class="anchored pl-4">
+             <a href="#type-error.Coercion_failure" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Coercion_failure</span> 
+               <span class="font-semibold">of</span> 
+               <a href="../Types/index.html#type-type_expr"
+                class="cursor-pointer text-orange">Types.type_expr
+               </a> * 
+               <a href="../Types/index.html#type-type_expr"
+                class="cursor-pointer text-orange">Types.type_expr
+               </a> * 
+               <a href="../Ctype/Unification_trace/index.html#type-t"
+                class="cursor-pointer text-orange">Ctype.Unification_trace.t
+               </a> * bool
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Too_many_arguments">
+            <td class="anchored pl-4">
+             <a href="#type-error.Too_many_arguments" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Too_many_arguments</span> 
+               <span class="font-semibold">of</span> bool * 
+               <a href="../Types/index.html#type-type_expr"
+                class="cursor-pointer text-orange">Types.type_expr
+               </a> * 
+               <span>
+                <a href="#type-type_forcing_context" class="cursor-pointer
+                 text-orange">type_forcing_context
+                </a> option
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Abstract_wrong_label">
+            <td class="anchored pl-4">
+             <a href="#type-error.Abstract_wrong_label" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Abstract_wrong_label</span> 
+               <span class="font-semibold">of</span> 
+               <a href="../Asttypes/index.html#type-arg_label"
+                class="cursor-pointer text-orange">Asttypes.arg_label
+               </a> * 
+               <a href="../Types/index.html#type-type_expr"
+                class="cursor-pointer text-orange">Types.type_expr
+               </a> * 
+               <span>
+                <a href="#type-type_forcing_context" class="cursor-pointer
+                 text-orange">type_forcing_context
+                </a> option
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Scoping_let_module">
+            <td class="anchored pl-4">
+             <a href="#type-error.Scoping_let_module" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Scoping_let_module</span> 
+               <span class="font-semibold">of</span> string * 
+               <a href="../Types/index.html#type-type_expr"
+                class="cursor-pointer text-orange">Types.type_expr
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Not_a_variant_type">
+            <td class="anchored pl-4">
+             <a href="#type-error.Not_a_variant_type" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Not_a_variant_type</span> 
+               <span class="font-semibold">of</span> 
+               <a href="../Longident/index.html#type-t" class="cursor-pointer
+                text-orange">Longident.t
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Incoherent_label_order">
+            <td class="anchored pl-4">
+             <a href="#type-error.Incoherent_label_order" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Incoherent_label_order</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Less_general">
+            <td class="anchored pl-4">
+             <a href="#type-error.Less_general" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Less_general</span> 
+               <span class="font-semibold">of</span> string * 
+               <a href="../Ctype/Unification_trace/index.html#type-t"
+                class="cursor-pointer text-orange">Ctype.Unification_trace.t
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Modules_not_allowed">
+            <td class="anchored pl-4">
+             <a href="#type-error.Modules_not_allowed" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Modules_not_allowed</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Cannot_infer_signature">
+            <td class="anchored pl-4">
+             <a href="#type-error.Cannot_infer_signature" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cannot_infer_signature</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Not_a_packed_module">
+            <td class="anchored pl-4">
+             <a href="#type-error.Not_a_packed_module" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Not_a_packed_module</span> 
+               <span class="font-semibold">of</span> 
+               <a href="../Types/index.html#type-type_expr"
+                class="cursor-pointer text-orange">Types.type_expr
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Unexpected_existential">
+            <td class="anchored pl-4">
+             <a href="#type-error.Unexpected_existential" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Unexpected_existential</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-existential_restriction" class="cursor-pointer
+                text-orange">existential_restriction
+               </a> * string * <span>string list</span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Invalid_interval">
+            <td class="anchored pl-4">
+             <a href="#type-error.Invalid_interval" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Invalid_interval</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Invalid_for_loop_index">
+            <td class="anchored pl-4">
+             <a href="#type-error.Invalid_for_loop_index" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Invalid_for_loop_index</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.No_value_clauses">
+            <td class="anchored pl-4">
+             <a href="#type-error.No_value_clauses" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">No_value_clauses</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Exception_pattern_disallowed">
+            <td class="anchored pl-4">
+             <a href="#type-error.Exception_pattern_disallowed"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Exception_pattern_disallowed</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Mixed_value_and_exception_patterns_under_guard">
+            <td class="anchored pl-4">
+             <a
+              href="#type-error.Mixed_value_and_exception_patterns_under_guard"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span>
+               <span class="">Mixed_value_and_exception_patterns_under_guard
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Inlined_record_escape">
+            <td class="anchored pl-4">
+             <a href="#type-error.Inlined_record_escape" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Inlined_record_escape</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Inlined_record_expected">
+            <td class="anchored pl-4">
+             <a href="#type-error.Inlined_record_expected" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Inlined_record_expected</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Unrefuted_pattern">
+            <td class="anchored pl-4">
+             <a href="#type-error.Unrefuted_pattern" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Unrefuted_pattern</span> 
+               <span class="font-semibold">of</span> 
+               <a href="../Typedtree/index.html#type-pattern"
+                class="cursor-pointer text-orange">Typedtree.pattern
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Invalid_extension_constructor_payload">
+            <td class="anchored pl-4">
+             <a href="#type-error.Invalid_extension_constructor_payload"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span>
+               <span class="">Invalid_extension_constructor_payload</span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Not_an_extension_constructor">
+            <td class="anchored pl-4">
+             <a href="#type-error.Not_an_extension_constructor"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Not_an_extension_constructor</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Literal_overflow">
+            <td class="anchored pl-4">
+             <a href="#type-error.Literal_overflow" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Literal_overflow</span> 
+               <span class="font-semibold">of</span> string
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Unknown_literal">
+            <td class="anchored pl-4">
+             <a href="#type-error.Unknown_literal" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Unknown_literal</span> 
+               <span class="font-semibold">of</span> string * char
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Illegal_letrec_pat">
+            <td class="anchored pl-4">
+             <a href="#type-error.Illegal_letrec_pat" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Illegal_letrec_pat</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Illegal_letrec_expr">
+            <td class="anchored pl-4">
+             <a href="#type-error.Illegal_letrec_expr" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Illegal_letrec_expr</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Illegal_class_expr">
+            <td class="anchored pl-4">
+             <a href="#type-error.Illegal_class_expr" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Illegal_class_expr</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Letop_type_clash">
+            <td class="anchored pl-4">
+             <a href="#type-error.Letop_type_clash" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Letop_type_clash</span> 
+               <span class="font-semibold">of</span> string * 
+               <a href="../Ctype/Unification_trace/index.html#type-t"
+                class="cursor-pointer text-orange">Ctype.Unification_trace.t
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Andop_type_clash">
+            <td class="anchored pl-4">
+             <a href="#type-error.Andop_type_clash" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Andop_type_clash</span> 
+               <span class="font-semibold">of</span> string * 
+               <a href="../Ctype/Unification_trace/index.html#type-t"
+                class="cursor-pointer text-orange">Ctype.Unification_trace.t
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Bindings_type_clash">
+            <td class="anchored pl-4">
+             <a href="#type-error.Bindings_type_clash" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Bindings_type_clash</span> 
+               <span class="font-semibold">of</span> 
+               <a href="../Ctype/Unification_trace/index.html#type-t"
+                class="cursor-pointer text-orange">Ctype.Unification_trace.t
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec exception anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="exception-Error">
+          <a href="#exception-Error" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">exception</span> </span>
+           <span><span class="">Error</span> 
+            <span class="font-semibold">of</span> 
+            <a href="../Location/index.html#type-t" class="cursor-pointer
+             text-orange">Location.t
+            </a> * 
+            <a href="../Env/index.html#type-t" class="cursor-pointer
+             text-orange">Env.t
+            </a> * 
+            <a href="#type-error" class="cursor-pointer text-orange">error
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec exception anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="exception-Error_forward">
+          <a href="#exception-Error_forward" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">exception</span> </span>
+           <span><span class="">Error_forward</span> 
+            <span class="font-semibold">of</span> 
+            <a href="../Location/index.html#type-error" class="cursor-pointer
+             text-orange">Location.error
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-report_error">
+          <a href="#val-report_error" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> report_error : 
+            <span>loc:
+             <a href="../Location/index.html#type-t" class="cursor-pointer
+              text-orange">Location.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Env/index.html#type-t" class="cursor-pointer
+              text-orange">Env.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-error" class="cursor-pointer text-orange">error
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Location/index.html#type-error" class="cursor-pointer
+             text-orange">Location.error
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <ul class="at-tags">
+           <li class="deprecated">deprecated 
+            <p class="mt-4">. Use 
+             <code class="font-normal text-sm">Location</code>.error_of_exn
+             , <code class="font-normal text-sm">Location</code>.print_report
+             .
+            </p>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-type_module">
+          <a href="#val-type_module" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> type_module : 
+            <span>
+             <span>(
+              <span>
+               <a href="../Env/index.html#type-t" class="cursor-pointer
+                text-orange">Env.t
+               </a> <span class="">&#45;&gt;</span>
+              </span> 
+              <span>
+               <a href="../Parsetree/index.html#type-module_expr"
+                class="cursor-pointer text-orange">Parsetree.module_expr
+               </a> <span class="">&#45;&gt;</span>
+              </span> 
+              <a href="../Typedtree/index.html#type-module_expr"
+               class="cursor-pointer text-orange">Typedtree.module_expr
+              </a>)
+             </span> 
+             <a href="../Stdlib/index.html#type-ref" class="cursor-pointer
+              text-orange">Stdlib.ref
+             </a>
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-type_open">
+          <a href="#val-type_open" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> type_open : 
+            <span>
+             <span>(
+              <span>?used_slot:
+               <span>bool 
+                <a href="../Stdlib/index.html#type-ref" class="cursor-pointer
+                 text-orange">Stdlib.ref
+                </a>
+               </span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span>
+               <a href="../Asttypes/index.html#type-override_flag"
+                class="cursor-pointer text-orange">Asttypes.override_flag
+               </a> <span class="">&#45;&gt;</span>
+              </span> 
+              <span>
+               <a href="../Env/index.html#type-t" class="cursor-pointer
+                text-orange">Env.t
+               </a> <span class="">&#45;&gt;</span>
+              </span> 
+              <span>
+               <a href="../Location/index.html#type-t" class="cursor-pointer
+                text-orange">Location.t
+               </a> <span class="">&#45;&gt;</span>
+              </span> 
+              <span>
+               <span>
+                <a href="../Longident/index.html#type-t"
+                 class="cursor-pointer text-orange">Longident.t
+                </a> 
+                <a href="../Asttypes/index.html#type-loc"
+                 class="cursor-pointer text-orange">Asttypes.loc
+                </a>
+               </span> <span class="">&#45;&gt;</span>
+              </span> 
+              <a href="../Path/index.html#type-t" class="cursor-pointer
+               text-orange">Path.t
+              </a> * 
+              <a href="../Env/index.html#type-t" class="cursor-pointer
+               text-orange">Env.t
+              </a>)
+             </span> 
+             <a href="../Stdlib/index.html#type-ref" class="cursor-pointer
+              text-orange">Stdlib.ref
+             </a>
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-type_open_decl">
+          <a href="#val-type_open_decl" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> type_open_decl
+             : 
+            <span>
+             <span>(
+              <span>?used_slot:
+               <span>bool 
+                <a href="../Stdlib/index.html#type-ref" class="cursor-pointer
+                 text-orange">Stdlib.ref
+                </a>
+               </span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span>
+               <a href="../Env/index.html#type-t" class="cursor-pointer
+                text-orange">Env.t
+               </a> <span class="">&#45;&gt;</span>
+              </span> 
+              <span>
+               <a href="../Parsetree/index.html#type-open_declaration"
+                class="cursor-pointer text-orange">Parsetree.open_declaration
+               </a> <span class="">&#45;&gt;</span>
+              </span> 
+              <a href="../Typedtree/index.html#type-open_declaration"
+               class="cursor-pointer text-orange">Typedtree.open_declaration
+              </a> * 
+              <a href="../Types/index.html#type-signature"
+               class="cursor-pointer text-orange">Types.signature
+              </a> * 
+              <a href="../Env/index.html#type-t" class="cursor-pointer
+               text-orange">Env.t
+              </a>)
+             </span> 
+             <a href="../Stdlib/index.html#type-ref" class="cursor-pointer
+              text-orange">Stdlib.ref
+             </a>
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-type_object">
+          <a href="#val-type_object" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> type_object : 
+            <span>
+             <span>(
+              <span>
+               <a href="../Env/index.html#type-t" class="cursor-pointer
+                text-orange">Env.t
+               </a> <span class="">&#45;&gt;</span>
+              </span> 
+              <span>
+               <a href="../Location/index.html#type-t" class="cursor-pointer
+                text-orange">Location.t
+               </a> <span class="">&#45;&gt;</span>
+              </span> 
+              <span>
+               <a href="../Parsetree/index.html#type-class_structure"
+                class="cursor-pointer text-orange">Parsetree.class_structure
+               </a> <span class="">&#45;&gt;</span>
+              </span> 
+              <a href="../Typedtree/index.html#type-class_structure"
+               class="cursor-pointer text-orange">Typedtree.class_structure
+              </a> * 
+              <a href="../Types/index.html#type-class_signature"
+               class="cursor-pointer text-orange">Types.class_signature
+              </a> * <span>string list</span>)
+             </span> 
+             <a href="../Stdlib/index.html#type-ref" class="cursor-pointer
+              text-orange">Stdlib.ref
+             </a>
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-type_package">
+          <a href="#val-type_package" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> type_package : 
+            <span>
+             <span>(
+              <span>
+               <a href="../Env/index.html#type-t" class="cursor-pointer
+                text-orange">Env.t
+               </a> <span class="">&#45;&gt;</span>
+              </span> 
+              <span>
+               <a href="../Parsetree/index.html#type-module_expr"
+                class="cursor-pointer text-orange">Parsetree.module_expr
+               </a> <span class="">&#45;&gt;</span>
+              </span> 
+              <span>
+               <a href="../Path/index.html#type-t" class="cursor-pointer
+                text-orange">Path.t
+               </a> <span class="">&#45;&gt;</span>
+              </span> 
+              <span>
+               <span>
+                <a href="../Longident/index.html#type-t"
+                 class="cursor-pointer text-orange">Longident.t
+                </a> list
+               </span> <span class="">&#45;&gt;</span>
+              </span> 
+              <a href="../Typedtree/index.html#type-module_expr"
+               class="cursor-pointer text-orange">Typedtree.module_expr
+              </a> * 
+              <span>
+               <a href="../Types/index.html#type-type_expr"
+                class="cursor-pointer text-orange">Types.type_expr
+               </a> list
+              </span>)
+             </span> 
+             <a href="../Stdlib/index.html#type-ref" class="cursor-pointer
+              text-orange">Stdlib.ref
+             </a>
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-create_package_type">
+          <a href="#val-create_package_type" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> create_package_type
+             : 
+            <span>
+             <a href="../Location/index.html#type-t" class="cursor-pointer
+              text-orange">Location.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Env/index.html#type-t" class="cursor-pointer
+              text-orange">Env.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>(
+              <a href="../Longident/index.html#type-t" class="cursor-pointer
+               text-orange">Longident.t
+              </a> * 
+              <span>
+               <span>(
+                <a href="../Longident/index.html#type-t"
+                 class="cursor-pointer text-orange">Longident.t
+                </a> * 
+                <a href="../Parsetree/index.html#type-core_type"
+                 class="cursor-pointer text-orange">Parsetree.core_type
+                </a>)
+               </span> list
+              </span>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Path/index.html#type-t" class="cursor-pointer
+             text-orange">Path.t
+            </a> * 
+            <span>
+             <span>(
+              <a href="../Longident/index.html#type-t" class="cursor-pointer
+               text-orange">Longident.t
+              </a> * 
+              <a href="../Typedtree/index.html#type-core_type"
+               class="cursor-pointer text-orange">Typedtree.core_type
+              </a>)
+             </span> list
+            </span> * 
+            <a href="../Types/index.html#type-type_expr"
+             class="cursor-pointer text-orange">Types.type_expr
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-constant">
+          <a href="#val-constant" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> constant : 
+            <span>
+             <a href="../Parsetree/index.html#type-constant"
+              class="cursor-pointer text-orange">Parsetree.constant
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>(
+              <a href="../Asttypes/index.html#type-constant"
+               class="cursor-pointer text-orange">Asttypes.constant
+              </a>, 
+              <a href="#type-error" class="cursor-pointer text-orange">error
+              </a>)
+             </span> 
+             <a href="../Stdlib/index.html#type-result" class="cursor-pointer
+              text-orange">Stdlib.result
+             </a>
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-check_recursive_bindings">
+          <a href="#val-check_recursive_bindings" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            check_recursive_bindings : 
+            <span>
+             <a href="../Env/index.html#type-t" class="cursor-pointer
+              text-orange">Env.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>
+              <a href="../Typedtree/index.html#type-value_binding"
+               class="cursor-pointer text-orange">Typedtree.value_binding
+              </a> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100"
+          id="val-check_recursive_class_bindings">
+          <a href="#val-check_recursive_class_bindings" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            check_recursive_class_bindings : 
+            <span>
+             <a href="../Env/index.html#type-t" class="cursor-pointer
+              text-orange">Env.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>
+              <a href="../Ident/index.html#type-t" class="cursor-pointer
+               text-orange">Ident.t
+              </a> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>
+              <a href="../Typedtree/index.html#type-class_expr"
+               class="cursor-pointer text-orange">Typedtree.class_expr
+              </a> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="w-full flex-none lg:w-72 border-t lg:border-l bg-gray-100">
+       <div class="flex h-20 border-b relative">
+        <h2 class="text-xl absolute inset-x-0 p-3 bottom-0 mt-7 font-semibold
+         text-gray-500">ocaml-base-compiler.4.12.0
+        </h2>
+       </div>
+       <div class="m-3">
+        <p class="mb-5 italic text-sm">Official release 4.12.0</p>
+        <div class="mb-3">
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="https://ocaml.org">ocaml.org
+          </a>
+         </div>
+        </div>
+        <details class="font-normal mb-2 text-sm">
+         <summary>Other versions</summary><div id="versions_container"></div>
+        </details><h2 class="font-semibold mb-2 text-sm">Authors</h2>
+        <p class="mb-3 text-sm">Xavier Leroy and many contributors</p>
+        <h2 class="font-semibold mb-2 text-sm">Issues</h2>
+        <div class="mb-3">
+         <a class="text-orange cursor-pointer mb-2 text-sm"
+          href="https://github.com/ocaml/opam-repository/issues">
+          github.com/ocaml/opam-repository/issues
+         </a>
+        </div>
+        <details class="font-semibold mb-2 text-sm">
+         <summary>Package dependencies</summary>
+         <div class="font-normal">
+          <ul>
+           <li>
+            <a href="../../../ocaml/index.html" class="text-orange
+             cursor-pointer">ocaml
+            </a>
+           </li>
+           <li>
+            <a href="../../../base-unix/index.html" class="text-orange
+             cursor-pointer">base-unix
+            </a>
+           </li>
+           <li>
+            <a href="../../../base-bigarray/index.html" class="text-orange
+             cursor-pointer">base-bigarray
+            </a>
+           </li>
+           <li>
+            <a href="../../../base-threads/index.html" class="text-orange
+             cursor-pointer">base-threads
+            </a>
+           </li>
+           <li>
+            <a href="../../../ocaml-options-vanilla/index.html"
+             class="text-orange cursor-pointer">ocaml-options-vanilla
+            </a>
+           </li>
+          </ul>
+         </div>
+        </details>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div><script>Voodoo.update('../../version.json')</script>
+ </body>
+</html>

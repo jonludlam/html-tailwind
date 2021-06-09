@@ -1,0 +1,2814 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>
+   Clambda_primitives
+   (packages.ocaml-base-compiler.4.12.0.Clambda_primitives)
+  </title><link rel="stylesheet" href="../../../tailwind.css"/>
+  <link rel="stylesheet" href="../../../extra.css"/><meta charset="utf-8"/>
+  <meta name="generator" content="odoc 3dfb7aef2f"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <script src="../../../highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="../../../voodoo_client.js"></script>
+  <script
+   src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+   defer="defer">
+  </script>
+ </head>
+ <body class="mx-auto max-w-screen-2xl">
+  <div class="relative">
+   <div class="relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+     <div class="flex justify-between items-center md:justify-start py-6
+      md:space-x-10">
+      <div class="flex justify-start">
+       <a href="https://v3.ocaml.org/">
+        <img src="/colour-logo.svg" alt="" class="h-8 w-auto sm:h-10"/>
+       </a>
+      </div>
+      <nav class="hidden md:flex space-x-10">
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Industry</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/whatisocaml">
+            <p class="text-base font-medium text-gray-900">What is OCaml</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/users">
+            <p class="text-base font-medium text-gray-900">Industrial Users
+            </p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/successstories">
+            <p class="text-base font-medium text-gray-900">Success Stories
+            </p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Resources</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/releases">
+            <p class="text-base font-medium text-gray-900">Releases</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/applications">
+            <p class="text-base font-medium text-gray-900">Applications</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/language">
+            <p class="text-base font-medium text-gray-900">Language</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/archive">
+            <p class="text-base font-medium text-gray-900">Archive</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Community</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/opportunities">
+            <p class="text-base font-medium text-gray-900">Opportunities</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/news">
+            <p class="text-base font-medium text-gray-900">News</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/aroundweb">
+            <p class="text-base font-medium text-gray-900">Around the Web</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="h-screen flex bg-white font-sans">
+   <div class="flex flex-col w-full h-full">
+    <div class="flex-row flex-1">
+     <nav class="bg-orange border-t border-b border-orange flex flex-row">
+      <ol class="max-w-screen-xl w-full px-4 flex space-x-4 sm:px-6 lg:px-8">
+       <li class="flex">
+        <div class="flex items-center">
+         <a href="#" class="text-gray-100 hover:text-gray-500">
+          
+  <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+        </svg>
+  
+          <span class="sr-only">Home</span>
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">packages
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">ocaml-base-compiler
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">4.12.0
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="#" class="ml-4 text-sm font-medium text-gray-100
+          hover:text-gray-500">Clambda_primitives
+         </a>
+        </div>
+       </li>
+      </ol>
+     </nav>
+    </div>
+    <div class="flex flex-row flex-1">
+     <div class="w-72 flex-none bg-gray-100 h-screen border-r border-gray-200
+      sticky top-0 hidden lg:block">
+      <div class="flex h-20 border-b relative">
+       <h2 class="text-xl absolute inset-x-0 p-3 px-5 bottom-0 mt-7
+        border-gray-200 font-semibold text-gray-500 font-sans">On this page
+       </h2>
+      </div>
+     </div>
+     <div class="flex flex-1 flex-col lg:flex-row">
+      <div class="flex-1">
+       <div class="lg:max-w-5xl mx-auto px-3 lg:px-10 mb-10 text-sm">
+        <div class="flex h-20 relative border-b border-gray-200">
+         <div class="relative flex-1 h-20">
+          <h1 class="text-3xl absolute inset-x-0 py-3 bottom-0 font-semibold
+           text-gray-500 font-sans w-full truncate">
+           <code class="font-mono text-gray-800">Clambda_primitives</code>
+          </h1>
+         </div>
+         <div class="relative flex-none w-28">
+          <h1 class="text-3xl absolute py-3 bottom-0 right-0 font-semibold
+           text-gray-500 font-sans">Module
+          </h1>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-mutable_flag">
+          <a href="#type-mutable_flag" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> mutable_flag</span>
+           <span> = 
+            <a href="../Asttypes/index.html#type-mutable_flag"
+             class="cursor-pointer text-orange">Asttypes.mutable_flag
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-immediate_or_pointer">
+          <a href="#type-immediate_or_pointer" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> immediate_or_pointer
+           </span>
+           <span> = 
+            <a href="../Lambda/index.html#type-immediate_or_pointer"
+             class="cursor-pointer text-orange">Lambda.immediate_or_pointer
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100"
+          id="type-initialization_or_assignment">
+          <a href="#type-initialization_or_assignment" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> 
+            initialization_or_assignment
+           </span>
+           <span> = 
+            <a href="../Lambda/index.html#type-initialization_or_assignment"
+             class="cursor-pointer text-orange">
+             Lambda.initialization_or_assignment
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-is_safe">
+          <a href="#type-is_safe" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> is_safe</span>
+           <span> = 
+            <a href="../Lambda/index.html#type-is_safe" class="cursor-pointer
+             text-orange">Lambda.is_safe
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-boxed">
+          <a href="#type-boxed" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> boxed</span>
+           <span> = </span>
+          </code>
+          <table>
+           <tr id="type-boxed.Boxed">
+            <td class="anchored pl-4">
+             <a href="#type-boxed.Boxed" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Boxed</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-boxed.Unboxed">
+            <td class="anchored pl-4">
+             <a href="#type-boxed.Unboxed" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Unboxed</span></span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-memory_access_size">
+          <a href="#type-memory_access_size" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> memory_access_size
+           </span><span> = </span>
+          </code>
+          <table>
+           <tr id="type-memory_access_size.Sixteen">
+            <td class="anchored pl-4">
+             <a href="#type-memory_access_size.Sixteen" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Sixteen</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-memory_access_size.Thirty_two">
+            <td class="anchored pl-4">
+             <a href="#type-memory_access_size.Thirty_two" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Thirty_two</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-memory_access_size.Sixty_four">
+            <td class="anchored pl-4">
+             <a href="#type-memory_access_size.Sixty_four" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Sixty_four</span></span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-primitive">
+          <a href="#type-primitive" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> primitive</span>
+           <span> = </span>
+          </code>
+          <table>
+           <tr id="type-primitive.Pread_symbol">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pread_symbol" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pread_symbol</span> 
+               <span class="font-semibold">of</span> string
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pmakeblock">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pmakeblock" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pmakeblock</span> 
+               <span class="font-semibold">of</span> int * 
+               <a href="#type-mutable_flag" class="cursor-pointer
+                text-orange">mutable_flag
+               </a> * 
+               <a href="#type-block_shape" class="cursor-pointer text-orange">
+                block_shape
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pfield">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pfield" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pfield</span> 
+               <span class="font-semibold">of</span> int
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pfield_computed">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pfield_computed" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pfield_computed</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Psetfield">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Psetfield" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Psetfield</span> 
+               <span class="font-semibold">of</span> int * 
+               <a href="#type-immediate_or_pointer" class="cursor-pointer
+                text-orange">immediate_or_pointer
+               </a> * 
+               <a href="#type-initialization_or_assignment"
+                class="cursor-pointer text-orange">
+                initialization_or_assignment
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Psetfield_computed">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Psetfield_computed" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Psetfield_computed</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-immediate_or_pointer" class="cursor-pointer
+                text-orange">immediate_or_pointer
+               </a> * 
+               <a href="#type-initialization_or_assignment"
+                class="cursor-pointer text-orange">
+                initialization_or_assignment
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pfloatfield">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pfloatfield" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pfloatfield</span> 
+               <span class="font-semibold">of</span> int
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Psetfloatfield">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Psetfloatfield" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Psetfloatfield</span> 
+               <span class="font-semibold">of</span> int * 
+               <a href="#type-initialization_or_assignment"
+                class="cursor-pointer text-orange">
+                initialization_or_assignment
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pduprecord">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pduprecord" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pduprecord</span> 
+               <span class="font-semibold">of</span> 
+               <a href="../Types/index.html#type-record_representation"
+                class="cursor-pointer text-orange">
+                Types.record_representation
+               </a> * int
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pccall">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pccall" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pccall</span> 
+               <span class="font-semibold">of</span> 
+               <a href="../Primitive/index.html#type-description"
+                class="cursor-pointer text-orange">Primitive.description
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Praise">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Praise" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Praise</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-raise_kind" class="cursor-pointer text-orange">
+                raise_kind
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Psequand">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Psequand" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Psequand</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Psequor">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Psequor" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Psequor</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pnot">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pnot" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pnot</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pnegint">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pnegint" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pnegint</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Paddint">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Paddint" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Paddint</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Psubint">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Psubint" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Psubint</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pmulint">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pmulint" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pmulint</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pdivint">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pdivint" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pdivint</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-is_safe" class="cursor-pointer text-orange">
+                is_safe
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pmodint">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pmodint" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pmodint</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-is_safe" class="cursor-pointer text-orange">
+                is_safe
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pandint">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pandint" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pandint</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Porint">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Porint" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Porint</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pxorint">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pxorint" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pxorint</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Plslint">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Plslint" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Plslint</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Plsrint">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Plsrint" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Plsrint</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pasrint">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pasrint" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pasrint</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pintcomp">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pintcomp" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pintcomp</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-integer_comparison" class="cursor-pointer
+                text-orange">integer_comparison
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pcompare_ints">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pcompare_ints" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pcompare_ints</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pcompare_floats">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pcompare_floats" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pcompare_floats</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pcompare_bints">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pcompare_bints" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pcompare_bints</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-boxed_integer" class="cursor-pointer
+                text-orange">boxed_integer
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Poffsetint">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Poffsetint" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Poffsetint</span> 
+               <span class="font-semibold">of</span> int
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Poffsetref">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Poffsetref" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Poffsetref</span> 
+               <span class="font-semibold">of</span> int
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pintoffloat">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pintoffloat" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pintoffloat</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pfloatofint">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pfloatofint" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pfloatofint</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pnegfloat">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pnegfloat" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pnegfloat</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pabsfloat">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pabsfloat" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pabsfloat</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Paddfloat">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Paddfloat" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Paddfloat</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Psubfloat">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Psubfloat" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Psubfloat</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pmulfloat">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pmulfloat" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pmulfloat</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pdivfloat">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pdivfloat" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pdivfloat</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pfloatcomp">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pfloatcomp" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pfloatcomp</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-float_comparison" class="cursor-pointer
+                text-orange">float_comparison
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pstringlength">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pstringlength" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pstringlength</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pstringrefu">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pstringrefu" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pstringrefu</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pstringrefs">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pstringrefs" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pstringrefs</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pbyteslength">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pbyteslength" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pbyteslength</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pbytesrefu">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pbytesrefu" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pbytesrefu</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pbytessetu">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pbytessetu" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pbytessetu</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pbytesrefs">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pbytesrefs" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pbytesrefs</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pbytessets">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pbytessets" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pbytessets</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pmakearray">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pmakearray" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pmakearray</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-array_kind" class="cursor-pointer text-orange">
+                array_kind
+               </a> * 
+               <a href="#type-mutable_flag" class="cursor-pointer
+                text-orange">mutable_flag
+               </a>
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>For
+              <code class="font-normal text-sm">Pmakearray</code>, the
+              list of arguments must not be empty. The empty array should
+              be represented by a distinguished constant in the middle
+              end.<span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pduparray">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pduparray" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pduparray</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-array_kind" class="cursor-pointer text-orange">
+                array_kind
+               </a> * 
+               <a href="#type-mutable_flag" class="cursor-pointer
+                text-orange">mutable_flag
+               </a>
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>For
+              <code class="font-normal text-sm">Pduparray</code>, the
+              argument must be an immutable array. The arguments of 
+             <code class="font-normal text-sm">Pduparray</code> give 
+             the kind and mutability of the array being *produced* by
+              the duplication.<span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-primitive.Parraylength">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Parraylength" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Parraylength</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-array_kind" class="cursor-pointer text-orange">
+                array_kind
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Parrayrefu">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Parrayrefu" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Parrayrefu</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-array_kind" class="cursor-pointer text-orange">
+                array_kind
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Parraysetu">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Parraysetu" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Parraysetu</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-array_kind" class="cursor-pointer text-orange">
+                array_kind
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Parrayrefs">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Parrayrefs" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Parrayrefs</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-array_kind" class="cursor-pointer text-orange">
+                array_kind
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Parraysets">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Parraysets" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Parraysets</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-array_kind" class="cursor-pointer text-orange">
+                array_kind
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pisint">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pisint" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pisint</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pisout">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pisout" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pisout</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pbintofint">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pbintofint" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pbintofint</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-boxed_integer" class="cursor-pointer
+                text-orange">boxed_integer
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pintofbint">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pintofbint" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pintofbint</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-boxed_integer" class="cursor-pointer
+                text-orange">boxed_integer
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pcvtbint">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pcvtbint" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pcvtbint</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-boxed_integer" class="cursor-pointer
+                text-orange">boxed_integer
+               </a> * 
+               <a href="#type-boxed_integer" class="cursor-pointer
+                text-orange">boxed_integer
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pnegbint">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pnegbint" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pnegbint</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-boxed_integer" class="cursor-pointer
+                text-orange">boxed_integer
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Paddbint">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Paddbint" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Paddbint</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-boxed_integer" class="cursor-pointer
+                text-orange">boxed_integer
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Psubbint">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Psubbint" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Psubbint</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-boxed_integer" class="cursor-pointer
+                text-orange">boxed_integer
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pmulbint">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pmulbint" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pmulbint</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-boxed_integer" class="cursor-pointer
+                text-orange">boxed_integer
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pdivbint">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pdivbint" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pdivbint</span> 
+               <span class="font-semibold">of</span> 
+              </span><span>{</span>
+             </code>
+             <table>
+              <tr id="type-primitive.size">
+               <td class="anchored pl-4">
+                <a href="#type-primitive.size" class="hover-link inline-block
+                 -ml-7 pr-7">
+                 <span class="align-middle text-gray-200 transition text-sm
+                  font-sans opacity-0 hover:text-gray-700">#
+                 </span>
+                </a>
+                <code class="font-normal text-sm">
+                 <span>size : 
+                  <a href="#type-boxed_integer" class="cursor-pointer
+                   text-orange">boxed_integer
+                  </a>;
+                 </span>
+                </code>
+               </td>
+              </tr>
+              <tr id="type-primitive.is_safe">
+               <td class="anchored pl-4">
+                <a href="#type-primitive.is_safe" class="hover-link
+                 inline-block -ml-7 pr-7">
+                 <span class="align-middle text-gray-200 transition text-sm
+                  font-sans opacity-0 hover:text-gray-700">#
+                 </span>
+                </a>
+                <code class="font-normal text-sm">
+                 <span>is_safe : 
+                  <a href="#type-is_safe" class="cursor-pointer text-orange">
+                   is_safe
+                  </a>;
+                 </span>
+                </code>
+               </td>
+              </tr>
+             </table><code class="font-normal text-sm"><span>}</span></code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pmodbint">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pmodbint" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pmodbint</span> 
+               <span class="font-semibold">of</span> 
+              </span><span>{</span>
+             </code>
+             <table>
+              <tr id="type-primitive.size">
+               <td class="anchored pl-4">
+                <a href="#type-primitive.size" class="hover-link inline-block
+                 -ml-7 pr-7">
+                 <span class="align-middle text-gray-200 transition text-sm
+                  font-sans opacity-0 hover:text-gray-700">#
+                 </span>
+                </a>
+                <code class="font-normal text-sm">
+                 <span>size : 
+                  <a href="#type-boxed_integer" class="cursor-pointer
+                   text-orange">boxed_integer
+                  </a>;
+                 </span>
+                </code>
+               </td>
+              </tr>
+              <tr id="type-primitive.is_safe">
+               <td class="anchored pl-4">
+                <a href="#type-primitive.is_safe" class="hover-link
+                 inline-block -ml-7 pr-7">
+                 <span class="align-middle text-gray-200 transition text-sm
+                  font-sans opacity-0 hover:text-gray-700">#
+                 </span>
+                </a>
+                <code class="font-normal text-sm">
+                 <span>is_safe : 
+                  <a href="#type-is_safe" class="cursor-pointer text-orange">
+                   is_safe
+                  </a>;
+                 </span>
+                </code>
+               </td>
+              </tr>
+             </table><code class="font-normal text-sm"><span>}</span></code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pandbint">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pandbint" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pandbint</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-boxed_integer" class="cursor-pointer
+                text-orange">boxed_integer
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Porbint">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Porbint" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Porbint</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-boxed_integer" class="cursor-pointer
+                text-orange">boxed_integer
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pxorbint">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pxorbint" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pxorbint</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-boxed_integer" class="cursor-pointer
+                text-orange">boxed_integer
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Plslbint">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Plslbint" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Plslbint</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-boxed_integer" class="cursor-pointer
+                text-orange">boxed_integer
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Plsrbint">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Plsrbint" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Plsrbint</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-boxed_integer" class="cursor-pointer
+                text-orange">boxed_integer
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pasrbint">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pasrbint" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pasrbint</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-boxed_integer" class="cursor-pointer
+                text-orange">boxed_integer
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pbintcomp">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pbintcomp" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pbintcomp</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-boxed_integer" class="cursor-pointer
+                text-orange">boxed_integer
+               </a> * 
+               <a href="#type-integer_comparison" class="cursor-pointer
+                text-orange">integer_comparison
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pbigarrayref">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pbigarrayref" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pbigarrayref</span> 
+               <span class="font-semibold">of</span> bool * int * 
+               <a href="#type-bigarray_kind" class="cursor-pointer
+                text-orange">bigarray_kind
+               </a> * 
+               <a href="#type-bigarray_layout" class="cursor-pointer
+                text-orange">bigarray_layout
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pbigarrayset">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pbigarrayset" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pbigarrayset</span> 
+               <span class="font-semibold">of</span> bool * int * 
+               <a href="#type-bigarray_kind" class="cursor-pointer
+                text-orange">bigarray_kind
+               </a> * 
+               <a href="#type-bigarray_layout" class="cursor-pointer
+                text-orange">bigarray_layout
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pbigarraydim">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pbigarraydim" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pbigarraydim</span> 
+               <span class="font-semibold">of</span> int
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pstring_load">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pstring_load" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pstring_load</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-memory_access_size" class="cursor-pointer
+                text-orange">memory_access_size
+               </a> * 
+               <a href="#type-is_safe" class="cursor-pointer text-orange">
+                is_safe
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pbytes_load">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pbytes_load" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pbytes_load</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-memory_access_size" class="cursor-pointer
+                text-orange">memory_access_size
+               </a> * 
+               <a href="#type-is_safe" class="cursor-pointer text-orange">
+                is_safe
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pbytes_set">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pbytes_set" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pbytes_set</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-memory_access_size" class="cursor-pointer
+                text-orange">memory_access_size
+               </a> * 
+               <a href="#type-is_safe" class="cursor-pointer text-orange">
+                is_safe
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pbigstring_load">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pbigstring_load" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pbigstring_load</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-memory_access_size" class="cursor-pointer
+                text-orange">memory_access_size
+               </a> * 
+               <a href="#type-is_safe" class="cursor-pointer text-orange">
+                is_safe
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pbigstring_set">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pbigstring_set" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pbigstring_set</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-memory_access_size" class="cursor-pointer
+                text-orange">memory_access_size
+               </a> * 
+               <a href="#type-is_safe" class="cursor-pointer text-orange">
+                is_safe
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pbswap16">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pbswap16" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pbswap16</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pbbswap">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pbbswap" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pbbswap</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-boxed_integer" class="cursor-pointer
+                text-orange">boxed_integer
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Pint_as_pointer">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Pint_as_pointer" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pint_as_pointer</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-primitive.Popaque">
+            <td class="anchored pl-4">
+             <a href="#type-primitive.Popaque" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Popaque</span></span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-integer_comparison">
+          <a href="#type-integer_comparison" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">and</span> integer_comparison
+           </span>
+           <span> = 
+            <a href="../Lambda/index.html#type-integer_comparison"
+             class="cursor-pointer text-orange">Lambda.integer_comparison
+            </a>
+           </span><span> = </span>
+          </code>
+          <table>
+           <tr id="type-integer_comparison.Ceq">
+            <td class="anchored pl-4">
+             <a href="#type-integer_comparison.Ceq" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Ceq</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-integer_comparison.Cne">
+            <td class="anchored pl-4">
+             <a href="#type-integer_comparison.Cne" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cne</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-integer_comparison.Clt">
+            <td class="anchored pl-4">
+             <a href="#type-integer_comparison.Clt" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Clt</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-integer_comparison.Cgt">
+            <td class="anchored pl-4">
+             <a href="#type-integer_comparison.Cgt" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cgt</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-integer_comparison.Cle">
+            <td class="anchored pl-4">
+             <a href="#type-integer_comparison.Cle" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cle</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-integer_comparison.Cge">
+            <td class="anchored pl-4">
+             <a href="#type-integer_comparison.Cge" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cge</span></span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-float_comparison">
+          <a href="#type-float_comparison" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">and</span> float_comparison
+           </span>
+           <span> = 
+            <a href="../Lambda/index.html#type-float_comparison"
+             class="cursor-pointer text-orange">Lambda.float_comparison
+            </a>
+           </span><span> = </span>
+          </code>
+          <table>
+           <tr id="type-float_comparison.CFeq">
+            <td class="anchored pl-4">
+             <a href="#type-float_comparison.CFeq" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">CFeq</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-float_comparison.CFneq">
+            <td class="anchored pl-4">
+             <a href="#type-float_comparison.CFneq" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">CFneq</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-float_comparison.CFlt">
+            <td class="anchored pl-4">
+             <a href="#type-float_comparison.CFlt" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">CFlt</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-float_comparison.CFnlt">
+            <td class="anchored pl-4">
+             <a href="#type-float_comparison.CFnlt" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">CFnlt</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-float_comparison.CFgt">
+            <td class="anchored pl-4">
+             <a href="#type-float_comparison.CFgt" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">CFgt</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-float_comparison.CFngt">
+            <td class="anchored pl-4">
+             <a href="#type-float_comparison.CFngt" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">CFngt</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-float_comparison.CFle">
+            <td class="anchored pl-4">
+             <a href="#type-float_comparison.CFle" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">CFle</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-float_comparison.CFnle">
+            <td class="anchored pl-4">
+             <a href="#type-float_comparison.CFnle" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">CFnle</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-float_comparison.CFge">
+            <td class="anchored pl-4">
+             <a href="#type-float_comparison.CFge" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">CFge</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-float_comparison.CFnge">
+            <td class="anchored pl-4">
+             <a href="#type-float_comparison.CFnge" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">CFnge</span></span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-array_kind">
+          <a href="#type-array_kind" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">and</span> array_kind</span>
+           <span> = 
+            <a href="../Lambda/index.html#type-array_kind"
+             class="cursor-pointer text-orange">Lambda.array_kind
+            </a>
+           </span><span> = </span>
+          </code>
+          <table>
+           <tr id="type-array_kind.Pgenarray">
+            <td class="anchored pl-4">
+             <a href="#type-array_kind.Pgenarray" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pgenarray</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-array_kind.Paddrarray">
+            <td class="anchored pl-4">
+             <a href="#type-array_kind.Paddrarray" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Paddrarray</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-array_kind.Pintarray">
+            <td class="anchored pl-4">
+             <a href="#type-array_kind.Pintarray" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pintarray</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-array_kind.Pfloatarray">
+            <td class="anchored pl-4">
+             <a href="#type-array_kind.Pfloatarray" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pfloatarray</span></span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-value_kind">
+          <a href="#type-value_kind" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">and</span> value_kind</span>
+           <span> = 
+            <a href="../Lambda/index.html#type-value_kind"
+             class="cursor-pointer text-orange">Lambda.value_kind
+            </a>
+           </span><span> = </span>
+          </code>
+          <table>
+           <tr id="type-value_kind.Pgenval">
+            <td class="anchored pl-4">
+             <a href="#type-value_kind.Pgenval" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pgenval</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-value_kind.Pfloatval">
+            <td class="anchored pl-4">
+             <a href="#type-value_kind.Pfloatval" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pfloatval</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-value_kind.Pboxedintval">
+            <td class="anchored pl-4">
+             <a href="#type-value_kind.Pboxedintval" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pboxedintval</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-boxed_integer" class="cursor-pointer
+                text-orange">boxed_integer
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-value_kind.Pintval">
+            <td class="anchored pl-4">
+             <a href="#type-value_kind.Pintval" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pintval</span></span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-block_shape">
+          <a href="#type-block_shape" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">and</span> block_shape</span>
+           <span> = 
+            <a href="../Lambda/index.html#type-block_shape"
+             class="cursor-pointer text-orange">Lambda.block_shape
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-boxed_integer">
+          <a href="#type-boxed_integer" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">and</span> boxed_integer</span>
+           <span> = 
+            <a href="../Primitive/index.html#type-boxed_integer"
+             class="cursor-pointer text-orange">Primitive.boxed_integer
+            </a>
+           </span><span> = </span>
+          </code>
+          <table>
+           <tr id="type-boxed_integer.Pnativeint">
+            <td class="anchored pl-4">
+             <a href="#type-boxed_integer.Pnativeint" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pnativeint</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-boxed_integer.Pint32">
+            <td class="anchored pl-4">
+             <a href="#type-boxed_integer.Pint32" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pint32</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-boxed_integer.Pint64">
+            <td class="anchored pl-4">
+             <a href="#type-boxed_integer.Pint64" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pint64</span></span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-bigarray_kind">
+          <a href="#type-bigarray_kind" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">and</span> bigarray_kind</span>
+           <span> = 
+            <a href="../Lambda/index.html#type-bigarray_kind"
+             class="cursor-pointer text-orange">Lambda.bigarray_kind
+            </a>
+           </span><span> = </span>
+          </code>
+          <table>
+           <tr id="type-bigarray_kind.Pbigarray_unknown">
+            <td class="anchored pl-4">
+             <a href="#type-bigarray_kind.Pbigarray_unknown"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pbigarray_unknown</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-bigarray_kind.Pbigarray_float32">
+            <td class="anchored pl-4">
+             <a href="#type-bigarray_kind.Pbigarray_float32"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pbigarray_float32</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-bigarray_kind.Pbigarray_float64">
+            <td class="anchored pl-4">
+             <a href="#type-bigarray_kind.Pbigarray_float64"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pbigarray_float64</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-bigarray_kind.Pbigarray_sint8">
+            <td class="anchored pl-4">
+             <a href="#type-bigarray_kind.Pbigarray_sint8" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pbigarray_sint8</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-bigarray_kind.Pbigarray_uint8">
+            <td class="anchored pl-4">
+             <a href="#type-bigarray_kind.Pbigarray_uint8" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pbigarray_uint8</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-bigarray_kind.Pbigarray_sint16">
+            <td class="anchored pl-4">
+             <a href="#type-bigarray_kind.Pbigarray_sint16" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pbigarray_sint16</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-bigarray_kind.Pbigarray_uint16">
+            <td class="anchored pl-4">
+             <a href="#type-bigarray_kind.Pbigarray_uint16" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pbigarray_uint16</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-bigarray_kind.Pbigarray_int32">
+            <td class="anchored pl-4">
+             <a href="#type-bigarray_kind.Pbigarray_int32" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pbigarray_int32</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-bigarray_kind.Pbigarray_int64">
+            <td class="anchored pl-4">
+             <a href="#type-bigarray_kind.Pbigarray_int64" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pbigarray_int64</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-bigarray_kind.Pbigarray_caml_int">
+            <td class="anchored pl-4">
+             <a href="#type-bigarray_kind.Pbigarray_caml_int"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pbigarray_caml_int</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-bigarray_kind.Pbigarray_native_int">
+            <td class="anchored pl-4">
+             <a href="#type-bigarray_kind.Pbigarray_native_int"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pbigarray_native_int</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-bigarray_kind.Pbigarray_complex32">
+            <td class="anchored pl-4">
+             <a href="#type-bigarray_kind.Pbigarray_complex32"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pbigarray_complex32</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-bigarray_kind.Pbigarray_complex64">
+            <td class="anchored pl-4">
+             <a href="#type-bigarray_kind.Pbigarray_complex64"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pbigarray_complex64</span></span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-bigarray_layout">
+          <a href="#type-bigarray_layout" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">and</span> bigarray_layout
+           </span>
+           <span> = 
+            <a href="../Lambda/index.html#type-bigarray_layout"
+             class="cursor-pointer text-orange">Lambda.bigarray_layout
+            </a>
+           </span><span> = </span>
+          </code>
+          <table>
+           <tr id="type-bigarray_layout.Pbigarray_unknown_layout">
+            <td class="anchored pl-4">
+             <a href="#type-bigarray_layout.Pbigarray_unknown_layout"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pbigarray_unknown_layout</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-bigarray_layout.Pbigarray_c_layout">
+            <td class="anchored pl-4">
+             <a href="#type-bigarray_layout.Pbigarray_c_layout"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pbigarray_c_layout</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-bigarray_layout.Pbigarray_fortran_layout">
+            <td class="anchored pl-4">
+             <a href="#type-bigarray_layout.Pbigarray_fortran_layout"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pbigarray_fortran_layout</span></span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-raise_kind">
+          <a href="#type-raise_kind" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">and</span> raise_kind</span>
+           <span> = 
+            <a href="../Lambda/index.html#type-raise_kind"
+             class="cursor-pointer text-orange">Lambda.raise_kind
+            </a>
+           </span><span> = </span>
+          </code>
+          <table>
+           <tr id="type-raise_kind.Raise_regular">
+            <td class="anchored pl-4">
+             <a href="#type-raise_kind.Raise_regular" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Raise_regular</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-raise_kind.Raise_reraise">
+            <td class="anchored pl-4">
+             <a href="#type-raise_kind.Raise_reraise" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Raise_reraise</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-raise_kind.Raise_notrace">
+            <td class="anchored pl-4">
+             <a href="#type-raise_kind.Raise_notrace" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Raise_notrace</span></span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-equal">
+          <a href="#val-equal" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> equal : 
+            <span>
+             <a href="#type-primitive" class="cursor-pointer text-orange">
+              primitive
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-primitive" class="cursor-pointer text-orange">
+              primitive
+             </a> <span class="">&#45;&gt;</span>
+            </span> bool
+           </span>
+          </code>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="w-full flex-none lg:w-72 border-t lg:border-l bg-gray-100">
+       <div class="flex h-20 border-b relative">
+        <h2 class="text-xl absolute inset-x-0 p-3 bottom-0 mt-7 font-semibold
+         text-gray-500">ocaml-base-compiler.4.12.0
+        </h2>
+       </div>
+       <div class="m-3">
+        <p class="mb-5 italic text-sm">Official release 4.12.0</p>
+        <div class="mb-3">
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="https://ocaml.org">ocaml.org
+          </a>
+         </div>
+        </div>
+        <details class="font-normal mb-2 text-sm">
+         <summary>Other versions</summary><div id="versions_container"></div>
+        </details><h2 class="font-semibold mb-2 text-sm">Authors</h2>
+        <p class="mb-3 text-sm">Xavier Leroy and many contributors</p>
+        <h2 class="font-semibold mb-2 text-sm">Issues</h2>
+        <div class="mb-3">
+         <a class="text-orange cursor-pointer mb-2 text-sm"
+          href="https://github.com/ocaml/opam-repository/issues">
+          github.com/ocaml/opam-repository/issues
+         </a>
+        </div>
+        <details class="font-semibold mb-2 text-sm">
+         <summary>Package dependencies</summary>
+         <div class="font-normal">
+          <ul>
+           <li>
+            <a href="../../../ocaml/index.html" class="text-orange
+             cursor-pointer">ocaml
+            </a>
+           </li>
+           <li>
+            <a href="../../../base-unix/index.html" class="text-orange
+             cursor-pointer">base-unix
+            </a>
+           </li>
+           <li>
+            <a href="../../../base-bigarray/index.html" class="text-orange
+             cursor-pointer">base-bigarray
+            </a>
+           </li>
+           <li>
+            <a href="../../../base-threads/index.html" class="text-orange
+             cursor-pointer">base-threads
+            </a>
+           </li>
+           <li>
+            <a href="../../../ocaml-options-vanilla/index.html"
+             class="text-orange cursor-pointer">ocaml-options-vanilla
+            </a>
+           </li>
+          </ul>
+         </div>
+        </details>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div><script>Voodoo.update('../../version.json')</script>
+ </body>
+</html>

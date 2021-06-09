@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>Marshal (packages.ocaml-base-compiler.4.12.0.Stdlib.Marshal)</title>
+  <link rel="stylesheet" href="../../../../tailwind.css"/>
+  <link rel="stylesheet" href="../../../../extra.css"/>
+  <meta charset="utf-8"/><meta name="generator" content="odoc 3dfb7aef2f"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <script src="../../../../highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="../../../../voodoo_client.js"></script>
+  <script
+   src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+   defer="defer">
+  </script>
+ </head>
+ <body class="mx-auto max-w-screen-2xl">
+  <div class="relative">
+   <div class="relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+     <div class="flex justify-between items-center md:justify-start py-6
+      md:space-x-10">
+      <div class="flex justify-start">
+       <a href="https://v3.ocaml.org/">
+        <img src="/colour-logo.svg" alt="" class="h-8 w-auto sm:h-10"/>
+       </a>
+      </div>
+      <nav class="hidden md:flex space-x-10">
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Industry</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/whatisocaml">
+            <p class="text-base font-medium text-gray-900">What is OCaml</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/users">
+            <p class="text-base font-medium text-gray-900">Industrial Users
+            </p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/successstories">
+            <p class="text-base font-medium text-gray-900">Success Stories
+            </p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Resources</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/releases">
+            <p class="text-base font-medium text-gray-900">Releases</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/applications">
+            <p class="text-base font-medium text-gray-900">Applications</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/language">
+            <p class="text-base font-medium text-gray-900">Language</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/archive">
+            <p class="text-base font-medium text-gray-900">Archive</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Community</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/opportunities">
+            <p class="text-base font-medium text-gray-900">Opportunities</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/news">
+            <p class="text-base font-medium text-gray-900">News</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/aroundweb">
+            <p class="text-base font-medium text-gray-900">Around the Web</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="h-screen flex bg-white font-sans">
+   <div class="flex flex-col w-full h-full">
+    <div class="flex-row flex-1">
+     <nav class="bg-orange border-t border-b border-orange flex flex-row">
+      <ol class="max-w-screen-xl w-full px-4 flex space-x-4 sm:px-6 lg:px-8">
+       <li class="flex">
+        <div class="flex items-center">
+         <a href="#" class="text-gray-100 hover:text-gray-500">
+          
+  <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+        </svg>
+  
+          <span class="sr-only">Home</span>
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">packages
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">ocaml-base-compiler
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">4.12.0
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">Stdlib
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="#" class="ml-4 text-sm font-medium text-gray-100
+          hover:text-gray-500">Marshal
+         </a>
+        </div>
+       </li>
+      </ol>
+     </nav>
+    </div>
+    <div class="flex flex-row flex-1">
+     <div class="w-72 flex-none bg-gray-100 h-screen border-r border-gray-200
+      sticky top-0 hidden lg:block">
+      <div class="flex h-20 border-b relative">
+       <h2 class="text-xl absolute inset-x-0 p-3 px-5 bottom-0 mt-7
+        border-gray-200 font-semibold text-gray-500 font-sans">On this page
+       </h2>
+      </div>
+     </div>
+     <div class="flex flex-1 flex-col lg:flex-row">
+      <div class="flex-1">
+       <div class="lg:max-w-5xl mx-auto px-3 lg:px-10 mb-10 text-sm">
+        <div class="flex h-20 relative border-b border-gray-200">
+         <div class="relative flex-1 h-20">
+          <h1 class="text-3xl absolute inset-x-0 py-3 bottom-0 font-semibold
+           text-gray-500 font-sans w-full truncate">
+           <code class="font-mono text-gray-800">Stdlib.Marshal</code>
+          </h1>
+         </div>
+         <div class="relative flex-none w-28">
+          <h1 class="text-3xl absolute py-3 bottom-0 right-0 font-semibold
+           text-gray-500 font-sans">Module
+          </h1>
+         </div>
+        </div><p class="mt-4">Marshaling of data structures.</p>
+        <p class="mt-4">This module provides functions to encode arbitrary
+          data structures as sequences of bytes, which can then be written
+          on a file or sent over a pipe or network connection. The bytes
+          can then be read back later, possibly in another process, and
+          decoded back into a data structure. The format for the byte
+          sequences is compatible across all machines for a given version
+          of OCaml.
+        </p>
+        <p class="mt-4">Warning: marshaling is currently not type-safe.
+          The type of marshaled data is not transmitted along the value
+          of the data, making it impossible to check that the data read
+          back possesses the type expected by the context. In particular,
+          the result type of the 
+         <code class="font-normal text-sm">Marshal.from_*</code> functions
+          is given as <code class="font-normal text-sm">'a</code>, but
+          this is misleading: the returned OCaml value does not possess
+          type <code class="font-normal text-sm">'a</code> for all 
+         <code class="font-normal text-sm">'a</code>; it has one, unique
+          type which cannot be determined at compile-time. The programmer
+          should explicitly give the expected type of the returned value,
+          using the following syntax:
+        </p>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <code class="font-normal text-sm">
+           (Marshal.from_channel chan : type)
+          </code>. Anything can happen at run-time if the object in the
+           file does not belong to the given type.
+         </li>
+        </ul>
+        <p class="mt-4">Values of extensible variant types, for example
+          exceptions (of extensible type 
+         <code class="font-normal text-sm">exn</code>), returned by the
+          unmarshaller should not be pattern-matched over through 
+         <code class="font-normal text-sm">match ... with</code> or 
+         <code class="font-normal text-sm">try ... with</code>, because
+          unmarshalling does not preserve the information required for
+          matching their constructors. Structural equalities with other
+          extensible variant values does not work either. Most other 
+         uses such as Printexc.to_string, will still work as expected.
+        </p>
+        <p class="mt-4">The representation of marshaled values is not
+          human-readable, and uses bytes that are not printable characters.
+          Therefore, input and output channels used in conjunction with
+          <code class="font-normal text-sm">Marshal.to_channel</code>
+          and <code class="font-normal text-sm">Marshal.from_channel</code>
+          must be opened in binary mode, using e.g. 
+         <code class="font-normal text-sm">open_out_bin</code> or 
+         <code class="font-normal text-sm">open_in_bin</code>; channels
+          opened in text mode will cause unmarshaling errors on platforms
+          where text channels behave differently than binary channels,
+          e.g. Windows.
+        </p>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-extern_flags">
+          <a href="#type-extern_flags" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> extern_flags</span>
+           <span> = </span>
+          </code>
+          <table>
+           <tr id="type-extern_flags.No_sharing">
+            <td class="anchored pl-4">
+             <a href="#type-extern_flags.No_sharing" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">No_sharing</span></span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>Don't
+              preserve sharing<span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-extern_flags.Closures">
+            <td class="anchored pl-4">
+             <a href="#type-extern_flags.Closures" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Closures</span></span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>Send
+              function closures<span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-extern_flags.Compat_32">
+            <td class="anchored pl-4">
+             <a href="#type-extern_flags.Compat_32" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Compat_32</span></span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>Ensure
+              32-bit compatibility<span class="sr-only">*)</span>
+            </td>
+           </tr>
+          </table>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">The flags to the 
+           <code class="font-normal text-sm">Marshal.to_*</code> functions
+            below.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-to_channel">
+          <a href="#val-to_channel" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> to_channel : 
+            <span>
+             <a href="../index.html#type-out_channel" class="cursor-pointer
+              text-orange">Stdlib.out_channel
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>
+              <a href="#type-extern_flags" class="cursor-pointer text-orange">
+               extern_flags
+              </a> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">Marshal.to_channel chan v flags
+           </code> writes the representation of 
+           <code class="font-normal text-sm">v</code> on channel 
+           <code class="font-normal text-sm">chan</code>. The 
+           <code class="font-normal text-sm">flags</code> argument is
+            a possibly empty list of flags that governs the marshaling
+            behavior with respect to sharing, functional values, and 
+           compatibility between 32- and 64-bit platforms.
+          </p>
+          <p class="mt-4">If <code class="font-normal text-sm">flags</code>
+            does not contain 
+           <code class="font-normal text-sm">Marshal.No_sharing</code>
+           , circularities and sharing inside the value 
+           <code class="font-normal text-sm">v</code> are detected and
+            preserved in the sequence of bytes produced. In particular,
+            this guarantees that marshaling always terminates. Sharing
+            between values marshaled by successive calls to 
+           <code class="font-normal text-sm">Marshal.to_channel</code>
+            is neither detected nor preserved, though. If 
+           <code class="font-normal text-sm">flags</code> contains 
+           <code class="font-normal text-sm">Marshal.No_sharing</code>
+           , sharing is ignored. This results in faster marshaling if
+            <code class="font-normal text-sm">v</code> contains no shared
+            substructures, but may cause slower marshaling and larger
+            byte representations if 
+           <code class="font-normal text-sm">v</code> actually contains
+            sharing, or even non-termination if 
+           <code class="font-normal text-sm">v</code> contains cycles.
+          </p>
+          <p class="mt-4">If <code class="font-normal text-sm">flags</code>
+            does not contain 
+           <code class="font-normal text-sm">Marshal.Closures</code>,
+            marshaling fails when it encounters a functional value inside
+            <code class="font-normal text-sm">v</code>: only 'pure' data
+            structures, containing neither functions nor objects, can
+            safely be transmitted between different programs. If 
+           <code class="font-normal text-sm">flags</code> contains 
+           <code class="font-normal text-sm">Marshal.Closures</code>,
+            functional values will be marshaled as a the position in 
+           the code of the program together with the values corresponding
+            to the free variables captured in the closure. In this case,
+            the output of marshaling can only be read back in processes
+            that run exactly the same program, with exactly the same 
+           compiled code. (This is checked at un-marshaling time, using
+            an MD5 digest of the code transmitted along with the code
+            position.)
+          </p>
+          <p class="mt-4">The exact definition of which free variables
+            are captured in a closure is not specified and can vary between
+            bytecode and native code (and according to optimization flags).
+            In particular, a function value accessing a global reference
+            may or may not include the reference in its closure. If it
+            does, unmarshaling the corresponding closure will create 
+           a new reference, different from the global one.
+          </p>
+          <p class="mt-4">If <code class="font-normal text-sm">flags</code>
+            contains 
+           <code class="font-normal text-sm">Marshal.Compat_32</code>
+           , marshaling fails when it encounters an integer value outside
+            the range 
+           <code class="font-normal text-sm">[-2{^30}, 2{^30}-1]</code>
+            of integers that are representable on a 32-bit platform. 
+           This ensures that marshaled data generated on a 64-bit platform
+            can be safely read back on a 32-bit platform. If 
+           <code class="font-normal text-sm">flags</code> does not contain
+            <code class="font-normal text-sm">Marshal.Compat_32</code>
+           , integer values outside the range 
+           <code class="font-normal text-sm">[-2{^30}, 2{^30}-1]</code>
+            are marshaled, and can be read back on a 64-bit platform,
+            but will cause an error at un-marshaling time when read back
+            on a 32-bit platform. The 
+           <code class="font-normal text-sm">Mashal.Compat_32</code> 
+           flag only matters when marshaling is performed on a 64-bit
+            platform; it has no effect if marshaling is performed on 
+           a 32-bit platform.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-to_bytes">
+          <a href="#val-to_bytes" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> to_bytes : 
+            <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>
+              <a href="#type-extern_flags" class="cursor-pointer text-orange">
+               extern_flags
+              </a> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> bytes
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">Marshal.to_bytes v flags</code>
+            returns a byte sequence containing the representation of 
+           <code class="font-normal text-sm">v</code>. The 
+           <code class="font-normal text-sm">flags</code> argument has
+            the same meaning as for 
+           <a href="#val-to_channel" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Marshal.to_channel</code>
+           </a>.
+          </p><ul class="at-tags"><li class="since">since 4.02.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-to_string">
+          <a href="#val-to_string" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> to_string : 
+            <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>
+              <a href="#type-extern_flags" class="cursor-pointer text-orange">
+               extern_flags
+              </a> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Same as 
+           <code class="font-normal text-sm">to_bytes</code> but return
+            the result as a string instead of a byte sequence.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-to_buffer">
+          <a href="#val-to_buffer" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> to_buffer : 
+            <span>bytes <span class="">&#45;&gt;</span></span> 
+            <span>int <span class="">&#45;&gt;</span></span> 
+            <span>int <span class="">&#45;&gt;</span></span> 
+            <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>
+              <a href="#type-extern_flags" class="cursor-pointer text-orange">
+               extern_flags
+              </a> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> int
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">
+            Marshal.to_buffer buff ofs len v flags
+           </code> marshals the value 
+           <code class="font-normal text-sm">v</code>, storing its byte
+            representation in the sequence 
+           <code class="font-normal text-sm">buff</code>, starting at
+            index <code class="font-normal text-sm">ofs</code>, and writing
+            at most <code class="font-normal text-sm">len</code> bytes.
+            It returns the number of bytes actually written to the sequence.
+            If the byte representation of 
+           <code class="font-normal text-sm">v</code> does not fit in
+            <code class="font-normal text-sm">len</code> characters, 
+           the exception <code class="font-normal text-sm">Failure</code>
+            is raised.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-from_channel">
+          <a href="#val-from_channel" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> from_channel : 
+            <span>
+             <a href="../index.html#type-in_channel" class="cursor-pointer
+              text-orange">Stdlib.in_channel
+             </a> <span class="">&#45;&gt;</span>
+            </span> <span class="">'a</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">Marshal.from_channel chan</code>
+            reads from channel <code class="font-normal text-sm">chan</code>
+            the byte representation of a structured value, as produced
+            by one of the 
+           <code class="font-normal text-sm">Marshal.to_*</code> functions,
+            and reconstructs and returns the corresponding value.
+          </p>
+          <p class="mt-4">It raises 
+           <code class="font-normal text-sm">End_of_file</code> if the
+            function has already reached the end of file when starting
+            to read from the channel, and raises 
+           <code class="font-normal text-sm">
+            Failure &quot;input_value: truncated object&quot;
+           </code> if it reaches the end of file later during the 
+           unmarshalling.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-from_bytes">
+          <a href="#val-from_bytes" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> from_bytes : 
+            <span>bytes <span class="">&#45;&gt;</span></span> 
+            <span>int <span class="">&#45;&gt;</span></span> 
+            <span class="">'a</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">Marshal.from_bytes buff ofs
+           </code> unmarshals a structured value like 
+           <a href="#val-from_channel" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Marshal.from_channel</code>
+           </a> does, except that the byte representation is not read
+            from a channel, but taken from the byte sequence 
+           <code class="font-normal text-sm">buff</code>, starting at
+            position <code class="font-normal text-sm">ofs</code>. The
+            byte sequence is not mutated.
+          </p><ul class="at-tags"><li class="since">since 4.02.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-from_string">
+          <a href="#val-from_string" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> from_string : 
+            <span>string <span class="">&#45;&gt;</span></span> 
+            <span>int <span class="">&#45;&gt;</span></span> 
+            <span class="">'a</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Same as 
+           <code class="font-normal text-sm">from_bytes</code> but take
+            a string as argument instead of a byte sequence.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-header_size">
+          <a href="#val-header_size" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> header_size : int
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">The bytes representing a marshaled value are
+            composed of a fixed-size header and a variable-sized data
+            part, whose size can be determined from the header. 
+           <a href="#val-header_size" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Marshal.header_size</code>
+           </a> is the size, in bytes, of the header. 
+           <a href="#val-data_size" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Marshal.data_size</code>
+           </a><code class="font-normal text-sm"> buff ofs</code> is 
+           the size, in bytes, of the data part, assuming a valid header
+            is stored in <code class="font-normal text-sm">buff</code>
+            starting at position <code class="font-normal text-sm">ofs</code>
+           . Finally, 
+           <a href="#val-total_size" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Marshal.total_size</code>
+           </a> <code class="font-normal text-sm">buff ofs</code> is 
+           the total size, in bytes, of the marshaled value. Both 
+           <a href="#val-data_size" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Marshal.data_size</code>
+           </a> and 
+           <a href="#val-total_size" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Marshal.total_size</code>
+           </a> raise <code class="font-normal text-sm">Failure</code>
+            if <code class="font-normal text-sm">buff</code>, 
+           <code class="font-normal text-sm">ofs</code> does not contain
+            a valid header.
+          </p>
+          <p class="mt-4">To read the byte representation of a marshaled
+            value into a byte sequence, the program needs to read first
+            
+           <a href="#val-header_size" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Marshal.header_size</code>
+           </a> bytes into the sequence, then determine the length of
+            the remainder of the representation using 
+           <a href="#val-data_size" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Marshal.data_size</code>
+           </a>, make sure the sequence is large enough to hold the remaining
+            data, then read it, and finally call 
+           <a href="#val-from_bytes" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Marshal.from_bytes</code>
+           </a> to unmarshal the value.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-data_size">
+          <a href="#val-data_size" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> data_size : 
+            <span>bytes <span class="">&#45;&gt;</span></span> 
+            <span>int <span class="">&#45;&gt;</span></span> int
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">See 
+           <a href="#val-header_size" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Marshal.header_size</code>
+           </a>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-total_size">
+          <a href="#val-total_size" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> total_size : 
+            <span>bytes <span class="">&#45;&gt;</span></span> 
+            <span>int <span class="">&#45;&gt;</span></span> int
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">See 
+           <a href="#val-header_size" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Marshal.header_size</code>
+           </a>.
+          </p>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="w-full flex-none lg:w-72 border-t lg:border-l bg-gray-100">
+       <div class="flex h-20 border-b relative">
+        <h2 class="text-xl absolute inset-x-0 p-3 bottom-0 mt-7 font-semibold
+         text-gray-500">ocaml-base-compiler.4.12.0
+        </h2>
+       </div>
+       <div class="m-3">
+        <p class="mb-5 italic text-sm">Official release 4.12.0</p>
+        <div class="mb-3">
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="https://ocaml.org">ocaml.org
+          </a>
+         </div>
+        </div>
+        <details class="font-normal mb-2 text-sm">
+         <summary>Other versions</summary><div id="versions_container"></div>
+        </details><h2 class="font-semibold mb-2 text-sm">Authors</h2>
+        <p class="mb-3 text-sm">Xavier Leroy and many contributors</p>
+        <h2 class="font-semibold mb-2 text-sm">Issues</h2>
+        <div class="mb-3">
+         <a class="text-orange cursor-pointer mb-2 text-sm"
+          href="https://github.com/ocaml/opam-repository/issues">
+          github.com/ocaml/opam-repository/issues
+         </a>
+        </div>
+        <details class="font-semibold mb-2 text-sm">
+         <summary>Package dependencies</summary>
+         <div class="font-normal">
+          <ul>
+           <li>
+            <a href="../../../../ocaml/index.html" class="text-orange
+             cursor-pointer">ocaml
+            </a>
+           </li>
+           <li>
+            <a href="../../../../base-unix/index.html" class="text-orange
+             cursor-pointer">base-unix
+            </a>
+           </li>
+           <li>
+            <a href="../../../../base-bigarray/index.html" class="text-orange
+             cursor-pointer">base-bigarray
+            </a>
+           </li>
+           <li>
+            <a href="../../../../base-threads/index.html" class="text-orange
+             cursor-pointer">base-threads
+            </a>
+           </li>
+           <li>
+            <a href="../../../../ocaml-options-vanilla/index.html"
+             class="text-orange cursor-pointer">ocaml-options-vanilla
+            </a>
+           </li>
+          </ul>
+         </div>
+        </details>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div><script>Voodoo.update('../../../version.json')</script>
+ </body>
+</html>

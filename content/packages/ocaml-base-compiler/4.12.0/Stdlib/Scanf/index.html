@@ -1,0 +1,1806 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>Scanf (packages.ocaml-base-compiler.4.12.0.Stdlib.Scanf)</title>
+  <link rel="stylesheet" href="../../../../tailwind.css"/>
+  <link rel="stylesheet" href="../../../../extra.css"/>
+  <meta charset="utf-8"/><meta name="generator" content="odoc 3dfb7aef2f"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <script src="../../../../highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="../../../../voodoo_client.js"></script>
+  <script
+   src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+   defer="defer">
+  </script>
+ </head>
+ <body class="mx-auto max-w-screen-2xl">
+  <div class="relative">
+   <div class="relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+     <div class="flex justify-between items-center md:justify-start py-6
+      md:space-x-10">
+      <div class="flex justify-start">
+       <a href="https://v3.ocaml.org/">
+        <img src="/colour-logo.svg" alt="" class="h-8 w-auto sm:h-10"/>
+       </a>
+      </div>
+      <nav class="hidden md:flex space-x-10">
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Industry</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/whatisocaml">
+            <p class="text-base font-medium text-gray-900">What is OCaml</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/users">
+            <p class="text-base font-medium text-gray-900">Industrial Users
+            </p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/successstories">
+            <p class="text-base font-medium text-gray-900">Success Stories
+            </p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Resources</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/releases">
+            <p class="text-base font-medium text-gray-900">Releases</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/applications">
+            <p class="text-base font-medium text-gray-900">Applications</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/language">
+            <p class="text-base font-medium text-gray-900">Language</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/archive">
+            <p class="text-base font-medium text-gray-900">Archive</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Community</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/opportunities">
+            <p class="text-base font-medium text-gray-900">Opportunities</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/news">
+            <p class="text-base font-medium text-gray-900">News</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/aroundweb">
+            <p class="text-base font-medium text-gray-900">Around the Web</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="h-screen flex bg-white font-sans">
+   <div class="flex flex-col w-full h-full">
+    <div class="flex-row flex-1">
+     <nav class="bg-orange border-t border-b border-orange flex flex-row">
+      <ol class="max-w-screen-xl w-full px-4 flex space-x-4 sm:px-6 lg:px-8">
+       <li class="flex">
+        <div class="flex items-center">
+         <a href="#" class="text-gray-100 hover:text-gray-500">
+          
+  <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+        </svg>
+  
+          <span class="sr-only">Home</span>
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">packages
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">ocaml-base-compiler
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">4.12.0
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">Stdlib
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="#" class="ml-4 text-sm font-medium text-gray-100
+          hover:text-gray-500">Scanf
+         </a>
+        </div>
+       </li>
+      </ol>
+     </nav>
+    </div>
+    <div class="flex flex-row flex-1">
+     <div class="w-72 flex-none bg-gray-100 h-screen border-r border-gray-200
+      sticky top-0 hidden lg:block">
+      <div class="flex h-20 border-b relative">
+       <h2 class="text-xl absolute inset-x-0 p-3 px-5 bottom-0 mt-7
+        border-gray-200 font-semibold text-gray-500 font-sans">On this page
+       </h2>
+      </div>
+      <nav class="bg-gray-100 p-5">
+       <ul>
+        <li>
+         <a href="#introduction" class="cursor-pointer text-orange">
+          Introduction
+         </a>
+         <ul>
+          <li>
+           <a href="#functional-input-with-format-strings"
+            class="cursor-pointer text-orange">Functional input with 
+            format strings
+           </a>
+          </li>
+          <li>
+           <a href="#a-simple-example" class="cursor-pointer text-orange">
+            A simple example
+           </a>
+          </li>
+          <li>
+           <a href="#formatted-input-as-a-functional-feature"
+            class="cursor-pointer text-orange">Formatted input as a 
+            functional feature
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a href="#formatted-input-channel" class="cursor-pointer
+          text-orange">Formatted input channel
+         </a>
+        </li>
+        <li>
+         <a href="#type-of-formatted-input-functions" class="cursor-pointer
+          text-orange">Type of formatted input functions
+         </a>
+        </li>
+        <li>
+         <a href="#the-general-formatted-input-function"
+          class="cursor-pointer text-orange">The general formatted input
+           function
+         </a>
+        </li>
+        <li>
+         <a href="#format-string-description" class="cursor-pointer
+          text-orange">Format string description
+         </a>
+         <ul>
+          <li>
+           <a href="#space" class="cursor-pointer text-orange">The space
+             character in format strings
+           </a>
+          </li>
+          <li>
+           <a href="#conversion" class="cursor-pointer text-orange">
+            Conversion specifications in format strings
+           </a>
+          </li>
+          <li>
+           <a href="#indication" class="cursor-pointer text-orange">Scanning
+             indications in format strings
+           </a>
+          </li>
+          <li>
+           <a href="#exceptions-during-scanning" class="cursor-pointer
+            text-orange">Exceptions during scanning
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a href="#specialised-formatted-input-functions"
+          class="cursor-pointer text-orange">Specialised formatted input
+           functions
+         </a>
+        </li>
+        <li>
+         <a href="#reading-format-strings-from-input" class="cursor-pointer
+          text-orange">Reading format strings from input
+         </a>
+        </li>
+        <li>
+         <a href="#deprecated" class="cursor-pointer text-orange">Deprecated
+         </a>
+        </li>
+       </ul>
+      </nav>
+     </div>
+     <div class="flex flex-1 flex-col lg:flex-row">
+      <div class="flex-1">
+       <div class="lg:max-w-5xl mx-auto px-3 lg:px-10 mb-10 text-sm">
+        <div class="flex h-20 relative border-b border-gray-200">
+         <div class="relative flex-1 h-20">
+          <h1 class="text-3xl absolute inset-x-0 py-3 bottom-0 font-semibold
+           text-gray-500 font-sans w-full truncate">
+           <code class="font-mono text-gray-800">Stdlib.Scanf</code>
+          </h1>
+         </div>
+         <div class="relative flex-none w-28">
+          <h1 class="text-3xl absolute py-3 bottom-0 right-0 font-semibold
+           text-gray-500 font-sans">Module
+          </h1>
+         </div>
+        </div><p class="mt-4">Formatted input functions.</p>
+        <h2 class="text-2xl my-4 text-gray-800 font-sans anchored"
+         id="introduction">
+         <a href="#introduction" class="hover-link inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Introduction
+        </h2>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans
+         anchored" id="functional-input-with-format-strings">
+         <a href="#functional-input-with-format-strings" class="hover-link
+          inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Functional input with format strings
+        </h3>
+        <p class="mt-4">The module 
+         <a href="#" class="cursor-pointer text-orange">
+          <code class="font-normal text-sm">Scanf</code>
+         </a> provides formatted input functions or <em>scanners</em>
+         .
+        </p>
+        <p class="mt-4">The formatted input functions can read from any
+          kind of input, including strings, files, or anything that can
+          return characters. The more general source of characters is
+          named a <em>formatted input channel</em> (or 
+         <em>scanning buffer</em>) and has type 
+         <a href="Scanning/index.html#type-in_channel" class="cursor-pointer
+          text-orange">
+          <code class="font-normal text-sm">Scanning.in_channel</code>
+         </a>. The more general formatted input function reads from any
+          scanning buffer and is named 
+         <code class="font-normal text-sm">bscanf</code>.
+        </p>
+        <p class="mt-4">Generally speaking, the formatted input functions
+          have 3 arguments:
+        </p>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">the first argument is a source of characters
+           for the input,
+         </li>
+         <li class="ml-4">the second argument is a format string that
+           specifies the values to read,
+         </li>
+         <li class="ml-4">the third argument is a <em>receiver function</em>
+           that is applied to the values read.
+         </li>
+        </ul>
+        <p class="mt-4">Hence, a typical call to the formatted input 
+         function 
+         <a href="#val-bscanf" class="cursor-pointer text-orange">
+          <code class="font-normal text-sm">Scanf.bscanf</code>
+         </a> is <code class="font-normal text-sm">bscanf ic fmt f</code>
+         , where:
+        </p>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4"><code class="font-normal text-sm">ic</code>
+           is a source of characters (typically a 
+          <em>formatted input channel</em> with type 
+          <a href="Scanning/index.html#type-in_channel" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Scanning.in_channel</code>
+          </a>),
+         </li>
+        </ul>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4"><code class="font-normal text-sm">fmt</code>
+           is a format string (the same format strings as those used 
+          to print material with module 
+          <a href="../Printf/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Printf</code>
+          </a> or 
+          <a href="../Format/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Format</code>
+          </a>),
+         </li>
+        </ul>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4"><code class="font-normal text-sm">f</code> 
+          is a function that has as many arguments as the number of values
+           to read in the input according to 
+          <code class="font-normal text-sm">fmt</code>.
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans
+         anchored" id="a-simple-example">
+         <a href="#a-simple-example" class="hover-link inline-block -ml-7
+          pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>A simple example
+        </h3>
+        <p class="mt-4">As suggested above, the expression 
+         <code class="font-normal text-sm">bscanf ic &quot;%d&quot; f</code>
+          reads a decimal integer <code class="font-normal text-sm">n</code>
+          from the source of characters 
+         <code class="font-normal text-sm">ic</code> and returns 
+         <code class="font-normal text-sm">f n</code>.
+        </p><p class="mt-4">For instance,</p>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">if we use 
+          <code class="font-normal text-sm">stdin</code> as the source
+           of characters (
+          <a href="Scanning/index.html#val-stdin" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Scanning.stdin</code>
+          </a> is the predefined formatted input channel that reads from
+           standard input),
+         </li>
+        </ul>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">if we define the receiver 
+          <code class="font-normal text-sm">f</code> as 
+          <code class="font-normal text-sm">let f x = x + 1</code>,
+         </li>
+        </ul>
+        <p class="mt-4">then 
+         <code class="font-normal text-sm">
+          bscanf Scanning.stdin &quot;%d&quot; f
+         </code> reads an integer <code class="font-normal text-sm">n</code>
+          from the standard input and returns 
+         <code class="font-normal text-sm">f n</code> (that is 
+         <code class="font-normal text-sm">n + 1</code>). Thus, if we
+          evaluate 
+         <code class="font-normal text-sm">bscanf stdin &quot;%d&quot; f
+         </code>, and then enter <code class="font-normal text-sm">41</code>
+          at the keyboard, the result we get is 
+         <code class="font-normal text-sm">42</code>.
+        </p>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans
+         anchored" id="formatted-input-as-a-functional-feature">
+         <a href="#formatted-input-as-a-functional-feature" class="hover-link
+          inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Formatted input as a functional feature
+        </h3>
+        <p class="mt-4">The OCaml scanning facility is reminiscent of
+          the corresponding C feature. However, it is also largely different,
+          simpler, and yet more powerful: the formatted input functions
+          are higher-order functionals and the parameter passing mechanism
+          is just the regular function application not the variable 
+         assignment based mechanism which is typical for formatted input
+          in imperative languages; the OCaml format strings also feature
+          useful additions to easily define complex tokens; as expected
+          within a functional programming language, the formatted input
+          functions also support polymorphism, in particular arbitrary
+          interaction with polymorphic user-defined scanners. Furthermore,
+          the OCaml formatted input facility is fully type-checked at
+          compile time.
+        </p>
+        <h2 class="text-2xl my-4 text-gray-800 font-sans anchored"
+         id="formatted-input-channel">
+         <a href="#formatted-input-channel" class="hover-link inline-block
+          -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Formatted input channel
+        </h2>
+        <div class="mt-8">
+         <div class="spec module anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="module-Scanning">
+          <a href="#module-Scanning" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">module</span> </span>
+           <span>
+            <a href="Scanning/index.html" class="cursor-pointer text-orange">
+             Scanning
+            </a>
+           </span>
+           <span> : <span class="font-semibold">sig</span> ... 
+            <span class="font-semibold">end</span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <h2 class="text-2xl my-4 text-gray-800 font-sans anchored"
+         id="type-of-formatted-input-functions">
+         <a href="#type-of-formatted-input-functions" class="hover-link
+          inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Type of formatted input functions
+        </h2>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-scanner">
+          <a href="#type-scanner" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> 
+            <span>('a, 'b, 'c, 'd) scanner</span>
+           </span>
+           <span> = 
+            <span>
+             <span>
+              <span>(<span class="">'a</span>, 
+               <a href="Scanning/index.html#type-in_channel"
+                class="cursor-pointer text-orange">Scanning.in_channel
+               </a>, <span class="">'b</span>, <span class="">'c</span>
+               , 
+               <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+               </span> <span class="">'d</span>, <span class="">'d</span>
+               )
+              </span> 
+              <a href="../index.html#type-format6" class="cursor-pointer
+               text-orange">Stdlib.format6
+              </a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> <span class="">'c</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">The type of formatted input scanners: 
+           <code class="font-normal text-sm">('a, 'b, 'c, 'd) scanner</code>
+            is the type of a formatted input function that reads from
+            some formatted input channel according to some format string;
+            more precisely, if <code class="font-normal text-sm">scan</code>
+            is some formatted input function, then 
+           <code class="font-normal text-sm">scan
+                                                 ic fmt f</code>
+            applies <code class="font-normal text-sm">f</code> to all
+            the arguments specified by format string 
+           <code class="font-normal text-sm">fmt</code>, when 
+           <code class="font-normal text-sm">scan</code> has read those
+            arguments from the 
+           <a href="Scanning/index.html#type-in_channel"
+            class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Scanning.in_channel</code>
+           </a> formatted input channel 
+           <code class="font-normal text-sm">ic</code>.
+          </p>
+          <p class="mt-4">For instance, the 
+           <a href="#val-scanf" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Scanf.scanf</code>
+           </a> function below has type 
+           <code class="font-normal text-sm">('a, 'b, 'c, 'd) scanner</code>
+           , since it is a formatted input function that reads from 
+           <a href="Scanning/index.html#val-stdin" class="cursor-pointer
+            text-orange">
+            <code class="font-normal text-sm">Scanning.stdin</code>
+           </a>: <code class="font-normal text-sm">scanf fmt f</code>
+            applies <code class="font-normal text-sm">f</code> to the
+            arguments specified by 
+           <code class="font-normal text-sm">fmt</code>, reading those
+            arguments from 
+           <a href="../index.html#val-stdin" class="cursor-pointer
+            text-orange">
+            <code class="font-normal text-sm">Stdlib.stdin</code>
+           </a> as expected.
+          </p>
+          <p class="mt-4">If the format 
+           <code class="font-normal text-sm">fmt</code> has some 
+           <code class="font-normal text-sm">%r</code> indications, the
+            corresponding formatted input functions must be provided 
+           <em>before</em> receiver function 
+           <code class="font-normal text-sm">f</code>. For instance, 
+           if <code class="font-normal text-sm">read_elem</code> is an
+            input function for values of type 
+           <code class="font-normal text-sm">t</code>, then 
+           <code class="font-normal text-sm">
+            bscanf ic &quot;%r;&quot; read_elem f
+           </code> reads a value <code class="font-normal text-sm">v</code>
+            of type <code class="font-normal text-sm">t</code> followed
+            by a <code class="font-normal text-sm">';'</code> character,
+            and returns <code class="font-normal text-sm">f v</code>.
+          </p><ul class="at-tags"><li class="since">since 3.10.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec exception anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="exception-Scan_failure">
+          <a href="#exception-Scan_failure" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">exception</span> </span>
+           <span><span class="">Scan_failure</span> 
+            <span class="font-semibold">of</span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">When the input can not be read according to
+            the format string specification, formatted input functions
+            typically raise exception 
+           <code class="font-normal text-sm">Scan_failure</code>.
+          </p>
+         </div>
+        </div>
+        <h2 class="text-2xl my-4 text-gray-800 font-sans anchored"
+         id="the-general-formatted-input-function">
+         <a href="#the-general-formatted-input-function" class="hover-link
+          inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>The general formatted input function
+        </h2>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-bscanf">
+          <a href="#val-bscanf" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> bscanf : 
+            <span>
+             <a href="Scanning/index.html#type-in_channel"
+              class="cursor-pointer text-orange">Scanning.in_channel
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>(<span class="">'a</span>, <span class="">'b</span>
+              , <span class="">'c</span>, <span class="">'d</span>)
+             </span> 
+             <a href="#type-scanner" class="cursor-pointer text-orange">
+              scanner
+             </a>
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <p class="mt-4">
+         <code class="font-normal text-sm">bscanf ic fmt r1 ... rN f</code>
+          reads characters from the 
+         <a href="Scanning/index.html#type-in_channel" class="cursor-pointer
+          text-orange">
+          <code class="font-normal text-sm">Scanning.in_channel</code>
+         </a> formatted input channel 
+         <code class="font-normal text-sm">ic</code> and converts them
+          to values according to format string 
+         <code class="font-normal text-sm">fmt</code>. As a final step,
+          receiver function <code class="font-normal text-sm">f</code>
+          is applied to the values read and gives the result of the 
+         <code class="font-normal text-sm">bscanf</code> call.
+        </p>
+        <p class="mt-4">For instance, if 
+         <code class="font-normal text-sm">f</code> is the function 
+         <code class="font-normal text-sm">fun s i -&gt; i + 1</code>
+         , then 
+         <code class="font-normal text-sm">
+          Scanf.sscanf &quot;x= 1&quot; &quot;%s = %i&quot; f
+         </code> returns <code class="font-normal text-sm">2</code>.
+        </p>
+        <p class="mt-4">Arguments <code class="font-normal text-sm">r1</code>
+          to <code class="font-normal text-sm">rN</code> are user-defined
+          input functions that read the argument corresponding to the
+          <code class="font-normal text-sm">%r</code> conversions specified
+          in the format string.
+        </p>
+        <h2 class="text-2xl my-4 text-gray-800 font-sans anchored"
+         id="format-string-description">
+         <a href="#format-string-description" class="hover-link inline-block
+          -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Format string description
+        </h2>
+        <p class="mt-4">The format string is a character string which
+          contains three types of objects:
+        </p>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">plain characters, which are simply matched 
+          with the characters of the input (with a special case for space
+           and line feed, see 
+          <a href="../index.html#space" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Scanf:space</code>
+          </a>),
+         </li>
+         <li class="ml-4">conversion specifications, each of which causes
+           reading and conversion of one argument for the function 
+          <code class="font-normal text-sm">f</code> (see 
+          <a href="../index.html#conversion" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Scanf:conversion</code>
+          </a>),
+         </li>
+         <li class="ml-4">scanning indications to specify boundaries 
+          of tokens (see scanning 
+          <a href="../index.html#indication" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Scanf:indication</code>
+          </a>).
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans
+         anchored" id="space">
+         <a href="#space" class="hover-link inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>The space character in format strings
+        </h3>
+        <p class="mt-4">As mentioned above, a plain character in the 
+         format string is just matched with the next character of the
+          input; however, two characters are special exceptions to this
+          rule: the space character (
+         <code class="font-normal text-sm">' '</code> or ASCII code 32)
+          and the line feed character (
+         <code class="font-normal text-sm">'\n'</code> or ASCII code 
+         10). A space does not match a single space character, but any
+          amount of 'whitespace' in the input. More precisely, a space
+          inside the format string matches <em>any number</em> of tab,
+          space, line feed and carriage return characters. Similarly,
+          a line feed character in the format string matches either a
+          single line feed or a carriage return followed by a line feed.
+        </p>
+        <p class="mt-4">Matching <em>any</em> amount of whitespace, a
+          space in the format string also matches no amount of whitespace
+          at all; hence, the call 
+         <code class="font-normal text-sm">
+          bscanf ib
+              &quot;Price = %d $&quot; (fun p -&gt; p)
+         </code> succeeds and returns 
+         <code class="font-normal text-sm">1</code> when reading an input
+          with various whitespace in it, such as 
+         <code class="font-normal text-sm">Price = 1 $</code>, 
+         <code class="font-normal text-sm">Price  =  1    $</code>, or
+          even <code class="font-normal text-sm">Price=1$</code>.
+        </p>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans
+         anchored" id="conversion">
+         <a href="#conversion" class="hover-link inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Conversion specifications in format strings
+        </h3>
+        <p class="mt-4">Conversion specifications consist in the 
+         <code class="font-normal text-sm">%</code> character, followed
+          by an optional flag, an optional field width, and followed 
+         by one or two conversion characters.
+        </p>
+        <p class="mt-4">The conversion characters and their meanings are:</p>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4"><code class="font-normal text-sm">d</code>:
+           reads an optionally signed decimal integer (
+          <code class="font-normal text-sm">0-9</code>+).
+         </li>
+         <li class="ml-4"><code class="font-normal text-sm">i</code>:
+           reads an optionally signed integer (usual input conventions
+           for decimal (<code class="font-normal text-sm">0-9</code>+),
+           hexadecimal (<code class="font-normal text-sm">0x[0-9a-f]+</code>
+           and <code class="font-normal text-sm">0X[0-9A-F]+</code>),
+           octal (<code class="font-normal text-sm">0o[0-7]+</code>),
+           and binary (<code class="font-normal text-sm">0b[0-1]+</code>
+          ) notations are understood).
+         </li>
+         <li class="ml-4"><code class="font-normal text-sm">u</code>:
+           reads an unsigned decimal integer.
+         </li>
+         <li class="ml-4"><code class="font-normal text-sm">x</code> 
+          or <code class="font-normal text-sm">X</code>: reads an unsigned
+           hexadecimal integer (
+          <code class="font-normal text-sm">[0-9a-fA-F]+</code>).
+         </li>
+         <li class="ml-4"><code class="font-normal text-sm">o</code>:
+           reads an unsigned octal integer (
+          <code class="font-normal text-sm">[0-7]+</code>).
+         </li>
+         <li class="ml-4">
+          <p class="mt-4"><code class="font-normal text-sm">s</code>:
+            reads a string argument that spreads as much as possible,
+            until the following bounding condition holds: 
+          </p>
+          <ul class="list-disc mt-2 mb-4">
+           <li class="ml-4">a whitespace has been found (see 
+            <a href="../index.html#space" class="cursor-pointer text-orange">
+             <code class="font-normal text-sm">Scanf:space</code>
+            </a>),
+           </li>
+           <li class="ml-4">a scanning indication (see scanning 
+            <a href="../index.html#indication" class="cursor-pointer
+             text-orange">
+             <code class="font-normal text-sm">Scanf:indication</code>
+            </a>) has been encountered,
+           </li><li class="ml-4">the end-of-input has been reached.</li>
+          </ul>
+          <p class="mt-4">Hence, this conversion always succeeds: it 
+           returns an empty string if the bounding condition holds when
+            the scan begins.
+          </p>
+         </li>
+         <li class="ml-4"><code class="font-normal text-sm">S</code>:
+           reads a delimited string argument (delimiters and special 
+          escaped characters follow the lexical conventions of OCaml).
+         </li>
+         <li class="ml-4"><code class="font-normal text-sm">c</code>:
+           reads a single character. To test the current input character
+           without reading it, specify a null field width, i.e. use 
+          specification <code class="font-normal text-sm">%0c</code>.
+           Raise <code class="font-normal text-sm">Invalid_argument</code>
+          , if the field width specification is greater than 1.
+         </li>
+         <li class="ml-4"><code class="font-normal text-sm">C</code>:
+           reads a single delimited character (delimiters and special
+           escaped characters follow the lexical conventions of OCaml).
+         </li>
+         <li class="ml-4"><code class="font-normal text-sm">f</code>,
+           <code class="font-normal text-sm">e</code>, 
+          <code class="font-normal text-sm">E</code>, 
+          <code class="font-normal text-sm">g</code>, 
+          <code class="font-normal text-sm">G</code>: reads an optionally
+           signed floating-point number in decimal notation, in the style
+           <code class="font-normal text-sm">dddd.ddd
+                                                   e/E+-dd</code>
+          .
+         </li>
+         <li class="ml-4"><code class="font-normal text-sm">h</code>,
+           <code class="font-normal text-sm">H</code>: reads an optionally
+           signed floating-point number in hexadecimal notation.
+         </li>
+         <li class="ml-4"><code class="font-normal text-sm">F</code>:
+           reads a floating point number according to the lexical conventions
+           of OCaml (hence the decimal point is mandatory if the exponent
+           part is not mentioned).
+         </li>
+         <li class="ml-4"><code class="font-normal text-sm">B</code>:
+           reads a boolean argument (
+          <code class="font-normal text-sm">true</code> or 
+          <code class="font-normal text-sm">false</code>).
+         </li>
+         <li class="ml-4"><code class="font-normal text-sm">b</code>:
+           reads a boolean argument (for backward compatibility; do not
+           use in new programs).
+         </li>
+         <li class="ml-4"><code class="font-normal text-sm">ld</code>
+          , <code class="font-normal text-sm">li</code>, 
+          <code class="font-normal text-sm">lu</code>, 
+          <code class="font-normal text-sm">lx</code>, 
+          <code class="font-normal text-sm">lX</code>, 
+          <code class="font-normal text-sm">lo</code>: reads an 
+          <code class="font-normal text-sm">int32</code> argument to 
+          the format specified by the second letter for regular integers.
+         </li>
+         <li class="ml-4"><code class="font-normal text-sm">nd</code>
+          , <code class="font-normal text-sm">ni</code>, 
+          <code class="font-normal text-sm">nu</code>, 
+          <code class="font-normal text-sm">nx</code>, 
+          <code class="font-normal text-sm">nX</code>, 
+          <code class="font-normal text-sm">no</code>: reads a 
+          <code class="font-normal text-sm">nativeint</code> argument
+           to the format specified by the second letter for regular integers.
+         </li>
+         <li class="ml-4"><code class="font-normal text-sm">Ld</code>
+          , <code class="font-normal text-sm">Li</code>, 
+          <code class="font-normal text-sm">Lu</code>, 
+          <code class="font-normal text-sm">Lx</code>, 
+          <code class="font-normal text-sm">LX</code>, 
+          <code class="font-normal text-sm">Lo</code>: reads an 
+          <code class="font-normal text-sm">int64</code> argument to 
+          the format specified by the second letter for regular integers.
+         </li>
+         <li class="ml-4"><code class="font-normal text-sm">[ range ]</code>
+          : reads characters that matches one of the characters mentioned
+           in the range of characters 
+          <code class="font-normal text-sm">range</code> (or not mentioned
+           in it, if the range starts with 
+          <code class="font-normal text-sm">^</code>). Reads a 
+          <code class="font-normal text-sm">string</code> that can be
+           empty, if the next input character does not match the range.
+           The set of characters from 
+          <code class="font-normal text-sm">c1</code> to 
+          <code class="font-normal text-sm">c2</code> (inclusively) is
+           denoted by <code class="font-normal text-sm">c1-c2</code>.
+           Hence, <code class="font-normal text-sm">%[0-9]</code> returns
+           a string representing a decimal number or an empty string 
+          if no decimal digit is found; similarly, 
+          <code class="font-normal text-sm">%[0-9a-f]</code> returns 
+          a string of hexadecimal digits. If a closing bracket appears
+           in a range, it must occur as the first character of the range
+           (or just after the <code class="font-normal text-sm">^</code>
+           in case of range negation); hence 
+          <code class="font-normal text-sm">[]]</code> matches a 
+          <code class="font-normal text-sm">]</code> character and 
+          <code class="font-normal text-sm">[^]]</code> matches any character
+           that is not <code class="font-normal text-sm">]</code>. Use
+           <code class="font-normal text-sm">%%</code> and 
+          <code class="font-normal text-sm">%@</code> to include a 
+          <code class="font-normal text-sm">%</code> or a 
+          <code class="font-normal text-sm">@</code> in a range.
+         </li>
+         <li class="ml-4"><code class="font-normal text-sm">r</code>:
+           user-defined reader. Takes the next 
+          <code class="font-normal text-sm">ri</code> formatted input
+           function and applies it to the scanning buffer 
+          <code class="font-normal text-sm">ib</code> to read the next
+           argument. The input function 
+          <code class="font-normal text-sm">ri</code> must therefore 
+          have type 
+          <code class="font-normal text-sm">Scanning.in_channel -&gt; 'a
+          </code> and the argument read has type 
+          <code class="font-normal text-sm">'a</code>.
+         </li>
+         <li class="ml-4"><code class="font-normal text-sm">{ fmt %}</code>
+          : reads a format string argument. The format string read must
+           have the same type as the format string specification 
+          <code class="font-normal text-sm">fmt</code>. For instance,
+           <code class="font-normal text-sm">&quot;%{ %i %}&quot;</code>
+           reads any format string that can read a value of type 
+          <code class="font-normal text-sm">int</code>; hence, if 
+          <code class="font-normal text-sm">s</code> is the string 
+          <code class="font-normal text-sm">
+           &quot;fmt:\&quot;number is %u\&quot;&quot;
+          </code>, then 
+          <code class="font-normal text-sm">
+           Scanf.sscanf s &quot;fmt: %{%i%}&quot;
+          </code> succeeds and returns the format string 
+          <code class="font-normal text-sm">&quot;number is %u&quot;</code>
+          .
+         </li>
+         <li class="ml-4"><code class="font-normal text-sm">( fmt %)</code>
+          : scanning sub-format substitution. Reads a format string 
+          <code class="font-normal text-sm">rf</code> in the input, then
+           goes on scanning with <code class="font-normal text-sm">rf</code>
+           instead of scanning with 
+          <code class="font-normal text-sm">fmt</code>. The format string
+           <code class="font-normal text-sm">rf</code> must have the 
+          same type as the format string specification 
+          <code class="font-normal text-sm">fmt</code> that it replaces.
+           For instance, 
+          <code class="font-normal text-sm">&quot;%( %i %)&quot;</code>
+           reads any format string that can read a value of type 
+          <code class="font-normal text-sm">int</code>. The conversion
+           returns the format string read 
+          <code class="font-normal text-sm">rf</code>, and then a value
+           read using <code class="font-normal text-sm">rf</code>. Hence,
+           if <code class="font-normal text-sm">s</code> is the string
+           
+          <code class="font-normal text-sm">
+           &quot;\&quot;%4d\&quot;1234.00&quot;
+          </code>, then 
+          <code class="font-normal text-sm">
+           Scanf.sscanf s &quot;%(%i%)&quot; (fun fmt i -&gt; fmt, i)
+          </code> evaluates to 
+          <code class="font-normal text-sm">(&quot;%4d&quot;, 1234)</code>
+          . This behaviour is not mere format substitution, since the
+           conversion returns the format string read as additional argument.
+           If you need pure format substitution, use special flag 
+          <code class="font-normal text-sm">_</code> to discard the 
+          extraneous argument: conversion 
+          <code class="font-normal text-sm">%_( fmt %)</code> reads a
+           format string <code class="font-normal text-sm">rf</code> 
+          and then behaves the same as format string 
+          <code class="font-normal text-sm">rf</code>. Hence, if 
+          <code class="font-normal text-sm">s</code> is the string 
+          <code class="font-normal text-sm">
+           &quot;\&quot;%4d\&quot;1234.00&quot;
+          </code>, then 
+          <code class="font-normal text-sm">
+           Scanf.sscanf s &quot;%_(%i%)&quot;
+          </code> is simply equivalent to 
+          <code class="font-normal text-sm">
+           Scanf.sscanf &quot;1234.00&quot; &quot;%4d&quot;
+          </code>.
+         </li>
+         <li class="ml-4"><code class="font-normal text-sm">l</code>:
+           returns the number of lines read so far.
+         </li>
+         <li class="ml-4"><code class="font-normal text-sm">n</code>:
+           returns the number of characters read so far.
+         </li>
+         <li class="ml-4"><code class="font-normal text-sm">N</code> 
+          or <code class="font-normal text-sm">L</code>: returns the 
+          number of tokens read so far.
+         </li>
+         <li class="ml-4"><code class="font-normal text-sm">!</code>:
+           matches the end of input condition.
+         </li>
+         <li class="ml-4"><code class="font-normal text-sm">%</code>:
+           matches one <code class="font-normal text-sm">%</code> character
+           in the input.
+         </li>
+         <li class="ml-4"><code class="font-normal text-sm">@</code>:
+           matches one <code class="font-normal text-sm">@</code> character
+           in the input.
+         </li>
+         <li class="ml-4"><code class="font-normal text-sm">,</code>:
+           does nothing.
+         </li>
+        </ul>
+        <p class="mt-4">Following the 
+         <code class="font-normal text-sm">%</code> character that introduces
+          a conversion, there may be the special flag 
+         <code class="font-normal text-sm">_</code>: the conversion that
+          follows occurs as usual, but the resulting value is discarded.
+          For instance, if <code class="font-normal text-sm">f</code>
+          is the function 
+         <code class="font-normal text-sm">fun i -&gt; i + 1</code>, 
+         and <code class="font-normal text-sm">s</code> is the string
+          <code class="font-normal text-sm">&quot;x = 1&quot;</code>,
+          then 
+         <code class="font-normal text-sm">
+          Scanf.sscanf s &quot;%_s = %i&quot; f
+         </code> returns <code class="font-normal text-sm">2</code>.
+        </p>
+        <p class="mt-4">The field width is composed of an optional integer
+          literal indicating the maximal width of the token to read. 
+         For instance, <code class="font-normal text-sm">%6d</code> reads
+          an integer, having at most 6 decimal digits; 
+         <code class="font-normal text-sm">%4f</code> reads a float with
+          at most 4 characters; and 
+         <code class="font-normal text-sm">%8[\000-\255]</code> returns
+          the next 8 characters (or all the characters still available,
+          if fewer than 8 characters are available in the input).
+        </p><p class="mt-4">Notes:</p>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">as mentioned above, a 
+          <code class="font-normal text-sm">%s</code> conversion always
+           succeeds, even if there is nothing to read in the input: in
+           this case, it simply returns 
+          <code class="font-normal text-sm">&quot;&quot;</code>.
+         </li>
+        </ul>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">in addition to the relevant digits, 
+          <code class="font-normal text-sm">'_'</code> characters may
+           appear inside numbers (this is reminiscent to the usual OCaml
+           lexical conventions). If stricter scanning is desired, use
+           the range conversion facility instead of the number conversions.
+         </li>
+        </ul>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">the <code class="font-normal text-sm">scanf</code>
+           facility is not intended for heavy duty lexical analysis and
+           parsing. If it appears not expressive enough for your needs,
+           several alternative exists: regular expressions (module 
+          <a href="../../Str/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Str</code>
+          </a>), stream parsers, 
+          <code class="font-normal text-sm">ocamllex</code>-generated
+           lexers, <code class="font-normal text-sm">ocamlyacc</code>
+          -generated parsers.
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans
+         anchored" id="indication">
+         <a href="#indication" class="hover-link inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Scanning indications in format strings
+        </h3>
+        <p class="mt-4">Scanning indications appear just after the string
+          conversions <code class="font-normal text-sm">%s</code> and
+          <code class="font-normal text-sm">%[ range ]</code> to delimit
+          the end of the token. A scanning indication is introduced by
+          a <code class="font-normal text-sm">@</code> character, followed
+          by some plain character <code class="font-normal text-sm">c</code>
+         . It means that the string token should end just before the 
+         next matching <code class="font-normal text-sm">c</code> (which
+          is skipped). If no <code class="font-normal text-sm">c</code>
+          character is encountered, the string token spreads as much 
+         as possible. For instance, 
+         <code class="font-normal text-sm">&quot;%s@\t&quot;</code> reads
+          a string up to the next tab character or to the end of input.
+          If a <code class="font-normal text-sm">@</code> character appears
+          anywhere else in the format string, it is treated as a plain
+          character.
+        </p><p class="mt-4">Note:</p>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">As usual in format strings, 
+          <code class="font-normal text-sm">%</code> and 
+          <code class="font-normal text-sm">@</code> characters must 
+          be escaped using <code class="font-normal text-sm">%%</code>
+           and <code class="font-normal text-sm">%@</code>; this rule
+           still holds within range specifications and scanning indications.
+           For instance, format 
+          <code class="font-normal text-sm">&quot;%s@%%&quot;</code> 
+          reads a string up to the next 
+          <code class="font-normal text-sm">%</code> character, and format
+           <code class="font-normal text-sm">&quot;%s@%@&quot;</code>
+           reads a string up to the next 
+          <code class="font-normal text-sm">@</code>.
+         </li>
+         <li class="ml-4">The scanning indications introduce slight 
+          differences in the syntax of 
+          <a href="#" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Scanf</code>
+          </a> format strings, compared to those used for the 
+          <a href="../Printf/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Printf</code>
+          </a> module. However, the scanning indications are similar 
+          to those used in the 
+          <a href="../Format/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Format</code>
+          </a> module; hence, when producing formatted text to be scanned
+           by 
+          <a href="#val-bscanf" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Scanf.bscanf</code>
+          </a>, it is wise to use printing functions from the 
+          <a href="../Format/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Format</code>
+          </a> module (or, if you need to use functions from 
+          <a href="../Printf/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Printf</code>
+          </a>, banish or carefully double check the format strings that
+           contain <code class="font-normal text-sm">'@'</code> characters).
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans
+         anchored" id="exceptions-during-scanning">
+         <a href="#exceptions-during-scanning" class="hover-link inline-block
+          -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Exceptions during scanning
+        </h3>
+        <p class="mt-4">Scanners may raise the following exceptions when
+          the input cannot be read according to the format string:
+        </p>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">Raise 
+          <a href="#exception-Scan_failure" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Scanf.Scan_failure</code>
+          </a> if the input does not match the format.
+         </li>
+        </ul>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">Raise 
+          <code class="font-normal text-sm">Failure</code> if a conversion
+           to a number is not possible.
+         </li>
+        </ul>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">Raise 
+          <code class="font-normal text-sm">End_of_file</code> if the
+           end of input is encountered while some more characters are
+           needed to read the current conversion specification.
+         </li>
+        </ul>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">Raise 
+          <code class="font-normal text-sm">Invalid_argument</code> if
+           the format string is invalid.
+         </li>
+        </ul><p class="mt-4">Note:</p>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">as a consequence, scanning a 
+          <code class="font-normal text-sm">%s</code> conversion never
+           raises exception 
+          <code class="font-normal text-sm">End_of_file</code>: if the
+           end of input is reached the conversion succeeds and simply
+           returns the characters read so far, or 
+          <code class="font-normal text-sm">&quot;&quot;</code> if none
+           were ever read.
+         </li>
+        </ul>
+        <h2 class="text-2xl my-4 text-gray-800 font-sans anchored"
+         id="specialised-formatted-input-functions">
+         <a href="#specialised-formatted-input-functions" class="hover-link
+          inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Specialised formatted input functions
+        </h2>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-sscanf">
+          <a href="#val-sscanf" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sscanf : 
+            <span>string <span class="">&#45;&gt;</span></span> 
+            <span>
+             <span>(<span class="">'a</span>, <span class="">'b</span>
+              , <span class="">'c</span>, <span class="">'d</span>)
+             </span> 
+             <a href="#type-scanner" class="cursor-pointer text-orange">
+              scanner
+             </a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Same as 
+           <a href="#val-bscanf" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Scanf.bscanf</code>
+           </a>, but reads from the given string.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-scanf">
+          <a href="#val-scanf" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> scanf : 
+            <span>
+             <span>(<span class="">'a</span>, <span class="">'b</span>
+              , <span class="">'c</span>, <span class="">'d</span>)
+             </span> 
+             <a href="#type-scanner" class="cursor-pointer text-orange">
+              scanner
+             </a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Same as 
+           <a href="#val-bscanf" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Scanf.bscanf</code>
+           </a>, but reads from the predefined formatted input channel
+            
+           <a href="Scanning/index.html#val-stdin" class="cursor-pointer
+            text-orange">
+            <code class="font-normal text-sm">Scanf.Scanning.stdin</code>
+           </a> that is connected to 
+           <a href="../index.html#val-stdin" class="cursor-pointer
+            text-orange">
+            <code class="font-normal text-sm">Stdlib.stdin</code>
+           </a>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-kscanf">
+          <a href="#val-kscanf" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> kscanf : 
+            <span>
+             <a href="Scanning/index.html#type-in_channel"
+              class="cursor-pointer text-orange">Scanning.in_channel
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>(
+              <span>
+               <a href="Scanning/index.html#type-in_channel"
+                class="cursor-pointer text-orange">Scanning.in_channel
+               </a> <span class="">&#45;&gt;</span>
+              </span> <span>exn <span class="">&#45;&gt;</span></span>
+               <span class="">'d</span>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>(<span class="">'a</span>, <span class="">'b</span>
+              , <span class="">'c</span>, <span class="">'d</span>)
+             </span> 
+             <a href="#type-scanner" class="cursor-pointer text-orange">
+              scanner
+             </a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Same as 
+           <a href="#val-bscanf" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Scanf.bscanf</code>
+           </a>, but takes an additional function argument 
+           <code class="font-normal text-sm">ef</code> that is called
+            in case of error: if the scanning process or some conversion
+            fails, the scanning function aborts and calls the error handling
+            function <code class="font-normal text-sm">ef</code> with
+            the formatted input channel and the exception that aborted
+            the scanning process as arguments.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-ksscanf">
+          <a href="#val-ksscanf" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> ksscanf : 
+            <span>string <span class="">&#45;&gt;</span></span> 
+            <span>
+             <span>(
+              <span>
+               <a href="Scanning/index.html#type-in_channel"
+                class="cursor-pointer text-orange">Scanning.in_channel
+               </a> <span class="">&#45;&gt;</span>
+              </span> <span>exn <span class="">&#45;&gt;</span></span>
+               <span class="">'d</span>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>(<span class="">'a</span>, <span class="">'b</span>
+              , <span class="">'c</span>, <span class="">'d</span>)
+             </span> 
+             <a href="#type-scanner" class="cursor-pointer text-orange">
+              scanner
+             </a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Same as 
+           <a href="#val-kscanf" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Scanf.kscanf</code>
+           </a> but reads from the given string.
+          </p><ul class="at-tags"><li class="since">since 4.02.0</li></ul>
+         </div>
+        </div>
+        <h2 class="text-2xl my-4 text-gray-800 font-sans anchored"
+         id="reading-format-strings-from-input">
+         <a href="#reading-format-strings-from-input" class="hover-link
+          inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Reading format strings from input
+        </h2>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-bscanf_format">
+          <a href="#val-bscanf_format" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> bscanf_format
+             : 
+            <span>
+             <a href="Scanning/index.html#type-in_channel"
+              class="cursor-pointer text-orange">Scanning.in_channel
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'b</span>
+               , <span class="">'c</span>, <span class="">'d</span>
+               , <span class="">'e</span>, <span class="">'f</span>
+               )
+              </span> 
+              <a href="../index.html#type-format6" class="cursor-pointer
+               text-orange">Stdlib.format6
+              </a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>(
+              <span>
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="../index.html#type-format6" class="cursor-pointer
+                 text-orange">Stdlib.format6
+                </a>
+               </span> <span class="">&#45;&gt;</span>
+              </span> <span class="">'g</span>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> <span class="">'g</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">bscanf_format ic fmt f</code>
+            reads a format string token from the formatted input channel
+            <code class="font-normal text-sm">ic</code>, according to
+            the given format string 
+           <code class="font-normal text-sm">fmt</code>, and applies 
+           <code class="font-normal text-sm">f</code> to the resulting
+            format string value.
+          </p>
+          <ul class="at-tags">
+           <li class="raises">raises Scan_failure 
+            <p class="mt-4">if the format string value read does not 
+             have the same type as 
+             <code class="font-normal text-sm">fmt</code>.
+            </p>
+           </li>
+          </ul><ul class="at-tags"><li class="since">since 3.09.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-sscanf_format">
+          <a href="#val-sscanf_format" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sscanf_format
+             : <span>string <span class="">&#45;&gt;</span></span> 
+            <span>
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'b</span>
+               , <span class="">'c</span>, <span class="">'d</span>
+               , <span class="">'e</span>, <span class="">'f</span>
+               )
+              </span> 
+              <a href="../index.html#type-format6" class="cursor-pointer
+               text-orange">Stdlib.format6
+              </a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>(
+              <span>
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="../index.html#type-format6" class="cursor-pointer
+                 text-orange">Stdlib.format6
+                </a>
+               </span> <span class="">&#45;&gt;</span>
+              </span> <span class="">'g</span>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> <span class="">'g</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Same as 
+           <a href="#val-bscanf_format" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Scanf.bscanf_format</code>
+           </a>, but reads from the given string.
+          </p><ul class="at-tags"><li class="since">since 3.09.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-format_from_string">
+          <a href="#val-format_from_string" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> format_from_string
+             : <span>string <span class="">&#45;&gt;</span></span> 
+            <span>
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'b</span>
+               , <span class="">'c</span>, <span class="">'d</span>
+               , <span class="">'e</span>, <span class="">'f</span>
+               )
+              </span> 
+              <a href="../index.html#type-format6" class="cursor-pointer
+               text-orange">Stdlib.format6
+              </a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>(<span class="">'a</span>, <span class="">'b</span>
+              , <span class="">'c</span>, <span class="">'d</span>, 
+              <span class="">'e</span>, <span class="">'f</span>)
+             </span> 
+             <a href="../index.html#type-format6" class="cursor-pointer
+              text-orange">Stdlib.format6
+             </a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">format_from_string s fmt</code>
+            converts a string argument to a format string, according 
+           to the given format string 
+           <code class="font-normal text-sm">fmt</code>.
+          </p>
+          <ul class="at-tags">
+           <li class="raises">raises Scan_failure 
+            <p class="mt-4">if <code class="font-normal text-sm">s</code>
+             , considered as a format string, does not have the same 
+             type as <code class="font-normal text-sm">fmt</code>.
+            </p>
+           </li>
+          </ul><ul class="at-tags"><li class="since">since 3.10.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-unescaped">
+          <a href="#val-unescaped" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> unescaped : 
+            <span>string <span class="">&#45;&gt;</span></span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">unescaped s</code> return
+            a copy of <code class="font-normal text-sm">s</code> with
+            escape sequences (according to the lexical conventions of
+            OCaml) replaced by their corresponding special characters.
+            More precisely, 
+           <code class="font-normal text-sm">Scanf.unescaped</code> has
+            the following property: for all string 
+           <code class="font-normal text-sm">s</code>, 
+           <code class="font-normal text-sm">
+            Scanf.unescaped (String.escaped s) = s
+           </code>.
+          </p>
+          <p class="mt-4">Always return a copy of the argument, even 
+           if there is no escape sequence in the argument.
+          </p>
+          <ul class="at-tags">
+           <li class="raises">raises Scan_failure 
+            <p class="mt-4">if <code class="font-normal text-sm">s</code>
+              is not properly escaped (i.e. 
+             <code class="font-normal text-sm">s</code> has invalid escape
+              sequences or special characters that are not properly escaped).
+              For instance, 
+             <code class="font-normal text-sm">
+              Scanf.unescaped &quot;\&quot;&quot;
+             </code> will fail.
+            </p>
+           </li>
+          </ul><ul class="at-tags"><li class="since">since 4.00.0</li></ul>
+         </div>
+        </div>
+        <h2 class="text-2xl my-4 text-gray-800 font-sans anchored"
+         id="deprecated">
+         <a href="#deprecated" class="hover-link inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Deprecated
+        </h2>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-fscanf">
+          <a href="#val-fscanf" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> fscanf : 
+            <span>
+             <a href="../index.html#type-in_channel" class="cursor-pointer
+              text-orange">Stdlib.in_channel
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>(<span class="">'a</span>, <span class="">'b</span>
+              , <span class="">'c</span>, <span class="">'d</span>)
+             </span> 
+             <a href="#type-scanner" class="cursor-pointer text-orange">
+              scanner
+             </a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <ul class="at-tags">
+           <li class="deprecated">deprecated 
+            <p class="mt-4">
+             <code class="font-normal text-sm">Scanf.fscanf</code> is
+              error prone and deprecated since 4.03.0.
+            </p>
+            <p class="mt-4">This function violates the following invariant
+              of the <code class="font-normal text-sm">Scanf</code> module:
+              To preserve scanning semantics, all scanning functions 
+             defined in <code class="font-normal text-sm">Scanf</code>
+              must read from a user defined 
+             <code class="font-normal text-sm">Scanning</code>.in_channel
+              formatted input channel.
+            </p>
+            <p class="mt-4">If you need to read from a 
+             <code class="font-normal text-sm">Stdlib</code>.in_channel
+              input channel <code class="font-normal text-sm">ic</code>
+             , simply define a 
+             <code class="font-normal text-sm">Scanning</code>.in_channel
+              formatted input channel as in 
+             <code class="font-normal text-sm">
+              let ib = Scanning.from_channel ic
+             </code>, then use 
+             <code class="font-normal text-sm">Scanf.bscanf ib</code>
+              as usual.
+            </p>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-kfscanf">
+          <a href="#val-kfscanf" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> kfscanf : 
+            <span>
+             <a href="../index.html#type-in_channel" class="cursor-pointer
+              text-orange">Stdlib.in_channel
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>(
+              <span>
+               <a href="Scanning/index.html#type-in_channel"
+                class="cursor-pointer text-orange">Scanning.in_channel
+               </a> <span class="">&#45;&gt;</span>
+              </span> <span>exn <span class="">&#45;&gt;</span></span>
+               <span class="">'d</span>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>(<span class="">'a</span>, <span class="">'b</span>
+              , <span class="">'c</span>, <span class="">'d</span>)
+             </span> 
+             <a href="#type-scanner" class="cursor-pointer text-orange">
+              scanner
+             </a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <ul class="at-tags">
+           <li class="deprecated">deprecated 
+            <p class="mt-4">
+             <code class="font-normal text-sm">Scanf.kfscanf</code> is
+              error prone and deprecated since 4.03.0.
+            </p>
+           </li>
+          </ul>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="w-full flex-none lg:w-72 border-t lg:border-l bg-gray-100">
+       <div class="flex h-20 border-b relative">
+        <h2 class="text-xl absolute inset-x-0 p-3 bottom-0 mt-7 font-semibold
+         text-gray-500">ocaml-base-compiler.4.12.0
+        </h2>
+       </div>
+       <div class="m-3">
+        <p class="mb-5 italic text-sm">Official release 4.12.0</p>
+        <div class="mb-3">
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="https://ocaml.org">ocaml.org
+          </a>
+         </div>
+        </div>
+        <details class="font-normal mb-2 text-sm">
+         <summary>Other versions</summary><div id="versions_container"></div>
+        </details><h2 class="font-semibold mb-2 text-sm">Authors</h2>
+        <p class="mb-3 text-sm">Xavier Leroy and many contributors</p>
+        <h2 class="font-semibold mb-2 text-sm">Issues</h2>
+        <div class="mb-3">
+         <a class="text-orange cursor-pointer mb-2 text-sm"
+          href="https://github.com/ocaml/opam-repository/issues">
+          github.com/ocaml/opam-repository/issues
+         </a>
+        </div>
+        <details class="font-semibold mb-2 text-sm">
+         <summary>Package dependencies</summary>
+         <div class="font-normal">
+          <ul>
+           <li>
+            <a href="../../../../ocaml/index.html" class="text-orange
+             cursor-pointer">ocaml
+            </a>
+           </li>
+           <li>
+            <a href="../../../../base-unix/index.html" class="text-orange
+             cursor-pointer">base-unix
+            </a>
+           </li>
+           <li>
+            <a href="../../../../base-bigarray/index.html" class="text-orange
+             cursor-pointer">base-bigarray
+            </a>
+           </li>
+           <li>
+            <a href="../../../../base-threads/index.html" class="text-orange
+             cursor-pointer">base-threads
+            </a>
+           </li>
+           <li>
+            <a href="../../../../ocaml-options-vanilla/index.html"
+             class="text-orange cursor-pointer">ocaml-options-vanilla
+            </a>
+           </li>
+          </ul>
+         </div>
+        </details>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div><script>Voodoo.update('../../../version.json')</script>
+ </body>
+</html>

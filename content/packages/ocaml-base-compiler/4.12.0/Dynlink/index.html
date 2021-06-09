@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head><title>Dynlink (packages.ocaml-base-compiler.4.12.0.Dynlink)</title>
+  <link rel="stylesheet" href="../../../tailwind.css"/>
+  <link rel="stylesheet" href="../../../extra.css"/><meta charset="utf-8"/>
+  <meta name="generator" content="odoc 3dfb7aef2f"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <script src="../../../highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="../../../voodoo_client.js"></script>
+  <script
+   src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+   defer="defer">
+  </script>
+ </head>
+ <body class="mx-auto max-w-screen-2xl">
+  <div class="relative">
+   <div class="relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+     <div class="flex justify-between items-center md:justify-start py-6
+      md:space-x-10">
+      <div class="flex justify-start">
+       <a href="https://v3.ocaml.org/">
+        <img src="/colour-logo.svg" alt="" class="h-8 w-auto sm:h-10"/>
+       </a>
+      </div>
+      <nav class="hidden md:flex space-x-10">
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Industry</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/whatisocaml">
+            <p class="text-base font-medium text-gray-900">What is OCaml</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/users">
+            <p class="text-base font-medium text-gray-900">Industrial Users
+            </p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/successstories">
+            <p class="text-base font-medium text-gray-900">Success Stories
+            </p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Resources</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/releases">
+            <p class="text-base font-medium text-gray-900">Releases</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/applications">
+            <p class="text-base font-medium text-gray-900">Applications</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/language">
+            <p class="text-base font-medium text-gray-900">Language</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/archive">
+            <p class="text-base font-medium text-gray-900">Archive</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Community</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/opportunities">
+            <p class="text-base font-medium text-gray-900">Opportunities</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/news">
+            <p class="text-base font-medium text-gray-900">News</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/aroundweb">
+            <p class="text-base font-medium text-gray-900">Around the Web</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="h-screen flex bg-white font-sans">
+   <div class="flex flex-col w-full h-full">
+    <div class="flex-row flex-1">
+     <nav class="bg-orange border-t border-b border-orange flex flex-row">
+      <ol class="max-w-screen-xl w-full px-4 flex space-x-4 sm:px-6 lg:px-8">
+       <li class="flex">
+        <div class="flex items-center">
+         <a href="#" class="text-gray-100 hover:text-gray-500">
+          
+  <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+        </svg>
+  
+          <span class="sr-only">Home</span>
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">packages
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">ocaml-base-compiler
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">4.12.0
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="#" class="ml-4 text-sm font-medium text-gray-100
+          hover:text-gray-500">Dynlink
+         </a>
+        </div>
+       </li>
+      </ol>
+     </nav>
+    </div>
+    <div class="flex flex-row flex-1">
+     <div class="w-72 flex-none bg-gray-100 h-screen border-r border-gray-200
+      sticky top-0 hidden lg:block">
+      <div class="flex h-20 border-b relative">
+       <h2 class="text-xl absolute inset-x-0 p-3 px-5 bottom-0 mt-7
+        border-gray-200 font-semibold text-gray-500 font-sans">On this page
+       </h2>
+      </div>
+      <nav class="bg-gray-100 p-5">
+       <ul>
+        <li>
+         <a href="#dynamic-loading-of-compiled-files" class="cursor-pointer
+          text-orange">Dynamic loading of compiled files
+         </a>
+        </li>
+        <li>
+         <a href="#access-control" class="cursor-pointer text-orange">
+          Access control
+         </a>
+        </li>
+        <li>
+         <a href="#error-reporting" class="cursor-pointer text-orange">
+          Error reporting
+         </a>
+        </li>
+       </ul>
+      </nav>
+     </div>
+     <div class="flex flex-1 flex-col lg:flex-row">
+      <div class="flex-1">
+       <div class="lg:max-w-5xl mx-auto px-3 lg:px-10 mb-10 text-sm">
+        <div class="flex h-20 relative border-b border-gray-200">
+         <div class="relative flex-1 h-20">
+          <h1 class="text-3xl absolute inset-x-0 py-3 bottom-0 font-semibold
+           text-gray-500 font-sans w-full truncate">
+           <code class="font-mono text-gray-800">Dynlink</code>
+          </h1>
+         </div>
+         <div class="relative flex-none w-28">
+          <h1 class="text-3xl absolute py-3 bottom-0 right-0 font-semibold
+           text-gray-500 font-sans">Module
+          </h1>
+         </div>
+        </div>
+        <p class="mt-4">Dynamic loading of .cmo, .cma and .cmxs files.</p>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-is_native">
+          <a href="#val-is_native" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> is_native : bool
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">true</code>
+            if the program is native, 
+           <code class="font-normal text-sm">false</code> if the program
+            is bytecode.
+          </p>
+         </div>
+        </div>
+        <h2 class="text-2xl my-4 text-gray-800 font-sans anchored"
+         id="dynamic-loading-of-compiled-files">
+         <a href="#dynamic-loading-of-compiled-files" class="hover-link
+          inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Dynamic loading of compiled files
+        </h2>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-loadfile">
+          <a href="#val-loadfile" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> loadfile : 
+            <span>string <span class="">&#45;&gt;</span></span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">In bytecode: load the given bytecode object
+            file (<code class="font-normal text-sm">.cmo</code> file)
+            or bytecode library file (
+           <code class="font-normal text-sm">.cma</code> file), and link
+            it with the running program. In native code: load the given
+            OCaml plugin file (usually 
+           <code class="font-normal text-sm">.cmxs</code>), and link 
+           it with the running program.
+          </p>
+          <p class="mt-4">All toplevel expressions in the loaded compilation
+            units are evaluated. No facilities are provided to access
+            value names defined by the unit. Therefore, the unit must
+            itself register its entry points with the main program (or
+            a previously-loaded library) e.g. by modifying tables of 
+           functions.
+          </p>
+          <p class="mt-4">An exception will be raised if the given library
+            defines toplevel modules whose names clash with modules existing
+            either in the main program or a shared library previously
+            loaded with <code class="font-normal text-sm">loadfile</code>
+           . Modules from shared libraries previously loaded with 
+           <code class="font-normal text-sm">loadfile_private</code> 
+           are not included in this restriction.
+          </p>
+          <p class="mt-4">The compilation units loaded by this function
+            are added to the &quot;allowed units&quot; list (see 
+           <a href="#val-set_allowed_units" class="cursor-pointer
+            text-orange">
+            <code class="font-normal text-sm">set_allowed_units</code>
+           </a>).
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-loadfile_private">
+          <a href="#val-loadfile_private" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> loadfile_private
+             : <span>string <span class="">&#45;&gt;</span></span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Same as 
+           <code class="font-normal text-sm">loadfile</code>, except 
+           that the compilation units just loaded are hidden (cannot 
+           be referenced) from other modules dynamically loaded afterwards.
+          </p>
+          <p class="mt-4">An exception will be raised if the given library
+            defines toplevel modules whose names clash with modules existing
+            in either the main program or a shared library previously
+            loaded with <code class="font-normal text-sm">loadfile</code>
+           . Modules from shared libraries previously loaded with 
+           <code class="font-normal text-sm">loadfile_private</code> 
+           are not included in this restriction.
+          </p>
+          <p class="mt-4">An exception will also be raised if the given
+            library defines toplevel modules whose name matches that 
+           of an interface depended on by a module existing in either
+            the main program or a shared library previously loaded with
+            <code class="font-normal text-sm">loadfile</code>. This applies
+            even if such dependency is only a &quot;module alias&quot;
+            dependency (i.e. just on the name rather than the contents
+            of the interface).
+          </p>
+          <p class="mt-4">The compilation units loaded by this function
+            are not added to the &quot;allowed units&quot; list (see 
+           <a href="#val-set_allowed_units" class="cursor-pointer
+            text-orange">
+            <code class="font-normal text-sm">set_allowed_units</code>
+           </a>) since they cannot be referenced from other compilation
+            units.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-adapt_filename">
+          <a href="#val-adapt_filename" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> adapt_filename
+             : <span>string <span class="">&#45;&gt;</span></span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">In bytecode, the identity function. In native
+            code, replace the last extension with 
+           <code class="font-normal text-sm">.cmxs</code>.
+          </p>
+         </div>
+        </div>
+        <h2 class="text-2xl my-4 text-gray-800 font-sans anchored"
+         id="access-control">
+         <a href="#access-control" class="hover-link inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Access control
+        </h2>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-set_allowed_units">
+          <a href="#val-set_allowed_units" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> set_allowed_units
+             : 
+            <span><span>string list</span> <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Set the list of compilation units that may 
+           be referenced from units that are dynamically loaded in the
+            future to be exactly the given value.
+          </p>
+          <p class="mt-4">Initially all compilation units composing the
+            program currently running are available for reference from
+            dynamically-linked units. 
+           <code class="font-normal text-sm">set_allowed_units</code>
+            can be used to restrict access to a subset of these units,
+            e.g. to the units that compose the API for dynamically-linked
+            code, and prevent access to all other units, e.g. private,
+            internal modules of the running program.
+          </p>
+          <p class="mt-4">Note that 
+           <a href="#val-loadfile" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">loadfile</code>
+           </a> changes the allowed-units list.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-allow_only">
+          <a href="#val-allow_only" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> allow_only : 
+            <span><span>string list</span> <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">allow_only units</code> 
+           sets the list of allowed units to be the intersection of the
+            existing allowed units and the given list of units. As such
+            it can never increase the set of allowed units.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-prohibit">
+          <a href="#val-prohibit" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> prohibit : 
+            <span><span>string list</span> <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">prohibit units</code> prohibits
+            dynamically-linked units from referencing the units named
+            in list <code class="font-normal text-sm">units</code> by
+            removing such units from the allowed units list. This can
+            be used to prevent access to selected units, e.g. private,
+            internal modules of the running program.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-main_program_units">
+          <a href="#val-main_program_units" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> main_program_units
+             : <span>unit <span class="">&#45;&gt;</span></span> 
+            <span>string list</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return the list of compilation units that form
+            the main program (i.e. are not dynamically linked).
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100"
+          id="val-public_dynamically_loaded_units">
+          <a href="#val-public_dynamically_loaded_units" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            public_dynamically_loaded_units : 
+            <span>unit <span class="">&#45;&gt;</span></span> 
+            <span>string list</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return the list of compilation units that have
+            been dynamically loaded via 
+           <code class="font-normal text-sm">loadfile</code> (and not
+            via <code class="font-normal text-sm">loadfile_private</code>
+           ). Note that compilation units loaded dynamically cannot be
+            unloaded.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-all_units">
+          <a href="#val-all_units" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> all_units : 
+            <span>unit <span class="">&#45;&gt;</span></span> 
+            <span>string list</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return the list of compilation units that form
+            the main program together with those that have been dynamically
+            loaded via <code class="font-normal text-sm">loadfile</code>
+            (and not via 
+           <code class="font-normal text-sm">loadfile_private</code>).
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-allow_unsafe_modules">
+          <a href="#val-allow_unsafe_modules" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> allow_unsafe_modules
+             : <span>bool <span class="">&#45;&gt;</span></span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Govern whether unsafe object files are allowed
+            to be dynamically linked. A compilation unit is 'unsafe' 
+           if it contains declarations of external functions, which can
+            break type safety. By default, dynamic linking of unsafe 
+           object files is not allowed. In native code, this function
+            does nothing; object files with external functions are always
+            allowed to be dynamically linked.
+          </p>
+         </div>
+        </div>
+        <h2 class="text-2xl my-4 text-gray-800 font-sans anchored"
+         id="error-reporting">
+         <a href="#error-reporting" class="hover-link inline-block -ml-7
+          pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Error reporting
+        </h2>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-linking_error">
+          <a href="#type-linking_error" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> linking_error</span>
+           <span> = <span class="font-semibold">private</span> </span>
+          </code>
+          <table>
+           <tr id="type-linking_error.Undefined_global">
+            <td class="anchored pl-4">
+             <a href="#type-linking_error.Undefined_global" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Undefined_global</span> 
+               <span class="font-semibold">of</span> string
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-linking_error.Unavailable_primitive">
+            <td class="anchored pl-4">
+             <a href="#type-linking_error.Unavailable_primitive"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Unavailable_primitive</span> 
+               <span class="font-semibold">of</span> string
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-linking_error.Uninitialized_global">
+            <td class="anchored pl-4">
+             <a href="#type-linking_error.Uninitialized_global"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Uninitialized_global</span> 
+               <span class="font-semibold">of</span> string
+              </span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-error">
+          <a href="#type-error" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> error</span>
+           <span> = <span class="font-semibold">private</span> </span>
+          </code>
+          <table>
+           <tr id="type-error.Not_a_bytecode_file">
+            <td class="anchored pl-4">
+             <a href="#type-error.Not_a_bytecode_file" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Not_a_bytecode_file</span> 
+               <span class="font-semibold">of</span> string
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Inconsistent_import">
+            <td class="anchored pl-4">
+             <a href="#type-error.Inconsistent_import" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Inconsistent_import</span> 
+               <span class="font-semibold">of</span> string
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Unavailable_unit">
+            <td class="anchored pl-4">
+             <a href="#type-error.Unavailable_unit" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Unavailable_unit</span> 
+               <span class="font-semibold">of</span> string
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Unsafe_file">
+            <td class="anchored pl-4">
+             <a href="#type-error.Unsafe_file" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Unsafe_file</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Linking_error">
+            <td class="anchored pl-4">
+             <a href="#type-error.Linking_error" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Linking_error</span> 
+               <span class="font-semibold">of</span> string * 
+               <a href="#type-linking_error" class="cursor-pointer
+                text-orange">linking_error
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Corrupted_interface">
+            <td class="anchored pl-4">
+             <a href="#type-error.Corrupted_interface" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Corrupted_interface</span> 
+               <span class="font-semibold">of</span> string
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Cannot_open_dynamic_library">
+            <td class="anchored pl-4">
+             <a href="#type-error.Cannot_open_dynamic_library"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cannot_open_dynamic_library</span>
+                <span class="font-semibold">of</span> exn
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Library's_module_initializers_failed">
+            <td class="anchored pl-4">
+             <a href="#type-error.Library's_module_initializers_failed"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span>
+               <span class="">Library's_module_initializers_failed</span>
+                <span class="font-semibold">of</span> exn
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Inconsistent_implementation">
+            <td class="anchored pl-4">
+             <a href="#type-error.Inconsistent_implementation"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Inconsistent_implementation</span>
+                <span class="font-semibold">of</span> string
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Module_already_loaded">
+            <td class="anchored pl-4">
+             <a href="#type-error.Module_already_loaded" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Module_already_loaded</span> 
+               <span class="font-semibold">of</span> string
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Private_library_cannot_implement_interface">
+            <td class="anchored pl-4">
+             <a href="#type-error.Private_library_cannot_implement_interface"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span>
+               <span class="">Private_library_cannot_implement_interface
+               </span> <span class="font-semibold">of</span> string
+              </span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec exception anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="exception-Error">
+          <a href="#exception-Error" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">exception</span> </span>
+           <span><span class="">Error</span> 
+            <span class="font-semibold">of</span> 
+            <a href="#type-error" class="cursor-pointer text-orange">error
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Errors in dynamic linking are reported by raising
+            the <code class="font-normal text-sm">Error</code> exception
+            with a description of the error. A common case is the dynamic
+            library not being found on the system: this is reported via
+            
+           <code class="font-normal text-sm">Cannot_open_dynamic_library
+           </code> (the enclosed exception may be platform-specific).
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-error_message">
+          <a href="#val-error_message" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> error_message
+             : 
+            <span>
+             <a href="#type-error" class="cursor-pointer text-orange">error
+             </a> <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Convert an error description to a printable
+            message.
+          </p>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="w-full flex-none lg:w-72 border-t lg:border-l bg-gray-100">
+       <div class="flex h-20 border-b relative">
+        <h2 class="text-xl absolute inset-x-0 p-3 bottom-0 mt-7 font-semibold
+         text-gray-500">ocaml-base-compiler.4.12.0
+        </h2>
+       </div>
+       <div class="m-3">
+        <p class="mb-5 italic text-sm">Official release 4.12.0</p>
+        <div class="mb-3">
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="https://ocaml.org">ocaml.org
+          </a>
+         </div>
+        </div>
+        <details class="font-normal mb-2 text-sm">
+         <summary>Other versions</summary><div id="versions_container"></div>
+        </details><h2 class="font-semibold mb-2 text-sm">Authors</h2>
+        <p class="mb-3 text-sm">Xavier Leroy and many contributors</p>
+        <h2 class="font-semibold mb-2 text-sm">Issues</h2>
+        <div class="mb-3">
+         <a class="text-orange cursor-pointer mb-2 text-sm"
+          href="https://github.com/ocaml/opam-repository/issues">
+          github.com/ocaml/opam-repository/issues
+         </a>
+        </div>
+        <details class="font-semibold mb-2 text-sm">
+         <summary>Package dependencies</summary>
+         <div class="font-normal">
+          <ul>
+           <li>
+            <a href="../../../ocaml/index.html" class="text-orange
+             cursor-pointer">ocaml
+            </a>
+           </li>
+           <li>
+            <a href="../../../base-unix/index.html" class="text-orange
+             cursor-pointer">base-unix
+            </a>
+           </li>
+           <li>
+            <a href="../../../base-bigarray/index.html" class="text-orange
+             cursor-pointer">base-bigarray
+            </a>
+           </li>
+           <li>
+            <a href="../../../base-threads/index.html" class="text-orange
+             cursor-pointer">base-threads
+            </a>
+           </li>
+           <li>
+            <a href="../../../ocaml-options-vanilla/index.html"
+             class="text-orange cursor-pointer">ocaml-options-vanilla
+            </a>
+           </li>
+          </ul>
+         </div>
+        </details>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div><script>Voodoo.update('../../version.json')</script>
+ </body>
+</html>

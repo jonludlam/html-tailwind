@@ -1,0 +1,3222 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>Odoc_info (packages.ocaml-base-compiler.4.12.0.Odoc_info)</title>
+  <link rel="stylesheet" href="../../../tailwind.css"/>
+  <link rel="stylesheet" href="../../../extra.css"/><meta charset="utf-8"/>
+  <meta name="generator" content="odoc 3dfb7aef2f"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <script src="../../../highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="../../../voodoo_client.js"></script>
+  <script
+   src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+   defer="defer">
+  </script>
+ </head>
+ <body class="mx-auto max-w-screen-2xl">
+  <div class="relative">
+   <div class="relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+     <div class="flex justify-between items-center md:justify-start py-6
+      md:space-x-10">
+      <div class="flex justify-start">
+       <a href="https://v3.ocaml.org/">
+        <img src="/colour-logo.svg" alt="" class="h-8 w-auto sm:h-10"/>
+       </a>
+      </div>
+      <nav class="hidden md:flex space-x-10">
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Industry</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/whatisocaml">
+            <p class="text-base font-medium text-gray-900">What is OCaml</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/users">
+            <p class="text-base font-medium text-gray-900">Industrial Users
+            </p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/successstories">
+            <p class="text-base font-medium text-gray-900">Success Stories
+            </p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Resources</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/releases">
+            <p class="text-base font-medium text-gray-900">Releases</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/applications">
+            <p class="text-base font-medium text-gray-900">Applications</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/language">
+            <p class="text-base font-medium text-gray-900">Language</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/archive">
+            <p class="text-base font-medium text-gray-900">Archive</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Community</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/opportunities">
+            <p class="text-base font-medium text-gray-900">Opportunities</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/news">
+            <p class="text-base font-medium text-gray-900">News</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/aroundweb">
+            <p class="text-base font-medium text-gray-900">Around the Web</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="h-screen flex bg-white font-sans">
+   <div class="flex flex-col w-full h-full">
+    <div class="flex-row flex-1">
+     <nav class="bg-orange border-t border-b border-orange flex flex-row">
+      <ol class="max-w-screen-xl w-full px-4 flex space-x-4 sm:px-6 lg:px-8">
+       <li class="flex">
+        <div class="flex items-center">
+         <a href="#" class="text-gray-100 hover:text-gray-500">
+          
+  <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+        </svg>
+  
+          <span class="sr-only">Home</span>
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">packages
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">ocaml-base-compiler
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">4.12.0
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="#" class="ml-4 text-sm font-medium text-gray-100
+          hover:text-gray-500">Odoc_info
+         </a>
+        </div>
+       </li>
+      </ol>
+     </nav>
+    </div>
+    <div class="flex flex-row flex-1">
+     <div class="w-72 flex-none bg-gray-100 h-screen border-r border-gray-200
+      sticky top-0 hidden lg:block">
+      <div class="flex h-20 border-b relative">
+       <h2 class="text-xl absolute inset-x-0 p-3 px-5 bottom-0 mt-7
+        border-gray-200 font-semibold text-gray-500 font-sans">On this page
+       </h2>
+      </div>
+      <nav class="bg-gray-100 p-5">
+       <ul>
+        <li>
+         <a href="#getting-strings-from-values" class="cursor-pointer
+          text-orange">Getting strings from values
+         </a>
+        </li>
+        <li>
+         <a href="#miscellaneous-functions" class="cursor-pointer
+          text-orange">Miscellaneous functions
+         </a>
+        </li>
+        <li>
+         <a href="#some-global-variables" class="cursor-pointer text-orange">
+          Some global variables
+         </a>
+        </li>
+       </ul>
+      </nav>
+     </div>
+     <div class="flex flex-1 flex-col lg:flex-row">
+      <div class="flex-1">
+       <div class="lg:max-w-5xl mx-auto px-3 lg:px-10 mb-10 text-sm">
+        <div class="flex h-20 relative border-b border-gray-200">
+         <div class="relative flex-1 h-20">
+          <h1 class="text-3xl absolute inset-x-0 py-3 bottom-0 font-semibold
+           text-gray-500 font-sans w-full truncate">
+           <code class="font-mono text-gray-800">Odoc_info</code>
+          </h1>
+         </div>
+         <div class="relative flex-none w-28">
+          <h1 class="text-3xl absolute py-3 bottom-0 right-0 font-semibold
+           text-gray-500 font-sans">Module
+          </h1>
+         </div>
+        </div>
+        <p class="mt-4">Interface to the information collected in source
+          files.
+        </p>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-ref_kind">
+          <a href="#type-ref_kind" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> ref_kind</span>
+           <span> = 
+            <a href="../Odoc_types/index.html#type-ref_kind"
+             class="cursor-pointer text-orange">Odoc_types.ref_kind
+            </a>
+           </span><span> = </span>
+          </code>
+          <table>
+           <tr id="type-ref_kind.RK_module">
+            <td class="anchored pl-4">
+             <a href="#type-ref_kind.RK_module" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">RK_module</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-ref_kind.RK_module_type">
+            <td class="anchored pl-4">
+             <a href="#type-ref_kind.RK_module_type" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">RK_module_type</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-ref_kind.RK_class">
+            <td class="anchored pl-4">
+             <a href="#type-ref_kind.RK_class" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">RK_class</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-ref_kind.RK_class_type">
+            <td class="anchored pl-4">
+             <a href="#type-ref_kind.RK_class_type" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">RK_class_type</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-ref_kind.RK_value">
+            <td class="anchored pl-4">
+             <a href="#type-ref_kind.RK_value" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">RK_value</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-ref_kind.RK_type">
+            <td class="anchored pl-4">
+             <a href="#type-ref_kind.RK_type" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">RK_type</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-ref_kind.RK_extension">
+            <td class="anchored pl-4">
+             <a href="#type-ref_kind.RK_extension" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">RK_extension</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-ref_kind.RK_exception">
+            <td class="anchored pl-4">
+             <a href="#type-ref_kind.RK_exception" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">RK_exception</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-ref_kind.RK_attribute">
+            <td class="anchored pl-4">
+             <a href="#type-ref_kind.RK_attribute" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">RK_attribute</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-ref_kind.RK_method">
+            <td class="anchored pl-4">
+             <a href="#type-ref_kind.RK_method" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">RK_method</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-ref_kind.RK_section">
+            <td class="anchored pl-4">
+             <a href="#type-ref_kind.RK_section" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">RK_section</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-text" class="cursor-pointer text-orange">text
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-ref_kind.RK_recfield">
+            <td class="anchored pl-4">
+             <a href="#type-ref_kind.RK_recfield" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">RK_recfield</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-ref_kind.RK_const">
+            <td class="anchored pl-4">
+             <a href="#type-ref_kind.RK_const" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">RK_const</span></span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">The different kinds of element references.</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-text_element">
+          <a href="#type-text_element" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">and</span> text_element</span>
+           <span> = 
+            <a href="../Odoc_types/index.html#type-text_element"
+             class="cursor-pointer text-orange">Odoc_types.text_element
+            </a>
+           </span><span> = </span>
+          </code>
+          <table>
+           <tr id="type-text_element.Raw">
+            <td class="anchored pl-4">
+             <a href="#type-text_element.Raw" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Raw</span> 
+               <span class="font-semibold">of</span> string
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>Raw
+              text.<span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-text_element.Code">
+            <td class="anchored pl-4">
+             <a href="#type-text_element.Code" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Code</span> 
+               <span class="font-semibold">of</span> string
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>The
+              string is source code.<span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-text_element.CodePre">
+            <td class="anchored pl-4">
+             <a href="#type-text_element.CodePre" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">CodePre</span> 
+               <span class="font-semibold">of</span> string
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>The
+              string is pre-formatted source code.
+             <span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-text_element.Verbatim">
+            <td class="anchored pl-4">
+             <a href="#type-text_element.Verbatim" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Verbatim</span> 
+               <span class="font-semibold">of</span> string
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>String
+              'as is'.<span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-text_element.Bold">
+            <td class="anchored pl-4">
+             <a href="#type-text_element.Bold" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Bold</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-text" class="cursor-pointer text-orange">text
+               </a>
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>Text
+              in bold style.<span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-text_element.Italic">
+            <td class="anchored pl-4">
+             <a href="#type-text_element.Italic" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Italic</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-text" class="cursor-pointer text-orange">text
+               </a>
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>Text
+              in italic.<span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-text_element.Emphasize">
+            <td class="anchored pl-4">
+             <a href="#type-text_element.Emphasize" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Emphasize</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-text" class="cursor-pointer text-orange">text
+               </a>
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>
+             Emphasized text.<span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-text_element.Center">
+            <td class="anchored pl-4">
+             <a href="#type-text_element.Center" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Center</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-text" class="cursor-pointer text-orange">text
+               </a>
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>Centered
+              text.<span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-text_element.Left">
+            <td class="anchored pl-4">
+             <a href="#type-text_element.Left" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Left</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-text" class="cursor-pointer text-orange">text
+               </a>
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>Left
+              alignment.<span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-text_element.Right">
+            <td class="anchored pl-4">
+             <a href="#type-text_element.Right" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Right</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-text" class="cursor-pointer text-orange">text
+               </a>
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>Right
+              alignment.<span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-text_element.List">
+            <td class="anchored pl-4">
+             <a href="#type-text_element.List" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">List</span> 
+               <span class="font-semibold">of</span> 
+               <span>
+                <a href="#type-text" class="cursor-pointer text-orange">text
+                </a> list
+               </span>
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>A
+              list.<span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-text_element.Enum">
+            <td class="anchored pl-4">
+             <a href="#type-text_element.Enum" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Enum</span> 
+               <span class="font-semibold">of</span> 
+               <span>
+                <a href="#type-text" class="cursor-pointer text-orange">text
+                </a> list
+               </span>
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>An
+              enumerated list.<span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-text_element.Newline">
+            <td class="anchored pl-4">
+             <a href="#type-text_element.Newline" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Newline</span></span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>To
+              force a line break.<span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-text_element.Block">
+            <td class="anchored pl-4">
+             <a href="#type-text_element.Block" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Block</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-text" class="cursor-pointer text-orange">text
+               </a>
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>Like
+              html's block quote.<span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-text_element.Title">
+            <td class="anchored pl-4">
+             <a href="#type-text_element.Title" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Title</span> 
+               <span class="font-semibold">of</span> int * 
+               <span>string option</span> * 
+               <a href="#type-text" class="cursor-pointer text-orange">text
+               </a>
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>Style
+              number, optional label, and text.
+             <span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-text_element.Latex">
+            <td class="anchored pl-4">
+             <a href="#type-text_element.Latex" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Latex</span> 
+               <span class="font-semibold">of</span> string
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>A
+              string for latex.<span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-text_element.Link">
+            <td class="anchored pl-4">
+             <a href="#type-text_element.Link" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Link</span> 
+               <span class="font-semibold">of</span> string * 
+               <a href="#type-text" class="cursor-pointer text-orange">text
+               </a>
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>A
+              reference string and the link text.
+             <span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-text_element.Ref">
+            <td class="anchored pl-4">
+             <a href="#type-text_element.Ref" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Ref</span> 
+               <span class="font-semibold">of</span> string * 
+               <span>
+                <a href="#type-ref_kind" class="cursor-pointer text-orange">
+                 ref_kind
+                </a> option
+               </span> * 
+               <span>
+                <a href="#type-text" class="cursor-pointer text-orange">text
+                </a> option
+               </span>
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>A
+              reference to an element. Complete name and kind. An optional
+              text can be given to display this text instead of the element
+              name.<span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-text_element.Superscript">
+            <td class="anchored pl-4">
+             <a href="#type-text_element.Superscript" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Superscript</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-text" class="cursor-pointer text-orange">text
+               </a>
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>
+             Superscripts.<span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-text_element.Subscript">
+            <td class="anchored pl-4">
+             <a href="#type-text_element.Subscript" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Subscript</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-text" class="cursor-pointer text-orange">text
+               </a>
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>
+             Subscripts.<span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-text_element.Module_list">
+            <td class="anchored pl-4">
+             <a href="#type-text_element.Module_list" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Module_list</span> 
+               <span class="font-semibold">of</span> <span>string list</span>
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>The
+              table of the given modules with their abstract.
+             <span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-text_element.Index_list">
+            <td class="anchored pl-4">
+             <a href="#type-text_element.Index_list" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Index_list</span></span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>The
+              links to the various indexes (values, types, ...)
+             <span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-text_element.Custom">
+            <td class="anchored pl-4">
+             <a href="#type-text_element.Custom" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Custom</span> 
+               <span class="font-semibold">of</span> string * 
+               <a href="#type-text" class="cursor-pointer text-orange">text
+               </a>
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>to
+              extend {foo syntax<span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-text_element.Target">
+            <td class="anchored pl-4">
+             <a href="#type-text_element.Target" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Target</span> 
+               <span class="font-semibold">of</span> string * string
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>(target,
+              code) : to specify code specific to a target format
+             <span class="sr-only">*)</span>
+            </td>
+           </tr>
+          </table>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-text">
+          <a href="#type-text" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">and</span> text</span>
+           <span> = 
+            <span>
+             <a href="#type-text_element" class="cursor-pointer text-orange">
+              text_element
+             </a> list
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">A text is a list of 
+           <code class="font-normal text-sm">text_element</code>. The
+            order matters.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-see_ref">
+          <a href="#type-see_ref" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> see_ref</span>
+           <span> = 
+            <a href="../Odoc_types/index.html#type-see_ref"
+             class="cursor-pointer text-orange">Odoc_types.see_ref
+            </a>
+           </span><span> = </span>
+          </code>
+          <table>
+           <tr id="type-see_ref.See_url">
+            <td class="anchored pl-4">
+             <a href="#type-see_ref.See_url" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">See_url</span> 
+               <span class="font-semibold">of</span> string
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-see_ref.See_file">
+            <td class="anchored pl-4">
+             <a href="#type-see_ref.See_file" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">See_file</span> 
+               <span class="font-semibold">of</span> string
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-see_ref.See_doc">
+            <td class="anchored pl-4">
+             <a href="#type-see_ref.See_doc" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">See_doc</span> 
+               <span class="font-semibold">of</span> string
+              </span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">The different forms of references in @see tags.</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec exception anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="exception-Text_syntax">
+          <a href="#exception-Text_syntax" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">exception</span> </span>
+           <span><span class="">Text_syntax</span> 
+            <span class="font-semibold">of</span> int * int * string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Raised when parsing string to build a 
+           <a href="#type-text" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Odoc_info.text</code>
+           </a> structure. 
+           <code class="font-normal text-sm">(line, char, string)</code>
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-see">
+          <a href="#type-see" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> see</span>
+           <span> = 
+            <a href="#type-see_ref" class="cursor-pointer text-orange">
+             see_ref
+            </a> * 
+            <a href="#type-text" class="cursor-pointer text-orange">text</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">The information in a @see tag.</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-param">
+          <a href="#type-param" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> param</span>
+           <span> = string * 
+            <a href="#type-text" class="cursor-pointer text-orange">text</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Parameter name and description.</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-raised_exception">
+          <a href="#type-raised_exception" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> raised_exception
+           </span>
+           <span> = string * 
+            <a href="#type-text" class="cursor-pointer text-orange">text</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Raised exception name and description.</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-info">
+          <a href="#type-info" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> info</span>
+           <span> = 
+            <a href="../Odoc_types/index.html#type-info"
+             class="cursor-pointer text-orange">Odoc_types.info
+            </a>
+           </span><span> = </span><span>{</span>
+          </code>
+          <table>
+           <tr id="type-info.i_desc">
+            <td class="anchored pl-4">
+             <a href="#type-info.i_desc" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>i_desc : 
+               <span>
+                <a href="#type-text" class="cursor-pointer text-orange">text
+                </a> option
+               </span>;
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>The
+              description text.<span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-info.i_authors">
+            <td class="anchored pl-4">
+             <a href="#type-info.i_authors" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>i_authors : <span>string list</span>;</span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>The
+              list of authors in @author tags.<span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-info.i_version">
+            <td class="anchored pl-4">
+             <a href="#type-info.i_version" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>i_version : <span>string option</span>;</span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>The
+              string in the @version tag.<span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-info.i_sees">
+            <td class="anchored pl-4">
+             <a href="#type-info.i_sees" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>i_sees : 
+               <span>
+                <a href="#type-see" class="cursor-pointer text-orange">see
+                </a> list
+               </span>;
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>The
+              list of @see tags.<span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-info.i_since">
+            <td class="anchored pl-4">
+             <a href="#type-info.i_since" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>i_since : <span>string option</span>;</span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>The
+              string in the @since tag.<span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-info.i_before">
+            <td class="anchored pl-4">
+             <a href="#type-info.i_before" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>i_before : 
+               <span>
+                <span>(string * 
+                 <a href="#type-text" class="cursor-pointer text-orange">text
+                 </a>)
+                </span> list
+               </span>;
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>the
+              version number and text in @before tag
+             <span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-info.i_deprecated">
+            <td class="anchored pl-4">
+             <a href="#type-info.i_deprecated" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>i_deprecated : 
+               <span>
+                <a href="#type-text" class="cursor-pointer text-orange">text
+                </a> option
+               </span>;
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>The
+              description text of the @deprecated tag.
+             <span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-info.i_params">
+            <td class="anchored pl-4">
+             <a href="#type-info.i_params" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>i_params : 
+               <span>
+                <a href="#type-param" class="cursor-pointer text-orange">
+                 param
+                </a> list
+               </span>;
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>The
+              list of parameter descriptions.<span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-info.i_raised_exceptions">
+            <td class="anchored pl-4">
+             <a href="#type-info.i_raised_exceptions" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>i_raised_exceptions : 
+               <span>
+                <a href="#type-raised_exception" class="cursor-pointer
+                 text-orange">raised_exception
+                </a> list
+               </span>;
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>The
+              list of raised exceptions.<span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-info.i_return_value">
+            <td class="anchored pl-4">
+             <a href="#type-info.i_return_value" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>i_return_value : 
+               <span>
+                <a href="#type-text" class="cursor-pointer text-orange">text
+                </a> option
+               </span>;
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>The
+              description text of the return value.
+             <span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-info.i_custom">
+            <td class="anchored pl-4">
+             <a href="#type-info.i_custom" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>i_custom : 
+               <span>
+                <span>(string * 
+                 <a href="#type-text" class="cursor-pointer text-orange">text
+                 </a>)
+                </span> list
+               </span>;
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>A
+              text associated to a custom @-tag.
+             <span class="sr-only">*)</span>
+            </td>
+           </tr>
+          </table><code class="font-normal text-sm"><span>}</span></code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Information in a special comment</p>
+          <ul class="at-tags">
+           <li class="before">before 3.12.0 
+            <p class="mt-4">@before information was not present.</p>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-location">
+          <a href="#type-location" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> location</span>
+           <span> = 
+            <a href="../Odoc_types/index.html#type-location"
+             class="cursor-pointer text-orange">Odoc_types.location
+            </a>
+           </span><span> = </span><span>{</span>
+          </code>
+          <table>
+           <tr id="type-location.loc_impl">
+            <td class="anchored pl-4">
+             <a href="#type-location.loc_impl" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>loc_impl : 
+               <span>
+                <a href="../Location/index.html#type-t" class="cursor-pointer
+                 text-orange">Location.t
+                </a> option
+               </span>;
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>
+             implementation location<span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-location.loc_inter">
+            <td class="anchored pl-4">
+             <a href="#type-location.loc_inter" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>loc_inter : 
+               <span>
+                <a href="../Location/index.html#type-t" class="cursor-pointer
+                 text-orange">Location.t
+                </a> option
+               </span>;
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>interface
+              location<span class="sr-only">*)</span>
+            </td>
+           </tr>
+          </table><code class="font-normal text-sm"><span>}</span></code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Location of elements in implementation and 
+           interface files.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-dummy_loc">
+          <a href="#val-dummy_loc" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> dummy_loc : 
+            <a href="#type-location" class="cursor-pointer text-orange">
+             location
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc"><p class="mt-4">A dummy location.</p></div>
+        </div>
+        <div class="mt-8">
+         <div class="spec module anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="module-Name">
+          <a href="#module-Name" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">module</span> </span>
+           <span>
+            <a href="Name/index.html" class="cursor-pointer text-orange">Name
+            </a>
+           </span>
+           <span> : <span class="font-semibold">sig</span> ... 
+            <span class="font-semibold">end</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Representation of element names.</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec module anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="module-Parameter">
+          <a href="#module-Parameter" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">module</span> </span>
+           <span>
+            <a href="Parameter/index.html" class="cursor-pointer text-orange">
+             Parameter
+            </a>
+           </span>
+           <span> : <span class="font-semibold">sig</span> ... 
+            <span class="font-semibold">end</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Representation and manipulation of method /
+            function / class / module parameters.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec module anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="module-Extension">
+          <a href="#module-Extension" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">module</span> </span>
+           <span>
+            <a href="Extension/index.html" class="cursor-pointer text-orange">
+             Extension
+            </a>
+           </span>
+           <span> : <span class="font-semibold">sig</span> ... 
+            <span class="font-semibold">end</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Representation and manipulation of extensions.</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec module anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="module-Exception">
+          <a href="#module-Exception" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">module</span> </span>
+           <span>
+            <a href="Exception/index.html" class="cursor-pointer text-orange">
+             Exception
+            </a>
+           </span>
+           <span> : <span class="font-semibold">sig</span> ... 
+            <span class="font-semibold">end</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Representation and manipulation of exceptions.</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec module anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="module-Type">
+          <a href="#module-Type" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">module</span> </span>
+           <span>
+            <a href="Type/index.html" class="cursor-pointer text-orange">Type
+            </a>
+           </span>
+           <span> : <span class="font-semibold">sig</span> ... 
+            <span class="font-semibold">end</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Representation and manipulation of types.</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec module anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="module-Value">
+          <a href="#module-Value" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">module</span> </span>
+           <span>
+            <a href="Value/index.html" class="cursor-pointer text-orange">
+             Value
+            </a>
+           </span>
+           <span> : <span class="font-semibold">sig</span> ... 
+            <span class="font-semibold">end</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Representation and manipulation of values, 
+           class attributes and class methods.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec module anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="module-Class">
+          <a href="#module-Class" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">module</span> </span>
+           <span>
+            <a href="Class/index.html" class="cursor-pointer text-orange">
+             Class
+            </a>
+           </span>
+           <span> : <span class="font-semibold">sig</span> ... 
+            <span class="font-semibold">end</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Representation and manipulation of classes 
+           and class types.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec module anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="module-Module">
+          <a href="#module-Module" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">module</span> </span>
+           <span>
+            <a href="Module/index.html" class="cursor-pointer text-orange">
+             Module
+            </a>
+           </span>
+           <span> : <span class="font-semibold">sig</span> ... 
+            <span class="font-semibold">end</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Representation and manipulation of modules 
+           and module types.
+          </p>
+         </div>
+        </div>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans
+         anchored" id="getting-strings-from-values">
+         <a href="#getting-strings-from-values" class="hover-link
+          inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Getting strings from values
+        </h3>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-reset_type_names">
+          <a href="#val-reset_type_names" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> reset_type_names
+             : <span>unit <span class="">&#45;&gt;</span></span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">This function is used to reset the names of
+            type variables. It must be called when printing the whole
+            type of a function, but not when printing the type of its
+            parameters. Same for classes (call it) and methods and attributes
+            (don't call it).
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-string_of_variance">
+          <a href="#val-string_of_variance" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> string_of_variance
+             : 
+            <span>
+             <a href="Type/index.html#type-t_type" class="cursor-pointer
+              text-orange">Type.t_type
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span>(bool * bool)</span> <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">
+            string_of_variance t (covariant, invariant)
+           </code> returns 
+           <code class="font-normal text-sm">&quot;+&quot;</code> if 
+           the given information means &quot;covariant&quot;, 
+           <code class="font-normal text-sm">&quot;-&quot;</code> if 
+           it means &quot;contravariant&quot;, orelse 
+           <code class="font-normal text-sm">&quot;&quot;</code>, and
+            always <code class="font-normal text-sm">&quot;&quot;</code>
+            if the given type is not an abstract type with no manifest
+            (i.e. no need for the variance to be printed).
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-string_of_type_expr">
+          <a href="#val-string_of_type_expr" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> string_of_type_expr
+             : 
+            <span>
+             <a href="../Types/index.html#type-type_expr"
+              class="cursor-pointer text-orange">Types.type_expr
+             </a> <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">This function returns a string representing
+            a Types.type_expr.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-string_of_class_params">
+          <a href="#val-string_of_class_params" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            string_of_class_params : 
+            <span>
+             <a href="Class/index.html#type-t_class" class="cursor-pointer
+              text-orange">Class.t_class
+             </a> <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <ul class="at-tags">
+           <li class="returns">returns 
+            <p class="mt-4">a string to display the parameters of the
+              given class, in the same form as the compiler.
+            </p>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-string_of_type_list">
+          <a href="#val-string_of_type_list" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> string_of_type_list
+             : <span>?par:bool <span class="">&#45;&gt;</span></span>
+             <span>string <span class="">&#45;&gt;</span></span> 
+            <span>
+             <span>
+              <a href="../Types/index.html#type-type_expr"
+               class="cursor-pointer text-orange">Types.type_expr
+              </a> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">This function returns a string to represent
+            the given list of types, with a given separator.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-string_of_type_param_list">
+          <a href="#val-string_of_type_param_list" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            string_of_type_param_list : 
+            <span>
+             <a href="Type/index.html#type-t_type" class="cursor-pointer
+              text-orange">Type.t_type
+             </a> <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">This function returns a string to represent
+            the list of type parameters for the given type.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100"
+          id="val-string_of_type_extension_param_list">
+          <a href="#val-string_of_type_extension_param_list"
+           class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            string_of_type_extension_param_list : 
+            <span>
+             <a href="Extension/index.html#type-t_type_extension"
+              class="cursor-pointer text-orange">Extension.t_type_extension
+             </a> <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">This function returns a string to represent
+            the list of type parameters for the given type extension.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100"
+          id="val-string_of_class_type_param_list">
+          <a href="#val-string_of_class_type_param_list" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            string_of_class_type_param_list : 
+            <span>
+             <span>
+              <a href="../Types/index.html#type-type_expr"
+               class="cursor-pointer text-orange">Types.type_expr
+              </a> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">This function returns a string to represent
+            the given list of type parameters of a class or class type,
+            with a given separator.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-string_of_module_type">
+          <a href="#val-string_of_module_type" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> string_of_module_type
+             : <span>?code:string <span class="">&#45;&gt;</span></span>
+             <span>?complete:bool <span class="">&#45;&gt;</span></span>
+             
+            <span>
+             <a href="../Types/index.html#type-module_type"
+              class="cursor-pointer text-orange">Types.module_type
+             </a> <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">This function returns a string representing
+            a <code class="font-normal text-sm">Types.module_type</code>
+           .
+          </p>
+          <ul class="at-tags">
+           <li class="parameter">parameter complete 
+            <p class="mt-4">indicates if we must print complete signatures
+              or just <code class="font-normal text-sm">sig end</code>
+             . Default is <code class="font-normal text-sm">false</code>
+             .
+            </p>
+           </li>
+          </ul>
+          <ul class="at-tags">
+           <li class="parameter">parameter code 
+            <p class="mt-4">if 
+             <code class="font-normal text-sm">complete = false</code>
+              and the type contains something else than identificators
+              and functors, then the given code is used.
+            </p>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-string_of_class_type">
+          <a href="#val-string_of_class_type" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> string_of_class_type
+             : <span>?complete:bool <span class="">&#45;&gt;</span></span>
+             
+            <span>
+             <a href="../Types/index.html#type-class_type"
+              class="cursor-pointer text-orange">Types.class_type
+             </a> <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">This function returns a string representing
+            a <code class="font-normal text-sm">Types.class_type</code>
+           .
+          </p>
+          <ul class="at-tags">
+           <li class="parameter">parameter complete 
+            <p class="mt-4">indicates if we must print complete signatures
+              or just <code class="font-normal text-sm">object end</code>
+             . Default is <code class="font-normal text-sm">false</code>
+             .
+            </p>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-string_of_text">
+          <a href="#val-string_of_text" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> string_of_text
+             : 
+            <span>
+             <a href="#type-text" class="cursor-pointer text-orange">text</a>
+              <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc"><p class="mt-4">Get a string from a text.</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-string_of_info">
+          <a href="#val-string_of_info" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> string_of_info
+             : 
+            <span>
+             <a href="#type-info" class="cursor-pointer text-orange">info</a>
+              <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Get a string from an info structure.</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-string_of_type">
+          <a href="#val-string_of_type" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> string_of_type
+             : 
+            <span>
+             <a href="Type/index.html#type-t_type" class="cursor-pointer
+              text-orange">Type.t_type
+             </a> <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <ul class="at-tags">
+           <li class="returns">returns 
+            <p class="mt-4">a string to describe the given type.</p>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-string_of_record">
+          <a href="#val-string_of_record" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> string_of_record
+             : 
+            <span>
+             <span>
+              <a href="Type/index.html#type-record_field"
+               class="cursor-pointer text-orange">Type.record_field
+              </a> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-string_of_type_extension">
+          <a href="#val-string_of_type_extension" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            string_of_type_extension : 
+            <span>
+             <a href="Extension/index.html#type-t_type_extension"
+              class="cursor-pointer text-orange">Extension.t_type_extension
+             </a> <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <ul class="at-tags">
+           <li class="returns">returns 
+            <p class="mt-4">a string to describe the given type extension.
+            </p>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-string_of_exception">
+          <a href="#val-string_of_exception" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> string_of_exception
+             : 
+            <span>
+             <a href="Exception/index.html#type-t_exception"
+              class="cursor-pointer text-orange">Exception.t_exception
+             </a> <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <ul class="at-tags">
+           <li class="returns">returns 
+            <p class="mt-4">a string to describe the given exception.</p>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-string_of_value">
+          <a href="#val-string_of_value" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> string_of_value
+             : 
+            <span>
+             <a href="Value/index.html#type-t_value" class="cursor-pointer
+              text-orange">Value.t_value
+             </a> <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <ul class="at-tags">
+           <li class="returns">returns 
+            <p class="mt-4">a string to describe the given value.</p>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-string_of_attribute">
+          <a href="#val-string_of_attribute" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> string_of_attribute
+             : 
+            <span>
+             <a href="Value/index.html#type-t_attribute"
+              class="cursor-pointer text-orange">Value.t_attribute
+             </a> <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <ul class="at-tags">
+           <li class="returns">returns 
+            <p class="mt-4">a string to describe the given attribute.</p>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-string_of_method">
+          <a href="#val-string_of_method" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> string_of_method
+             : 
+            <span>
+             <a href="Value/index.html#type-t_method" class="cursor-pointer
+              text-orange">Value.t_method
+             </a> <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <ul class="at-tags">
+           <li class="returns">returns 
+            <p class="mt-4">a string to describe the given method.</p>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans
+         anchored" id="miscellaneous-functions">
+         <a href="#miscellaneous-functions" class="hover-link inline-block
+          -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Miscellaneous functions
+        </h3>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-first_sentence_of_text">
+          <a href="#val-first_sentence_of_text" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            first_sentence_of_text : 
+            <span>
+             <a href="#type-text" class="cursor-pointer text-orange">text</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-text" class="cursor-pointer text-orange">text</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return the first sentence (until the first 
+           dot followed by a blank or the first blank line) of a text.
+            Don't stop in the middle of 
+           <code class="font-normal text-sm">Code</code>, 
+           <code class="font-normal text-sm">CodePre</code>, 
+           <code class="font-normal text-sm">Verbatim</code>, 
+           <code class="font-normal text-sm">List</code>, 
+           <code class="font-normal text-sm">Enum</code>, 
+           <code class="font-normal text-sm">Latex</code>, 
+           <code class="font-normal text-sm">Link</code>, 
+           <code class="font-normal text-sm">Ref</code>, 
+           <code class="font-normal text-sm">Subscript</code> or 
+           <code class="font-normal text-sm">Superscript</code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100"
+          id="val-first_sentence_and_rest_of_text">
+          <a href="#val-first_sentence_and_rest_of_text" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            first_sentence_and_rest_of_text : 
+            <span>
+             <a href="#type-text" class="cursor-pointer text-orange">text</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-text" class="cursor-pointer text-orange">text</a>
+             * 
+            <a href="#type-text" class="cursor-pointer text-orange">text</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return the first sentence (until the first 
+           dot followed by a blank or the first blank line) of a text,
+            and the remaining text after. Don't stop in the middle of
+            <code class="font-normal text-sm">Code</code>, 
+           <code class="font-normal text-sm">CodePre</code>, 
+           <code class="font-normal text-sm">Verbatim</code>, 
+           <code class="font-normal text-sm">List</code>, 
+           <code class="font-normal text-sm">Enum</code>, 
+           <code class="font-normal text-sm">Latex</code>, 
+           <code class="font-normal text-sm">Link</code>, 
+           <code class="font-normal text-sm">Ref</code>, 
+           <code class="font-normal text-sm">Subscript</code> or 
+           <code class="font-normal text-sm">Superscript</code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-text_no_title_no_list">
+          <a href="#val-text_no_title_no_list" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> text_no_title_no_list
+             : 
+            <span>
+             <a href="#type-text" class="cursor-pointer text-orange">text</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-text" class="cursor-pointer text-orange">text</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return the given 
+           <code class="font-normal text-sm">text</code> without any 
+           title or list.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-text_concat">
+          <a href="#val-text_concat" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> text_concat : 
+            <span>
+             <a href="../Odoc_types/index.html#type-text"
+              class="cursor-pointer text-orange">Odoc_types.text
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>
+              <a href="../Odoc_types/index.html#type-text"
+               class="cursor-pointer text-orange">Odoc_types.text
+              </a> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Odoc_types/index.html#type-text"
+             class="cursor-pointer text-orange">Odoc_types.text
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">concat sep l</code> concats
+            the given list of text <code class="font-normal text-sm">l</code>
+           , each separated with the text 
+           <code class="font-normal text-sm">sep</code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-get_titles_in_text">
+          <a href="#val-get_titles_in_text" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> get_titles_in_text
+             : 
+            <span>
+             <a href="#type-text" class="cursor-pointer text-orange">text</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>(int * <span>string option</span> * 
+              <a href="#type-text" class="cursor-pointer text-orange">text
+              </a>)
+             </span> list
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return the list of titles in a 
+           <code class="font-normal text-sm">text</code>. A title is 
+           a title level, an optional label and a text.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-create_index_lists">
+          <a href="#val-create_index_lists" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> create_index_lists
+             : 
+            <span><span><span class="">'a</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>(
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> string)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'a</span> list</span> list</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Take a sorted list of elements, a function 
+           to get the name of an element and return the list of list 
+           of elements, where each list group elements beginning by the
+            same letter. Since the original list is sorted, elements 
+           whose name does not begin with a letter should be in the first
+            returned list.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-remove_option">
+          <a href="#val-remove_option" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> remove_option
+             : 
+            <span>
+             <a href="../Types/index.html#type-type_expr"
+              class="cursor-pointer text-orange">Types.type_expr
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Types/index.html#type-type_expr"
+             class="cursor-pointer text-orange">Types.type_expr
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Take a type and remove the option top constructor.
+            This is useful when printing labels, we then remove the top
+            option constructor for optional labels.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-is_optional">
+          <a href="#val-is_optional" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> is_optional : 
+            <span>
+             <a href="../Asttypes/index.html#type-arg_label"
+              class="cursor-pointer text-orange">Asttypes.arg_label
+             </a> <span class="">&#45;&gt;</span>
+            </span> bool
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return 
+           <code class="font-normal text-sm">true</code> if the given
+            label is optional.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-label_name">
+          <a href="#val-label_name" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> label_name : 
+            <span>
+             <a href="../Asttypes/index.html#type-arg_label"
+              class="cursor-pointer text-orange">Asttypes.arg_label
+             </a> <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return the label name for the given label, 
+           i.e. removes the beginning '?' if present.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-use_hidden_modules">
+          <a href="#val-use_hidden_modules" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> use_hidden_modules
+             : 
+            <span>
+             <a href="Name/index.html#type-t" class="cursor-pointer
+              text-orange">Name.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="Name/index.html#type-t" class="cursor-pointer
+             text-orange">Name.t
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return the given name where the module name
+            or part of it was removed, according to the list of modules
+            which must be hidden (cf 
+           <code class="font-normal text-sm">Odoc_args</code>.hidden_modules
+           )
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-verbose">
+          <a href="#val-verbose" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> verbose : 
+            <span>string <span class="">&#45;&gt;</span></span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Print the given string if the verbose mode 
+           is activated.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-warning">
+          <a href="#val-warning" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> warning : 
+            <span>string <span class="">&#45;&gt;</span></span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Print a warning message to stderr. If warnings
+            must be treated as errors, then the error counter is incremented.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-print_warnings">
+          <a href="#val-print_warnings" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> print_warnings
+             : 
+            <span>bool 
+             <a href="../Stdlib/index.html#type-ref" class="cursor-pointer
+              text-orange">Stdlib.ref
+             </a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">A flag to indicate whether ocamldoc warnings
+            must be printed or not.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-errors">
+          <a href="#val-errors" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> errors : 
+            <span>int 
+             <a href="../Stdlib/index.html#type-ref" class="cursor-pointer
+              text-orange">Stdlib.ref
+             </a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Increment this counter when an error is 
+           encountered. The ocamldoc tool will print the number of errors
+            encountered exit with code 1 if this number is greater than
+            0.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-apply_opt">
+          <a href="#val-apply_opt" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> apply_opt : 
+            <span>
+             <span>(
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> <span class="">'b</span>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'a</span> option</span> 
+             <span class="">&#45;&gt;</span>
+            </span> <span><span class="">'b</span> option</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Apply a function to an optional value.</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-apply_if_equal">
+          <a href="#val-apply_if_equal" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> apply_if_equal
+             : 
+            <span>
+             <span>(
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> <span class="">'a</span>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+            </span> <span class="">'a</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Apply a function to a first value if it is 
+           not different from a second value. If the two values are 
+           different, return the second one.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-text_of_string">
+          <a href="#val-text_of_string" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> text_of_string
+             : <span>string <span class="">&#45;&gt;</span></span> 
+            <a href="#type-text" class="cursor-pointer text-orange">text</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">text_of_string s</code> 
+           returns the text structure from the given string.
+          </p>
+          <ul class="at-tags">
+           <li class="raises">raises Text_syntax 
+            <p class="mt-4">if a syntax error is encountered.</p>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-text_string_of_text">
+          <a href="#val-text_string_of_text" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> text_string_of_text
+             : 
+            <span>
+             <a href="#type-text" class="cursor-pointer text-orange">text</a>
+              <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">text_string_of_text text</code>
+            returns the string representing the given 
+           <code class="font-normal text-sm">text</code>. This string
+            can then be parsed again by 
+           <a href="#val-text_of_string" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Odoc_info.text_of_string</code>
+           </a>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-info_of_string">
+          <a href="#val-info_of_string" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> info_of_string
+             : <span>string <span class="">&#45;&gt;</span></span> 
+            <a href="#type-info" class="cursor-pointer text-orange">info</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">info_of_string s</code> 
+           parses the given string like a regular ocamldoc comment and
+            return an 
+           <a href="#type-info" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Odoc_info.info</code>
+           </a> structure.
+          </p>
+          <ul class="at-tags">
+           <li class="returns">returns 
+            <p class="mt-4">an empty structure if there was a syntax 
+             error. TODO: change this
+            </p>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-info_string_of_info">
+          <a href="#val-info_string_of_info" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> info_string_of_info
+             : 
+            <span>
+             <a href="#type-info" class="cursor-pointer text-orange">info</a>
+              <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">info_string_of_info info</code>
+            returns the string representing the given 
+           <code class="font-normal text-sm">info</code>. This string
+            can then be parsed again by 
+           <a href="#val-info_of_string" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Odoc_info.info_of_string</code>
+           </a>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-info_of_comment_file">
+          <a href="#val-info_of_comment_file" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> info_of_comment_file
+             : 
+            <span>
+             <span>
+              <a href="Module/index.html#type-t_module" class="cursor-pointer
+               text-orange">Module.t_module
+              </a> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> <span>string <span class="">&#45;&gt;</span></span>
+             <a href="#type-info" class="cursor-pointer text-orange">info</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">info_of_comment_file file</code>
+            parses the given file and return an 
+           <a href="#type-info" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Odoc_info.info</code>
+           </a> structure. The content of the file must have the same
+            syntax as the content of a special comment. The given module
+            list is used for cross reference.
+          </p>
+          <ul class="at-tags">
+           <li class="raises">raises Failure 
+            <p class="mt-4">if the file could not be opened or there 
+             is a syntax error.
+            </p>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-remove_ending_newline">
+          <a href="#val-remove_ending_newline" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> remove_ending_newline
+             : <span>string <span class="">&#45;&gt;</span></span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">remove_ending_newline s</code>
+            returns <code class="font-normal text-sm">s</code> without
+            the optional ending newline.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec module anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="module-Search">
+          <a href="#module-Search" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">module</span> </span>
+           <span>
+            <a href="Search/index.html" class="cursor-pointer text-orange">
+             Search
+            </a>
+           </span>
+           <span> : <span class="font-semibold">sig</span> ... 
+            <span class="font-semibold">end</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc"><p class="mt-4">Research in elements</p></div>
+        </div>
+        <div class="mt-8">
+         <div class="spec module anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="module-Scan">
+          <a href="#module-Scan" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">module</span> </span>
+           <span>
+            <a href="Scan/index.html" class="cursor-pointer text-orange">Scan
+            </a>
+           </span>
+           <span> : <span class="font-semibold">sig</span> ... 
+            <span class="font-semibold">end</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Scanning of collected information</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec module anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="module-Dep">
+          <a href="#module-Dep" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">module</span> </span>
+           <span>
+            <a href="Dep/index.html" class="cursor-pointer text-orange">Dep
+            </a>
+           </span>
+           <span> : <span class="font-semibold">sig</span> ... 
+            <span class="font-semibold">end</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Computation of dependencies.</p>
+         </div>
+        </div>
+        <h2 class="text-2xl my-4 text-gray-800 font-sans anchored"
+         id="some-global-variables">
+         <a href="#some-global-variables" class="hover-link inline-block
+          -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Some global variables
+        </h2>
+        <div class="mt-8">
+         <div class="spec module anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="module-Global">
+          <a href="#module-Global" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">module</span> </span>
+           <span>
+            <a href="Global/index.html" class="cursor-pointer text-orange">
+             Global
+            </a>
+           </span>
+           <span> : <span class="font-semibold">sig</span> ... 
+            <span class="font-semibold">end</span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-analyse_files">
+          <a href="#val-analyse_files" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> analyse_files
+             : 
+            <span>?merge_options:
+             <span>
+              <a href="../Odoc_types/index.html#type-merge_option"
+               class="cursor-pointer text-orange">Odoc_types.merge_option
+              </a> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>?include_dirs:<span>string list</span> 
+             <span class="">&#45;&gt;</span>
+            </span>
+                   <span>?labels:bool <span class="">&#45;&gt;</span></span>
+             <span>?sort_modules:bool <span class="">&#45;&gt;</span></span>
+             <span>?no_stop:bool <span class="">&#45;&gt;</span></span>
+             
+            <span>?init:
+             <span>
+              <a href="../Odoc_module/index.html#type-t_module"
+               class="cursor-pointer text-orange">Odoc_module.t_module
+              </a> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>
+              <a href="../Odoc_global/index.html#type-source_file"
+               class="cursor-pointer text-orange">Odoc_global.source_file
+              </a> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="Module/index.html#type-t_module" class="cursor-pointer
+              text-orange">Module.t_module
+             </a> list
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Analysis of the given source files.</p>
+          <ul class="at-tags">
+           <li class="parameter">parameter init 
+            <p class="mt-4">is the list of modules already known from
+              a previous analysis.
+            </p>
+           </li>
+          </ul>
+          <ul class="at-tags">
+           <li class="returns">returns 
+            <p class="mt-4">the list of analysed top modules.</p>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-dump_modules">
+          <a href="#val-dump_modules" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> dump_modules : 
+            <span>string <span class="">&#45;&gt;</span></span> 
+            <span>
+             <span>
+              <a href="../Odoc_module/index.html#type-t_module"
+               class="cursor-pointer text-orange">Odoc_module.t_module
+              </a> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Dump of a list of modules into a file.</p>
+          <ul class="at-tags">
+           <li class="raises">raises Failure 
+            <p class="mt-4">if an error occurs.</p>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-load_modules">
+          <a href="#val-load_modules" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> load_modules : 
+            <span>string <span class="">&#45;&gt;</span></span> 
+            <span>
+             <a href="../Odoc_module/index.html#type-t_module"
+              class="cursor-pointer text-orange">Odoc_module.t_module
+             </a> list
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Load of a list of modules from a file.</p>
+          <ul class="at-tags">
+           <li class="raises">raises Failure 
+            <p class="mt-4">if an error occurs.</p>
+           </li>
+          </ul>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="w-full flex-none lg:w-72 border-t lg:border-l bg-gray-100">
+       <div class="flex h-20 border-b relative">
+        <h2 class="text-xl absolute inset-x-0 p-3 bottom-0 mt-7 font-semibold
+         text-gray-500">ocaml-base-compiler.4.12.0
+        </h2>
+       </div>
+       <div class="m-3">
+        <p class="mb-5 italic text-sm">Official release 4.12.0</p>
+        <div class="mb-3">
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="https://ocaml.org">ocaml.org
+          </a>
+         </div>
+        </div>
+        <details class="font-normal mb-2 text-sm">
+         <summary>Other versions</summary><div id="versions_container"></div>
+        </details><h2 class="font-semibold mb-2 text-sm">Authors</h2>
+        <p class="mb-3 text-sm">Xavier Leroy and many contributors</p>
+        <h2 class="font-semibold mb-2 text-sm">Issues</h2>
+        <div class="mb-3">
+         <a class="text-orange cursor-pointer mb-2 text-sm"
+          href="https://github.com/ocaml/opam-repository/issues">
+          github.com/ocaml/opam-repository/issues
+         </a>
+        </div>
+        <details class="font-semibold mb-2 text-sm">
+         <summary>Package dependencies</summary>
+         <div class="font-normal">
+          <ul>
+           <li>
+            <a href="../../../ocaml/index.html" class="text-orange
+             cursor-pointer">ocaml
+            </a>
+           </li>
+           <li>
+            <a href="../../../base-unix/index.html" class="text-orange
+             cursor-pointer">base-unix
+            </a>
+           </li>
+           <li>
+            <a href="../../../base-bigarray/index.html" class="text-orange
+             cursor-pointer">base-bigarray
+            </a>
+           </li>
+           <li>
+            <a href="../../../base-threads/index.html" class="text-orange
+             cursor-pointer">base-threads
+            </a>
+           </li>
+           <li>
+            <a href="../../../ocaml-options-vanilla/index.html"
+             class="text-orange cursor-pointer">ocaml-options-vanilla
+            </a>
+           </li>
+          </ul>
+         </div>
+        </details>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div><script>Voodoo.update('../../version.json')</script>
+ </body>
+</html>
