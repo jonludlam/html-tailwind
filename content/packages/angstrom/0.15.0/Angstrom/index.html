@@ -1,0 +1,3114 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head><title>Angstrom (packages.angstrom.0.15.0.Angstrom)</title>
+  <link rel="stylesheet" href="../../../tailwind.css"/>
+  <link rel="stylesheet" href="../../../extra.css"/><meta charset="utf-8"/>
+  <meta name="generator" content="odoc 3dfb7aef2f"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <script src="../../../highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="../../../voodoo_client.js"></script>
+  <script
+   src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+   defer="defer">
+  </script>
+ </head>
+ <body class="mx-auto max-w-screen-2xl">
+  <div class="relative">
+   <div class="relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+     <div class="flex justify-between items-center md:justify-start py-6
+      md:space-x-10">
+      <div class="flex justify-start">
+       <a href="https://v3.ocaml.org/">
+        <img src="/colour-logo.svg" alt="" class="h-8 w-auto sm:h-10"/>
+       </a>
+      </div>
+      <nav class="hidden md:flex space-x-10">
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Industry</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/whatisocaml">
+            <p class="text-base font-medium text-gray-900">What is OCaml</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/users">
+            <p class="text-base font-medium text-gray-900">Industrial Users
+            </p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/successstories">
+            <p class="text-base font-medium text-gray-900">Success Stories
+            </p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Resources</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/releases">
+            <p class="text-base font-medium text-gray-900">Releases</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/applications">
+            <p class="text-base font-medium text-gray-900">Applications</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/language">
+            <p class="text-base font-medium text-gray-900">Language</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/archive">
+            <p class="text-base font-medium text-gray-900">Archive</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Community</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/opportunities">
+            <p class="text-base font-medium text-gray-900">Opportunities</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/news">
+            <p class="text-base font-medium text-gray-900">News</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/aroundweb">
+            <p class="text-base font-medium text-gray-900">Around the Web</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="h-screen flex bg-white font-sans">
+   <div class="flex flex-col w-full h-full">
+    <div class="flex-row flex-1">
+     <nav class="bg-orange border-t border-b border-orange flex flex-row">
+      <ol class="max-w-screen-xl w-full px-4 flex space-x-4 sm:px-6 lg:px-8">
+       <li class="flex">
+        <div class="flex items-center">
+         <a href="#" class="text-gray-100 hover:text-gray-500">
+          
+  <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+        </svg>
+  
+          <span class="sr-only">Home</span>
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">packages
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">angstrom
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">0.15.0
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="#" class="ml-4 text-sm font-medium text-gray-100
+          hover:text-gray-500">Angstrom
+         </a>
+        </div>
+       </li>
+      </ol>
+     </nav>
+    </div>
+    <div class="flex flex-row flex-1">
+     <div class="w-72 flex-none bg-gray-100 h-screen border-r border-gray-200
+      sticky top-0 hidden lg:block">
+      <div class="flex h-20 border-b relative">
+       <h2 class="text-xl absolute inset-x-0 p-3 px-5 bottom-0 mt-7
+        border-gray-200 font-semibold text-gray-500 font-sans">On this page
+       </h2>
+      </div>
+      <nav class="bg-gray-100 p-5">
+       <ul>
+        <li>
+         <a href="#basic-parsers" class="cursor-pointer text-orange">
+          Basic parsers
+         </a>
+        </li>
+        <li>
+         <a href="#combinators" class="cursor-pointer text-orange">
+          Combinators
+         </a>
+        </li>
+        <li>
+         <a href="#alternatives" class="cursor-pointer text-orange">
+          Alternatives
+         </a>
+        </li>
+        <li>
+         <a href="#monadic/applicative-interface" class="cursor-pointer
+          text-orange">Monadic/Applicative interface
+         </a>
+        </li>
+        <li><a href="#running" class="cursor-pointer text-orange">Running</a>
+        </li>
+        <li>
+         <a href="#expert-parsers" class="cursor-pointer text-orange">
+          Expert Parsers
+         </a>
+        </li>
+       </ul>
+      </nav>
+     </div>
+     <div class="flex flex-1 flex-col lg:flex-row">
+      <div class="flex-1">
+       <div class="lg:max-w-5xl mx-auto px-3 lg:px-10 mb-10 text-sm">
+        <div class="flex h-20 relative border-b border-gray-200">
+         <div class="relative flex-1 h-20">
+          <h1 class="text-3xl absolute inset-x-0 py-3 bottom-0 font-semibold
+           text-gray-500 font-sans w-full truncate">
+           <code class="font-mono text-gray-800">Angstrom</code>
+          </h1>
+         </div>
+         <div class="relative flex-none w-28">
+          <h1 class="text-3xl absolute py-3 bottom-0 right-0 font-semibold
+           text-gray-500 font-sans">Module
+          </h1>
+         </div>
+        </div>
+        <p class="mt-4">Parser combinators built for speed and 
+         memory-efficiency.
+        </p>
+        <p class="mt-4">Angstrom is a parser-combinator library that 
+         provides monadic and applicative interfaces for constructing
+          parsers with unbounded lookahead. Its parsers can consume input
+          incrementally, whether in a blocking or non-blocking environment.
+          To achieve efficient incremental parsing, Angstrom offers both
+          a buffered and unbuffered interface to input streams, with 
+         the 
+         <a href="Unbuffered/index.html" class="cursor-pointer text-orange">
+          <code class="font-normal text-sm">Unbuffered</code>
+         </a> interface enabling zero-copy IO. With these features and
+          low-level iteration parser primitives like 
+         <a href="#val-take_while" class="cursor-pointer text-orange">
+          <code class="font-normal text-sm">take_while</code>
+         </a> and 
+         <a href="#val-skip_while" class="cursor-pointer text-orange">
+          <code class="font-normal text-sm">skip_while</code>
+         </a>, Angstrom makes it easy to write efficient, expressive,
+          and reusable parsers suitable for high-performance applications.
+        </p>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-t">
+          <a href="#type-t" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> <span>+'a t</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">A parser for values of type 
+           <code class="font-normal text-sm">'a</code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-bigstring">
+          <a href="#type-bigstring" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> bigstring</span>
+           <span> = 
+            <span>
+             <span>(char, 
+              <a
+               href="../../../ocaml-base-compiler/4.12.0/Stdlib/Bigarray/index.html#type-int8_unsigned_elt"
+               class="cursor-pointer text-orange">
+               Stdlib.Bigarray.int8_unsigned_elt
+              </a>, 
+              <a
+               href="../../../ocaml-base-compiler/4.12.0/Stdlib/Bigarray/index.html#type-c_layout"
+               class="cursor-pointer text-orange">Stdlib.Bigarray.c_layout
+              </a>)
+             </span> 
+             <a
+              href="../../../ocaml-base-compiler/4.12.0/Stdlib/Bigarray/Array1/index.html#type-t"
+              class="cursor-pointer text-orange">Stdlib.Bigarray.Array1.t
+             </a>
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans
+         anchored" id="basic-parsers">
+         <a href="#basic-parsers" class="hover-link inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Basic parsers
+        </h3>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-peek_char">
+          <a href="#val-peek_char" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> peek_char : 
+            <span><span>char option</span> 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">peek_char</code>
+            accepts any char and returns it, or returns 
+           <code class="font-normal text-sm">None</code> if the end of
+            input has been reached.
+          </p>
+          <p class="mt-4">This parser does not advance the input. Use
+            it for lookahead.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-peek_char_fail">
+          <a href="#val-peek_char_fail" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> peek_char_fail
+             : 
+            <span>char 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">peek_char_fail</code> accepts
+            any char and returns it. If end of input has been reached,
+            it will fail.
+          </p>
+          <p class="mt-4">This parser does not advance the input. Use
+            it for lookahead.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-peek_string">
+          <a href="#val-peek_string" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> peek_string : 
+            <span>int <span class="">&#45;&gt;</span></span> 
+            <span>string 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">peek_string n</code> accepts
+            exactly <code class="font-normal text-sm">n</code> characters
+            and returns them as a string. If there is not enough input,
+            it will fail.
+          </p>
+          <p class="mt-4">This parser does not advance the input. Use
+            it for lookahead.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-char">
+          <a href="#val-char" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> char : 
+            <span>char <span class="">&#45;&gt;</span></span> 
+            <span>char 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">char c</code>
+            accepts <code class="font-normal text-sm">c</code> and returns
+            it.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-not_char">
+          <a href="#val-not_char" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> not_char : 
+            <span>char <span class="">&#45;&gt;</span></span> 
+            <span>char 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">not_char</code>
+            accepts any character that is not 
+           <code class="font-normal text-sm">c</code> and returns the
+            matched character.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-any_char">
+          <a href="#val-any_char" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> any_char : 
+            <span>char 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">any_char</code>
+            accepts any character and returns it.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-satisfy">
+          <a href="#val-satisfy" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> satisfy : 
+            <span>
+             <span>(<span>char <span class="">&#45;&gt;</span></span> bool)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>char 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">satisfy f</code>
+            accepts any character for which 
+           <code class="font-normal text-sm">f</code> returns 
+           <code class="font-normal text-sm">true</code> and returns 
+           the accepted character. In the case that none of the parser
+            succeeds, then the parser will fail indicating the offending
+            character.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-string">
+          <a href="#val-string" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> string : 
+            <span>string <span class="">&#45;&gt;</span></span> 
+            <span>string 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">string s</code>
+            accepts <code class="font-normal text-sm">s</code> exactly
+            and returns it.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-string_ci">
+          <a href="#val-string_ci" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> string_ci : 
+            <span>string <span class="">&#45;&gt;</span></span> 
+            <span>string 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">string_ci s</code> accepts
+            <code class="font-normal text-sm">s</code>, ignoring case,
+            and returns the matched string, preserving the case of the
+            original input.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-skip">
+          <a href="#val-skip" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> skip : 
+            <span>
+             <span>(<span>char <span class="">&#45;&gt;</span></span> bool)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>unit 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">skip f</code>
+            accepts any character for which 
+           <code class="font-normal text-sm">f</code> returns 
+           <code class="font-normal text-sm">true</code> and discards
+            the accepted character. 
+           <code class="font-normal text-sm">skip f</code> is equivalent
+            to <code class="font-normal text-sm">satisfy f</code> but
+            discards the accepted character.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-skip_while">
+          <a href="#val-skip_while" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> skip_while : 
+            <span>
+             <span>(<span>char <span class="">&#45;&gt;</span></span> bool)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>unit 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">skip_while f</code> accepts
+            input as long as <code class="font-normal text-sm">f</code>
+            returns <code class="font-normal text-sm">true</code> and
+            discards the accepted characters.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-take">
+          <a href="#val-take" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> take : 
+            <span>int <span class="">&#45;&gt;</span></span> 
+            <span>string 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">take n</code>
+            accepts exactly <code class="font-normal text-sm">n</code>
+            characters of input and returns them as a string.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-take_while">
+          <a href="#val-take_while" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> take_while : 
+            <span>
+             <span>(<span>char <span class="">&#45;&gt;</span></span> bool)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>string 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">take_while f</code> accepts
+            input as long as <code class="font-normal text-sm">f</code>
+            returns <code class="font-normal text-sm">true</code> and
+            returns the accepted characters as a string.
+          </p>
+          <p class="mt-4">This parser does not fail. If 
+           <code class="font-normal text-sm">f</code> returns 
+           <code class="font-normal text-sm">false</code> on the first
+            character, it will return the empty string.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-take_while1">
+          <a href="#val-take_while1" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> take_while1 : 
+            <span>
+             <span>(<span>char <span class="">&#45;&gt;</span></span> bool)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>string 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">take_while1 f</code> accepts
+            input as long as <code class="font-normal text-sm">f</code>
+            returns <code class="font-normal text-sm">true</code> and
+            returns the accepted characters as a string.
+          </p>
+          <p class="mt-4">This parser requires that 
+           <code class="font-normal text-sm">f</code> return 
+           <code class="font-normal text-sm">true</code> for at least
+            one character of input, and will fail otherwise.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-take_till">
+          <a href="#val-take_till" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> take_till : 
+            <span>
+             <span>(<span>char <span class="">&#45;&gt;</span></span> bool)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>string 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">take_till f</code> accepts
+            input as long as <code class="font-normal text-sm">f</code>
+            returns <code class="font-normal text-sm">false</code> and
+            returns the accepted characters as a string.
+          </p>
+          <p class="mt-4">This parser does not fail. If 
+           <code class="font-normal text-sm">f</code> returns 
+           <code class="font-normal text-sm">true</code> on the first
+            character, it will return the empty string.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-consumed">
+          <a href="#val-consumed" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> consumed : 
+            <span>
+             <span><span class="">_</span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>string 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">consumed p</code>
+            runs <code class="font-normal text-sm">p</code> and returns
+            the contents that were consumed during the parsing as a string
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-take_bigstring">
+          <a href="#val-take_bigstring" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> take_bigstring
+             : <span>int <span class="">&#45;&gt;</span></span> 
+            <span>
+             <a href="#type-bigstring" class="cursor-pointer text-orange">
+              bigstring
+             </a> <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">take_bigstring n</code> 
+           accepts exactly <code class="font-normal text-sm">n</code>
+            characters of input and returns them as a newly allocated
+            bigstring.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-take_bigstring_while">
+          <a href="#val-take_bigstring_while" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> take_bigstring_while
+             : 
+            <span>
+             <span>(<span>char <span class="">&#45;&gt;</span></span> bool)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-bigstring" class="cursor-pointer text-orange">
+              bigstring
+             </a> <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">take_bigstring_while f</code>
+            accepts input as long as 
+           <code class="font-normal text-sm">f</code> returns 
+           <code class="font-normal text-sm">true</code> and returns 
+           the accepted characters as a newly allocated bigstring.
+          </p>
+          <p class="mt-4">This parser does not fail. If 
+           <code class="font-normal text-sm">f</code> returns 
+           <code class="font-normal text-sm">false</code> on the first
+            character, it will return the empty bigstring.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-take_bigstring_while1">
+          <a href="#val-take_bigstring_while1" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> take_bigstring_while1
+             : 
+            <span>
+             <span>(<span>char <span class="">&#45;&gt;</span></span> bool)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-bigstring" class="cursor-pointer text-orange">
+              bigstring
+             </a> <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">take_bigstring_while1 f</code>
+            accepts input as long as 
+           <code class="font-normal text-sm">f</code> returns 
+           <code class="font-normal text-sm">true</code> and returns 
+           the accepted characters as a newly allocated bigstring.
+          </p>
+          <p class="mt-4">This parser requires that 
+           <code class="font-normal text-sm">f</code> return 
+           <code class="font-normal text-sm">true</code> for at least
+            one character of input, and will fail otherwise.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-take_bigstring_till">
+          <a href="#val-take_bigstring_till" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> take_bigstring_till
+             : 
+            <span>
+             <span>(<span>char <span class="">&#45;&gt;</span></span> bool)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-bigstring" class="cursor-pointer text-orange">
+              bigstring
+             </a> <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">take_bigstring_till f</code>
+            accepts input as long as 
+           <code class="font-normal text-sm">f</code> returns 
+           <code class="font-normal text-sm">false</code> and returns
+            the accepted characters as a newly allocated bigstring.
+          </p>
+          <p class="mt-4">This parser does not fail. If 
+           <code class="font-normal text-sm">f</code> returns 
+           <code class="font-normal text-sm">true</code> on the first
+            character, it will return the empty bigstring.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-consumed_bigstring">
+          <a href="#val-consumed_bigstring" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> consumed_bigstring
+             : 
+            <span>
+             <span><span class="">_</span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-bigstring" class="cursor-pointer text-orange">
+              bigstring
+             </a> <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">consumed p</code>
+            runs <code class="font-normal text-sm">p</code> and returns
+            the contents that were consumed during the parsing as a bigstring
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-advance">
+          <a href="#val-advance" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> advance : 
+            <span>int <span class="">&#45;&gt;</span></span> 
+            <span>unit 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">advance n</code>
+            advances the input <code class="font-normal text-sm">n</code>
+            characters, failing if the remaining input is less than 
+           <code class="font-normal text-sm">n</code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-end_of_line">
+          <a href="#val-end_of_line" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> end_of_line : 
+            <span>unit 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">end_of_line</code> accepts
+            either a line feed <code class="font-normal text-sm">\n</code>
+           , or a carriage return followed by a line feed 
+           <code class="font-normal text-sm">\r\n</code> and returns 
+           unit.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-at_end_of_input">
+          <a href="#val-at_end_of_input" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> at_end_of_input
+             : 
+            <span>bool 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">at_end_of_input</code> returns
+            whether the end of the end of input has been reached. This
+            parser always succeeds.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-end_of_input">
+          <a href="#val-end_of_input" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> end_of_input : 
+            <span>unit 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">end_of_input</code> succeeds
+            if all the input has been consumed, and fails otherwise.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-scan">
+          <a href="#val-scan" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> scan : 
+            <span><span class="">'state</span> 
+             <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>(
+              <span><span class="">'state</span> 
+               <span class="">&#45;&gt;</span>
+              </span> <span>char <span class="">&#45;&gt;</span></span>
+               <span><span class="">'state</span> option</span>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span>(string * <span class="">'state</span>)</span>
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">scan init f</code> consumes
+            until <code class="font-normal text-sm">f</code> returns 
+           <code class="font-normal text-sm">None</code>. Returns the
+            final state before <code class="font-normal text-sm">None</code>
+            and the accumulated string
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-scan_state">
+          <a href="#val-scan_state" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> scan_state : 
+            <span><span class="">'state</span> 
+             <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>(
+              <span><span class="">'state</span> 
+               <span class="">&#45;&gt;</span>
+              </span> <span>char <span class="">&#45;&gt;</span></span>
+               <span><span class="">'state</span> option</span>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span class="">'state</span> 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">scan_state init f</code>
+            is like 
+           <a href="#val-scan" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">scan</code>
+           </a> but only returns the final state before 
+           <code class="font-normal text-sm">None</code>. Much more efficient
+            than 
+           <a href="#val-scan" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">scan</code>
+           </a>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-scan_string">
+          <a href="#val-scan_string" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> scan_string : 
+            <span><span class="">'state</span> 
+             <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>(
+              <span><span class="">'state</span> 
+               <span class="">&#45;&gt;</span>
+              </span> <span>char <span class="">&#45;&gt;</span></span>
+               <span><span class="">'state</span> option</span>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>string 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">scan_string init f</code>
+            is like 
+           <a href="#val-scan" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">scan</code>
+           </a> but discards the final state and returns the accumulated
+            string.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-int8">
+          <a href="#val-int8" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> int8 : 
+            <span>int <span class="">&#45;&gt;</span></span> 
+            <span>int 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">int8 i</code>
+            accepts one byte that matches the lower-order byte of 
+           <code class="font-normal text-sm">i</code> and returns unit.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-any_uint8">
+          <a href="#val-any_uint8" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> any_uint8 : 
+            <span>int 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">any_uint8</code>
+            accepts any byte and returns it as an unsigned int8.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-any_int8">
+          <a href="#val-any_int8" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> any_int8 : 
+            <span>int 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">any_int8</code>
+            accepts any byte and returns it as a signed int8.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec module anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="module-BE">
+          <a href="#module-BE" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">module</span> </span>
+           <span>
+            <a href="BE/index.html" class="cursor-pointer text-orange">BE</a>
+           </span>
+           <span> : <span class="font-semibold">sig</span> ... 
+            <span class="font-semibold">end</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc"><p class="mt-4">Big endian parsers</p></div>
+        </div>
+        <div class="mt-8">
+         <div class="spec module anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="module-LE">
+          <a href="#module-LE" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">module</span> </span>
+           <span>
+            <a href="LE/index.html" class="cursor-pointer text-orange">LE</a>
+           </span>
+           <span> : <span class="font-semibold">sig</span> ... 
+            <span class="font-semibold">end</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc"><p class="mt-4">Little endian parsers</p>
+         </div>
+        </div>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans
+         anchored" id="combinators">
+         <a href="#combinators" class="hover-link inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Combinators
+        </h3>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-option">
+          <a href="#val-option" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> option : 
+            <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span><span class="">'a</span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span class="">'a</span> 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">option v p</code>
+            runs <code class="font-normal text-sm">p</code>, returning
+            the result of <code class="font-normal text-sm">p</code> 
+           if it succeeds and <code class="font-normal text-sm">v</code>
+            if it fails.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-both">
+          <a href="#val-both" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> both : 
+            <span>
+             <span><span class="">'a</span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span><span class="">'b</span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>(<span class="">'a</span> * <span class="">'b</span>)
+             </span> 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">both p q</code>
+            runs <code class="font-normal text-sm">p</code> followed 
+           by <code class="font-normal text-sm">q</code> and returns 
+           both results in a tuple
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-list">
+          <a href="#val-list" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> list : 
+            <span>
+             <span>
+              <span><span class="">'a</span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'a</span> list</span> 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">list ps</code>
+            runs each <code class="font-normal text-sm">p</code> in 
+           <code class="font-normal text-sm">ps</code> in sequence, returning
+            a list of results of each 
+           <code class="font-normal text-sm">p</code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-count">
+          <a href="#val-count" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> count : 
+            <span>int <span class="">&#45;&gt;</span></span> 
+            <span>
+             <span><span class="">'a</span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'a</span> list</span> 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">count n p</code>
+            runs <code class="font-normal text-sm">p</code> 
+           <code class="font-normal text-sm">n</code> times, returning
+            a list of the results.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-many">
+          <a href="#val-many" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> many : 
+            <span>
+             <span><span class="">'a</span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'a</span> list</span> 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">many p</code>
+            runs <code class="font-normal text-sm">p</code> <i>zero</i>
+            or more times and returns a list of results from the runs
+            of <code class="font-normal text-sm">p</code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-many1">
+          <a href="#val-many1" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> many1 : 
+            <span>
+             <span><span class="">'a</span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'a</span> list</span> 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">many1 p</code>
+            runs <code class="font-normal text-sm">p</code> <i>one</i>
+            or more times and returns a list of results from the runs
+            of <code class="font-normal text-sm">p</code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-many_till">
+          <a href="#val-many_till" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> many_till : 
+            <span>
+             <span><span class="">'a</span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span><span class="">_</span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'a</span> list</span> 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">many_till p e</code> runs
+            parser <code class="font-normal text-sm">p</code> <i>zero</i>
+            or more times until action 
+           <code class="font-normal text-sm">e</code> succeeds and returns
+            the list of result from the runs of 
+           <code class="font-normal text-sm">p</code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-sep_by">
+          <a href="#val-sep_by" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sep_by : 
+            <span>
+             <span><span class="">_</span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span><span class="">'a</span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'a</span> list</span> 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">sep_by s p</code>
+            runs <code class="font-normal text-sm">p</code> <i>zero</i>
+            or more times, interspersing runs of 
+           <code class="font-normal text-sm">s</code> in between.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-sep_by1">
+          <a href="#val-sep_by1" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sep_by1 : 
+            <span>
+             <span><span class="">_</span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span><span class="">'a</span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'a</span> list</span> 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">sep_by1 s p</code> runs 
+           <code class="font-normal text-sm">p</code> <i>one</i> or more
+            times, interspersing runs of 
+           <code class="font-normal text-sm">s</code> in between.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-skip_many">
+          <a href="#val-skip_many" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> skip_many : 
+            <span>
+             <span><span class="">_</span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>unit 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">skip_many p</code> runs 
+           <code class="font-normal text-sm">p</code> <i>zero</i> or 
+           more times, discarding the results.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-skip_many1">
+          <a href="#val-skip_many1" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> skip_many1 : 
+            <span>
+             <span><span class="">_</span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>unit 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">skip_many1 p</code> runs
+            <code class="font-normal text-sm">p</code> <i>one</i> or 
+           more times, discarding the results.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-fix">
+          <a href="#val-fix" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> fix : 
+            <span>
+             <span>(
+              <span>
+               <span><span class="">'a</span> 
+                <a href="#type-t" class="cursor-pointer text-orange">t</a>
+               </span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span><span class="">'a</span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span class="">'a</span> 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">fix f</code>
+            computes the fixpoint of 
+           <code class="font-normal text-sm">f</code> and runs the resultant
+            parser. The argument that 
+           <code class="font-normal text-sm">f</code> receives is the
+            result of <code class="font-normal text-sm">fix f</code>,
+            which <code class="font-normal text-sm">f</code> must use,
+            paradoxically, to define 
+           <code class="font-normal text-sm">fix f</code>.
+          </p>
+          <p class="mt-4"><code class="font-normal text-sm">fix</code>
+            is useful when constructing parsers for inductively-defined
+            types such as sequences, trees, etc. Consider for example
+            the implementation of the 
+           <a href="#val-many" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">many</code>
+           </a> combinator defined in this library:
+          </p>
+          <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+           <code class="font-normal text-sm">
+            let many p =
+            fix (fun m -&gt;
+              (cons &lt;$&gt; p &lt;*&gt; m) &lt;|&gt; return [])
+           </code>
+          </pre>
+          <p class="mt-4"><code class="font-normal text-sm">many p</code>
+            is a parser that will run 
+           <code class="font-normal text-sm">p</code> zero or more times,
+            accumulating the result of every run into a list, returning
+            the result. It's defined by passing 
+           <code class="font-normal text-sm">fix</code> a function. This
+            function assumes its argument 
+           <code class="font-normal text-sm">m</code> is a parser that
+            behaves exactly like 
+           <code class="font-normal text-sm">many p</code>. You can see
+            this in the expression comprising the left hand side of the
+            alternative operator 
+           <code class="font-normal text-sm">&lt;|&gt;</code>. This 
+           expression runs the parser 
+           <code class="font-normal text-sm">p</code> followed by the
+            parser <code class="font-normal text-sm">m</code>, and after
+            which the result of <code class="font-normal text-sm">p</code>
+            is cons'd onto the list that 
+           <code class="font-normal text-sm">m</code> produces. The 
+           right-hand side of the alternative operator provides a base
+            case for the combinator: if 
+           <code class="font-normal text-sm">p</code> fails and the parse
+            cannot proceed, return an empty list.
+          </p>
+          <p class="mt-4">Another way to illustrate the uses of 
+           <code class="font-normal text-sm">fix</code> is to construct
+            a JSON parser. Assuming that parsers exist for the basic 
+           types such as <code class="font-normal text-sm">false</code>
+           , <code class="font-normal text-sm">true</code>, 
+           <code class="font-normal text-sm">null</code>, strings, and
+            numbers, the question then becomes how to define a parser
+            for objects and arrays? Both contain values that are themselves
+            JSON values, so it seems as though it's impossible to write
+            a parser that will accept JSON objects and arrays before 
+           writing a parser for JSON values as a whole.
+          </p>
+          <p class="mt-4">This is the exact situation that 
+           <code class="font-normal text-sm">fix</code> was made for.
+            By defining the parsers for arrays and objects within the
+            function that you pass to 
+           <code class="font-normal text-sm">fix</code>, you will gain
+            access to a parser that you can use to parse JSON values,
+            the very parser you are defining!
+          </p>
+          <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+           <code class="font-normal text-sm">
+            let json =
+            fix (fun json -&gt;
+              let arr = char '[' *&gt; sep_by (char ',') json &lt;* char ']'
+            in
+              let obj = char '{' *&gt; ... json ... &lt;* char '}' in
+              choice [str; num; arr json, ...])
+           </code>
+          </pre>
+         </div>
+        </div>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans
+         anchored" id="alternatives">
+         <a href="#alternatives" class="hover-link inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Alternatives
+        </h3>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-(&lt;|&gt;)">
+          <a href="#val-(&lt;|&gt;)" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> (&lt;|&gt;) : 
+            <span>
+             <span><span class="">'a</span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span><span class="">'a</span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span class="">'a</span> 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">p &lt;|&gt; q</code> runs
+            <code class="font-normal text-sm">p</code> and returns the
+            result if succeeds. If <code class="font-normal text-sm">p</code>
+            fails, then the input will be reset and 
+           <code class="font-normal text-sm">q</code> will run instead.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-choice">
+          <a href="#val-choice" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> choice : 
+            <span>?failure_msg:string <span class="">&#45;&gt;</span></span>
+             
+            <span>
+             <span>
+              <span><span class="">'a</span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span class="">'a</span> 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">choice ?failure_msg ts</code>
+            runs each parser in <code class="font-normal text-sm">ts</code>
+            in order until one succeeds and returns that result. In the
+            case that none of the parser succeeds, then the parser will
+            fail with the message 
+           <code class="font-normal text-sm">failure_msg</code>, if provided,
+            or a much less informative message otherwise.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-(&lt;?&gt;)">
+          <a href="#val-(&lt;?&gt;)" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> (&lt;?&gt;) : 
+            <span>
+             <span><span class="">'a</span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> <span>string <span class="">&#45;&gt;</span></span>
+             
+            <span><span class="">'a</span> 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">p &lt;?&gt; name</code> 
+           associates <code class="font-normal text-sm">name</code> with
+            the parser <code class="font-normal text-sm">p</code>, which
+            will be reported in the case of failure.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-commit">
+          <a href="#val-commit" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> commit : 
+            <span>unit 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">commit</code>
+            prevents backtracking beyond the current position of the 
+           input, allowing the manager of the input buffer to reuse the
+            preceding bytes for other purposes.
+          </p>
+          <p class="mt-4">The 
+           <a href="Unbuffered/index.html" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Unbuffered</code>
+           </a> parsing interface will report directly to the caller 
+           the number of bytes committed to the when returning a 
+           <a href="Unbuffered/index.html#type-state.Partial"
+            class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Unbuffered.state.Partial</code>
+           </a> state, allowing the caller to reuse those bytes for any
+            purpose. The 
+           <a href="Buffered/index.html" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Buffered</code>
+           </a> will keep track of the region of committed bytes in its
+            internal buffer and reuse that region to store additional
+            input when necessary.
+          </p>
+         </div>
+        </div>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans
+         anchored" id="monadic/applicative-interface">
+         <a href="#monadic/applicative-interface" class="hover-link
+          inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Monadic/Applicative interface
+        </h3>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-return">
+          <a href="#val-return" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> return : 
+            <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span class="">'a</span> 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">return v</code>
+            creates a parser that will always succeed and return 
+           <code class="font-normal text-sm">v</code>
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-fail">
+          <a href="#val-fail" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> fail : 
+            <span>string <span class="">&#45;&gt;</span></span> 
+            <span><span class="">_</span> 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">fail msg</code>
+            creates a parser that will always fail with the message 
+           <code class="font-normal text-sm">msg</code>
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-(&gt;&gt;=)">
+          <a href="#val-(&gt;&gt;=)" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> (&gt;&gt;=) : 
+            <span>
+             <span><span class="">'a</span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>(
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span><span class="">'b</span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span class="">'b</span> 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">p &gt;&gt;= f</code> creates
+            a parser that will run <code class="font-normal text-sm">p</code>
+           , pass its result to <code class="font-normal text-sm">f</code>
+           , run the parser that <code class="font-normal text-sm">f</code>
+            produces, and return its result.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-bind">
+          <a href="#val-bind" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> bind : 
+            <span>
+             <span><span class="">'a</span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>f:
+             <span>(
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span><span class="">'b</span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span class="">'b</span> 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">bind</code>
+            is a prefix version of 
+           <code class="font-normal text-sm">&gt;&gt;=</code>
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-(&gt;&gt;|)">
+          <a href="#val-(&gt;&gt;|)" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> (&gt;&gt;|) : 
+            <span>
+             <span><span class="">'a</span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>(
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> <span class="">'b</span>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span class="">'b</span> 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">p &gt;&gt;| f</code> creates
+            a parser that will run <code class="font-normal text-sm">p</code>
+           , and if it succeeds with result 
+           <code class="font-normal text-sm">v</code>, will return 
+           <code class="font-normal text-sm">f v</code>
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-(&lt;*&gt;)">
+          <a href="#val-(&lt;*&gt;)" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> (&lt;*&gt;) : 
+            <span>
+             <span>
+              <span>(
+               <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+               </span> <span class="">'b</span>)
+              </span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span><span class="">'a</span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span class="">'b</span> 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">f &lt;*&gt; p</code> is 
+           equivalent to 
+           <code class="font-normal text-sm">
+            f &gt;&gt;= fun f -&gt; p &gt;&gt;| f
+           </code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-(&lt;$&gt;)">
+          <a href="#val-(&lt;$&gt;)" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> (&lt;$&gt;) : 
+            <span>
+             <span>(
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> <span class="">'b</span>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span><span class="">'a</span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span class="">'b</span> 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">f &lt;$&gt; p</code> is 
+           equivalent to 
+           <code class="font-normal text-sm">p &gt;&gt;| f</code>
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-(*&gt;)">
+          <a href="#val-(*&gt;)" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> (*&gt;) : 
+            <span>
+             <span><span class="">_</span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span><span class="">'a</span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span class="">'a</span> 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">p *&gt; q</code>
+            runs <code class="font-normal text-sm">p</code>, discards
+            its result and then runs 
+           <code class="font-normal text-sm">q</code>, and returns its
+            result.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-(&lt;*)">
+          <a href="#val-(&lt;*)" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> (&lt;*) : 
+            <span>
+             <span><span class="">'a</span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span><span class="">_</span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span class="">'a</span> 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">p &lt;* q</code>
+            runs <code class="font-normal text-sm">p</code>, then runs
+            <code class="font-normal text-sm">q</code>, discards its 
+           result, and returns the result of 
+           <code class="font-normal text-sm">p</code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-lift">
+          <a href="#val-lift" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> lift : 
+            <span>
+             <span>(
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> <span class="">'b</span>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span><span class="">'a</span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span class="">'b</span> 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-lift2">
+          <a href="#val-lift2" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> lift2 : 
+            <span>
+             <span>(
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span><span class="">'b</span> <span class="">&#45;&gt;</span>
+              </span> <span class="">'c</span>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span><span class="">'a</span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span><span class="">'b</span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span class="">'c</span> 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-lift3">
+          <a href="#val-lift3" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> lift3 : 
+            <span>
+             <span>(
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span><span class="">'b</span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span><span class="">'c</span> <span class="">&#45;&gt;</span>
+              </span> <span class="">'d</span>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span><span class="">'a</span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span><span class="">'b</span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span><span class="">'c</span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span class="">'d</span> 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-lift4">
+          <a href="#val-lift4" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> lift4 : 
+            <span>
+             <span>(
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span><span class="">'b</span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span><span class="">'c</span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span><span class="">'d</span> <span class="">&#45;&gt;</span>
+              </span> <span class="">'e</span>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span><span class="">'a</span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span><span class="">'b</span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span><span class="">'c</span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span><span class="">'d</span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span class="">'e</span> 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">The <code class="font-normal text-sm">liftn</code>
+            family of functions promote functions to the parser monad.
+            For any of these functions, the following equivalence holds:
+          </p>
+          <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+           <code class="font-normal text-sm">
+            liftn f p1 ... pn = f &lt;$&gt; p1 &lt;*&gt; ... &lt;*&gt; pn
+           </code>
+          </pre>
+          <p class="mt-4">These functions are more efficient than using
+            the applicative interface directly, mostly in terms of memory
+            allocation but also in terms of speed. Prefer them over the
+            applicative interface, even when the arity of the function
+            to be lifted exceeds the maximum 
+           <code class="font-normal text-sm">n</code> for which there
+            is an implementation for 
+           <code class="font-normal text-sm">liftn</code>. In other words,
+            if <code class="font-normal text-sm">f</code> has an arity
+            of <code class="font-normal text-sm">5</code> but only 
+           <code class="font-normal text-sm">lift4</code> is provided,
+            do the following:
+          </p>
+          <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+           <code class="font-normal text-sm">lift4 f m1 m2 m3 m4 &lt;*&gt; m5
+           </code>
+          </pre>
+          <p class="mt-4">Even with the partial application, it will 
+           be more efficient than the applicative implementation.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-map">
+          <a href="#val-map" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> map : 
+            <span>
+             <span><span class="">'a</span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>f:
+             <span>(
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> <span class="">'b</span>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span class="">'b</span> 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-map2">
+          <a href="#val-map2" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> map2 : 
+            <span>
+             <span><span class="">'a</span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span><span class="">'b</span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>f:
+             <span>(
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span><span class="">'b</span> <span class="">&#45;&gt;</span>
+              </span> <span class="">'c</span>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span class="">'c</span> 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-map3">
+          <a href="#val-map3" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> map3 : 
+            <span>
+             <span><span class="">'a</span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span><span class="">'b</span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span><span class="">'c</span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>f:
+             <span>(
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span><span class="">'b</span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span><span class="">'c</span> <span class="">&#45;&gt;</span>
+              </span> <span class="">'d</span>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span class="">'d</span> 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-map4">
+          <a href="#val-map4" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> map4 : 
+            <span>
+             <span><span class="">'a</span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span><span class="">'b</span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span><span class="">'c</span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span><span class="">'d</span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>f:
+             <span>(
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span><span class="">'b</span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span><span class="">'c</span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span><span class="">'d</span> <span class="">&#45;&gt;</span>
+              </span> <span class="">'e</span>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span class="">'e</span> 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">The <code class="font-normal text-sm">mapn</code>
+            family of functions are just like 
+           <code class="font-normal text-sm">liftn</code>, with a slightly
+            different interface.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec module anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="module-Let_syntax">
+          <a href="#module-Let_syntax" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">module</span> </span>
+           <span>
+            <a href="Let_syntax/index.html" class="cursor-pointer
+             text-orange">Let_syntax
+            </a>
+           </span>
+           <span> : <span class="font-semibold">sig</span> ... 
+            <span class="font-semibold">end</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">The 
+           <code class="font-normal text-sm">Let_syntax</code> module
+            is intended to be used with the 
+           <code class="font-normal text-sm">ppx_let</code> pre-processor,
+            and just contains copies of functions described elsewhere.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-let+">
+          <a href="#val-let+" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> let+ : 
+            <span>
+             <span><span class="">'a</span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>(
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> <span class="">'b</span>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span class="">'b</span> 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-let*">
+          <a href="#val-let*" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> let* : 
+            <span>
+             <span><span class="">'a</span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>(
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span><span class="">'b</span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span class="">'b</span> 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-and+">
+          <a href="#val-and+" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> and+ : 
+            <span>
+             <span><span class="">'a</span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span><span class="">'b</span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>(<span class="">'a</span> * <span class="">'b</span>)
+             </span> 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec module anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="module-Unsafe">
+          <a href="#module-Unsafe" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">module</span> </span>
+           <span>
+            <a href="Unsafe/index.html" class="cursor-pointer text-orange">
+             Unsafe
+            </a>
+           </span>
+           <span> : <span class="font-semibold">sig</span> ... 
+            <span class="font-semibold">end</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Unsafe Operations on Angstrom's Internal Buffer</p>
+         </div>
+        </div>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans
+         anchored" id="running">
+         <a href="#running" class="hover-link inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Running
+        </h3>
+        <div class="mt-8">
+         <div class="spec module anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="module-Consume">
+          <a href="#module-Consume" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">module</span> </span>
+           <span>
+            <a href="Consume/index.html" class="cursor-pointer text-orange">
+             Consume
+            </a>
+           </span>
+           <span> : <span class="font-semibold">sig</span> ... 
+            <span class="font-semibold">end</span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-parse_bigstring">
+          <a href="#val-parse_bigstring" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> parse_bigstring
+             : 
+            <span>consume:
+             <a href="Consume/index.html#type-t" class="cursor-pointer
+              text-orange">Consume.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span><span class="">'a</span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-bigstring" class="cursor-pointer text-orange">
+              bigstring
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span>(<span class="">'a</span>, string)</span> 
+             <a
+              href="../../../ocaml-base-compiler/4.12.0/Stdlib/index.html#type-result"
+              class="cursor-pointer text-orange">Stdlib.result
+             </a>
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <p class="mt-4">
+         <code class="font-normal text-sm">parse_bigstring ~consume t bs
+         </code> runs <code class="font-normal text-sm">t</code> on 
+         <code class="font-normal text-sm">bs</code>. The parser will
+          receive an <code class="font-normal text-sm">`Eof</code> after
+          all of <code class="font-normal text-sm">bs</code> has been
+          consumed. Passing <code class="font-normal text-sm">Prefix</code>
+          in the <code class="font-normal text-sm">consume</code> argument
+          allows the parse to successfully complete without reaching 
+         eof. To require the parser to reach eof, pass 
+         <code class="font-normal text-sm">All</code> in the 
+         <code class="font-normal text-sm">consume</code> argument.
+        </p>
+        <p class="mt-4">For use-cases requiring that the parser be fed
+          input incrementally, see the 
+         <a href="Buffered/index.html" class="cursor-pointer text-orange">
+          <code class="font-normal text-sm">Buffered</code>
+         </a> and 
+         <a href="Unbuffered/index.html" class="cursor-pointer text-orange">
+          <code class="font-normal text-sm">Unbuffered</code>
+         </a> modules below.
+        </p>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-parse_string">
+          <a href="#val-parse_string" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> parse_string : 
+            <span>consume:
+             <a href="Consume/index.html#type-t" class="cursor-pointer
+              text-orange">Consume.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span><span class="">'a</span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> <span>string <span class="">&#45;&gt;</span></span>
+             
+            <span><span>(<span class="">'a</span>, string)</span> 
+             <a
+              href="../../../ocaml-base-compiler/4.12.0/Stdlib/index.html#type-result"
+              class="cursor-pointer text-orange">Stdlib.result
+             </a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">parse_string ~consume t bs
+           </code> runs <code class="font-normal text-sm">t</code> on
+            <code class="font-normal text-sm">bs</code>. The parser will
+            receive an <code class="font-normal text-sm">`Eof</code> 
+           after all of <code class="font-normal text-sm">bs</code> has
+            been consumed. Passing 
+           <code class="font-normal text-sm">Prefix</code> in the 
+           <code class="font-normal text-sm">consume</code> argument 
+           allows the parse to successfully complete without reaching
+            eof. To require the parser to reach eof, pass 
+           <code class="font-normal text-sm">All</code> in the 
+           <code class="font-normal text-sm">consume</code> argument.
+          </p>
+          <p class="mt-4">For use-cases requiring that the parser be 
+           fed input incrementally, see the 
+           <a href="Buffered/index.html" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Buffered</code>
+           </a> and 
+           <a href="Unbuffered/index.html" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Unbuffered</code>
+           </a> modules below.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec module anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="module-Buffered">
+          <a href="#module-Buffered" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">module</span> </span>
+           <span>
+            <a href="Buffered/index.html" class="cursor-pointer text-orange">
+             Buffered
+            </a>
+           </span>
+           <span> : <span class="font-semibold">sig</span> ... 
+            <span class="font-semibold">end</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Buffered parsing interface.</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec module anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="module-Unbuffered">
+          <a href="#module-Unbuffered" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">module</span> </span>
+           <span>
+            <a href="Unbuffered/index.html" class="cursor-pointer
+             text-orange">Unbuffered
+            </a>
+           </span>
+           <span> : <span class="font-semibold">sig</span> ... 
+            <span class="font-semibold">end</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Unbuffered parsing interface.</p>
+         </div>
+        </div>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans
+         anchored" id="expert-parsers">
+         <a href="#expert-parsers" class="hover-link inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Expert Parsers
+        </h3>
+        <p class="mt-4">For people that know what they're doing. If you
+          want to use them, read the code. No further documentation will
+          be provided.
+        </p>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-pos">
+          <a href="#val-pos" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> pos : 
+            <span>int 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-available">
+          <a href="#val-available" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> available : 
+            <span>int 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="w-full flex-none lg:w-72 border-t lg:border-l bg-gray-100">
+       <div class="flex h-20 border-b relative">
+        <h2 class="text-xl absolute inset-x-0 p-3 bottom-0 mt-7 font-semibold
+         text-gray-500">angstrom.0.15.0
+        </h2>
+       </div>
+       <div class="m-3">
+        <p class="mb-5 italic text-sm">
+         Parser combinators built for speed and memory-efficiency
+        </p>
+        <div class="mb-3">
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="https://github.com/inhabitedtype/angstrom">
+           github.com/inhabitedtype/angstrom
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1.323l3.954 1.582 1.599-.8a1 1 0 01.894 1.79l-1.233.616 1.738 5.42a1 1 0 01-.285 1.05A3.989 3.989 0 0115 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.715-5.349L11 6.477V16h2a1 1 0 110 2H7a1 1 0 110-2h2V6.477L6.237 7.582l1.715 5.349a1 1 0 01-.285 1.05A3.989 3.989 0 015 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.738-5.42-1.233-.617a1 1 0 01.894-1.788l1.599.799L9 4.323V3a1 1 0 011-1zm-5 8.274l-.818 2.552c.25.112.526.174.818.174.292 0 .569-.062.818-.174L5 10.274zm10 0l-.818 2.552c.25.112.526.174.818.174.292 0 .569-.062.818-.174L15 10.274z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="../LICENSE.html">LICENSE
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
+</svg>
+    
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="../README.md.html">README.md
+          </a>
+         </div>
+        </div>
+        <details class="font-normal mb-2 text-sm">
+         <summary>Other versions</summary><div id="versions_container"></div>
+        </details><h2 class="font-semibold mb-2 text-sm">Authors</h2>
+        <p class="mb-3 text-sm">
+         Spiros Eliopoulos &lt;spiros@inhabitedtype.com&gt;
+        </p><h2 class="font-semibold mb-2 text-sm">Issues</h2>
+        <div class="mb-3">
+         <a class="text-orange cursor-pointer mb-2 text-sm"
+          href="https://github.com/inhabitedtype/angstrom/issues">
+          github.com/inhabitedtype/angstrom/issues
+         </a>
+        </div>
+        <details class="font-semibold mb-2 text-sm">
+         <summary>Package dependencies</summary>
+         <div class="font-normal">
+          <ul>
+           <li>
+            <a href="../../../ocaml/index.html" class="text-orange
+             cursor-pointer">ocaml
+            </a>
+           </li>
+           <li>
+            <a href="../../../dune/index.html" class="text-orange
+             cursor-pointer">dune
+            </a>
+           </li>
+           <li>
+            <a href="../../../alcotest/index.html" class="text-orange
+             cursor-pointer">alcotest
+            </a>
+           </li>
+           <li>
+            <a href="../../../bigstringaf/index.html" class="text-orange
+             cursor-pointer">bigstringaf
+            </a>
+           </li>
+           <li>
+            <a href="../../../result/index.html" class="text-orange
+             cursor-pointer">result
+            </a>
+           </li>
+           <li>
+            <a href="../../../ppx_let/index.html" class="text-orange
+             cursor-pointer">ppx_let
+            </a>
+           </li>
+           <li>
+            <a href="../../../ocaml-syntax-shims/index.html"
+             class="text-orange cursor-pointer">ocaml-syntax-shims
+            </a>
+           </li>
+          </ul>
+         </div>
+        </details>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div><script>Voodoo.update('../../version.json')</script>
+ </body>
+</html>
