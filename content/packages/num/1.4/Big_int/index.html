@@ -1,0 +1,2038 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head><title>Big_int (packages.num.1.4.Big_int)</title>
+  <link rel="stylesheet" href="../../../tailwind.css"/>
+  <link rel="stylesheet" href="../../../extra.css"/><meta charset="utf-8"/>
+  <meta name="generator" content="odoc 3dfb7aef2f"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <script src="../../../highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="../../../voodoo_client.js"></script>
+  <script
+   src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+   defer="defer">
+  </script>
+ </head>
+ <body class="mx-auto max-w-screen-2xl">
+  <div class="relative">
+   <div class="relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+     <div class="flex justify-between items-center md:justify-start py-6
+      md:space-x-10">
+      <div class="flex justify-start">
+       <a href="https://v3.ocaml.org/">
+        <img src="/colour-logo.svg" alt="" class="h-8 w-auto sm:h-10"/>
+       </a>
+      </div>
+      <nav class="hidden md:flex space-x-10">
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Industry</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/whatisocaml">
+            <p class="text-base font-medium text-gray-900">What is OCaml</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/users">
+            <p class="text-base font-medium text-gray-900">Industrial Users
+            </p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/successstories">
+            <p class="text-base font-medium text-gray-900">Success Stories
+            </p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Resources</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/releases">
+            <p class="text-base font-medium text-gray-900">Releases</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/applications">
+            <p class="text-base font-medium text-gray-900">Applications</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/language">
+            <p class="text-base font-medium text-gray-900">Language</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/archive">
+            <p class="text-base font-medium text-gray-900">Archive</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Community</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/opportunities">
+            <p class="text-base font-medium text-gray-900">Opportunities</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/news">
+            <p class="text-base font-medium text-gray-900">News</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/aroundweb">
+            <p class="text-base font-medium text-gray-900">Around the Web</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="h-screen flex bg-white font-sans">
+   <div class="flex flex-col w-full h-full">
+    <div class="flex-row flex-1">
+     <nav class="bg-orange border-t border-b border-orange flex flex-row">
+      <ol class="max-w-screen-xl w-full px-4 flex space-x-4 sm:px-6 lg:px-8">
+       <li class="flex">
+        <div class="flex items-center">
+         <a href="#" class="text-gray-100 hover:text-gray-500">
+          
+  <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+        </svg>
+  
+          <span class="sr-only">Home</span>
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">packages
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">num
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">1.4
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="#" class="ml-4 text-sm font-medium text-gray-100
+          hover:text-gray-500">Big_int
+         </a>
+        </div>
+       </li>
+      </ol>
+     </nav>
+    </div>
+    <div class="flex flex-row flex-1">
+     <div class="w-72 flex-none bg-gray-100 h-screen border-r border-gray-200
+      sticky top-0 hidden lg:block">
+      <div class="flex h-20 border-b relative">
+       <h2 class="text-xl absolute inset-x-0 p-3 px-5 bottom-0 mt-7
+        border-gray-200 font-semibold text-gray-500 font-sans">On this page
+       </h2>
+      </div>
+      <nav class="bg-gray-100 p-5">
+       <ul>
+        <li>
+         <a href="#arithmetic-operations" class="cursor-pointer text-orange">
+          Arithmetic operations
+         </a>
+        </li>
+        <li>
+         <a href="#comparisons-and-tests" class="cursor-pointer text-orange">
+          Comparisons and tests
+         </a>
+        </li>
+        <li>
+         <a href="#conversions-to-and-from-strings" class="cursor-pointer
+          text-orange">Conversions to and from strings
+         </a>
+        </li>
+        <li>
+         <a href="#conversions-to-and-from-other-numerical-types"
+          class="cursor-pointer text-orange">Conversions to and from 
+          other numerical types
+         </a>
+        </li>
+        <li>
+         <a href="#bit-oriented-operations" class="cursor-pointer
+          text-orange">Bit-oriented operations
+         </a>
+        </li>
+       </ul>
+      </nav>
+     </div>
+     <div class="flex flex-1 flex-col lg:flex-row">
+      <div class="flex-1">
+       <div class="lg:max-w-5xl mx-auto px-3 lg:px-10 mb-10 text-sm">
+        <div class="flex h-20 relative border-b border-gray-200">
+         <div class="relative flex-1 h-20">
+          <h1 class="text-3xl absolute inset-x-0 py-3 bottom-0 font-semibold
+           text-gray-500 font-sans w-full truncate">
+           <code class="font-mono text-gray-800">Big_int</code>
+          </h1>
+         </div>
+         <div class="relative flex-none w-28">
+          <h1 class="text-3xl absolute py-3 bottom-0 right-0 font-semibold
+           text-gray-500 font-sans">Module
+          </h1>
+         </div>
+        </div><p class="mt-4">Operations on arbitrary-precision integers.</p>
+        <p class="mt-4">Big integers (type 
+         <code class="font-normal text-sm">big_int</code>) are signed
+          integers of arbitrary size.
+        </p>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-big_int">
+          <a href="#type-big_int" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> big_int</span>
+          </code>
+         </div>
+         <div class="spec-doc"><p class="mt-4">The type of big integers.</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-zero_big_int">
+          <a href="#val-zero_big_int" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> zero_big_int : 
+            <a href="#type-big_int" class="cursor-pointer text-orange">
+             big_int
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">The big integer 
+           <code class="font-normal text-sm">0</code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-unit_big_int">
+          <a href="#val-unit_big_int" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> unit_big_int : 
+            <a href="#type-big_int" class="cursor-pointer text-orange">
+             big_int
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">The big integer 
+           <code class="font-normal text-sm">1</code>.
+          </p>
+         </div>
+        </div>
+        <h6 class="text-gray-800 font-sans anchored"
+         id="arithmetic-operations">
+         <a href="#arithmetic-operations" class="hover-link inline-block
+          -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Arithmetic operations
+        </h6>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-minus_big_int">
+          <a href="#val-minus_big_int" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> minus_big_int
+             : 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-big_int" class="cursor-pointer text-orange">
+             big_int
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc"><p class="mt-4">Unary negation.</p></div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-abs_big_int">
+          <a href="#val-abs_big_int" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> abs_big_int : 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-big_int" class="cursor-pointer text-orange">
+             big_int
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc"><p class="mt-4">Absolute value.</p></div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-add_big_int">
+          <a href="#val-add_big_int" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> add_big_int : 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-big_int" class="cursor-pointer text-orange">
+             big_int
+            </a>
+           </span>
+          </code>
+         </div><div class="spec-doc"><p class="mt-4">Addition.</p></div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-succ_big_int">
+          <a href="#val-succ_big_int" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> succ_big_int : 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-big_int" class="cursor-pointer text-orange">
+             big_int
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc"><p class="mt-4">Successor (add 1).</p></div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-add_int_big_int">
+          <a href="#val-add_int_big_int" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> add_int_big_int
+             : <span>int <span class="">&#45;&gt;</span></span> 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-big_int" class="cursor-pointer text-orange">
+             big_int
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Addition of a small integer to a big integer.</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-sub_big_int">
+          <a href="#val-sub_big_int" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sub_big_int : 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-big_int" class="cursor-pointer text-orange">
+             big_int
+            </a>
+           </span>
+          </code>
+         </div><div class="spec-doc"><p class="mt-4">Subtraction.</p></div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-pred_big_int">
+          <a href="#val-pred_big_int" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> pred_big_int : 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-big_int" class="cursor-pointer text-orange">
+             big_int
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc"><p class="mt-4">Predecessor (subtract 1).</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-mult_big_int">
+          <a href="#val-mult_big_int" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> mult_big_int : 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-big_int" class="cursor-pointer text-orange">
+             big_int
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Multiplication of two big integers.</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-mult_int_big_int">
+          <a href="#val-mult_int_big_int" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> mult_int_big_int
+             : <span>int <span class="">&#45;&gt;</span></span> 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-big_int" class="cursor-pointer text-orange">
+             big_int
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Multiplication of a big integer by a small integer
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-square_big_int">
+          <a href="#val-square_big_int" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> square_big_int
+             : 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-big_int" class="cursor-pointer text-orange">
+             big_int
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return the square of the given big integer</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-sqrt_big_int">
+          <a href="#val-sqrt_big_int" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sqrt_big_int : 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-big_int" class="cursor-pointer text-orange">
+             big_int
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">sqrt_big_int a</code> returns
+            the integer square root of 
+           <code class="font-normal text-sm">a</code>, that is, the largest
+            big integer <code class="font-normal text-sm">r</code> such
+            that <code class="font-normal text-sm">r * r &lt;= a</code>
+           . Raise <code class="font-normal text-sm">Invalid_argument</code>
+            if <code class="font-normal text-sm">a</code> is negative.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-quomod_big_int">
+          <a href="#val-quomod_big_int" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> quomod_big_int
+             : 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-big_int" class="cursor-pointer text-orange">
+             big_int
+            </a> * 
+            <a href="#type-big_int" class="cursor-pointer text-orange">
+             big_int
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Euclidean division of two big integers. The
+            first part of the result is the quotient, the second part
+            is the remainder. Writing 
+           <code class="font-normal text-sm">(q,r) = quomod_big_int a b
+           </code>, we have 
+           <code class="font-normal text-sm">a = q * b + r</code> and
+            <code class="font-normal text-sm">0 &lt;= r &lt; |b|</code>
+           . Raise <code class="font-normal text-sm">Division_by_zero</code>
+            if the divisor is zero.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-div_big_int">
+          <a href="#val-div_big_int" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> div_big_int : 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-big_int" class="cursor-pointer text-orange">
+             big_int
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Euclidean quotient of two big integers. This
+            is the first result <code class="font-normal text-sm">q</code>
+            of <code class="font-normal text-sm">quomod_big_int</code>
+            (see above).
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-mod_big_int">
+          <a href="#val-mod_big_int" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> mod_big_int : 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-big_int" class="cursor-pointer text-orange">
+             big_int
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Euclidean modulus of two big integers. This
+            is the second result <code class="font-normal text-sm">r</code>
+            of <code class="font-normal text-sm">quomod_big_int</code>
+            (see above).
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-gcd_big_int">
+          <a href="#val-gcd_big_int" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> gcd_big_int : 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-big_int" class="cursor-pointer text-orange">
+             big_int
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Greatest common divisor of two big integers.</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-power_int_positive_int">
+          <a href="#val-power_int_positive_int" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            power_int_positive_int : 
+            <span>int <span class="">&#45;&gt;</span></span> 
+            <span>int <span class="">&#45;&gt;</span></span> 
+            <a href="#type-big_int" class="cursor-pointer text-orange">
+             big_int
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-power_big_int_positive_int">
+          <a href="#val-power_big_int_positive_int" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            power_big_int_positive_int : 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> <span>int <span class="">&#45;&gt;</span></span> 
+            <a href="#type-big_int" class="cursor-pointer text-orange">
+             big_int
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-power_int_positive_big_int">
+          <a href="#val-power_int_positive_big_int" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            power_int_positive_big_int : 
+            <span>int <span class="">&#45;&gt;</span></span> 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-big_int" class="cursor-pointer text-orange">
+             big_int
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100"
+          id="val-power_big_int_positive_big_int">
+          <a href="#val-power_big_int_positive_big_int" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            power_big_int_positive_big_int : 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-big_int" class="cursor-pointer text-orange">
+             big_int
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Exponentiation functions. Return the big integer
+            representing the first argument 
+           <code class="font-normal text-sm">a</code> raised to the power
+            <code class="font-normal text-sm">b</code> (the second argument).
+            Depending on the function, 
+           <code class="font-normal text-sm">a</code> and 
+           <code class="font-normal text-sm">b</code> can be either small
+            integers or big integers. Raise 
+           <code class="font-normal text-sm">Invalid_argument</code> 
+           if <code class="font-normal text-sm">b</code> is negative.
+          </p>
+         </div>
+        </div>
+        <h6 class="text-gray-800 font-sans anchored"
+         id="comparisons-and-tests">
+         <a href="#comparisons-and-tests" class="hover-link inline-block
+          -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Comparisons and tests
+        </h6>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-sign_big_int">
+          <a href="#val-sign_big_int" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sign_big_int : 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> int
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return <code class="font-normal text-sm">0</code>
+            if the given big integer is zero, 
+           <code class="font-normal text-sm">1</code> if it is positive,
+            and <code class="font-normal text-sm">-1</code> if it is 
+           negative.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-compare_big_int">
+          <a href="#val-compare_big_int" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> compare_big_int
+             : 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> int
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">compare_big_int a b</code>
+            returns <code class="font-normal text-sm">0</code> if 
+           <code class="font-normal text-sm">a</code> and 
+           <code class="font-normal text-sm">b</code> are equal, 
+           <code class="font-normal text-sm">1</code> if 
+           <code class="font-normal text-sm">a</code> is greater than
+            <code class="font-normal text-sm">b</code>, and 
+           <code class="font-normal text-sm">-1</code> if 
+           <code class="font-normal text-sm">a</code> is smaller than
+            <code class="font-normal text-sm">b</code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-eq_big_int">
+          <a href="#val-eq_big_int" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> eq_big_int : 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> bool
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-le_big_int">
+          <a href="#val-le_big_int" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> le_big_int : 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> bool
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-ge_big_int">
+          <a href="#val-ge_big_int" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> ge_big_int : 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> bool
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-lt_big_int">
+          <a href="#val-lt_big_int" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> lt_big_int : 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> bool
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-gt_big_int">
+          <a href="#val-gt_big_int" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> gt_big_int : 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> bool
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Usual boolean comparisons between two big integers.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-max_big_int">
+          <a href="#val-max_big_int" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> max_big_int : 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-big_int" class="cursor-pointer text-orange">
+             big_int
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return the greater of its two arguments.</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-min_big_int">
+          <a href="#val-min_big_int" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> min_big_int : 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-big_int" class="cursor-pointer text-orange">
+             big_int
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return the smaller of its two arguments.</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-num_digits_big_int">
+          <a href="#val-num_digits_big_int" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> num_digits_big_int
+             : 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> int
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return the number of machine words used to 
+           store the given big integer.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-num_bits_big_int">
+          <a href="#val-num_bits_big_int" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> num_bits_big_int
+             : 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> int
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return the number of significant bits in the
+            absolute value of the given big integer. 
+           <code class="font-normal text-sm">num_bits_big_int a</code>
+            returns 0 if <code class="font-normal text-sm">a</code> is
+            0; otherwise it returns a positive integer 
+           <code class="font-normal text-sm">n</code> such that 
+           <code class="font-normal text-sm">2^(n-1) &lt;= |a| &lt; 2^n
+           </code>.
+          </p><ul class="at-tags"><li class="since">since 4.03.0</li></ul>
+         </div>
+        </div>
+        <h6 class="text-gray-800 font-sans anchored"
+         id="conversions-to-and-from-strings">
+         <a href="#conversions-to-and-from-strings" class="hover-link
+          inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Conversions to and from strings
+        </h6>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-string_of_big_int">
+          <a href="#val-string_of_big_int" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> string_of_big_int
+             : 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return the string representation of the given
+            big integer, in decimal (base 10).
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-big_int_of_string">
+          <a href="#val-big_int_of_string" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> big_int_of_string
+             : <span>string <span class="">&#45;&gt;</span></span> 
+            <a href="#type-big_int" class="cursor-pointer text-orange">
+             big_int
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Convert a string to a big integer, in decimal.
+            The string consists of an optional 
+           <code class="font-normal text-sm">-</code> or 
+           <code class="font-normal text-sm">+</code> sign, followed 
+           by one or several decimal digits.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-big_int_of_string_opt">
+          <a href="#val-big_int_of_string_opt" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> big_int_of_string_opt
+             : <span>string <span class="">&#45;&gt;</span></span> 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> option
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Convert a string to a big integer, in decimal.
+            The string consists of an optional 
+           <code class="font-normal text-sm">-</code> or 
+           <code class="font-normal text-sm">+</code> sign, followed 
+           by one or several decimal digits. Other the function returns
+            <code class="font-normal text-sm">None</code>.
+          </p><ul class="at-tags"><li class="since">since 4.05</li></ul>
+         </div>
+        </div>
+        <h6 class="text-gray-800 font-sans anchored"
+         id="conversions-to-and-from-other-numerical-types">
+         <a href="#conversions-to-and-from-other-numerical-types"
+          class="hover-link inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Conversions to and from other numerical types
+        </h6>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-big_int_of_int">
+          <a href="#val-big_int_of_int" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> big_int_of_int
+             : <span>int <span class="">&#45;&gt;</span></span> 
+            <a href="#type-big_int" class="cursor-pointer text-orange">
+             big_int
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Convert a small integer to a big integer.</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-is_int_big_int">
+          <a href="#val-is_int_big_int" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> is_int_big_int
+             : 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> bool
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Test whether the given big integer is small
+            enough to be representable as a small integer (type 
+           <code class="font-normal text-sm">int</code>) without loss
+            of precision. On a 32-bit platform, 
+           <code class="font-normal text-sm">is_int_big_int a</code> 
+           returns <code class="font-normal text-sm">true</code> if and
+            only if <code class="font-normal text-sm">a</code> is between
+            2<sup>30</sup> and 2<sup>30</sup>-1. On a 64-bit platform,
+            <code class="font-normal text-sm">is_int_big_int a</code>
+            returns <code class="font-normal text-sm">true</code> if 
+           and only if <code class="font-normal text-sm">a</code> is 
+           between -2<sup>62</sup> and 2<sup>62</sup>-1.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-int_of_big_int">
+          <a href="#val-int_of_big_int" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> int_of_big_int
+             : 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> int
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Convert a big integer to a small integer (type
+            <code class="font-normal text-sm">int</code>). Raises 
+           <code class="font-normal text-sm">
+            Failure &quot;int_of_big_int&quot;
+           </code> if the big integer is not representable as a small
+            integer.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-int_of_big_int_opt">
+          <a href="#val-int_of_big_int_opt" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> int_of_big_int_opt
+             : 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> <span>int option</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Convert a big integer to a small integer (type
+            <code class="font-normal text-sm">int</code>). Return 
+           <code class="font-normal text-sm">None</code> if the big integer
+            is not representable as a small integer.
+          </p><ul class="at-tags"><li class="since">since 4.05</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-big_int_of_int32">
+          <a href="#val-big_int_of_int32" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> big_int_of_int32
+             : <span>int32 <span class="">&#45;&gt;</span></span> 
+            <a href="#type-big_int" class="cursor-pointer text-orange">
+             big_int
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Convert a 32-bit integer to a big integer.</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-big_int_of_nativeint">
+          <a href="#val-big_int_of_nativeint" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> big_int_of_nativeint
+             : <span>nativeint <span class="">&#45;&gt;</span></span>
+             
+            <a href="#type-big_int" class="cursor-pointer text-orange">
+             big_int
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Convert a native integer to a big integer.</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-big_int_of_int64">
+          <a href="#val-big_int_of_int64" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> big_int_of_int64
+             : <span>int64 <span class="">&#45;&gt;</span></span> 
+            <a href="#type-big_int" class="cursor-pointer text-orange">
+             big_int
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Convert a 64-bit integer to a big integer.</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-int32_of_big_int">
+          <a href="#val-int32_of_big_int" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> int32_of_big_int
+             : 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> int32
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Convert a big integer to a 32-bit integer. 
+           Raises <code class="font-normal text-sm">Failure</code> if
+            the big integer is outside the range [-2<sup>31</sup>, 2
+           <sup>31</sup>-1].
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-int32_of_big_int_opt">
+          <a href="#val-int32_of_big_int_opt" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> int32_of_big_int_opt
+             : 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> <span>int32 option</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Convert a big integer to a 32-bit integer. 
+           Return <code class="font-normal text-sm">None</code> if the
+            big integer is outside the range [-2<sup>31</sup>, 2<sup>31</sup>
+           -1].
+          </p><ul class="at-tags"><li class="since">since 4.05</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-nativeint_of_big_int">
+          <a href="#val-nativeint_of_big_int" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> nativeint_of_big_int
+             : 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> nativeint
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Convert a big integer to a native integer. 
+           Raises <code class="font-normal text-sm">Failure</code> if
+            the big integer is outside the range 
+           <code class="font-normal text-sm">
+            [Nativeint.min_int, Nativeint.max_int]
+           </code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-nativeint_of_big_int_opt">
+          <a href="#val-nativeint_of_big_int_opt" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            nativeint_of_big_int_opt : 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> <span>nativeint option</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Convert a big integer to a native integer. 
+           Return <code class="font-normal text-sm">None</code> if the
+            big integer is outside the range 
+           <code class="font-normal text-sm">
+            [Nativeint.min_int,
+                Nativeint.max_int]
+           </code>;
+          </p><ul class="at-tags"><li class="since">since 4.05</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-int64_of_big_int">
+          <a href="#val-int64_of_big_int" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> int64_of_big_int
+             : 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> int64
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Convert a big integer to a 64-bit integer. 
+           Raises <code class="font-normal text-sm">Failure</code> if
+            the big integer is outside the range [-2<sup>63</sup>, 2
+           <sup>63</sup>-1].
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-int64_of_big_int_opt">
+          <a href="#val-int64_of_big_int_opt" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> int64_of_big_int_opt
+             : 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> <span>int64 option</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Convert a big integer to a 64-bit integer. 
+           Return <code class="font-normal text-sm">None</code> if the
+            big integer is outside the range [-2<sup>63</sup>, 2<sup>63</sup>
+           -1].
+          </p><ul class="at-tags"><li class="since">since 4.05</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-float_of_big_int">
+          <a href="#val-float_of_big_int" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> float_of_big_int
+             : 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> float
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Returns a floating-point number approximating
+            the given big integer.
+          </p>
+         </div>
+        </div>
+        <h6 class="text-gray-800 font-sans anchored"
+         id="bit-oriented-operations">
+         <a href="#bit-oriented-operations" class="hover-link inline-block
+          -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Bit-oriented operations
+        </h6>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-and_big_int">
+          <a href="#val-and_big_int" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> and_big_int : 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-big_int" class="cursor-pointer text-orange">
+             big_int
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Bitwise logical 'and'. The arguments must be
+            positive or zero.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-or_big_int">
+          <a href="#val-or_big_int" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> or_big_int : 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-big_int" class="cursor-pointer text-orange">
+             big_int
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Bitwise logical 'or'. The arguments must be
+            positive or zero.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-xor_big_int">
+          <a href="#val-xor_big_int" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> xor_big_int : 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-big_int" class="cursor-pointer text-orange">
+             big_int
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Bitwise logical 'exclusive or'. The arguments
+            must be positive or zero.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-shift_left_big_int">
+          <a href="#val-shift_left_big_int" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> shift_left_big_int
+             : 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> <span>int <span class="">&#45;&gt;</span></span> 
+            <a href="#type-big_int" class="cursor-pointer text-orange">
+             big_int
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">shift_left_big_int b n</code>
+            returns <code class="font-normal text-sm">b</code> shifted
+            left by <code class="font-normal text-sm">n</code> bits. 
+           Equivalent to multiplication by 2^n.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-shift_right_big_int">
+          <a href="#val-shift_right_big_int" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> shift_right_big_int
+             : 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> <span>int <span class="">&#45;&gt;</span></span> 
+            <a href="#type-big_int" class="cursor-pointer text-orange">
+             big_int
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">shift_right_big_int b n</code>
+            returns <code class="font-normal text-sm">b</code> shifted
+            right by <code class="font-normal text-sm">n</code> bits.
+            Equivalent to division by 2^n with the result being rounded
+            towards minus infinity.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100"
+          id="val-shift_right_towards_zero_big_int">
+          <a href="#val-shift_right_towards_zero_big_int" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            shift_right_towards_zero_big_int : 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> <span>int <span class="">&#45;&gt;</span></span> 
+            <a href="#type-big_int" class="cursor-pointer text-orange">
+             big_int
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">
+            shift_right_towards_zero_big_int b n
+           </code> returns <code class="font-normal text-sm">b</code>
+            shifted right by <code class="font-normal text-sm">n</code>
+            bits. The shift is performed on the absolute value of 
+           <code class="font-normal text-sm">b</code>, and the result
+            has the same sign as <code class="font-normal text-sm">b</code>
+           . Equivalent to division by 2^n with the result being rounded
+            towards zero.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-extract_big_int">
+          <a href="#val-extract_big_int" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> extract_big_int
+             : 
+            <span>
+             <a href="#type-big_int" class="cursor-pointer text-orange">
+              big_int
+             </a> <span class="">&#45;&gt;</span>
+            </span> <span>int <span class="">&#45;&gt;</span></span> 
+            <span>int <span class="">&#45;&gt;</span></span> 
+            <a href="#type-big_int" class="cursor-pointer text-orange">
+             big_int
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">extract_big_int bi ofs n</code>
+            returns a nonnegative number corresponding to bits 
+           <code class="font-normal text-sm">ofs</code> to 
+           <code class="font-normal text-sm">ofs + n - 1</code> of the
+            binary representation of 
+           <code class="font-normal text-sm">bi</code>. If 
+           <code class="font-normal text-sm">bi</code> is negative, a
+            two's complement representation is used.
+          </p>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="w-full flex-none lg:w-72 border-t lg:border-l bg-gray-100">
+       <div class="flex h-20 border-b relative">
+        <h2 class="text-xl absolute inset-x-0 p-3 bottom-0 mt-7 font-semibold
+         text-gray-500">num.1.4
+        </h2>
+       </div>
+       <div class="m-3">
+        <p class="mb-5 italic text-sm">
+         The legacy Num library for arbitrary-precision integer and rational
+         arithmetic
+        </p>
+        <div class="mb-3">
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="https://github.com/ocaml/num/">github.com/ocaml/num/
+          </a>
+         </div>
+        </div>
+        <details class="font-normal mb-2 text-sm">
+         <summary>Other versions</summary><div id="versions_container"></div>
+        </details><h2 class="font-semibold mb-2 text-sm">Authors</h2>
+        <p class="mb-3 text-sm">
+         Valérie Ménissier-Morain,Pierre Weis,Xavier Leroy
+        </p><h2 class="font-semibold mb-2 text-sm">Issues</h2>
+        <div class="mb-3">
+         <a class="text-orange cursor-pointer mb-2 text-sm"
+          href="https://github.com/ocaml/num/issues">
+          github.com/ocaml/num/issues
+         </a>
+        </div>
+        <details class="font-semibold mb-2 text-sm">
+         <summary>Package dependencies</summary>
+         <div class="font-normal">
+          <ul>
+           <li>
+            <a href="../../../ocaml/index.html" class="text-orange
+             cursor-pointer">ocaml
+            </a>
+           </li>
+           <li>
+            <a href="../../../ocamlfind/index.html" class="text-orange
+             cursor-pointer">ocamlfind
+            </a>
+           </li>
+          </ul>
+         </div>
+        </details>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div><script>Voodoo.update('../../version.json')</script>
+ </body>
+</html>
