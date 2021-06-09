@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head><title>README.org (packages.ppx_sexp_conv.v0.14.3.README.org)</title>
+  <link rel="stylesheet" href="../../tailwind.css"/>
+  <link rel="stylesheet" href="../../extra.css"/><meta charset="utf-8"/>
+  <meta name="generator" content="odoc 3dfb7aef2f"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <script src="../../highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="../../voodoo_client.js"></script>
+  <script
+   src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+   defer="defer">
+  </script>
+ </head>
+ <body class="mx-auto max-w-screen-2xl">
+  <div class="relative">
+   <div class="relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+     <div class="flex justify-between items-center md:justify-start py-6
+      md:space-x-10">
+      <div class="flex justify-start">
+       <a href="https://v3.ocaml.org/">
+        <img src="/colour-logo.svg" alt="" class="h-8 w-auto sm:h-10"/>
+       </a>
+      </div>
+      <nav class="hidden md:flex space-x-10">
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Industry</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/whatisocaml">
+            <p class="text-base font-medium text-gray-900">What is OCaml</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/users">
+            <p class="text-base font-medium text-gray-900">Industrial Users
+            </p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/successstories">
+            <p class="text-base font-medium text-gray-900">Success Stories
+            </p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Resources</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/releases">
+            <p class="text-base font-medium text-gray-900">Releases</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/applications">
+            <p class="text-base font-medium text-gray-900">Applications</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/language">
+            <p class="text-base font-medium text-gray-900">Language</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/archive">
+            <p class="text-base font-medium text-gray-900">Archive</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Community</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/opportunities">
+            <p class="text-base font-medium text-gray-900">Opportunities</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/news">
+            <p class="text-base font-medium text-gray-900">News</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/aroundweb">
+            <p class="text-base font-medium text-gray-900">Around the Web</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="h-screen flex bg-white font-sans">
+   <div class="flex flex-col w-full h-full">
+    <div class="flex-row flex-1">
+     <nav class="bg-orange border-t border-b border-orange flex flex-row">
+      <ol class="max-w-screen-xl w-full px-4 flex space-x-4 sm:px-6 lg:px-8">
+       <li class="flex">
+        <div class="flex items-center">
+         <a href="#" class="text-gray-100 hover:text-gray-500">
+          
+  <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+        </svg>
+  
+          <span class="sr-only">Home</span>
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">packages
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">ppx_sexp_conv
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="index.html" class="ml-4 text-sm font-medium text-gray-100
+          hover:text-gray-500">v0.14.3
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="#" class="ml-4 text-sm font-medium text-gray-100
+          hover:text-gray-500">README.org
+         </a>
+        </div>
+       </li>
+      </ol>
+     </nav>
+    </div>
+    <div class="flex flex-row flex-1">
+     <div class="w-72 flex-none bg-gray-100 h-screen border-r border-gray-200
+      sticky top-0 hidden lg:block">
+      <div class="flex h-20 border-b relative">
+       <h2 class="text-xl absolute inset-x-0 p-3 px-5 bottom-0 mt-7
+        border-gray-200 font-semibold text-gray-500 font-sans">On this page
+       </h2>
+      </div>
+     </div>
+     <div class="flex flex-1 flex-col lg:flex-row">
+      <div class="flex-1">
+       <div class="lg:max-w-5xl mx-auto px-3 lg:px-10 mb-10 text-sm">
+        <div class="flex h-20 relative border-b border-gray-200">
+         <div class="relative flex-1 h-20">
+          <h1 class="text-3xl absolute inset-x-0 py-3 bottom-0 font-semibold
+           text-gray-500 font-sans w-full truncate">
+           <code class="font-mono text-gray-800">README.org</code>
+          </h1>
+         </div>
+         <div class="relative flex-none w-20">
+          <h1 class="text-3xl absolute py-3 bottom-0 right-0 font-semibold
+           text-gray-500 font-sans">
+          </h1>
+         </div>
+        </div>
+        <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+         #+TITLE: ppx\_sexp\_conv
+         
+         * [@@deriving sexp]
+         
+         =ppx_sexp_conv= is a PPX syntax extension that generates code
+         for
+         converting OCaml types to and from s-expressions, as defined in
+         the
+         [[https://github.com/janestreet/sexplib][=sexplib=]] library. 
+         S-expressions are defined by the following type:
+         
+         #+begin_src ocaml
+         type sexp = Atom of string | List of sexp list
+         #+end_src
+         
+         and are rendered as parenthesized lists of strings, /e.g./ =(This
+         (is
+         an) (s expression))=.
+         
+         =ppx_sexp_conv= fits into the
+         [[https://github.com/whitequark/ppx_deriving][=ppx_deriving=]]
+         framework, so you can
+         invoke it the same way you invoke any other deriving plug-in. 
+         Thus,
+         we can write
+         
+         #+begin_src ocaml
+         type int_pair = (int * int) [@@deriving sexp]
+         #+end_src
+         
+         to get two values defined automatically, =sexp_of_int_pair=
+         and
+         =int_pair_of_sexp=.  If we only want one direction, we can write
+         one
+         of the following.
+         
+         #+begin_src ocaml
+         type int_pair = (int * int) [@@deriving sexp_of]
+         type int_pair = (int * int) [@@deriving of_sexp]
+         #+end_src
+         
+         These sexp-converters depend on having a set of converters for
+         basic
+         values (/e.g./, =int_of_sexp=) already in scope.  This can be done
+         by
+         writing:
+         
+         #+begin_src ocaml
+         open Sexplib.Std
+         #+end_src
+         
+         If you're using [[https://github.com/janestreet/core][=Core=]] or
+         [[https://github.com/janestreet/core_kernel][=Core_kernel=]], you
+         can get the same effect with
+         =open Core= or =open Core_kernel=.
+         
+         It's also possible to construct converters based on type
+         expressions,
+         /i.e./:
+         
+         #+begin_src ocaml
+           [%sexp_of: (int * string) list] [1,&quot;one&quot;;
+         2,&quot;two&quot;]
+           |&gt; Sexp.to_string;;
+           =&gt; &quot;((1 one) (2 two))&quot;
+         
+           [%sexp_of: (int * string) list] [1,&quot;one&quot;;
+         2,&quot;two&quot;]
+           |&gt; [%of_sexp: (int * string) list];;
+           =&gt; [1,&quot;one&quot;; 2,&quot;two&quot;]
+         #+end_src
+         
+         For =%sexp_of=, we can also omit the conversion of some types
+         by
+         putting underscores for that type name.
+         
+         #+begin_src ocaml
+           [%sexp_of: (int * _) list] [1,&quot;one&quot;; 2,&quot;two&quot;]
+           |&gt; Sexp.to_string;;
+           =&gt; &quot;((1 _)(2 _))&quot;
+         #+end_src
+         
+         * [@@deriving sexp_grammar]
+         
+         If =ppx_sexp_conv= can derive =of_sexp=, it can also generate a
+         description of
+         the sexps that the resulting =t_of_sexp= would accept.  This is the
+         sexp grammar.
+         See =Sexplib0.Raw_grammar= for details.
+         
+         It is possible to construct sexp grammars directly from type
+         expressions, e.g.,
+         
+         #+BEGIN_SRC ocaml
+         [%sexp_grammar: (int, bool array) Either.t
+         Base.Map.M(String).t]
+         #+END_SRC
+         
+         The syntax for grammars of polymorphic types is
+         nonstandard:
+         
+         #+BEGIN_SRC ocaml
+         [%sexp_grammar: &lt; for_all : 'a 'b . ('a, 'b) Either.t &gt;
+         ]
+         #+END_SRC
+         
+         We represent polymorphic types as object types because we
+         cannot
+         deserialize objects from sexps, and object method types are one of
+         the
+         few places we can use OCaml's syntax for explicit type variables.
+         
+         ** Conversion rules
+         
+         In the following, we'll review the serialization rules for
+         different
+         OCaml types.
+         
+         *** Basic types
+         
+         Basic types are represented as atoms.  For numbers like
+         =int=,
+         =int32=, =int64=, =float=, the string in the atom is what is
+         accepted
+         the standard ocaml functions =int_of_string=, =Int32.of_string=,
+         etc.
+         For the types =char= or =string=, the string in the atom
+         is
+         respectively a one character string or the string itself.
+         
+         *** Lists and arrays
+         
+         OCaml-lists and arrays are represented as s-expression lists.
+         
+         *** Tuples and unit
+         
+         OCaml tuples are treated as lists of values in the same order as
+         in
+         the tuple.  The type =unit= is treated like a 0-tuple. 
+         /e.g./:
+         
+         #+begin_src ocaml
+           (3.14, &quot;foo&quot;, &quot;bar bla&quot;, 27)  =&gt;  (3.14 foo
+         &quot;bar bla&quot; 27)
+         #+end_src
+         
+         *** Options
+         
+         With options, =None= is treated as a zero-element list, and =Some=
+         is
+         treated as a singleton list, as shown below.
+         
+         #+begin_src ocaml
+         None        =&gt;  ()
+         Some value  =&gt;  (value)
+         #+end_src
+         
+         We also support reading options following the ordinary rules
+         for
+         variants /i.e./:
+         
+         #+begin_src ocaml
+         None        =&gt;  None
+         Some value  =&gt;  (Some value)
+         #+end_src
+         
+         The rules for variants are described below.
+         
+         *** Records
+         
+         Records are represented as lists of lists, where each inner list is
+         a
+         key-value pair. Each pair consists of the name of the record
+         field
+         (first element), and its value (second element).  /e.g./:
+         
+         #+begin_src ocaml
+           { foo = (3,4);
+             bar = &quot;some string&quot;; }
+           =&gt; ((foo (3 4)) (bar &quot;some string&quot;))
+         #+end_src
+         
+         Type specifications of records allow the use of several attributes.
+         The
+         attribute =sexp.option= indicates that a record field should be
+         optional.
+         /e.g./:
+         
+         #+begin_src ocaml
+           type t =
+             { x : int option;
+               y : int option [@sexp.option];
+             } [@@deriving sexp]
+         #+end_src
+         
+         The following examples show how this works.
+         
+         #+begin_src ocaml
+           { x = Some 1; y = Some 2; } =&gt; ((x (1)) (y 2))
+           { x = None  ; y = None;   } =&gt; ((x ()))
+         #+end_src
+         
+         Note that, when present, an optional value is represented as the
+         bare
+         value, rather than explicitly as an option.
+         
+         The attribute =sexp.bool= indicates that a boolean record field is
+         shown
+         as either present or absent, but not as containing a
+         value.
+         
+         #+begin_src ocaml
+           type t = { enabled : bool [@sexp.bool] } [@@deriving sexp]
+         
+           { enabled = true } =&gt; ((enabled))
+           { enabled = false } =&gt; ()
+         #+end_src
+         
+         **** Defaults
+         
+         More complex default values can be specified explicitly using
+         several
+         constructs, /e.g./:
+         
+         #+begin_src ocaml
+           type t =
+             { a : int [@default 42];
+               b : int [@default 3] [@sexp_drop_default (=)];
+               c : int [@default 3] [@sexp_drop_if fun x -&gt; x = 3];
+               d : int Queue.t [@sexp.omit_nil]
+             } [@@deriving sexp]
+         #+end_src
+         
+         The =@default= annotation lets one specify a default value to
+         be
+         selected if the field is not specified, when converting from
+         an
+         s-expression.  The =@sexp_drop_default= annotation implies that
+         the
+         field will be dropped when generating the s-expression if the
+         value
+         being serialized is equal to the default according to the specified
+         equality
+         function. =@sexp_drop_if= is like =@sexp_drop_default=, except
+         that
+         it lets you specify the condition under which the field is
+         dropped.
+         Finally, =@sexp.omit_nil= means to treat a missing field as if it
+         has value =List []= when reading, and drop the field if it has
+         value
+         =List []= when writing.
+         
+         ***** Specifying equality for [@sexp_drop_default]
+         
+         The equality used by [@sexp_drop_default] is customizable. There
+         are several ways to specify the equality function:
+         
+         #+begin_src ocaml
+           type t =
+             { a : u [@default u0] [@sexp_drop_default (=)]; (* explicit
+         user-provided function *)
+               b : u [@default u0] [@sexp_drop_default.compare]; (* uses
+         [%compare.equal: u] *)
+               c : u [@default u0] [@sexp_drop_default.equal]; (* uses
+         [%equal: u] *)
+               d : u [@default u0] [@sexp_drop_default.sexp]; (* compares
+         sexp representations *)
+               e : u [@default u0] [@sexp_drop_default]; (* deprecated. uses
+         polymorphic equality. *)
+             } [@@deriving sexp]
+         #+end_src
+         
+         **** Allowing extra fields
+         
+         The =@sexp.allow_extra_fields= annotation lets one specify that
+         the
+         sexp-converters should silently ignore extra fields, instead
+         of
+         raising.  This applies only to the record to which the annotation
+         is
+         attached, and not to deeper sexp converters that may be called
+         during
+         conversion of a sexp to the record.
+         
+         #+begin_src ocaml
+           type t = { a: int } [@@deriving sexp]
+           ((a 0)(b b)) =&gt; exception
+         
+           type t = { a: int } [@@deriving sexp] [@@sexp.allow_extra_fields]
+           ((a 0)(b b)) =&gt; {a = 0}
+         
+           type t = A of { a : int } [@sexp.allow_extra_fields] [@@deriving
+         sexp]
+           (A (a 0)(b b)) =&gt; A {a = 0}
+         #+end_src
+         
+         *** Variants
+         
+         Constant constructors in variants are represented as
+         strings. Constructors with arguments are represented as lists,
+         the
+         first element being the constructor name, the rest being
+         its
+         arguments. Constructors may also be started in lowercase
+         in
+         S-expressions, but will always be converted to uppercase
+         when
+         converting from OCaml values.
+         
+         For example:
+         
+         #+begin_src ocaml
+           type t = A | B of int * float * t [@@deriving sexp]
+           B (42, 3.14, B (-1, 2.72, A))  =&gt;  (B 42 3.14 (B -1 2.72
+         A))
+         #+end_src
+         
+         The above example also demonstrates recursion in data
+         structures.
+         
+         Variants support the attribute =sexp.list= when a clause has a
+         single
+         list as its argument.
+         
+         #+begin_src ocaml
+           type t =
+            | A of int list
+            | B of int list [@sexp.list]
+         
+           A [1; 2; 3] =&gt; (A (1 2 3))
+           B [1; 2; 3] =&gt; (B 1 2 3)
+         #+end_src
+         
+         *** Polymorphic variants
+         
+         Polymorphic variants behave almost the same as ordinary variants. 
+         The
+         notable difference is that polymorphic variant constructors
+         must
+         always start with an either lower- or uppercase character,
+         matching
+         the way it was specified in the type definition.  This is
+         because
+         OCaml distinguishes between upper and lowercase variant
+         constructors. Note that type specifications containing unions
+         of
+         variant types are also supported by the S-expression converter,
+         for
+         example as in:
+         
+         #+begin_src ocaml
+           type ab = [ `A | `B ] [@@deriving sexp]
+           type cd = [ `C | `D ] [@@deriving sexp]
+           type abcd = [ ab | cd ] [@@deriving sexp]
+         #+end_src
+         
+         However, because `ppx_sexp_conv` needs to generate additional code
+         to
+         support inclusions of polymorphic variants, `ppx_sexp_conv` needs
+         to
+         know when processing a type definition whether it might be included
+         in
+         a polymorphic variant. `ppx_sexp_conv` will only generate the
+         extra
+         code automatically in the common case where the type definition
+         is
+         syntactically a polymorphic variant like in the example
+         above. Otherwise, you will need to indicate it by using
+         `[@@deriving
+         sexp_poly]` (resp `of_sexp_poly`) instead of `[@@deriving sexp]`
+         (resp
+         `of_sexp`):
+         
+         #+begin_src ocaml
+           type ab = [ `A | `B ] [@@deriving sexp]
+           type alias_of_ab = ab [@@deriving sexp_poly]
+           type abcd = [ ab | `C | `D ] [@@deriving sexp]
+         #+end_src
+         
+         *** Polymorphic values
+         
+         There is nothing special about polymorphic values as long as there
+         are
+         conversion functions for the type parameters.  /e.g./:
+         
+         #+begin_src ocaml
+         type 'a t = A | B of 'a [@@deriving sexp]
+         type foo = int t [@@deriving sexp]
+         #+end_src
+         
+         In the above case the conversion functions will behave as if =foo=
+         had
+         been defined as a monomorphic version of =t= with ='a= replaced
+         by
+         =int= on the right hand side.
+         
+         If a data structure is indeed polymorphic and you want to convert
+         it,
+         you will have to supply the conversion functions for the
+         type
+         parameters at runtime.  If you wanted to convert a value of type
+         ='a
+         t= as in the above example, you would have to write something
+         like
+         this:
+         
+         #+begin_src ocaml
+           sexp_of_t sexp_of_a v
+         #+end_src
+         
+         where =sexp_of_a=, which may also be named differently in
+         this
+         particular case, is a function that converts values of type ='a= to
+         an
+         S-expression.  Types with more than one parameter require
+         passing
+         conversion functions for those parameters in the order of
+         their
+         appearance on the left hand side of the type definition.
+         
+         *** Opaque values
+         
+         Opaque values are ones for which we do not want to
+         perform
+         conversions.  This may be, because we do not have
+         S-expression
+         converters for them, or because we do not want to apply them in
+         a
+         particular type context. /e.g./ to hide large, unimportant parts
+         of
+         configurations.  To prevent the preprocessor from generating calls
+         to
+         converters, simply apply the attribute =sexp.opaque= to the type,
+         /e.g./:
+         
+         #+begin_src ocaml
+           type foo = int * (stuff [@sexp.opaque]) [@@deriving
+         sexp]
+         #+end_src
+         
+         Thus, there is no need to specify converters for type =stuff=, and
+         if
+         there are any, they will not be used in this particular
+         context.
+         Needless to say, it is not possible to convert such an
+         S-expression
+         back to the original value.  Here is an example
+         conversion:
+         
+         #+begin_src ocaml
+           (42, some_stuff)  =&gt;  (42 &lt;opaque&gt;)
+         #+end_src
+         
+         *** Exceptions
+         
+         S-expression converters for exceptions can be
+         automatically
+         registered.
+         
+         #+begin_src ocaml
+           module M = struct
+             exception Foo of int [@@deriving sexp]
+           end
+         #+end_src
+         
+         Such exceptions will be translated in a similar way as sum types,
+         but
+         their constructor will be prefixed with the fully qualified
+         module
+         path (here: =M.Foo=) so as to be able to discriminate between
+         them
+         without problems.
+         
+         The user can then easily convert an exception matching the above
+         one
+         to an S-expression using =sexp_of_exn=.  User-defined
+         conversion
+         functions can be registered, too, by calling
+         =add_exn_converter=.
+         This should make it very convenient for users to catch
+         arbitrary
+         exceptions escaping their program and pretty-printing them,
+         including
+         all arguments, as S-expressions.  The library already
+         contains
+         mappings for all known exceptions that can escape functions in
+         the
+         OCaml standard library.
+         
+         *** Hash tables
+         
+         The Stdlib's Hash tables, which are abstract values in OCaml,
+         are
+         represented as association lists, /i.e./ lists of key-value
+         pairs,
+         /e.g./:
+         
+         #+begin_src scheme
+           ((foo 42) (bar 3))
+         #+end_src
+         
+         Reading in the above S-expression as hash table mapping strings
+         to
+         integers (=(string, int) Hashtbl.t=) will map =foo= to =42= and
+         =bar=
+         to =3=.
+         
+         Note that the order of elements in the list may matter, because
+         the
+         OCaml-implementation of hash tables keeps duplicates.  Bindings
+         will
+         be inserted into the hash table in the order of appearance.
+         Therefore,
+         the last binding of a key will be the &quot;visible&quot; one, the
+         others are
+         &quot;hidden&quot;.  See the OCaml documentation on hash tables for
+         details.
+         
+         ** A note about signatures
+         
+         In signatures, =ppx_sexp_conv= tries to generate an include of a
+         named
+         interface, instead of a list of value bindings.
+         That is:
+         
+         #+begin_src ocaml
+         type 'a t [@@deriving sexp]
+         #+end_src
+         
+         will generate:
+         
+         #+begin_src ocaml
+         include Sexpable.S1 with type 'a t := 'a t
+         #+end_src
+         
+         instead of:
+         
+         #+begin_src ocaml
+         val t_of_sexp : (Sexp.t -&gt; 'a) -&gt; Sexp.t -&gt; 'a t
+         val sexp_of_t : ('a -&gt; Sexp.t) -&gt; 'a t -&gt;
+         Sexp.t
+         #+end_src
+         
+         There are however a number of limitations:
+         - the type has to be named t
+         - the type can only have up to 3 parameters
+         - there shouldn't be any constraint on the type parameters
+         
+         If these aren't met, then =ppx_sexp_conv= will simply generate a
+         list of value
+         bindings.
+         
+         *** Weird looking type errors
+         
+         In some cases, a type can meet all the conditions listed above, in
+         which case the
+         rewriting will apply, but lead to a type error. This happens when
+         the type [t]
+         is an alias to a type which does have constraints on the parameters,
+         for
+         instance:
+         
+         #+begin_src ocaml
+         type 'a s constraint 'a = [&gt; `read ]
+         val sexp_of_s : ...
+         val s_of_sexp : ...
+         type 'a t = 'a s [@@deriving_inline sexp]
+         include Sexpable.S1 with type 'a t := 'a t
+         [@@@end]
+         #+end_src
+         
+         will give an error looking like:
+         
+         #+begin_src
+         Error: In this `with' constraint, the new definition of t
+                does not match its original definition in the constrained
+         signature:
+                Type declarations do not match:
+                  type 'a t = 'a t constraint 'a = [&gt; `read ]
+                is not included in
+                  type 'a t
+                File &quot;sexpable.mli&quot;, line 8, characters 21-58:
+         Expected declaration
+                Their constraints differ.
+         #+end_src
+         
+         To workaround that error, simply copy the constraint on the type
+         which has the
+         =[@@deriving]= annotation. This will force generating a list of
+         value bindings.
+         
+         ** Deprecated syntax
+         
+         Originally, ~ppx_sexp_conv~ used special types instead of
+         attributes. Those
+         types are now deprecated. Here are the appropriate conversions to
+         update from
+         code using now-deprecated types to the newer attributes.
+         
+         *** Opaque types
+         
+         Convert uses of ~sexp_opaque~ to uses of ~[@sexp.opaque]~. The
+         ~[@sexp.opaque]~
+         attribute usually needs explicit parentheses to clarify what type it
+         annotate.
+         
+         Before:
+         
+         #+begin_src ocaml
+         type t = int sexp_opaque list
+         [@@deriving sexp]
+         #+end_src
+         
+         After:
+         
+         #+begin_src ocaml
+         type t = (int [@sexp.opaque]) list
+         [@@deriving sexp]
+         #+end_src
+         
+         *** Record fields
+         
+         Convert uses of ~sexp_option~, ~sexp_list~, ~sexp_array~, and
+         ~sexp_bool~ to
+         uses of ~[@sexp.option]~, ~[@sexp.list]~, ~[@sexp.array]~, and
+         ~[@sexp.bool]~ as
+         appropriate. The attribute only specifies the modification, not the
+         type, so you
+         will need to use the regular types ~option~, ~list~, ~array~, and/or
+         ~bool~ as
+         well. Unlike ~[@sexp.opaque]~, these attributes do not need extra
+         parentheses.
+         
+         Before:
+         
+         #+begin_src ocaml
+         type t =
+           { a : int sexp_option
+           ; b : int sexp_list
+           ; c : int sexp_array
+           ; d : sexp_bool
+           }
+         [@@deriving sexp]
+         #+end_src
+         
+         After:
+         
+         #+begin_src ocaml
+         type t =
+           { a : int option [@sexp.option]
+           ; b : int list [@sexp.list]
+           ; c : int array [@sexp.array]
+           ; d : bool [@sexp.bool]
+           }
+         [@@deriving sexp]
+         #+end_src
+         
+         *** Variant constructors
+         
+         Convert uses of ~sexp_list~ in variants and polymorphic variants to
+         uses of
+         ~[@sexp.list]~. You need to add the regular type ~list~ as well.
+         Unlike
+         ~[@sexp.opaque]~, this attribute does not need extra
+         parentheses.
+         
+         Before:
+         
+         #+begin_src ocaml
+         type t = A of int sexp_list
+         [@@deriving sexp]
+         
+         type u = [`B of int sexp_list]
+         [@@deriving sexp]
+         #+end_src
+         
+         After:
+         
+         #+begin_src ocaml
+         type t = A of int list [@sexp.list]
+         [@@deriving sexp]
+         
+         type u = [`B of int list [@sexp.list]]
+         [@@deriving sexp]
+         #+end_src
+         </pre>
+       </div>
+      </div>
+      <div class="w-full flex-none lg:w-72 border-t lg:border-l bg-gray-100">
+       <div class="flex h-20 border-b relative">
+        <h2 class="text-xl absolute inset-x-0 p-3 bottom-0 mt-7 font-semibold
+         text-gray-500">ppx_sexp_conv.v0.14.3
+        </h2>
+       </div>
+       <div class="m-3">
+        <p class="mb-5 italic text-sm">
+         [@@deriving] plugin to generate S-expression conversion functions
+        </p>
+        <div class="mb-3">
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="https://github.com/janestreet/ppx_sexp_conv">
+           github.com/janestreet/ppx_sexp_conv
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1.323l3.954 1.582 1.599-.8a1 1 0 01.894 1.79l-1.233.616 1.738 5.42a1 1 0 01-.285 1.05A3.989 3.989 0 0115 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.715-5.349L11 6.477V16h2a1 1 0 110 2H7a1 1 0 110-2h2V6.477L6.237 7.582l1.715 5.349a1 1 0 01-.285 1.05A3.989 3.989 0 015 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.738-5.42-1.233-.617a1 1 0 01.894-1.788l1.599.799L9 4.323V3a1 1 0 011-1zm-5 8.274l-.818 2.552c.25.112.526.174.818.174.292 0 .569-.062.818-.174L5 10.274zm10 0l-.818 2.552c.25.112.526.174.818.174.292 0 .569-.062.818-.174L15 10.274z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="LICENSE.md.html">LICENSE.md
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
+</svg>
+    
+          <a class="text-orange cursor-pointer mb-2 text-sm" href="#">
+           README.org
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" />
+</svg>
+  
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="CHANGES.md.html">CHANGES.md
+          </a>
+         </div>
+        </div>
+        <details class="font-normal mb-2 text-sm">
+         <summary>Other versions</summary><div id="versions_container"></div>
+        </details><h2 class="font-semibold mb-2 text-sm">Authors</h2>
+        <p class="mb-3 text-sm">Jane Street Group, LLC</p>
+        <h2 class="font-semibold mb-2 text-sm">Issues</h2>
+        <div class="mb-3">
+         <a class="text-orange cursor-pointer mb-2 text-sm"
+          href="https://github.com/janestreet/ppx_sexp_conv/issues">
+          github.com/janestreet/ppx_sexp_conv/issues
+         </a>
+        </div>
+        <details class="font-semibold mb-2 text-sm">
+         <summary>Package dependencies</summary>
+         <div class="font-normal">
+          <ul>
+           <li>
+            <a href="../../ocaml/index.html" class="text-orange
+             cursor-pointer">ocaml
+            </a>
+           </li>
+           <li>
+            <a href="../../base/index.html" class="text-orange
+             cursor-pointer">base
+            </a>
+           </li>
+           <li>
+            <a href="../../sexplib0/index.html" class="text-orange
+             cursor-pointer">sexplib0
+            </a>
+           </li>
+           <li>
+            <a href="../../dune/index.html" class="text-orange
+             cursor-pointer">dune
+            </a>
+           </li>
+           <li>
+            <a href="../../ppxlib/index.html" class="text-orange
+             cursor-pointer">ppxlib
+            </a>
+           </li>
+          </ul>
+         </div>
+        </details>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div><script>Voodoo.update('../version.json')</script>
+ </body>
+</html>
