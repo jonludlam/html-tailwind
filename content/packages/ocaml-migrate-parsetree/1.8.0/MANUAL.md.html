@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>MANUAL.md (packages.ocaml-migrate-parsetree.1.8.0.MANUAL.md)</title>
+  <link rel="stylesheet" href="../../tailwind.css"/>
+  <link rel="stylesheet" href="../../extra.css"/><meta charset="utf-8"/>
+  <meta name="generator" content="odoc 3dfb7aef2f"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <script src="../../highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="../../voodoo_client.js"></script>
+  <script
+   src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+   defer="defer">
+  </script>
+ </head>
+ <body class="mx-auto max-w-screen-2xl">
+  <div class="relative">
+   <div class="relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+     <div class="flex justify-between items-center md:justify-start py-6
+      md:space-x-10">
+      <div class="flex justify-start">
+       <a href="https://v3.ocaml.org/">
+        <img src="/colour-logo.svg" alt="" class="h-8 w-auto sm:h-10"/>
+       </a>
+      </div>
+      <nav class="hidden md:flex space-x-10">
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Industry</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/whatisocaml">
+            <p class="text-base font-medium text-gray-900">What is OCaml</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/users">
+            <p class="text-base font-medium text-gray-900">Industrial Users
+            </p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/successstories">
+            <p class="text-base font-medium text-gray-900">Success Stories
+            </p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Resources</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/releases">
+            <p class="text-base font-medium text-gray-900">Releases</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/applications">
+            <p class="text-base font-medium text-gray-900">Applications</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/language">
+            <p class="text-base font-medium text-gray-900">Language</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/archive">
+            <p class="text-base font-medium text-gray-900">Archive</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Community</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/opportunities">
+            <p class="text-base font-medium text-gray-900">Opportunities</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/news">
+            <p class="text-base font-medium text-gray-900">News</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/aroundweb">
+            <p class="text-base font-medium text-gray-900">Around the Web</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="h-screen flex bg-white font-sans">
+   <div class="flex flex-col w-full h-full">
+    <div class="flex-row flex-1">
+     <nav class="bg-orange border-t border-b border-orange flex flex-row">
+      <ol class="max-w-screen-xl w-full px-4 flex space-x-4 sm:px-6 lg:px-8">
+       <li class="flex">
+        <div class="flex items-center">
+         <a href="#" class="text-gray-100 hover:text-gray-500">
+          
+  <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+        </svg>
+  
+          <span class="sr-only">Home</span>
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">packages
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">ocaml-migrate-parsetree
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="index.html" class="ml-4 text-sm font-medium text-gray-100
+          hover:text-gray-500">1.8.0
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="#" class="ml-4 text-sm font-medium text-gray-100
+          hover:text-gray-500">MANUAL.md
+         </a>
+        </div>
+       </li>
+      </ol>
+     </nav>
+    </div>
+    <div class="flex flex-row flex-1">
+     <div class="w-72 flex-none bg-gray-100 h-screen border-r border-gray-200
+      sticky top-0 hidden lg:block">
+      <div class="flex h-20 border-b relative">
+       <h2 class="text-xl absolute inset-x-0 p-3 px-5 bottom-0 mt-7
+        border-gray-200 font-semibold text-gray-500 font-sans">On this page
+       </h2>
+      </div>
+     </div>
+     <div class="flex flex-1 flex-col lg:flex-row">
+      <div class="flex-1">
+       <div class="lg:max-w-5xl mx-auto px-3 lg:px-10 mb-10 text-sm">
+        <div class="flex h-20 relative border-b border-gray-200">
+         <div class="relative flex-1 h-20">
+          <h1 class="text-3xl absolute inset-x-0 py-3 bottom-0 font-semibold
+           text-gray-500 font-sans w-full truncate">
+           <code class="font-mono text-gray-800">MANUAL.md</code>
+          </h1>
+         </div>
+         <div class="relative flex-none w-20">
+          <h1 class="text-3xl absolute py-3 bottom-0 right-0 font-semibold
+           text-gray-500 font-sans">
+          </h1>
+         </div>
+        </div>
+        <p class="mt-4">Title:  Guide to OCaml Migrate Parsetree<br/>
+         Author: Frédéric Bour, @let-def<br/>Date:   March 9, 2017
+        </p><p class="mt-4"><b>Table of Contents</b></p>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           <a href="#manipulating-parsetree" class="cursor-pointer
+            text-orange">Manipulating parsetree
+           </a>
+          </p>
+          <ul class="list-disc mt-2 mb-4">
+           <li class="ml-4">
+            <p class="mt-4">
+             <a href="#talking-about-different-versions-of-the-compiler"
+              class="cursor-pointer text-orange">
+              Talking about different versions of the compiler
+             </a>
+            </p>
+           </li>
+           <li class="ml-4">
+            <p class="mt-4">
+             <a href="#migrating-between-compiler-versions"
+              class="cursor-pointer text-orange">
+              Migrating between compiler versions
+             </a>
+            </p>
+           </li>
+           <li class="ml-4">
+            <p class="mt-4">
+             <a href="#unmarshalling-ast" class="cursor-pointer text-orange">
+              (Un)marshalling AST
+             </a>
+            </p>
+           </li>
+          </ul>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           <a href="#drivers" class="cursor-pointer text-orange">Drivers</a>
+          </p>
+          <ul class="list-disc mt-2 mb-4">
+           <li class="ml-4">
+            <p class="mt-4">
+             <a href="#the-legacy-way" class="cursor-pointer text-orange">
+              The legacy way
+             </a>
+            </p>
+           </li>
+           <li class="ml-4">
+            <p class="mt-4">
+             <a href="#new-registration-interface" class="cursor-pointer
+              text-orange">New registration interface
+             </a>
+            </p>
+           </li>
+           <li class="ml-4">
+            <p class="mt-4">
+             <a href="#a-minimal-driver" class="cursor-pointer text-orange">
+              A minimal driver
+             </a>
+            </p>
+           </li>
+           <li class="ml-4">
+            <p class="mt-4">
+             <a href="#custom-and-standalone-drivers" class="cursor-pointer
+              text-orange">Custom and standalone drivers
+             </a>
+            </p>
+           </li>
+          </ul>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           <a href="#ppx_tools_versioned" class="cursor-pointer text-orange">
+            ppx_tools_versioned
+           </a>
+          </p>
+          <ul class="list-disc mt-2 mb-4">
+           <li class="ml-4">
+            <p class="mt-4">
+             <a href="#ppx_metaquots" class="cursor-pointer text-orange">
+              ppx_metaquots
+             </a>
+            </p>
+           </li>
+          </ul>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           <a href="#findlib-specification" class="cursor-pointer
+            text-orange">Findlib specification
+           </a>
+          </p>
+          <ul class="list-disc mt-2 mb-4">
+           <li class="ml-4">
+            <p class="mt-4">
+             <a href="#standalone---as-ppx-rewriters-in-meta"
+              class="cursor-pointer text-orange">Standalone 
+              <em>&quot;--as-ppx&quot;</em> rewriters in META
+             </a>
+            </p>
+           </li>
+           <li class="ml-4">
+            <p class="mt-4">
+             <a href="#using-arguments-in-meta-ppxopt" class="cursor-pointer
+              text-orange">Using arguments in META ppxopt
+             </a>
+            </p>
+           </li>
+           <li class="ml-4">
+            <p class="mt-4">
+             <a href="#conventions-for-distributing-a-linkable-ppx-rewriter"
+              class="cursor-pointer text-orange">
+              Conventions for distributing a linkable ppx rewriter
+             </a>
+            </p>
+           </li>
+          </ul>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           <a href="#troubleshooting" class="cursor-pointer text-orange">
+            Troubleshooting
+           </a>
+          </p>
+          <ul class="list-disc mt-2 mb-4">
+           <li class="ml-4">
+            <p class="mt-4">
+             <a href="#accessing-shadowed-compiler-libs-module"
+              class="cursor-pointer text-orange">
+              Accessing shadowed compiler libs module
+             </a>
+            </p>
+           </li>
+           <li class="ml-4">
+            <p class="mt-4">
+             <a
+              href="#using-functions-from-compiler-libs-results-in-unfriendly-type-errors"
+              class="cursor-pointer text-orange">
+              Using functions from compiler-libs results in (unfriendly) type
+              errors
+             </a>
+            </p>
+           </li>
+           <li class="ml-4">
+            <p class="mt-4">
+             <a href="#features-not-supported-in-targeted-version"
+              class="cursor-pointer text-orange">
+              Features not supported in targeted version
+             </a>
+            </p>
+            <ul class="list-disc mt-2 mb-4">
+             <li class="ml-4">
+              <p class="mt-4">
+               <a href="#what-kind-of-guarantees-to-expect-in-practice"
+                class="cursor-pointer text-orange">
+                What kind of guarantees to expect in practice?
+               </a>
+              </p>
+             </li>
+            </ul>
+           </li>
+          </ul>
+         </li>
+        </ul>
+        <p class="mt-4">
+         This library is designed to make PPX rewriters portable across
+         compiler versions.
+        </p>
+        <p class="mt-4">
+         It works by versioning the definitions of OCaml AST. This includes 
+         <code class="font-normal text-sm">Parsetree</code>, 
+         <code class="font-normal text-sm">Asttypes</code>, 
+         <code class="font-normal text-sm">Outcometree</code>, 
+         <code class="font-normal text-sm">Ast_helper</code> and most of 
+         <code class="font-normal text-sm">Docstrings</code> and 
+         <code class="font-normal text-sm">Ast_mapper</code>.
+        </p>
+        <p class="mt-4"><em>Note:</em> 
+         <code class="font-normal text-sm">Docstrings</code> and 
+         <code class="font-normal text-sm">Ast_mapper</code>
+          contain some global state which was removed during versioning. This
+         affect registration of rewriters when using 
+         <code class="font-normal text-sm">Ast_mapper</code>
+          as a driver. See the 
+         <a href="#drivers" class="cursor-pointer text-orange">driver section
+         </a> for reliable solutions.
+        </p>
+        <h2 class="text-2xl my-4 text-gray-800 font-sans">
+         Manipulating parsetree
+        </h2>
+        <p class="mt-4">
+         Most of the work happens by shadowing. If your PPX rewriter was
+         written against OCaml 4.04 AST, just 
+         <code class="font-normal text-sm">open Ast_404</code>
+          (alternatively, you can pass 
+         <code class="font-normal text-sm">-open Ast_404</code>
+          when building the file).
+        </p>
+        <p class="mt-4">
+         This will introduce the versioned modules in scope. When compiled
+         with other supported versions of OCaml, the definitions are still
+         compatible with 4.04.
+        </p>
+        <p class="mt-4">
+         While this is enough to manipulate the AST from within your code,
+         you can no longer have expectations on the version of 
+         <code class="font-normal text-sm">compiler-libs</code>
+         . The rest of the 
+         <code class="font-normal text-sm">Migrate_parsetree</code>
+          module provides tools to deal with that.
+        </p>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         Talking about different versions of the compiler
+        </h3>
+        <p class="mt-4">The module 
+         <code class="font-normal text-sm">Migrate_parsetree.Versions</code>
+          provides a way of abstracting compiler versions and getting
+         functions to migrate from one version to another.
+        </p>
+        <p class="mt-4">
+         The interface of the module is quite technical, but one doesn't need
+         to understand all details to work with the module.
+        </p>
+        <p class="mt-4">
+         The main problem that it solves is being able to talk about a
+         &quot;signature&quot; or &quot;structure&quot; without being tied to
+         a specific compiler version (that is, while being polymorphic over
+         concrete versions of the compiler).
+        </p>
+        <p class="mt-4">The module type 
+         <code class="font-normal text-sm">Ast</code>
+          lists all the types that are abstracted for each version. The type 
+         <code class="font-normal text-sm">ocaml_version</code>
+          and the module type 
+         <code class="font-normal text-sm">OCaml_version</code>
+          represent ocaml versions in the term and module languages.
+        </p>
+        <p class="mt-4">Instances are given by the values 
+         <code class="font-normal text-sm">ocaml_402</code>, 
+         <code class="font-normal text-sm">ocaml_403</code>
+         , ... and the modules 
+         <code class="font-normal text-sm">OCaml_402</code>, 
+         <code class="font-normal text-sm">OCaml_403</code>...
+        </p>
+        <p class="mt-4">The 
+         <code class="font-normal text-sm">ocaml_current</code> and 
+         <code class="font-normal text-sm">OCaml_current</code>
+          definitions are special in that they refer to versions compatible
+         with compiler-libs (the current compiler).
+        </p>
+        <p class="mt-4">
+         Functions and functors that operate across compiler versions will
+         take these as arguments.
+        </p>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         Migrating between compiler versions
+        </h3>
+        <p class="mt-4">
+         When migrating between two known compiler versions, the modules 
+         <code class="font-normal text-sm">Migrate_parsetree.Migrate_40x_40y
+         </code>
+          contain functions to transform values between two consecutive
+         versions.
+        </p>
+        <p class="mt-4">For instance 
+         <code class="font-normal text-sm">Migrate_402_403.copy_signature
+         </code>
+          turns a signature of OCaml 4.02 into a signature for OCaml 4.03. 
+         <code class="font-normal text-sm">Migrate_404_403.copy_mapper</code>
+          transforms an 
+         <code class="font-normal text-sm">Ast_mapper.mapper</code>
+          for OCaml 4.04 into a mapper for OCaml 4.03.
+        </p>
+        <p class="mt-4">
+         When working with an arbitrary version, it becomes useful to
+         quantify over versions and migrations. The 
+         <code class="font-normal text-sm">Migrate_parsetree.Versions</code>
+          module comes again to the rescue.
+        </p>
+        <p class="mt-4">The 
+         <code class="font-normal text-sm">migrate_functions</code>
+          record is a list of functions for converting each type.
+        </p>
+        <p class="mt-4">The function 
+         <code class="font-normal text-sm">Versions.migrate</code>
+          takes two OCaml version and returns a migration record between the
+         two. The functor <code class="font-normal text-sm">Convert</code>
+          does the same at the module level.
+        </p>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         (Un)marshalling AST
+        </h3>
+        <p class="mt-4">The <code class="font-normal text-sm">Ast_io</code>
+          module implements AST marshalling and unmarshalling abstracted over
+         OCaml versions.
+        </p>
+        <p class="mt-4">
+         It can read and write binary implementation and interface files from
+         different compiler versions and pack them with the corresponding 
+         <code class="font-normal text-sm">Versions.OCaml_version</code>
+          module.
+        </p>
+        <p class="mt-4">
+         (FIXME: marshalling format is not guaranteed to be stable accross
+         versions)
+        </p>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         Parsing source file
+        </h3>
+        <p class="mt-4">The <code class="font-normal text-sm">Parse</code>
+          module implements an interface similar to the one from
+         compiler-libs, but parsing functions take an OCaml version as first
+         argument.
+        </p>
+        <p class="mt-4">
+         It uses the distributed OCaml parser (current version) then migrate
+         the resulting AST to the requested version. Beware, these parsing
+         functions can alse raise 
+         <code class="font-normal text-sm">Migration_error</code> exceptions.
+        </p><h2 class="text-2xl my-4 text-gray-800 font-sans">Driver</h2>
+        <p class="mt-4">
+         So far, all tools presented were for working with parsetrees. This
+         is helpful to implement a mapper object, but it is not enough to get
+         to a PPX binary.
+        </p>
+        <p class="mt-4">
+         Drivers fulfill this last step: going from one or more AST mappers
+         to a concrete binary that will do the rewriting.
+        </p>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         The legacy way
+        </h3>
+        <p class="mt-4">Traditionally, mappers had to be registered in 
+         <code class="font-normal text-sm">Ast_mapper</code>; either with 
+         <code class="font-normal text-sm">Ast_mapper.register</code>
+          or <code class="font-normal text-sm">Ast_mapper.run_main</code>
+         .
+        </p>
+        <p class="mt-4">
+         The registration interface was removed from versioned modules.  If
+         you try to register with 
+         <code class="font-normal text-sm">Ast_mapper</code>
+          from compiler-libs, remember to migrate the version.
+        </p><p class="mt-4">In a few lines of code:</p>
+        <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+         <code class="font-normal text-sm">
+          (* Assuming rewriter is written against OCaml 4.04 parsetree *)
+          let migration =
+            Versions.migrate Versions.ocaml_404 Versions.ocaml_current
+          
+          let () =
+            (* Refer to unshadowed mapper *)
+            Compiler_libs.Ast_mapper.register
+              (fun args -&gt; migration.copy_mapper (my_mapper args))
+          </code>
+        </pre>
+        <p class="mt-4">
+         This method might be convenient for quickly migrating existing
+         rewriters, but we are trying to get away from 
+         <code class="font-normal text-sm">Ast_mapper</code> global state.
+        </p>
+        <p class="mt-4"><em>ocaml-migrate-parsetree</em>
+          offers a new, forward looking, interface.
+        </p>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         New registration interface
+        </h3>
+        <p class="mt-4">
+         In the new interface, the state that can be accessed by a PPX
+         rewriter is made more explicit.
+        </p>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4"><em>Compiler configuration</em> via 
+           <code class="font-normal text-sm">Driver.config</code>
+           ; it snapshots the few compiler settings that are guaranteed to be
+           set by the compiler API.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4"><em>Cookies</em> via 
+           <code class="font-normal text-sm">Driver.cookies</code>, 
+           <code class="font-normal text-sm">get_cookies</code> and 
+           <code class="font-normal text-sm">set_cookies</code>
+           , which work across different versions.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4"><em>Command-line arguments</em>
+           ; when registering a mapper, one can provide argument
+           specifications, as defined by the 
+           <a
+            href="http://caml.inria.fr/pub/docs/manual-ocaml/libref/Arg.html"
+            class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Arg</code>
+           </a> module.
+          </p>
+         </li>
+        </ul>
+        <p class="mt-4">
+         Rewriters no longer receive an arbitrary list of arguments. 
+         Everything happens through the specifications.  Collision in
+         rewriter names and argument keys is <em>an error</em>
+         : a rewriter should be registered only once, each key should be used
+         only once.
+        </p>
+        <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+         <code class="font-normal text-sm">
+          open Ast_404 (* Target 4.04 parsetree *)
+          
+          (* Rewriter settings *)
+          let foo_config : string option ref = ref None
+          
+          let set_foo bar = foo_config := Some bar
+          let reset_args () = foo_config := None
+          
+          let args = [
+            (&quot;-foo&quot;, Arg.String set_foo, &quot;&lt;bar&gt; Foo
+          value to use in the rewriter&quot;)
+          ]
+          
+          (* Rewriter implementation *)
+          
+          let my_rewriter config cookies =
+            let foo = match !foo_config with
+              | None -&gt; raise (Arg.Bad &quot;-foo is mandatory&quot;)
+              | Some foo -&gt; foo
+            in
+            {Ast_mapper.default_mapper with ...}
+          
+          (* Registration *)
+          
+          let () =
+            Driver.register ~name:&quot;hello_world&quot; ~reset_args ~args
+              Versions.ocaml_404 my_rewriter
+          </code>
+        </pre>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         A minimal driver
+        </h3>
+        <p class="mt-4">
+         The code above gets the rewriter registered, but this won't produce
+         a runnable binary.  One or more rewriters can be registered, the
+         final step will be to run them.
+        </p>
+        <p class="mt-4">
+         <code class="font-normal text-sm">Driver.run_as_ast_mapper</code>
+          is suitable as an argument to 
+         <code class="font-normal text-sm">Ast_mapper.run_main</code>
+          (or even 
+         <code class="font-normal text-sm">Ast_mapper.register</code>
+         ). It acts as a &quot;meta-mapper&quot; that will apply all the
+         registered mappers.
+        </p>
+        <p class="mt-4">
+         <code class="font-normal text-sm">Driver.run_as_ppx_rewriter</code>
+          does that, calling 
+         <code class="font-normal text-sm">
+          Ast_mapper.run_main Driver.run_as_ast_mapper
+         </code>.
+        </p>
+        <p class="mt-4">
+         The order is chosen to minimize the number of rewriting that
+         happens:
+        </p>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           rewriters are sorted by versions, lower versions first
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           rewriters targeting the same version are applied in the
+           registration order
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         Custom and standalone drivers
+        </h3>
+        <p class="mt-4">Using 
+         <code class="font-normal text-sm">Driver.run_main</code>
+          as an entry point offers a way to make custom and standalone
+         rewriters.
+        </p>
+        <p class="mt-4">
+         A standalone rewriter can be used independently of the OCaml
+         compiler.<br/>
+         It can rewrite source files or save processed ASTs. Try 
+         <code class="font-normal text-sm">./myrewriter --help</code>
+          for more information.
+        </p>
+        <p class="mt-4">
+         When the first argument is &quot;--as-ppx&quot;, it behaves like a
+         normal PPX and is suitable for use with &quot;-ppx&quot; (
+         <code class="font-normal text-sm">
+          ocamlc -ppx &quot;./myrewriter --as-ppx&quot;
+         </code>).
+        </p>
+        <p class="mt-4">Linking the 
+         <code class="font-normal text-sm">
+          ocaml-migrate-parsetree.driver-main
+         </code> package has the effect of just calling 
+         <code class="font-normal text-sm">Driver.run_main</code>
+         . It should be linked last.
+        </p>
+        <p class="mt-4">
+         The purpose is to let you make a custom rewriter that link all the
+         PPX in use in your project to reduce the overhead of rewriting:
+        </p>
+        <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+         <code class="font-normal text-sm">
+          ocamlfind ocamlopt -linkpkg -package rewriter1,rewriter2,... \
+            -package ocaml-migrate-parsetree.driver-main -o myrewriter
+          </code>
+        </pre>
+        <h2 class="text-2xl my-4 text-gray-800 font-sans">ppx_tools_versioned
+        </h2>
+        <p class="mt-4">Some rewriters make use of the <em>ppx_tools</em>
+          package that offers conveniences for manipulating parsetrees.  As 
+         <em>ppx_tools</em>
+          itself uses compiler-libs, using it directly defeats the purpose of 
+         <em>ocaml-migrate-parsetree</em>.
+        </p>
+        <p class="mt-4">We provide the 
+         <a href="https://github.com/let-def/ppx_tools_versioned"
+          class="cursor-pointer text-orange">ppx_tools_versioned
+         </a>
+          package to overcome this. It offers migrate friendly versions of 
+         <code class="font-normal text-sm">Ast_convenience</code>, 
+         <code class="font-normal text-sm">Ast_lifter</code>, 
+         <code class="font-normal text-sm">Ast_mapper_class</code> and 
+         <code class="font-normal text-sm">Ppx_metaquot</code>.
+        </p>
+        <p class="mt-4">To use these versions, just append 
+         <code class="font-normal text-sm">_40x</code> to the module names or 
+         <code class="font-normal text-sm">open Ppx_tool_40x</code> module.
+        </p>
+        <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+         <code class="font-normal text-sm">
+          (* Original code *)
+          open Ast_mapper_class
+          
+          class my_mapper =
+            object
+              inherit mapper
+              ...
+          end
+          
+          (* Targeting 4.04 *)
+          open Ast_404
+          open Ppx_tools_404
+          
+          open Ast_mapper_class
+          
+          class my_mapper =
+            object
+              inherit mapper
+              ...
+          end
+          
+          (* Alternatively, if you use a single module from Ppx_tools *)
+          open Ast_mapper_class_404
+          
+          class my_mapper =
+            object
+              inherit mapper
+              ...
+          end
+          </code>
+        </pre>
+        <h4 class="text-lg text-gray-900 text-gray-800 font-sans">ppx
+         _metaquots
+        </h4>
+        <p class="mt-4">The <em>metaquot</em>
+          rewriter allows quoting of the OCaml AST. The version provided by 
+         <em>ppx_tools</em> will quote the Parsetree from 
+         <em>compiler-libs</em>.
+        </p>
+        <p class="mt-4">The versioned ones are accessed by using 
+         <em>ppx_tools_versioned.metaquot_40x</em> packages.
+        </p>
+        <p class="mt-4">For instance, 
+         <em>ppx_tools_versioned.metaquot_404</em> will quote 
+         <code class="font-normal text-sm">Ast_404.Parsetree</code>.
+        </p>
+        <h2 class="text-2xl my-4 text-gray-800 font-sans">
+         Findlib specification
+        </h2>
+        <p class="mt-4">Some precautions have to be taken when writing 
+         <em>META</em> files for <em>ocaml-migrate-parsetree</em>
+          driven PPXs. The ppx and ppxopt directives are affected.
+        </p>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         Standalone <em>&quot;--as-ppx&quot;</em> rewriters in META
+        </h3>
+        <p class="mt-4">
+         If your rewriter is produced as standalone rewriter, then you have
+         to pass the &quot;--as-ppx&quot; argument first:
+        </p>
+        <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+         <code class="font-normal text-sm">
+          -ppx = &quot;./my_ppx&quot;
+          +ppx = &quot;./my_ppx --as-ppx&quot;
+          </code>
+        </pre>
+        <p class="mt-4">As long as the PPX command line begins with 
+         <code class="font-normal text-sm">./</code>
+         , findlib will expand the path to an absolute directory and you will
+         get the correct invocation:
+        </p>
+        <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+         <code class="font-normal text-sm">
+          /home/me/.opam/.../my_lib/./my_ppx --as-ppx
+          </code>
+        </pre>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         Using arguments in META ppxopt
+        </h3>
+        <p class="mt-4">Since rewriters use the 
+         <code class="font-normal text-sm">Arg</code>
+          module to specify command-line arguments,  anonymous arguments are
+         no longer allowed.
+        </p>
+        <p class="mt-4">
+         If you used to pass anonymous arguments with ppxopt, you should pick
+         an argument name and prefix them. For instance:
+        </p>
+        <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+         <code class="font-normal text-sm">
+          -ppxopt = &quot;my_ppx,./bar&quot;
+          +ppxopt = &quot;my_ppx,-foo,./bar&quot;
+          </code>
+        </pre>
+        <p class="mt-4">
+         As you can see, arguments are separated by commas. Commas ensure
+         that filename expansion still happens, such that invocation looks
+         like:
+        </p>
+        <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+         <code class="font-normal text-sm">
+          /home/me/.opam/.../my_lib/./my_ppx ... -foo
+          /home/me/.opam/.../my_lib/./bar
+          </code>
+        </pre>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         Conventions for distributing a linkable ppx rewriter
+        </h3>
+        <p class="mt-4">
+         The common case is to run ppx binaries on-demand: a findlib package
+         describing a ppx rewriter will essentially add a new 
+         <code class="font-normal text-sm">-ppx my_binary</code>
+          argument to the compiler invocation.
+        </p>
+        <p class="mt-4">
+         It is also possible to link and run a dedicated binary that will
+         apply many rewriters consecutively. A package following that
+         convention will use <em>ocaml-migrate-parsetree</em>
+          to register a rewriter using 
+         <code class="font-normal text-sm">Driver.register</code>
+         , but not do any actual rewriting (no 
+         <code class="font-normal text-sm">-ppx ...</code>).
+        </p>
+        <p class="mt-4">
+         The build system of a project making use of this feature will first
+         build a custom rewriter that links all the necessary packages to
+         produce a first binary.  This binary is then used as the only ppx
+         rewriter for the main source files of this project.
+        </p>
+        <p class="mt-4">
+         The convention to distinguish when a ppx package is used as a
+         rewriter and when it is used a library is to use two findlib
+         predicates (see 
+         <a
+          href="http://projects.camlcity.org/projects/dl/findlib-1.7.1/doc/ref-html/r759.html"
+          class="cursor-pointer text-orange">META
+         </a> documentation and also 
+         <code class="font-normal text-sm">ocamlfind(1)</code> man page):
+        </p>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4"><code class="font-normal text-sm">custom_ppx</code>
+           : we are building a custom ppx driver, no rewriting should be done
+           now (in other words, don't pass 
+           <code class="font-normal text-sm">-ppx ...</code> argument)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4"><code class="font-normal text-sm">ppx_driver</code>
+           : we are making our own driver, registration should be done using 
+           <code class="font-normal text-sm">Driver.register</code>
+          </p>
+         </li>
+        </ul>
+        <h4 class="text-lg text-gray-900 text-gray-800 font-sans">
+         Linking example
+        </h4>
+        <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+         <code class="font-normal text-sm">
+          $ ocamlfind opt -o my_driver -linkpkg -predicates
+          custom_ppx,ppx_driver -package ppx_tools_versioned.metaquot_402
+          -package ocaml-migrate-parsetree.driver-main
+          </code>
+        </pre>
+        <p class="mt-4">The predicates change the behavior of 
+         <code class="font-normal text-sm">ppx_tools_versioned.metaquot_402
+         </code> package. Linking 
+         <code class="font-normal text-sm">
+          ocaml-migrate-parsetree.driver-main
+         </code> lasts executes all the rewriters that were registered.
+        </p>
+        <h4 class="text-lg text-gray-900 text-gray-800 font-sans">
+         Package example
+        </h4><p class="mt-4">META</p>
+        <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+         <code class="font-normal text-sm">
+          version = &quot;1.0&quot;
+          description = &quot;dummy ppx&quot;
+          requires =
+          &quot;ocaml-migrate-parsetree&quot;
+          ppx(-custom_ppx,-ppx_driver) = &quot;./ppx_dummy
+          --as-ppx&quot;
+          archive(byte,ppx_driver) =
+          &quot;ppx_dummy.cma&quot;
+          archive(native,ppx_driver) = &quot;ppx_dummy.cmxa&quot;
+          </code>
+        </pre>
+        <p class="mt-4">Rewrite only when 
+         <code class="font-normal text-sm">custom_ppx</code> is not defined.
+         <br/>Link <em>ppx_dummy</em> objects when 
+         <code class="font-normal text-sm">ppx_driver</code> is defined.
+        </p>
+        <h2 class="text-2xl my-4 text-gray-800 font-sans">Troubleshooting
+        </h2>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         Accessing shadowed compiler libs module
+        </h3>
+        <p class="mt-4">
+         <code class="font-normal text-sm">Migrate_parsetree</code> defines a 
+         <code class="font-normal text-sm">Compiler_libs</code>
+          module that reexports all modules that could have been shadowed by 
+         <code class="font-normal text-sm">Ast_40x</code> modules.
+        </p>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         Using functions from compiler-libs results in (unfriendly) type
+         errors
+        </h3>
+        <p class="mt-4">
+         Remember that because of abstraction, most values manipulated from
+         within the rewriter have types that are unrelated to compiler-libs
+         definitions.
+        </p>
+        <p class="mt-4">For instance, you cannot directly use 
+         <code class="font-normal text-sm">Pprintast.core_type</code>
+          to print a type. You should first make a migration record for the
+         version you are targeting and then lift the 
+         <code class="font-normal text-sm">core_type</code> instance:
+        </p>
+        <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+         <code class="font-normal text-sm">
+          (* Assuming rewriter is written against OCaml 4.04 parsetree *)
+          let migration =
+            Versions.migrate Versions.ocaml_404 Versions.ocaml_current
+          
+          let print_core_type fmt typ =
+            Pprintast.core_type fmt (migration.copy_core_type typ)
+          </code>
+        </pre>
+        <p class="mt-4">
+         As for the error message, it contains all information needed to be
+         polymorphic over a whole version of compiler parsetree. Pick what is
+         relevant to your use case :-).
+        </p>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         Features not supported in targeted version
+        </h3>
+        <p class="mt-4">
+         When converting to an earlier version, some features might not be
+         supported. In this case, the migration library will raise an
+         exception. You can find the definition of these cases in 
+         <code class="font-normal text-sm">Migrate_parsetree.Def</code>
+         .
+        </p>
+        <p class="mt-4">
+         A reasonable error message is provided by default, otherwise you
+         should catch 
+         <code class="font-normal text-sm">Migration_error</code>
+          exceptions after any call to a migration function  (either a call
+         to a function from 
+         <code class="font-normal text-sm">Migrate_40x_40y</code>
+          or to a field of 
+         <code class="font-normal text-sm">migrate_functions</code>
+          record). Only backward migrations are partials.
+        </p>
+        <h4 class="text-lg text-gray-900 text-gray-800 font-sans">
+         What kind of guarantees to expect in practice?
+        </h4>
+        <p class="mt-4">
+         The fact that migrations are partial functions can seem too
+         restrictive.<br/>
+         In practice, a problem only happens when an OCaml construction is
+         used that didn't exist in the version the PPX rewriter was
+         implemented with.
+        </p>
+        <p class="mt-4">
+         This cannot occur when a new version of the compiler is released:
+         existing code that was working before should work immediately after
+         an update, since new features are not yet in use. This use case is
+         the critical one for helping the introduction of a new compiler
+         version (an opam switch should be usable readily after update).
+        </p>
+        <p class="mt-4">
+         In the future, we might allow rewriting of unsupported features into
+         extensions or attributes for rewriters that opt-in. Rewriting would
+         succeed as long as all extensions disappeared when reaching the
+         compiler (for instance, an OCaml 4.04 file using inline records
+         could be rewritten by a rewriter targeting 4.02; however, a 4.02
+         files couldn't be rewritten by a 4.04 PPX that introduces inline
+         records).
+        </p>
+        <p class="mt-4">
+         Please voice your concerns if you have any, so that this use case is
+         better understood.4.02
+        </p>
+       </div>
+      </div>
+      <div class="w-full flex-none lg:w-72 border-t lg:border-l bg-gray-100">
+       <div class="flex h-20 border-b relative">
+        <h2 class="text-xl absolute inset-x-0 p-3 bottom-0 mt-7 font-semibold
+         text-gray-500">ocaml-migrate-parsetree.1.8.0
+        </h2>
+       </div>
+       <div class="m-3">
+        <p class="mb-5 italic text-sm">
+         Convert OCaml parsetrees between different versions
+        </p>
+        <div class="mb-3">
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="https://github.com/ocaml-ppx/ocaml-migrate-parsetree">
+           github.com/ocaml-ppx/ocaml-migrate-parsetree
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1.323l3.954 1.582 1.599-.8a1 1 0 01.894 1.79l-1.233.616 1.738 5.42a1 1 0 01-.285 1.05A3.989 3.989 0 0115 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.715-5.349L11 6.477V16h2a1 1 0 110 2H7a1 1 0 110-2h2V6.477L6.237 7.582l1.715 5.349a1 1 0 01-.285 1.05A3.989 3.989 0 015 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.738-5.42-1.233-.617a1 1 0 01.894-1.788l1.599.799L9 4.323V3a1 1 0 011-1zm-5 8.274l-.818 2.552c.25.112.526.174.818.174.292 0 .569-.062.818-.174L5 10.274zm10 0l-.818 2.552c.25.112.526.174.818.174.292 0 .569-.062.818-.174L15 10.274z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="LICENSE.md.html">LICENSE.md
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
+</svg>
+    
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="README.md.html">README.md
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" />
+</svg>
+  
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="CHANGES.md.html">CHANGES.md
+          </a>
+         </div>
+        </div><h2 class="font-semibold mb-2 text-sm">Otherdocs</h2>
+        <div class="mb-3">
+         <a class="text-orange cursor-pointer mb-2 text-sm" href="#">#</a>
+        </div>
+        <details class="font-normal mb-2 text-sm">
+         <summary>Other versions</summary><div id="versions_container"></div>
+        </details><h2 class="font-semibold mb-2 text-sm">Authors</h2>
+        <p class="mb-3 text-sm">
+         Frédéric Bour &lt;frederic.bour@lakaban.net&gt;,Jérémie Dimino
+         &lt;jeremie@dimino.org&gt;
+        </p><h2 class="font-semibold mb-2 text-sm">Issues</h2>
+        <div class="mb-3">
+         <a class="text-orange cursor-pointer mb-2 text-sm"
+          href="https://github.com/ocaml-ppx/ocaml-migrate-parsetree/issues">
+          github.com/ocaml-ppx/ocaml-migrate-parsetree/issues
+         </a>
+        </div>
+        <details class="font-semibold mb-2 text-sm">
+         <summary>Package dependencies</summary>
+         <div class="font-normal">
+          <ul>
+           <li>
+            <a href="../../result/index.html" class="text-orange
+             cursor-pointer">result
+            </a>
+           </li>
+           <li>
+            <a href="../../ppx_derivers/index.html" class="text-orange
+             cursor-pointer">ppx_derivers
+            </a>
+           </li>
+           <li>
+            <a href="../../dune/index.html" class="text-orange
+             cursor-pointer">dune
+            </a>
+           </li>
+           <li>
+            <a href="../../ocaml/index.html" class="text-orange
+             cursor-pointer">ocaml
+            </a>
+           </li>
+          </ul>
+         </div>
+        </details>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div><script>Voodoo.update('../version.json')</script>
+ </body>
+</html>
