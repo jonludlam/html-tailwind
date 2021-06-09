@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>
+   README.md
+   (universes.2232aa387d1ae11693d6939ebfd74c79.ocaml-migrate-parsetree.2.1.0.README.md)
+  </title><link rel="stylesheet" href="../../../../packages/tailwind.css"/>
+  <link rel="stylesheet" href="../../../../packages/extra.css"/>
+  <meta charset="utf-8"/><meta name="generator" content="odoc 3dfb7aef2f"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <script src="../../../../packages/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="../../../../packages/voodoo_client.js"></script>
+  <script
+   src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+   defer="defer">
+  </script>
+ </head>
+ <body class="mx-auto max-w-screen-2xl">
+  <div class="relative">
+   <div class="relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+     <div class="flex justify-between items-center md:justify-start py-6
+      md:space-x-10">
+      <div class="flex justify-start">
+       <a href="https://v3.ocaml.org/">
+        <img src="/colour-logo.svg" alt="" class="h-8 w-auto sm:h-10"/>
+       </a>
+      </div>
+      <nav class="hidden md:flex space-x-10">
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Industry</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/whatisocaml">
+            <p class="text-base font-medium text-gray-900">What is OCaml</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/users">
+            <p class="text-base font-medium text-gray-900">Industrial Users
+            </p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/successstories">
+            <p class="text-base font-medium text-gray-900">Success Stories
+            </p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Resources</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/releases">
+            <p class="text-base font-medium text-gray-900">Releases</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/applications">
+            <p class="text-base font-medium text-gray-900">Applications</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/language">
+            <p class="text-base font-medium text-gray-900">Language</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/archive">
+            <p class="text-base font-medium text-gray-900">Archive</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Community</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/opportunities">
+            <p class="text-base font-medium text-gray-900">Opportunities</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/news">
+            <p class="text-base font-medium text-gray-900">News</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/aroundweb">
+            <p class="text-base font-medium text-gray-900">Around the Web</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="h-screen flex bg-white font-sans">
+   <div class="flex flex-col w-full h-full">
+    <div class="flex-row flex-1">
+     <nav class="bg-orange border-t border-b border-orange flex flex-row">
+      <ol class="max-w-screen-xl w-full px-4 flex space-x-4 sm:px-6 lg:px-8">
+       <li class="flex">
+        <div class="flex items-center">
+         <a href="#" class="text-gray-100 hover:text-gray-500">
+          
+  <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+        </svg>
+  
+          <span class="sr-only">Home</span>
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">universes
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">2232aa387d1ae11693d6939ebfd74c79
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">ocaml-migrate-parsetree
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="index.html" class="ml-4 text-sm font-medium text-gray-100
+          hover:text-gray-500">2.1.0
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="#" class="ml-4 text-sm font-medium text-gray-100
+          hover:text-gray-500">README.md
+         </a>
+        </div>
+       </li>
+      </ol>
+     </nav>
+    </div>
+    <div class="flex flex-row flex-1">
+     <div class="w-72 flex-none bg-gray-100 h-screen border-r border-gray-200
+      sticky top-0 hidden lg:block">
+      <div class="flex h-20 border-b relative">
+       <h2 class="text-xl absolute inset-x-0 p-3 px-5 bottom-0 mt-7
+        border-gray-200 font-semibold text-gray-500 font-sans">On this page
+       </h2>
+      </div>
+     </div>
+     <div class="flex flex-1 flex-col lg:flex-row">
+      <div class="flex-1">
+       <div class="lg:max-w-5xl mx-auto px-3 lg:px-10 mb-10 text-sm">
+        <div class="flex h-20 relative border-b border-gray-200">
+         <div class="relative flex-1 h-20">
+          <h1 class="text-3xl absolute inset-x-0 py-3 bottom-0 font-semibold
+           text-gray-500 font-sans w-full truncate">
+           <code class="font-mono text-gray-800">OCaml-migrate-parsetree
+           </code>
+          </h1>
+         </div>
+         <div class="relative flex-none w-20">
+          <h1 class="text-3xl absolute py-3 bottom-0 right-0 font-semibold
+           text-gray-500 font-sans">
+          </h1>
+         </div>
+        </div>
+        <p class="mt-4">
+         Convert OCaml parsetrees between different major versions
+        </p>
+        <p class="mt-4">
+         This library converts between parsetrees of different OCaml
+         versions.
+        </p>
+        <p class="mt-4">
+         Supported versions are 4.02, 4.03, 4.04, 4.05, 4.06, 4.07, 4.08,
+         4.09,<br/>
+         4.10, and 4.11. For each version, there is a snapshot of the
+         parsetree<br/>
+         and conversion functions to the next and/or previous version.
+        </p>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">Asts
+        </h3>
+        <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+         <code class="font-normal text-sm">
+          module Ast_{402,403,404,405,406,407,408,409,410,411} : sig
+          
+            (* Version specific copy of AST *)
+            module Asttypes
+            module Parsetree
+          
+            (* Magic numbers used for marshalling *)
+            module Config : sig
+              val ast_impl_magic_number : string
+              val ast_intf_magic_number : string
+            end
+          end
+          </code>
+        </pre>
+        <p class="mt-4">
+         These embed copies of AST definitions for each supported OCaml major
+         version.
+        </p>
+        <p class="mt-4">
+         The AST matching the version of the OCaml toolchain will contain
+         <br/>equalities relating the copy of types to the definitions from
+         <br/>
+         compiler-libs.  For instance, when installed with OCaml 4.04.x the
+         <br/>type 
+         <code class="font-normal text-sm">Ast_404.Parsetree.expression
+         </code> is equal to the type<br/>
+         <code class="font-normal text-sm">Parsetree.expression</code>
+          from the compiler libraries.
+        </p>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         Migration modules
+        </h3>
+        <p class="mt-4">For each pair of versions 
+         <code class="font-normal text-sm">$(n)</code> and 
+         <code class="font-normal text-sm">$(n+1)</code>, the two modules
+         <br/>
+         <code class="font-normal text-sm">Migrate_parsetree_$(n)_$(n+1)
+         </code> and 
+         <code class="font-normal text-sm">Migrate_parsetree_$(n+1)_$(n)
+         </code><br/>convert the AST forward and backward.
+        </p>
+        <p class="mt-4">
+         The forward conversion is total while the backward conversion is
+         <br/>
+         partial: when a feature is not available in a previous version of
+         the<br/>parsetree, a 
+         <code class="font-normal text-sm">
+          Migrate_parsetree_def.Migration_error
+         </code> exception is<br/>raised detailing the failure case.
+        </p>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         Adding a new OCaml version
+        </h3>
+        <p class="mt-4">We use 
+         <a href="https://github.com/janestreet/cinaps" class="cursor-pointer
+          text-orange">Cinaps
+         </a> to generate<br/>boilerplate.  You can install it via opam: 
+         <code class="font-normal text-sm">opam install cinaps</code>
+         .
+        </p>
+        <p class="mt-4">Add the new version in<br/>
+         <a
+          href="https://github.com/ocaml-ppx/ocaml-migrate-parsetree/blob/master/src/cinaps_helpers/cinaps_helpers.ml"
+          class="cursor-pointer text-orange">src/cinaps_helpers/cinaps
+          _helpers.ml
+         </a><br/><code class="font-normal text-sm">supported_versions</code>
+         .
+        </p>
+        <p class="mt-4">Copy the last 
+         <code class="font-normal text-sm">src/ast_xxx.ml</code> file to 
+         <code class="font-normal text-sm">src/ast_&lt;new_version&gt;.ml
+         </code>,<br/>
+         then go over the file and update each sub-module by replacing its
+         <br/>
+         signature and implementation with the code from the compiler. For
+         the<br/><code class="font-normal text-sm">Config</code>
+          sub-module, update the two variables with the values in<br/>
+         <code class="font-normal text-sm">utils/config.mlp</code>
+          in the compiler source tree.
+        </p><p class="mt-4">Once this is done, call:</p>
+        <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+         <code class="font-normal text-sm">
+          $ dune exec tools/add_special_comments.exe
+          src/ast_&lt;new_version&gt;.ml
+          </code>
+        </pre>
+        <p class="mt-4">Then diff the 
+         <code class="font-normal text-sm">src/ast_xxx.ml</code> and 
+         <code class="font-normal text-sm">src/ast_&lt;new_version&gt;.ml
+         </code> and go<br/>
+         over the diff to make sure the difference are relevant. The 
+         <code class="font-normal text-sm">ast_...</code><br/>
+         files require some adjustments which should pop up when you do this
+         <br/>diff. Port the old adjustments to the new file as required.
+        </p>
+        <p class="mt-4">
+         Add migration functions. In the commands below, set $OLD and $NEW to
+         the<br/>appropriate version numbers, e.g. 408 and 409:
+        </p>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Manually compile the asts (
+           <code class="font-normal text-sm">
+            ocamlc -c src/ast_{$NEW,$OLD}.ml -I +compiler-libs -I
+            _build/default/src/.migrate_parsetree.objs/byte/
+           </code>)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Using 
+           <code class="font-normal text-sm">tools/gencopy.exe</code>
+            (
+           <code class="font-normal text-sm">dune build tools/gencopy.exe
+           </code>
+           ), generate copy code to and from previous version (assuming it is
+           408):
+          </p>
+         </li>
+        </ul>
+        <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+         <code class="font-normal text-sm">
+          _build/default/tools/gencopy.exe -I . -I src/ -I +compiler-libs
+          -map Ast_$NEW:Ast_$OLD
+          Ast_$NEW.Parsetree.{expression,pattern,core_type,toplevel_phrase}
+          &gt; src/migrate_${NEW}_${OLD}.ml
+          _build/default/tools/gencopy.exe -I . -I src/ -I +compiler-libs
+          -map Ast_$OLD:Ast_$NEW
+          Ast_$OLD.Parsetree.{expression,pattern,core_type,toplevel_phrase}
+          &gt; src/migrate_${OLD}_${NEW}.ml
+          </code>
+        </pre>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Fix the generated code by implementing new cases
+          </p>
+         </li>
+        </ul>
+        <p class="mt-4"><em>TODO</em>
+         : specialize and improve gencopy for these cases
+        </p>
+        <p class="mt-4">
+         At any time, you can expand boilerplate code by running 
+         <code class="font-normal text-sm">make cinaps</code>.
+        </p><p class="mt-4">Update build system:</p>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">make sure 
+           <code class="font-normal text-sm">make cinaps</code>
+            reaches a fixed point :)
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4"><code class="font-normal text-sm">make</code>
+            should succeed
+          </p>
+         </li>
+        </ul>
+       </div>
+      </div>
+      <div class="w-full flex-none lg:w-72 border-t lg:border-l bg-gray-100">
+       <div class="flex h-20 border-b relative">
+        <h2 class="text-xl absolute inset-x-0 p-3 bottom-0 mt-7 font-semibold
+         text-gray-500">ocaml-migrate-parsetree.2.1.0
+        </h2>
+       </div>
+       <div class="m-3">
+        <p class="mb-5 italic text-sm">
+         Convert OCaml parsetrees between different versions
+        </p>
+        <div class="mb-3">
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="https://github.com/ocaml-ppx/ocaml-migrate-parsetree">
+           github.com/ocaml-ppx/ocaml-migrate-parsetree
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1.323l3.954 1.582 1.599-.8a1 1 0 01.894 1.79l-1.233.616 1.738 5.42a1 1 0 01-.285 1.05A3.989 3.989 0 0115 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.715-5.349L11 6.477V16h2a1 1 0 110 2H7a1 1 0 110-2h2V6.477L6.237 7.582l1.715 5.349a1 1 0 01-.285 1.05A3.989 3.989 0 015 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.738-5.42-1.233-.617a1 1 0 01.894-1.788l1.599.799L9 4.323V3a1 1 0 011-1zm-5 8.274l-.818 2.552c.25.112.526.174.818.174.292 0 .569-.062.818-.174L5 10.274zm10 0l-.818 2.552c.25.112.526.174.818.174.292 0 .569-.062.818-.174L15 10.274z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="LICENSE.md.html">LICENSE.md
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
+</svg>
+    
+          <a class="text-orange cursor-pointer mb-2 text-sm" href="#">
+           README.md
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" />
+</svg>
+  
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="CHANGES.md.html">CHANGES.md
+          </a>
+         </div>
+        </div>
+        <details class="font-normal mb-2 text-sm">
+         <summary>Other versions</summary><div id="versions_container"></div>
+        </details><h2 class="font-semibold mb-2 text-sm">Authors</h2>
+        <p class="mb-3 text-sm">
+         Frédéric Bour &lt;frederic.bour@lakaban.net&gt;,Jérémie Dimino
+         &lt;jeremie@dimino.org&gt;
+        </p><h2 class="font-semibold mb-2 text-sm">Issues</h2>
+        <div class="mb-3">
+         <a class="text-orange cursor-pointer mb-2 text-sm"
+          href="https://github.com/ocaml-ppx/ocaml-migrate-parsetree/issues">
+          github.com/ocaml-ppx/ocaml-migrate-parsetree/issues
+         </a>
+        </div>
+        <details class="font-semibold mb-2 text-sm">
+         <summary>Package dependencies</summary>
+         <div class="font-normal">
+          <ul>
+           <li>
+            <a href="../../../../packages/dune/index.html" class="text-orange
+             cursor-pointer">dune
+            </a>
+           </li>
+           <li>
+            <a href="../../../../packages/ocaml/index.html"
+             class="text-orange cursor-pointer">ocaml
+            </a>
+           </li>
+          </ul>
+         </div>
+        </details>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <script>
+   Voodoo.update('../../../../packages/ocaml-migrate-parsetree/version.json')
+  </script>
+ </body>
+</html>
