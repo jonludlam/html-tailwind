@@ -1,0 +1,1390 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head><title>HISTORY.md (packages.ppxlib.0.15.0.HISTORY.md)</title>
+  <link rel="stylesheet" href="../../tailwind.css"/>
+  <link rel="stylesheet" href="../../extra.css"/><meta charset="utf-8"/>
+  <meta name="generator" content="odoc 3dfb7aef2f"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <script src="../../highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="../../voodoo_client.js"></script>
+  <script
+   src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+   defer="defer">
+  </script>
+ </head>
+ <body class="mx-auto max-w-screen-2xl">
+  <div class="relative">
+   <div class="relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+     <div class="flex justify-between items-center md:justify-start py-6
+      md:space-x-10">
+      <div class="flex justify-start">
+       <a href="https://v3.ocaml.org/">
+        <img src="/colour-logo.svg" alt="" class="h-8 w-auto sm:h-10"/>
+       </a>
+      </div>
+      <nav class="hidden md:flex space-x-10">
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Industry</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/whatisocaml">
+            <p class="text-base font-medium text-gray-900">What is OCaml</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/users">
+            <p class="text-base font-medium text-gray-900">Industrial Users
+            </p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/successstories">
+            <p class="text-base font-medium text-gray-900">Success Stories
+            </p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Resources</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/releases">
+            <p class="text-base font-medium text-gray-900">Releases</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/applications">
+            <p class="text-base font-medium text-gray-900">Applications</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/language">
+            <p class="text-base font-medium text-gray-900">Language</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/archive">
+            <p class="text-base font-medium text-gray-900">Archive</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Community</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/opportunities">
+            <p class="text-base font-medium text-gray-900">Opportunities</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/news">
+            <p class="text-base font-medium text-gray-900">News</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/aroundweb">
+            <p class="text-base font-medium text-gray-900">Around the Web</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="h-screen flex bg-white font-sans">
+   <div class="flex flex-col w-full h-full">
+    <div class="flex-row flex-1">
+     <nav class="bg-orange border-t border-b border-orange flex flex-row">
+      <ol class="max-w-screen-xl w-full px-4 flex space-x-4 sm:px-6 lg:px-8">
+       <li class="flex">
+        <div class="flex items-center">
+         <a href="#" class="text-gray-100 hover:text-gray-500">
+          
+  <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+        </svg>
+  
+          <span class="sr-only">Home</span>
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">packages
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">ppxlib
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="index.html" class="ml-4 text-sm font-medium text-gray-100
+          hover:text-gray-500">0.15.0
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="#" class="ml-4 text-sm font-medium text-gray-100
+          hover:text-gray-500">HISTORY.md
+         </a>
+        </div>
+       </li>
+      </ol>
+     </nav>
+    </div>
+    <div class="flex flex-row flex-1">
+     <div class="w-72 flex-none bg-gray-100 h-screen border-r border-gray-200
+      sticky top-0 hidden lg:block">
+      <div class="flex h-20 border-b relative">
+       <h2 class="text-xl absolute inset-x-0 p-3 px-5 bottom-0 mt-7
+        border-gray-200 font-semibold text-gray-500 font-sans">On this page
+       </h2>
+      </div>
+     </div>
+     <div class="flex flex-1 flex-col lg:flex-row">
+      <div class="flex-1">
+       <div class="lg:max-w-5xl mx-auto px-3 lg:px-10 mb-10 text-sm">
+        <div class="flex h-20 relative border-b border-gray-200">
+         <div class="relative flex-1 h-20">
+          <h1 class="text-3xl absolute inset-x-0 py-3 bottom-0 font-semibold
+           text-gray-500 font-sans w-full truncate">
+           <code class="font-mono text-gray-800">History</code>
+          </h1>
+         </div>
+         <div class="relative flex-none w-20">
+          <h1 class="text-3xl absolute py-3 bottom-0 right-0 font-semibold
+           text-gray-500 font-sans">
+          </h1>
+         </div>
+        </div>
+        <p class="mt-4">
+         This repository was originally a merge of several ppx-related<
+         br/>repositories, namely:
+        </p>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           <a href="https://github.com/janestreet/ppx_ast"
+            class="cursor-pointer text-orange">ppx_ast
+           </a>;
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           <a href="https://github.com/janestreet/ppx_core"
+            class="cursor-pointer text-orange">ppx_core
+           </a>;
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           <a href="https://github.com/janestreet/ppx_driver"
+            class="cursor-pointer text-orange">ppx_driver
+           </a>;
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           <a href="https://github.com/janestreet/ppx_metaquot"
+            class="cursor-pointer text-orange">ppx_metaquot
+           </a>;
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           <a href="https://github.com/janestreet/ppx_traverse"
+            class="cursor-pointer text-orange">ppx_traverse
+           </a>;
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           <a href="https://github.com/janestreet/ppx_traverse_builtins"
+            class="cursor-pointer text-orange">ppx_traverse_builtins
+           </a>;
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           <a href="https://github.com/janestreet/ppx_type_conv"
+            class="cursor-pointer text-orange">ppx_type_conv
+           </a>.
+          </p>
+         </li>
+        </ul>
+        <p class="mt-4">
+         Since this merge, development has been happening only in this<
+         br/>repository and the aforementioned ones only contain synonym<
+         br/>
+         definitions to provide backward compatibility.  The structure of
+         this<br/>repository is as follows:
+        </p>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4"><code class="font-normal text-sm">ast/</code>
+            contains the <code class="font-normal text-sm">ppxlib.ast</code>
+            library, that replaces 
+           <code class="font-normal text-sm">ppx_ast</code>;
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4"><code class="font-normal text-sm">src/</code>
+            contains the <code class="font-normal text-sm">ppxlib</code>
+            library, that replaces 
+           <code class="font-normal text-sm">ppx_core</code>,<br/>
+           <code class="font-normal text-sm">ppx_driver</code>, and 
+           <code class="font-normal text-sm">type_conv</code>;
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4"><code class="font-normal text-sm">metaquot/</code>
+            contains the 
+           <code class="font-normal text-sm">ppxlib.metaquot</code>
+            library, that replaces<br/>
+           <code class="font-normal text-sm">ppx_metaquot</code>;
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           <code class="font-normal text-sm">metaquot_lifters/</code>
+            contains the 
+           <code class="font-normal text-sm">ppxlib.metaquot_lifters</code>
+            library, that<br/>replaces 
+           <code class="font-normal text-sm">ppx_metaquot.lifters</code>
+           ;
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           <code class="font-normal text-sm">print-diff/</code> contains the 
+           <code class="font-normal text-sm">ppxlib.print_diff</code>
+            library, that replaces<br/>
+           <code class="font-normal text-sm">ppx_driver.print_diff</code>
+           ;
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4"><code class="font-normal text-sm">runner/</code>
+            contains the 
+           <code class="font-normal text-sm">ppxlib.runner</code>
+            library, that replaces<br/>
+           <code class="font-normal text-sm">ppx_driver.runner</code>
+           ;
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           <code class="font-normal text-sm">runner_as_ppx/</code>
+            contains the 
+           <code class="font-normal text-sm">ppxlib.runner_as_ppx</code>
+            library, that replaces<br/>
+           <code class="font-normal text-sm">ppx_driver.runner_as_ppx</code>
+           ;
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4"><code class="font-normal text-sm">traverse/</code>
+            contains the 
+           <code class="font-normal text-sm">ppxlib.traverse</code>
+            library, that replaces<br/>
+           <code class="font-normal text-sm">ppx_traverse</code>;
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           <code class="font-normal text-sm">traverse_builtins/</code>
+            contains the 
+           <code class="font-normal text-sm">ppxlib.traverse_builtins/</code>
+            library, that<br/>replaces 
+           <code class="font-normal text-sm">ppx_traverse_builtins</code>
+           .
+          </p>
+         </li>
+        </ul><h2 class="text-2xl my-4 text-gray-800 font-sans">Ast</h2>
+        <p class="mt-4"><code class="font-normal text-sm">Ppxlib_ast</code>
+          selects a specific version of the OCaml Abstract Syntax Tree<
+         br/>from the 
+         <a href="https://github.com/ocaml-ppx/ocaml-migrate-parsetree"
+          class="cursor-pointer text-orange">ocaml-migrate-parsetree
+         </a><br/>
+         project that is not necessarily the same one as the one being used
+         by the<br/>compiler.
+        </p>
+        <p class="mt-4">
+         It also snapshots the corresponding parser and pretty-printer from
+         the OCaml<br/>
+         compiler, to create a full frontend independent of the version of
+         OCaml.
+        </p>
+        <p class="mt-4">
+         This AST is used in all Jane Street ppx rewriters, and more
+         generally in all<br/>
+         ppx rewriters based on Ppxlib. Using a different AST allows to
+         &quot;detach&quot;<br/>
+         the ppx code from the compiler libraries, and allow to use ppx
+         rewriters with<br/>new compilers before upgrading the ppx code.
+        </p><h2 class="text-2xl my-4 text-gray-800 font-sans">Ppxlib</h2>
+        <p class="mt-4">
+         Ppxlib is a standard library for OCaml AST transformers, that uses
+         the<br/>AST from <code class="font-normal text-sm">Ppxlib_ast</code>
+         . It features:
+        </p>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           various auto-generated AST traversal using an open recursion
+           scheme
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">helpers for building AST fragments</p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">helpers for matching AST fragments</p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           a framework for dealing with attributes and extension points
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           spellchecking and other hints on misspelled/misplaced attributes
+           and<br/>extension points
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           checks for unused attributes (they are otherwise silently dropped
+           by<br/>the compiler)
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         Other ASTs
+        </h3>
+        <p class="mt-4">
+         If you want to write code that works with several versions of<
+         br/><code class="font-normal text-sm">Ppxlib</code>
+          using different AST versions, you can use the versionned<br/>
+         alternatives for 
+         <code class="font-normal text-sm">Ast_builder</code> and 
+         <code class="font-normal text-sm">Ast_pattern</code>. For instance:
+        </p>
+        <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+         <code class="font-normal text-sm">
+          open Ppxlib
+          module Ast_builder = Ast_builder_403
+          module Ast_pattern = Ast_pattern_403
+          </code>
+        </pre>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         Drivers
+        </h3>
+        <p class="mt-4">
+         A driver is an executable created from a set of OCaml AST
+         transformers linked<br/>together with a command line frontend.
+        </p>
+        <p class="mt-4">The aim is to provide a tool that can be used to:</p>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           easily view the pre-processed version of a file, no need to
+           construct a<br/>complex command line: 
+           <code class="font-normal text-sm">ppx file.ml</code> will do;
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           use a single executable to run several transformations: no need to
+           fork many<br/>times just for pre-processing;
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           improved errors for misspelled/misplaced attributes and extension
+           points.
+          </p>
+         </li>
+        </ul>
+        <h4 class="text-lg text-gray-900 text-gray-800 font-sans">
+         Using driver-based rewriters
+        </h4>
+        <p class="mt-4">The recommended way to use rewriters based on 
+         <code class="font-normal text-sm">Ppxlib.Driver</code> is through
+         <br/>
+         <a href="https://github.com/ocaml/dune" class="cursor-pointer
+          text-orange">dune
+         </a>. All you need to is add this line to your<br/>
+         <code class="font-normal text-sm">(library ...)</code> or 
+         <code class="font-normal text-sm">(executables ...)</code> stanza:
+        </p>
+        <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+         <code class="font-normal text-sm">
+          (preprocess (pps (rewriter1 rewriter2 ... ppxlib.runner)))
+          </code>
+        </pre>
+        <p class="mt-4">
+         dune will automatically build a static driver including all these
+         rewriters.<br/>Note the 
+         <code class="font-normal text-sm">ppxlib.runner</code>
+          at the end of the list, it will still work if you<br/>
+         don't put but some specific features of 
+         <code class="font-normal text-sm">ppxlib</code> won't be available.
+        </p>
+        <p class="mt-4">
+         If you are not using dune, you can build a custom driver yourself
+         using<br/>ocamlfind.
+        </p>
+        <p class="mt-4">
+         These methods are described in the following sections.
+        </p>
+        <h4 class="text-lg text-gray-900 text-gray-800 font-sans">
+         Creating a new Ppx_driver based rewriter
+        </h4>
+        <p class="mt-4">
+         If using dune, you can just use the following jbuild file:
+        </p>
+        <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+         <code class="font-normal text-sm">
+          (library
+           ((name        my_ppx)
+            (public_name my_ppx)
+            (kind ppx_rewriter)
+            (libraries (ppxlib))
+            (ppx_runtime_libraries (&lt;runtime dependencies if any&gt;))
+            (preprocess (pps (ppx_metaquot)))))
+          </code>
+        </pre>
+        <p class="mt-4">
+         <code class="font-normal text-sm">(kind ppx_driver)</code>
+          has two effects:
+        </p>
+        <ol class="list-decimal mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">it links the library with 
+           <code class="font-normal text-sm">-linkall</code>
+           . Since plugins register themselves with<br/>
+           the Ppx_driver library by doing a toplevel side effect, you need
+           to be sure<br/>
+           they are linked in the static driver to be taken into accound;
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           it instructs dune to produce a special META file that is
+           compatible with the<br/>
+           various ways of using ppx rewriters, i.e. for people not using
+           dune.
+          </p>
+         </li>
+        </ol>
+        <h4 class="text-lg text-gray-900 text-gray-800 font-sans">
+         Building a custom driver using ocamlfind
+        </h4>
+        <p class="mt-4">
+         To build a custom driver using ocamlfind, simply link all the AST
+         transformers<br/>together with the 
+         <code class="font-normal text-sm">ppxlib.runner</code>
+          package at the end:
+        </p>
+        <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+         <code class="font-normal text-sm">
+          ocamlfind ocamlopt -predicates ppx_driver -o ppx -linkpkg \
+            -package ppx_sexp_conv -package ppx_bin_prot \
+            -package ppxlib.runner
+          </code>
+        </pre>
+        <p class="mt-4">Normally, 
+         <code class="font-normal text-sm">ppxlib.driver</code>
+         -based rewriters should be build with the<br/>approriate 
+         <code class="font-normal text-sm">-linkall</code>
+          option on individual libraries. If one is missing this<br/>
+         option, the code rewriter might not get linked in. If this is the
+         case, a<br/>workaround is to pass 
+         <code class="font-normal text-sm">-linkall</code>
+          when linking the custom driver.
+        </p>
+        <h4 class="text-lg text-gray-900 text-gray-800 font-sans">
+         Building rewriter that you are currently developing
+        </h4>
+        <p class="mt-4">
+         Note: if using dune, you do not need to read this as dune already
+         does all the<br/>
+         right things for you. This section is written having ocamlbuild in
+         mind.
+        </p>
+        <p class="mt-4">
+         When developing a new rewriter you are very likely to prepare a few
+         <br/>
+         tests for it. The compilation line above doesn't suit this task very
+         well<br/>
+         (because ocamlfind package with your rewriter is not yet installed)
+         <br/>and it will be more convenient to specify 
+         <code class="font-normal text-sm">.cmx[a]</code> with your rewriter
+         <br/>manually.
+        </p>
+        <p class="mt-4">
+         For example, let's suppose that the standalone rewriter (
+         <code class="font-normal text-sm">pp_foo.native</code>)<br/>
+         have this code
+        </p>
+        <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+         <code class="font-normal text-sm">
+          let () = Ppxlib.Driver.standalone ()
+          </code>
+        </pre>
+        <p class="mt-4">in <code class="font-normal text-sm">pp_foo.ml</code>
+          and your generator is begin loaded in 
+         <code class="font-normal text-sm">ppx_foo.ml</code>.<br/>
+         You need a few extra switches to compile standalone rewriter<
+         br/>(N.B. order matters)
+        </p>
+        <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+         <code class="font-normal text-sm">
+          ocamlfind ... dependecy1_of_ppx_foo.cmx ... ppx_foo.cmx -package
+          ppxlib -o pp_foo.native
+          </code>
+        </pre>
+        <p class="mt-4">or, if you have already created 
+         <code class="font-normal text-sm">ppx_foo.cmxa</code> using 
+         <code class="font-normal text-sm">-linkall</code> option
+        </p>
+        <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+         <code class="font-normal text-sm">
+          ocamlfind ... ppx_foo.cmxa -package ppxlib -o pp_foo.native
+          </code>
+        </pre>
+        <p class="mt-4">
+         And now you can specify that your test suite uses your rewriter and
+         <br/>depends on a few extra 
+         <code class="font-normal text-sm">.cma</code>
+         's by adding a few lines into your 
+         <code class="font-normal text-sm">_tags</code> file
+        </p>
+        <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+         <code class="font-normal text-sm">
+          &lt;regression/test*.*&gt;: ppx(./pp_foo.native
+          --as-ppx)
+          &lt;regression/test*.*&gt;: depends_on_foo
+          </code>
+        </pre>
+        <p class="mt-4">and specifing dependencies in your 
+         <code class="font-normal text-sm">myocamlbuild.ml</code> file using
+        </p>
+        <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+         <code class="font-normal text-sm">
+          dep [&quot;compile&quot;;&quot;depends_on_foo&quot;]
+          [&quot;ppx_foo.cmxa&quot;; &quot;pp_foo.native&quot;]
+          </code>
+        </pre>
+        <h4 class="text-lg text-gray-900 text-gray-800 font-sans">
+         The driver as a command line tool
+        </h4>
+        <p class="mt-4">It recognizes the following command-line switches:
+        </p>
+        <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+         <code class="font-normal text-sm">
+          -loc-filename &lt;string&gt;      File name to use in
+          locations
+          -reserve-namespace &lt;string&gt; Mark the given namespace as
+          reserved
+          -no-check                   Disable checks (unsafe)
+          -apply &lt;names&gt;              Apply these transformations in
+          order (comma-separated list)
+          -dont-apply &lt;names&gt;         Exclude these
+          transformations
+          -no-merge                   Do not merge context free
+          transformations (better for debugging rewriters)
+          -as-ppx                     Run as a -ppx rewriter (must be the
+          first argument)
+          --as-ppx                    Same as -as-ppx
+          -as-pp                      Shorthand for: -dump-ast
+          -embed-errors
+          --as-pp                     Same as -as-pp
+          -o &lt;filename&gt;               Output file (use '-' for stdout)
+          -                           Read input from stdin
+          -dump-ast                   Dump the marshaled ast to the output
+          file instead of pretty-printing it
+          --dump-ast                  Same as -dump-ast
+          -dparsetree                 Print the parsetree (same as ocamlc
+          -dparsetree)
+          -embed-errors               Embed errors in the output AST
+          (default: true when -dump-ast, false otherwise)
+          -null                       Produce no output, except for
+          errors
+          -impl &lt;file&gt;                Treat the input as a .ml
+          file
+          --impl &lt;file&gt;               Same as -impl
+          -intf &lt;file&gt;                Treat the input as a .mli
+          file
+          --intf &lt;file&gt;               Same as
+          -intf
+          -debug-attribute-drop       Debug attribute
+          dropping
+          -print-transformations      Print linked-in code transformations,
+          in the order they are applied
+          -print-passes               Print the actual passes over the whole
+          AST in the order they are applied
+          -ite-check                  No effect (kept for compatibility)
+          -pp &lt;command&gt;               Pipe sources through preprocessor
+          &lt;command&gt; (incompatible with -as-ppx)
+          -reconcile                  (WIP) Pretty print the output using a
+          mix of the input source and the generated
+          code
+          -reconcile-with-comments    (WIP) same as -reconcile but uses
+          comments to enclose the generated code
+          -no-color                   Don't use colors when printing
+          errors
+          -diff-cmd                   Diff command when using code
+          expectations
+          -pretty                     Instruct code generators to improve the
+          prettiness of the generated code
+          -styler                     Code styler
+          -help                       Display this list of options
+          --help                      Display this list of options
+          </code>
+        </pre>
+        <p class="mt-4">
+         When passed a file as argument, a ppx driver will pretty-print the
+         code<br/>
+         transformed by all its built-in AST transformers. This gives a
+         convenient way<br/>
+         of seeing the code generated for a given attribute/extension.
+        </p>
+        <p class="mt-4">A driver can simply be used as the argument of the 
+         <code class="font-normal text-sm">-pp</code> option of the OCaml
+         <br/>compiler, or as the argument of the 
+         <code class="font-normal text-sm">-ppx</code> option by passing 
+         <code class="font-normal text-sm">-as-ppx</code> as first<br/>
+         argument:
+        </p>
+        <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+         <code class="font-normal text-sm">
+          $ ocamlc -c -pp &quot;ppx -as-pp&quot; file.ml
+          $ ocamlc -c -ppx &quot;ppx -as-ppx&quot; file.ml
+          </code>
+        </pre>
+        <h4 class="text-lg text-gray-900 text-gray-800 font-sans">
+         Rewriters as findlib libraries
+        </h4>
+        <p class="mt-4">
+         Note: if using dune, you do not need to read this as dune already
+         does all the<br/>right things for you.
+        </p>
+        <p class="mt-4">
+         In normal operation, Ppxlib.Driver rewriters are packaged as findlib
+         <br/>
+         libraries. When using dune everything is simple as preprocessors and
+         normal<br/>
+         dependencies are separated. However historically, people have been
+         specifying<br/>
+         both preprocessors and normal library dependencies together. Even
+         worse, many<br/>
+         build system still don't use a static driver and call out to
+         multiple ppx<br/>
+         commands to preprocess a single file, which slow downs compilation a
+         lot.
+        </p>
+        <p class="mt-4">
+         In order for all these different methods to work properly, you need
+         a peculiar<br/>META file. The rules are explained below.
+        </p>
+        <p class="mt-4">
+         It is recommended to split the findlib package into two:
+        </p>
+        <ol class="list-decimal mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           one for the main library, which almost assume it is just a normal
+           library;
+          </p>
+         </li>
+         <li class="ml-4"><p class="mt-4">another sub-package one for:</p>
+          <ul class="list-disc mt-2 mb-4">
+           <li class="ml-4">
+            <p class="mt-4">
+             allowing to mix preprocessors and normal dependencies;
+            </p>
+           </li>
+           <li class="ml-4">
+            <p class="mt-4">
+             the method of calling one executable per rewriter.
+            </p>
+           </li>
+          </ul>
+         </li>
+        </ol>
+        <p class="mt-4">
+         In the rest we'll assume we are writing a META file for a 
+         <code class="font-normal text-sm">ppx_foo</code> rewriter,<br/>
+         that itself uses the <code class="font-normal text-sm">ppxlib</code>
+          and <code class="font-normal text-sm">re</code>
+          libraries, and produces code using<br/>
+         <code class="font-normal text-sm">ppx_foo.runtime-lib</code>
+         .
+        </p>
+        <p class="mt-4">We want the META file to support all of these:</p>
+        <ol class="list-decimal mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           mix normal dependencies and preprocessors, using one executable
+           per<br/>rewriter:
+          </p>
+          <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+           <code class="font-normal text-sm">
+            ocamlfind ocamlc -package ppx_foo -c toto.ml
+            </code>
+          </pre>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           mix normal dependencies and preprocessors, using a single ppx
+           driver:
+          </p>
+          <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+           <code class="font-normal text-sm">
+            $ ocamlfind ocamlc -package ppx_foo -predicates custom_ppx \
+               -ppx ./custom-driver.exe -c toto.ml
+            </code>
+          </pre>
+         </li>
+         <li class="ml-4"><p class="mt-4">build a custom driver:</p>
+          <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+           <code class="font-normal text-sm">
+            $ ocamlfind ocamlc -linkpkg -package ppx_foo -predicates
+            ppx_driver \
+               -o custom-driver.exe
+            </code>
+          </pre>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           build systems properly specifying preprocessors as such, separated
+           from<br/>normal dependencies, as dune does
+          </p>
+         </li>
+        </ol>
+        <p class="mt-4">
+         Since preprocessors and normal dependencies are always specified
+         separately in<br/>jbuild files, dune just always set the 
+         <code class="font-normal text-sm">ppx_driver</code> predicates.
+        </p>
+        <p class="mt-4">In the end the META file should look like this:</p>
+        <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+         <code class="font-normal text-sm">
+          # Standard package, expect it assumes that the
+          &quot;ppx_driver&quot; predicate is set
+          version                     = &quot;42.0&quot;
+          description                 = &quot;interprets [%foo ...]
+          extensions&quot;
+          requires(ppx_driver)        = &quot;ppxlib
+          re&quot;
+          archives(ppx_driver,byte)   =
+          &quot;ppx_foo.cma&quot;
+          archives(ppx_driver,native) =
+          &quot;ppx_foo.cmxa&quot;
+          plugin(ppx_driver,byte)     =
+          &quot;ppx_foo.cma&quot;
+          plugin(ppx_driver,native)   = &quot;ppx_foo.cmxs&quot;
+          
+          # This is what dune uses to find out the runtime dependencies of
+          # a preprocessor
+          ppx_runtime_deps = &quot;ppx_foo.runtime-lib&quot;
+          
+          # This line makes things transparent for people mixing
+          preprocessors
+          # and normal dependencies
+          requires(-ppx_driver) =
+          &quot;ppx_foo.deprecated-ppx-method&quot;
+          
+          package &quot;deprecated-ppx-method&quot; (
+            description = &quot;glue package for the deprecated method of
+          using ppx&quot;
+            requires    = &quot;ppx_foo.runtime-lib&quot;
+            ppx(-ppx_driver,-custom_ppx) = &quot;./as-ppx.exe&quot;
+          )
+          
+          package &quot;runtime-lib&quot; ( ... )
+          </code>
+        </pre>
+        <p class="mt-4">
+         You can check that this META works for all the 4 methods described
+         <br/>above.
+        </p>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         Derivers
+        </h3>
+        <p class="mt-4">The 
+         <code class="font-normal text-sm">Ppxlib.Deriving</code>
+          module factors out functionality needed by<br/>
+         different preprocessors that generate code from type specifications.
+          Example<br/>libraries currently depending on 
+         <code class="font-normal text-sm">Deriving</code>:
+        </p>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           <code class="font-normal text-sm">ppx_bin_prot</code>;
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           <code class="font-normal text-sm">ppx_compare</code>;
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           <code class="font-normal text-sm">ppx_fields_conv</code>;
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           <code class="font-normal text-sm">ppx_sexp_conv</code>;
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           <code class="font-normal text-sm">ppx_variants_conv</code>
+           .
+          </p>
+         </li>
+        </ul>
+        <h4 class="text-lg text-gray-900 text-gray-800 font-sans">
+         Derivers compatibility with 
+         <a href="https://github.com/ocaml-ppx/ppx_import"
+          class="cursor-pointer text-orange">
+          <code class="font-normal text-sm">ppx_import</code>
+         </a>
+        </h4>
+        <p class="mt-4"><code class="font-normal text-sm">ppx_import</code>
+          is a ppx rewriter that let's you import external type definitions.
+         It will turn
+        </p>
+        <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+         <code class="font-normal text-sm">type t = [%import A.t]
+                                           </code>
+        </pre><p class="mt-4">into:</p>
+        <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+         <code class="font-normal text-sm">
+          type t = A.t = &lt;actual A.t definition&gt;
+          </code>
+        </pre>
+        <p class="mt-4">
+         It spares you the need to copy the type definition and to update it
+         when <code class="font-normal text-sm">A.t</code>
+          definition changes.
+        </p>
+        <p class="mt-4"><code class="font-normal text-sm">ppx_import</code>
+          is thus often used in combination with ppx derivers.
+        </p>
+        <p class="mt-4">Because 
+         <code class="font-normal text-sm">ppx_import</code>
+          requires extra information from the compiler that aren't available
+         when it is<br/>initially called with 
+         <code class="font-normal text-sm">ocamldep</code>
+         , it will not completely expand the type definition and instead<
+         br/>rewrite it as:
+        </p>
+        <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+         <code class="font-normal text-sm">type t = A.t
+                                           </code>
+        </pre>
+        <p class="mt-4">That means that if you want your deriver to work with 
+         <code class="font-normal text-sm">ppx_import</code>
+          and to be able to expand the<br/>
+         copied type definition, it must not fail during this intermediate
+         stage.<br/>
+         If your deriver doesn't natively handle abstract type definitions,
+         you can always return an empty<br/>
+         <code class="font-normal text-sm">structure_item</code> or 
+         <code class="font-normal text-sm">signature_item</code> list.
+        </p>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         Compatibility with 
+         <a href="https://github.com/ocaml-ppx/ppx_deriving"
+          class="cursor-pointer text-orange">ppx_deriving
+         </a>
+        </h3>
+        <p class="mt-4">
+         <code class="font-normal text-sm">Ppxlib.Deriving</code>
+         -based code generators are meant to be used with<br/>
+         <code class="font-normal text-sm">Ppxlib.Driver</code>. However 
+         <code class="font-normal text-sm">Deriving</code>
+          allows to export a compatible<br/>
+         <code class="font-normal text-sm">ppx_deriving</code>
+          plugin. By default, when not linked as part of a driver,<br/>
+         packages using <code class="font-normal text-sm">Deriving</code>
+          will just use <code class="font-normal text-sm">ppx_deriving</code>
+         .
+        </p>
+        <p class="mt-4">So for instance this will work as expected using 
+         <code class="font-normal text-sm">ppx_deriving</code>:
+        </p>
+        <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+         <code class="font-normal text-sm">
+          ocamlfind ocamlc -c -package ppx_sexp_conv foo.ml
+          </code>
+        </pre>
+        <p class="mt-4">For end users, the main advantage of using 
+         <code class="font-normal text-sm">Deriving</code>
+         -based generators is that<br/>
+         it will catch typos and attributes misplacement. For instance:
+        </p>
+        <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+         <code class="font-normal text-sm">
+          # type t = int [@@derivin sexp]
+          Error: Attribute `derivin' was not used
+          Hint: Did you mean deriving?
+          # type t = int [@@deriving sxp]
+          Error: ppxlib_deriving: 'sxp' is not a supported type deriving
+          generator
+          Hint: Did you mean sexp?
+          # type t = int [@deriving sexp]
+          Error: Attribute `deriving' was not used
+          Hint: `deriving' is available for type declarations, type
+          extensions
+          and extension constructors but is used here in the context of a
+          core type.
+          Did you put it at the wrong level?&quot;
+          </code>
+        </pre>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         Deriving Syntax
+        </h3>
+        <p class="mt-4">This section is only relevant if you are not using 
+         <code class="font-normal text-sm">ppx_deriving</code>.
+        </p>
+        <p class="mt-4"><code class="font-normal text-sm">Deriving</code>
+          interprets the 
+         <code class="font-normal text-sm">[@@deriving ...]</code>
+          attributes on type declarations,<br/>
+         exception declarations and extension constructor declarations:
+        </p>
+        <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+         <code class="font-normal text-sm">
+          type t = A | B [@@deriving sexp, bin_io]
+          </code>
+        </pre>
+        <p class="mt-4"><code class="font-normal text-sm">sexp</code>
+          and <code class="font-normal text-sm">bin_io</code>
+          are called generators. They are functions that generate<br/>
+         code given the declaration. These functions are implemented by
+         external<br/>libraries such as 
+         <code class="font-normal text-sm">ppx_sexp_conv</code> or 
+         <code class="font-normal text-sm">ppx_bin_prot</code>. 
+         <code class="font-normal text-sm">Deriving</code> itself<br/>
+         provides no generator, it does only the dispatch.
+        </p>
+        <p class="mt-4">
+         Generators can take arguments. This is done using the following
+         syntax:
+        </p>
+        <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+         <code class="font-normal text-sm">
+          type t = A | B [@@deriving foo ~arg:42]
+          </code>
+        </pre>
+        <p class="mt-4">
+         For arguments that are just switches, it is common to use the<
+         br/>following syntax:
+        </p>
+        <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+         <code class="font-normal text-sm">
+          type t = A | B [@@deriving foo ~bar]
+          </code>
+        </pre>
+        <h2 class="text-2xl my-4 text-gray-800 font-sans">
+         Metaquot (and Metaquot_lifters)
+        </h2>
+        <p class="mt-4">
+         <code class="font-normal text-sm">Ppxlib_metaquot</code>
+          is a ppx rewriter allowing you to write values representing<
+         br/>the OCaml AST in the OCaml syntax.
+        </p><p class="mt-4">For instance:</p>
+        <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+         <code class="font-normal text-sm">[%expr x + 1]
+                                           </code>
+        </pre>
+        <p class="mt-4">is a value of type 
+         <code class="font-normal text-sm">Ppxlib_ast.Ast.expression</code>
+         , represention the OCaml<br/>expression 
+         <code class="font-normal text-sm">x + 1</code>.
+        </p>
+        <p class="mt-4">
+         <code class="font-normal text-sm">Ppxlib_metaquot</code>
+          is similar to 
+         <a href="https://github.com/ocaml-ppx/ppx_tools"
+          class="cursor-pointer text-orange">ppx_tools.metaquot
+         </a>,<br/>expect that:
+        </p>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">
+           it uses the version of the OCaml AST defined by Ppxlib_
+           ast rather than the<br/>one from the current compiler
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           it can be used simultaneously with other rewriters using<br/>
+           <code class="font-normal text-sm">Ppxlib.Driver</code>.
+          </p>
+         </li>
+        </ul>
+        <p class="mt-4">
+         <code class="font-normal text-sm">Ppxlib_metaquot_lifters</code>
+          provides lifting functions for OCaml predefined<br/>types (
+         <code class="font-normal text-sm">int</code>, 
+         <code class="font-normal text-sm">string</code>, 
+         <code class="font-normal text-sm">list</code>, ...).
+        </p>
+        <h2 class="text-2xl my-4 text-gray-800 font-sans">
+         Traverse (and Traverse_builtins)
+        </h2>
+        <p class="mt-4">
+         <code class="font-normal text-sm">Ppxlib_traverse</code> is a 
+         <code class="font-normal text-sm">Deriving</code>
+          plugin generating open recursion classes<br/>
+         from type definition. Users can overwrite a specific method of the
+         generated<br/>
+         classes in order to specialize the recursion on specific nodes.<
+         br/><code class="font-normal text-sm">Ppxlib_traverse</code>
+          is in particular used to generate the open recursion classes<
+         br/>to traverse the OCaml AST.
+        </p>
+        <p class="mt-4">
+         For instance, this is the kind of code generated (the generated code
+         is<br/>between the 
+         <code class="font-normal text-sm">[@@deriving_inline ...]</code>
+          and <code class="font-normal text-sm">[@@@end]</code>):
+        </p>
+        <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+         <code class="font-normal text-sm">
+          type expression =
+            | Var   of string
+            | Const of int
+            | Add   of expression * expression
+            | If    of cond * expression * expression
+          
+          and cond =
+            | Cond_var   of string
+            | Cond_const of bool
+            | Cond_and   of cond * cond
+          
+          [@@deriving_inline traverse_map]
+          class map = object(self)
+            method virtual int    : int    -&gt; int
+            method virtual string : string -&gt; string
+            method virtual int    : int    -&gt; int
+          
+            method expression = function
+              | Var x -&gt; Var (self#string x)
+              | Const x -&gt; Const (self#int x)
+              | Add (x, y) -&gt; Add (self#expression x, self#expression y)
+              | If (x, y, z) -&gt; If (self#cond x, self#expression y,
+          self#expression z)
+          
+            method cond = function
+              | Cond_var x -&gt; Cond_var (self#string x)
+              | Cond_const x -&gt; Cond_const (self#bool x)
+              | Cond_and (x, y) -&gt; Cond_and (self#cond x, self#cond
+          y)
+          [@@end]
+          </code>
+        </pre>
+        <p class="mt-4">
+         Now if you wanted to do a deep-copy of an expression, replacing
+         boolean<br/>variable <code class="font-normal text-sm">foo</code>
+          by <code class="font-normal text-sm">true</code>:
+        </p>
+        <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+         <code class="font-normal text-sm">
+          let replace_var = object
+            inherit Ppx_traverse_builtins.map
+            inherit map as super
+          
+            method cond = function
+              | Cond_var &quot;foo&quot; -&gt; Cond_const true
+              | c -&gt; super#cond c
+          end
+          
+          let replace_var expr = replace_var replace_var#expression expr
+          </code>
+        </pre>
+        <p class="mt-4">
+         <code class="font-normal text-sm">Ppx_traverse_builtins.map</code>
+          contains the definition for all the builtin types,<br/>such as 
+         <code class="font-normal text-sm">int</code>, 
+         <code class="font-normal text-sm">string</code>, 
+         <code class="font-normal text-sm">list</code>, ...
+        </p>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">
+         Classes
+        </h3>
+        <p class="mt-4"><code class="font-normal text-sm">Ppx_traverse</code>
+          can generate the following classes: 
+         <code class="font-normal text-sm">map</code>, 
+         <code class="font-normal text-sm">iter</code>, 
+         <code class="font-normal text-sm">fold</code>,<br/>
+         <code class="font-normal text-sm">fold_map</code>, 
+         <code class="font-normal text-sm">map_with_context</code>, 
+         <code class="font-normal text-sm">lift</code>. 
+         <code class="font-normal text-sm">[@@deriving traverse]</code>
+          is an alias<br/>to generate all the supported classes.
+        </p>
+        <p class="mt-4"><code class="font-normal text-sm">lift</code>
+          is a special class that is mostly useful to lift an OCaml constant
+         to<br/>the AST that represent this constant. To do so, you can use
+         <br/><code class="font-normal text-sm">Ppx_metaquot_lifters</code>
+         :
+        </p>
+        <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+         <code class="font-normal text-sm">
+          type t = { x : int; y : int } [@@deriving traverse_lift]
+          
+          let expression_of_t ~loc t : Ast.expression =
+            let lift = object
+              inherit Ppx_metaquot_lifters.expression_lifters loc
+              inherit lift
+            end in
+            lift#t t
+          </code>
+        </pre>
+       </div>
+      </div>
+      <div class="w-full flex-none lg:w-72 border-t lg:border-l bg-gray-100">
+       <div class="flex h-20 border-b relative">
+        <h2 class="text-xl absolute inset-x-0 p-3 bottom-0 mt-7 font-semibold
+         text-gray-500">ppxlib.0.15.0
+        </h2>
+       </div>
+       <div class="m-3">
+        <p class="mb-5 italic text-sm">Standard library for ppx rewriters</p>
+        <div class="mb-3">
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="https://github.com/ocaml-ppx/ppxlib">
+           github.com/ocaml-ppx/ppxlib
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1.323l3.954 1.582 1.599-.8a1 1 0 01.894 1.79l-1.233.616 1.738 5.42a1 1 0 01-.285 1.05A3.989 3.989 0 0115 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.715-5.349L11 6.477V16h2a1 1 0 110 2H7a1 1 0 110-2h2V6.477L6.237 7.582l1.715 5.349a1 1 0 01-.285 1.05A3.989 3.989 0 015 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.738-5.42-1.233-.617a1 1 0 01.894-1.788l1.599.799L9 4.323V3a1 1 0 011-1zm-5 8.274l-.818 2.552c.25.112.526.174.818.174.292 0 .569-.062.818-.174L5 10.274zm10 0l-.818 2.552c.25.112.526.174.818.174.292 0 .569-.062.818-.174L15 10.274z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="LICENSE.md.html">LICENSE.md
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
+</svg>
+    
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="README.md.html">README.md
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" />
+</svg>
+  
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="CHANGES.md.html">CHANGES.md
+          </a>
+         </div>
+        </div><h2 class="font-semibold mb-2 text-sm">Otherdocs</h2>
+        <div class="mb-3">
+         <a class="text-orange cursor-pointer mb-2 text-sm" href="#">#</a>
+        </div>
+        <details class="font-normal mb-2 text-sm">
+         <summary>Other versions</summary><div id="versions_container"></div>
+        </details><h2 class="font-semibold mb-2 text-sm">Authors</h2>
+        <p class="mb-3 text-sm">Jane Street Group, LLC</p>
+        <h2 class="font-semibold mb-2 text-sm">Issues</h2>
+        <div class="mb-3">
+         <a class="text-orange cursor-pointer mb-2 text-sm"
+          href="https://github.com/ocaml-ppx/ppxlib/issues">
+          github.com/ocaml-ppx/ppxlib/issues
+         </a>
+        </div>
+        <details class="font-semibold mb-2 text-sm">
+         <summary>Package dependencies</summary>
+         <div class="font-normal">
+          <ul>
+           <li>
+            <a href="../../ocaml/index.html" class="text-orange
+             cursor-pointer">ocaml
+            </a>
+           </li>
+           <li>
+            <a href="../../ocaml/index.html" class="text-orange
+             cursor-pointer">ocaml
+            </a>
+           </li>
+           <li>
+            <a href="../../dune/index.html" class="text-orange
+             cursor-pointer">dune
+            </a>
+           </li>
+           <li>
+            <a href="../../ocaml-compiler-libs/index.html" class="text-orange
+             cursor-pointer">ocaml-compiler-libs
+            </a>
+           </li>
+           <li>
+            <a href="../../ocaml-migrate-parsetree/index.html"
+             class="text-orange cursor-pointer">ocaml-migrate-parsetree
+            </a>
+           </li>
+           <li>
+            <a href="../../ppx_derivers/index.html" class="text-orange
+             cursor-pointer">ppx_derivers
+            </a>
+           </li>
+           <li>
+            <a href="../../sexplib0/index.html" class="text-orange
+             cursor-pointer">sexplib0
+            </a>
+           </li>
+           <li>
+            <a href="../../stdlib-shims/index.html" class="text-orange
+             cursor-pointer">stdlib-shims
+            </a>
+           </li>
+           <li>
+            <a href="../../ocamlfind/index.html" class="text-orange
+             cursor-pointer">ocamlfind
+            </a>
+           </li>
+           <li>
+            <a href="../../cinaps/index.html" class="text-orange
+             cursor-pointer">cinaps
+            </a>
+           </li>
+           <li>
+            <a href="../../base/index.html" class="text-orange
+             cursor-pointer">base
+            </a>
+           </li>
+           <li>
+            <a href="../../stdio/index.html" class="text-orange
+             cursor-pointer">stdio
+            </a>
+           </li>
+          </ul>
+         </div>
+        </details>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div><script>Voodoo.update('../version.json')</script>
+ </body>
+</html>
