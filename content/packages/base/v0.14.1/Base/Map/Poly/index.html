@@ -1,0 +1,3381 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head><title>Poly (packages.base.v0.14.1.Base.Map.Poly)</title>
+  <link rel="stylesheet" href="../../../../../tailwind.css"/>
+  <link rel="stylesheet" href="../../../../../extra.css"/>
+  <meta charset="utf-8"/><meta name="generator" content="odoc 3dfb7aef2f"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <script src="../../../../../highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="../../../../../voodoo_client.js"></script>
+  <script
+   src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+   defer="defer">
+  </script>
+ </head>
+ <body class="mx-auto max-w-screen-2xl">
+  <div class="relative">
+   <div class="relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+     <div class="flex justify-between items-center md:justify-start py-6
+      md:space-x-10">
+      <div class="flex justify-start">
+       <a href="https://v3.ocaml.org/">
+        <img src="/colour-logo.svg" alt="" class="h-8 w-auto sm:h-10"/>
+       </a>
+      </div>
+      <nav class="hidden md:flex space-x-10">
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Industry</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/whatisocaml">
+            <p class="text-base font-medium text-gray-900">What is OCaml</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/users">
+            <p class="text-base font-medium text-gray-900">Industrial Users
+            </p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/successstories">
+            <p class="text-base font-medium text-gray-900">Success Stories
+            </p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Resources</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/releases">
+            <p class="text-base font-medium text-gray-900">Releases</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/applications">
+            <p class="text-base font-medium text-gray-900">Applications</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/language">
+            <p class="text-base font-medium text-gray-900">Language</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/archive">
+            <p class="text-base font-medium text-gray-900">Archive</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Community</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/opportunities">
+            <p class="text-base font-medium text-gray-900">Opportunities</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/news">
+            <p class="text-base font-medium text-gray-900">News</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/aroundweb">
+            <p class="text-base font-medium text-gray-900">Around the Web</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="h-screen flex bg-white font-sans">
+   <div class="flex flex-col w-full h-full">
+    <div class="flex-row flex-1">
+     <nav class="bg-orange border-t border-b border-orange flex flex-row">
+      <ol class="max-w-screen-xl w-full px-4 flex space-x-4 sm:px-6 lg:px-8">
+       <li class="flex">
+        <div class="flex items-center">
+         <a href="#" class="text-gray-100 hover:text-gray-500">
+          
+  <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+        </svg>
+  
+          <span class="sr-only">Home</span>
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">packages
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">base
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">v0.14.1
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">Base
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">Map
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="#" class="ml-4 text-sm font-medium text-gray-100
+          hover:text-gray-500">Poly
+         </a>
+        </div>
+       </li>
+      </ol>
+     </nav>
+    </div>
+    <div class="flex flex-row flex-1">
+     <div class="w-72 flex-none bg-gray-100 h-screen border-r border-gray-200
+      sticky top-0 hidden lg:block">
+      <div class="flex h-20 border-b relative">
+       <h2 class="text-xl absolute inset-x-0 p-3 px-5 bottom-0 mt-7
+        border-gray-200 font-semibold text-gray-500 font-sans">On this page
+       </h2>
+      </div>
+     </div>
+     <div class="flex flex-1 flex-col lg:flex-row">
+      <div class="flex-1">
+       <div class="lg:max-w-5xl mx-auto px-3 lg:px-10 mb-10 text-sm">
+        <div class="flex h-20 relative border-b border-gray-200">
+         <div class="relative flex-1 h-20">
+          <h1 class="text-3xl absolute inset-x-0 py-3 bottom-0 font-semibold
+           text-gray-500 font-sans w-full truncate">
+           <code class="font-mono text-gray-800">Map.Poly</code>
+          </h1>
+         </div>
+         <div class="relative flex-none w-28">
+          <h1 class="text-3xl absolute py-3 bottom-0 right-0 font-semibold
+           text-gray-500 font-sans">Module
+          </h1>
+         </div>
+        </div><p class="mt-4">A polymorphic Map.</p>
+        <div class="mt-8">
+         <div class="mt-8">
+          <div class="spec type anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="type-t">
+           <a href="#type-t" class="hover-link inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">type</span> 
+             <span>('key, +'value) t</span>
+            </span>
+            <span> = 
+             <span>
+              <span>(<span class="">'key</span>, 
+               <span class="">'value</span>, 
+               <a
+                href="../../Comparator/Poly/index.html#type-comparator_witness"
+                class="cursor-pointer text-orange">
+                Comparator.Poly.comparator_witness
+               </a>)
+              </span> 
+              <a href="../index.html#type-t" class="cursor-pointer
+               text-orange">t
+              </a>
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec type anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="type-tree">
+           <a href="#type-tree" class="hover-link inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">type</span> 
+             <span>('a, 'b) tree</span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec type anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="type-comparator_witness">
+           <a href="#type-comparator_witness" class="hover-link inline-block
+            -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">type</span> comparator_witness
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-empty">
+           <a href="#val-empty" class="hover-link inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> empty : 
+             <span>
+              <span>(<span class="">_</span>, <span class="">_</span>)
+              </span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-singleton">
+           <a href="#val-singleton" class="hover-link inline-block -ml-7
+            pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> singleton : 
+             <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span><span class="">'b</span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'b</span>)
+              </span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-of_alist">
+           <a href="#val-of_alist" class="hover-link inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> of_alist : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span> * <span class="">'b</span>)
+               </span> list
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>[ 
+              <span>`Ok of 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>)
+                </span> 
+                <a href="#type-t" class="cursor-pointer text-orange">t</a>
+               </span>
+              </span> 
+              <span><span>| `Duplicate_key</span> of <span class="">'a</span>
+              </span> ]
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-of_alist_or_error">
+           <a href="#val-of_alist_or_error" class="hover-link inline-block
+            -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> of_alist_or_error
+              : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span> * <span class="">'b</span>)
+               </span> list
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> 
+              <a href="../../Or_error/index.html#type-t"
+               class="cursor-pointer text-orange">Or_error.t
+              </a>
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-of_alist_exn">
+           <a href="#val-of_alist_exn" class="hover-link inline-block 
+            -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> of_alist_exn
+              : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span> * <span class="">'b</span>)
+               </span> list
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'b</span>)
+              </span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-of_alist_multi">
+           <a href="#val-of_alist_multi" class="hover-link inline-block 
+            -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> of_alist_multi
+              : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span> * <span class="">'b</span>)
+               </span> list
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>(<span class="">'a</span>, 
+               <span><span class="">'b</span> list</span>)
+              </span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-of_alist_fold">
+           <a href="#val-of_alist_fold" class="hover-link inline-block 
+            -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> of_alist_fold
+              : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span> * <span class="">'b</span>)
+               </span> list
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>init:<span class="">'c</span> 
+              <span class="">&#45;&gt;</span>
+             </span> 
+             <span>f:
+              <span>(
+               <span><span class="">'c</span> <span class="">&#45;&gt;</span>
+               </span> 
+               <span><span class="">'b</span> <span class="">&#45;&gt;</span>
+               </span> <span class="">'c</span>)
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'c</span>)
+              </span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-of_alist_reduce">
+           <a href="#val-of_alist_reduce" class="hover-link inline-block
+            -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> of_alist_reduce
+              : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span> * <span class="">'b</span>)
+               </span> list
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>f:
+              <span>(
+               <span><span class="">'b</span> <span class="">&#45;&gt;</span>
+               </span> 
+               <span><span class="">'b</span> <span class="">&#45;&gt;</span>
+               </span> <span class="">'b</span>)
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'b</span>)
+              </span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-of_sorted_array">
+           <a href="#val-of_sorted_array" class="hover-link inline-block
+            -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> of_sorted_array
+              : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span> * <span class="">'b</span>)
+               </span> array
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> 
+              <a href="../../Or_error/index.html#type-t"
+               class="cursor-pointer text-orange">Or_error.t
+              </a>
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-of_sorted_array_unchecked">
+           <a href="#val-of_sorted_array_unchecked" class="hover-link
+            inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> 
+             of_sorted_array_unchecked : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span> * <span class="">'b</span>)
+               </span> array
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'b</span>)
+              </span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100"
+           id="val-of_increasing_iterator_unchecked">
+           <a href="#val-of_increasing_iterator_unchecked" class="hover-link
+            inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> 
+             of_increasing_iterator_unchecked : 
+             <span>len:int <span class="">&#45;&gt;</span></span> 
+             <span>f:
+              <span>(<span>int <span class="">&#45;&gt;</span></span>
+                <span class="">'a</span> * <span class="">'b</span>)
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'b</span>)
+              </span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-of_increasing_sequence">
+           <a href="#val-of_increasing_sequence" class="hover-link
+            inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> 
+             of_increasing_sequence : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span> * <span class="">'b</span>)
+               </span> 
+               <a href="../../Sequence/index.html#type-t"
+                class="cursor-pointer text-orange">Sequence.t
+               </a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> 
+              <a href="../../Or_error/index.html#type-t"
+               class="cursor-pointer text-orange">Or_error.t
+              </a>
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-of_sequence">
+           <a href="#val-of_sequence" class="hover-link inline-block 
+            -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> of_sequence : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span> * <span class="">'b</span>)
+               </span> 
+               <a href="../../Sequence/index.html#type-t"
+                class="cursor-pointer text-orange">Sequence.t
+               </a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>[ 
+              <span>`Ok of 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>)
+                </span> 
+                <a href="#type-t" class="cursor-pointer text-orange">t</a>
+               </span>
+              </span> 
+              <span><span>| `Duplicate_key</span> of <span class="">'a</span>
+              </span> ]
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-of_sequence_or_error">
+           <a href="#val-of_sequence_or_error" class="hover-link inline-block
+            -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> of_sequence_or_error
+              : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span> * <span class="">'b</span>)
+               </span> 
+               <a href="../../Sequence/index.html#type-t"
+                class="cursor-pointer text-orange">Sequence.t
+               </a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> 
+              <a href="../../Or_error/index.html#type-t"
+               class="cursor-pointer text-orange">Or_error.t
+              </a>
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-of_sequence_exn">
+           <a href="#val-of_sequence_exn" class="hover-link inline-block
+            -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> of_sequence_exn
+              : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span> * <span class="">'b</span>)
+               </span> 
+               <a href="../../Sequence/index.html#type-t"
+                class="cursor-pointer text-orange">Sequence.t
+               </a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'b</span>)
+              </span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-of_sequence_multi">
+           <a href="#val-of_sequence_multi" class="hover-link inline-block
+            -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> of_sequence_multi
+              : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span> * <span class="">'b</span>)
+               </span> 
+               <a href="../../Sequence/index.html#type-t"
+                class="cursor-pointer text-orange">Sequence.t
+               </a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>(<span class="">'a</span>, 
+               <span><span class="">'b</span> list</span>)
+              </span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-of_sequence_fold">
+           <a href="#val-of_sequence_fold" class="hover-link inline-block
+            -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> of_sequence_fold
+              : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span> * <span class="">'b</span>)
+               </span> 
+               <a href="../../Sequence/index.html#type-t"
+                class="cursor-pointer text-orange">Sequence.t
+               </a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>init:<span class="">'c</span> 
+              <span class="">&#45;&gt;</span>
+             </span> 
+             <span>f:
+              <span>(
+               <span><span class="">'c</span> <span class="">&#45;&gt;</span>
+               </span> 
+               <span><span class="">'b</span> <span class="">&#45;&gt;</span>
+               </span> <span class="">'c</span>)
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'c</span>)
+              </span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-of_sequence_reduce">
+           <a href="#val-of_sequence_reduce" class="hover-link inline-block
+            -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> of_sequence_reduce
+              : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span> * <span class="">'b</span>)
+               </span> 
+               <a href="../../Sequence/index.html#type-t"
+                class="cursor-pointer text-orange">Sequence.t
+               </a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>f:
+              <span>(
+               <span><span class="">'b</span> <span class="">&#45;&gt;</span>
+               </span> 
+               <span><span class="">'b</span> <span class="">&#45;&gt;</span>
+               </span> <span class="">'b</span>)
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'b</span>)
+              </span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-of_iteri">
+           <a href="#val-of_iteri" class="hover-link inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> of_iteri : 
+             <span>iteri:
+              <span>(
+               <span>f:
+                <span>(
+                 <span>key:<span class="">'a</span> 
+                  <span class="">&#45;&gt;</span>
+                 </span> 
+                 <span>data:<span class="">'b</span> 
+                  <span class="">&#45;&gt;</span>
+                 </span> unit)
+                </span> <span class="">&#45;&gt;</span>
+               </span> unit)
+              </span> <span class="">&#45;&gt;</span>
+             </span>
+                    <span>[ 
+                     <span>`Ok of 
+                      <span>
+                       <span>(<span class="">'a</span>, 
+                        <span class="">'b</span>)
+                       </span> 
+                       <a href="#type-t" class="cursor-pointer text-orange">t
+                       </a>
+                      </span>
+                     </span> 
+                     <span><span>| `Duplicate_key</span> of 
+                      <span class="">'a</span>
+                     </span> ]
+                    </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-of_tree">
+           <a href="#val-of_tree" class="hover-link inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> of_tree : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-tree" class="cursor-pointer text-orange">tree
+               </a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'b</span>)
+              </span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-invariants">
+           <a href="#val-invariants" class="hover-link inline-block -ml-7
+            pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> invariants : 
+             <span>
+              <span>
+               <span>(<span class="">_</span>, <span class="">_</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> bool
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-is_empty">
+           <a href="#val-is_empty" class="hover-link inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> is_empty : 
+             <span>
+              <span>
+               <span>(<span class="">_</span>, <span class="">_</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> bool
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-length">
+           <a href="#val-length" class="hover-link inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> length : 
+             <span>
+              <span>
+               <span>(<span class="">_</span>, <span class="">_</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> int
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-add">
+           <a href="#val-add" class="hover-link inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> add : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>key:<span class="">'a</span> 
+              <span class="">&#45;&gt;</span>
+             </span> 
+             <span>data:<span class="">'b</span> 
+              <span class="">&#45;&gt;</span>
+             </span> 
+             <span>[ 
+              <span>`Ok of 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>)
+                </span> 
+                <a href="#type-t" class="cursor-pointer text-orange">t</a>
+               </span>
+              </span> <span>| `Duplicate</span> ]
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-add_exn">
+           <a href="#val-add_exn" class="hover-link inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> add_exn : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>key:<span class="">'a</span> 
+              <span class="">&#45;&gt;</span>
+             </span> 
+             <span>data:<span class="">'b</span> 
+              <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'b</span>)
+              </span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-set">
+           <a href="#val-set" class="hover-link inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> set : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>key:<span class="">'a</span> 
+              <span class="">&#45;&gt;</span>
+             </span> 
+             <span>data:<span class="">'b</span> 
+              <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'b</span>)
+              </span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-add_multi">
+           <a href="#val-add_multi" class="hover-link inline-block -ml-7
+            pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> add_multi : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, 
+                <span><span class="">'b</span> list</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>key:<span class="">'a</span> 
+              <span class="">&#45;&gt;</span>
+             </span> 
+             <span>data:<span class="">'b</span> 
+              <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>(<span class="">'a</span>, 
+               <span><span class="">'b</span> list</span>)
+              </span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-remove_multi">
+           <a href="#val-remove_multi" class="hover-link inline-block 
+            -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> remove_multi
+              : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, 
+                <span><span class="">'b</span> list</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>(<span class="">'a</span>, 
+               <span><span class="">'b</span> list</span>)
+              </span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-find_multi">
+           <a href="#val-find_multi" class="hover-link inline-block -ml-7
+            pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> find_multi : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, 
+                <span><span class="">'b</span> list</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+             </span> <span><span class="">'b</span> list</span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-change">
+           <a href="#val-change" class="hover-link inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> change : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>f:
+              <span>(
+               <span><span><span class="">'b</span> option</span> 
+                <span class="">&#45;&gt;</span>
+               </span> <span><span class="">'b</span> option</span>)
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'b</span>)
+              </span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-update">
+           <a href="#val-update" class="hover-link inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> update : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>f:
+              <span>(
+               <span><span><span class="">'b</span> option</span> 
+                <span class="">&#45;&gt;</span>
+               </span> <span class="">'b</span>)
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'b</span>)
+              </span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-find">
+           <a href="#val-find" class="hover-link inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> find : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+             </span> <span><span class="">'b</span> option</span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-find_exn">
+           <a href="#val-find_exn" class="hover-link inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> find_exn : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+             </span> <span class="">'b</span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-remove">
+           <a href="#val-remove" class="hover-link inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> remove : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'b</span>)
+              </span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-mem">
+           <a href="#val-mem" class="hover-link inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> mem : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+             </span> bool
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-iter_keys">
+           <a href="#val-iter_keys" class="hover-link inline-block -ml-7
+            pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> iter_keys : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">_</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>f:
+              <span>(
+               <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+               </span> unit)
+              </span> <span class="">&#45;&gt;</span>
+             </span> unit
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-iter">
+           <a href="#val-iter" class="hover-link inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> iter : 
+             <span>
+              <span>
+               <span>(<span class="">_</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>f:
+              <span>(
+               <span><span class="">'b</span> <span class="">&#45;&gt;</span>
+               </span> unit)
+              </span> <span class="">&#45;&gt;</span>
+             </span> unit
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-iteri">
+           <a href="#val-iteri" class="hover-link inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> iteri : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>f:
+              <span>(
+               <span>key:<span class="">'a</span> 
+                <span class="">&#45;&gt;</span>
+               </span> 
+               <span>data:<span class="">'b</span> 
+                <span class="">&#45;&gt;</span>
+               </span> unit)
+              </span> <span class="">&#45;&gt;</span>
+             </span> unit
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-iteri_until">
+           <a href="#val-iteri_until" class="hover-link inline-block 
+            -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> iteri_until : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>f:
+              <span>(
+               <span>key:<span class="">'a</span> 
+                <span class="">&#45;&gt;</span>
+               </span> 
+               <span>data:<span class="">'b</span> 
+                <span class="">&#45;&gt;</span>
+               </span> 
+               <span class="xref-unresolved">
+                Base__Map_intf.Continue_or_stop.t
+               </span>)
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span class="xref-unresolved">
+              Base__Map_intf.Finished_or_unfinished.t
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-iter2">
+           <a href="#val-iter2" class="hover-link inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> iter2 : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'c</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>f:
+              <span>(
+               <span>key:<span class="">'a</span> 
+                <span class="">&#45;&gt;</span>
+               </span>
+                      <span>data:
+                       <span>[ <span>`Left of <span class="">'b</span></span>
+                         
+                        <span><span>| `Right</span> of 
+                         <span class="">'c</span>
+                        </span> 
+                        <span><span>| `Both</span> of 
+                         <span class="">'b</span> * <span class="">'c</span>
+                        </span> ]
+                       </span> <span class="">&#45;&gt;</span>
+                      </span>
+                unit)
+              </span> <span class="">&#45;&gt;</span>
+             </span> unit
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-map">
+           <a href="#val-map" class="hover-link inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> map : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>f:
+              <span>(
+               <span><span class="">'b</span> <span class="">&#45;&gt;</span>
+               </span> <span class="">'c</span>)
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'c</span>)
+              </span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-mapi">
+           <a href="#val-mapi" class="hover-link inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> mapi : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>f:
+              <span>(
+               <span>key:<span class="">'a</span> 
+                <span class="">&#45;&gt;</span>
+               </span> 
+               <span>data:<span class="">'b</span> 
+                <span class="">&#45;&gt;</span>
+               </span> <span class="">'c</span>)
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'c</span>)
+              </span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-fold">
+           <a href="#val-fold" class="hover-link inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> fold : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>init:<span class="">'c</span> 
+              <span class="">&#45;&gt;</span>
+             </span> 
+             <span>f:
+              <span>(
+               <span>key:<span class="">'a</span> 
+                <span class="">&#45;&gt;</span>
+               </span> 
+               <span>data:<span class="">'b</span> 
+                <span class="">&#45;&gt;</span>
+               </span> 
+               <span><span class="">'c</span> <span class="">&#45;&gt;</span>
+               </span> <span class="">'c</span>)
+              </span> <span class="">&#45;&gt;</span>
+             </span> <span class="">'c</span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-fold_right">
+           <a href="#val-fold_right" class="hover-link inline-block -ml-7
+            pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> fold_right : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>init:<span class="">'c</span> 
+              <span class="">&#45;&gt;</span>
+             </span> 
+             <span>f:
+              <span>(
+               <span>key:<span class="">'a</span> 
+                <span class="">&#45;&gt;</span>
+               </span> 
+               <span>data:<span class="">'b</span> 
+                <span class="">&#45;&gt;</span>
+               </span> 
+               <span><span class="">'c</span> <span class="">&#45;&gt;</span>
+               </span> <span class="">'c</span>)
+              </span> <span class="">&#45;&gt;</span>
+             </span> <span class="">'c</span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-fold2">
+           <a href="#val-fold2" class="hover-link inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> fold2 : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'c</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>init:<span class="">'d</span> 
+              <span class="">&#45;&gt;</span>
+             </span> 
+             <span>f:
+              <span>(
+               <span>key:<span class="">'a</span> 
+                <span class="">&#45;&gt;</span>
+               </span>
+                      <span>data:
+                       <span>[ <span>`Left of <span class="">'b</span></span>
+                         
+                        <span><span>| `Right</span> of 
+                         <span class="">'c</span>
+                        </span> 
+                        <span><span>| `Both</span> of 
+                         <span class="">'b</span> * <span class="">'c</span>
+                        </span> ]
+                       </span> <span class="">&#45;&gt;</span>
+                      </span>
+                
+               <span><span class="">'d</span> <span class="">&#45;&gt;</span>
+               </span> <span class="">'d</span>)
+              </span> <span class="">&#45;&gt;</span>
+             </span> <span class="">'d</span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-filter_keys">
+           <a href="#val-filter_keys" class="hover-link inline-block 
+            -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> filter_keys : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>f:
+              <span>(
+               <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+               </span> bool)
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'b</span>)
+              </span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-filter">
+           <a href="#val-filter" class="hover-link inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> filter : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>f:
+              <span>(
+               <span><span class="">'b</span> <span class="">&#45;&gt;</span>
+               </span> bool)
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'b</span>)
+              </span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-filteri">
+           <a href="#val-filteri" class="hover-link inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> filteri : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>f:
+              <span>(
+               <span>key:<span class="">'a</span> 
+                <span class="">&#45;&gt;</span>
+               </span> 
+               <span>data:<span class="">'b</span> 
+                <span class="">&#45;&gt;</span>
+               </span> bool)
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'b</span>)
+              </span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-filter_map">
+           <a href="#val-filter_map" class="hover-link inline-block -ml-7
+            pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> filter_map : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>f:
+              <span>(
+               <span><span class="">'b</span> <span class="">&#45;&gt;</span>
+               </span> <span><span class="">'c</span> option</span>)
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'c</span>)
+              </span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-filter_mapi">
+           <a href="#val-filter_mapi" class="hover-link inline-block 
+            -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> filter_mapi : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>f:
+              <span>(
+               <span>key:<span class="">'a</span> 
+                <span class="">&#45;&gt;</span>
+               </span> 
+               <span>data:<span class="">'b</span> 
+                <span class="">&#45;&gt;</span>
+               </span> <span><span class="">'c</span> option</span>)
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'c</span>)
+              </span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-partition_mapi">
+           <a href="#val-partition_mapi" class="hover-link inline-block 
+            -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> partition_mapi
+              : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>f:
+              <span>(
+               <span>key:<span class="">'a</span> 
+                <span class="">&#45;&gt;</span>
+               </span> 
+               <span>data:<span class="">'b</span> 
+                <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <span>(<span class="">'c</span>, <span class="">'d</span>)
+                </span> 
+                <a href="../../Either/index.html#type-t"
+                 class="cursor-pointer text-orange">Either.t
+                </a>
+               </span>)
+              </span> <span class="">&#45;&gt;</span>
+             </span>
+                    <span>
+                     <span>(<span class="">'a</span>, 
+                      <span class="">'c</span>)
+                     </span> 
+                     <a href="#type-t" class="cursor-pointer text-orange">t
+                     </a>
+                    </span>
+              * 
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'d</span>)
+              </span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-partition_map">
+           <a href="#val-partition_map" class="hover-link inline-block 
+            -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> partition_map
+              : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>f:
+              <span>(
+               <span><span class="">'b</span> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <span>(<span class="">'c</span>, <span class="">'d</span>)
+                </span> 
+                <a href="../../Either/index.html#type-t"
+                 class="cursor-pointer text-orange">Either.t
+                </a>
+               </span>)
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'c</span>)
+              </span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> * 
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'d</span>)
+              </span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-partitioni_tf">
+           <a href="#val-partitioni_tf" class="hover-link inline-block 
+            -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> partitioni_tf
+              : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>f:
+              <span>(
+               <span>key:<span class="">'a</span> 
+                <span class="">&#45;&gt;</span>
+               </span> 
+               <span>data:<span class="">'b</span> 
+                <span class="">&#45;&gt;</span>
+               </span> bool)
+              </span> <span class="">&#45;&gt;</span>
+             </span>
+                    <span>
+                     <span>(<span class="">'a</span>, 
+                      <span class="">'b</span>)
+                     </span> 
+                     <a href="#type-t" class="cursor-pointer text-orange">t
+                     </a>
+                    </span>
+              * 
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'b</span>)
+              </span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-partition_tf">
+           <a href="#val-partition_tf" class="hover-link inline-block 
+            -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> partition_tf
+              : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>f:
+              <span>(
+               <span><span class="">'b</span> <span class="">&#45;&gt;</span>
+               </span> bool)
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'b</span>)
+              </span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> * 
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'b</span>)
+              </span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-combine_errors">
+           <a href="#val-combine_errors" class="hover-link inline-block 
+            -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> combine_errors
+              : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, 
+                <span><span class="">'b</span> 
+                 <a href="../../Or_error/index.html#type-t"
+                  class="cursor-pointer text-orange">Or_error.t
+                 </a>
+                </span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> 
+              <a href="../../Or_error/index.html#type-t"
+               class="cursor-pointer text-orange">Or_error.t
+              </a>
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-compare_direct">
+           <a href="#val-compare_direct" class="hover-link inline-block 
+            -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> compare_direct
+              : 
+             <span>
+              <span>(
+               <span><span class="">'b</span> <span class="">&#45;&gt;</span>
+               </span> 
+               <span><span class="">'b</span> <span class="">&#45;&gt;</span>
+               </span> int)
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> int
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-equal">
+           <a href="#val-equal" class="hover-link inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> equal : 
+             <span>
+              <span>(
+               <span><span class="">'b</span> <span class="">&#45;&gt;</span>
+               </span> 
+               <span><span class="">'b</span> <span class="">&#45;&gt;</span>
+               </span> bool)
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> bool
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-keys">
+           <a href="#val-keys" class="hover-link inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> keys : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">_</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> <span><span class="">'a</span> list</span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-data">
+           <a href="#val-data" class="hover-link inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> data : 
+             <span>
+              <span>
+               <span>(<span class="">_</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> <span><span class="">'b</span> list</span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-to_alist">
+           <a href="#val-to_alist" class="hover-link inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> to_alist : 
+             <span>?key_order:
+              <span>[ `Increasing <span>| `Decreasing</span> ]</span>
+               <span class="">&#45;&gt;</span>
+             </span>
+                    <span>
+                     <span>
+                      <span>(<span class="">'a</span>, 
+                       <span class="">'b</span>)
+                      </span> 
+                      <a href="#type-t" class="cursor-pointer text-orange">t
+                      </a>
+                     </span> <span class="">&#45;&gt;</span>
+                    </span>
+              
+             <span>
+              <span>(<span class="">'a</span> * <span class="">'b</span>)
+              </span> list
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-validate">
+           <a href="#val-validate" class="hover-link inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> validate : 
+             <span>name:
+              <span>(
+               <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+               </span> string)
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span><span class="">'b</span> 
+               <a href="../../Validate/index.html#type-check"
+                class="cursor-pointer text-orange">Validate.check
+               </a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> 
+              <a href="../../Validate/index.html#type-check"
+               class="cursor-pointer text-orange">Validate.check
+              </a>
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-validatei">
+           <a href="#val-validatei" class="hover-link inline-block -ml-7
+            pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> validatei : 
+             <span>name:
+              <span>(
+               <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+               </span> string)
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>
+               <span>(<span class="">'a</span> * <span class="">'b</span>)
+               </span> 
+               <a href="../../Validate/index.html#type-check"
+                class="cursor-pointer text-orange">Validate.check
+               </a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> 
+              <a href="../../Validate/index.html#type-check"
+               class="cursor-pointer text-orange">Validate.check
+              </a>
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-merge">
+           <a href="#val-merge" class="hover-link inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> merge : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'c</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>f:
+              <span>(
+               <span>key:<span class="">'a</span> 
+                <span class="">&#45;&gt;</span>
+               </span>
+                      <span>
+                       <span>[ <span>`Left of <span class="">'b</span></span>
+                         
+                        <span><span>| `Right</span> of 
+                         <span class="">'c</span>
+                        </span> 
+                        <span><span>| `Both</span> of 
+                         <span class="">'b</span> * <span class="">'c</span>
+                        </span> ]
+                       </span> <span class="">&#45;&gt;</span>
+                      </span>
+                <span><span class="">'d</span> option</span>)
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'d</span>)
+              </span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-symmetric_diff">
+           <a href="#val-symmetric_diff" class="hover-link inline-block 
+            -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> symmetric_diff
+              : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>data_equal:
+              <span>(
+               <span><span class="">'b</span> <span class="">&#45;&gt;</span>
+               </span> 
+               <span><span class="">'b</span> <span class="">&#45;&gt;</span>
+               </span> bool)
+              </span> <span class="">&#45;&gt;</span>
+             </span>
+                    <span>
+                     <span>(<span class="">'a</span> * 
+                      <span>[ <span>`Left of <span class="">'b</span></span>
+                        
+                       <span><span>| `Right</span> of 
+                        <span class="">'b</span>
+                       </span> 
+                       <span><span>| `Unequal</span> of 
+                        <span class="">'b</span> * <span class="">'b</span>
+                       </span> ]
+                      </span>)
+                     </span> 
+                     <a href="../../Sequence/index.html#type-t"
+                      class="cursor-pointer text-orange">Sequence.t
+                     </a>
+                    </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-fold_symmetric_diff">
+           <a href="#val-fold_symmetric_diff" class="hover-link inline-block
+            -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> fold_symmetric_diff
+              : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>data_equal:
+              <span>(
+               <span><span class="">'b</span> <span class="">&#45;&gt;</span>
+               </span> 
+               <span><span class="">'b</span> <span class="">&#45;&gt;</span>
+               </span> bool)
+              </span> <span class="">&#45;&gt;</span>
+             </span>
+                    <span>init:<span class="">'c</span> 
+                     <span class="">&#45;&gt;</span>
+                    </span>
+             
+             <span>f:
+              <span>(
+               <span><span class="">'c</span> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <span>(<span class="">'a</span> * 
+                 <span>[ <span>`Left of <span class="">'b</span></span>
+                   
+                  <span><span>| `Right</span> of <span class="">'b</span>
+                  </span> 
+                  <span><span>| `Unequal</span> of <span class="">'b</span>
+                    * <span class="">'b</span>
+                  </span> ]
+                 </span>)
+                </span> <span class="">&#45;&gt;</span>
+               </span> <span class="">'c</span>)
+              </span> <span class="">&#45;&gt;</span>
+             </span> <span class="">'c</span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-min_elt">
+           <a href="#val-min_elt" class="hover-link inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> min_elt : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>(<span class="">'a</span> * <span class="">'b</span>)
+              </span> option
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-min_elt_exn">
+           <a href="#val-min_elt_exn" class="hover-link inline-block 
+            -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> min_elt_exn : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> <span class="">'a</span> * <span class="">'b</span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-max_elt">
+           <a href="#val-max_elt" class="hover-link inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> max_elt : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>(<span class="">'a</span> * <span class="">'b</span>)
+              </span> option
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-max_elt_exn">
+           <a href="#val-max_elt_exn" class="hover-link inline-block 
+            -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> max_elt_exn : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> <span class="">'a</span> * <span class="">'b</span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-for_all">
+           <a href="#val-for_all" class="hover-link inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> for_all : 
+             <span>
+              <span>
+               <span>(<span class="">_</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>f:
+              <span>(
+               <span><span class="">'b</span> <span class="">&#45;&gt;</span>
+               </span> bool)
+              </span> <span class="">&#45;&gt;</span>
+             </span> bool
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-for_alli">
+           <a href="#val-for_alli" class="hover-link inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> for_alli : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>f:
+              <span>(
+               <span>key:<span class="">'a</span> 
+                <span class="">&#45;&gt;</span>
+               </span> 
+               <span>data:<span class="">'b</span> 
+                <span class="">&#45;&gt;</span>
+               </span> bool)
+              </span> <span class="">&#45;&gt;</span>
+             </span> bool
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-exists">
+           <a href="#val-exists" class="hover-link inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> exists : 
+             <span>
+              <span>
+               <span>(<span class="">_</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>f:
+              <span>(
+               <span><span class="">'b</span> <span class="">&#45;&gt;</span>
+               </span> bool)
+              </span> <span class="">&#45;&gt;</span>
+             </span> bool
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-existsi">
+           <a href="#val-existsi" class="hover-link inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> existsi : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>f:
+              <span>(
+               <span>key:<span class="">'a</span> 
+                <span class="">&#45;&gt;</span>
+               </span> 
+               <span>data:<span class="">'b</span> 
+                <span class="">&#45;&gt;</span>
+               </span> bool)
+              </span> <span class="">&#45;&gt;</span>
+             </span> bool
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-count">
+           <a href="#val-count" class="hover-link inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> count : 
+             <span>
+              <span>
+               <span>(<span class="">_</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>f:
+              <span>(
+               <span><span class="">'b</span> <span class="">&#45;&gt;</span>
+               </span> bool)
+              </span> <span class="">&#45;&gt;</span>
+             </span> int
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-counti">
+           <a href="#val-counti" class="hover-link inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> counti : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>f:
+              <span>(
+               <span>key:<span class="">'a</span> 
+                <span class="">&#45;&gt;</span>
+               </span> 
+               <span>data:<span class="">'b</span> 
+                <span class="">&#45;&gt;</span>
+               </span> bool)
+              </span> <span class="">&#45;&gt;</span>
+             </span> int
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-split">
+           <a href="#val-split" class="hover-link inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> split : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'b</span>)
+              </span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span> * 
+             <span>
+              <span>(<span class="">'a</span> * <span class="">'b</span>)
+              </span> option
+             </span> * 
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'b</span>)
+              </span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-append">
+           <a href="#val-append" class="hover-link inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> append : 
+             <span>lower_part:
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>upper_part:
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span>
+                    <span>[ 
+                     <span>`Ok of 
+                      <span>
+                       <span>(<span class="">'a</span>, 
+                        <span class="">'b</span>)
+                       </span> 
+                       <a href="#type-t" class="cursor-pointer text-orange">t
+                       </a>
+                      </span>
+                     </span> <span>| `Overlapping_key_ranges</span> ]
+                    </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-subrange">
+           <a href="#val-subrange" class="hover-link inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> subrange : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>lower_bound:
+              <span><span class="">'a</span> 
+               <a href="../../Maybe_bound/index.html#type-t"
+                class="cursor-pointer text-orange">Maybe_bound.t
+               </a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>upper_bound:
+              <span><span class="">'a</span> 
+               <a href="../../Maybe_bound/index.html#type-t"
+                class="cursor-pointer text-orange">Maybe_bound.t
+               </a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'b</span>)
+              </span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-fold_range_inclusive">
+           <a href="#val-fold_range_inclusive" class="hover-link inline-block
+            -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> fold_range_inclusive
+              : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>min:<span class="">'a</span> 
+              <span class="">&#45;&gt;</span>
+             </span> 
+             <span>max:<span class="">'a</span> 
+              <span class="">&#45;&gt;</span>
+             </span> 
+             <span>init:<span class="">'c</span> 
+              <span class="">&#45;&gt;</span>
+             </span> 
+             <span>f:
+              <span>(
+               <span>key:<span class="">'a</span> 
+                <span class="">&#45;&gt;</span>
+               </span>
+                      <span>data:<span class="">'b</span> 
+                       <span class="">&#45;&gt;</span>
+                      </span>
+                
+               <span><span class="">'c</span> <span class="">&#45;&gt;</span>
+               </span> <span class="">'c</span>)
+              </span> <span class="">&#45;&gt;</span>
+             </span> <span class="">'c</span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-range_to_alist">
+           <a href="#val-range_to_alist" class="hover-link inline-block 
+            -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> range_to_alist
+              : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>min:<span class="">'a</span> 
+              <span class="">&#45;&gt;</span>
+             </span> 
+             <span>max:<span class="">'a</span> 
+              <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>(<span class="">'a</span> * <span class="">'b</span>)
+              </span> list
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-closest_key">
+           <a href="#val-closest_key" class="hover-link inline-block 
+            -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> closest_key : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>[ `Greater_or_equal_to <span>| `Greater_than</span>
+                <span>| `Less_or_equal_to</span> <span>| `Less_than</span>
+                ]
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>(<span class="">'a</span> * <span class="">'b</span>)
+              </span> option
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-nth">
+           <a href="#val-nth" class="hover-link inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> nth : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> <span>int <span class="">&#45;&gt;</span></span>
+              
+             <span>
+              <span>(<span class="">'a</span> * <span class="">'b</span>)
+              </span> option
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-nth_exn">
+           <a href="#val-nth_exn" class="hover-link inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> nth_exn : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> <span>int <span class="">&#45;&gt;</span></span>
+              <span class="">'a</span> * <span class="">'b</span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-rank">
+           <a href="#val-rank" class="hover-link inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> rank : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">_</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+             </span> <span>int option</span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-to_tree">
+           <a href="#val-to_tree" class="hover-link inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> to_tree : 
+             <span>
+              <span>
+               <span>(<span class="">'a</span>, <span class="">'b</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'b</span>)
+              </span> 
+              <a href="#type-tree" class="cursor-pointer text-orange">tree
+              </a>
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-to_sequence">
+           <a href="#val-to_sequence" class="hover-link inline-block 
+            -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> to_sequence : 
+             <span>?order:
+              <span>[ `Increasing_key <span>| `Decreasing_key</span> ]</span>
+               <span class="">&#45;&gt;</span>
+             </span>
+                    <span>?keys_greater_or_equal_to:<span class="">'a</span>
+                      <span class="">&#45;&gt;</span>
+                    </span>
+              
+             <span>?keys_less_or_equal_to:<span class="">'a</span> 
+              <span class="">&#45;&gt;</span>
+             </span>
+                    <span>
+                     <span>
+                      <span>(<span class="">'a</span>, 
+                       <span class="">'b</span>)
+                      </span> 
+                      <a href="#type-t" class="cursor-pointer text-orange">t
+                      </a>
+                     </span> <span class="">&#45;&gt;</span>
+                    </span>
+              
+             <span>
+              <span>(<span class="">'a</span> * <span class="">'b</span>)
+              </span> 
+              <a href="../../Sequence/index.html#type-t"
+               class="cursor-pointer text-orange">Sequence.t
+              </a>
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-binary_search">
+           <a href="#val-binary_search" class="hover-link inline-block 
+            -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> binary_search
+              : 
+             <span>
+              <span>
+               <span>(<span class="">'k</span>, <span class="">'v</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>compare:
+              <span>(
+               <span>key:<span class="">'k</span> 
+                <span class="">&#45;&gt;</span>
+               </span> 
+               <span>data:<span class="">'v</span> 
+                <span class="">&#45;&gt;</span>
+               </span> 
+               <span><span class="">'key</span> 
+                <span class="">&#45;&gt;</span>
+               </span> int)
+              </span> <span class="">&#45;&gt;</span>
+             </span>
+                    <span>
+                     <span>[ `Last_strictly_less_than 
+                      <span>| `Last_less_than_or_equal_to</span> 
+                      <span>| `Last_equal_to</span> 
+                      <span>| `First_equal_to</span> 
+                      <span>| `First_greater_than_or_equal_to</span> 
+                      <span>| `First_strictly_greater_than</span> ]
+                     </span> <span class="">&#45;&gt;</span>
+                    </span>
+              
+             <span><span class="">'key</span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>(<span class="">'k</span> * <span class="">'v</span>)
+              </span> option
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+         <div class="mt-8">
+          <div class="spec value anchored p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100" id="val-binary_search_segmented">
+           <a href="#val-binary_search_segmented" class="hover-link
+            inline-block -ml-7 pr-7">
+            <span class="align-middle text-gray-200 transition text-sm
+             font-sans opacity-0 hover:text-gray-700">#
+            </span>
+           </a>
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">val</span> 
+             binary_search_segmented : 
+             <span>
+              <span>
+               <span>(<span class="">'k</span>, <span class="">'v</span>)
+               </span> 
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>segment_of:
+              <span>(
+               <span>key:<span class="">'k</span> 
+                <span class="">&#45;&gt;</span>
+               </span> 
+               <span>data:<span class="">'v</span> 
+                <span class="">&#45;&gt;</span>
+               </span>
+                      <span>[ `Left <span>| `Right</span> ]</span>
+               )
+              </span> <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>[ `Last_on_left <span>| `First_on_right</span> ]</span>
+               <span class="">&#45;&gt;</span>
+             </span> 
+             <span>
+              <span>(<span class="">'k</span> * <span class="">'v</span>)
+              </span> option
+             </span>
+            </span>
+           </code>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="w-full flex-none lg:w-72 border-t lg:border-l bg-gray-100">
+       <div class="flex h-20 border-b relative">
+        <h2 class="text-xl absolute inset-x-0 p-3 bottom-0 mt-7 font-semibold
+         text-gray-500">base.v0.14.1
+        </h2>
+       </div>
+       <div class="m-3">
+        <p class="mb-5 italic text-sm">
+         Full standard library replacement for OCaml
+        </p>
+        <div class="mb-3">
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="https://github.com/janestreet/base">
+           github.com/janestreet/base
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1.323l3.954 1.582 1.599-.8a1 1 0 01.894 1.79l-1.233.616 1.738 5.42a1 1 0 01-.285 1.05A3.989 3.989 0 0115 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.715-5.349L11 6.477V16h2a1 1 0 110 2H7a1 1 0 110-2h2V6.477L6.237 7.582l1.715 5.349a1 1 0 01-.285 1.05A3.989 3.989 0 015 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.738-5.42-1.233-.617a1 1 0 01.894-1.788l1.599.799L9 4.323V3a1 1 0 011-1zm-5 8.274l-.818 2.552c.25.112.526.174.818.174.292 0 .569-.062.818-.174L5 10.274zm10 0l-.818 2.552c.25.112.526.174.818.174.292 0 .569-.062.818-.174L15 10.274z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="../../../LICENSE.md.html">LICENSE.md
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
+</svg>
+    
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="../../../README.org.html">README.org
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" />
+</svg>
+  
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="../../../CHANGES.md.html">CHANGES.md
+          </a>
+         </div>
+        </div>
+        <details class="font-normal mb-2 text-sm">
+         <summary>Other versions</summary><div id="versions_container"></div>
+        </details><h2 class="font-semibold mb-2 text-sm">Authors</h2>
+        <p class="mb-3 text-sm">Jane Street Group, LLC</p>
+        <h2 class="font-semibold mb-2 text-sm">Issues</h2>
+        <div class="mb-3">
+         <a class="text-orange cursor-pointer mb-2 text-sm"
+          href="https://github.com/janestreet/base/issues">
+          github.com/janestreet/base/issues
+         </a>
+        </div>
+        <details class="font-semibold mb-2 text-sm">
+         <summary>Package dependencies</summary>
+         <div class="font-normal">
+          <ul>
+           <li>
+            <a href="../../../../../ocaml/index.html" class="text-orange
+             cursor-pointer">ocaml
+            </a>
+           </li>
+           <li>
+            <a href="../../../../../sexplib0/index.html" class="text-orange
+             cursor-pointer">sexplib0
+            </a>
+           </li>
+           <li>
+            <a href="../../../../../dune/index.html" class="text-orange
+             cursor-pointer">dune
+            </a>
+           </li>
+           <li>
+            <a href="../../../../../dune-configurator/index.html"
+             class="text-orange cursor-pointer">dune-configurator
+            </a>
+           </li>
+          </ul>
+         </div>
+        </details>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div><script>Voodoo.update('../../../../version.json')</script>
+ </body>
+</html>

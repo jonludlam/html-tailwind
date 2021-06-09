@@ -1,0 +1,4432 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head><title>Float (packages.base.v0.14.1.Base.Float)</title>
+  <link rel="stylesheet" href="../../../../tailwind.css"/>
+  <link rel="stylesheet" href="../../../../extra.css"/>
+  <meta charset="utf-8"/><meta name="generator" content="odoc 3dfb7aef2f"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <script src="../../../../highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="../../../../voodoo_client.js"></script>
+  <script
+   src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+   defer="defer">
+  </script>
+ </head>
+ <body class="mx-auto max-w-screen-2xl">
+  <div class="relative">
+   <div class="relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+     <div class="flex justify-between items-center md:justify-start py-6
+      md:space-x-10">
+      <div class="flex justify-start">
+       <a href="https://v3.ocaml.org/">
+        <img src="/colour-logo.svg" alt="" class="h-8 w-auto sm:h-10"/>
+       </a>
+      </div>
+      <nav class="hidden md:flex space-x-10">
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Industry</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/whatisocaml">
+            <p class="text-base font-medium text-gray-900">What is OCaml</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/users">
+            <p class="text-base font-medium text-gray-900">Industrial Users
+            </p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/successstories">
+            <p class="text-base font-medium text-gray-900">Success Stories
+            </p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Resources</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/releases">
+            <p class="text-base font-medium text-gray-900">Releases</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/applications">
+            <p class="text-base font-medium text-gray-900">Applications</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/language">
+            <p class="text-base font-medium text-gray-900">Language</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/archive">
+            <p class="text-base font-medium text-gray-900">Archive</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Community</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/opportunities">
+            <p class="text-base font-medium text-gray-900">Opportunities</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/news">
+            <p class="text-base font-medium text-gray-900">News</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/aroundweb">
+            <p class="text-base font-medium text-gray-900">Around the Web</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="h-screen flex bg-white font-sans">
+   <div class="flex flex-col w-full h-full">
+    <div class="flex-row flex-1">
+     <nav class="bg-orange border-t border-b border-orange flex flex-row">
+      <ol class="max-w-screen-xl w-full px-4 flex space-x-4 sm:px-6 lg:px-8">
+       <li class="flex">
+        <div class="flex items-center">
+         <a href="#" class="text-gray-100 hover:text-gray-500">
+          
+  <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+        </svg>
+  
+          <span class="sr-only">Home</span>
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">packages
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">base
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">v0.14.1
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">Base
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="#" class="ml-4 text-sm font-medium text-gray-100
+          hover:text-gray-500">Float
+         </a>
+        </div>
+       </li>
+      </ol>
+     </nav>
+    </div>
+    <div class="flex flex-row flex-1">
+     <div class="w-72 flex-none bg-gray-100 h-screen border-r border-gray-200
+      sticky top-0 hidden lg:block">
+      <div class="flex h-20 border-b relative">
+       <h2 class="text-xl absolute inset-x-0 p-3 px-5 bottom-0 mt-7
+        border-gray-200 font-semibold text-gray-500 font-sans">On this page
+       </h2>
+      </div>
+     </div>
+     <div class="flex flex-1 flex-col lg:flex-row">
+      <div class="flex-1">
+       <div class="lg:max-w-5xl mx-auto px-3 lg:px-10 mb-10 text-sm">
+        <div class="flex h-20 relative border-b border-gray-200">
+         <div class="relative flex-1 h-20">
+          <h1 class="text-3xl absolute inset-x-0 py-3 bottom-0 font-semibold
+           text-gray-500 font-sans w-full truncate">
+           <code class="font-mono text-gray-800">Base.Float</code>
+          </h1>
+         </div>
+         <div class="relative flex-none w-28">
+          <h1 class="text-3xl absolute py-3 bottom-0 right-0 font-semibold
+           text-gray-500 font-sans">Module
+          </h1>
+         </div>
+        </div>
+        <p class="mt-4">Floating-point representation and utilities.</p>
+        <p class="mt-4">If using 32-bit OCaml, you cannot quite assume
+          operations act as you'd expect for IEEE 64-bit floats. E.g.,
+          one can have 
+         <code class="font-normal text-sm">
+          let x = ~-. (2. ** 62.) in x = x -. 1.
+         </code> evaluate to <code class="font-normal text-sm">false</code>
+          while 
+         <code class="font-normal text-sm">
+          let x = ~-. (2. ** 62.) in let y = x -. 1 in x = y
+         </code> evaluates to <code class="font-normal text-sm">true</code>
+         . This is related to 80-bit registers being used for calculations;
+          you can force representation as a 64-bit value by let-binding.
+        </p>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-t">
+          <a href="#type-t" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> t</span>
+           <span> = float</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-t_sexp_grammar">
+          <a href="#val-t_sexp_grammar" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> t_sexp_grammar
+             : 
+            <a href="../Sexp/Private/Raw_grammar/index.html#type-t"
+             class="cursor-pointer text-orange">Sexp.Private.Raw_grammar.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <details open="open" class="relative">
+          <summary class="spec include p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100">
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">include</span> 
+             <a href="../Floatable/module-type-S/index.html"
+              class="cursor-pointer text-orange">Floatable.S
+             </a> <span class="font-semibold">with</span> 
+             <span><span class="font-semibold">type</span> 
+              <a href="../Floatable/module-type-S/index.html#type-t"
+               class="cursor-pointer text-orange">t
+              </a> := 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span>
+            </span>
+           </code>
+          </summary>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-of_float">
+            <a href="#val-of_float" class="hover-link inline-block -ml-7
+             pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> of_float : 
+              <span>float <span class="">&#45;&gt;</span></span> 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span>
+            </code>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-to_float">
+            <a href="#val-to_float" class="hover-link inline-block -ml-7
+             pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> to_float : 
+              <span>
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+                <span class="">&#45;&gt;</span>
+              </span> float
+             </span>
+            </code>
+           </div>
+          </div>
+          <div class="absolute bg-gray-500 opacity-10 border-gray-500
+           rounded-lg border-r-8 rounded-l-none top-0 -right-6 bottom-0 
+           w-5">
+          </div>
+         </details>
+        </div>
+        <div class="mt-8">
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">max</code>
+            and <code class="font-normal text-sm">min</code> will return
+            nan if either argument is nan.
+          </p>
+          <p class="mt-4">The 
+           <code class="font-normal text-sm">validate_*</code> functions
+            always fail if class is 
+           <code class="font-normal text-sm">Nan</code> or 
+           <code class="font-normal text-sm">Infinite</code>.
+          </p>
+         </div>
+         <details open="open" class="relative">
+          <summary class="spec include p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100">
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">include</span> 
+             <a href="../Identifiable/module-type-S/index.html"
+              class="cursor-pointer text-orange">Identifiable.S
+             </a> <span class="font-semibold">with</span> 
+             <span><span class="font-semibold">type</span> 
+              <a href="../Identifiable/module-type-S/index.html#type-t"
+               class="cursor-pointer text-orange">t
+              </a> := 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span>
+            </span>
+           </code>
+          </summary>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-hash_fold_t">
+            <a href="#val-hash_fold_t" class="hover-link inline-block 
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> hash_fold_t
+               : 
+              <span>
+               <a href="../Hash/index.html#type-state" class="cursor-pointer
+                text-orange">Hash.state
+               </a> <span class="">&#45;&gt;</span>
+              </span> 
+              <span>
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+                <span class="">&#45;&gt;</span>
+              </span> 
+              <a href="../Hash/index.html#type-state" class="cursor-pointer
+               text-orange">Hash.state
+              </a>
+             </span>
+            </code>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-hash">
+            <a href="#val-hash" class="hover-link inline-block -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> hash : 
+              <span>
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+                <span class="">&#45;&gt;</span>
+              </span> 
+              <a href="../Hash/index.html#type-hash_value"
+               class="cursor-pointer text-orange">Hash.hash_value
+              </a>
+             </span>
+            </code>
+           </div>
+          </div>
+          <div class="mt-8">
+           <details open="open" class="relative">
+            <summary class="spec include p-2 text-sm rounded border-l-4
+             border-orange my-3 bg-gray-100">
+             <code class="font-normal text-sm">
+              <span><span class="font-semibold">include</span> 
+               <a href="../Sexpable/module-type-S/index.html"
+                class="cursor-pointer text-orange">Sexpable.S
+               </a> <span class="font-semibold">with</span> 
+               <span><span class="font-semibold">type</span> 
+                <a href="../Sexpable/module-type-S/index.html#type-t"
+                 class="cursor-pointer text-orange">t
+                </a> := 
+                <a href="#type-t" class="cursor-pointer text-orange">t</a>
+               </span>
+              </span>
+             </code>
+            </summary>
+            <div class="mt-8">
+             <div class="spec value anchored p-2 text-sm rounded border-l-4
+              border-orange my-3 bg-gray-100" id="val-t_of_sexp">
+              <a href="#val-t_of_sexp" class="hover-link inline-block 
+               -ml-7 pr-7">
+               <span class="align-middle text-gray-200 transition text-sm
+                font-sans opacity-0 hover:text-gray-700">#
+               </span>
+              </a>
+              <code class="font-normal text-sm">
+               <span><span class="font-semibold">val</span> t_of_sexp
+                 : 
+                <span>
+                 <a
+                  href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+                  class="cursor-pointer text-orange">Sexplib0.Sexp.t
+                 </a> <span class="">&#45;&gt;</span>
+                </span> 
+                <a href="#type-t" class="cursor-pointer text-orange">t</a>
+               </span>
+              </code>
+             </div>
+            </div>
+            <div class="mt-8">
+             <div class="spec value anchored p-2 text-sm rounded border-l-4
+              border-orange my-3 bg-gray-100" id="val-sexp_of_t">
+              <a href="#val-sexp_of_t" class="hover-link inline-block 
+               -ml-7 pr-7">
+               <span class="align-middle text-gray-200 transition text-sm
+                font-sans opacity-0 hover:text-gray-700">#
+               </span>
+              </a>
+              <code class="font-normal text-sm">
+               <span><span class="font-semibold">val</span> sexp_of_t
+                 : 
+                <span>
+                 <a href="#type-t" class="cursor-pointer text-orange">t</a>
+                  <span class="">&#45;&gt;</span>
+                </span> 
+                <a
+                 href="../../../../sexplib0/v0.14.0/Sexplib0/Sexp/index.html#type-t"
+                 class="cursor-pointer text-orange">Sexplib0.Sexp.t
+                </a>
+               </span>
+              </code>
+             </div>
+            </div>
+            <div class="absolute bg-gray-500 opacity-10 border-gray-500
+             rounded-lg border-r-8 rounded-l-none top-0 -right-6 bottom-0
+             w-5">
+            </div>
+           </details>
+          </div>
+          <div class="mt-8">
+           <details open="open" class="relative">
+            <summary class="spec include p-2 text-sm rounded border-l-4
+             border-orange my-3 bg-gray-100">
+             <code class="font-normal text-sm">
+              <span><span class="font-semibold">include</span> 
+               <a href="../Stringable/module-type-S/index.html"
+                class="cursor-pointer text-orange">Stringable.S
+               </a> <span class="font-semibold">with</span> 
+               <span><span class="font-semibold">type</span> 
+                <a href="../Stringable/module-type-S/index.html#type-t"
+                 class="cursor-pointer text-orange">t
+                </a> := 
+                <a href="#type-t" class="cursor-pointer text-orange">t</a>
+               </span>
+              </span>
+             </code>
+            </summary>
+            <div class="mt-8">
+             <div class="spec value anchored p-2 text-sm rounded border-l-4
+              border-orange my-3 bg-gray-100" id="val-of_string">
+              <a href="#val-of_string" class="hover-link inline-block 
+               -ml-7 pr-7">
+               <span class="align-middle text-gray-200 transition text-sm
+                font-sans opacity-0 hover:text-gray-700">#
+               </span>
+              </a>
+              <code class="font-normal text-sm">
+               <span><span class="font-semibold">val</span> of_string
+                 : <span>string <span class="">&#45;&gt;</span></span>
+                 <a href="#type-t" class="cursor-pointer text-orange">t</a>
+               </span>
+              </code>
+             </div>
+            </div>
+            <div class="mt-8">
+             <div class="spec value anchored p-2 text-sm rounded border-l-4
+              border-orange my-3 bg-gray-100" id="val-to_string">
+              <a href="#val-to_string" class="hover-link inline-block 
+               -ml-7 pr-7">
+               <span class="align-middle text-gray-200 transition text-sm
+                font-sans opacity-0 hover:text-gray-700">#
+               </span>
+              </a>
+              <code class="font-normal text-sm">
+               <span><span class="font-semibold">val</span> to_string
+                 : 
+                <span>
+                 <a href="#type-t" class="cursor-pointer text-orange">t</a>
+                  <span class="">&#45;&gt;</span>
+                </span> string
+               </span>
+              </code>
+             </div>
+            </div>
+            <div class="absolute bg-gray-500 opacity-10 border-gray-500
+             rounded-lg border-r-8 rounded-l-none top-0 -right-6 bottom-0
+             w-5">
+            </div>
+           </details>
+          </div>
+          <div class="mt-8">
+           <details open="open" class="relative">
+            <summary class="spec include p-2 text-sm rounded border-l-4
+             border-orange my-3 bg-gray-100">
+             <code class="font-normal text-sm">
+              <span><span class="font-semibold">include</span> 
+               <a href="../Comparable/module-type-S/index.html"
+                class="cursor-pointer text-orange">Comparable.S
+               </a> <span class="font-semibold">with</span> 
+               <span><span class="font-semibold">type</span> 
+                <a href="../Comparable/module-type-S/index.html#type-t"
+                 class="cursor-pointer text-orange">t
+                </a> := 
+                <a href="#type-t" class="cursor-pointer text-orange">t</a>
+               </span>
+              </span>
+             </code>
+            </summary>
+            <div class="mt-8">
+             <div class="mt-8">
+              <details open="open" class="relative">
+               <summary class="spec include p-2 text-sm rounded border-l-4
+                border-orange my-3 bg-gray-100">
+                <code class="font-normal text-sm">
+                 <span><span class="font-semibold">include</span> 
+                  <a href="../Comparisons/module-type-Infix/index.html"
+                   class="cursor-pointer text-orange">Comparisons.Infix
+                  </a> <span class="font-semibold">with</span> 
+                  <span><span class="font-semibold">type</span> 
+                   <a
+                    href="../Comparisons/module-type-Infix/index.html#type-t"
+                    class="cursor-pointer text-orange">t
+                   </a> := 
+                   <a href="#type-t" class="cursor-pointer text-orange">t</a>
+                  </span>
+                 </span>
+                </code>
+               </summary>
+               <div class="mt-8">
+                <div class="spec value anchored p-2 text-sm rounded
+                 border-l-4 border-orange my-3 bg-gray-100" id="val-(&gt;=)">
+                 <a href="#val-(&gt;=)" class="hover-link inline-block 
+                  -ml-7 pr-7">
+                  <span class="align-middle text-gray-200 transition 
+                   text-sm font-sans opacity-0 hover:text-gray-700">#
+                  </span>
+                 </a>
+                 <code class="font-normal text-sm">
+                  <span><span class="font-semibold">val</span> (&gt;=)
+                    : 
+                   <span>
+                    <a href="#type-t" class="cursor-pointer text-orange">t
+                    </a> <span class="">&#45;&gt;</span>
+                   </span> 
+                   <span>
+                    <a href="#type-t" class="cursor-pointer text-orange">t
+                    </a> <span class="">&#45;&gt;</span>
+                   </span> bool
+                  </span>
+                 </code>
+                </div>
+               </div>
+               <div class="mt-8">
+                <div class="spec value anchored p-2 text-sm rounded
+                 border-l-4 border-orange my-3 bg-gray-100" id="val-(&lt;=)">
+                 <a href="#val-(&lt;=)" class="hover-link inline-block 
+                  -ml-7 pr-7">
+                  <span class="align-middle text-gray-200 transition 
+                   text-sm font-sans opacity-0 hover:text-gray-700">#
+                  </span>
+                 </a>
+                 <code class="font-normal text-sm">
+                  <span><span class="font-semibold">val</span> (&lt;=)
+                    : 
+                   <span>
+                    <a href="#type-t" class="cursor-pointer text-orange">t
+                    </a> <span class="">&#45;&gt;</span>
+                   </span> 
+                   <span>
+                    <a href="#type-t" class="cursor-pointer text-orange">t
+                    </a> <span class="">&#45;&gt;</span>
+                   </span> bool
+                  </span>
+                 </code>
+                </div>
+               </div>
+               <div class="mt-8">
+                <div class="spec value anchored p-2 text-sm rounded
+                 border-l-4 border-orange my-3 bg-gray-100" id="val-(=)">
+                 <a href="#val-(=)" class="hover-link inline-block -ml-7
+                  pr-7">
+                  <span class="align-middle text-gray-200 transition 
+                   text-sm font-sans opacity-0 hover:text-gray-700">#
+                  </span>
+                 </a>
+                 <code class="font-normal text-sm">
+                  <span><span class="font-semibold">val</span> (=) : 
+                   <span>
+                    <a href="#type-t" class="cursor-pointer text-orange">t
+                    </a> <span class="">&#45;&gt;</span>
+                   </span> 
+                   <span>
+                    <a href="#type-t" class="cursor-pointer text-orange">t
+                    </a> <span class="">&#45;&gt;</span>
+                   </span> bool
+                  </span>
+                 </code>
+                </div>
+               </div>
+               <div class="mt-8">
+                <div class="spec value anchored p-2 text-sm rounded
+                 border-l-4 border-orange my-3 bg-gray-100" id="val-(&gt;)">
+                 <a href="#val-(&gt;)" class="hover-link inline-block 
+                  -ml-7 pr-7">
+                  <span class="align-middle text-gray-200 transition 
+                   text-sm font-sans opacity-0 hover:text-gray-700">#
+                  </span>
+                 </a>
+                 <code class="font-normal text-sm">
+                  <span><span class="font-semibold">val</span> (&gt;)
+                    : 
+                   <span>
+                    <a href="#type-t" class="cursor-pointer text-orange">t
+                    </a> <span class="">&#45;&gt;</span>
+                   </span> 
+                   <span>
+                    <a href="#type-t" class="cursor-pointer text-orange">t
+                    </a> <span class="">&#45;&gt;</span>
+                   </span> bool
+                  </span>
+                 </code>
+                </div>
+               </div>
+               <div class="mt-8">
+                <div class="spec value anchored p-2 text-sm rounded
+                 border-l-4 border-orange my-3 bg-gray-100" id="val-(&lt;)">
+                 <a href="#val-(&lt;)" class="hover-link inline-block 
+                  -ml-7 pr-7">
+                  <span class="align-middle text-gray-200 transition 
+                   text-sm font-sans opacity-0 hover:text-gray-700">#
+                  </span>
+                 </a>
+                 <code class="font-normal text-sm">
+                  <span><span class="font-semibold">val</span> (&lt;)
+                    : 
+                   <span>
+                    <a href="#type-t" class="cursor-pointer text-orange">t
+                    </a> <span class="">&#45;&gt;</span>
+                   </span> 
+                   <span>
+                    <a href="#type-t" class="cursor-pointer text-orange">t
+                    </a> <span class="">&#45;&gt;</span>
+                   </span> bool
+                  </span>
+                 </code>
+                </div>
+               </div>
+               <div class="mt-8">
+                <div class="spec value anchored p-2 text-sm rounded
+                 border-l-4 border-orange my-3 bg-gray-100"
+                 id="val-(&lt;&gt;)">
+                 <a href="#val-(&lt;&gt;)" class="hover-link inline-block
+                  -ml-7 pr-7">
+                  <span class="align-middle text-gray-200 transition 
+                   text-sm font-sans opacity-0 hover:text-gray-700">#
+                  </span>
+                 </a>
+                 <code class="font-normal text-sm">
+                  <span><span class="font-semibold">val</span> (&lt;&gt;)
+                    : 
+                   <span>
+                    <a href="#type-t" class="cursor-pointer text-orange">t
+                    </a> <span class="">&#45;&gt;</span>
+                   </span> 
+                   <span>
+                    <a href="#type-t" class="cursor-pointer text-orange">t
+                    </a> <span class="">&#45;&gt;</span>
+                   </span> bool
+                  </span>
+                 </code>
+                </div>
+               </div>
+               <div class="absolute bg-gray-500 opacity-10 border-gray-500
+                rounded-lg border-r-8 rounded-l-none top-0 -right-6 bottom-0
+                w-5">
+               </div>
+              </details>
+             </div>
+             <div class="mt-8">
+              <div class="spec value anchored p-2 text-sm rounded border-l-4
+               border-orange my-3 bg-gray-100" id="val-equal">
+               <a href="#val-equal" class="hover-link inline-block -ml-7
+                pr-7">
+                <span class="align-middle text-gray-200 transition text-sm
+                 font-sans opacity-0 hover:text-gray-700">#
+                </span>
+               </a>
+               <code class="font-normal text-sm">
+                <span><span class="font-semibold">val</span> equal : 
+                 <span>
+                  <a href="#type-t" class="cursor-pointer text-orange">t</a>
+                   <span class="">&#45;&gt;</span>
+                 </span> 
+                 <span>
+                  <a href="#type-t" class="cursor-pointer text-orange">t</a>
+                   <span class="">&#45;&gt;</span>
+                 </span> bool
+                </span>
+               </code>
+              </div>
+             </div>
+             <div class="mt-8">
+              <div class="spec value anchored p-2 text-sm rounded border-l-4
+               border-orange my-3 bg-gray-100" id="val-compare">
+               <a href="#val-compare" class="hover-link inline-block 
+                -ml-7 pr-7">
+                <span class="align-middle text-gray-200 transition text-sm
+                 font-sans opacity-0 hover:text-gray-700">#
+                </span>
+               </a>
+               <code class="font-normal text-sm">
+                <span><span class="font-semibold">val</span> compare : 
+                 <span>
+                  <a href="#type-t" class="cursor-pointer text-orange">t</a>
+                   <span class="">&#45;&gt;</span>
+                 </span> 
+                 <span>
+                  <a href="#type-t" class="cursor-pointer text-orange">t</a>
+                   <span class="">&#45;&gt;</span>
+                 </span> int
+                </span>
+               </code>
+              </div>
+              <div class="spec-doc">
+               <p class="mt-4">
+                <code class="font-normal text-sm">compare t1 t2</code>
+                 returns 0 if <code class="font-normal text-sm">t1</code>
+                 is equal to <code class="font-normal text-sm">t2</code>
+                , a negative integer if 
+                <code class="font-normal text-sm">t1</code> is less than
+                 <code class="font-normal text-sm">t2</code>, and a positive
+                 integer if <code class="font-normal text-sm">t1</code>
+                 is greater than <code class="font-normal text-sm">t2</code>
+                .
+               </p>
+              </div>
+             </div>
+             <div class="mt-8">
+              <div class="spec value anchored p-2 text-sm rounded border-l-4
+               border-orange my-3 bg-gray-100" id="val-min">
+               <a href="#val-min" class="hover-link inline-block -ml-7 pr-7">
+                <span class="align-middle text-gray-200 transition text-sm
+                 font-sans opacity-0 hover:text-gray-700">#
+                </span>
+               </a>
+               <code class="font-normal text-sm">
+                <span><span class="font-semibold">val</span> min : 
+                 <span>
+                  <a href="#type-t" class="cursor-pointer text-orange">t</a>
+                   <span class="">&#45;&gt;</span>
+                 </span> 
+                 <span>
+                  <a href="#type-t" class="cursor-pointer text-orange">t</a>
+                   <span class="">&#45;&gt;</span>
+                 </span> 
+                 <a href="#type-t" class="cursor-pointer text-orange">t</a>
+                </span>
+               </code>
+              </div>
+             </div>
+             <div class="mt-8">
+              <div class="spec value anchored p-2 text-sm rounded border-l-4
+               border-orange my-3 bg-gray-100" id="val-max">
+               <a href="#val-max" class="hover-link inline-block -ml-7 pr-7">
+                <span class="align-middle text-gray-200 transition text-sm
+                 font-sans opacity-0 hover:text-gray-700">#
+                </span>
+               </a>
+               <code class="font-normal text-sm">
+                <span><span class="font-semibold">val</span> max : 
+                 <span>
+                  <a href="#type-t" class="cursor-pointer text-orange">t</a>
+                   <span class="">&#45;&gt;</span>
+                 </span> 
+                 <span>
+                  <a href="#type-t" class="cursor-pointer text-orange">t</a>
+                   <span class="">&#45;&gt;</span>
+                 </span> 
+                 <a href="#type-t" class="cursor-pointer text-orange">t</a>
+                </span>
+               </code>
+              </div>
+             </div>
+            </div>
+            <div class="mt-8">
+             <div class="spec value anchored p-2 text-sm rounded border-l-4
+              border-orange my-3 bg-gray-100" id="val-ascending">
+              <a href="#val-ascending" class="hover-link inline-block 
+               -ml-7 pr-7">
+               <span class="align-middle text-gray-200 transition text-sm
+                font-sans opacity-0 hover:text-gray-700">#
+               </span>
+              </a>
+              <code class="font-normal text-sm">
+               <span><span class="font-semibold">val</span> ascending
+                 : 
+                <span>
+                 <a href="#type-t" class="cursor-pointer text-orange">t</a>
+                  <span class="">&#45;&gt;</span>
+                </span> 
+                <span>
+                 <a href="#type-t" class="cursor-pointer text-orange">t</a>
+                  <span class="">&#45;&gt;</span>
+                </span> int
+               </span>
+              </code>
+             </div>
+             <div class="spec-doc">
+              <p class="mt-4">
+               <code class="font-normal text-sm">ascending</code> is 
+               identical to <code class="font-normal text-sm">compare</code>
+               . 
+               <code class="font-normal text-sm">
+                descending x y = ascending y x
+               </code>. These are intended to be mnemonic when used like
+                
+               <code class="font-normal text-sm">List.sort ~compare:ascending
+               </code> and 
+               <code class="font-normal text-sm">
+                List.sort
+                      ~cmp:descending
+               </code>, since they cause the list to be sorted in ascending
+                or descending order, respectively.
+              </p>
+             </div>
+            </div>
+            <div class="mt-8">
+             <div class="spec value anchored p-2 text-sm rounded border-l-4
+              border-orange my-3 bg-gray-100" id="val-descending">
+              <a href="#val-descending" class="hover-link inline-block 
+               -ml-7 pr-7">
+               <span class="align-middle text-gray-200 transition text-sm
+                font-sans opacity-0 hover:text-gray-700">#
+               </span>
+              </a>
+              <code class="font-normal text-sm">
+               <span><span class="font-semibold">val</span> descending
+                 : 
+                <span>
+                 <a href="#type-t" class="cursor-pointer text-orange">t</a>
+                  <span class="">&#45;&gt;</span>
+                </span> 
+                <span>
+                 <a href="#type-t" class="cursor-pointer text-orange">t</a>
+                  <span class="">&#45;&gt;</span>
+                </span> int
+               </span>
+              </code>
+             </div>
+            </div>
+            <div class="mt-8">
+             <div class="spec value anchored p-2 text-sm rounded border-l-4
+              border-orange my-3 bg-gray-100" id="val-between">
+              <a href="#val-between" class="hover-link inline-block -ml-7
+               pr-7">
+               <span class="align-middle text-gray-200 transition text-sm
+                font-sans opacity-0 hover:text-gray-700">#
+               </span>
+              </a>
+              <code class="font-normal text-sm">
+               <span><span class="font-semibold">val</span> between : 
+                <span>
+                 <a href="#type-t" class="cursor-pointer text-orange">t</a>
+                  <span class="">&#45;&gt;</span>
+                </span> 
+                <span>low:
+                 <a href="#type-t" class="cursor-pointer text-orange">t</a>
+                  <span class="">&#45;&gt;</span>
+                </span> 
+                <span>high:
+                 <a href="#type-t" class="cursor-pointer text-orange">t</a>
+                  <span class="">&#45;&gt;</span>
+                </span> bool
+               </span>
+              </code>
+             </div>
+             <div class="spec-doc">
+              <p class="mt-4">
+               <code class="font-normal text-sm">between t ~low ~high</code>
+                means 
+               <code class="font-normal text-sm">low &lt;= t &lt;= high
+               </code>
+              </p>
+             </div>
+            </div>
+            <div class="mt-8">
+             <div class="spec value anchored p-2 text-sm rounded border-l-4
+              border-orange my-3 bg-gray-100" id="val-clamp_exn">
+              <a href="#val-clamp_exn" class="hover-link inline-block 
+               -ml-7 pr-7">
+               <span class="align-middle text-gray-200 transition text-sm
+                font-sans opacity-0 hover:text-gray-700">#
+               </span>
+              </a>
+              <code class="font-normal text-sm">
+               <span><span class="font-semibold">val</span> clamp_exn
+                 : 
+                <span>
+                 <a href="#type-t" class="cursor-pointer text-orange">t</a>
+                  <span class="">&#45;&gt;</span>
+                </span> 
+                <span>min:
+                 <a href="#type-t" class="cursor-pointer text-orange">t</a>
+                  <span class="">&#45;&gt;</span>
+                </span> 
+                <span>max:
+                 <a href="#type-t" class="cursor-pointer text-orange">t</a>
+                  <span class="">&#45;&gt;</span>
+                </span> 
+                <a href="#type-t" class="cursor-pointer text-orange">t</a>
+               </span>
+              </code>
+             </div>
+             <div class="spec-doc">
+              <p class="mt-4">
+               <code class="font-normal text-sm">clamp_exn t ~min ~max</code>
+                returns <code class="font-normal text-sm">t'</code>, 
+               the closest value to 
+               <code class="font-normal text-sm">t</code> such that 
+               <code class="font-normal text-sm">
+                between t' ~low:min ~high:max
+               </code> is true.
+              </p>
+              <p class="mt-4">Raises if 
+               <code class="font-normal text-sm">not (min &lt;= max)</code>
+               .
+              </p>
+             </div>
+            </div>
+            <div class="mt-8">
+             <div class="spec value anchored p-2 text-sm rounded border-l-4
+              border-orange my-3 bg-gray-100" id="val-clamp">
+              <a href="#val-clamp" class="hover-link inline-block -ml-7 pr-7">
+               <span class="align-middle text-gray-200 transition text-sm
+                font-sans opacity-0 hover:text-gray-700">#
+               </span>
+              </a>
+              <code class="font-normal text-sm">
+               <span><span class="font-semibold">val</span> clamp : 
+                <span>
+                 <a href="#type-t" class="cursor-pointer text-orange">t</a>
+                  <span class="">&#45;&gt;</span>
+                </span> 
+                <span>min:
+                 <a href="#type-t" class="cursor-pointer text-orange">t</a>
+                  <span class="">&#45;&gt;</span>
+                </span> 
+                <span>max:
+                 <a href="#type-t" class="cursor-pointer text-orange">t</a>
+                  <span class="">&#45;&gt;</span>
+                </span> 
+                <span>
+                 <a href="#type-t" class="cursor-pointer text-orange">t</a>
+                  
+                 <a href="../Or_error/index.html#type-t"
+                  class="cursor-pointer text-orange">Or_error.t
+                 </a>
+                </span>
+               </span>
+              </code>
+             </div>
+            </div>
+            <div class="mt-8">
+             <details open="open" class="relative">
+              <summary class="spec include p-2 text-sm rounded border-l-4
+               border-orange my-3 bg-gray-100">
+               <code class="font-normal text-sm">
+                <span><span class="font-semibold">include</span> 
+                 <a href="../Comparator/module-type-S/index.html"
+                  class="cursor-pointer text-orange">Comparator.S
+                 </a> <span class="font-semibold">with</span> 
+                 <span><span class="font-semibold">type</span> 
+                  <a href="../Comparator/module-type-S/index.html#type-t"
+                   class="cursor-pointer text-orange">t
+                  </a> := 
+                  <a href="#type-t" class="cursor-pointer text-orange">t</a>
+                 </span>
+                </span>
+               </code>
+              </summary>
+              <div class="mt-8">
+               <div class="spec type anchored p-2 text-sm rounded border-l-4
+                border-orange my-3 bg-gray-100" id="type-comparator_witness">
+                <a href="#type-comparator_witness" class="hover-link
+                 inline-block -ml-7 pr-7">
+                 <span class="align-middle text-gray-200 transition text-sm
+                  font-sans opacity-0 hover:text-gray-700">#
+                 </span>
+                </a>
+                <code class="font-normal text-sm">
+                 <span><span class="font-semibold">type</span> 
+                  comparator_witness
+                 </span>
+                </code>
+               </div>
+              </div>
+              <div class="mt-8">
+               <div class="spec value anchored p-2 text-sm rounded border-l-4
+                border-orange my-3 bg-gray-100" id="val-comparator">
+                <a href="#val-comparator" class="hover-link inline-block
+                 -ml-7 pr-7">
+                 <span class="align-middle text-gray-200 transition text-sm
+                  font-sans opacity-0 hover:text-gray-700">#
+                 </span>
+                </a>
+                <code class="font-normal text-sm">
+                 <span><span class="font-semibold">val</span> comparator
+                   : 
+                  <span>
+                   <span>(
+                    <a href="#type-t" class="cursor-pointer text-orange">t
+                    </a>, 
+                    <a href="#type-comparator_witness" class="cursor-pointer
+                     text-orange">comparator_witness
+                    </a>)
+                   </span> 
+                   <a href="../Comparator/index.html#type-comparator"
+                    class="cursor-pointer text-orange">Comparator.comparator
+                   </a>
+                  </span>
+                 </span>
+                </code>
+               </div>
+              </div>
+              <div class="absolute bg-gray-500 opacity-10 border-gray-500
+               rounded-lg border-r-8 rounded-l-none top-0 -right-6 bottom-0
+               w-5">
+              </div>
+             </details>
+            </div>
+            <div class="mt-8">
+             <div class="mt-8">
+              <div class="spec value anchored p-2 text-sm rounded border-l-4
+               border-orange my-3 bg-gray-100" id="val-validate_lbound">
+               <a href="#val-validate_lbound" class="hover-link inline-block
+                -ml-7 pr-7">
+                <span class="align-middle text-gray-200 transition text-sm
+                 font-sans opacity-0 hover:text-gray-700">#
+                </span>
+               </a>
+               <code class="font-normal text-sm">
+                <span><span class="font-semibold">val</span> validate_lbound
+                  : 
+                 <span>min:
+                  <span>
+                   <a href="#type-t" class="cursor-pointer text-orange">t</a>
+                    
+                   <a href="../Maybe_bound/index.html#type-t"
+                    class="cursor-pointer text-orange">Maybe_bound.t
+                   </a>
+                  </span> <span class="">&#45;&gt;</span>
+                 </span> 
+                 <span>
+                  <a href="#type-t" class="cursor-pointer text-orange">t</a>
+                   
+                  <a href="../Validate/index.html#type-check"
+                   class="cursor-pointer text-orange">Validate.check
+                  </a>
+                 </span>
+                </span>
+               </code>
+              </div>
+             </div>
+             <div class="mt-8">
+              <div class="spec value anchored p-2 text-sm rounded border-l-4
+               border-orange my-3 bg-gray-100" id="val-validate_ubound">
+               <a href="#val-validate_ubound" class="hover-link inline-block
+                -ml-7 pr-7">
+                <span class="align-middle text-gray-200 transition text-sm
+                 font-sans opacity-0 hover:text-gray-700">#
+                </span>
+               </a>
+               <code class="font-normal text-sm">
+                <span><span class="font-semibold">val</span> validate_ubound
+                  : 
+                 <span>max:
+                  <span>
+                   <a href="#type-t" class="cursor-pointer text-orange">t</a>
+                    
+                   <a href="../Maybe_bound/index.html#type-t"
+                    class="cursor-pointer text-orange">Maybe_bound.t
+                   </a>
+                  </span> <span class="">&#45;&gt;</span>
+                 </span> 
+                 <span>
+                  <a href="#type-t" class="cursor-pointer text-orange">t</a>
+                   
+                  <a href="../Validate/index.html#type-check"
+                   class="cursor-pointer text-orange">Validate.check
+                  </a>
+                 </span>
+                </span>
+               </code>
+              </div>
+             </div>
+             <div class="mt-8">
+              <div class="spec value anchored p-2 text-sm rounded border-l-4
+               border-orange my-3 bg-gray-100" id="val-validate_bound">
+               <a href="#val-validate_bound" class="hover-link inline-block
+                -ml-7 pr-7">
+                <span class="align-middle text-gray-200 transition text-sm
+                 font-sans opacity-0 hover:text-gray-700">#
+                </span>
+               </a>
+               <code class="font-normal text-sm">
+                <span><span class="font-semibold">val</span> validate_bound
+                  : 
+                 <span>min:
+                  <span>
+                   <a href="#type-t" class="cursor-pointer text-orange">t</a>
+                    
+                   <a href="../Maybe_bound/index.html#type-t"
+                    class="cursor-pointer text-orange">Maybe_bound.t
+                   </a>
+                  </span> <span class="">&#45;&gt;</span>
+                 </span> 
+                 <span>max:
+                  <span>
+                   <a href="#type-t" class="cursor-pointer text-orange">t</a>
+                    
+                   <a href="../Maybe_bound/index.html#type-t"
+                    class="cursor-pointer text-orange">Maybe_bound.t
+                   </a>
+                  </span> <span class="">&#45;&gt;</span>
+                 </span> 
+                 <span>
+                  <a href="#type-t" class="cursor-pointer text-orange">t</a>
+                   
+                  <a href="../Validate/index.html#type-check"
+                   class="cursor-pointer text-orange">Validate.check
+                  </a>
+                 </span>
+                </span>
+               </code>
+              </div>
+             </div>
+            </div>
+            <div class="absolute bg-gray-500 opacity-10 border-gray-500
+             rounded-lg border-r-8 rounded-l-none top-0 -right-6 bottom-0
+             w-5">
+            </div>
+           </details>
+          </div>
+          <div class="mt-8">
+           <details open="open" class="relative">
+            <summary class="spec include p-2 text-sm rounded border-l-4
+             border-orange my-3 bg-gray-100">
+             <code class="font-normal text-sm">
+              <span><span class="font-semibold">include</span> 
+               <a href="../Pretty_printer/module-type-S/index.html"
+                class="cursor-pointer text-orange">Pretty_printer.S
+               </a> <span class="font-semibold">with</span> 
+               <span><span class="font-semibold">type</span> 
+                <a href="../Pretty_printer/module-type-S/index.html#type-t"
+                 class="cursor-pointer text-orange">t
+                </a> := 
+                <a href="#type-t" class="cursor-pointer text-orange">t</a>
+               </span>
+              </span>
+             </code>
+            </summary>
+            <div class="mt-8">
+             <div class="spec value anchored p-2 text-sm rounded border-l-4
+              border-orange my-3 bg-gray-100" id="val-pp">
+              <a href="#val-pp" class="hover-link inline-block -ml-7 pr-7">
+               <span class="align-middle text-gray-200 transition text-sm
+                font-sans opacity-0 hover:text-gray-700">#
+               </span>
+              </a>
+              <code class="font-normal text-sm">
+               <span><span class="font-semibold">val</span> pp : 
+                <span>
+                 <a href="../Formatter/index.html#type-t"
+                  class="cursor-pointer text-orange">Formatter.t
+                 </a> <span class="">&#45;&gt;</span>
+                </span> 
+                <span>
+                 <a href="#type-t" class="cursor-pointer text-orange">t</a>
+                  <span class="">&#45;&gt;</span>
+                </span> unit
+               </span>
+              </code>
+             </div>
+            </div>
+            <div class="absolute bg-gray-500 opacity-10 border-gray-500
+             rounded-lg border-r-8 rounded-l-none top-0 -right-6 bottom-0
+             w-5">
+            </div>
+           </details>
+          </div>
+          <div class="absolute bg-gray-500 opacity-10 border-gray-500
+           rounded-lg border-r-8 rounded-l-none top-0 -right-6 bottom-0 
+           w-5">
+          </div>
+         </details>
+        </div>
+        <div class="mt-8">
+         <details open="open" class="relative">
+          <summary class="spec include p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100">
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">include</span> 
+             <a href="../Comparable/module-type-With_zero/index.html"
+              class="cursor-pointer text-orange">Comparable.With_zero
+             </a> <span class="font-semibold">with</span> 
+             <span><span class="font-semibold">type</span> 
+              <a href="../Comparable/module-type-With_zero/index.html#type-t"
+               class="cursor-pointer text-orange">t
+              </a> := 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span>
+            </span>
+           </code>
+          </summary>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-validate_positive">
+            <a href="#val-validate_positive" class="hover-link inline-block
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> validate_positive
+               : 
+              <span>
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+                
+               <a href="../Validate/index.html#type-check"
+                class="cursor-pointer text-orange">Validate.check
+               </a>
+              </span>
+             </span>
+            </code>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-validate_non_negative">
+            <a href="#val-validate_non_negative" class="hover-link
+             inline-block -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> 
+              validate_non_negative : 
+              <span>
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+                
+               <a href="../Validate/index.html#type-check"
+                class="cursor-pointer text-orange">Validate.check
+               </a>
+              </span>
+             </span>
+            </code>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-validate_negative">
+            <a href="#val-validate_negative" class="hover-link inline-block
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> validate_negative
+               : 
+              <span>
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+                
+               <a href="../Validate/index.html#type-check"
+                class="cursor-pointer text-orange">Validate.check
+               </a>
+              </span>
+             </span>
+            </code>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-validate_non_positive">
+            <a href="#val-validate_non_positive" class="hover-link
+             inline-block -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> 
+              validate_non_positive : 
+              <span>
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+                
+               <a href="../Validate/index.html#type-check"
+                class="cursor-pointer text-orange">Validate.check
+               </a>
+              </span>
+             </span>
+            </code>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-is_positive">
+            <a href="#val-is_positive" class="hover-link inline-block 
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> is_positive
+               : 
+              <span>
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+                <span class="">&#45;&gt;</span>
+              </span> bool
+             </span>
+            </code>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-is_non_negative">
+            <a href="#val-is_non_negative" class="hover-link inline-block
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> is_non_negative
+               : 
+              <span>
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+                <span class="">&#45;&gt;</span>
+              </span> bool
+             </span>
+            </code>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-is_negative">
+            <a href="#val-is_negative" class="hover-link inline-block 
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> is_negative
+               : 
+              <span>
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+                <span class="">&#45;&gt;</span>
+              </span> bool
+             </span>
+            </code>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-is_non_positive">
+            <a href="#val-is_non_positive" class="hover-link inline-block
+             -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> is_non_positive
+               : 
+              <span>
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+                <span class="">&#45;&gt;</span>
+              </span> bool
+             </span>
+            </code>
+           </div>
+          </div>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-sign">
+            <a href="#val-sign" class="hover-link inline-block -ml-7 pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> sign : 
+              <span>
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+                <span class="">&#45;&gt;</span>
+              </span> <span class="xref-unresolved">Base__Sign0.t</span>
+             </span>
+            </code>
+           </div>
+           <div class="spec-doc">
+            <p class="mt-4">Returns 
+             <code class="font-normal text-sm">Neg</code>, 
+             <code class="font-normal text-sm">Zero</code>, or 
+             <code class="font-normal text-sm">Pos</code> in a way consistent
+              with the above functions.
+            </p>
+           </div>
+          </div>
+          <div class="absolute bg-gray-500 opacity-10 border-gray-500
+           rounded-lg border-r-8 rounded-l-none top-0 -right-6 bottom-0 
+           w-5">
+          </div>
+         </details>
+        </div>
+        <div class="mt-8">
+         <details open="open" class="relative">
+          <summary class="spec include p-2 text-sm rounded border-l-4
+           border-orange my-3 bg-gray-100">
+           <code class="font-normal text-sm">
+            <span><span class="font-semibold">include</span> 
+             <a href="../Invariant/module-type-S/index.html"
+              class="cursor-pointer text-orange">Invariant.S
+             </a> <span class="font-semibold">with</span> 
+             <span><span class="font-semibold">type</span> 
+              <a href="../Invariant/module-type-S/index.html#type-t"
+               class="cursor-pointer text-orange">t
+              </a> := 
+              <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             </span>
+            </span>
+           </code>
+          </summary>
+          <div class="mt-8">
+           <div class="spec value anchored p-2 text-sm rounded border-l-4
+            border-orange my-3 bg-gray-100" id="val-invariant">
+            <a href="#val-invariant" class="hover-link inline-block -ml-7
+             pr-7">
+             <span class="align-middle text-gray-200 transition text-sm
+              font-sans opacity-0 hover:text-gray-700">#
+             </span>
+            </a>
+            <code class="font-normal text-sm">
+             <span><span class="font-semibold">val</span> invariant : 
+              <span>
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+                <span class="">&#45;&gt;</span>
+              </span> unit
+             </span>
+            </code>
+           </div>
+          </div>
+          <div class="absolute bg-gray-500 opacity-10 border-gray-500
+           rounded-lg border-r-8 rounded-l-none top-0 -right-6 bottom-0 
+           w-5">
+          </div>
+         </details>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-validate_ordinary">
+          <a href="#val-validate_ordinary" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> validate_ordinary
+             : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              
+             <a href="../Validate/index.html#type-check"
+              class="cursor-pointer text-orange">Validate.check
+             </a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">validate_ordinary</code>
+            fails if class is <code class="font-normal text-sm">Nan</code>
+            or <code class="font-normal text-sm">Infinite</code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-nan">
+          <a href="#val-nan" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> nan : 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-infinity">
+          <a href="#val-infinity" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> infinity : 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-neg_infinity">
+          <a href="#val-neg_infinity" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> neg_infinity : 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-max_value">
+          <a href="#val-max_value" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> max_value : 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Equal to 
+           <code class="font-normal text-sm">infinity</code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-min_value">
+          <a href="#val-min_value" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> min_value : 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Equal to 
+           <code class="font-normal text-sm">neg_infinity</code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-zero">
+          <a href="#val-zero" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> zero : 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-one">
+          <a href="#val-one" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> one : 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-minus_one">
+          <a href="#val-minus_one" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> minus_one : 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-pi">
+          <a href="#val-pi" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> pi : 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc"><p class="mt-4">The constant pi.</p></div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-sqrt_pi">
+          <a href="#val-sqrt_pi" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sqrt_pi : 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc"><p class="mt-4">The constant sqrt(pi).</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-sqrt_2pi">
+          <a href="#val-sqrt_2pi" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sqrt_2pi : 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc"><p class="mt-4">The constant sqrt(2 * pi).</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-euler">
+          <a href="#val-euler" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> euler : 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Euler-Mascheroni constant (γ).</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-epsilon_float">
+          <a href="#val-epsilon_float" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> epsilon_float
+             : <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">The difference between 1.0 and the smallest
+            exactly representable floating-point number greater than 
+           1.0. That is:
+          </p>
+          <p class="mt-4">
+           <code class="font-normal text-sm">
+            epsilon_float = (one_ulp `Up 1.0) -. 1.0
+           </code>
+          </p>
+          <p class="mt-4">This gives the relative accuracy of type 
+           <code class="font-normal text-sm">t</code>, in the sense that
+            for numbers on the order of 
+           <code class="font-normal text-sm">x</code>, the roundoff error
+            is on the order of 
+           <code class="font-normal text-sm">x *. float_epsilon</code>
+           .
+          </p>
+          <p class="mt-4">See also: 
+           <a href="http://en.wikipedia.org/wiki/Machine_epsilon"
+            class="cursor-pointer text-orange">Machine epsilon
+           </a>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-max_finite_value">
+          <a href="#val-max_finite_value" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> max_finite_value
+             : <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <code class="font-normal text-sm">
+           min_positive_subnormal_value = 2 ** -1074
+          </code>
+         </li>
+         <li class="ml-4">
+          <code class="font-normal text-sm">
+           min_positive_normal_value    = 2 ** -1022
+          </code>
+         </li>
+        </ul>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100"
+          id="val-min_positive_subnormal_value">
+          <a href="#val-min_positive_subnormal_value" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            min_positive_subnormal_value : 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-min_positive_normal_value">
+          <a href="#val-min_positive_normal_value" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            min_positive_normal_value : 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-to_int64_preserve_order">
+          <a href="#val-to_int64_preserve_order" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            to_int64_preserve_order : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> <span>int64 option</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">An order-preserving bijection between all floats
+            except for nans, and all int64s with absolute value smaller
+            than or equal to 
+           <code class="font-normal text-sm">2**63 - 2**52</code>. Note
+            both 0. and -0. map to 0L.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100"
+          id="val-to_int64_preserve_order_exn">
+          <a href="#val-to_int64_preserve_order_exn" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            to_int64_preserve_order_exn : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> int64
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-of_int64_preserve_order">
+          <a href="#val-of_int64_preserve_order" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            of_int64_preserve_order : 
+            <span>int64 <span class="">&#45;&gt;</span></span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Returns 
+           <code class="font-normal text-sm">nan</code> if the absolute
+            value of the argument is too large.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-one_ulp">
+          <a href="#val-one_ulp" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> one_ulp : 
+            <span><span>[ `Up <span>| `Down</span> ]</span> 
+             <span class="">&#45;&gt;</span>
+            </span> 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">The next or previous representable float. ULP
+            stands for &quot;unit of least precision&quot;, and is the
+            spacing between floating point numbers. Both 
+           <code class="font-normal text-sm">one_ulp `Up infinity</code>
+            and 
+           <code class="font-normal text-sm">one_ulp `Down neg_infinity
+           </code> return a nan.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-of_int">
+          <a href="#val-of_int" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> of_int : 
+            <span>int <span class="">&#45;&gt;</span></span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Note that this doesn't round trip in either
+            direction. For example, 
+           <code class="font-normal text-sm">
+            Float.to_int
+                (Float.of_int max_int) &lt;&gt; max_int
+           </code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-to_int">
+          <a href="#val-to_int" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> to_int : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-of_int63">
+          <a href="#val-of_int63" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> of_int63 : 
+            <span>
+             <a href="../Int63/index.html#type-t" class="cursor-pointer
+              text-orange">Int63.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-of_int64">
+          <a href="#val-of_int64" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> of_int64 : 
+            <span>int64 <span class="">&#45;&gt;</span></span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-to_int64">
+          <a href="#val-to_int64" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> to_int64 : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> int64
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-round">
+          <a href="#val-round" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> round : 
+            <span>?dir:
+             <span>[ `Zero <span>| `Nearest</span> <span>| `Up</span>
+               <span>| `Down</span> ]
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">round</code>
+            rounds a float to an integer float. 
+           <code class="font-normal text-sm">iround{,_exn}</code> rounds
+            a float to an int. Both round according to a direction 
+           <code class="font-normal text-sm">dir</code>, with default
+            <code class="font-normal text-sm">dir</code> being 
+           <code class="font-normal text-sm">`Nearest</code>.
+          </p>
+          <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+                 | `Down    | rounds toward Float.neg_infinity               
+                        |
+                 | `Up      | rounds toward Float.infinity                   
+                        |
+                 | `Nearest | rounds to the nearest int (&quot;round
+           half-integers up&quot;)         |
+                 | `Zero    | rounds toward zero                             
+                        |
+          </pre>
+          <p class="mt-4"><code class="font-normal text-sm">iround_exn</code>
+            raises when trying to handle nan or trying to handle a float
+            outside the range [float min_int, float max_int).
+          </p>
+          <p class="mt-4">Here are some examples for 
+           <code class="font-normal text-sm">round</code> for each direction:
+          </p>
+          <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+                 | `Down    | [-2.,-1.)   to -2. | [-1.,0.)   to -1. |
+           [0.,1.) to 0., [1.,2.) to 1. |
+                 | `Up      | (-2.,-1.]   to -1. | (-1.,0.]   to -0. |
+           (0.,1.] to 1., (1.,2.] to 2. |
+                 | `Zero    | (-2.,-1.]   to -1. | (-1.,1.)   to 0.  |
+           [1.,2.) to 1.                |
+                 | `Nearest | [-1.5,-0.5) to -1. | [-0.5,0.5) to 0.  |
+           [0.5,1.5) to 1.              |
+          </pre>
+          <p class="mt-4">For convenience, versions of these functions
+            with the <code class="font-normal text-sm">dir</code> argument
+            hard-coded are provided. If you are writing performance-critical
+            code you should use the versions with the hard-coded arguments
+            (e.g. <code class="font-normal text-sm">iround_down_exn</code>
+           ). The <code class="font-normal text-sm">_exn</code> ones 
+           are the fastest.
+          </p><p class="mt-4">The following properties hold:</p>
+          <ul class="list-disc mt-2 mb-4">
+           <li class="ml-4">
+            <code class="font-normal text-sm">of_int (iround_*_exn i) = i
+            </code> for any float <code class="font-normal text-sm">i</code>
+             that is an integer with 
+            <code class="font-normal text-sm">min_int &lt;= i &lt;= max_int
+            </code>.
+           </li>
+          </ul>
+          <ul class="list-disc mt-2 mb-4">
+           <li class="ml-4">
+            <code class="font-normal text-sm">round_* i = i</code> for
+             any float <code class="font-normal text-sm">i</code> that
+             is an integer.
+           </li>
+          </ul>
+          <ul class="list-disc mt-2 mb-4">
+           <li class="ml-4">
+            <code class="font-normal text-sm">iround_*_exn (of_int i) = i
+            </code> for any int <code class="font-normal text-sm">i</code>
+             with 
+            <code class="font-normal text-sm">-2**52 &lt;= i &lt;= 2**52
+            </code>.
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-iround">
+          <a href="#val-iround" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> iround : 
+            <span>?dir:
+             <span>[ `Zero <span>| `Nearest</span> <span>| `Up</span>
+               <span>| `Down</span> ]
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> <span>int option</span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-iround_exn">
+          <a href="#val-iround_exn" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> iround_exn : 
+            <span>?dir:
+             <span>[ `Zero <span>| `Nearest</span> <span>| `Up</span>
+               <span>| `Down</span> ]
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-round_towards_zero">
+          <a href="#val-round_towards_zero" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> round_towards_zero
+             : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-round_down">
+          <a href="#val-round_down" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> round_down : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-round_up">
+          <a href="#val-round_up" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> round_up : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-round_nearest">
+          <a href="#val-round_nearest" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> round_nearest
+             : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc"><p class="mt-4">Rounds half integers up.</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-round_nearest_half_to_even">
+          <a href="#val-round_nearest_half_to_even" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            round_nearest_half_to_even : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Rounds half integers to the even integer.</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-iround_towards_zero">
+          <a href="#val-iround_towards_zero" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> iround_towards_zero
+             : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> <span>int option</span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-iround_down">
+          <a href="#val-iround_down" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> iround_down : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> <span>int option</span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-iround_up">
+          <a href="#val-iround_up" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> iround_up : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> <span>int option</span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-iround_nearest">
+          <a href="#val-iround_nearest" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> iround_nearest
+             : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> <span>int option</span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-iround_towards_zero_exn">
+          <a href="#val-iround_towards_zero_exn" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            iround_towards_zero_exn : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-iround_down_exn">
+          <a href="#val-iround_down_exn" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> iround_down_exn
+             : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-iround_up_exn">
+          <a href="#val-iround_up_exn" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> iround_up_exn
+             : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-iround_nearest_exn">
+          <a href="#val-iround_nearest_exn" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> iround_nearest_exn
+             : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-int63_round_down_exn">
+          <a href="#val-int63_round_down_exn" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> int63_round_down_exn
+             : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Int63/index.html#type-t" class="cursor-pointer
+             text-orange">Int63.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-int63_round_up_exn">
+          <a href="#val-int63_round_up_exn" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> int63_round_up_exn
+             : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Int63/index.html#type-t" class="cursor-pointer
+             text-orange">Int63.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-int63_round_nearest_exn">
+          <a href="#val-int63_round_nearest_exn" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            int63_round_nearest_exn : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Int63/index.html#type-t" class="cursor-pointer
+             text-orange">Int63.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-iround_lbound">
+          <a href="#val-iround_lbound" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> iround_lbound
+             : <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">If 
+           <code class="font-normal text-sm">
+            f &lt;= iround_lbound || f &gt;= iround_ubound
+           </code>, then <code class="font-normal text-sm">iround*</code>
+            functions will refuse to round 
+           <code class="font-normal text-sm">f</code>, returning 
+           <code class="font-normal text-sm">None</code> or raising as
+            appropriate.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-iround_ubound">
+          <a href="#val-iround_ubound" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> iround_ubound
+             : <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-round_significant">
+          <a href="#val-round_significant" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> round_significant
+             : <span>float <span class="">&#45;&gt;</span></span> 
+            <span>significant_digits:int <span class="">&#45;&gt;</span>
+            </span> float
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">
+            round_significant x ~significant_digits:n
+           </code> rounds to the nearest number with 
+           <code class="font-normal text-sm">n</code> significant digits.
+            More precisely: it returns the representable float closest
+            to 
+           <code class="font-normal text-sm">
+            x
+                rounded to n significant digits
+           </code>. It is meant to be equivalent to 
+           <code class="font-normal text-sm">
+            sprintf &quot;%.*g&quot; n x
+                |&gt; Float.of_string
+           </code> but faster (10x-15x). Exact ties are resolved as 
+           round-to-even.
+          </p>
+          <p class="mt-4">However, it might in rare cases break the contract
+            above.
+          </p>
+          <p class="mt-4">It might in some cases appear as if it violates
+            the round-to-even rule:
+          </p>
+          <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+           <code class="font-normal text-sm">
+            let x = 4.36083208835;;
+            let z = 4.3608320883;;
+            assert (z = fast_approx_round_significant x ~sf:11)
+           </code>
+          </pre>
+          <p class="mt-4">But in this case so does sprintf, since 
+           <code class="font-normal text-sm">x</code> as a float is slightly
+            under-represented:
+          </p>
+          <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+           <code class="font-normal text-sm">
+            sprintf &quot;%.11g&quot; x = &quot;4.3608320883&quot;;;
+            sprintf &quot;%.30g&quot; x =
+            &quot;4.36083208834999958014577714493&quot;
+           </code>
+          </pre>
+          <p class="mt-4">More importantly, 
+           <code class="font-normal text-sm">round_significant</code>
+            might sometimes give a different result than 
+           <code class="font-normal text-sm">
+            sprintf ... |&gt; Float.of_string
+           </code> because it round-trips through an integer. For example,
+            the decimal fraction 0.009375 is slightly under-represented
+            as a float:
+          </p>
+          <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+           <code class="font-normal text-sm">
+            sprintf &quot;%.17g&quot; 0.009375 =
+            &quot;0.0093749999999999997&quot; 
+           </code>
+          </pre><p class="mt-4">But:</p>
+          <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+           <code class="font-normal text-sm">0.009375 *. 1e5 = 937.5 </code>
+          </pre><p class="mt-4">Therefore:</p>
+          <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+           <code class="font-normal text-sm">
+            round_significant 0.009375 ~significant_digits:3 = 0.00938 
+           </code>
+          </pre><p class="mt-4">whereas:</p>
+          <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+           <code class="font-normal text-sm">
+            sprintf &quot;%.3g&quot; 0.009375 = &quot;0.00937&quot; 
+           </code>
+          </pre>
+          <p class="mt-4">In general we believe (and have tested on numerous
+            examples) that the following holds for all x:
+          </p>
+          <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+           <code class="font-normal text-sm">
+            let s = sprintf &quot;%.*g&quot; significant_digits x |&gt;
+            Float.of_string in
+            s = round_significant ~significant_digits x
+            || s = round_significant ~significant_digits (one_ulp `Up x)
+            || s = round_significant ~significant_digits (one_ulp `Down x)
+           </code>
+          </pre>
+          <p class="mt-4">Also, for float representations of decimal 
+           fractions (like 0.009375), 
+           <code class="font-normal text-sm">round_significant</code>
+            is more likely to give the &quot;desired&quot; result than
+            
+           <code class="font-normal text-sm">sprintf ... |&gt;
+                                                 of_string
+           </code> (that is, the result of rounding the decimal fraction,
+            rather than its float representation). But it's not guaranteed
+            either--see the 
+           <code class="font-normal text-sm">4.36083208835</code> example
+            above.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-round_decimal">
+          <a href="#val-round_decimal" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> round_decimal
+             : <span>float <span class="">&#45;&gt;</span></span> 
+            <span>decimal_digits:int <span class="">&#45;&gt;</span></span>
+             float
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">
+            round_decimal x ~decimal_digits:n
+           </code> rounds <code class="font-normal text-sm">x</code> 
+           to the nearest <code class="font-normal text-sm">10**(-n)</code>
+           . For positive <code class="font-normal text-sm">n</code> 
+           it is meant to be equivalent to 
+           <code class="font-normal text-sm">
+            sprintf &quot;%.*f&quot; n x |&gt; Float.of_string
+           </code>, but faster.
+          </p>
+          <p class="mt-4">All the considerations mentioned in 
+           <code class="font-normal text-sm">round_significant</code>
+            apply (both functions use the same code path).
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-is_nan">
+          <a href="#val-is_nan" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> is_nan : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> bool
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-is_inf">
+          <a href="#val-is_inf" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> is_inf : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> bool
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Includes positive and negative 
+           <code class="font-normal text-sm">Float.infinity</code>.
+          </p>
+         </div>
+        </div>
+        <p class="mt-4"><code class="font-normal text-sm">min_inan</code>
+          and <code class="font-normal text-sm">max_inan</code> return,
+          respectively, the min and max of the two given values, except
+          when one of the values is a 
+         <code class="font-normal text-sm">nan</code>, in which case 
+         the other is returned. (Returns 
+         <code class="font-normal text-sm">nan</code> if both arguments
+          are <code class="font-normal text-sm">nan</code>.)
+        </p>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-min_inan">
+          <a href="#val-min_inan" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> min_inan : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-max_inan">
+          <a href="#val-max_inan" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> max_inan : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-(+)">
+          <a href="#val-(+)" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> (+) : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-(-)">
+          <a href="#val-(-)" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> (-) : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-(/)">
+          <a href="#val-(/)" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> (/) : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-(*)">
+          <a href="#val-(*)" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> (*) : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-(**)">
+          <a href="#val-(**)" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> (**) : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-(~-)">
+          <a href="#val-(~-)" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> (~-) : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec module anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="module-Parts">
+          <a href="#module-Parts" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">module</span> </span>
+           <span>
+            <a href="Parts/index.html" class="cursor-pointer text-orange">
+             Parts
+            </a>
+           </span>
+           <span> : <span class="font-semibold">sig</span> ... 
+            <span class="font-semibold">end</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Returns the fractional part and the whole (i.e.,
+            integer) part. For example, 
+           <code class="font-normal text-sm">modf
+                                                 (-3.14)</code>
+            returns 
+           <code class="font-normal text-sm">
+            { fractional = -0.14; integral = -3.; }
+           </code>!
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-modf">
+          <a href="#val-modf" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> modf : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="Parts/index.html#type-t" class="cursor-pointer
+             text-orange">Parts.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-mod_float">
+          <a href="#val-mod_float" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> mod_float : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">mod_float x y</code> returns
+            a result with the same sign as 
+           <code class="font-normal text-sm">x</code>. It returns 
+           <code class="font-normal text-sm">nan</code> if 
+           <code class="font-normal text-sm">y</code> is 
+           <code class="font-normal text-sm">0</code>. It is basically
+          </p>
+          <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+           <code class="font-normal text-sm">
+            let mod_float x y = x -. float(truncate(x/.y)) *. y
+           </code>
+          </pre><p class="mt-4">not</p>
+          <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+           <code class="font-normal text-sm">
+            let mod_float x y = x -. floor(x/.y) *. y 
+           </code>
+          </pre>
+          <p class="mt-4">and therefore resembles 
+           <code class="font-normal text-sm">mod</code> on integers more
+            than <code class="font-normal text-sm">%</code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-add">
+          <a href="#val-add" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> add : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Ordinary functions for arithmetic operations</p>
+          <p class="mt-4">These are for modules that inherit from 
+           <code class="font-normal text-sm">t</code>, since the infix
+            operators are more convenient.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-sub">
+          <a href="#val-sub" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sub : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-neg">
+          <a href="#val-neg" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> neg : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-scale">
+          <a href="#val-scale" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> scale : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-abs">
+          <a href="#val-abs" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> abs : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec module anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="module-O">
+          <a href="#module-O" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">module</span> </span>
+           <span>
+            <a href="O/index.html" class="cursor-pointer text-orange">O</a>
+           </span>
+           <span> : <span class="font-semibold">sig</span> ... 
+            <span class="font-semibold">end</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">A sub-module designed to be opened to make 
+           working with floats more convenient.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec module anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="module-O_dot">
+          <a href="#module-O_dot" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">module</span> </span>
+           <span>
+            <a href="O_dot/index.html" class="cursor-pointer text-orange">
+             O_dot
+            </a>
+           </span>
+           <span> : <span class="font-semibold">sig</span> ... 
+            <span class="font-semibold">end</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Similar to 
+           <code class="font-normal text-sm">O</code>, except that operators
+            are suffixed with a dot, allowing one to have both int and
+            float operators in scope simultaneously.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-to_string">
+          <a href="#val-to_string" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> to_string : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">to_string x</code> builds
+            a string <code class="font-normal text-sm">s</code> representing
+            the float <code class="font-normal text-sm">x</code> that
+            guarantees the round trip, that is such that 
+           <code class="font-normal text-sm">
+            Float.equal x (Float.of_string s)
+           </code>.
+          </p>
+          <p class="mt-4">It usually yields as few significant digits
+            as possible. That is, it won't print 
+           <code class="font-normal text-sm">3.14</code> as 
+           <code class="font-normal text-sm">3.1400000000000001243</code>
+           . The only exception is that occasionally it will output 17
+            significant digits when the number can be represented with
+            just 16 (but not 15 or less) of them.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-to_string_hum">
+          <a href="#val-to_string_hum" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> to_string_hum
+             : <span>?delimiter:char <span class="">&#45;&gt;</span></span>
+             <span>?decimals:int <span class="">&#45;&gt;</span></span>
+             <span>?strip_zero:bool <span class="">&#45;&gt;</span></span>
+            
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Pretty print float, for example 
+           <code class="font-normal text-sm">
+            to_string_hum ~decimals:3 1234.1999 = &quot;1_234.200&quot;
+           </code> 
+           <code class="font-normal text-sm">
+            to_string_hum ~decimals:3 ~strip_zero:true 1234.1999 =
+            &quot;1_234.2&quot; 
+           </code>. No delimiters are inserted to the right of the decimal.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-to_padded_compact_string">
+          <a href="#val-to_padded_compact_string" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            to_padded_compact_string : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Produce a lossy compact string representation
+            of the float. The float is scaled by an appropriate power
+            of 1000 and rendered with one digit after the decimal point,
+            except that the decimal point is written as '.', 'k', 'm',
+            'g', 't', or 'p' to indicate the scale factor. (However, 
+           if the digit after the &quot;decimal&quot; point is 0, it 
+           is suppressed.)
+          </p>
+          <p class="mt-4">The smallest scale factor that allows the number
+            to be rendered with at most 3 digits to the left of the decimal
+            is used. If the number is too large for this format (i.e.,
+            the absolute value is at least 999.95e15), scientific notation
+            is used instead. E.g.:
+          </p>
+          <ul class="list-disc mt-2 mb-4">
+           <li class="ml-4">
+            <code class="font-normal text-sm">
+             to_padded_compact_string     (-0.01) =  &quot;-0  &quot;
+            </code>
+           </li>
+           <li class="ml-4">
+            <code class="font-normal text-sm">
+             to_padded_compact_string       1.89  =   &quot;1.9&quot;
+            </code>
+           </li>
+           <li class="ml-4">
+            <code class="font-normal text-sm">
+             to_padded_compact_string 999_949.99  = &quot;999k9&quot;
+            </code>
+           </li>
+           <li class="ml-4">
+            <code class="font-normal text-sm">
+             to_padded_compact_string 999_950.    =   &quot;1m &quot;
+            </code>
+           </li>
+          </ul>
+          <p class="mt-4">In the case where the digit after the 
+           &quot;decimal&quot;, or the &quot;decimal&quot; itself is 
+           omitted, the numbers are padded on the right with spaces to
+            ensure the last two columns of the string always correspond
+            to the decimal and the digit afterward (except in the case
+            of scientific notation, where the exponent is the right-most
+            element in the string and could take up to four characters).
+          </p>
+          <ul class="list-disc mt-2 mb-4">
+           <li class="ml-4">
+            <code class="font-normal text-sm">
+             to_padded_compact_string    1. =    &quot;1  &quot;
+            </code>
+           </li>
+           <li class="ml-4">
+            <code class="font-normal text-sm">
+             to_padded_compact_string  1.e6 =    &quot;1m &quot;
+            </code>
+           </li>
+           <li class="ml-4">
+            <code class="font-normal text-sm">
+             to_padded_compact_string 1.e16 = &quot;1.e+16&quot;
+            </code>
+           </li>
+           <li class="ml-4">
+            <code class="font-normal text-sm">
+             to_padded_compact_string max_finite_value = &quot;1.8e+308&quot;
+            </code>
+           </li>
+          </ul>
+          <p class="mt-4">Numbers in the range -.05 &lt; x &lt; .05 are
+            rendered as &quot;0 &quot; or &quot;-0 &quot;.
+          </p><p class="mt-4">Other cases:</p>
+          <ul class="list-disc mt-2 mb-4">
+           <li class="ml-4">
+            <code class="font-normal text-sm">
+             to_padded_compact_string nan          =  &quot;nan  &quot;
+            </code>
+           </li>
+           <li class="ml-4">
+            <code class="font-normal text-sm">
+             to_padded_compact_string infinity     =  &quot;inf  &quot;
+            </code>
+           </li>
+           <li class="ml-4">
+            <code class="font-normal text-sm">
+             to_padded_compact_string neg_infinity = &quot;-inf  &quot;
+            </code>
+           </li>
+          </ul>
+          <p class="mt-4">Exact ties are resolved to even in the decimal:</p>
+          <ul class="list-disc mt-2 mb-4">
+           <li class="ml-4">
+            <code class="font-normal text-sm">
+             to_padded_compact_string      3.25 =  &quot;3.2&quot;
+            </code>
+           </li>
+           <li class="ml-4">
+            <code class="font-normal text-sm">
+             to_padded_compact_string      3.75 =  &quot;3.8&quot;
+            </code>
+           </li>
+           <li class="ml-4">
+            <code class="font-normal text-sm">
+             to_padded_compact_string 33_250.   = &quot;33k2&quot;
+            </code>
+           </li>
+           <li class="ml-4">
+            <code class="font-normal text-sm">
+             to_padded_compact_string 33_350.   = &quot;33k4&quot;
+            </code>
+           </li>
+          </ul>
+          <p class="mt-4">
+           <code class="font-normal text-sm">to_padded_compact_string</code>
+            is defined in terms of 
+           <code class="font-normal text-sm">to_padded_compact_string_custom
+           </code> below as
+          </p>
+          <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+           <code class="font-normal text-sm">
+            let to_padded_compact_string t =
+              to_padded_compact_string_custom t ?prefix:None
+                ~kilo:&quot;k&quot; ~mega:&quot;m&quot; ~giga:&quot;g&quot;
+            ~tera:&quot;t&quot; ~peta:&quot;p&quot;
+                ()
+           </code>
+          </pre>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100"
+          id="val-to_padded_compact_string_custom">
+          <a href="#val-to_padded_compact_string_custom" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            to_padded_compact_string_custom : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>?prefix:string <span class="">&#45;&gt;</span></span>
+             <span>kilo:string <span class="">&#45;&gt;</span></span>
+            
+            <span>mega:string <span class="">&#45;&gt;</span></span> 
+            <span>giga:string <span class="">&#45;&gt;</span></span> 
+            <span>tera:string <span class="">&#45;&gt;</span></span> 
+            <span>?peta:string <span class="">&#45;&gt;</span></span>
+             <span>unit <span class="">&#45;&gt;</span></span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Similar to 
+           <code class="font-normal text-sm">to_padded_compact_string</code>
+            but allows the user to provide different abbreviations. This
+            can be useful to display currency values, e.g. $1mm3, where
+            prefix=&quot;$&quot;, mega=&quot;mm&quot;.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-int_pow">
+          <a href="#val-int_pow" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> int_pow : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> <span>int <span class="">&#45;&gt;</span></span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">int_pow x n</code> computes
+            <code class="font-normal text-sm">x ** float n</code> via
+            repeated squaring. It is generally much faster than 
+           <code class="font-normal text-sm">**</code>.
+          </p>
+          <p class="mt-4">Note that 
+           <code class="font-normal text-sm">int_pow x 0</code> always
+            returns <code class="font-normal text-sm">1.</code>, even
+            if <code class="font-normal text-sm">x = nan</code>. This
+            coincides with <code class="font-normal text-sm">x ** 0.</code>
+            and is intentional.
+          </p>
+          <p class="mt-4">For 
+           <code class="font-normal text-sm">n &gt;= 0</code> the result
+            is identical to an n-fold product of 
+           <code class="font-normal text-sm">x</code> with itself under
+            <code class="font-normal text-sm">*.</code>, with a certain
+            placement of parentheses. For 
+           <code class="font-normal text-sm">n &lt; 0</code> the result
+            is identical to 
+           <code class="font-normal text-sm">int_pow (1. /. x) (-n)</code>
+           .
+          </p>
+          <p class="mt-4">The error will be on the order of 
+           <code class="font-normal text-sm">|n|</code> ulps, essentially
+            the same as if you perturbed 
+           <code class="font-normal text-sm">x</code> by up to a ulp 
+           and then exponentiated exactly.
+          </p>
+          <p class="mt-4">Benchmarks show a factor of 5-10 speedup (relative
+            to <code class="font-normal text-sm">**</code>) for exponents
+            up to about 1000 (approximately 10ns vs. 70ns). For larger
+            exponents the advantage is smaller but persists into the 
+           trillions. For a recent or more detailed comparison, run the
+            benchmarks.
+          </p>
+          <p class="mt-4">Depending on context, calling this function
+            might or might not allocate 2 minor words. Even if called
+            in a way that causes allocation, it still appears to be faster
+            than <code class="font-normal text-sm">**</code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-square">
+          <a href="#val-square" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> square : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">square x</code>
+            returns <code class="font-normal text-sm">x *. x</code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-ldexp">
+          <a href="#val-ldexp" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> ldexp : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> <span>int <span class="">&#45;&gt;</span></span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">ldexp x n</code>
+            returns <code class="font-normal text-sm">x *. 2 ** n</code>
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-frexp">
+          <a href="#val-frexp" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> frexp : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             * int
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">frexp f</code>
+            returns the pair of the significant and the exponent of 
+           <code class="font-normal text-sm">f</code>. When 
+           <code class="font-normal text-sm">f</code> is zero, the 
+           significant <code class="font-normal text-sm">x</code> and
+            the exponent <code class="font-normal text-sm">n</code> of
+            <code class="font-normal text-sm">f</code> are equal to zero.
+            When <code class="font-normal text-sm">f</code> is non-zero,
+            they are defined by 
+           <code class="font-normal text-sm">f = x *. 2 ** n</code> and
+            <code class="font-normal text-sm">0.5 &lt;= x &lt; 1.0</code>
+           .
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-log10">
+          <a href="#val-log10" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> log10 : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc"><p class="mt-4">Base 10 logarithm.</p></div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-expm1">
+          <a href="#val-expm1" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> expm1 : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">expm1 x</code>
+            computes <code class="font-normal text-sm">exp x -. 1.0</code>
+           , giving numerically-accurate results even if 
+           <code class="font-normal text-sm">x</code> is close to 
+           <code class="font-normal text-sm">0.0</code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-log1p">
+          <a href="#val-log1p" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> log1p : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">log1p x</code>
+            computes <code class="font-normal text-sm">log(1.0 +. x)</code>
+            (natural logarithm), giving numerically-accurate results 
+           even if <code class="font-normal text-sm">x</code> is close
+            to <code class="font-normal text-sm">0.0</code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-copysign">
+          <a href="#val-copysign" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copysign : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">copysign x y</code> returns
+            a float whose absolute value is that of 
+           <code class="font-normal text-sm">x</code> and whose sign 
+           is that of <code class="font-normal text-sm">y</code>. If 
+           <code class="font-normal text-sm">x</code> is 
+           <code class="font-normal text-sm">nan</code>, returns 
+           <code class="font-normal text-sm">nan</code>. If 
+           <code class="font-normal text-sm">y</code> is 
+           <code class="font-normal text-sm">nan</code>, returns either
+            <code class="font-normal text-sm">x</code> or 
+           <code class="font-normal text-sm">-. x</code>, but it is not
+            specified which.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-cos">
+          <a href="#val-cos" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> cos : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Cosine. Argument is in radians.</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-sin">
+          <a href="#val-sin" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sin : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Sine. Argument is in radians.</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-tan">
+          <a href="#val-tan" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> tan : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Tangent. Argument is in radians.</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-acos">
+          <a href="#val-acos" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> acos : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Arc cosine. The argument must fall within the
+            range <code class="font-normal text-sm">[-1.0, 1.0]</code>
+           . Result is in radians and is between 
+           <code class="font-normal text-sm">0.0</code> and 
+           <code class="font-normal text-sm">pi</code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-asin">
+          <a href="#val-asin" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> asin : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Arc sine. The argument must fall within the
+            range <code class="font-normal text-sm">[-1.0, 1.0]</code>
+           . Result is in radians and is between 
+           <code class="font-normal text-sm">-pi/2</code> and 
+           <code class="font-normal text-sm">pi/2</code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-atan">
+          <a href="#val-atan" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> atan : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Arc tangent. Result is in radians and is between
+            <code class="font-normal text-sm">-pi/2</code> and 
+           <code class="font-normal text-sm">pi/2</code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-atan2">
+          <a href="#val-atan2" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> atan2 : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">atan2 y x</code>
+            returns the arc tangent of 
+           <code class="font-normal text-sm">y /. x</code>. The signs
+            of <code class="font-normal text-sm">x</code> and 
+           <code class="font-normal text-sm">y</code> are used to determine
+            the quadrant of the result. Result is in radians and is between
+            <code class="font-normal text-sm">-pi</code> and 
+           <code class="font-normal text-sm">pi</code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-hypot">
+          <a href="#val-hypot" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> hypot : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">hypot x y</code>
+            returns 
+           <code class="font-normal text-sm">sqrt(x *. x + y *. y)</code>
+           , that is, the length of the hypotenuse of a right-angled 
+           triangle with sides of length 
+           <code class="font-normal text-sm">x</code> and 
+           <code class="font-normal text-sm">y</code>, or, equivalently,
+            the distance of the point 
+           <code class="font-normal text-sm">(x,y)</code> to origin.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-cosh">
+          <a href="#val-cosh" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> cosh : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Hyperbolic cosine. Argument is in radians.</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-sinh">
+          <a href="#val-sinh" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sinh : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Hyperbolic sine. Argument is in radians.</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-tanh">
+          <a href="#val-tanh" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> tanh : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Hyperbolic tangent. Argument is in radians.</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-sqrt">
+          <a href="#val-sqrt" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sqrt : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div><div class="spec-doc"><p class="mt-4">Square root.</p></div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-exp">
+          <a href="#val-exp" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> exp : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div><div class="spec-doc"><p class="mt-4">Exponential.</p></div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-log">
+          <a href="#val-log" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> log : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc"><p class="mt-4">Natural logarithm.</p></div>
+        </div>
+        <div class="mt-8">
+         <div class="spec module anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="module-Class">
+          <a href="#module-Class" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">module</span> </span>
+           <span>
+            <a href="Class/index.html" class="cursor-pointer text-orange">
+             Class
+            </a>
+           </span>
+           <span> : <span class="font-semibold">sig</span> ... 
+            <span class="font-semibold">end</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Excluding nan the floating-point &quot;number
+            line&quot; looks like:
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-classify">
+          <a href="#val-classify" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> classify : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="Class/index.html#type-t" class="cursor-pointer
+             text-orange">Class.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-is_finite">
+          <a href="#val-is_finite" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> is_finite : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> bool
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">is_finite t</code> returns
+            <code class="font-normal text-sm">true</code> iff 
+           <code class="font-normal text-sm">classify t</code> is in 
+           <code class="font-normal text-sm">Normal; Subnormal; Zero;</code>
+           .
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-sign">
+          <a href="#val-sign" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sign : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Sign/index.html#type-t" class="cursor-pointer
+             text-orange">Sign.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-sign_exn">
+          <a href="#val-sign_exn" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sign_exn : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Sign/index.html#type-t" class="cursor-pointer
+             text-orange">Sign.t
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">The sign of a float. Both 
+           <code class="font-normal text-sm">-0.</code> and 
+           <code class="font-normal text-sm">0.</code> map to 
+           <code class="font-normal text-sm">Zero</code>. Raises on nan.
+            All other values map to 
+           <code class="font-normal text-sm">Neg</code> or 
+           <code class="font-normal text-sm">Pos</code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-sign_or_nan">
+          <a href="#val-sign_or_nan" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sign_or_nan : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Sign_or_nan/index.html#type-t" class="cursor-pointer
+             text-orange">Sign_or_nan.t
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">The sign of a float, with support for NaN. 
+           Both <code class="font-normal text-sm">-0.</code> and 
+           <code class="font-normal text-sm">0.</code> map to 
+           <code class="font-normal text-sm">Zero</code>. All NaN values
+            map to <code class="font-normal text-sm">Nan</code>. All 
+           other values map to <code class="font-normal text-sm">Neg</code>
+            or <code class="font-normal text-sm">Pos</code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-create_ieee">
+          <a href="#val-create_ieee" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> create_ieee : 
+            <span>negative:bool <span class="">&#45;&gt;</span></span>
+             <span>exponent:int <span class="">&#45;&gt;</span></span>
+             
+            <span>mantissa:
+             <a href="../Int63/index.html#type-t" class="cursor-pointer
+              text-orange">Int63.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              
+             <a href="../Or_error/index.html#type-t" class="cursor-pointer
+              text-orange">Or_error.t
+             </a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">These functions construct and destruct 64-bit
+            floating point numbers based on their IEEE representation
+            with a sign bit, an 11-bit non-negative (biased) exponent,
+            and a 52-bit non-negative mantissa (or significand). See 
+           <a
+            href="http://en.wikipedia.org/wiki/Double-precision_floating-point_format"
+            class="cursor-pointer text-orange">Wikipedia
+           </a> for details of the encoding.
+          </p>
+          <p class="mt-4">In particular, if 1 &lt;= exponent &lt;= 2046,
+            then:
+          </p>
+          <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+           <code class="font-normal text-sm">
+            create_ieee_exn ~negative:false ~exponent ~mantissa
+            = 2 ** (exponent - 1023) * (1 + (2 ** -52) * mantissa)
+           </code>
+          </pre>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-create_ieee_exn">
+          <a href="#val-create_ieee_exn" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> create_ieee_exn
+             : <span>negative:bool <span class="">&#45;&gt;</span></span>
+             <span>exponent:int <span class="">&#45;&gt;</span></span>
+             
+            <span>mantissa:
+             <a href="../Int63/index.html#type-t" class="cursor-pointer
+              text-orange">Int63.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-ieee_negative">
+          <a href="#val-ieee_negative" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> ieee_negative
+             : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> bool
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-ieee_exponent">
+          <a href="#val-ieee_exponent" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> ieee_exponent
+             : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-ieee_mantissa">
+          <a href="#val-ieee_mantissa" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> ieee_mantissa
+             : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Int63/index.html#type-t" class="cursor-pointer
+             text-orange">Int63.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec module anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="module-Terse">
+          <a href="#module-Terse" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">module</span> </span>
+           <span>
+            <a href="Terse/index.html" class="cursor-pointer text-orange">
+             Terse
+            </a>
+           </span>
+           <span> : <span class="font-semibold">sig</span> ... 
+            <span class="font-semibold">end</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">S-expressions contain at most 8 significant digits.
+          </p>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="w-full flex-none lg:w-72 border-t lg:border-l bg-gray-100">
+       <div class="flex h-20 border-b relative">
+        <h2 class="text-xl absolute inset-x-0 p-3 bottom-0 mt-7 font-semibold
+         text-gray-500">base.v0.14.1
+        </h2>
+       </div>
+       <div class="m-3">
+        <p class="mb-5 italic text-sm">
+         Full standard library replacement for OCaml
+        </p>
+        <div class="mb-3">
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="https://github.com/janestreet/base">
+           github.com/janestreet/base
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1.323l3.954 1.582 1.599-.8a1 1 0 01.894 1.79l-1.233.616 1.738 5.42a1 1 0 01-.285 1.05A3.989 3.989 0 0115 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.715-5.349L11 6.477V16h2a1 1 0 110 2H7a1 1 0 110-2h2V6.477L6.237 7.582l1.715 5.349a1 1 0 01-.285 1.05A3.989 3.989 0 015 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.738-5.42-1.233-.617a1 1 0 01.894-1.788l1.599.799L9 4.323V3a1 1 0 011-1zm-5 8.274l-.818 2.552c.25.112.526.174.818.174.292 0 .569-.062.818-.174L5 10.274zm10 0l-.818 2.552c.25.112.526.174.818.174.292 0 .569-.062.818-.174L15 10.274z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="../../LICENSE.md.html">LICENSE.md
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
+</svg>
+    
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="../../README.org.html">README.org
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" />
+</svg>
+  
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="../../CHANGES.md.html">CHANGES.md
+          </a>
+         </div>
+        </div>
+        <details class="font-normal mb-2 text-sm">
+         <summary>Other versions</summary><div id="versions_container"></div>
+        </details><h2 class="font-semibold mb-2 text-sm">Authors</h2>
+        <p class="mb-3 text-sm">Jane Street Group, LLC</p>
+        <h2 class="font-semibold mb-2 text-sm">Issues</h2>
+        <div class="mb-3">
+         <a class="text-orange cursor-pointer mb-2 text-sm"
+          href="https://github.com/janestreet/base/issues">
+          github.com/janestreet/base/issues
+         </a>
+        </div>
+        <details class="font-semibold mb-2 text-sm">
+         <summary>Package dependencies</summary>
+         <div class="font-normal">
+          <ul>
+           <li>
+            <a href="../../../../ocaml/index.html" class="text-orange
+             cursor-pointer">ocaml
+            </a>
+           </li>
+           <li>
+            <a href="../../../../sexplib0/index.html" class="text-orange
+             cursor-pointer">sexplib0
+            </a>
+           </li>
+           <li>
+            <a href="../../../../dune/index.html" class="text-orange
+             cursor-pointer">dune
+            </a>
+           </li>
+           <li>
+            <a href="../../../../dune-configurator/index.html"
+             class="text-orange cursor-pointer">dune-configurator
+            </a>
+           </li>
+          </ul>
+         </div>
+        </details>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div><script>Voodoo.update('../../../version.json')</script>
+ </body>
+</html>

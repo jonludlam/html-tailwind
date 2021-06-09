@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head><title>CHANGES.md (packages.base.v0.14.1.CHANGES.md)</title>
+  <link rel="stylesheet" href="../../tailwind.css"/>
+  <link rel="stylesheet" href="../../extra.css"/><meta charset="utf-8"/>
+  <meta name="generator" content="odoc 3dfb7aef2f"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <script src="../../highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="../../voodoo_client.js"></script>
+  <script
+   src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+   defer="defer">
+  </script>
+ </head>
+ <body class="mx-auto max-w-screen-2xl">
+  <div class="relative">
+   <div class="relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+     <div class="flex justify-between items-center md:justify-start py-6
+      md:space-x-10">
+      <div class="flex justify-start">
+       <a href="https://v3.ocaml.org/">
+        <img src="/colour-logo.svg" alt="" class="h-8 w-auto sm:h-10"/>
+       </a>
+      </div>
+      <nav class="hidden md:flex space-x-10">
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Industry</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/whatisocaml">
+            <p class="text-base font-medium text-gray-900">What is OCaml</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/users">
+            <p class="text-base font-medium text-gray-900">Industrial Users
+            </p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/successstories">
+            <p class="text-base font-medium text-gray-900">Success Stories
+            </p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Resources</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/releases">
+            <p class="text-base font-medium text-gray-900">Releases</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/applications">
+            <p class="text-base font-medium text-gray-900">Applications</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/language">
+            <p class="text-base font-medium text-gray-900">Language</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/archive">
+            <p class="text-base font-medium text-gray-900">Archive</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Community</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/opportunities">
+            <p class="text-base font-medium text-gray-900">Opportunities</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/news">
+            <p class="text-base font-medium text-gray-900">News</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/aroundweb">
+            <p class="text-base font-medium text-gray-900">Around the Web</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="h-screen flex bg-white font-sans">
+   <div class="flex flex-col w-full h-full">
+    <div class="flex-row flex-1">
+     <nav class="bg-orange border-t border-b border-orange flex flex-row">
+      <ol class="max-w-screen-xl w-full px-4 flex space-x-4 sm:px-6 lg:px-8">
+       <li class="flex">
+        <div class="flex items-center">
+         <a href="#" class="text-gray-100 hover:text-gray-500">
+          
+  <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+        </svg>
+  
+          <span class="sr-only">Home</span>
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">packages
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">base
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="index.html" class="ml-4 text-sm font-medium text-gray-100
+          hover:text-gray-500">v0.14.1
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="#" class="ml-4 text-sm font-medium text-gray-100
+          hover:text-gray-500">CHANGES.md
+         </a>
+        </div>
+       </li>
+      </ol>
+     </nav>
+    </div>
+    <div class="flex flex-row flex-1">
+     <div class="w-72 flex-none bg-gray-100 h-screen border-r border-gray-200
+      sticky top-0 hidden lg:block">
+      <div class="flex h-20 border-b relative">
+       <h2 class="text-xl absolute inset-x-0 p-3 px-5 bottom-0 mt-7
+        border-gray-200 font-semibold text-gray-500 font-sans">On this page
+       </h2>
+      </div>
+     </div>
+     <div class="flex flex-1 flex-col lg:flex-row">
+      <div class="flex-1">
+       <div class="lg:max-w-5xl mx-auto px-3 lg:px-10 mb-10 text-sm">
+        <div class="flex h-20 relative border-b border-gray-200">
+         <div class="relative flex-1 h-20">
+          <h1 class="text-3xl absolute inset-x-0 py-3 bottom-0 font-semibold
+           text-gray-500 font-sans w-full truncate">
+           <code class="font-mono text-gray-800">git version</code>
+          </h1>
+         </div>
+         <div class="relative flex-none w-20">
+          <h1 class="text-3xl absolute py-3 bottom-0 right-0 font-semibold
+           text-gray-500 font-sans">
+          </h1>
+         </div>
+        </div>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Renamed 
+           <code class="font-normal text-sm">Result.ok_fst</code> to 
+           <code class="font-normal text-sm">Result.to_either</code>
+            (old name remains as<br/>deprecated alias).  Added analogous 
+           <code class="font-normal text-sm">Result.of_either</code>
+            function.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Removed deprecated values 
+           <code class="font-normal text-sm">Array.truncate</code>, 
+           <code class="font-normal text-sm">
+            {Obj_array, Uniform_array}.unsafe_truncate
+           </code>, <code class="font-normal text-sm">Result.ok_unit</code>
+           , 
+           <code class="font-normal text-sm">{Result, Or_error}.ignore</code>
+           .
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Changed the signature of 
+           <code class="font-normal text-sm">Hashtbl.equal</code>
+            to take the data equality<br/>
+           function first, allowing it to be used with 
+           <code class="font-normal text-sm">[%equal: t]</code>.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Remove deprecated function 
+           <code class="font-normal text-sm">List.dedup</code>.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Remove deprecated string mutation functions from the 
+           <code class="font-normal text-sm">String</code> module.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Removed deprecated function 
+           <code class="font-normal text-sm">Monad.all_ignore</code>
+            in favor of<br/>
+           <code class="font-normal text-sm">Monad.all_unit</code>.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Deprecated 
+           <code class="font-normal text-sm">Or_error.ignore</code> and 
+           <code class="font-normal text-sm">Result.ignore</code> in favor of
+           <br/><code class="font-normal text-sm">Or_error.ignore_m</code>
+            and <code class="font-normal text-sm">Result.ignore_m</code>
+           .
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           <code class="font-normal text-sm">
+            Ordered_collection_common.get_pos_len
+           </code> now returns an 
+           <code class="font-normal text-sm">Or_error.t</code>
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Added 
+           <code class="font-normal text-sm">Bool.Non_short_circuiting</code>
+           .
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Added 
+           <code class="font-normal text-sm">Float.square</code>.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Remove module 
+           <code class="font-normal text-sm">Or_error.Ok</code>.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">module <code class="font-normal text-sm">Ref</code>
+            doesn't implement 
+           <code class="font-normal text-sm">Container.S1</code> anymore.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Rename parameter of 
+           <code class="font-normal text-sm">Sequence.merge</code> from 
+           <code class="font-normal text-sm">cmp</code> to 
+           <code class="font-normal text-sm">compare</code>.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Added 
+           <code class="font-normal text-sm">Info.of_lazy_t</code>
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Added 
+           <code class="font-normal text-sm">List.partition_result</code>
+            function, to partition a list of 
+           <code class="font-normal text-sm">Result.t</code><br/>values
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Changed the signature of 
+           <code class="font-normal text-sm">equal</code> from 
+           <code class="font-normal text-sm">
+            'a t -&gt; 'a t -&gt; equal:('a -&gt; 'a -&gt; bool) -&gt; bool
+           </code> to 
+           <code class="font-normal text-sm">
+            ('a -&gt; 'a -&gt; bool) -&gt; 'a t -&gt; 'a t -&gt; bool
+           </code>.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Optimized 
+           <code class="font-normal text-sm">Lazy.compare</code>
+            to check physical equality before forcing the lazy<br/>values.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Deprecated 
+           <code class="font-normal text-sm">Args</code> in the 
+           <code class="font-normal text-sm">Applicative</code>
+            interface in favor of using 
+           <code class="font-normal text-sm">ppx_let</code>.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Deprecated 
+           <code class="font-normal text-sm">Array.replace arr i ~f</code>
+            in favor of using 
+           <code class="font-normal text-sm">arr.(i) &lt;- (f (arr.(i)))
+           </code>
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Rename collection length parameter of 
+           <code class="font-normal text-sm">Ordered_collection_common</code>
+            functions<br/>from 
+           <code class="font-normal text-sm">length</code> to 
+           <code class="font-normal text-sm">total_length</code>
+           , and add a unit argument to 
+           <code class="font-normal text-sm">get_pos_len</code> and<br/>
+           <code class="font-normal text-sm">get_pos_len_exn</code>.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Removed functions that were deprecated in 2016 from the 
+           <code class="font-normal text-sm">Array</code> and 
+           <code class="font-normal text-sm">Set</code><br/>modules.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           <code class="font-normal text-sm">Int.Hex.of_string</code>
+            and friends no longer silently ignore a suffix<br/>
+           of non-hexadecimal garbage.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Added 
+           <code class="font-normal text-sm">?backtrace</code> argument to 
+           <code class="font-normal text-sm">Or_error.of_exn_result</code>
+           .
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4"><code class="font-normal text-sm">List.zip</code>
+            now returns a 
+           <code class="font-normal text-sm">List.Or_unequal_lengths.t</code>
+            instead of an <code class="font-normal text-sm">option</code>
+           .
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Remove functions from the 
+           <code class="font-normal text-sm">Sequence</code>
+            module that were deprecated in 2015.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           <code class="font-normal text-sm">Container.Make</code> and 
+           <code class="font-normal text-sm">Container.Make0</code>
+            now require callers to either provide a<br/>custom 
+           <code class="font-normal text-sm">length</code>
+            function or request that one be derived from 
+           <code class="font-normal text-sm">fold</code>.<br/>
+           <code class="font-normal text-sm">Container.to_array</code>
+           's signature is also changed to accept 
+           <code class="font-normal text-sm">length</code> and 
+           <code class="font-normal text-sm">iter</code><br/>instead of 
+           <code class="font-normal text-sm">fold</code>.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Exposed module 
+           <code class="font-normal text-sm">Int_math</code>.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">v0.11
+        </h3>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Deprecated 
+           <code class="font-normal text-sm">Not_found</code>
+           , people who need it can use 
+           <code class="font-normal text-sm">Caml.Not_found</code>, but its
+           <br/>use isn't recommended.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Added the 
+           <code class="font-normal text-sm">Sexp.Not_found_s</code>
+            exception which will replace 
+           <code class="font-normal text-sm">Caml.Not_found</code> as<
+           br/>the default exception in a future release.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Document that 
+           <code class="font-normal text-sm">Array.find_exn</code>, 
+           <code class="font-normal text-sm">Array.find_map_exn</code>
+           , and <code class="font-normal text-sm">Array.findi_exn</code>
+           <br/>may throw 
+           <code class="font-normal text-sm">Caml.Not_found</code> 
+           <em>or</em> <code class="font-normal text-sm">Not_found_s</code>
+           .
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Document that 
+           <code class="font-normal text-sm">Hashtbl.find_exn</code>
+            may throw <code class="font-normal text-sm">Caml.Not_found</code>
+            <em>or</em><br/>
+           <code class="font-normal text-sm">Not_found_s</code>.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Document that 
+           <code class="font-normal text-sm">List.find_exn</code>, and 
+           <code class="font-normal text-sm">List.find_map_exn</code>
+            may throw<br/>
+           <code class="font-normal text-sm">Caml.Not_found</code> 
+           <em>or</em> <code class="font-normal text-sm">Not_found_s</code>
+           .
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Document that 
+           <code class="font-normal text-sm">List.find_exn</code> may throw 
+           <code class="font-normal text-sm">Caml.Not_found</code> 
+           <em>or</em> <code class="font-normal text-sm">Not_found_s</code>
+           .
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Document that 
+           <code class="font-normal text-sm">String.lsplit2_exn</code>
+           , and <code class="font-normal text-sm">String.rsplit2_exn</code>
+            may throw<br/>
+           <code class="font-normal text-sm">Caml.Not_found</code> 
+           <em>or</em> <code class="font-normal text-sm">Not_found_s</code>
+           .
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Added 
+           <code class="font-normal text-sm">Sys.backend_type</code>.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Removed unnecessary unit argument from 
+           <code class="font-normal text-sm">Hashtbl.create</code>.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Removed deprecated operations from 
+           <code class="font-normal text-sm">Hashtbl</code>.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Removed 
+           <code class="font-normal text-sm">Hashable.t</code>
+            constructors from 
+           <code class="font-normal text-sm">Hashtbl</code> and 
+           <code class="font-normal text-sm">Hash_set</code>, instead<
+           br/>favoring the first-class module constructors.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Removed 
+           <code class="font-normal text-sm">Container</code> operations from 
+           <code class="font-normal text-sm">Either.First</code> and 
+           <code class="font-normal text-sm">Either.Second</code>.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Changed the type of 
+           <code class="font-normal text-sm">fold_until</code> in the 
+           <code class="font-normal text-sm">Container</code>
+            interfaces. Rather than<br/>returning a 
+           <code class="font-normal text-sm">Finished_or_stopped_early.t
+           </code> (which has also been removed), the<br/>
+           function now takes a 
+           <code class="font-normal text-sm">finish</code>
+            function that will be applied the result if 
+           <code class="font-normal text-sm">f</code><br/>never returned a 
+           <code class="font-normal text-sm">Stop _</code>.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Removed the 
+           <code class="font-normal text-sm">String_dict</code> module.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Added a 
+           <code class="font-normal text-sm">Queue</code>
+            module that is backed by an 
+           <code class="font-normal text-sm">Option_array</code>
+            for efficient and<br/>
+           (non-allocating) implementations of most operations.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Added a 
+           <code class="font-normal text-sm">Poly</code> submodule to 
+           <code class="font-normal text-sm">Map</code> and 
+           <code class="font-normal text-sm">Set</code>
+            that exposes constructors that<br/>use polymorphic compare.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Deprecated 
+           <code class="font-normal text-sm">all_ignore</code> in the 
+           <code class="font-normal text-sm">Monad</code> and 
+           <code class="font-normal text-sm">Applicative</code>
+            interfaces in favor<br/>of 
+           <code class="font-normal text-sm">all_unit</code>.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Deprecated 
+           <code class="font-normal text-sm">Array.replace_all</code>
+            in favor of 
+           <code class="font-normal text-sm">Array.map_inplace</code>
+           , which is the<br/>
+           standard name for that sort of operation within Base.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Document that 
+           <code class="font-normal text-sm">List.find_exn</code>, and 
+           <code class="font-normal text-sm">List.find_map_exn</code>
+            may throw<br/>
+           <code class="font-normal text-sm">Caml.Not_found</code> 
+           <em>or</em> <code class="font-normal text-sm">Not_found_s</code>
+           .
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Make 
+           <code class="font-normal text-sm">~compare</code>
+            a required argument to 
+           <code class="font-normal text-sm">List.dedup_and_sort</code>
+           , <code class="font-normal text-sm">List.dedup</code>,<br/>
+           <code class="font-normal text-sm">List.find_a_dup</code>, 
+           <code class="font-normal text-sm">List.contains_dup</code>
+           , and <code class="font-normal text-sm">List.find_all_dups</code>
+           .
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Removed 
+           <code class="font-normal text-sm">List.exn_if_dup</code>
+           . It is still available in core_kernel.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Removed &quot;normalized&quot; index operation 
+           <code class="font-normal text-sm">List.slice</code>
+           . It is still available in<br/>core_kernel.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Remove &quot;normalized&quot; index operations from 
+           <code class="font-normal text-sm">Array</code>, which incluced
+           <br/><code class="font-normal text-sm">Array.normalize</code>
+           , <code class="font-normal text-sm">Array.slice</code>, 
+           <code class="font-normal text-sm">Array.nget</code> and 
+           <code class="font-normal text-sm">Array.nset</code>. These<
+           br/>operations are still available in core_kernel.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Added 
+           <code class="font-normal text-sm">Uniform_array</code>
+            module that is just like an 
+           <code class="font-normal text-sm">Array</code> except guarantees
+           <br/>that the representation array is not tagged with 
+           <code class="font-normal text-sm">Double_array_tag</code>, the tag
+           <br/>for float arrays.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Added 
+           <code class="font-normal text-sm">Option_array</code>
+            module that allows for a compact representation of 
+           <code class="font-normal text-sm">'a optoin array</code>
+           , which avoids allocating heap objects representing 
+           <code class="font-normal text-sm">Some a</code>.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Remove &quot;normalized&quot; index operations from 
+           <code class="font-normal text-sm">String</code>, which incluced
+           <br/><code class="font-normal text-sm">String.normalize</code>
+           , <code class="font-normal text-sm">String.slice</code>, 
+           <code class="font-normal text-sm">String.nget</code> and 
+           <code class="font-normal text-sm">String.nset</code>. These<
+           br/>operations are still available in core_kernel.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Added missing conversions between 
+           <code class="font-normal text-sm">Int63</code>
+            and other integer types,<br/>
+           specifically, the versions that return options.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">
+           Added truncating versions of integer conversions, with a suffix of
+           <br/><code class="font-normal text-sm">_trunc</code>
+           .  These allow fast conversions via bit arithmetic without<
+           br/>
+           any conditional failure; excess bits beyond the width of the
+           output<br/>type are simply dropped.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Added 
+           <code class="font-normal text-sm">Sequence.group</code>
+           , similar to <code class="font-normal text-sm">List.group</code>
+           .
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Reimplemented 
+           <code class="font-normal text-sm">String.Caseless.compare</code>
+            so that it does not<br/>allocate.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Added 
+           <code class="font-normal text-sm">
+            String.is_substring_at string ~pos ~substring
+           </code>.  Used it as<br/>back-end for 
+           <code class="font-normal text-sm">is_suffix</code> and 
+           <code class="font-normal text-sm">is_prefix</code>.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Moved all remaining 
+           <code class="font-normal text-sm">Replace_polymorphic_compare
+           </code> submodules from Base<br/>
+           types and consolidated them in one place within 
+           <code class="font-normal text-sm">Import0</code>.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Removed 
+           <code class="font-normal text-sm">(&lt;=.)</code> and its friends.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Added 
+           <code class="font-normal text-sm">Sys.argv</code>.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Added a infix exponentation operator for int.</p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Added a 
+           <code class="font-normal text-sm">Formatter</code>
+            module to reexport the 
+           <code class="font-normal text-sm">Format.formatter</code>
+            type and updated<br/>the deprecation message for 
+           <code class="font-normal text-sm">Format</code>.
+          </p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">v0.10
+        </h3>
+        <p class="mt-4">
+         (Changes that can break existing programs are marked with a
+         &quot;*&quot;)
+        </p>
+        <h4 class="text-lg text-gray-900 text-gray-800 font-sans">Bugfixes
+        </h4>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Generalized the type of 
+           <code class="font-normal text-sm">Printf.ifprintf</code>
+            to reflect OCaml's stdlib.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Made 
+           <code class="font-normal text-sm">Sequence.fold_m</code> and 
+           <code class="font-normal text-sm">iter_m</code> respect 
+           <code class="font-normal text-sm">Skip</code>
+            steps and explicitly bind<br/>when they occur.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Changed 
+           <code class="font-normal text-sm">Float.is_negative</code>
+            and <code class="font-normal text-sm">is_non_positive</code>
+            on <code class="font-normal text-sm">NaN</code> to return 
+           <code class="font-normal text-sm">false</code><br/>rather than 
+           <code class="font-normal text-sm">true</code>.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Fixed the 
+           <code class="font-normal text-sm">Validate.protect</code>
+            function, which was mistakenly raising exceptions.
+          </p>
+         </li>
+        </ul>
+        <h4 class="text-lg text-gray-900 text-gray-800 font-sans">API changes
+        </h4>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Renamed 
+           <code class="font-normal text-sm">Map.add</code> as 
+           <code class="font-normal text-sm">set</code>, and deprecated 
+           <code class="font-normal text-sm">add</code>
+           . A later feature will add<br/>
+           <code class="font-normal text-sm">add</code> and 
+           <code class="font-normal text-sm">add_exn</code> in the style of 
+           <code class="font-normal text-sm">Hashtbl</code>.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">A different hash function is used to implement 
+           <code class="font-normal text-sm">Base.Int.hash</code>.<br/>
+           The old implementation was 
+           <code class="font-normal text-sm">Int.abs</code>
+            but collision resistance is not enough,<br/>
+           we want avalanching as well.<br/>
+           The new function is an adaptation of one of the<br/>
+           <a
+            href="http://web.archive.org/web/20071223173210/http://www.concentric.net/~Ttwang/tech/inthash.htm"
+            class="cursor-pointer text-orange">Thomas Wang
+           </a><br/>
+           hash functions to OCaml (63-bit integers), which results in
+           reasonably good avalanching.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Made 
+           <code class="font-normal text-sm">open Base</code>
+            expose infix float operators (+., -., etc.).
+          </p>
+         </li>
+        </ul>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Renamed 
+           <code class="font-normal text-sm">List.dedup</code> to 
+           <code class="font-normal text-sm">List.dedup_and_sort</code>
+           , to better reflect its existing behavior.
+          </p>
+         </li>
+        </ul>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Added 
+           <code class="font-normal text-sm">Hashtbl.find_multi</code>
+            and <code class="font-normal text-sm">Map.find_multi</code>
+           .
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Added function 
+           <code class="font-normal text-sm">Map.of_increasing_sequence
+           </code> for constructing a 
+           <code class="font-normal text-sm">Map.t</code> from an<br/>
+           ordered <code class="font-normal text-sm">Sequence.t</code>
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Added function 
+           <code class="font-normal text-sm">
+            List.chunks_of : 'a t -&gt; length : int -&gt; 'a t t
+           </code>, for breaking<br/>a list into chunks of equal length.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add to module 
+           <code class="font-normal text-sm">Random</code>
+            numeric functions that take upper and lower inclusive<br/>
+           bounds, e.g. 
+           <code class="font-normal text-sm">
+            Random.int_incl : int -&gt; int -&gt; int
+           </code>.
+          </p>
+         </li>
+        </ul>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Replaced 
+           <code class="font-normal text-sm">Exn.Never_elide_backtrace</code>
+            with <code class="font-normal text-sm">Backtrace.elide</code>
+           , a <code class="font-normal text-sm">ref</code> cell that<
+           br/>determines whether 
+           <code class="font-normal text-sm">Backtrace.to_string</code>
+            and <code class="font-normal text-sm">Backtrace.sexp_of_t</code>
+            elide<br/>backtraces.
+          </p>
+         </li>
+        </ul>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Exposed infix operator 
+           <code class="font-normal text-sm">Base.( @@ )</code>.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Exposed modules 
+           <code class="font-normal text-sm">Base.Continue_or_stop</code>
+            and 
+           <code class="font-normal text-sm">Finished_or_stopped_early</code>
+           , used<br/>with the 
+           <code class="font-normal text-sm">Container.fold_until</code>
+            function.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Exposed module types Base.T, T1, T2, and T3.</p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Added 
+           <code class="font-normal text-sm">Sequence.Expert</code> functions 
+           <code class="font-normal text-sm">next_step</code> and<br/>
+           <code class="font-normal text-sm">delayed_fold_step</code>
+           , for clients that want to explicitly handle 
+           <code class="font-normal text-sm">Skip</code> steps.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Added 
+           <code class="font-normal text-sm">Bytes</code> module.<br/>
+           This includes the submodules 
+           <code class="font-normal text-sm">From_string</code> and 
+           <code class="font-normal text-sm">To_string</code> with blit<
+           br/>functions.<br/>N.B. the signature (and name) of 
+           <code class="font-normal text-sm">unsafe_to_string</code> and 
+           <code class="font-normal text-sm">unsafe_of_string</code> are<
+           br/>
+           different from the one in the standard library (and hopefully more
+           explicit).
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Add bytes functions to 
+           <code class="font-normal text-sm">Buffer</code>.<br/>Also added 
+           <code class="font-normal text-sm">Buffer.content_bytes</code>
+           , the analog of <code class="font-normal text-sm">contents</code>
+            but that returns<br/>
+           <code class="font-normal text-sm">bytes</code> rather than 
+           <code class="font-normal text-sm">string</code>.
+          </p>
+         </li>
+        </ul>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Enabled 
+           <code class="font-normal text-sm">-safe-string</code>.
+          </p>
+         </li>
+        </ul>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Added function 
+           <code class="font-normal text-sm">Int63.of_int32</code>
+           , which was missing.
+          </p>
+         </li>
+        </ul>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Deprecated a number of 
+           <code class="font-normal text-sm">String</code>
+            mutating functions.
+          </p>
+         </li>
+        </ul>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Added module 
+           <code class="font-normal text-sm">Obj_array</code>, moved in from 
+           <code class="font-normal text-sm">Core_kernel</code>.
+          </p>
+         </li>
+        </ul>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">In module type 
+           <code class="font-normal text-sm">Hashtbl.Accessors</code>
+           , removed deprecated functions, moving them<br/>
+           into a new module type, 
+           <code class="font-normal text-sm">Deprecated</code>.
+          </p>
+         </li>
+        </ul>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Exported 
+           <code class="font-normal text-sm">sexp_*</code>
+            types that are recognized by 
+           <code class="font-normal text-sm">ppx_sexp_*</code> converters:
+           <br/><code class="font-normal text-sm">sexp_array</code>, 
+           <code class="font-normal text-sm">sexp_list</code>, 
+           <code class="font-normal text-sm">sexp_opaque</code>, 
+           <code class="font-normal text-sm">sexp_option</code>.
+          </p>
+         </li>
+        </ul>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Reworked the 
+           <code class="font-normal text-sm">Or_error</code>
+            module's interface, moving the 
+           <code class="font-normal text-sm">Container.S</code> interface
+           <br/>to an <code class="font-normal text-sm">Ok</code>
+            submodule, and adding functions 
+           <code class="font-normal text-sm">is_ok</code>, 
+           <code class="font-normal text-sm">is_error</code>, and 
+           <code class="font-normal text-sm">ok</code> to<br/>
+           more closely resemble the interface of the 
+           <code class="font-normal text-sm">Result</code> module.
+          </p>
+         </li>
+        </ul>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Removed 
+           <code class="font-normal text-sm">Int.O.of_int_exn</code>.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Exposed 
+           <code class="font-normal text-sm">Base.force</code> function.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Changed the deprecation warning for 
+           <code class="font-normal text-sm">mod</code> to recommend 
+           <code class="font-normal text-sm">( % )</code> rather than<
+           br/><code class="font-normal text-sm">Caml.( mod )</code>.
+          </p>
+         </li>
+        </ul>
+        <h4 class="text-lg text-gray-900 text-gray-800 font-sans">
+         Performance related changes
+        </h4>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4">
+          <p class="mt-4">Optimized 
+           <code class="font-normal text-sm">List.compare</code>
+           , removing its closure allocation.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Optimized 
+           <code class="font-normal text-sm">String.mem</code>
+            to not allocate.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Optimized 
+           <code class="font-normal text-sm">Float.is_negative</code>
+           , <code class="font-normal text-sm">is_non_negative</code>
+           , <code class="font-normal text-sm">is_positive</code>, and<
+           br/><code class="font-normal text-sm">is_non_positive</code>
+            to avoid some boxing.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Changed 
+           <code class="font-normal text-sm">Hashtbl.merge</code>
+            to relax its equality check on the input tables'<br/>
+           <code class="font-normal text-sm">Hashable.t</code>
+            records, checking physical equality componentwise if the records
+           <br/>aren't physically equal.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Added 
+           <code class="font-normal text-sm">Result.combine_errors</code>
+           , similar to 
+           <code class="font-normal text-sm">Or_error.combine_errors</code>
+           , with a<br/>slightly different type.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Added 
+           <code class="font-normal text-sm">Result.combine_errors_unit
+           </code>, similar to 
+           <code class="font-normal text-sm">Or_error.combine_errors_unit
+           </code>.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Optimized the 
+           <code class="font-normal text-sm">With_return.return</code>
+            type by adding the 
+           <code class="font-normal text-sm">[@@unboxed]</code> attribute.
+          </p>
+         </li>
+         <li class="ml-4">
+          <p class="mt-4">Improved a number of deprecation warnings.</p>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans">v0.9
+        </h3><p class="mt-4">Initial release.</p>
+       </div>
+      </div>
+      <div class="w-full flex-none lg:w-72 border-t lg:border-l bg-gray-100">
+       <div class="flex h-20 border-b relative">
+        <h2 class="text-xl absolute inset-x-0 p-3 bottom-0 mt-7 font-semibold
+         text-gray-500">base.v0.14.1
+        </h2>
+       </div>
+       <div class="m-3">
+        <p class="mb-5 italic text-sm">
+         Full standard library replacement for OCaml
+        </p>
+        <div class="mb-3">
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="https://github.com/janestreet/base">
+           github.com/janestreet/base
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1.323l3.954 1.582 1.599-.8a1 1 0 01.894 1.79l-1.233.616 1.738 5.42a1 1 0 01-.285 1.05A3.989 3.989 0 0115 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.715-5.349L11 6.477V16h2a1 1 0 110 2H7a1 1 0 110-2h2V6.477L6.237 7.582l1.715 5.349a1 1 0 01-.285 1.05A3.989 3.989 0 015 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.738-5.42-1.233-.617a1 1 0 01.894-1.788l1.599.799L9 4.323V3a1 1 0 011-1zm-5 8.274l-.818 2.552c.25.112.526.174.818.174.292 0 .569-.062.818-.174L5 10.274zm10 0l-.818 2.552c.25.112.526.174.818.174.292 0 .569-.062.818-.174L15 10.274z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="LICENSE.md.html">LICENSE.md
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
+</svg>
+    
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="README.org.html">README.org
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" />
+</svg>
+  
+          <a class="text-orange cursor-pointer mb-2 text-sm" href="#">
+           CHANGES.md
+          </a>
+         </div>
+        </div>
+        <details class="font-normal mb-2 text-sm">
+         <summary>Other versions</summary><div id="versions_container"></div>
+        </details><h2 class="font-semibold mb-2 text-sm">Authors</h2>
+        <p class="mb-3 text-sm">Jane Street Group, LLC</p>
+        <h2 class="font-semibold mb-2 text-sm">Issues</h2>
+        <div class="mb-3">
+         <a class="text-orange cursor-pointer mb-2 text-sm"
+          href="https://github.com/janestreet/base/issues">
+          github.com/janestreet/base/issues
+         </a>
+        </div>
+        <details class="font-semibold mb-2 text-sm">
+         <summary>Package dependencies</summary>
+         <div class="font-normal">
+          <ul>
+           <li>
+            <a href="../../ocaml/index.html" class="text-orange
+             cursor-pointer">ocaml
+            </a>
+           </li>
+           <li>
+            <a href="../../sexplib0/index.html" class="text-orange
+             cursor-pointer">sexplib0
+            </a>
+           </li>
+           <li>
+            <a href="../../dune/index.html" class="text-orange
+             cursor-pointer">dune
+            </a>
+           </li>
+           <li>
+            <a href="../../dune-configurator/index.html" class="text-orange
+             cursor-pointer">dune-configurator
+            </a>
+           </li>
+          </ul>
+         </div>
+        </details>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div><script>Voodoo.update('../version.json')</script>
+ </body>
+</html>
