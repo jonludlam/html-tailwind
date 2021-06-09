@@ -1,0 +1,2471 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>
+   Migrate_408_407
+   (packages.ocaml-migrate-parsetree.2.1.0.Migrate_parsetree.Migrate_408_407)
+  </title><link rel="stylesheet" href="../../../../tailwind.css"/>
+  <link rel="stylesheet" href="../../../../extra.css"/>
+  <meta charset="utf-8"/><meta name="generator" content="odoc 3dfb7aef2f"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <script src="../../../../highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="../../../../voodoo_client.js"></script>
+  <script
+   src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+   defer="defer">
+  </script>
+ </head>
+ <body class="mx-auto max-w-screen-2xl">
+  <div class="relative">
+   <div class="relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+     <div class="flex justify-between items-center md:justify-start py-6
+      md:space-x-10">
+      <div class="flex justify-start">
+       <a href="https://v3.ocaml.org/">
+        <img src="/colour-logo.svg" alt="" class="h-8 w-auto sm:h-10"/>
+       </a>
+      </div>
+      <nav class="hidden md:flex space-x-10">
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Industry</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/whatisocaml">
+            <p class="text-base font-medium text-gray-900">What is OCaml</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/users">
+            <p class="text-base font-medium text-gray-900">Industrial Users
+            </p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/successstories">
+            <p class="text-base font-medium text-gray-900">Success Stories
+            </p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Resources</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/releases">
+            <p class="text-base font-medium text-gray-900">Releases</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/applications">
+            <p class="text-base font-medium text-gray-900">Applications</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/language">
+            <p class="text-base font-medium text-gray-900">Language</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/archive">
+            <p class="text-base font-medium text-gray-900">Archive</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Community</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/opportunities">
+            <p class="text-base font-medium text-gray-900">Opportunities</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/news">
+            <p class="text-base font-medium text-gray-900">News</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/aroundweb">
+            <p class="text-base font-medium text-gray-900">Around the Web</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="h-screen flex bg-white font-sans">
+   <div class="flex flex-col w-full h-full">
+    <div class="flex-row flex-1">
+     <nav class="bg-orange border-t border-b border-orange flex flex-row">
+      <ol class="max-w-screen-xl w-full px-4 flex space-x-4 sm:px-6 lg:px-8">
+       <li class="flex">
+        <div class="flex items-center">
+         <a href="#" class="text-gray-100 hover:text-gray-500">
+          
+  <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+        </svg>
+  
+          <span class="sr-only">Home</span>
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">packages
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">ocaml-migrate-parsetree
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">2.1.0
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">Migrate_parsetree
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="#" class="ml-4 text-sm font-medium text-gray-100
+          hover:text-gray-500">Migrate_408_407
+         </a>
+        </div>
+       </li>
+      </ol>
+     </nav>
+    </div>
+    <div class="flex flex-row flex-1">
+     <div class="w-72 flex-none bg-gray-100 h-screen border-r border-gray-200
+      sticky top-0 hidden lg:block">
+      <div class="flex h-20 border-b relative">
+       <h2 class="text-xl absolute inset-x-0 p-3 px-5 bottom-0 mt-7
+        border-gray-200 font-semibold text-gray-500 font-sans">On this page
+       </h2>
+      </div>
+     </div>
+     <div class="flex flex-1 flex-col lg:flex-row">
+      <div class="flex-1">
+       <div class="lg:max-w-5xl mx-auto px-3 lg:px-10 mb-10 text-sm">
+        <div class="flex h-20 relative border-b border-gray-200">
+         <div class="relative flex-1 h-20">
+          <h1 class="text-3xl absolute inset-x-0 py-3 bottom-0 font-semibold
+           text-gray-500 font-sans w-full truncate">
+           <code class="font-mono text-gray-800">
+            Migrate_parsetree.Migrate_408_407
+           </code>
+          </h1>
+         </div>
+         <div class="relative flex-none w-28">
+          <h1 class="text-3xl absolute py-3 bottom-0 right-0 font-semibold
+           text-gray-500 font-sans">Module
+          </h1>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec module anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="module-From">
+          <a href="#module-From" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">module</span> </span>
+           <span>From</span>
+           <span> = 
+            <a href="../Ast_408/index.html" class="cursor-pointer
+             text-orange">Ast_408
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec module anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="module-To">
+          <a href="#module-To" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">module</span> </span>
+           <span>To</span>
+           <span> = 
+            <a href="../Ast_407/index.html" class="cursor-pointer
+             text-orange">Ast_407
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec module anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="module-Def">
+          <a href="#module-Def" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">module</span> </span>
+           <span>
+            <a href="Def/index.html" class="cursor-pointer text-orange">Def
+            </a>
+           </span>
+           <span> : <span class="font-semibold">sig</span> ... 
+            <span class="font-semibold">end</span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-migration_error">
+          <a href="#val-migration_error" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> migration_error
+             : 
+            <span>
+             <a
+              href="../../../../ocaml-base-compiler/4.11.2/Location/index.html#type-t"
+              class="cursor-pointer text-orange">Location.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="Def/index.html#type-missing_feature"
+              class="cursor-pointer text-orange">Def.missing_feature
+             </a> <span class="">&#45;&gt;</span>
+            </span> <span class="">'a</span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_toplevel_phrase">
+          <a href="#val-copy_toplevel_phrase" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_toplevel_phrase
+             : 
+            <span>
+             <a href="../Ast_408/Parsetree/index.html#type-toplevel_phrase"
+              class="cursor-pointer text-orange">
+              From.Parsetree.toplevel_phrase
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Parsetree/index.html#type-toplevel_phrase"
+             class="cursor-pointer text-orange">To.Parsetree.toplevel_phrase
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_directive_argument">
+          <a href="#val-copy_directive_argument" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            copy_directive_argument : 
+            <span>
+             <a
+              href="../Ast_408/Parsetree/index.html#type-directive_argument"
+              class="cursor-pointer text-orange">
+              From.Parsetree.directive_argument
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Parsetree/index.html#type-directive_argument"
+             class="cursor-pointer text-orange">
+             To.Parsetree.directive_argument
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100"
+          id="val-copy_directive_argument_desc">
+          <a href="#val-copy_directive_argument_desc" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            copy_directive_argument_desc : 
+            <span>
+             <a
+              href="../Ast_408/Parsetree/index.html#type-directive_argument_desc"
+              class="cursor-pointer text-orange">
+              From.Parsetree.directive_argument_desc
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Parsetree/index.html#type-directive_argument"
+             class="cursor-pointer text-orange">
+             To.Parsetree.directive_argument
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_expression">
+          <a href="#val-copy_expression" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_expression
+             : 
+            <span>
+             <a href="../Ast_408/Parsetree/index.html#type-expression"
+              class="cursor-pointer text-orange">From.Parsetree.expression
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Parsetree/index.html#type-expression"
+             class="cursor-pointer text-orange">To.Parsetree.expression
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_expression_desc">
+          <a href="#val-copy_expression_desc" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_expression_desc
+             : 
+            <span>
+             <a href="../Ast_408/Parsetree/index.html#type-expression_desc"
+              class="cursor-pointer text-orange">
+              From.Parsetree.expression_desc
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Parsetree/index.html#type-expression_desc"
+             class="cursor-pointer text-orange">To.Parsetree.expression_desc
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_direction_flag">
+          <a href="#val-copy_direction_flag" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_direction_flag
+             : 
+            <span>
+             <a href="../Ast_408/Asttypes/index.html#type-direction_flag"
+              class="cursor-pointer text-orange">From.Asttypes.direction_flag
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Asttypes/index.html#type-direction_flag"
+             class="cursor-pointer text-orange">To.Asttypes.direction_flag
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_case">
+          <a href="#val-copy_case" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_case : 
+            <span>
+             <a href="../Ast_408/Parsetree/index.html#type-case"
+              class="cursor-pointer text-orange">From.Parsetree.case
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Parsetree/index.html#type-case"
+             class="cursor-pointer text-orange">To.Parsetree.case
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_value_binding">
+          <a href="#val-copy_value_binding" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_value_binding
+             : 
+            <span>
+             <a href="../Ast_408/Parsetree/index.html#type-value_binding"
+              class="cursor-pointer text-orange">From.Parsetree.value_binding
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Parsetree/index.html#type-value_binding"
+             class="cursor-pointer text-orange">To.Parsetree.value_binding
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_pattern">
+          <a href="#val-copy_pattern" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_pattern : 
+            <span>
+             <a href="../Ast_408/Parsetree/index.html#type-pattern"
+              class="cursor-pointer text-orange">From.Parsetree.pattern
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Parsetree/index.html#type-pattern"
+             class="cursor-pointer text-orange">To.Parsetree.pattern
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_pattern_desc">
+          <a href="#val-copy_pattern_desc" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_pattern_desc
+             : 
+            <span>
+             <a href="../Ast_408/Parsetree/index.html#type-pattern_desc"
+              class="cursor-pointer text-orange">From.Parsetree.pattern_desc
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Parsetree/index.html#type-pattern_desc"
+             class="cursor-pointer text-orange">To.Parsetree.pattern_desc
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_core_type">
+          <a href="#val-copy_core_type" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_core_type
+             : 
+            <span>
+             <a href="../Ast_408/Parsetree/index.html#type-core_type"
+              class="cursor-pointer text-orange">From.Parsetree.core_type
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Parsetree/index.html#type-core_type"
+             class="cursor-pointer text-orange">To.Parsetree.core_type
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_core_type_desc">
+          <a href="#val-copy_core_type_desc" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_core_type_desc
+             : 
+            <span>
+             <a href="../Ast_408/Parsetree/index.html#type-core_type_desc"
+              class="cursor-pointer text-orange">
+              From.Parsetree.core_type_desc
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Parsetree/index.html#type-core_type_desc"
+             class="cursor-pointer text-orange">To.Parsetree.core_type_desc
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_package_type">
+          <a href="#val-copy_package_type" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_package_type
+             : 
+            <span>
+             <a href="../Ast_408/Parsetree/index.html#type-package_type"
+              class="cursor-pointer text-orange">From.Parsetree.package_type
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Parsetree/index.html#type-package_type"
+             class="cursor-pointer text-orange">To.Parsetree.package_type
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_row_field">
+          <a href="#val-copy_row_field" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_row_field
+             : 
+            <span>
+             <a href="../Ast_408/Parsetree/index.html#type-row_field"
+              class="cursor-pointer text-orange">From.Parsetree.row_field
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Parsetree/index.html#type-row_field"
+             class="cursor-pointer text-orange">To.Parsetree.row_field
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_object_field">
+          <a href="#val-copy_object_field" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_object_field
+             : 
+            <span>
+             <a href="../Ast_408/Parsetree/index.html#type-object_field"
+              class="cursor-pointer text-orange">From.Parsetree.object_field
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Parsetree/index.html#type-object_field"
+             class="cursor-pointer text-orange">To.Parsetree.object_field
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_attributes">
+          <a href="#val-copy_attributes" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_attributes
+             : 
+            <span>
+             <a href="../Ast_408/Parsetree/index.html#type-attributes"
+              class="cursor-pointer text-orange">From.Parsetree.attributes
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Parsetree/index.html#type-attributes"
+             class="cursor-pointer text-orange">To.Parsetree.attributes
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_attribute">
+          <a href="#val-copy_attribute" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_attribute
+             : 
+            <span>
+             <a href="../Ast_408/Parsetree/index.html#type-attribute"
+              class="cursor-pointer text-orange">From.Parsetree.attribute
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Parsetree/index.html#type-attribute"
+             class="cursor-pointer text-orange">To.Parsetree.attribute
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_payload">
+          <a href="#val-copy_payload" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_payload : 
+            <span>
+             <a href="../Ast_408/Parsetree/index.html#type-payload"
+              class="cursor-pointer text-orange">From.Parsetree.payload
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Parsetree/index.html#type-payload"
+             class="cursor-pointer text-orange">To.Parsetree.payload
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_structure">
+          <a href="#val-copy_structure" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_structure
+             : 
+            <span>
+             <a href="../Ast_408/Parsetree/index.html#type-structure"
+              class="cursor-pointer text-orange">From.Parsetree.structure
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Parsetree/index.html#type-structure"
+             class="cursor-pointer text-orange">To.Parsetree.structure
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_structure_item">
+          <a href="#val-copy_structure_item" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_structure_item
+             : 
+            <span>
+             <a href="../Ast_408/Parsetree/index.html#type-structure_item"
+              class="cursor-pointer text-orange">
+              From.Parsetree.structure_item
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Parsetree/index.html#type-structure_item"
+             class="cursor-pointer text-orange">To.Parsetree.structure_item
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_structure_item_desc">
+          <a href="#val-copy_structure_item_desc" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            copy_structure_item_desc : 
+            <span>
+             <a
+              href="../Ast_408/Parsetree/index.html#type-structure_item_desc"
+              class="cursor-pointer text-orange">
+              From.Parsetree.structure_item_desc
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a
+             href="../Ast_407/Parsetree/index.html#type-structure_item_desc"
+             class="cursor-pointer text-orange">
+             To.Parsetree.structure_item_desc
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_include_declaration">
+          <a href="#val-copy_include_declaration" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            copy_include_declaration : 
+            <span>
+             <a
+              href="../Ast_408/Parsetree/index.html#type-include_declaration"
+              class="cursor-pointer text-orange">
+              From.Parsetree.include_declaration
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a
+             href="../Ast_407/Parsetree/index.html#type-include_declaration"
+             class="cursor-pointer text-orange">
+             To.Parsetree.include_declaration
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_class_declaration">
+          <a href="#val-copy_class_declaration" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            copy_class_declaration : 
+            <span>
+             <a href="../Ast_408/Parsetree/index.html#type-class_declaration"
+              class="cursor-pointer text-orange">
+              From.Parsetree.class_declaration
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Parsetree/index.html#type-class_declaration"
+             class="cursor-pointer text-orange">
+             To.Parsetree.class_declaration
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_class_expr">
+          <a href="#val-copy_class_expr" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_class_expr
+             : 
+            <span>
+             <a href="../Ast_408/Parsetree/index.html#type-class_expr"
+              class="cursor-pointer text-orange">From.Parsetree.class_expr
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Parsetree/index.html#type-class_expr"
+             class="cursor-pointer text-orange">To.Parsetree.class_expr
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_class_expr_desc">
+          <a href="#val-copy_class_expr_desc" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_class_expr_desc
+             : 
+            <span>
+             <a href="../Ast_408/Parsetree/index.html#type-class_expr_desc"
+              class="cursor-pointer text-orange">
+              From.Parsetree.class_expr_desc
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Parsetree/index.html#type-class_expr_desc"
+             class="cursor-pointer text-orange">To.Parsetree.class_expr_desc
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_class_structure">
+          <a href="#val-copy_class_structure" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_class_structure
+             : 
+            <span>
+             <a href="../Ast_408/Parsetree/index.html#type-class_structure"
+              class="cursor-pointer text-orange">
+              From.Parsetree.class_structure
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Parsetree/index.html#type-class_structure"
+             class="cursor-pointer text-orange">To.Parsetree.class_structure
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_class_field">
+          <a href="#val-copy_class_field" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_class_field
+             : 
+            <span>
+             <a href="../Ast_408/Parsetree/index.html#type-class_field"
+              class="cursor-pointer text-orange">From.Parsetree.class_field
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Parsetree/index.html#type-class_field"
+             class="cursor-pointer text-orange">To.Parsetree.class_field
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_class_field_desc">
+          <a href="#val-copy_class_field_desc" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_class_field_desc
+             : 
+            <span>
+             <a href="../Ast_408/Parsetree/index.html#type-class_field_desc"
+              class="cursor-pointer text-orange">
+              From.Parsetree.class_field_desc
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Parsetree/index.html#type-class_field_desc"
+             class="cursor-pointer text-orange">To.Parsetree.class_field_desc
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_class_field_kind">
+          <a href="#val-copy_class_field_kind" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_class_field_kind
+             : 
+            <span>
+             <a href="../Ast_408/Parsetree/index.html#type-class_field_kind"
+              class="cursor-pointer text-orange">
+              From.Parsetree.class_field_kind
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Parsetree/index.html#type-class_field_kind"
+             class="cursor-pointer text-orange">To.Parsetree.class_field_kind
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_module_binding">
+          <a href="#val-copy_module_binding" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_module_binding
+             : 
+            <span>
+             <a href="../Ast_408/Parsetree/index.html#type-module_binding"
+              class="cursor-pointer text-orange">
+              From.Parsetree.module_binding
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Parsetree/index.html#type-module_binding"
+             class="cursor-pointer text-orange">To.Parsetree.module_binding
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_module_expr">
+          <a href="#val-copy_module_expr" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_module_expr
+             : 
+            <span>
+             <a href="../Ast_408/Parsetree/index.html#type-module_expr"
+              class="cursor-pointer text-orange">From.Parsetree.module_expr
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Parsetree/index.html#type-module_expr"
+             class="cursor-pointer text-orange">To.Parsetree.module_expr
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_module_expr_desc">
+          <a href="#val-copy_module_expr_desc" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_module_expr_desc
+             : 
+            <span>
+             <a href="../Ast_408/Parsetree/index.html#type-module_expr_desc"
+              class="cursor-pointer text-orange">
+              From.Parsetree.module_expr_desc
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Parsetree/index.html#type-module_expr_desc"
+             class="cursor-pointer text-orange">To.Parsetree.module_expr_desc
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_module_type">
+          <a href="#val-copy_module_type" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_module_type
+             : 
+            <span>
+             <a href="../Ast_408/Parsetree/index.html#type-module_type"
+              class="cursor-pointer text-orange">From.Parsetree.module_type
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Parsetree/index.html#type-module_type"
+             class="cursor-pointer text-orange">To.Parsetree.module_type
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_module_type_desc">
+          <a href="#val-copy_module_type_desc" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_module_type_desc
+             : 
+            <span>
+             <a href="../Ast_408/Parsetree/index.html#type-module_type_desc"
+              class="cursor-pointer text-orange">
+              From.Parsetree.module_type_desc
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Parsetree/index.html#type-module_type_desc"
+             class="cursor-pointer text-orange">To.Parsetree.module_type_desc
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_with_constraint">
+          <a href="#val-copy_with_constraint" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_with_constraint
+             : 
+            <span>
+             <a href="../Ast_408/Parsetree/index.html#type-with_constraint"
+              class="cursor-pointer text-orange">
+              From.Parsetree.with_constraint
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Parsetree/index.html#type-with_constraint"
+             class="cursor-pointer text-orange">To.Parsetree.with_constraint
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_signature">
+          <a href="#val-copy_signature" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_signature
+             : 
+            <span>
+             <a href="../Ast_408/Parsetree/index.html#type-signature"
+              class="cursor-pointer text-orange">From.Parsetree.signature
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Parsetree/index.html#type-signature"
+             class="cursor-pointer text-orange">To.Parsetree.signature
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_signature_item">
+          <a href="#val-copy_signature_item" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_signature_item
+             : 
+            <span>
+             <a href="../Ast_408/Parsetree/index.html#type-signature_item"
+              class="cursor-pointer text-orange">
+              From.Parsetree.signature_item
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Parsetree/index.html#type-signature_item"
+             class="cursor-pointer text-orange">To.Parsetree.signature_item
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_signature_item_desc">
+          <a href="#val-copy_signature_item_desc" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            copy_signature_item_desc : 
+            <span>
+             <a
+              href="../Ast_408/Parsetree/index.html#type-signature_item_desc"
+              class="cursor-pointer text-orange">
+              From.Parsetree.signature_item_desc
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a
+             href="../Ast_407/Parsetree/index.html#type-signature_item_desc"
+             class="cursor-pointer text-orange">
+             To.Parsetree.signature_item_desc
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100"
+          id="val-copy_class_type_declaration">
+          <a href="#val-copy_class_type_declaration" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            copy_class_type_declaration : 
+            <span>
+             <a
+              href="../Ast_408/Parsetree/index.html#type-class_type_declaration"
+              class="cursor-pointer text-orange">
+              From.Parsetree.class_type_declaration
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a
+             href="../Ast_407/Parsetree/index.html#type-class_type_declaration"
+             class="cursor-pointer text-orange">
+             To.Parsetree.class_type_declaration
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_class_description">
+          <a href="#val-copy_class_description" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            copy_class_description : 
+            <span>
+             <a href="../Ast_408/Parsetree/index.html#type-class_description"
+              class="cursor-pointer text-orange">
+              From.Parsetree.class_description
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Parsetree/index.html#type-class_description"
+             class="cursor-pointer text-orange">
+             To.Parsetree.class_description
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_class_type">
+          <a href="#val-copy_class_type" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_class_type
+             : 
+            <span>
+             <a href="../Ast_408/Parsetree/index.html#type-class_type"
+              class="cursor-pointer text-orange">From.Parsetree.class_type
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Parsetree/index.html#type-class_type"
+             class="cursor-pointer text-orange">To.Parsetree.class_type
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_class_type_desc">
+          <a href="#val-copy_class_type_desc" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_class_type_desc
+             : 
+            <span>
+             <a href="../Ast_408/Parsetree/index.html#type-class_type_desc"
+              class="cursor-pointer text-orange">
+              From.Parsetree.class_type_desc
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Parsetree/index.html#type-class_type_desc"
+             class="cursor-pointer text-orange">To.Parsetree.class_type_desc
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_class_signature">
+          <a href="#val-copy_class_signature" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_class_signature
+             : 
+            <span>
+             <a href="../Ast_408/Parsetree/index.html#type-class_signature"
+              class="cursor-pointer text-orange">
+              From.Parsetree.class_signature
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Parsetree/index.html#type-class_signature"
+             class="cursor-pointer text-orange">To.Parsetree.class_signature
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_class_type_field">
+          <a href="#val-copy_class_type_field" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_class_type_field
+             : 
+            <span>
+             <a href="../Ast_408/Parsetree/index.html#type-class_type_field"
+              class="cursor-pointer text-orange">
+              From.Parsetree.class_type_field
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Parsetree/index.html#type-class_type_field"
+             class="cursor-pointer text-orange">To.Parsetree.class_type_field
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_class_type_field_desc">
+          <a href="#val-copy_class_type_field_desc" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            copy_class_type_field_desc : 
+            <span>
+             <a
+              href="../Ast_408/Parsetree/index.html#type-class_type_field_desc"
+              class="cursor-pointer text-orange">
+              From.Parsetree.class_type_field_desc
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a
+             href="../Ast_407/Parsetree/index.html#type-class_type_field_desc"
+             class="cursor-pointer text-orange">
+             To.Parsetree.class_type_field_desc
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_extension">
+          <a href="#val-copy_extension" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_extension
+             : 
+            <span>
+             <a href="../Ast_408/Parsetree/index.html#type-extension"
+              class="cursor-pointer text-orange">From.Parsetree.extension
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Parsetree/index.html#type-extension"
+             class="cursor-pointer text-orange">To.Parsetree.extension
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_class_infos">
+          <a href="#val-copy_class_infos" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_class_infos
+             : f0 g0. 
+            <span>
+             <span>(
+              <span><span class="">'f0</span> <span class="">&#45;&gt;</span>
+              </span> <span class="">'g0</span>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span><span class="">'f0</span> 
+              <a href="../Ast_408/Parsetree/index.html#type-class_infos"
+               class="cursor-pointer text-orange">From.Parsetree.class_infos
+              </a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span class="">'g0</span> 
+             <a href="../Ast_407/Parsetree/index.html#type-class_infos"
+              class="cursor-pointer text-orange">To.Parsetree.class_infos
+             </a>
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_virtual_flag">
+          <a href="#val-copy_virtual_flag" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_virtual_flag
+             : 
+            <span>
+             <a href="../Ast_408/Asttypes/index.html#type-virtual_flag"
+              class="cursor-pointer text-orange">From.Asttypes.virtual_flag
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Asttypes/index.html#type-virtual_flag"
+             class="cursor-pointer text-orange">To.Asttypes.virtual_flag
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_include_description">
+          <a href="#val-copy_include_description" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            copy_include_description : 
+            <span>
+             <a
+              href="../Ast_408/Parsetree/index.html#type-include_description"
+              class="cursor-pointer text-orange">
+              From.Parsetree.include_description
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a
+             href="../Ast_407/Parsetree/index.html#type-include_description"
+             class="cursor-pointer text-orange">
+             To.Parsetree.include_description
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_include_infos">
+          <a href="#val-copy_include_infos" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_include_infos
+             : f0 g0. 
+            <span>
+             <span>(
+              <span><span class="">'f0</span> <span class="">&#45;&gt;</span>
+              </span> <span class="">'g0</span>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span><span class="">'f0</span> 
+              <a href="../Ast_408/Parsetree/index.html#type-include_infos"
+               class="cursor-pointer text-orange">
+               From.Parsetree.include_infos
+              </a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span class="">'g0</span> 
+             <a href="../Ast_407/Parsetree/index.html#type-include_infos"
+              class="cursor-pointer text-orange">To.Parsetree.include_infos
+             </a>
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_open_description">
+          <a href="#val-copy_open_description" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_open_description
+             : 
+            <span>
+             <a href="../Ast_408/Parsetree/index.html#type-open_description"
+              class="cursor-pointer text-orange">
+              From.Parsetree.open_description
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Parsetree/index.html#type-open_description"
+             class="cursor-pointer text-orange">To.Parsetree.open_description
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_override_flag">
+          <a href="#val-copy_override_flag" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_override_flag
+             : 
+            <span>
+             <a href="../Ast_408/Asttypes/index.html#type-override_flag"
+              class="cursor-pointer text-orange">From.Asttypes.override_flag
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Asttypes/index.html#type-override_flag"
+             class="cursor-pointer text-orange">To.Asttypes.override_flag
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100"
+          id="val-copy_module_type_declaration">
+          <a href="#val-copy_module_type_declaration" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            copy_module_type_declaration : 
+            <span>
+             <a
+              href="../Ast_408/Parsetree/index.html#type-module_type_declaration"
+              class="cursor-pointer text-orange">
+              From.Parsetree.module_type_declaration
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a
+             href="../Ast_407/Parsetree/index.html#type-module_type_declaration"
+             class="cursor-pointer text-orange">
+             To.Parsetree.module_type_declaration
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_module_declaration">
+          <a href="#val-copy_module_declaration" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            copy_module_declaration : 
+            <span>
+             <a
+              href="../Ast_408/Parsetree/index.html#type-module_declaration"
+              class="cursor-pointer text-orange">
+              From.Parsetree.module_declaration
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Parsetree/index.html#type-module_declaration"
+             class="cursor-pointer text-orange">
+             To.Parsetree.module_declaration
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_type_extension">
+          <a href="#val-copy_type_extension" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_type_extension
+             : 
+            <span>
+             <a href="../Ast_408/Parsetree/index.html#type-type_extension"
+              class="cursor-pointer text-orange">
+              From.Parsetree.type_extension
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Parsetree/index.html#type-type_extension"
+             class="cursor-pointer text-orange">To.Parsetree.type_extension
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_extension_constructor">
+          <a href="#val-copy_extension_constructor" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            copy_extension_constructor : 
+            <span>
+             <a
+              href="../Ast_408/Parsetree/index.html#type-extension_constructor"
+              class="cursor-pointer text-orange">
+              From.Parsetree.extension_constructor
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a
+             href="../Ast_407/Parsetree/index.html#type-extension_constructor"
+             class="cursor-pointer text-orange">
+             To.Parsetree.extension_constructor
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100"
+          id="val-copy_extension_constructor_kind">
+          <a href="#val-copy_extension_constructor_kind" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            copy_extension_constructor_kind : 
+            <span>
+             <a
+              href="../Ast_408/Parsetree/index.html#type-extension_constructor_kind"
+              class="cursor-pointer text-orange">
+              From.Parsetree.extension_constructor_kind
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a
+             href="../Ast_407/Parsetree/index.html#type-extension_constructor_kind"
+             class="cursor-pointer text-orange">
+             To.Parsetree.extension_constructor_kind
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_type_declaration">
+          <a href="#val-copy_type_declaration" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_type_declaration
+             : 
+            <span>
+             <a href="../Ast_408/Parsetree/index.html#type-type_declaration"
+              class="cursor-pointer text-orange">
+              From.Parsetree.type_declaration
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Parsetree/index.html#type-type_declaration"
+             class="cursor-pointer text-orange">To.Parsetree.type_declaration
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_private_flag">
+          <a href="#val-copy_private_flag" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_private_flag
+             : 
+            <span>
+             <a href="../Ast_408/Asttypes/index.html#type-private_flag"
+              class="cursor-pointer text-orange">From.Asttypes.private_flag
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Asttypes/index.html#type-private_flag"
+             class="cursor-pointer text-orange">To.Asttypes.private_flag
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_type_kind">
+          <a href="#val-copy_type_kind" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_type_kind
+             : 
+            <span>
+             <a href="../Ast_408/Parsetree/index.html#type-type_kind"
+              class="cursor-pointer text-orange">From.Parsetree.type_kind
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Parsetree/index.html#type-type_kind"
+             class="cursor-pointer text-orange">To.Parsetree.type_kind
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100"
+          id="val-copy_constructor_declaration">
+          <a href="#val-copy_constructor_declaration" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            copy_constructor_declaration : 
+            <span>
+             <a
+              href="../Ast_408/Parsetree/index.html#type-constructor_declaration"
+              class="cursor-pointer text-orange">
+              From.Parsetree.constructor_declaration
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a
+             href="../Ast_407/Parsetree/index.html#type-constructor_declaration"
+             class="cursor-pointer text-orange">
+             To.Parsetree.constructor_declaration
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_constructor_arguments">
+          <a href="#val-copy_constructor_arguments" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            copy_constructor_arguments : 
+            <span>
+             <a
+              href="../Ast_408/Parsetree/index.html#type-constructor_arguments"
+              class="cursor-pointer text-orange">
+              From.Parsetree.constructor_arguments
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a
+             href="../Ast_407/Parsetree/index.html#type-constructor_arguments"
+             class="cursor-pointer text-orange">
+             To.Parsetree.constructor_arguments
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_label_declaration">
+          <a href="#val-copy_label_declaration" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            copy_label_declaration : 
+            <span>
+             <a href="../Ast_408/Parsetree/index.html#type-label_declaration"
+              class="cursor-pointer text-orange">
+              From.Parsetree.label_declaration
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Parsetree/index.html#type-label_declaration"
+             class="cursor-pointer text-orange">
+             To.Parsetree.label_declaration
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_mutable_flag">
+          <a href="#val-copy_mutable_flag" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_mutable_flag
+             : 
+            <span>
+             <a href="../Ast_408/Asttypes/index.html#type-mutable_flag"
+              class="cursor-pointer text-orange">From.Asttypes.mutable_flag
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Asttypes/index.html#type-mutable_flag"
+             class="cursor-pointer text-orange">To.Asttypes.mutable_flag
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_variance">
+          <a href="#val-copy_variance" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_variance
+             : 
+            <span>
+             <a href="../Ast_408/Asttypes/index.html#type-variance"
+              class="cursor-pointer text-orange">From.Asttypes.variance
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Asttypes/index.html#type-variance"
+             class="cursor-pointer text-orange">To.Asttypes.variance
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_value_description">
+          <a href="#val-copy_value_description" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            copy_value_description : 
+            <span>
+             <a href="../Ast_408/Parsetree/index.html#type-value_description"
+              class="cursor-pointer text-orange">
+              From.Parsetree.value_description
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Parsetree/index.html#type-value_description"
+             class="cursor-pointer text-orange">
+             To.Parsetree.value_description
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_arg_label">
+          <a href="#val-copy_arg_label" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_arg_label
+             : 
+            <span>
+             <a href="../Ast_408/Asttypes/index.html#type-arg_label"
+              class="cursor-pointer text-orange">From.Asttypes.arg_label
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Asttypes/index.html#type-arg_label"
+             class="cursor-pointer text-orange">To.Asttypes.arg_label
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_closed_flag">
+          <a href="#val-copy_closed_flag" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_closed_flag
+             : 
+            <span>
+             <a href="../Ast_408/Asttypes/index.html#type-closed_flag"
+              class="cursor-pointer text-orange">From.Asttypes.closed_flag
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Asttypes/index.html#type-closed_flag"
+             class="cursor-pointer text-orange">To.Asttypes.closed_flag
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_label">
+          <a href="#val-copy_label" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_label : 
+            <span>
+             <a href="../Ast_408/Asttypes/index.html#type-label"
+              class="cursor-pointer text-orange">From.Asttypes.label
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Asttypes/index.html#type-label"
+             class="cursor-pointer text-orange">To.Asttypes.label
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_rec_flag">
+          <a href="#val-copy_rec_flag" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_rec_flag
+             : 
+            <span>
+             <a href="../Ast_408/Asttypes/index.html#type-rec_flag"
+              class="cursor-pointer text-orange">From.Asttypes.rec_flag
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Asttypes/index.html#type-rec_flag"
+             class="cursor-pointer text-orange">To.Asttypes.rec_flag
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_constant">
+          <a href="#val-copy_constant" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_constant
+             : 
+            <span>
+             <a href="../Ast_408/Parsetree/index.html#type-constant"
+              class="cursor-pointer text-orange">From.Parsetree.constant
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Parsetree/index.html#type-constant"
+             class="cursor-pointer text-orange">To.Parsetree.constant
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_option">
+          <a href="#val-copy_option" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_option : 
+            f0 g0. 
+            <span>
+             <span>(
+              <span><span class="">'f0</span> <span class="">&#45;&gt;</span>
+              </span> <span class="">'g0</span>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'f0</span> option</span> 
+             <span class="">&#45;&gt;</span>
+            </span> <span><span class="">'g0</span> option</span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_longident">
+          <a href="#val-copy_longident" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_longident
+             : 
+            <span>
+             <a
+              href="../../../../ocaml-base-compiler/4.11.2/Longident/index.html#type-t"
+              class="cursor-pointer text-orange">Longident.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a
+             href="../../../../ocaml-base-compiler/4.11.2/Longident/index.html#type-t"
+             class="cursor-pointer text-orange">Longident.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_loc">
+          <a href="#val-copy_loc" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_loc : f0 g0. 
+            <span>
+             <span>(
+              <span><span class="">'f0</span> <span class="">&#45;&gt;</span>
+              </span> <span class="">'g0</span>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span><span class="">'f0</span> 
+              <a href="../Ast_408/Asttypes/index.html#type-loc"
+               class="cursor-pointer text-orange">From.Asttypes.loc
+              </a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span class="">'g0</span> 
+             <a href="../Ast_407/Asttypes/index.html#type-loc"
+              class="cursor-pointer text-orange">To.Asttypes.loc
+             </a>
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_location">
+          <a href="#val-copy_location" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_location
+             : 
+            <span>
+             <a
+              href="../../../../ocaml-base-compiler/4.11.2/Location/index.html#type-t"
+              class="cursor-pointer text-orange">Location.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a
+             href="../../../../ocaml-base-compiler/4.11.2/Location/index.html#type-t"
+             class="cursor-pointer text-orange">Location.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_bool">
+          <a href="#val-copy_bool" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_bool : 
+            <span>bool <span class="">&#45;&gt;</span></span> bool
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_cases">
+          <a href="#val-copy_cases" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_cases : 
+            <span>
+             <span>
+              <a href="../Ast_408/Parsetree/index.html#type-case"
+               class="cursor-pointer text-orange">From.Parsetree.case
+              </a> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Ast_407/Parsetree/index.html#type-case"
+              class="cursor-pointer text-orange">To.Parsetree.case
+             </a> list
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_pat">
+          <a href="#val-copy_pat" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_pat : 
+            <span>
+             <a href="../Ast_408/Parsetree/index.html#type-pattern"
+              class="cursor-pointer text-orange">From.Parsetree.pattern
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Parsetree/index.html#type-pattern"
+             class="cursor-pointer text-orange">To.Parsetree.pattern
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_expr">
+          <a href="#val-copy_expr" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_expr : 
+            <span>
+             <a href="../Ast_408/Parsetree/index.html#type-expression"
+              class="cursor-pointer text-orange">From.Parsetree.expression
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Parsetree/index.html#type-expression"
+             class="cursor-pointer text-orange">To.Parsetree.expression
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-copy_typ">
+          <a href="#val-copy_typ" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> copy_typ : 
+            <span>
+             <a href="../Ast_408/Parsetree/index.html#type-core_type"
+              class="cursor-pointer text-orange">From.Parsetree.core_type
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Ast_407/Parsetree/index.html#type-core_type"
+             class="cursor-pointer text-orange">To.Parsetree.core_type
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="w-full flex-none lg:w-72 border-t lg:border-l bg-gray-100">
+       <div class="flex h-20 border-b relative">
+        <h2 class="text-xl absolute inset-x-0 p-3 bottom-0 mt-7 font-semibold
+         text-gray-500">ocaml-migrate-parsetree.2.1.0
+        </h2>
+       </div>
+       <div class="m-3">
+        <p class="mb-5 italic text-sm">
+         Convert OCaml parsetrees between different versions
+        </p>
+        <div class="mb-3">
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="https://github.com/ocaml-ppx/ocaml-migrate-parsetree">
+           github.com/ocaml-ppx/ocaml-migrate-parsetree
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1.323l3.954 1.582 1.599-.8a1 1 0 01.894 1.79l-1.233.616 1.738 5.42a1 1 0 01-.285 1.05A3.989 3.989 0 0115 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.715-5.349L11 6.477V16h2a1 1 0 110 2H7a1 1 0 110-2h2V6.477L6.237 7.582l1.715 5.349a1 1 0 01-.285 1.05A3.989 3.989 0 015 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.738-5.42-1.233-.617a1 1 0 01.894-1.788l1.599.799L9 4.323V3a1 1 0 011-1zm-5 8.274l-.818 2.552c.25.112.526.174.818.174.292 0 .569-.062.818-.174L5 10.274zm10 0l-.818 2.552c.25.112.526.174.818.174.292 0 .569-.062.818-.174L15 10.274z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="../../LICENSE.md.html">LICENSE.md
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
+</svg>
+    
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="../../README.md.html">README.md
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" />
+</svg>
+  
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="../../CHANGES.md.html">CHANGES.md
+          </a>
+         </div>
+        </div>
+        <details class="font-normal mb-2 text-sm">
+         <summary>Other versions</summary><div id="versions_container"></div>
+        </details><h2 class="font-semibold mb-2 text-sm">Authors</h2>
+        <p class="mb-3 text-sm">
+         Frédéric Bour &lt;frederic.bour@lakaban.net&gt;,Jérémie Dimino
+         &lt;jeremie@dimino.org&gt;
+        </p><h2 class="font-semibold mb-2 text-sm">Issues</h2>
+        <div class="mb-3">
+         <a class="text-orange cursor-pointer mb-2 text-sm"
+          href="https://github.com/ocaml-ppx/ocaml-migrate-parsetree/issues">
+          github.com/ocaml-ppx/ocaml-migrate-parsetree/issues
+         </a>
+        </div>
+        <details class="font-semibold mb-2 text-sm">
+         <summary>Package dependencies</summary>
+         <div class="font-normal">
+          <ul>
+           <li>
+            <a href="../../../../dune/index.html" class="text-orange
+             cursor-pointer">dune
+            </a>
+           </li>
+           <li>
+            <a href="../../../../ocaml/index.html" class="text-orange
+             cursor-pointer">ocaml
+            </a>
+           </li>
+          </ul>
+         </div>
+        </details>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div><script>Voodoo.update('../../../version.json')</script>
+ </body>
+</html>
