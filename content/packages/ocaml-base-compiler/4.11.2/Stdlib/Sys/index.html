@@ -1,0 +1,1873 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head><title>Sys (packages.ocaml-base-compiler.4.11.2.Stdlib.Sys)</title>
+  <link rel="stylesheet" href="../../../../tailwind.css"/>
+  <link rel="stylesheet" href="../../../../extra.css"/>
+  <meta charset="utf-8"/><meta name="generator" content="odoc 3dfb7aef2f"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <script src="../../../../highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="../../../../voodoo_client.js"></script>
+  <script
+   src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+   defer="defer">
+  </script>
+ </head>
+ <body class="mx-auto max-w-screen-2xl">
+  <div class="relative">
+   <div class="relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+     <div class="flex justify-between items-center md:justify-start py-6
+      md:space-x-10">
+      <div class="flex justify-start">
+       <a href="https://v3.ocaml.org/">
+        <img src="/colour-logo.svg" alt="" class="h-8 w-auto sm:h-10"/>
+       </a>
+      </div>
+      <nav class="hidden md:flex space-x-10">
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Industry</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/whatisocaml">
+            <p class="text-base font-medium text-gray-900">What is OCaml</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/users">
+            <p class="text-base font-medium text-gray-900">Industrial Users
+            </p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/successstories">
+            <p class="text-base font-medium text-gray-900">Success Stories
+            </p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Resources</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/releases">
+            <p class="text-base font-medium text-gray-900">Releases</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/applications">
+            <p class="text-base font-medium text-gray-900">Applications</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/language">
+            <p class="text-base font-medium text-gray-900">Language</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/archive">
+            <p class="text-base font-medium text-gray-900">Archive</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Community</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/opportunities">
+            <p class="text-base font-medium text-gray-900">Opportunities</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/news">
+            <p class="text-base font-medium text-gray-900">News</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/aroundweb">
+            <p class="text-base font-medium text-gray-900">Around the Web</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="h-screen flex bg-white font-sans">
+   <div class="flex flex-col w-full h-full">
+    <div class="flex-row flex-1">
+     <nav class="bg-orange border-t border-b border-orange flex flex-row">
+      <ol class="max-w-screen-xl w-full px-4 flex space-x-4 sm:px-6 lg:px-8">
+       <li class="flex">
+        <div class="flex items-center">
+         <a href="#" class="text-gray-100 hover:text-gray-500">
+          
+  <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+        </svg>
+  
+          <span class="sr-only">Home</span>
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">packages
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">ocaml-base-compiler
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">4.11.2
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">Stdlib
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="#" class="ml-4 text-sm font-medium text-gray-100
+          hover:text-gray-500">Sys
+         </a>
+        </div>
+       </li>
+      </ol>
+     </nav>
+    </div>
+    <div class="flex flex-row flex-1">
+     <div class="w-72 flex-none bg-gray-100 h-screen border-r border-gray-200
+      sticky top-0 hidden lg:block">
+      <div class="flex h-20 border-b relative">
+       <h2 class="text-xl absolute inset-x-0 p-3 px-5 bottom-0 mt-7
+        border-gray-200 font-semibold text-gray-500 font-sans">On this page
+       </h2>
+      </div>
+      <nav class="bg-gray-100 p-5">
+       <ul>
+        <li>
+         <a href="#signal-handling" class="cursor-pointer text-orange">
+          Signal handling
+         </a>
+         <ul>
+          <li>
+           <a href="#signal-numbers-for-the-standard-posix-signals."
+            class="cursor-pointer text-orange">Signal numbers for the
+             standard POSIX signals.
+           </a>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <a href="#optimization" class="cursor-pointer text-orange">
+          Optimization
+         </a>
+        </li>
+       </ul>
+      </nav>
+     </div>
+     <div class="flex flex-1 flex-col lg:flex-row">
+      <div class="flex-1">
+       <div class="lg:max-w-5xl mx-auto px-3 lg:px-10 mb-10 text-sm">
+        <div class="flex h-20 relative border-b border-gray-200">
+         <div class="relative flex-1 h-20">
+          <h1 class="text-3xl absolute inset-x-0 py-3 bottom-0 font-semibold
+           text-gray-500 font-sans w-full truncate">
+           <code class="font-mono text-gray-800">Stdlib.Sys</code>
+          </h1>
+         </div>
+         <div class="relative flex-none w-28">
+          <h1 class="text-3xl absolute py-3 bottom-0 right-0 font-semibold
+           text-gray-500 font-sans">Module
+          </h1>
+         </div>
+        </div><p class="mt-4">System interface.</p>
+        <p class="mt-4">Every function in this module raises 
+         <code class="font-normal text-sm">Sys_error</code> with an 
+         informative message when the underlying system call signal an
+          error.
+        </p>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-argv">
+          <a href="#val-argv" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> argv : 
+            <span>string array</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">The command line arguments given to the process.
+            The first element is the command name used to invoke the 
+           program. The following elements are the command-line arguments
+            given to the program.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-executable_name">
+          <a href="#val-executable_name" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> executable_name
+             : string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">The name of the file containing the executable
+            currently running. This name may be absolute or relative 
+           to the current directory, depending on the platform and whether
+            the program was compiled to bytecode or a native executable.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-file_exists">
+          <a href="#val-file_exists" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> file_exists : 
+            <span>string <span class="">&#45;&gt;</span></span> bool
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Test if a file with the given name exists.</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-is_directory">
+          <a href="#val-is_directory" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> is_directory : 
+            <span>string <span class="">&#45;&gt;</span></span> bool
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Returns 
+           <code class="font-normal text-sm">true</code> if the given
+            name refers to a directory, 
+           <code class="font-normal text-sm">false</code> if it refers
+            to another kind of file.
+          </p>
+          <ul class="at-tags">
+           <li class="raises">raises Sys_error 
+            <p class="mt-4">if no file exists with the given name.</p>
+           </li>
+          </ul><ul class="at-tags"><li class="since">since 3.10.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-remove">
+          <a href="#val-remove" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> remove : 
+            <span>string <span class="">&#45;&gt;</span></span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Remove the given file name from the file system.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-rename">
+          <a href="#val-rename" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> rename : 
+            <span>string <span class="">&#45;&gt;</span></span> 
+            <span>string <span class="">&#45;&gt;</span></span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Rename a file. 
+           <code class="font-normal text-sm">rename oldpath newpath</code>
+            renames the file called 
+           <code class="font-normal text-sm">oldpath</code>, giving it
+            <code class="font-normal text-sm">newpath</code> as its new
+            name, moving it between directories if needed. If 
+           <code class="font-normal text-sm">newpath</code> already exists,
+            its contents will be replaced with those of 
+           <code class="font-normal text-sm">oldpath</code>. Depending
+            on the operating system, the metadata (permissions, owner,
+            etc) of <code class="font-normal text-sm">newpath</code> 
+           can either be preserved or be replaced by those of 
+           <code class="font-normal text-sm">oldpath</code>.
+          </p>
+          <ul class="at-tags">
+           <li class="since">since 
+            4.06 concerning the &quot;replace existing file&quot; behavior
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-getenv">
+          <a href="#val-getenv" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> getenv : 
+            <span>string <span class="">&#45;&gt;</span></span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return the value associated to a variable in
+            the process environment.
+          </p>
+          <ul class="at-tags">
+           <li class="raises">raises Not_found 
+            <p class="mt-4">if the variable is unbound.</p>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-getenv_opt">
+          <a href="#val-getenv_opt" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> getenv_opt : 
+            <span>string <span class="">&#45;&gt;</span></span> 
+            <span>string option</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return the value associated to a variable in
+            the process environment or 
+           <code class="font-normal text-sm">None</code> if the variable
+            is unbound.
+          </p><ul class="at-tags"><li class="since">since 4.05</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-command">
+          <a href="#val-command" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> command : 
+            <span>string <span class="">&#45;&gt;</span></span> int
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Execute the given shell command and return 
+           its exit code.
+          </p>
+          <p class="mt-4">The argument of 
+           <a href="#val-command" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Sys.command</code>
+           </a> is generally the name of a command followed by zero, 
+           one or several arguments, separated by whitespace. The given
+            argument is interpreted by a shell: either the Windows shell
+            <code class="font-normal text-sm">cmd.exe</code> for the 
+           Win32 ports of OCaml, or the POSIX shell 
+           <code class="font-normal text-sm">sh</code> for other ports.
+            It can contain shell builtin commands such as 
+           <code class="font-normal text-sm">echo</code>, and also special
+            characters such as file redirections 
+           <code class="font-normal text-sm">&gt;</code> and 
+           <code class="font-normal text-sm">&lt;</code>, which will 
+           be honored by the shell.
+          </p>
+          <p class="mt-4">Conversely, whitespace or special shell characters
+            occurring in command names or in their arguments must be 
+           quoted or escaped so that the shell does not interpret them.
+            The quoting rules vary between the POSIX shell and the Windows
+            shell. The 
+           <a href="../Filename/index.html#val-quote_command"
+            class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Filename.quote_command</code>
+           </a> performs the appropriate quoting given a command name,
+            a list of arguments, and optional file redirections.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-time">
+          <a href="#val-time" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> time : 
+            <span>unit <span class="">&#45;&gt;</span></span> float
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return the processor time, in seconds, used
+            by the program since the beginning of execution.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-chdir">
+          <a href="#val-chdir" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> chdir : 
+            <span>string <span class="">&#45;&gt;</span></span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Change the current working directory of the
+            process.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-getcwd">
+          <a href="#val-getcwd" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> getcwd : 
+            <span>unit <span class="">&#45;&gt;</span></span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return the current working directory of the
+            process.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-readdir">
+          <a href="#val-readdir" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> readdir : 
+            <span>string <span class="">&#45;&gt;</span></span> 
+            <span>string array</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return the names of all files present in the
+            given directory. Names denoting the current directory and
+            the parent directory (
+           <code class="font-normal text-sm">&quot;.&quot;</code> and
+            <code class="font-normal text-sm">&quot;..&quot;</code> in
+            Unix) are not returned. Each string in the result is a file
+            name rather than a complete path. There is no guarantee that
+            the name strings in the resulting array will appear in any
+            specific order; they are not, in particular, guaranteed to
+            appear in alphabetical order.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-interactive">
+          <a href="#val-interactive" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> interactive : 
+            <span>bool 
+             <a href="../index.html#type-ref" class="cursor-pointer
+              text-orange">Stdlib.ref
+             </a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">This reference is initially set to 
+           <code class="font-normal text-sm">false</code> in standalone
+            programs and to <code class="font-normal text-sm">true</code>
+            if the code is being executed under the interactive toplevel
+            system <code class="font-normal text-sm">ocaml</code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-os_type">
+          <a href="#val-os_type" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> os_type : string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Operating system currently executing the OCaml
+            program. One of
+          </p>
+          <ul class="list-disc mt-2 mb-4">
+           <li class="ml-4">
+            <code class="font-normal text-sm">&quot;Unix&quot;</code>
+             (for all Unix versions, including Linux and Mac OS X),
+           </li>
+           <li class="ml-4">
+            <code class="font-normal text-sm">&quot;Win32&quot;</code>
+             (for MS-Windows, OCaml compiled with MSVC++ or Mingw),
+           </li>
+           <li class="ml-4">
+            <code class="font-normal text-sm">&quot;Cygwin&quot;</code>
+             (for MS-Windows, OCaml compiled with Cygwin).
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-backend_type">
+          <a href="#type-backend_type" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> backend_type</span>
+           <span> = </span>
+          </code>
+          <table>
+           <tr id="type-backend_type.Native">
+            <td class="anchored pl-4">
+             <a href="#type-backend_type.Native" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Native</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-backend_type.Bytecode">
+            <td class="anchored pl-4">
+             <a href="#type-backend_type.Bytecode" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Bytecode</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-backend_type.Other">
+            <td class="anchored pl-4">
+             <a href="#type-backend_type.Other" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Other</span> 
+               <span class="font-semibold">of</span> string
+              </span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Currently, the official distribution only supports
+            <code class="font-normal text-sm">Native</code> and 
+           <code class="font-normal text-sm">Bytecode</code>, but it 
+           can be other backends with alternative compilers, for example,
+            javascript.
+          </p><ul class="at-tags"><li class="since">since 4.04.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-backend_type">
+          <a href="#val-backend_type" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> backend_type : 
+            <a href="#type-backend_type" class="cursor-pointer text-orange">
+             backend_type
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Backend type currently executing the OCaml program.
+          </p><ul class="at-tags"><li class="since">since 4.04.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-unix">
+          <a href="#val-unix" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> unix : bool</span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">True if 
+           <code class="font-normal text-sm">Sys.os_type = &quot;Unix&quot;
+           </code>.
+          </p><ul class="at-tags"><li class="since">since 4.01.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-win32">
+          <a href="#val-win32" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> win32 : bool</span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">True if 
+           <code class="font-normal text-sm">Sys.os_type = &quot;Win32&quot;
+           </code>.
+          </p><ul class="at-tags"><li class="since">since 4.01.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-cygwin">
+          <a href="#val-cygwin" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> cygwin : bool</span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">True if 
+           <code class="font-normal text-sm">Sys.os_type = &quot;Cygwin&quot;
+           </code>.
+          </p><ul class="at-tags"><li class="since">since 4.01.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-word_size">
+          <a href="#val-word_size" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> word_size : int
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Size of one word on the machine currently executing
+            the OCaml program, in bits: 32 or 64.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-int_size">
+          <a href="#val-int_size" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> int_size : int</span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Size of 
+           <code class="font-normal text-sm">int</code>, in bits. It 
+           is 31 (resp. 63) when using OCaml on a 32-bit (resp. 64-bit)
+            platform. It may differ for other implementations, e.g. it
+            can be 32 bits when compiling to JavaScript.
+          </p><ul class="at-tags"><li class="since">since 4.03.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-big_endian">
+          <a href="#val-big_endian" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> big_endian : bool
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Whether the machine currently executing the
+            Caml program is big-endian.
+          </p><ul class="at-tags"><li class="since">since 4.00.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-max_string_length">
+          <a href="#val-max_string_length" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> max_string_length
+             : int
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Maximum length of strings and byte sequences.</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-max_array_length">
+          <a href="#val-max_array_length" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> max_array_length
+             : int
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Maximum length of a normal array (i.e. any 
+           array whose elements are not of type 
+           <code class="font-normal text-sm">float</code>). The maximum
+            length of a <code class="font-normal text-sm">float array</code>
+            is <code class="font-normal text-sm">max_floatarray_length</code>
+            if OCaml was configured with 
+           <code class="font-normal text-sm">--enable-flat-float-array</code>
+            and <code class="font-normal text-sm">max_array_length</code>
+            if configured with 
+           <code class="font-normal text-sm">--disable-flat-float-array
+           </code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-max_floatarray_length">
+          <a href="#val-max_floatarray_length" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> max_floatarray_length
+             : int
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Maximum length of a floatarray. This is also
+            the maximum length of a 
+           <code class="font-normal text-sm">float array</code> when 
+           OCaml is configured with 
+           <code class="font-normal text-sm">--enable-flat-float-array</code>
+           .
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-runtime_variant">
+          <a href="#val-runtime_variant" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> runtime_variant
+             : <span>unit <span class="">&#45;&gt;</span></span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return the name of the runtime variant the 
+           program is running on. This is normally the argument given
+            to <code class="font-normal text-sm">-runtime-variant</code>
+            at compile time, but for byte-code it can be changed after
+            compilation.
+          </p><ul class="at-tags"><li class="since">since 4.03.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100"
+          id="val-runtime_parameters">
+          <a href="#val-runtime_parameters" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> runtime_parameters
+             : <span>unit <span class="">&#45;&gt;</span></span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return the value of the runtime parameters,
+            in the same format as the contents of the 
+           <code class="font-normal text-sm">OCAMLRUNPARAM</code> environment
+            variable.
+          </p><ul class="at-tags"><li class="since">since 4.03.0</li></ul>
+         </div>
+        </div>
+        <h2 class="text-2xl my-4 text-gray-800 font-sans anchored"
+         id="signal-handling">
+         <a href="#signal-handling" class="hover-link inline-block -ml-7
+          pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Signal handling
+        </h2>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-signal_behavior">
+          <a href="#type-signal_behavior" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> signal_behavior
+           </span><span> = </span>
+          </code>
+          <table>
+           <tr id="type-signal_behavior.Signal_default">
+            <td class="anchored pl-4">
+             <a href="#type-signal_behavior.Signal_default" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Signal_default</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-signal_behavior.Signal_ignore">
+            <td class="anchored pl-4">
+             <a href="#type-signal_behavior.Signal_ignore" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Signal_ignore</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-signal_behavior.Signal_handle">
+            <td class="anchored pl-4">
+             <a href="#type-signal_behavior.Signal_handle" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Signal_handle</span> 
+               <span class="font-semibold">of</span> 
+               <span>int <span class="">&#45;&gt;</span></span> unit
+              </span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">What to do when receiving a signal:</p>
+          <ul class="list-disc mt-2 mb-4">
+           <li class="ml-4">
+            <code class="font-normal text-sm">Signal_default</code>: 
+            take the default behavior (usually: abort the program)
+           </li>
+           <li class="ml-4">
+            <code class="font-normal text-sm">Signal_ignore</code>: ignore
+             the signal
+           </li>
+           <li class="ml-4">
+            <code class="font-normal text-sm">Signal_handle f</code>:
+             call function <code class="font-normal text-sm">f</code>
+            , giving it the signal number as argument.
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-signal">
+          <a href="#val-signal" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> signal : 
+            <span>int <span class="">&#45;&gt;</span></span> 
+            <span>
+             <a href="#type-signal_behavior" class="cursor-pointer
+              text-orange">signal_behavior
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-signal_behavior" class="cursor-pointer
+             text-orange">signal_behavior
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Set the behavior of the system on receipt of
+            a given signal. The first argument is the signal number. 
+           Return the behavior previously associated with the signal.
+            If the signal number is invalid (or not available on your
+            system), an 
+           <code class="font-normal text-sm">Invalid_argument</code> 
+           exception is raised.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-set_signal">
+          <a href="#val-set_signal" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> set_signal : 
+            <span>int <span class="">&#45;&gt;</span></span> 
+            <span>
+             <a href="#type-signal_behavior" class="cursor-pointer
+              text-orange">signal_behavior
+             </a> <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Same as 
+           <a href="#val-signal" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Sys.signal</code>
+           </a> but return value is ignored.
+          </p>
+         </div>
+        </div>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans
+         anchored" id="signal-numbers-for-the-standard-posix-signals.">
+         <a href="#signal-numbers-for-the-standard-posix-signals."
+          class="hover-link inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Signal numbers for the standard POSIX signals.
+        </h3>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-sigabrt">
+          <a href="#val-sigabrt" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sigabrt : int</span>
+          </code>
+         </div>
+         <div class="spec-doc"><p class="mt-4">Abnormal termination</p></div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-sigalrm">
+          <a href="#val-sigalrm" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sigalrm : int</span>
+          </code>
+         </div><div class="spec-doc"><p class="mt-4">Timeout</p></div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-sigfpe">
+          <a href="#val-sigfpe" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sigfpe : int</span>
+          </code>
+         </div>
+         <div class="spec-doc"><p class="mt-4">Arithmetic exception</p></div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-sighup">
+          <a href="#val-sighup" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sighup : int</span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Hangup on controlling terminal</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-sigill">
+          <a href="#val-sigill" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sigill : int</span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Invalid hardware instruction</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-sigint">
+          <a href="#val-sigint" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sigint : int</span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Interactive interrupt (ctrl-C)</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-sigkill">
+          <a href="#val-sigkill" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sigkill : int</span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Termination (cannot be ignored)</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-sigpipe">
+          <a href="#val-sigpipe" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sigpipe : int</span>
+          </code>
+         </div><div class="spec-doc"><p class="mt-4">Broken pipe</p></div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-sigquit">
+          <a href="#val-sigquit" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sigquit : int</span>
+          </code>
+         </div>
+         <div class="spec-doc"><p class="mt-4">Interactive termination</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-sigsegv">
+          <a href="#val-sigsegv" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sigsegv : int</span>
+          </code>
+         </div>
+         <div class="spec-doc"><p class="mt-4">Invalid memory reference</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-sigterm">
+          <a href="#val-sigterm" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sigterm : int</span>
+          </code>
+         </div><div class="spec-doc"><p class="mt-4">Termination</p></div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-sigusr1">
+          <a href="#val-sigusr1" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sigusr1 : int</span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Application-defined signal 1</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-sigusr2">
+          <a href="#val-sigusr2" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sigusr2 : int</span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Application-defined signal 2</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-sigchld">
+          <a href="#val-sigchld" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sigchld : int</span>
+          </code>
+         </div>
+         <div class="spec-doc"><p class="mt-4">Child process terminated</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-sigcont">
+          <a href="#val-sigcont" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sigcont : int</span>
+          </code>
+         </div><div class="spec-doc"><p class="mt-4">Continue</p></div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-sigstop">
+          <a href="#val-sigstop" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sigstop : int</span>
+          </code>
+         </div><div class="spec-doc"><p class="mt-4">Stop</p></div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-sigtstp">
+          <a href="#val-sigtstp" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sigtstp : int</span>
+          </code>
+         </div>
+         <div class="spec-doc"><p class="mt-4">Interactive stop</p></div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-sigttin">
+          <a href="#val-sigttin" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sigttin : int</span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Terminal read from background process</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-sigttou">
+          <a href="#val-sigttou" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sigttou : int</span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Terminal write from background process</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-sigvtalrm">
+          <a href="#val-sigvtalrm" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sigvtalrm : int
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc"><p class="mt-4">Timeout in virtual time</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-sigprof">
+          <a href="#val-sigprof" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sigprof : int</span>
+          </code>
+         </div>
+         <div class="spec-doc"><p class="mt-4">Profiling interrupt</p></div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-sigbus">
+          <a href="#val-sigbus" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sigbus : int</span>
+          </code>
+         </div>
+         <div class="spec-doc"><p class="mt-4">Bus error</p>
+          <ul class="at-tags"><li class="since">since 4.03</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-sigpoll">
+          <a href="#val-sigpoll" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sigpoll : int</span>
+          </code>
+         </div>
+         <div class="spec-doc"><p class="mt-4">Pollable event</p>
+          <ul class="at-tags"><li class="since">since 4.03</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-sigsys">
+          <a href="#val-sigsys" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sigsys : int</span>
+          </code>
+         </div>
+         <div class="spec-doc"><p class="mt-4">Bad argument to routine</p>
+          <ul class="at-tags"><li class="since">since 4.03</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-sigtrap">
+          <a href="#val-sigtrap" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sigtrap : int</span>
+          </code>
+         </div>
+         <div class="spec-doc"><p class="mt-4">Trace/breakpoint trap</p>
+          <ul class="at-tags"><li class="since">since 4.03</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-sigurg">
+          <a href="#val-sigurg" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sigurg : int</span>
+          </code>
+         </div>
+         <div class="spec-doc"><p class="mt-4">Urgent condition on socket</p>
+          <ul class="at-tags"><li class="since">since 4.03</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-sigxcpu">
+          <a href="#val-sigxcpu" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sigxcpu : int</span>
+          </code>
+         </div>
+         <div class="spec-doc"><p class="mt-4">Timeout in cpu time</p>
+          <ul class="at-tags"><li class="since">since 4.03</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-sigxfsz">
+          <a href="#val-sigxfsz" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sigxfsz : int</span>
+          </code>
+         </div>
+         <div class="spec-doc"><p class="mt-4">File size limit exceeded</p>
+          <ul class="at-tags"><li class="since">since 4.03</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec exception anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="exception-Break">
+          <a href="#exception-Break" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">exception</span> </span>
+           <span><span class="">Break</span></span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Exception raised on interactive interrupt if
+            
+           <a href="#val-catch_break" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Sys.catch_break</code>
+           </a> is on.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-catch_break">
+          <a href="#val-catch_break" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> catch_break : 
+            <span>bool <span class="">&#45;&gt;</span></span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">catch_break</code> governs
+            whether interactive interrupt (ctrl-C) terminates the program
+            or raises the <code class="font-normal text-sm">Break</code>
+            exception. Call 
+           <code class="font-normal text-sm">catch_break true</code> 
+           to enable raising <code class="font-normal text-sm">Break</code>
+           , and <code class="font-normal text-sm">catch_break false</code>
+            to let the system terminate the program on user interrupt.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-ocaml_version">
+          <a href="#val-ocaml_version" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> ocaml_version
+             : string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">ocaml_version</code> is 
+           the version of OCaml. It is a string of the form 
+           <code class="font-normal text-sm">
+            &quot;major.minor[.patchlevel][(+|~)additional-info]&quot;
+           </code>, where <code class="font-normal text-sm">major</code>
+           , <code class="font-normal text-sm">minor</code>, and 
+           <code class="font-normal text-sm">patchlevel</code> are integers,
+            and <code class="font-normal text-sm">additional-info</code>
+            is an arbitrary string. The 
+           <code class="font-normal text-sm">[.patchlevel]</code> part
+            is absent for versions anterior to 3.08.0. The 
+           <code class="font-normal text-sm">[(+|~)additional-info]</code>
+            part may be absent.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-enable_runtime_warnings">
+          <a href="#val-enable_runtime_warnings" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            enable_runtime_warnings : 
+            <span>bool <span class="">&#45;&gt;</span></span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Control whether the OCaml runtime system can
+            emit warnings on stderr. Currently, the only supported warning
+            is triggered when a channel created by 
+           <code class="font-normal text-sm">open_*</code> functions 
+           is finalized without being closed. Runtime warnings are disabled
+            by default.
+          </p><ul class="at-tags"><li class="since">since 4.03.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-runtime_warnings_enabled">
+          <a href="#val-runtime_warnings_enabled" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            runtime_warnings_enabled : 
+            <span>unit <span class="">&#45;&gt;</span></span> bool
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return whether runtime warnings are currently
+            enabled.
+          </p><ul class="at-tags"><li class="since">since 4.03.0</li></ul>
+         </div>
+        </div>
+        <h2 class="text-2xl my-4 text-gray-800 font-sans anchored"
+         id="optimization">
+         <a href="#optimization" class="hover-link inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Optimization
+        </h2>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-opaque_identity">
+          <a href="#val-opaque_identity" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> opaque_identity
+             : 
+            <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+            </span> <span class="">'a</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">For the purposes of optimization, 
+           <code class="font-normal text-sm">opaque_identity</code> behaves
+            like an unknown (and thus possibly side-effecting) function.
+          </p>
+          <p class="mt-4">At runtime, 
+           <code class="font-normal text-sm">opaque_identity</code> 
+           disappears altogether.
+          </p>
+          <p class="mt-4">A typical use of this function is to prevent
+            pure computations from being optimized away in benchmarking
+            loops. For example:
+          </p>
+          <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+           <code class="font-normal text-sm">
+            for _round = 1 to 100_000 do
+              ignore (Sys.opaque_identity (my_pure_computation ()))
+            done
+           </code>
+          </pre><ul class="at-tags"><li class="since">since 4.03.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec module anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="module-Immediate64">
+          <a href="#module-Immediate64" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">module</span> </span>
+           <span>
+            <a href="Immediate64/index.html" class="cursor-pointer
+             text-orange">Immediate64
+            </a>
+           </span>
+           <span> : <span class="font-semibold">sig</span> ... 
+            <span class="font-semibold">end</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">This module allows to define a type 
+           <code class="font-normal text-sm">t</code> with the 
+           <code class="font-normal text-sm">immediate64</code> attribute.
+            This attribute means that the type is immediate on 64 bit
+            architectures. On other architectures, it might or might 
+           not be immediate.
+          </p>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="w-full flex-none lg:w-72 border-t lg:border-l bg-gray-100">
+       <div class="flex h-20 border-b relative">
+        <h2 class="text-xl absolute inset-x-0 p-3 bottom-0 mt-7 font-semibold
+         text-gray-500">ocaml-base-compiler.4.11.2
+        </h2>
+       </div>
+       <div class="m-3">
+        <p class="mb-5 italic text-sm">Official release 4.11.2</p>
+        <div class="mb-3">
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="https://ocaml.org">ocaml.org
+          </a>
+         </div>
+        </div>
+        <details class="font-normal mb-2 text-sm">
+         <summary>Other versions</summary><div id="versions_container"></div>
+        </details><h2 class="font-semibold mb-2 text-sm">Authors</h2>
+        <p class="mb-3 text-sm">Xavier Leroy and many contributors</p>
+        <h2 class="font-semibold mb-2 text-sm">Issues</h2>
+        <div class="mb-3">
+         <a class="text-orange cursor-pointer mb-2 text-sm"
+          href="https://github.com/ocaml/opam-repository/issues">
+          github.com/ocaml/opam-repository/issues
+         </a>
+        </div>
+        <details class="font-semibold mb-2 text-sm">
+         <summary>Package dependencies</summary>
+         <div class="font-normal">
+          <ul>
+           <li>
+            <a href="../../../../ocaml/index.html" class="text-orange
+             cursor-pointer">ocaml
+            </a>
+           </li>
+           <li>
+            <a href="../../../../base-unix/index.html" class="text-orange
+             cursor-pointer">base-unix
+            </a>
+           </li>
+           <li>
+            <a href="../../../../base-bigarray/index.html" class="text-orange
+             cursor-pointer">base-bigarray
+            </a>
+           </li>
+           <li>
+            <a href="../../../../base-threads/index.html" class="text-orange
+             cursor-pointer">base-threads
+            </a>
+           </li>
+          </ul>
+         </div>
+        </details>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div><script>Voodoo.update('../../../version.json')</script>
+ </body>
+</html>

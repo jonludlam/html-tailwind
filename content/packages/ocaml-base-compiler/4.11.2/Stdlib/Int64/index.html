@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>Int64 (packages.ocaml-base-compiler.4.11.2.Stdlib.Int64)</title>
+  <link rel="stylesheet" href="../../../../tailwind.css"/>
+  <link rel="stylesheet" href="../../../../extra.css"/>
+  <meta charset="utf-8"/><meta name="generator" content="odoc 3dfb7aef2f"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <script src="../../../../highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="../../../../voodoo_client.js"></script>
+  <script
+   src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+   defer="defer">
+  </script>
+ </head>
+ <body class="mx-auto max-w-screen-2xl">
+  <div class="relative">
+   <div class="relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+     <div class="flex justify-between items-center md:justify-start py-6
+      md:space-x-10">
+      <div class="flex justify-start">
+       <a href="https://v3.ocaml.org/">
+        <img src="/colour-logo.svg" alt="" class="h-8 w-auto sm:h-10"/>
+       </a>
+      </div>
+      <nav class="hidden md:flex space-x-10">
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Industry</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/whatisocaml">
+            <p class="text-base font-medium text-gray-900">What is OCaml</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/users">
+            <p class="text-base font-medium text-gray-900">Industrial Users
+            </p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/successstories">
+            <p class="text-base font-medium text-gray-900">Success Stories
+            </p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Resources</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/releases">
+            <p class="text-base font-medium text-gray-900">Releases</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/applications">
+            <p class="text-base font-medium text-gray-900">Applications</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/language">
+            <p class="text-base font-medium text-gray-900">Language</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/archive">
+            <p class="text-base font-medium text-gray-900">Archive</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Community</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/opportunities">
+            <p class="text-base font-medium text-gray-900">Opportunities</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/news">
+            <p class="text-base font-medium text-gray-900">News</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/aroundweb">
+            <p class="text-base font-medium text-gray-900">Around the Web</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="h-screen flex bg-white font-sans">
+   <div class="flex flex-col w-full h-full">
+    <div class="flex-row flex-1">
+     <nav class="bg-orange border-t border-b border-orange flex flex-row">
+      <ol class="max-w-screen-xl w-full px-4 flex space-x-4 sm:px-6 lg:px-8">
+       <li class="flex">
+        <div class="flex items-center">
+         <a href="#" class="text-gray-100 hover:text-gray-500">
+          
+  <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+        </svg>
+  
+          <span class="sr-only">Home</span>
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">packages
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">ocaml-base-compiler
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">4.11.2
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">Stdlib
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="#" class="ml-4 text-sm font-medium text-gray-100
+          hover:text-gray-500">Int64
+         </a>
+        </div>
+       </li>
+      </ol>
+     </nav>
+    </div>
+    <div class="flex flex-row flex-1">
+     <div class="w-72 flex-none bg-gray-100 h-screen border-r border-gray-200
+      sticky top-0 hidden lg:block">
+      <div class="flex h-20 border-b relative">
+       <h2 class="text-xl absolute inset-x-0 p-3 px-5 bottom-0 mt-7
+        border-gray-200 font-semibold text-gray-500 font-sans">On this page
+       </h2>
+      </div>
+     </div>
+     <div class="flex flex-1 flex-col lg:flex-row">
+      <div class="flex-1">
+       <div class="lg:max-w-5xl mx-auto px-3 lg:px-10 mb-10 text-sm">
+        <div class="flex h-20 relative border-b border-gray-200">
+         <div class="relative flex-1 h-20">
+          <h1 class="text-3xl absolute inset-x-0 py-3 bottom-0 font-semibold
+           text-gray-500 font-sans w-full truncate">
+           <code class="font-mono text-gray-800">Stdlib.Int64</code>
+          </h1>
+         </div>
+         <div class="relative flex-none w-28">
+          <h1 class="text-3xl absolute py-3 bottom-0 right-0 font-semibold
+           text-gray-500 font-sans">Module
+          </h1>
+         </div>
+        </div><p class="mt-4">64-bit integers.</p>
+        <p class="mt-4">This module provides operations on the type 
+         <code class="font-normal text-sm">int64</code> of signed 64-bit
+          integers. Unlike the built-in 
+         <code class="font-normal text-sm">int</code> type, the type 
+         <code class="font-normal text-sm">int64</code> is guaranteed
+          to be exactly 64-bit wide on all platforms. All arithmetic 
+         operations over <code class="font-normal text-sm">int64</code>
+          are taken modulo 2<sup>64</sup>
+        </p>
+        <p class="mt-4">Performance notice: values of type 
+         <code class="font-normal text-sm">int64</code> occupy more memory
+          space than values of type 
+         <code class="font-normal text-sm">int</code>, and arithmetic
+          operations on <code class="font-normal text-sm">int64</code>
+          are generally slower than those on 
+         <code class="font-normal text-sm">int</code>. Use 
+         <code class="font-normal text-sm">int64</code> only when the
+          application requires exact 64-bit arithmetic.
+        </p>
+        <p class="mt-4">Literals for 64-bit integers are suffixed by L:</p>
+        <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+         <code class="font-normal text-sm">
+          let zero: int64 = 0L
+          let one: int64 = 1L
+          let m_one: int64 = -1L
+         </code>
+        </pre>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-zero">
+          <a href="#val-zero" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> zero : int64</span>
+          </code>
+         </div>
+         <div class="spec-doc"><p class="mt-4">The 64-bit integer 0.</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-one">
+          <a href="#val-one" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> one : int64</span>
+          </code>
+         </div>
+         <div class="spec-doc"><p class="mt-4">The 64-bit integer 1.</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-minus_one">
+          <a href="#val-minus_one" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> minus_one : int64
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc"><p class="mt-4">The 64-bit integer -1.</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-neg">
+          <a href="#val-neg" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> neg : 
+            <span>int64 <span class="">&#45;&gt;</span></span> int64
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc"><p class="mt-4">Unary negation.</p></div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-add">
+          <a href="#val-add" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> add : 
+            <span>int64 <span class="">&#45;&gt;</span></span> 
+            <span>int64 <span class="">&#45;&gt;</span></span> int64
+           </span>
+          </code>
+         </div><div class="spec-doc"><p class="mt-4">Addition.</p></div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-sub">
+          <a href="#val-sub" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sub : 
+            <span>int64 <span class="">&#45;&gt;</span></span> 
+            <span>int64 <span class="">&#45;&gt;</span></span> int64
+           </span>
+          </code>
+         </div><div class="spec-doc"><p class="mt-4">Subtraction.</p></div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-mul">
+          <a href="#val-mul" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> mul : 
+            <span>int64 <span class="">&#45;&gt;</span></span> 
+            <span>int64 <span class="">&#45;&gt;</span></span> int64
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc"><p class="mt-4">Multiplication.</p></div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-div">
+          <a href="#val-div" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> div : 
+            <span>int64 <span class="">&#45;&gt;</span></span> 
+            <span>int64 <span class="">&#45;&gt;</span></span> int64
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc"><p class="mt-4">Integer division.</p>
+          <ul class="at-tags">
+           <li class="raises">raises Division_by_zero 
+            <p class="mt-4">if the second argument is zero. This division
+              rounds the real quotient of its arguments towards zero,
+              as specified for 
+             <code class="font-normal text-sm">Stdlib</code>.(/).
+            </p>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-unsigned_div">
+          <a href="#val-unsigned_div" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> unsigned_div : 
+            <span>int64 <span class="">&#45;&gt;</span></span> 
+            <span>int64 <span class="">&#45;&gt;</span></span> int64
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Same as 
+           <a href="#val-div" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">div</code>
+           </a>, except that arguments and result are interpreted as 
+           <em>unsigned</em> 64-bit integers.
+          </p><ul class="at-tags"><li class="since">since 4.08.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-rem">
+          <a href="#val-rem" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> rem : 
+            <span>int64 <span class="">&#45;&gt;</span></span> 
+            <span>int64 <span class="">&#45;&gt;</span></span> int64
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Integer remainder. If 
+           <code class="font-normal text-sm">y</code> is not zero, the
+            result of <code class="font-normal text-sm">Int64.rem x y</code>
+            satisfies the following property: 
+           <code class="font-normal text-sm">
+            x = Int64.add (Int64.mul (Int64.div x y) y) (Int64.rem x y)
+           </code>. If <code class="font-normal text-sm">y = 0</code>
+           , <code class="font-normal text-sm">Int64.rem x y</code> raises
+            <code class="font-normal text-sm">Division_by_zero</code>
+           .
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-unsigned_rem">
+          <a href="#val-unsigned_rem" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> unsigned_rem : 
+            <span>int64 <span class="">&#45;&gt;</span></span> 
+            <span>int64 <span class="">&#45;&gt;</span></span> int64
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Same as 
+           <a href="#val-rem" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">rem</code>
+           </a>, except that arguments and result are interpreted as 
+           <em>unsigned</em> 64-bit integers.
+          </p><ul class="at-tags"><li class="since">since 4.08.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-succ">
+          <a href="#val-succ" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> succ : 
+            <span>int64 <span class="">&#45;&gt;</span></span> int64
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Successor. 
+           <code class="font-normal text-sm">Int64.succ x</code> is 
+           <code class="font-normal text-sm">Int64.add x Int64.one</code>
+           .
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-pred">
+          <a href="#val-pred" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> pred : 
+            <span>int64 <span class="">&#45;&gt;</span></span> int64
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Predecessor. 
+           <code class="font-normal text-sm">Int64.pred x</code> is 
+           <code class="font-normal text-sm">Int64.sub x Int64.one</code>
+           .
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-abs">
+          <a href="#val-abs" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> abs : 
+            <span>int64 <span class="">&#45;&gt;</span></span> int64
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return the absolute value of its argument.</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-max_int">
+          <a href="#val-max_int" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> max_int : int64
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">The greatest representable 64-bit integer, 
+           2<sup>63</sup> - 1.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-min_int">
+          <a href="#val-min_int" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> min_int : int64
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">The smallest representable 64-bit integer, 
+           -2<sup>63</sup>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-logand">
+          <a href="#val-logand" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> logand : 
+            <span>int64 <span class="">&#45;&gt;</span></span> 
+            <span>int64 <span class="">&#45;&gt;</span></span> int64
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc"><p class="mt-4">Bitwise logical and.</p></div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-logor">
+          <a href="#val-logor" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> logor : 
+            <span>int64 <span class="">&#45;&gt;</span></span> 
+            <span>int64 <span class="">&#45;&gt;</span></span> int64
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc"><p class="mt-4">Bitwise logical or.</p></div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-logxor">
+          <a href="#val-logxor" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> logxor : 
+            <span>int64 <span class="">&#45;&gt;</span></span> 
+            <span>int64 <span class="">&#45;&gt;</span></span> int64
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Bitwise logical exclusive or.</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-lognot">
+          <a href="#val-lognot" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> lognot : 
+            <span>int64 <span class="">&#45;&gt;</span></span> int64
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc"><p class="mt-4">Bitwise logical negation.</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-shift_left">
+          <a href="#val-shift_left" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> shift_left : 
+            <span>int64 <span class="">&#45;&gt;</span></span> 
+            <span>int <span class="">&#45;&gt;</span></span> int64
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">Int64.shift_left x y</code>
+            shifts <code class="font-normal text-sm">x</code> to the 
+           left by <code class="font-normal text-sm">y</code> bits. The
+            result is unspecified if 
+           <code class="font-normal text-sm">y &lt; 0</code> or 
+           <code class="font-normal text-sm">y &gt;= 64</code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-shift_right">
+          <a href="#val-shift_right" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> shift_right : 
+            <span>int64 <span class="">&#45;&gt;</span></span> 
+            <span>int <span class="">&#45;&gt;</span></span> int64
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">Int64.shift_right x y</code>
+            shifts <code class="font-normal text-sm">x</code> to the 
+           right by <code class="font-normal text-sm">y</code> bits. 
+           This is an arithmetic shift: the sign bit of 
+           <code class="font-normal text-sm">x</code> is replicated and
+            inserted in the vacated bits. The result is unspecified if
+            <code class="font-normal text-sm">y &lt; 0</code> or 
+           <code class="font-normal text-sm">y &gt;= 64</code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100"
+          id="val-shift_right_logical">
+          <a href="#val-shift_right_logical" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> shift_right_logical
+             : <span>int64 <span class="">&#45;&gt;</span></span> 
+            <span>int <span class="">&#45;&gt;</span></span> int64
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">Int64.shift_right_logical x y
+           </code> shifts <code class="font-normal text-sm">x</code> 
+           to the right by <code class="font-normal text-sm">y</code>
+            bits. This is a logical shift: zeroes are inserted in the
+            vacated bits regardless of the sign of 
+           <code class="font-normal text-sm">x</code>. The result is 
+           unspecified if <code class="font-normal text-sm">y &lt; 0</code>
+            or <code class="font-normal text-sm">y &gt;= 64</code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-of_int">
+          <a href="#val-of_int" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> of_int : 
+            <span>int <span class="">&#45;&gt;</span></span> int64
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Convert the given integer (type 
+           <code class="font-normal text-sm">int</code>) to a 64-bit 
+           integer (type <code class="font-normal text-sm">int64</code>
+           ).
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-to_int">
+          <a href="#val-to_int" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> to_int : 
+            <span>int64 <span class="">&#45;&gt;</span></span> int
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Convert the given 64-bit integer (type 
+           <code class="font-normal text-sm">int64</code>) to an integer
+            (type <code class="font-normal text-sm">int</code>). On 64-bit
+            platforms, the 64-bit integer is taken modulo 2<sup>63</sup>
+           , i.e. the high-order bit is lost during the conversion. On
+            32-bit platforms, the 64-bit integer is taken modulo 2
+           <sup>31</sup>, i.e. the top 33 bits are lost during the 
+           conversion.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-unsigned_to_int">
+          <a href="#val-unsigned_to_int" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> unsigned_to_int
+             : <span>int64 <span class="">&#45;&gt;</span></span> 
+            <span>int option</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Same as 
+           <a href="#val-to_int" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">to_int</code>
+           </a>, but interprets the argument as an <em>unsigned</em> 
+           integer. Returns <code class="font-normal text-sm">None</code>
+            if the unsigned value of the argument cannot fit into an 
+           <code class="font-normal text-sm">int</code>.
+          </p><ul class="at-tags"><li class="since">since 4.08.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-of_float">
+          <a href="#val-of_float" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> of_float : 
+            <span>float <span class="">&#45;&gt;</span></span> int64
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Convert the given floating-point number to 
+           a 64-bit integer, discarding the fractional part (truncate
+            towards 0). The result of the conversion is undefined if,
+            after truncation, the number is outside the range [
+           <a href="#val-min_int" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Int64.min_int</code>
+           </a>, 
+           <a href="#val-max_int" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Int64.max_int</code>
+           </a>].
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-to_float">
+          <a href="#val-to_float" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> to_float : 
+            <span>int64 <span class="">&#45;&gt;</span></span> float
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Convert the given 64-bit integer to a 
+           floating-point number.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-of_int32">
+          <a href="#val-of_int32" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> of_int32 : 
+            <span>int32 <span class="">&#45;&gt;</span></span> int64
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Convert the given 32-bit integer (type 
+           <code class="font-normal text-sm">int32</code>) to a 64-bit
+            integer (type <code class="font-normal text-sm">int64</code>
+           ).
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-to_int32">
+          <a href="#val-to_int32" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> to_int32 : 
+            <span>int64 <span class="">&#45;&gt;</span></span> int32
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Convert the given 64-bit integer (type 
+           <code class="font-normal text-sm">int64</code>) to a 32-bit
+            integer (type <code class="font-normal text-sm">int32</code>
+           ). The 64-bit integer is taken modulo 2<sup>32</sup>, i.e.
+            the top 32 bits are lost during the conversion.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-of_nativeint">
+          <a href="#val-of_nativeint" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> of_nativeint : 
+            <span>nativeint <span class="">&#45;&gt;</span></span> int64
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Convert the given native integer (type 
+           <code class="font-normal text-sm">nativeint</code>) to a 64-bit
+            integer (type <code class="font-normal text-sm">int64</code>
+           ).
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-to_nativeint">
+          <a href="#val-to_nativeint" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> to_nativeint : 
+            <span>int64 <span class="">&#45;&gt;</span></span> nativeint
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Convert the given 64-bit integer (type 
+           <code class="font-normal text-sm">int64</code>) to a native
+            integer. On 32-bit platforms, the 64-bit integer is taken
+            modulo 2<sup>32</sup>. On 64-bit platforms, the conversion
+            is exact.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-of_string">
+          <a href="#val-of_string" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> of_string : 
+            <span>string <span class="">&#45;&gt;</span></span> int64
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Convert the given string to a 64-bit integer.
+            The string is read in decimal (by default, or if the string
+            begins with <code class="font-normal text-sm">0u</code>) 
+           or in hexadecimal, octal or binary if the string begins with
+            <code class="font-normal text-sm">0x</code>, 
+           <code class="font-normal text-sm">0o</code> or 
+           <code class="font-normal text-sm">0b</code> respectively.
+          </p>
+          <p class="mt-4">The <code class="font-normal text-sm">0u</code>
+            prefix reads the input as an unsigned integer in the range
+            <code class="font-normal text-sm">[0, 2*Int64.max_int+1]</code>
+           . If the input exceeds 
+           <a href="#val-max_int" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Int64.max_int</code>
+           </a> it is converted to the signed integer 
+           <code class="font-normal text-sm">
+            Int64.min_int + input - Int64.max_int - 1
+           </code>.
+          </p>
+          <p class="mt-4">The <code class="font-normal text-sm">_</code>
+            (underscore) character can appear anywhere in the string 
+           and is ignored.
+          </p>
+          <ul class="at-tags">
+           <li class="raises">raises Failure 
+            <p class="mt-4">if the given string is not a valid representation
+              of an integer, or if the integer represented exceeds the
+              range of integers representable in type 
+             <code class="font-normal text-sm">int64</code>.
+            </p>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-of_string_opt">
+          <a href="#val-of_string_opt" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> of_string_opt
+             : <span>string <span class="">&#45;&gt;</span></span> 
+            <span>int64 option</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Same as 
+           <code class="font-normal text-sm">of_string</code>, but return
+            <code class="font-normal text-sm">None</code> instead of 
+           raising.
+          </p><ul class="at-tags"><li class="since">since 4.05</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-to_string">
+          <a href="#val-to_string" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> to_string : 
+            <span>int64 <span class="">&#45;&gt;</span></span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return the string representation of its argument,
+            in decimal.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-bits_of_float">
+          <a href="#val-bits_of_float" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> bits_of_float
+             : <span>float <span class="">&#45;&gt;</span></span> int64
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return the internal representation of the given
+            float according to the IEEE 754 floating-point 'double format'
+            bit layout. Bit 63 of the result represents the sign of the
+            float; bits 62 to 52 represent the (biased) exponent; bits
+            51 to 0 represent the mantissa.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-float_of_bits">
+          <a href="#val-float_of_bits" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> float_of_bits
+             : <span>int64 <span class="">&#45;&gt;</span></span> float
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return the floating-point number whose internal
+            representation, according to the IEEE 754 floating-point 
+           'double format' bit layout, is the given 
+           <code class="font-normal text-sm">int64</code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-t">
+          <a href="#type-t" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> t</span>
+           <span> = int64</span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">An alias for the type of 64-bit integers.</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-compare">
+          <a href="#val-compare" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> compare : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> int
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">The comparison function for 64-bit integers,
+            with the same specification as 
+           <a href="../index.html#val-compare" class="cursor-pointer
+            text-orange">
+            <code class="font-normal text-sm">Stdlib.compare</code>
+           </a>. Along with the type 
+           <code class="font-normal text-sm">t</code>, this function 
+           <code class="font-normal text-sm">compare</code> allows the
+            module <code class="font-normal text-sm">Int64</code> to 
+           be passed as argument to the functors 
+           <a href="../Set/Make/index.html" class="cursor-pointer
+            text-orange"><code class="font-normal text-sm">Set.Make</code>
+           </a> and 
+           <a href="../Map/Make/index.html" class="cursor-pointer
+            text-orange"><code class="font-normal text-sm">Map.Make</code>
+           </a>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-unsigned_compare">
+          <a href="#val-unsigned_compare" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> unsigned_compare
+             : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> int
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Same as 
+           <a href="#val-compare" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">compare</code>
+           </a>, except that arguments are interpreted as <em>unsigned</em>
+            64-bit integers.
+          </p><ul class="at-tags"><li class="since">since 4.08.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-equal">
+          <a href="#val-equal" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> equal : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> bool
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">The equal function for int64s.</p>
+          <ul class="at-tags"><li class="since">since 4.03.0</li></ul>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="w-full flex-none lg:w-72 border-t lg:border-l bg-gray-100">
+       <div class="flex h-20 border-b relative">
+        <h2 class="text-xl absolute inset-x-0 p-3 bottom-0 mt-7 font-semibold
+         text-gray-500">ocaml-base-compiler.4.11.2
+        </h2>
+       </div>
+       <div class="m-3">
+        <p class="mb-5 italic text-sm">Official release 4.11.2</p>
+        <div class="mb-3">
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="https://ocaml.org">ocaml.org
+          </a>
+         </div>
+        </div>
+        <details class="font-normal mb-2 text-sm">
+         <summary>Other versions</summary><div id="versions_container"></div>
+        </details><h2 class="font-semibold mb-2 text-sm">Authors</h2>
+        <p class="mb-3 text-sm">Xavier Leroy and many contributors</p>
+        <h2 class="font-semibold mb-2 text-sm">Issues</h2>
+        <div class="mb-3">
+         <a class="text-orange cursor-pointer mb-2 text-sm"
+          href="https://github.com/ocaml/opam-repository/issues">
+          github.com/ocaml/opam-repository/issues
+         </a>
+        </div>
+        <details class="font-semibold mb-2 text-sm">
+         <summary>Package dependencies</summary>
+         <div class="font-normal">
+          <ul>
+           <li>
+            <a href="../../../../ocaml/index.html" class="text-orange
+             cursor-pointer">ocaml
+            </a>
+           </li>
+           <li>
+            <a href="../../../../base-unix/index.html" class="text-orange
+             cursor-pointer">base-unix
+            </a>
+           </li>
+           <li>
+            <a href="../../../../base-bigarray/index.html" class="text-orange
+             cursor-pointer">base-bigarray
+            </a>
+           </li>
+           <li>
+            <a href="../../../../base-threads/index.html" class="text-orange
+             cursor-pointer">base-threads
+            </a>
+           </li>
+          </ul>
+         </div>
+        </details>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div><script>Voodoo.update('../../../version.json')</script>
+ </body>
+</html>

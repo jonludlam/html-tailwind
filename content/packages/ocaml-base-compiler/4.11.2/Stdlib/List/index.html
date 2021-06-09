@@ -1,0 +1,2503 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head><title>List (packages.ocaml-base-compiler.4.11.2.Stdlib.List)</title>
+  <link rel="stylesheet" href="../../../../tailwind.css"/>
+  <link rel="stylesheet" href="../../../../extra.css"/>
+  <meta charset="utf-8"/><meta name="generator" content="odoc 3dfb7aef2f"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <script src="../../../../highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="../../../../voodoo_client.js"></script>
+  <script
+   src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+   defer="defer">
+  </script>
+ </head>
+ <body class="mx-auto max-w-screen-2xl">
+  <div class="relative">
+   <div class="relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+     <div class="flex justify-between items-center md:justify-start py-6
+      md:space-x-10">
+      <div class="flex justify-start">
+       <a href="https://v3.ocaml.org/">
+        <img src="/colour-logo.svg" alt="" class="h-8 w-auto sm:h-10"/>
+       </a>
+      </div>
+      <nav class="hidden md:flex space-x-10">
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Industry</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/whatisocaml">
+            <p class="text-base font-medium text-gray-900">What is OCaml</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/users">
+            <p class="text-base font-medium text-gray-900">Industrial Users
+            </p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/successstories">
+            <p class="text-base font-medium text-gray-900">Success Stories
+            </p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Resources</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/releases">
+            <p class="text-base font-medium text-gray-900">Releases</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/applications">
+            <p class="text-base font-medium text-gray-900">Applications</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/language">
+            <p class="text-base font-medium text-gray-900">Language</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/archive">
+            <p class="text-base font-medium text-gray-900">Archive</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Community</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/opportunities">
+            <p class="text-base font-medium text-gray-900">Opportunities</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/news">
+            <p class="text-base font-medium text-gray-900">News</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/aroundweb">
+            <p class="text-base font-medium text-gray-900">Around the Web</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="h-screen flex bg-white font-sans">
+   <div class="flex flex-col w-full h-full">
+    <div class="flex-row flex-1">
+     <nav class="bg-orange border-t border-b border-orange flex flex-row">
+      <ol class="max-w-screen-xl w-full px-4 flex space-x-4 sm:px-6 lg:px-8">
+       <li class="flex">
+        <div class="flex items-center">
+         <a href="#" class="text-gray-100 hover:text-gray-500">
+          
+  <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+        </svg>
+  
+          <span class="sr-only">Home</span>
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">packages
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">ocaml-base-compiler
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">4.11.2
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">Stdlib
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="#" class="ml-4 text-sm font-medium text-gray-100
+          hover:text-gray-500">List
+         </a>
+        </div>
+       </li>
+      </ol>
+     </nav>
+    </div>
+    <div class="flex flex-row flex-1">
+     <div class="w-72 flex-none bg-gray-100 h-screen border-r border-gray-200
+      sticky top-0 hidden lg:block">
+      <div class="flex h-20 border-b relative">
+       <h2 class="text-xl absolute inset-x-0 p-3 px-5 bottom-0 mt-7
+        border-gray-200 font-semibold text-gray-500 font-sans">On this page
+       </h2>
+      </div>
+      <nav class="bg-gray-100 p-5">
+       <ul>
+        <li>
+         <a href="#iterators" class="cursor-pointer text-orange">Iterators
+         </a>
+        </li>
+        <li>
+         <a href="#iterators-on-two-lists" class="cursor-pointer text-orange">
+          Iterators on two lists
+         </a>
+        </li>
+        <li>
+         <a href="#list-scanning" class="cursor-pointer text-orange">
+          List scanning
+         </a>
+        </li>
+        <li>
+         <a href="#list-searching" class="cursor-pointer text-orange">
+          List searching
+         </a>
+        </li>
+        <li>
+         <a href="#association-lists" class="cursor-pointer text-orange">
+          Association lists
+         </a>
+        </li>
+        <li>
+         <a href="#lists-of-pairs" class="cursor-pointer text-orange">
+          Lists of pairs
+         </a>
+        </li>
+        <li><a href="#sorting" class="cursor-pointer text-orange">Sorting</a>
+        </li>
+        <li>
+         <a href="#iterators" class="cursor-pointer text-orange">Iterators
+         </a>
+        </li>
+       </ul>
+      </nav>
+     </div>
+     <div class="flex flex-1 flex-col lg:flex-row">
+      <div class="flex-1">
+       <div class="lg:max-w-5xl mx-auto px-3 lg:px-10 mb-10 text-sm">
+        <div class="flex h-20 relative border-b border-gray-200">
+         <div class="relative flex-1 h-20">
+          <h1 class="text-3xl absolute inset-x-0 py-3 bottom-0 font-semibold
+           text-gray-500 font-sans w-full truncate">
+           <code class="font-mono text-gray-800">Stdlib.List</code>
+          </h1>
+         </div>
+         <div class="relative flex-none w-28">
+          <h1 class="text-3xl absolute py-3 bottom-0 right-0 font-semibold
+           text-gray-500 font-sans">Module
+          </h1>
+         </div>
+        </div><p class="mt-4">List operations.</p>
+        <p class="mt-4">Some functions are flagged as not tail-recursive.
+          A tail-recursive function uses constant stack space, while 
+         a non-tail-recursive function uses stack space proportional 
+         to the length of its list argument, which can be a problem with
+          very long lists. When the function takes several list arguments,
+          an approximate formula giving stack usage (in some unspecified
+          constant unit) is shown in parentheses.
+        </p>
+        <p class="mt-4">The above considerations can usually be ignored
+          if your lists are not longer than about 10000 elements.
+        </p>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-t">
+          <a href="#type-t" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> <span>'a t</span>
+           </span><span> = <span><span class="">'a</span> list</span></span>
+           <span> = </span>
+          </code>
+          <table>
+           <tr id="type-t.[]">
+            <td class="anchored pl-4">
+             <a href="#type-t.[]" class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">[]</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-t.::">
+            <td class="anchored pl-4">
+             <a href="#type-t.::" class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">::</span> 
+               <span class="font-semibold">of</span> <span class="">'a</span>
+                * <span><span class="">'a</span> list</span>
+              </span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">An alias for the type of lists.</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-length">
+          <a href="#val-length" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> length : 
+            <span><span><span class="">'a</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> int
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return the length (number of elements) of the
+            given list.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-compare_lengths">
+          <a href="#val-compare_lengths" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> compare_lengths
+             : 
+            <span><span><span class="">'a</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'b</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> int
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Compare the lengths of two lists. 
+           <code class="font-normal text-sm">compare_lengths l1 l2</code>
+            is equivalent to 
+           <code class="font-normal text-sm">compare (length l1) (length l2)
+           </code>, except that the computation stops after itering on
+            the shortest list.
+          </p><ul class="at-tags"><li class="since">since 4.05.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-compare_length_with">
+          <a href="#val-compare_length_with" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> compare_length_with
+             : 
+            <span><span><span class="">'a</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> <span>int <span class="">&#45;&gt;</span></span> 
+            int
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Compare the length of a list to an integer.
+            <code class="font-normal text-sm">compare_length_with l n</code>
+            is equivalent to 
+           <code class="font-normal text-sm">compare (length l) n</code>
+           , except that the computation stops after at most 
+           <code class="font-normal text-sm">n</code> iterations on the
+            list.
+          </p><ul class="at-tags"><li class="since">since 4.05.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-cons">
+          <a href="#val-cons" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> cons : 
+            <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'a</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> <span><span class="">'a</span> list</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">cons x xs</code>
+            is <code class="font-normal text-sm">x :: xs</code>
+          </p><ul class="at-tags"><li class="since">since 4.03.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-hd">
+          <a href="#val-hd" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> hd : 
+            <span><span><span class="">'a</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> <span class="">'a</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return the first element of the given list.</p>
+          <ul class="at-tags">
+           <li class="raises">raises Failure 
+            <p class="mt-4">if the list is empty.</p>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-tl">
+          <a href="#val-tl" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> tl : 
+            <span><span><span class="">'a</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> <span><span class="">'a</span> list</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return the given list without its first element.
+          </p>
+          <ul class="at-tags">
+           <li class="raises">raises Failure 
+            <p class="mt-4">if the list is empty.</p>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-nth">
+          <a href="#val-nth" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> nth : 
+            <span><span><span class="">'a</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> <span>int <span class="">&#45;&gt;</span></span> 
+            <span class="">'a</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return the 
+           <code class="font-normal text-sm">n</code>-th element of the
+            given list. The first element (head of the list) is at position
+            0.
+          </p>
+          <ul class="at-tags">
+           <li class="raises">raises Failure 
+            <p class="mt-4">if the list is too short.</p>
+           </li>
+          </ul>
+          <ul class="at-tags">
+           <li class="raises">raises Invalid_argument 
+            <p class="mt-4">if <code class="font-normal text-sm">n</code>
+              is negative.
+            </p>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-nth_opt">
+          <a href="#val-nth_opt" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> nth_opt : 
+            <span><span><span class="">'a</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> <span>int <span class="">&#45;&gt;</span></span> 
+            <span><span class="">'a</span> option</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return the 
+           <code class="font-normal text-sm">n</code>-th element of the
+            given list. The first element (head of the list) is at position
+            0. Return <code class="font-normal text-sm">None</code> if
+            the list is too short.
+          </p>
+          <ul class="at-tags">
+           <li class="raises">raises Invalid_argument 
+            <p class="mt-4">if <code class="font-normal text-sm">n</code>
+              is negative.
+            </p>
+           </li>
+          </ul><ul class="at-tags"><li class="since">since 4.05</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-rev">
+          <a href="#val-rev" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> rev : 
+            <span><span><span class="">'a</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> <span><span class="">'a</span> list</span>
+           </span>
+          </code>
+         </div><div class="spec-doc"><p class="mt-4">List reversal.</p></div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-init">
+          <a href="#val-init" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> init : 
+            <span>int <span class="">&#45;&gt;</span></span> 
+            <span>
+             <span>(<span>int <span class="">&#45;&gt;</span></span> 
+              <span class="">'a</span>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> <span><span class="">'a</span> list</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">List.init len f</code> is
+            
+           <code class="font-normal text-sm">[f 0; f 1; ...; f (len-1)]
+           </code>, evaluated left to right.
+          </p>
+          <ul class="at-tags">
+           <li class="raises">raises Invalid_argument 
+            <p class="mt-4">if len &lt; 0.</p>
+           </li>
+          </ul><ul class="at-tags"><li class="since">since 4.06.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-append">
+          <a href="#val-append" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> append : 
+            <span><span><span class="">'a</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'a</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> <span><span class="">'a</span> list</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Concatenate two lists. Same as the infix operator
+            <code class="font-normal text-sm">@</code>. Not tail-recursive
+            (length of the first argument).
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-rev_append">
+          <a href="#val-rev_append" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> rev_append : 
+            <span><span><span class="">'a</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'a</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> <span><span class="">'a</span> list</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">List.rev_append l1 l2</code>
+            reverses <code class="font-normal text-sm">l1</code> and 
+           concatenates it to <code class="font-normal text-sm">l2</code>
+           . This is equivalent to 
+           <a href="#val-rev" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">List.rev</code>
+           </a><code class="font-normal text-sm"> l1 @ l2</code>, but
+            <code class="font-normal text-sm">rev_append</code> is 
+           tail-recursive and more efficient.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-concat">
+          <a href="#val-concat" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> concat : 
+            <span>
+             <span><span><span class="">'a</span> list</span> list</span>
+              <span class="">&#45;&gt;</span>
+            </span> <span><span class="">'a</span> list</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Concatenate a list of lists. The elements of
+            the argument are all concatenated together (in the same order)
+            to give the result. Not tail-recursive (length of the argument
+            + length of the longest sub-list).
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-flatten">
+          <a href="#val-flatten" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> flatten : 
+            <span>
+             <span><span><span class="">'a</span> list</span> list</span>
+              <span class="">&#45;&gt;</span>
+            </span> <span><span class="">'a</span> list</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">An alias for 
+           <code class="font-normal text-sm">concat</code>.
+          </p>
+         </div>
+        </div>
+        <h2 class="text-2xl my-4 text-gray-800 font-sans anchored"
+         id="iterators">
+         <a href="#iterators" class="hover-link inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Iterators
+        </h2>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-iter">
+          <a href="#val-iter" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> iter : 
+            <span>
+             <span>(
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> unit)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'a</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">List.iter f [a1; ...; an]</code>
+            applies function <code class="font-normal text-sm">f</code>
+            in turn to <code class="font-normal text-sm">a1; ...; an</code>
+           . It is equivalent to 
+           <code class="font-normal text-sm">
+            begin f a1; f a2; ...; f an; () end
+           </code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-iteri">
+          <a href="#val-iteri" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> iteri : 
+            <span>
+             <span>(<span>int <span class="">&#45;&gt;</span></span> 
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> unit)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'a</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Same as 
+           <a href="#val-iter" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">List.iter</code>
+           </a>, but the function is applied to the index of the element
+            as first argument (counting from 0), and the element itself
+            as second argument.
+          </p><ul class="at-tags"><li class="since">since 4.00.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-map">
+          <a href="#val-map" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> map : 
+            <span>
+             <span>(
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> <span class="">'b</span>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'a</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> <span><span class="">'b</span> list</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">List.map f [a1; ...; an]</code>
+            applies function <code class="font-normal text-sm">f</code>
+            to <code class="font-normal text-sm">a1, ..., an</code>, 
+           and builds the list 
+           <code class="font-normal text-sm">[f a1; ...; f an]</code>
+            with the results returned by 
+           <code class="font-normal text-sm">f</code>. Not tail-recursive.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-mapi">
+          <a href="#val-mapi" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> mapi : 
+            <span>
+             <span>(<span>int <span class="">&#45;&gt;</span></span> 
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> <span class="">'b</span>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'a</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> <span><span class="">'b</span> list</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Same as 
+           <a href="#val-map" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">List.map</code>
+           </a>, but the function is applied to the index of the element
+            as first argument (counting from 0), and the element itself
+            as second argument. Not tail-recursive.
+          </p><ul class="at-tags"><li class="since">since 4.00.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-rev_map">
+          <a href="#val-rev_map" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> rev_map : 
+            <span>
+             <span>(
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> <span class="">'b</span>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'a</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> <span><span class="">'b</span> list</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">List.rev_map f l</code> 
+           gives the same result as 
+           <a href="#val-rev" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">List.rev</code>
+           </a><code class="font-normal text-sm"> (</code>
+           <a href="#val-map" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">List.map</code>
+           </a><code class="font-normal text-sm"> f l)</code>, but is
+            tail-recursive and more efficient.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-filter_map">
+          <a href="#val-filter_map" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> filter_map : 
+            <span>
+             <span>(
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> <span><span class="">'b</span> option</span>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'a</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> <span><span class="">'b</span> list</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">filter_map f l</code> applies
+            <code class="font-normal text-sm">f</code> to every element
+            of <code class="font-normal text-sm">l</code>, filters out
+            the <code class="font-normal text-sm">None</code> elements
+            and returns the list of the arguments of the 
+           <code class="font-normal text-sm">Some</code> elements.
+          </p><ul class="at-tags"><li class="since">since 4.08.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-concat_map">
+          <a href="#val-concat_map" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> concat_map : 
+            <span>
+             <span>(
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> <span><span class="">'b</span> list</span>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'a</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> <span><span class="">'b</span> list</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">List.concat_map f l</code>
+            gives the same result as 
+           <a href="#val-concat" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">List.concat</code>
+           </a><code class="font-normal text-sm"> (</code>
+           <a href="#val-map" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">List.map</code>
+           </a><code class="font-normal text-sm"> f l)</code>. 
+           Tail-recursive.
+          </p><ul class="at-tags"><li class="since">since 4.10.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-fold_left_map">
+          <a href="#val-fold_left_map" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> fold_left_map
+             : 
+            <span>
+             <span>(
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span><span class="">'b</span> <span class="">&#45;&gt;</span>
+              </span> <span class="">'a</span> * <span class="">'c</span>
+              )
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'b</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> <span class="">'a</span> * 
+            <span><span class="">'c</span> list</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">fold_left_map</code> is 
+           a combination of 
+           <code class="font-normal text-sm">fold_left</code> and 
+           <code class="font-normal text-sm">map</code> that threads 
+           an accumulator through calls to 
+           <code class="font-normal text-sm">f</code>
+          </p><ul class="at-tags"><li class="since">since 4.11.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-fold_left">
+          <a href="#val-fold_left" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> fold_left : 
+            <span>
+             <span>(
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span><span class="">'b</span> <span class="">&#45;&gt;</span>
+              </span> <span class="">'a</span>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'b</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> <span class="">'a</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">List.fold_left f a [b1; ...; bn]
+           </code> is 
+           <code class="font-normal text-sm">f (... (f (f a b1) b2) ...) bn
+           </code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-fold_right">
+          <a href="#val-fold_right" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> fold_right : 
+            <span>
+             <span>(
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span><span class="">'b</span> <span class="">&#45;&gt;</span>
+              </span> <span class="">'b</span>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'a</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span class="">'b</span> <span class="">&#45;&gt;</span>
+            </span> <span class="">'b</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">
+            List.fold_right f [a1; ...; an] b
+           </code> is 
+           <code class="font-normal text-sm">f a1 (f a2 (... (f an b) ...))
+           </code>. Not tail-recursive.
+          </p>
+         </div>
+        </div>
+        <h2 class="text-2xl my-4 text-gray-800 font-sans anchored"
+         id="iterators-on-two-lists">
+         <a href="#iterators-on-two-lists" class="hover-link inline-block
+          -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Iterators on two lists
+        </h2>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-iter2">
+          <a href="#val-iter2" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> iter2 : 
+            <span>
+             <span>(
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span><span class="">'b</span> <span class="">&#45;&gt;</span>
+              </span> unit)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'a</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'b</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">
+            List.iter2 f [a1; ...; an] [b1; ...; bn]
+           </code> calls in turn 
+           <code class="font-normal text-sm">f a1 b1; ...; f an bn</code>
+           .
+          </p>
+          <ul class="at-tags">
+           <li class="raises">raises Invalid_argument 
+            <p class="mt-4">if the two lists are determined to have different
+              lengths.
+            </p>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-map2">
+          <a href="#val-map2" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> map2 : 
+            <span>
+             <span>(
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span><span class="">'b</span> <span class="">&#45;&gt;</span>
+              </span> <span class="">'c</span>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'a</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'b</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> <span><span class="">'c</span> list</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">
+            List.map2 f [a1; ...; an] [b1; ...; bn]
+           </code> is 
+           <code class="font-normal text-sm">[f a1 b1; ...; f an bn]</code>
+           .
+          </p>
+          <ul class="at-tags">
+           <li class="raises">raises Invalid_argument 
+            <p class="mt-4">if the two lists are determined to have different
+              lengths. Not tail-recursive.
+            </p>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-rev_map2">
+          <a href="#val-rev_map2" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> rev_map2 : 
+            <span>
+             <span>(
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span><span class="">'b</span> <span class="">&#45;&gt;</span>
+              </span> <span class="">'c</span>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'a</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'b</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> <span><span class="">'c</span> list</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">List.rev_map2 f l1 l2</code>
+            gives the same result as 
+           <a href="#val-rev" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">List.rev</code>
+           </a><code class="font-normal text-sm"> (</code>
+           <a href="#val-map2" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">List.map2</code>
+           </a><code class="font-normal text-sm"> f l1 l2)</code>, but
+            is tail-recursive and more efficient.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-fold_left2">
+          <a href="#val-fold_left2" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> fold_left2 : 
+            <span>
+             <span>(
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span><span class="">'b</span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span><span class="">'c</span> <span class="">&#45;&gt;</span>
+              </span> <span class="">'a</span>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'b</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'c</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> <span class="">'a</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">
+            List.fold_left2 f a [b1; ...; bn] [c1; ...; cn]
+           </code> is 
+           <code class="font-normal text-sm">
+            f (... (f (f a b1 c1) b2 c2) ...) bn cn
+           </code>.
+          </p>
+          <ul class="at-tags">
+           <li class="raises">raises Invalid_argument 
+            <p class="mt-4">if the two lists are determined to have different
+              lengths.
+            </p>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-fold_right2">
+          <a href="#val-fold_right2" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> fold_right2 : 
+            <span>
+             <span>(
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span><span class="">'b</span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span><span class="">'c</span> <span class="">&#45;&gt;</span>
+              </span> <span class="">'c</span>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'a</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'b</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span class="">'c</span> <span class="">&#45;&gt;</span>
+            </span> <span class="">'c</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">
+            List.fold_right2 f [a1; ...; an] [b1; ...; bn] c
+           </code> is 
+           <code class="font-normal text-sm">
+            f a1 b1 (f a2 b2 (... (f an bn c) ...))
+           </code>.
+          </p>
+          <ul class="at-tags">
+           <li class="raises">raises Invalid_argument 
+            <p class="mt-4">if the two lists are determined to have different
+              lengths. Not tail-recursive.
+            </p>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <h2 class="text-2xl my-4 text-gray-800 font-sans anchored"
+         id="list-scanning">
+         <a href="#list-scanning" class="hover-link inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>List scanning
+        </h2>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-for_all">
+          <a href="#val-for_all" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> for_all : 
+            <span>
+             <span>(
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> bool)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'a</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> bool
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">for_all p [a1; ...; an]</code>
+            checks if all elements of the list satisfy the predicate 
+           <code class="font-normal text-sm">p</code>. That is, it returns
+            
+           <code class="font-normal text-sm">
+            (p a1) &amp;&amp; (p a2) &amp;&amp; ... &amp;&amp; (p an)
+           </code> for a non-empty list and 
+           <code class="font-normal text-sm">true</code> if the list 
+           is empty.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-exists">
+          <a href="#val-exists" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> exists : 
+            <span>
+             <span>(
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> bool)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'a</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> bool
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">exists p [a1; ...; an]</code>
+            checks if at least one element of the list satisfies the 
+           predicate <code class="font-normal text-sm">p</code>. That
+            is, it returns 
+           <code class="font-normal text-sm">
+            (p a1) || (p a2) || ... || (p an)
+           </code> for a non-empty list and 
+           <code class="font-normal text-sm">false</code> if the list
+            is empty.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-for_all2">
+          <a href="#val-for_all2" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> for_all2 : 
+            <span>
+             <span>(
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span><span class="">'b</span> <span class="">&#45;&gt;</span>
+              </span> bool)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'a</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'b</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> bool
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Same as 
+           <a href="#val-for_all" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">List.for_all</code>
+           </a>, but for a two-argument predicate.
+          </p>
+          <ul class="at-tags">
+           <li class="raises">raises Invalid_argument 
+            <p class="mt-4">if the two lists are determined to have different
+              lengths.
+            </p>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-exists2">
+          <a href="#val-exists2" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> exists2 : 
+            <span>
+             <span>(
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span><span class="">'b</span> <span class="">&#45;&gt;</span>
+              </span> bool)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'a</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'b</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> bool
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Same as 
+           <a href="#val-exists" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">List.exists</code>
+           </a>, but for a two-argument predicate.
+          </p>
+          <ul class="at-tags">
+           <li class="raises">raises Invalid_argument 
+            <p class="mt-4">if the two lists are determined to have different
+              lengths.
+            </p>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-mem">
+          <a href="#val-mem" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> mem : 
+            <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'a</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> bool
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">mem a l</code>
+            is true if and only if <code class="font-normal text-sm">a</code>
+            is equal to an element of 
+           <code class="font-normal text-sm">l</code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-memq">
+          <a href="#val-memq" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> memq : 
+            <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'a</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> bool
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Same as 
+           <a href="#val-mem" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">List.mem</code>
+           </a>, but uses physical equality instead of structural equality
+            to compare list elements.
+          </p>
+         </div>
+        </div>
+        <h2 class="text-2xl my-4 text-gray-800 font-sans anchored"
+         id="list-searching">
+         <a href="#list-searching" class="hover-link inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>List searching
+        </h2>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-find">
+          <a href="#val-find" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> find : 
+            <span>
+             <span>(
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> bool)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'a</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> <span class="">'a</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">find p l</code>
+            returns the first element of the list 
+           <code class="font-normal text-sm">l</code> that satisfies 
+           the predicate <code class="font-normal text-sm">p</code>.
+          </p>
+          <ul class="at-tags">
+           <li class="raises">raises Not_found 
+            <p class="mt-4">if there is no value that satisfies 
+             <code class="font-normal text-sm">p</code> in the list 
+             <code class="font-normal text-sm">l</code>.
+            </p>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-find_opt">
+          <a href="#val-find_opt" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> find_opt : 
+            <span>
+             <span>(
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> bool)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'a</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> <span><span class="">'a</span> option</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">find_opt p l</code> returns
+            the first element of the list 
+           <code class="font-normal text-sm">l</code> that satisfies 
+           the predicate <code class="font-normal text-sm">p</code>, 
+           or <code class="font-normal text-sm">None</code> if there 
+           is no value that satisfies 
+           <code class="font-normal text-sm">p</code> in the list 
+           <code class="font-normal text-sm">l</code>.
+          </p><ul class="at-tags"><li class="since">since 4.05</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-find_map">
+          <a href="#val-find_map" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> find_map : 
+            <span>
+             <span>(
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> <span><span class="">'b</span> option</span>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'a</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> <span><span class="">'b</span> option</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">find_map f l</code> applies
+            <code class="font-normal text-sm">f</code> to the elements
+            of <code class="font-normal text-sm">l</code> in order, and
+            returns the first result of the form 
+           <code class="font-normal text-sm">Some v</code>, or 
+           <code class="font-normal text-sm">None</code> if none exist.
+          </p><ul class="at-tags"><li class="since">since 4.10.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-filter">
+          <a href="#val-filter" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> filter : 
+            <span>
+             <span>(
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> bool)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'a</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> <span><span class="">'a</span> list</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">filter p l</code>
+            returns all the elements of the list 
+           <code class="font-normal text-sm">l</code> that satisfy the
+            predicate <code class="font-normal text-sm">p</code>. The
+            order of the elements in the input list is preserved.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-find_all">
+          <a href="#val-find_all" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> find_all : 
+            <span>
+             <span>(
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> bool)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'a</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> <span><span class="">'a</span> list</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">find_all</code>
+            is another name for 
+           <a href="#val-filter" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">List.filter</code>
+           </a>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-filteri">
+          <a href="#val-filteri" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> filteri : 
+            <span>
+             <span>(<span>int <span class="">&#45;&gt;</span></span> 
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> bool)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'a</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> <span><span class="">'a</span> list</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Same as 
+           <a href="#val-filter" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">List.filter</code>
+           </a>, but the predicate is applied to the index of the element
+            as first argument (counting from 0), and the element itself
+            as second argument.
+          </p><ul class="at-tags"><li class="since">since 4.11.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-partition">
+          <a href="#val-partition" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> partition : 
+            <span>
+             <span>(
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> bool)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'a</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> <span><span class="">'a</span> list</span> * 
+            <span><span class="">'a</span> list</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">partition p l</code> returns
+            a pair of lists <code class="font-normal text-sm">(l1, l2)</code>
+           , where <code class="font-normal text-sm">l1</code> is the
+            list of all the elements of 
+           <code class="font-normal text-sm">l</code> that satisfy the
+            predicate <code class="font-normal text-sm">p</code>, and
+            <code class="font-normal text-sm">l2</code> is the list of
+            all the elements of <code class="font-normal text-sm">l</code>
+            that do not satisfy <code class="font-normal text-sm">p</code>
+           . The order of the elements in the input list is preserved.
+          </p>
+         </div>
+        </div>
+        <h2 class="text-2xl my-4 text-gray-800 font-sans anchored"
+         id="association-lists">
+         <a href="#association-lists" class="hover-link inline-block 
+          -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Association lists
+        </h2>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-assoc">
+          <a href="#val-assoc" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> assoc : 
+            <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>
+              <span>(<span class="">'a</span> * <span class="">'b</span>)
+              </span> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> <span class="">'b</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">assoc a l</code>
+            returns the value associated with key 
+           <code class="font-normal text-sm">a</code> in the list of 
+           pairs <code class="font-normal text-sm">l</code>. That is,
+            
+           <code class="font-normal text-sm">assoc a [ ...; (a,b); ...] = b
+           </code> if <code class="font-normal text-sm">(a,b)</code> 
+           is the leftmost binding of 
+           <code class="font-normal text-sm">a</code> in list 
+           <code class="font-normal text-sm">l</code>.
+          </p>
+          <ul class="at-tags">
+           <li class="raises">raises Not_found 
+            <p class="mt-4">if there is no value associated with 
+             <code class="font-normal text-sm">a</code> in the list 
+             <code class="font-normal text-sm">l</code>.
+            </p>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-assoc_opt">
+          <a href="#val-assoc_opt" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> assoc_opt : 
+            <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>
+              <span>(<span class="">'a</span> * <span class="">'b</span>)
+              </span> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> <span><span class="">'b</span> option</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">assoc_opt a l</code> returns
+            the value associated with key 
+           <code class="font-normal text-sm">a</code> in the list of 
+           pairs <code class="font-normal text-sm">l</code>. That is,
+            
+           <code class="font-normal text-sm">
+            assoc_opt a [ ...; (a,b); ...] = b
+           </code> if <code class="font-normal text-sm">(a,b)</code> 
+           is the leftmost binding of 
+           <code class="font-normal text-sm">a</code> in list 
+           <code class="font-normal text-sm">l</code>. Returns 
+           <code class="font-normal text-sm">None</code> if there is 
+           no value associated with 
+           <code class="font-normal text-sm">a</code> in the list 
+           <code class="font-normal text-sm">l</code>.
+          </p><ul class="at-tags"><li class="since">since 4.05</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-assq">
+          <a href="#val-assq" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> assq : 
+            <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>
+              <span>(<span class="">'a</span> * <span class="">'b</span>)
+              </span> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> <span class="">'b</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Same as 
+           <a href="#val-assoc" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">List.assoc</code>
+           </a>, but uses physical equality instead of structural equality
+            to compare keys.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-assq_opt">
+          <a href="#val-assq_opt" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> assq_opt : 
+            <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>
+              <span>(<span class="">'a</span> * <span class="">'b</span>)
+              </span> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> <span><span class="">'b</span> option</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Same as 
+           <a href="#val-assoc_opt" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">List.assoc_opt</code>
+           </a>, but uses physical equality instead of structural equality
+            to compare keys.
+          </p><ul class="at-tags"><li class="since">since 4.05</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-mem_assoc">
+          <a href="#val-mem_assoc" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> mem_assoc : 
+            <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>
+              <span>(<span class="">'a</span> * <span class="">'b</span>)
+              </span> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> bool
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Same as 
+           <a href="#val-assoc" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">List.assoc</code>
+           </a>, but simply return true if a binding exists, and false
+            if no bindings exist for the given key.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-mem_assq">
+          <a href="#val-mem_assq" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> mem_assq : 
+            <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>
+              <span>(<span class="">'a</span> * <span class="">'b</span>)
+              </span> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> bool
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Same as 
+           <a href="#val-mem_assoc" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">List.mem_assoc</code>
+           </a>, but uses physical equality instead of structural equality
+            to compare keys.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-remove_assoc">
+          <a href="#val-remove_assoc" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> remove_assoc : 
+            <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>
+              <span>(<span class="">'a</span> * <span class="">'b</span>)
+              </span> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>(<span class="">'a</span> * <span class="">'b</span>)
+             </span> list
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">remove_assoc a l</code> 
+           returns the list of pairs 
+           <code class="font-normal text-sm">l</code> without the first
+            pair with key <code class="font-normal text-sm">a</code>,
+            if any. Not tail-recursive.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-remove_assq">
+          <a href="#val-remove_assq" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> remove_assq : 
+            <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>
+              <span>(<span class="">'a</span> * <span class="">'b</span>)
+              </span> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>(<span class="">'a</span> * <span class="">'b</span>)
+             </span> list
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Same as 
+           <a href="#val-remove_assoc" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">List.remove_assoc</code>
+           </a>, but uses physical equality instead of structural equality
+            to compare keys. Not tail-recursive.
+          </p>
+         </div>
+        </div>
+        <h2 class="text-2xl my-4 text-gray-800 font-sans anchored"
+         id="lists-of-pairs">
+         <a href="#lists-of-pairs" class="hover-link inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Lists of pairs
+        </h2>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-split">
+          <a href="#val-split" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> split : 
+            <span>
+             <span>
+              <span>(<span class="">'a</span> * <span class="">'b</span>)
+              </span> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> <span><span class="">'a</span> list</span> * 
+            <span><span class="">'b</span> list</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Transform a list of pairs into a pair of lists:
+            
+           <code class="font-normal text-sm">split [(a1,b1); ...; (an,bn)]
+           </code> is 
+           <code class="font-normal text-sm">([a1; ...; an], [b1; ...; bn])
+           </code>. Not tail-recursive.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-combine">
+          <a href="#val-combine" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> combine : 
+            <span><span><span class="">'a</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'b</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>(<span class="">'a</span> * <span class="">'b</span>)
+             </span> list
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Transform a pair of lists into a list of pairs:
+            
+           <code class="font-normal text-sm">
+            combine [a1; ...; an] [b1; ...; bn]
+           </code> is 
+           <code class="font-normal text-sm">[(a1,b1); ...; (an,bn)]</code>
+           .
+          </p>
+          <ul class="at-tags">
+           <li class="raises">raises Invalid_argument 
+            <p class="mt-4">if the two lists have different lengths. 
+             Not tail-recursive.
+            </p>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <h2 class="text-2xl my-4 text-gray-800 font-sans anchored"
+         id="sorting">
+         <a href="#sorting" class="hover-link inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Sorting
+        </h2>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-sort">
+          <a href="#val-sort" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sort : 
+            <span>
+             <span>(
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> int)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'a</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> <span><span class="">'a</span> list</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Sort a list in increasing order according to
+            a comparison function. The comparison function must return
+            0 if its arguments compare as equal, a positive integer if
+            the first is greater, and a negative integer if the first
+            is smaller (see Array.sort for a complete specification).
+            For example, 
+           <a href="../index.html#val-compare" class="cursor-pointer
+            text-orange">
+            <code class="font-normal text-sm">Stdlib.compare</code>
+           </a> is a suitable comparison function. The resulting list
+            is sorted in increasing order. 
+           <code class="font-normal text-sm">List.sort</code> is guaranteed
+            to run in constant heap space (in addition to the size of
+            the result list) and logarithmic stack space.
+          </p>
+          <p class="mt-4">The current implementation uses Merge Sort.
+            It runs in constant heap space and logarithmic stack space.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-stable_sort">
+          <a href="#val-stable_sort" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> stable_sort : 
+            <span>
+             <span>(
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> int)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'a</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> <span><span class="">'a</span> list</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Same as 
+           <a href="#val-sort" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">List.sort</code>
+           </a>, but the sorting algorithm is guaranteed to be stable
+            (i.e. elements that compare equal are kept in their original
+            order) .
+          </p>
+          <p class="mt-4">The current implementation uses Merge Sort.
+            It runs in constant heap space and logarithmic stack space.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-fast_sort">
+          <a href="#val-fast_sort" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> fast_sort : 
+            <span>
+             <span>(
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> int)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'a</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> <span><span class="">'a</span> list</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Same as 
+           <a href="#val-sort" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">List.sort</code>
+           </a> or 
+           <a href="#val-stable_sort" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">List.stable_sort</code>
+           </a>, whichever is faster on typical input.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-sort_uniq">
+          <a href="#val-sort_uniq" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sort_uniq : 
+            <span>
+             <span>(
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> int)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'a</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> <span><span class="">'a</span> list</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Same as 
+           <a href="#val-sort" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">List.sort</code>
+           </a>, but also remove duplicates.
+          </p><ul class="at-tags"><li class="since">since 4.02.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-merge">
+          <a href="#val-merge" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> merge : 
+            <span>
+             <span>(
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> int)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'a</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'a</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> <span><span class="">'a</span> list</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Merge two lists: Assuming that 
+           <code class="font-normal text-sm">l1</code> and 
+           <code class="font-normal text-sm">l2</code> are sorted according
+            to the comparison function 
+           <code class="font-normal text-sm">cmp</code>, 
+           <code class="font-normal text-sm">merge cmp l1 l2</code> will
+            return a sorted list containing all the elements of 
+           <code class="font-normal text-sm">l1</code> and 
+           <code class="font-normal text-sm">l2</code>. If several elements
+            compare equal, the elements of 
+           <code class="font-normal text-sm">l1</code> will be before
+            the elements of <code class="font-normal text-sm">l2</code>
+           . Not tail-recursive (sum of the lengths of the arguments).
+          </p>
+         </div>
+        </div>
+        <h2 class="text-2xl my-4 text-gray-800 font-sans anchored"
+         id="iterators">
+         <a href="#iterators" class="hover-link inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Iterators
+        </h2>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-to_seq">
+          <a href="#val-to_seq" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> to_seq : 
+            <span><span><span class="">'a</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span class="">'a</span> 
+             <a href="../Seq/index.html#type-t" class="cursor-pointer
+              text-orange">Stdlib.Seq.t
+             </a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc"><p class="mt-4">Iterate on the list</p>
+          <ul class="at-tags"><li class="since">since 4.07</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-of_seq">
+          <a href="#val-of_seq" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> of_seq : 
+            <span>
+             <span><span class="">'a</span> 
+              <a href="../Seq/index.html#type-t" class="cursor-pointer
+               text-orange">Stdlib.Seq.t
+              </a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> <span><span class="">'a</span> list</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Create a list from the iterator</p>
+          <ul class="at-tags"><li class="since">since 4.07</li></ul>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="w-full flex-none lg:w-72 border-t lg:border-l bg-gray-100">
+       <div class="flex h-20 border-b relative">
+        <h2 class="text-xl absolute inset-x-0 p-3 bottom-0 mt-7 font-semibold
+         text-gray-500">ocaml-base-compiler.4.11.2
+        </h2>
+       </div>
+       <div class="m-3">
+        <p class="mb-5 italic text-sm">Official release 4.11.2</p>
+        <div class="mb-3">
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="https://ocaml.org">ocaml.org
+          </a>
+         </div>
+        </div>
+        <details class="font-normal mb-2 text-sm">
+         <summary>Other versions</summary><div id="versions_container"></div>
+        </details><h2 class="font-semibold mb-2 text-sm">Authors</h2>
+        <p class="mb-3 text-sm">Xavier Leroy and many contributors</p>
+        <h2 class="font-semibold mb-2 text-sm">Issues</h2>
+        <div class="mb-3">
+         <a class="text-orange cursor-pointer mb-2 text-sm"
+          href="https://github.com/ocaml/opam-repository/issues">
+          github.com/ocaml/opam-repository/issues
+         </a>
+        </div>
+        <details class="font-semibold mb-2 text-sm">
+         <summary>Package dependencies</summary>
+         <div class="font-normal">
+          <ul>
+           <li>
+            <a href="../../../../ocaml/index.html" class="text-orange
+             cursor-pointer">ocaml
+            </a>
+           </li>
+           <li>
+            <a href="../../../../base-unix/index.html" class="text-orange
+             cursor-pointer">base-unix
+            </a>
+           </li>
+           <li>
+            <a href="../../../../base-bigarray/index.html" class="text-orange
+             cursor-pointer">base-bigarray
+            </a>
+           </li>
+           <li>
+            <a href="../../../../base-threads/index.html" class="text-orange
+             cursor-pointer">base-threads
+            </a>
+           </li>
+          </ul>
+         </div>
+        </details>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div><script>Voodoo.update('../../../version.json')</script>
+ </body>
+</html>

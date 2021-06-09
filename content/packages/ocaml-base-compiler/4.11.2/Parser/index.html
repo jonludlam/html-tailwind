@@ -1,0 +1,2518 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head><title>Parser (packages.ocaml-base-compiler.4.11.2.Parser)</title>
+  <link rel="stylesheet" href="../../../tailwind.css"/>
+  <link rel="stylesheet" href="../../../extra.css"/><meta charset="utf-8"/>
+  <meta name="generator" content="odoc 3dfb7aef2f"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <script src="../../../highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="../../../voodoo_client.js"></script>
+  <script
+   src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+   defer="defer">
+  </script>
+ </head>
+ <body class="mx-auto max-w-screen-2xl">
+  <div class="relative">
+   <div class="relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+     <div class="flex justify-between items-center md:justify-start py-6
+      md:space-x-10">
+      <div class="flex justify-start">
+       <a href="https://v3.ocaml.org/">
+        <img src="/colour-logo.svg" alt="" class="h-8 w-auto sm:h-10"/>
+       </a>
+      </div>
+      <nav class="hidden md:flex space-x-10">
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Industry</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/whatisocaml">
+            <p class="text-base font-medium text-gray-900">What is OCaml</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/users">
+            <p class="text-base font-medium text-gray-900">Industrial Users
+            </p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/successstories">
+            <p class="text-base font-medium text-gray-900">Success Stories
+            </p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Resources</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/releases">
+            <p class="text-base font-medium text-gray-900">Releases</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/applications">
+            <p class="text-base font-medium text-gray-900">Applications</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/language">
+            <p class="text-base font-medium text-gray-900">Language</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/archive">
+            <p class="text-base font-medium text-gray-900">Archive</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Community</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/opportunities">
+            <p class="text-base font-medium text-gray-900">Opportunities</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/news">
+            <p class="text-base font-medium text-gray-900">News</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/aroundweb">
+            <p class="text-base font-medium text-gray-900">Around the Web</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="h-screen flex bg-white font-sans">
+   <div class="flex flex-col w-full h-full">
+    <div class="flex-row flex-1">
+     <nav class="bg-orange border-t border-b border-orange flex flex-row">
+      <ol class="max-w-screen-xl w-full px-4 flex space-x-4 sm:px-6 lg:px-8">
+       <li class="flex">
+        <div class="flex items-center">
+         <a href="#" class="text-gray-100 hover:text-gray-500">
+          
+  <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+        </svg>
+  
+          <span class="sr-only">Home</span>
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">packages
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">ocaml-base-compiler
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">4.11.2
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="#" class="ml-4 text-sm font-medium text-gray-100
+          hover:text-gray-500">Parser
+         </a>
+        </div>
+       </li>
+      </ol>
+     </nav>
+    </div>
+    <div class="flex flex-row flex-1">
+     <div class="w-72 flex-none bg-gray-100 h-screen border-r border-gray-200
+      sticky top-0 hidden lg:block">
+      <div class="flex h-20 border-b relative">
+       <h2 class="text-xl absolute inset-x-0 p-3 px-5 bottom-0 mt-7
+        border-gray-200 font-semibold text-gray-500 font-sans">On this page
+       </h2>
+      </div>
+     </div>
+     <div class="flex flex-1 flex-col lg:flex-row">
+      <div class="flex-1">
+       <div class="lg:max-w-5xl mx-auto px-3 lg:px-10 mb-10 text-sm">
+        <div class="flex h-20 relative border-b border-gray-200">
+         <div class="relative flex-1 h-20">
+          <h1 class="text-3xl absolute inset-x-0 py-3 bottom-0 font-semibold
+           text-gray-500 font-sans w-full truncate">
+           <code class="font-mono text-gray-800">Parser</code>
+          </h1>
+         </div>
+         <div class="relative flex-none w-28">
+          <h1 class="text-3xl absolute py-3 bottom-0 right-0 font-semibold
+           text-gray-500 font-sans">Module
+          </h1>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-token">
+          <a href="#type-token" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> token</span>
+           <span> = </span>
+          </code>
+          <table>
+           <tr id="type-token.WITH">
+            <td class="anchored pl-4">
+             <a href="#type-token.WITH" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">WITH</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.WHILE">
+            <td class="anchored pl-4">
+             <a href="#type-token.WHILE" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">WHILE</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.WHEN">
+            <td class="anchored pl-4">
+             <a href="#type-token.WHEN" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">WHEN</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.VIRTUAL">
+            <td class="anchored pl-4">
+             <a href="#type-token.VIRTUAL" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">VIRTUAL</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.VAL">
+            <td class="anchored pl-4">
+             <a href="#type-token.VAL" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">VAL</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.UNDERSCORE">
+            <td class="anchored pl-4">
+             <a href="#type-token.UNDERSCORE" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">UNDERSCORE</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.UIDENT">
+            <td class="anchored pl-4">
+             <a href="#type-token.UIDENT" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">UIDENT</span> 
+               <span class="font-semibold">of</span> string
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.TYPE">
+            <td class="anchored pl-4">
+             <a href="#type-token.TYPE" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">TYPE</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.TRY">
+            <td class="anchored pl-4">
+             <a href="#type-token.TRY" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">TRY</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.TRUE">
+            <td class="anchored pl-4">
+             <a href="#type-token.TRUE" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">TRUE</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.TO">
+            <td class="anchored pl-4">
+             <a href="#type-token.TO" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">TO</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.TILDE">
+            <td class="anchored pl-4">
+             <a href="#type-token.TILDE" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">TILDE</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.THEN">
+            <td class="anchored pl-4">
+             <a href="#type-token.THEN" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">THEN</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.STRUCT">
+            <td class="anchored pl-4">
+             <a href="#type-token.STRUCT" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">STRUCT</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.STRING">
+            <td class="anchored pl-4">
+             <a href="#type-token.STRING" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">STRING</span> 
+               <span class="font-semibold">of</span> string * 
+               <a href="../Location/index.html#type-t" class="cursor-pointer
+                text-orange">Location.t
+               </a> * <span>string option</span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.STAR">
+            <td class="anchored pl-4">
+             <a href="#type-token.STAR" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">STAR</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.SIG">
+            <td class="anchored pl-4">
+             <a href="#type-token.SIG" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">SIG</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.SEMISEMI">
+            <td class="anchored pl-4">
+             <a href="#type-token.SEMISEMI" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">SEMISEMI</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.SEMI">
+            <td class="anchored pl-4">
+             <a href="#type-token.SEMI" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">SEMI</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.RPAREN">
+            <td class="anchored pl-4">
+             <a href="#type-token.RPAREN" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">RPAREN</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.REC">
+            <td class="anchored pl-4">
+             <a href="#type-token.REC" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">REC</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.RBRACKET">
+            <td class="anchored pl-4">
+             <a href="#type-token.RBRACKET" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">RBRACKET</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.RBRACE">
+            <td class="anchored pl-4">
+             <a href="#type-token.RBRACE" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">RBRACE</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.QUOTED_STRING_ITEM">
+            <td class="anchored pl-4">
+             <a href="#type-token.QUOTED_STRING_ITEM" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">QUOTED_STRING_ITEM</span> 
+               <span class="font-semibold">of</span> string * 
+               <a href="../Location/index.html#type-t" class="cursor-pointer
+                text-orange">Location.t
+               </a> * string * 
+               <a href="../Location/index.html#type-t" class="cursor-pointer
+                text-orange">Location.t
+               </a> * <span>string option</span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.QUOTED_STRING_EXPR">
+            <td class="anchored pl-4">
+             <a href="#type-token.QUOTED_STRING_EXPR" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">QUOTED_STRING_EXPR</span> 
+               <span class="font-semibold">of</span> string * 
+               <a href="../Location/index.html#type-t" class="cursor-pointer
+                text-orange">Location.t
+               </a> * string * 
+               <a href="../Location/index.html#type-t" class="cursor-pointer
+                text-orange">Location.t
+               </a> * <span>string option</span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.QUOTE">
+            <td class="anchored pl-4">
+             <a href="#type-token.QUOTE" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">QUOTE</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.QUESTION">
+            <td class="anchored pl-4">
+             <a href="#type-token.QUESTION" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">QUESTION</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.PRIVATE">
+            <td class="anchored pl-4">
+             <a href="#type-token.PRIVATE" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">PRIVATE</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.PREFIXOP">
+            <td class="anchored pl-4">
+             <a href="#type-token.PREFIXOP" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">PREFIXOP</span> 
+               <span class="font-semibold">of</span> string
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.PLUSEQ">
+            <td class="anchored pl-4">
+             <a href="#type-token.PLUSEQ" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">PLUSEQ</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.PLUSDOT">
+            <td class="anchored pl-4">
+             <a href="#type-token.PLUSDOT" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">PLUSDOT</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.PLUS">
+            <td class="anchored pl-4">
+             <a href="#type-token.PLUS" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">PLUS</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.PERCENT">
+            <td class="anchored pl-4">
+             <a href="#type-token.PERCENT" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">PERCENT</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.OR">
+            <td class="anchored pl-4">
+             <a href="#type-token.OR" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">OR</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.OPTLABEL">
+            <td class="anchored pl-4">
+             <a href="#type-token.OPTLABEL" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">OPTLABEL</span> 
+               <span class="font-semibold">of</span> string
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.OPEN">
+            <td class="anchored pl-4">
+             <a href="#type-token.OPEN" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">OPEN</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.OF">
+            <td class="anchored pl-4">
+             <a href="#type-token.OF" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">OF</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.OBJECT">
+            <td class="anchored pl-4">
+             <a href="#type-token.OBJECT" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">OBJECT</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.NONREC">
+            <td class="anchored pl-4">
+             <a href="#type-token.NONREC" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">NONREC</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.NEW">
+            <td class="anchored pl-4">
+             <a href="#type-token.NEW" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">NEW</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.MUTABLE">
+            <td class="anchored pl-4">
+             <a href="#type-token.MUTABLE" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">MUTABLE</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.MODULE">
+            <td class="anchored pl-4">
+             <a href="#type-token.MODULE" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">MODULE</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.MINUSGREATER">
+            <td class="anchored pl-4">
+             <a href="#type-token.MINUSGREATER" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">MINUSGREATER</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.MINUSDOT">
+            <td class="anchored pl-4">
+             <a href="#type-token.MINUSDOT" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">MINUSDOT</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.MINUS">
+            <td class="anchored pl-4">
+             <a href="#type-token.MINUS" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">MINUS</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.METHOD">
+            <td class="anchored pl-4">
+             <a href="#type-token.METHOD" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">METHOD</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.MATCH">
+            <td class="anchored pl-4">
+             <a href="#type-token.MATCH" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">MATCH</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.LPAREN">
+            <td class="anchored pl-4">
+             <a href="#type-token.LPAREN" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">LPAREN</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.LIDENT">
+            <td class="anchored pl-4">
+             <a href="#type-token.LIDENT" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">LIDENT</span> 
+               <span class="font-semibold">of</span> string
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.LETOP">
+            <td class="anchored pl-4">
+             <a href="#type-token.LETOP" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">LETOP</span> 
+               <span class="font-semibold">of</span> string
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.LET">
+            <td class="anchored pl-4">
+             <a href="#type-token.LET" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">LET</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.LESSMINUS">
+            <td class="anchored pl-4">
+             <a href="#type-token.LESSMINUS" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">LESSMINUS</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.LESS">
+            <td class="anchored pl-4">
+             <a href="#type-token.LESS" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">LESS</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.LBRACKETPERCENTPERCENT">
+            <td class="anchored pl-4">
+             <a href="#type-token.LBRACKETPERCENTPERCENT" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">LBRACKETPERCENTPERCENT</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.LBRACKETPERCENT">
+            <td class="anchored pl-4">
+             <a href="#type-token.LBRACKETPERCENT" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">LBRACKETPERCENT</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.LBRACKETLESS">
+            <td class="anchored pl-4">
+             <a href="#type-token.LBRACKETLESS" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">LBRACKETLESS</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.LBRACKETGREATER">
+            <td class="anchored pl-4">
+             <a href="#type-token.LBRACKETGREATER" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">LBRACKETGREATER</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.LBRACKETBAR">
+            <td class="anchored pl-4">
+             <a href="#type-token.LBRACKETBAR" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">LBRACKETBAR</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.LBRACKETATATAT">
+            <td class="anchored pl-4">
+             <a href="#type-token.LBRACKETATATAT" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">LBRACKETATATAT</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.LBRACKETATAT">
+            <td class="anchored pl-4">
+             <a href="#type-token.LBRACKETATAT" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">LBRACKETATAT</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.LBRACKETAT">
+            <td class="anchored pl-4">
+             <a href="#type-token.LBRACKETAT" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">LBRACKETAT</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.LBRACKET">
+            <td class="anchored pl-4">
+             <a href="#type-token.LBRACKET" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">LBRACKET</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.LBRACELESS">
+            <td class="anchored pl-4">
+             <a href="#type-token.LBRACELESS" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">LBRACELESS</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.LBRACE">
+            <td class="anchored pl-4">
+             <a href="#type-token.LBRACE" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">LBRACE</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.LAZY">
+            <td class="anchored pl-4">
+             <a href="#type-token.LAZY" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">LAZY</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.LABEL">
+            <td class="anchored pl-4">
+             <a href="#type-token.LABEL" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">LABEL</span> 
+               <span class="font-semibold">of</span> string
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.INT">
+            <td class="anchored pl-4">
+             <a href="#type-token.INT" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">INT</span> 
+               <span class="font-semibold">of</span> string * 
+               <span>char option</span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.INITIALIZER">
+            <td class="anchored pl-4">
+             <a href="#type-token.INITIALIZER" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">INITIALIZER</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.INHERIT">
+            <td class="anchored pl-4">
+             <a href="#type-token.INHERIT" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">INHERIT</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.INFIXOP4">
+            <td class="anchored pl-4">
+             <a href="#type-token.INFIXOP4" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">INFIXOP4</span> 
+               <span class="font-semibold">of</span> string
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.INFIXOP3">
+            <td class="anchored pl-4">
+             <a href="#type-token.INFIXOP3" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">INFIXOP3</span> 
+               <span class="font-semibold">of</span> string
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.INFIXOP2">
+            <td class="anchored pl-4">
+             <a href="#type-token.INFIXOP2" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">INFIXOP2</span> 
+               <span class="font-semibold">of</span> string
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.INFIXOP1">
+            <td class="anchored pl-4">
+             <a href="#type-token.INFIXOP1" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">INFIXOP1</span> 
+               <span class="font-semibold">of</span> string
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.INFIXOP0">
+            <td class="anchored pl-4">
+             <a href="#type-token.INFIXOP0" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">INFIXOP0</span> 
+               <span class="font-semibold">of</span> string
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.INCLUDE">
+            <td class="anchored pl-4">
+             <a href="#type-token.INCLUDE" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">INCLUDE</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.IN">
+            <td class="anchored pl-4">
+             <a href="#type-token.IN" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">IN</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.IF">
+            <td class="anchored pl-4">
+             <a href="#type-token.IF" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">IF</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.HASHOP">
+            <td class="anchored pl-4">
+             <a href="#type-token.HASHOP" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">HASHOP</span> 
+               <span class="font-semibold">of</span> string
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.HASH">
+            <td class="anchored pl-4">
+             <a href="#type-token.HASH" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">HASH</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.GREATERRBRACKET">
+            <td class="anchored pl-4">
+             <a href="#type-token.GREATERRBRACKET" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">GREATERRBRACKET</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.GREATERRBRACE">
+            <td class="anchored pl-4">
+             <a href="#type-token.GREATERRBRACE" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">GREATERRBRACE</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.GREATER">
+            <td class="anchored pl-4">
+             <a href="#type-token.GREATER" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">GREATER</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.FUNCTOR">
+            <td class="anchored pl-4">
+             <a href="#type-token.FUNCTOR" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">FUNCTOR</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.FUNCTION">
+            <td class="anchored pl-4">
+             <a href="#type-token.FUNCTION" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">FUNCTION</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.FUN">
+            <td class="anchored pl-4">
+             <a href="#type-token.FUN" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">FUN</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.FOR">
+            <td class="anchored pl-4">
+             <a href="#type-token.FOR" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">FOR</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.FLOAT">
+            <td class="anchored pl-4">
+             <a href="#type-token.FLOAT" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">FLOAT</span> 
+               <span class="font-semibold">of</span> string * 
+               <span>char option</span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.FALSE">
+            <td class="anchored pl-4">
+             <a href="#type-token.FALSE" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">FALSE</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.EXTERNAL">
+            <td class="anchored pl-4">
+             <a href="#type-token.EXTERNAL" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">EXTERNAL</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.EXCEPTION">
+            <td class="anchored pl-4">
+             <a href="#type-token.EXCEPTION" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">EXCEPTION</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.EQUAL">
+            <td class="anchored pl-4">
+             <a href="#type-token.EQUAL" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">EQUAL</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.EOL">
+            <td class="anchored pl-4">
+             <a href="#type-token.EOL" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">EOL</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.EOF">
+            <td class="anchored pl-4">
+             <a href="#type-token.EOF" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">EOF</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.END">
+            <td class="anchored pl-4">
+             <a href="#type-token.END" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">END</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.ELSE">
+            <td class="anchored pl-4">
+             <a href="#type-token.ELSE" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">ELSE</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.DOWNTO">
+            <td class="anchored pl-4">
+             <a href="#type-token.DOWNTO" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">DOWNTO</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.DOTOP">
+            <td class="anchored pl-4">
+             <a href="#type-token.DOTOP" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">DOTOP</span> 
+               <span class="font-semibold">of</span> string
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.DOTDOT">
+            <td class="anchored pl-4">
+             <a href="#type-token.DOTDOT" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">DOTDOT</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.DOT">
+            <td class="anchored pl-4">
+             <a href="#type-token.DOT" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">DOT</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.DONE">
+            <td class="anchored pl-4">
+             <a href="#type-token.DONE" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">DONE</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.DOCSTRING">
+            <td class="anchored pl-4">
+             <a href="#type-token.DOCSTRING" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">DOCSTRING</span> 
+               <span class="font-semibold">of</span> 
+               <a href="../Docstrings/index.html#type-docstring"
+                class="cursor-pointer text-orange">Docstrings.docstring
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.DO">
+            <td class="anchored pl-4">
+             <a href="#type-token.DO" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">DO</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.CONSTRAINT">
+            <td class="anchored pl-4">
+             <a href="#type-token.CONSTRAINT" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">CONSTRAINT</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.COMMENT">
+            <td class="anchored pl-4">
+             <a href="#type-token.COMMENT" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">COMMENT</span> 
+               <span class="font-semibold">of</span> string * 
+               <a href="../Location/index.html#type-t" class="cursor-pointer
+                text-orange">Location.t
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.COMMA">
+            <td class="anchored pl-4">
+             <a href="#type-token.COMMA" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">COMMA</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.COLONGREATER">
+            <td class="anchored pl-4">
+             <a href="#type-token.COLONGREATER" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">COLONGREATER</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.COLONEQUAL">
+            <td class="anchored pl-4">
+             <a href="#type-token.COLONEQUAL" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">COLONEQUAL</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.COLONCOLON">
+            <td class="anchored pl-4">
+             <a href="#type-token.COLONCOLON" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">COLONCOLON</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.COLON">
+            <td class="anchored pl-4">
+             <a href="#type-token.COLON" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">COLON</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.CLASS">
+            <td class="anchored pl-4">
+             <a href="#type-token.CLASS" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">CLASS</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.CHAR">
+            <td class="anchored pl-4">
+             <a href="#type-token.CHAR" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">CHAR</span> 
+               <span class="font-semibold">of</span> char
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.BEGIN">
+            <td class="anchored pl-4">
+             <a href="#type-token.BEGIN" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">BEGIN</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.BARRBRACKET">
+            <td class="anchored pl-4">
+             <a href="#type-token.BARRBRACKET" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">BARRBRACKET</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.BARBAR">
+            <td class="anchored pl-4">
+             <a href="#type-token.BARBAR" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">BARBAR</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.BAR">
+            <td class="anchored pl-4">
+             <a href="#type-token.BAR" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">BAR</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.BANG">
+            <td class="anchored pl-4">
+             <a href="#type-token.BANG" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">BANG</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.BACKQUOTE">
+            <td class="anchored pl-4">
+             <a href="#type-token.BACKQUOTE" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">BACKQUOTE</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.ASSERT">
+            <td class="anchored pl-4">
+             <a href="#type-token.ASSERT" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">ASSERT</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.AS">
+            <td class="anchored pl-4">
+             <a href="#type-token.AS" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">AS</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.ANDOP">
+            <td class="anchored pl-4">
+             <a href="#type-token.ANDOP" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">ANDOP</span> 
+               <span class="font-semibold">of</span> string
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.AND">
+            <td class="anchored pl-4">
+             <a href="#type-token.AND" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">AND</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.AMPERSAND">
+            <td class="anchored pl-4">
+             <a href="#type-token.AMPERSAND" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">AMPERSAND</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-token.AMPERAMPER">
+            <td class="anchored pl-4">
+             <a href="#type-token.AMPERAMPER" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">AMPERAMPER</span></span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec exception anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="exception-Error">
+          <a href="#exception-Error" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">exception</span> </span>
+           <span><span class="">Error</span></span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-use_file">
+          <a href="#val-use_file" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> use_file : 
+            <span>
+             <span>(
+              <span>
+               <a href="../Stdlib/Lexing/index.html#type-lexbuf"
+                class="cursor-pointer text-orange">Stdlib.Lexing.lexbuf
+               </a> <span class="">&#45;&gt;</span>
+              </span> 
+              <a href="#type-token" class="cursor-pointer text-orange">token
+              </a>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Stdlib/Lexing/index.html#type-lexbuf"
+              class="cursor-pointer text-orange">Stdlib.Lexing.lexbuf
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Parsetree/index.html#type-toplevel_phrase"
+              class="cursor-pointer text-orange">Parsetree.toplevel_phrase
+             </a> list
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-toplevel_phrase">
+          <a href="#val-toplevel_phrase" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> toplevel_phrase
+             : 
+            <span>
+             <span>(
+              <span>
+               <a href="../Stdlib/Lexing/index.html#type-lexbuf"
+                class="cursor-pointer text-orange">Stdlib.Lexing.lexbuf
+               </a> <span class="">&#45;&gt;</span>
+              </span> 
+              <a href="#type-token" class="cursor-pointer text-orange">token
+              </a>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Stdlib/Lexing/index.html#type-lexbuf"
+              class="cursor-pointer text-orange">Stdlib.Lexing.lexbuf
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Parsetree/index.html#type-toplevel_phrase"
+             class="cursor-pointer text-orange">Parsetree.toplevel_phrase
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-parse_val_longident">
+          <a href="#val-parse_val_longident" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> parse_val_longident
+             : 
+            <span>
+             <span>(
+              <span>
+               <a href="../Stdlib/Lexing/index.html#type-lexbuf"
+                class="cursor-pointer text-orange">Stdlib.Lexing.lexbuf
+               </a> <span class="">&#45;&gt;</span>
+              </span> 
+              <a href="#type-token" class="cursor-pointer text-orange">token
+              </a>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Stdlib/Lexing/index.html#type-lexbuf"
+              class="cursor-pointer text-orange">Stdlib.Lexing.lexbuf
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Longident/index.html#type-t" class="cursor-pointer
+             text-orange">Longident.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-parse_pattern">
+          <a href="#val-parse_pattern" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> parse_pattern
+             : 
+            <span>
+             <span>(
+              <span>
+               <a href="../Stdlib/Lexing/index.html#type-lexbuf"
+                class="cursor-pointer text-orange">Stdlib.Lexing.lexbuf
+               </a> <span class="">&#45;&gt;</span>
+              </span> 
+              <a href="#type-token" class="cursor-pointer text-orange">token
+              </a>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Stdlib/Lexing/index.html#type-lexbuf"
+              class="cursor-pointer text-orange">Stdlib.Lexing.lexbuf
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Parsetree/index.html#type-pattern"
+             class="cursor-pointer text-orange">Parsetree.pattern
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-parse_mty_longident">
+          <a href="#val-parse_mty_longident" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> parse_mty_longident
+             : 
+            <span>
+             <span>(
+              <span>
+               <a href="../Stdlib/Lexing/index.html#type-lexbuf"
+                class="cursor-pointer text-orange">Stdlib.Lexing.lexbuf
+               </a> <span class="">&#45;&gt;</span>
+              </span> 
+              <a href="#type-token" class="cursor-pointer text-orange">token
+              </a>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Stdlib/Lexing/index.html#type-lexbuf"
+              class="cursor-pointer text-orange">Stdlib.Lexing.lexbuf
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Longident/index.html#type-t" class="cursor-pointer
+             text-orange">Longident.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-parse_mod_longident">
+          <a href="#val-parse_mod_longident" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> parse_mod_longident
+             : 
+            <span>
+             <span>(
+              <span>
+               <a href="../Stdlib/Lexing/index.html#type-lexbuf"
+                class="cursor-pointer text-orange">Stdlib.Lexing.lexbuf
+               </a> <span class="">&#45;&gt;</span>
+              </span> 
+              <a href="#type-token" class="cursor-pointer text-orange">token
+              </a>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Stdlib/Lexing/index.html#type-lexbuf"
+              class="cursor-pointer text-orange">Stdlib.Lexing.lexbuf
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Longident/index.html#type-t" class="cursor-pointer
+             text-orange">Longident.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-parse_mod_ext_longident">
+          <a href="#val-parse_mod_ext_longident" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            parse_mod_ext_longident : 
+            <span>
+             <span>(
+              <span>
+               <a href="../Stdlib/Lexing/index.html#type-lexbuf"
+                class="cursor-pointer text-orange">Stdlib.Lexing.lexbuf
+               </a> <span class="">&#45;&gt;</span>
+              </span> 
+              <a href="#type-token" class="cursor-pointer text-orange">token
+              </a>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Stdlib/Lexing/index.html#type-lexbuf"
+              class="cursor-pointer text-orange">Stdlib.Lexing.lexbuf
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Longident/index.html#type-t" class="cursor-pointer
+             text-orange">Longident.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-parse_expression">
+          <a href="#val-parse_expression" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> parse_expression
+             : 
+            <span>
+             <span>(
+              <span>
+               <a href="../Stdlib/Lexing/index.html#type-lexbuf"
+                class="cursor-pointer text-orange">Stdlib.Lexing.lexbuf
+               </a> <span class="">&#45;&gt;</span>
+              </span> 
+              <a href="#type-token" class="cursor-pointer text-orange">token
+              </a>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Stdlib/Lexing/index.html#type-lexbuf"
+              class="cursor-pointer text-orange">Stdlib.Lexing.lexbuf
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Parsetree/index.html#type-expression"
+             class="cursor-pointer text-orange">Parsetree.expression
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-parse_core_type">
+          <a href="#val-parse_core_type" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> parse_core_type
+             : 
+            <span>
+             <span>(
+              <span>
+               <a href="../Stdlib/Lexing/index.html#type-lexbuf"
+                class="cursor-pointer text-orange">Stdlib.Lexing.lexbuf
+               </a> <span class="">&#45;&gt;</span>
+              </span> 
+              <a href="#type-token" class="cursor-pointer text-orange">token
+              </a>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Stdlib/Lexing/index.html#type-lexbuf"
+              class="cursor-pointer text-orange">Stdlib.Lexing.lexbuf
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Parsetree/index.html#type-core_type"
+             class="cursor-pointer text-orange">Parsetree.core_type
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-parse_constr_longident">
+          <a href="#val-parse_constr_longident" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            parse_constr_longident : 
+            <span>
+             <span>(
+              <span>
+               <a href="../Stdlib/Lexing/index.html#type-lexbuf"
+                class="cursor-pointer text-orange">Stdlib.Lexing.lexbuf
+               </a> <span class="">&#45;&gt;</span>
+              </span> 
+              <a href="#type-token" class="cursor-pointer text-orange">token
+              </a>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Stdlib/Lexing/index.html#type-lexbuf"
+              class="cursor-pointer text-orange">Stdlib.Lexing.lexbuf
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Longident/index.html#type-t" class="cursor-pointer
+             text-orange">Longident.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-parse_any_longident">
+          <a href="#val-parse_any_longident" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> parse_any_longident
+             : 
+            <span>
+             <span>(
+              <span>
+               <a href="../Stdlib/Lexing/index.html#type-lexbuf"
+                class="cursor-pointer text-orange">Stdlib.Lexing.lexbuf
+               </a> <span class="">&#45;&gt;</span>
+              </span> 
+              <a href="#type-token" class="cursor-pointer text-orange">token
+              </a>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Stdlib/Lexing/index.html#type-lexbuf"
+              class="cursor-pointer text-orange">Stdlib.Lexing.lexbuf
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Longident/index.html#type-t" class="cursor-pointer
+             text-orange">Longident.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-interface">
+          <a href="#val-interface" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> interface : 
+            <span>
+             <span>(
+              <span>
+               <a href="../Stdlib/Lexing/index.html#type-lexbuf"
+                class="cursor-pointer text-orange">Stdlib.Lexing.lexbuf
+               </a> <span class="">&#45;&gt;</span>
+              </span> 
+              <a href="#type-token" class="cursor-pointer text-orange">token
+              </a>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Stdlib/Lexing/index.html#type-lexbuf"
+              class="cursor-pointer text-orange">Stdlib.Lexing.lexbuf
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Parsetree/index.html#type-signature"
+             class="cursor-pointer text-orange">Parsetree.signature
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-implementation">
+          <a href="#val-implementation" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> implementation
+             : 
+            <span>
+             <span>(
+              <span>
+               <a href="../Stdlib/Lexing/index.html#type-lexbuf"
+                class="cursor-pointer text-orange">Stdlib.Lexing.lexbuf
+               </a> <span class="">&#45;&gt;</span>
+              </span> 
+              <a href="#type-token" class="cursor-pointer text-orange">token
+              </a>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Stdlib/Lexing/index.html#type-lexbuf"
+              class="cursor-pointer text-orange">Stdlib.Lexing.lexbuf
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Parsetree/index.html#type-structure"
+             class="cursor-pointer text-orange">Parsetree.structure
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec module anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="module-MenhirInterpreter">
+          <a href="#module-MenhirInterpreter" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">module</span> </span>
+           <span>
+            <a href="MenhirInterpreter/index.html" class="cursor-pointer
+             text-orange">MenhirInterpreter
+            </a>
+           </span>
+           <span> : <span class="font-semibold">sig</span> ... 
+            <span class="font-semibold">end</span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec module anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="module-Incremental">
+          <a href="#module-Incremental" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">module</span> </span>
+           <span>
+            <a href="Incremental/index.html" class="cursor-pointer
+             text-orange">Incremental
+            </a>
+           </span>
+           <span> : <span class="font-semibold">sig</span> ... 
+            <span class="font-semibold">end</span>
+           </span>
+          </code>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="w-full flex-none lg:w-72 border-t lg:border-l bg-gray-100">
+       <div class="flex h-20 border-b relative">
+        <h2 class="text-xl absolute inset-x-0 p-3 bottom-0 mt-7 font-semibold
+         text-gray-500">ocaml-base-compiler.4.11.2
+        </h2>
+       </div>
+       <div class="m-3">
+        <p class="mb-5 italic text-sm">Official release 4.11.2</p>
+        <div class="mb-3">
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="https://ocaml.org">ocaml.org
+          </a>
+         </div>
+        </div>
+        <details class="font-normal mb-2 text-sm">
+         <summary>Other versions</summary><div id="versions_container"></div>
+        </details><h2 class="font-semibold mb-2 text-sm">Authors</h2>
+        <p class="mb-3 text-sm">Xavier Leroy and many contributors</p>
+        <h2 class="font-semibold mb-2 text-sm">Issues</h2>
+        <div class="mb-3">
+         <a class="text-orange cursor-pointer mb-2 text-sm"
+          href="https://github.com/ocaml/opam-repository/issues">
+          github.com/ocaml/opam-repository/issues
+         </a>
+        </div>
+        <details class="font-semibold mb-2 text-sm">
+         <summary>Package dependencies</summary>
+         <div class="font-normal">
+          <ul>
+           <li>
+            <a href="../../../ocaml/index.html" class="text-orange
+             cursor-pointer">ocaml
+            </a>
+           </li>
+           <li>
+            <a href="../../../base-unix/index.html" class="text-orange
+             cursor-pointer">base-unix
+            </a>
+           </li>
+           <li>
+            <a href="../../../base-bigarray/index.html" class="text-orange
+             cursor-pointer">base-bigarray
+            </a>
+           </li>
+           <li>
+            <a href="../../../base-threads/index.html" class="text-orange
+             cursor-pointer">base-threads
+            </a>
+           </li>
+          </ul>
+         </div>
+        </details>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div><script>Voodoo.update('../../version.json')</script>
+ </body>
+</html>

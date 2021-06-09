@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>Cmt_format (packages.ocaml-base-compiler.4.11.2.Cmt_format)</title>
+  <link rel="stylesheet" href="../../../tailwind.css"/>
+  <link rel="stylesheet" href="../../../extra.css"/><meta charset="utf-8"/>
+  <meta name="generator" content="odoc 3dfb7aef2f"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <script src="../../../highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="../../../voodoo_client.js"></script>
+  <script
+   src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+   defer="defer">
+  </script>
+ </head>
+ <body class="mx-auto max-w-screen-2xl">
+  <div class="relative">
+   <div class="relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+     <div class="flex justify-between items-center md:justify-start py-6
+      md:space-x-10">
+      <div class="flex justify-start">
+       <a href="https://v3.ocaml.org/">
+        <img src="/colour-logo.svg" alt="" class="h-8 w-auto sm:h-10"/>
+       </a>
+      </div>
+      <nav class="hidden md:flex space-x-10">
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Industry</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/whatisocaml">
+            <p class="text-base font-medium text-gray-900">What is OCaml</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/users">
+            <p class="text-base font-medium text-gray-900">Industrial Users
+            </p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/successstories">
+            <p class="text-base font-medium text-gray-900">Success Stories
+            </p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Resources</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/releases">
+            <p class="text-base font-medium text-gray-900">Releases</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/applications">
+            <p class="text-base font-medium text-gray-900">Applications</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/language">
+            <p class="text-base font-medium text-gray-900">Language</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/archive">
+            <p class="text-base font-medium text-gray-900">Archive</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Community</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/opportunities">
+            <p class="text-base font-medium text-gray-900">Opportunities</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/news">
+            <p class="text-base font-medium text-gray-900">News</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/aroundweb">
+            <p class="text-base font-medium text-gray-900">Around the Web</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="h-screen flex bg-white font-sans">
+   <div class="flex flex-col w-full h-full">
+    <div class="flex-row flex-1">
+     <nav class="bg-orange border-t border-b border-orange flex flex-row">
+      <ol class="max-w-screen-xl w-full px-4 flex space-x-4 sm:px-6 lg:px-8">
+       <li class="flex">
+        <div class="flex items-center">
+         <a href="#" class="text-gray-100 hover:text-gray-500">
+          
+  <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+        </svg>
+  
+          <span class="sr-only">Home</span>
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">packages
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">ocaml-base-compiler
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">4.11.2
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="#" class="ml-4 text-sm font-medium text-gray-100
+          hover:text-gray-500">Cmt_format
+         </a>
+        </div>
+       </li>
+      </ol>
+     </nav>
+    </div>
+    <div class="flex flex-row flex-1">
+     <div class="w-72 flex-none bg-gray-100 h-screen border-r border-gray-200
+      sticky top-0 hidden lg:block">
+      <div class="flex h-20 border-b relative">
+       <h2 class="text-xl absolute inset-x-0 p-3 px-5 bottom-0 mt-7
+        border-gray-200 font-semibold text-gray-500 font-sans">On this page
+       </h2>
+      </div>
+     </div>
+     <div class="flex flex-1 flex-col lg:flex-row">
+      <div class="flex-1">
+       <div class="lg:max-w-5xl mx-auto px-3 lg:px-10 mb-10 text-sm">
+        <div class="flex h-20 relative border-b border-gray-200">
+         <div class="relative flex-1 h-20">
+          <h1 class="text-3xl absolute inset-x-0 py-3 bottom-0 font-semibold
+           text-gray-500 font-sans w-full truncate">
+           <code class="font-mono text-gray-800">Cmt_format</code>
+          </h1>
+         </div>
+         <div class="relative flex-none w-28">
+          <h1 class="text-3xl absolute py-3 bottom-0 right-0 font-semibold
+           text-gray-500 font-sans">Module
+          </h1>
+         </div>
+        </div><p class="mt-4">cmt and cmti files format.</p>
+        <p class="mt-4">The layout of a cmt file is as follows: &lt;cmt&gt;
+          := {&lt;cmi&gt;} &lt;cmt magic&gt; {cmt infos} {&lt;source 
+         info&gt;} where &lt;cmi&gt; is the cmi file format: &lt;cmi&gt;
+          := &lt;cmi magic&gt; &lt;cmi info&gt;. More precisely, the 
+         optional &lt;cmi&gt; part must be present if and only if the
+          file is:
+        </p>
+        <ul class="list-disc mt-2 mb-4"><li class="ml-4">a cmti, or</li>
+         <li class="ml-4">a cmt, for a ml file which has no corresponding
+           mli (hence no corresponding cmti).
+         </li>
+        </ul>
+        <p class="mt-4">Thus, we provide a common reading function for
+          cmi and cmt(i) files which returns an option for each of the
+          three parts: cmi info, cmt info, source info.
+        </p>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-binary_annots">
+          <a href="#type-binary_annots" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> binary_annots</span>
+           <span> = </span>
+          </code>
+          <table>
+           <tr id="type-binary_annots.Packed">
+            <td class="anchored pl-4">
+             <a href="#type-binary_annots.Packed" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Packed</span> 
+               <span class="font-semibold">of</span> 
+               <a href="../Types/index.html#type-signature"
+                class="cursor-pointer text-orange">Types.signature
+               </a> * <span>string list</span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-binary_annots.Implementation">
+            <td class="anchored pl-4">
+             <a href="#type-binary_annots.Implementation" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Implementation</span> 
+               <span class="font-semibold">of</span> 
+               <a href="../Typedtree/index.html#type-structure"
+                class="cursor-pointer text-orange">Typedtree.structure
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-binary_annots.Interface">
+            <td class="anchored pl-4">
+             <a href="#type-binary_annots.Interface" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Interface</span> 
+               <span class="font-semibold">of</span> 
+               <a href="../Typedtree/index.html#type-signature"
+                class="cursor-pointer text-orange">Typedtree.signature
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-binary_annots.Partial_implementation">
+            <td class="anchored pl-4">
+             <a href="#type-binary_annots.Partial_implementation"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Partial_implementation</span> 
+               <span class="font-semibold">of</span> 
+               <span>
+                <a href="#type-binary_part" class="cursor-pointer
+                 text-orange">binary_part
+                </a> array
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-binary_annots.Partial_interface">
+            <td class="anchored pl-4">
+             <a href="#type-binary_annots.Partial_interface"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Partial_interface</span> 
+               <span class="font-semibold">of</span> 
+               <span>
+                <a href="#type-binary_part" class="cursor-pointer
+                 text-orange">binary_part
+                </a> array
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-binary_part">
+          <a href="#type-binary_part" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">and</span> binary_part</span>
+           <span> = </span>
+          </code>
+          <table>
+           <tr id="type-binary_part.Partial_structure">
+            <td class="anchored pl-4">
+             <a href="#type-binary_part.Partial_structure" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Partial_structure</span> 
+               <span class="font-semibold">of</span> 
+               <a href="../Typedtree/index.html#type-structure"
+                class="cursor-pointer text-orange">Typedtree.structure
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-binary_part.Partial_structure_item">
+            <td class="anchored pl-4">
+             <a href="#type-binary_part.Partial_structure_item"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Partial_structure_item</span> 
+               <span class="font-semibold">of</span> 
+               <a href="../Typedtree/index.html#type-structure_item"
+                class="cursor-pointer text-orange">Typedtree.structure_item
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-binary_part.Partial_expression">
+            <td class="anchored pl-4">
+             <a href="#type-binary_part.Partial_expression" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Partial_expression</span> 
+               <span class="font-semibold">of</span> 
+               <a href="../Typedtree/index.html#type-expression"
+                class="cursor-pointer text-orange">Typedtree.expression
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-binary_part.Partial_pattern">
+            <td class="anchored pl-4">
+             <a href="#type-binary_part.Partial_pattern" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Partial_pattern</span> : 
+               <span><span class="">'k</span> 
+                <a href="../Typedtree/index.html#type-pattern_category"
+                 class="cursor-pointer text-orange">
+                 Typedtree.pattern_category
+                </a>
+               </span> * 
+               <span><span class="">'k</span> 
+                <a href="../Typedtree/index.html#type-general_pattern"
+                 class="cursor-pointer text-orange">Typedtree.general_pattern
+                </a>
+               </span> <span class="">&#45;&gt;</span> 
+               <a href="#type-binary_part" class="cursor-pointer text-orange">
+                binary_part
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-binary_part.Partial_class_expr">
+            <td class="anchored pl-4">
+             <a href="#type-binary_part.Partial_class_expr" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Partial_class_expr</span> 
+               <span class="font-semibold">of</span> 
+               <a href="../Typedtree/index.html#type-class_expr"
+                class="cursor-pointer text-orange">Typedtree.class_expr
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-binary_part.Partial_signature">
+            <td class="anchored pl-4">
+             <a href="#type-binary_part.Partial_signature" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Partial_signature</span> 
+               <span class="font-semibold">of</span> 
+               <a href="../Typedtree/index.html#type-signature"
+                class="cursor-pointer text-orange">Typedtree.signature
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-binary_part.Partial_signature_item">
+            <td class="anchored pl-4">
+             <a href="#type-binary_part.Partial_signature_item"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Partial_signature_item</span> 
+               <span class="font-semibold">of</span> 
+               <a href="../Typedtree/index.html#type-signature_item"
+                class="cursor-pointer text-orange">Typedtree.signature_item
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-binary_part.Partial_module_type">
+            <td class="anchored pl-4">
+             <a href="#type-binary_part.Partial_module_type"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Partial_module_type</span> 
+               <span class="font-semibold">of</span> 
+               <a href="../Typedtree/index.html#type-module_type"
+                class="cursor-pointer text-orange">Typedtree.module_type
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-cmt_infos">
+          <a href="#type-cmt_infos" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> cmt_infos</span>
+           <span> = </span><span>{</span>
+          </code>
+          <table>
+           <tr id="type-cmt_infos.cmt_modname">
+            <td class="anchored pl-4">
+             <a href="#type-cmt_infos.cmt_modname" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>cmt_modname : 
+               <a href="../Misc/index.html#type-modname"
+                class="cursor-pointer text-orange">Misc.modname
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-cmt_infos.cmt_annots">
+            <td class="anchored pl-4">
+             <a href="#type-cmt_infos.cmt_annots" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>cmt_annots : 
+               <a href="#type-binary_annots" class="cursor-pointer
+                text-orange">binary_annots
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-cmt_infos.cmt_value_dependencies">
+            <td class="anchored pl-4">
+             <a href="#type-cmt_infos.cmt_value_dependencies"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>cmt_value_dependencies : 
+               <span>
+                <span>(
+                 <a href="../Types/index.html#type-value_description"
+                  class="cursor-pointer text-orange">Types.value_description
+                 </a> * 
+                 <a href="../Types/index.html#type-value_description"
+                  class="cursor-pointer text-orange">Types.value_description
+                 </a>)
+                </span> list
+               </span>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-cmt_infos.cmt_comments">
+            <td class="anchored pl-4">
+             <a href="#type-cmt_infos.cmt_comments" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>cmt_comments : 
+               <span>
+                <span>(string * 
+                 <a href="../Location/index.html#type-t"
+                  class="cursor-pointer text-orange">Location.t
+                 </a>)
+                </span> list
+               </span>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-cmt_infos.cmt_args">
+            <td class="anchored pl-4">
+             <a href="#type-cmt_infos.cmt_args" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>cmt_args : <span>string array</span>;</span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-cmt_infos.cmt_sourcefile">
+            <td class="anchored pl-4">
+             <a href="#type-cmt_infos.cmt_sourcefile" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>cmt_sourcefile : <span>string option</span>;</span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-cmt_infos.cmt_builddir">
+            <td class="anchored pl-4">
+             <a href="#type-cmt_infos.cmt_builddir" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>cmt_builddir : string;</span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-cmt_infos.cmt_loadpath">
+            <td class="anchored pl-4">
+             <a href="#type-cmt_infos.cmt_loadpath" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>cmt_loadpath : <span>string list</span>;</span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-cmt_infos.cmt_source_digest">
+            <td class="anchored pl-4">
+             <a href="#type-cmt_infos.cmt_source_digest" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>cmt_source_digest : <span>string option</span>;</span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-cmt_infos.cmt_initial_env">
+            <td class="anchored pl-4">
+             <a href="#type-cmt_infos.cmt_initial_env" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>cmt_initial_env : 
+               <a href="../Env/index.html#type-t" class="cursor-pointer
+                text-orange">Env.t
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-cmt_infos.cmt_imports">
+            <td class="anchored pl-4">
+             <a href="#type-cmt_infos.cmt_imports" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>cmt_imports : 
+               <a href="../Misc/index.html#type-crcs" class="cursor-pointer
+                text-orange">Misc.crcs
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-cmt_infos.cmt_interface_digest">
+            <td class="anchored pl-4">
+             <a href="#type-cmt_infos.cmt_interface_digest" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>cmt_interface_digest : 
+               <span>
+                <a href="../Stdlib/Digest/index.html#type-t"
+                 class="cursor-pointer text-orange">Stdlib.Digest.t
+                </a> option
+               </span>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-cmt_infos.cmt_use_summaries">
+            <td class="anchored pl-4">
+             <a href="#type-cmt_infos.cmt_use_summaries" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>cmt_use_summaries : bool;</span>
+             </code>
+            </td>
+           </tr>
+          </table><code class="font-normal text-sm"><span>}</span></code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-error">
+          <a href="#type-error" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> error</span>
+           <span> = </span>
+          </code>
+          <table>
+           <tr id="type-error.Not_a_typedtree">
+            <td class="anchored pl-4">
+             <a href="#type-error.Not_a_typedtree" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Not_a_typedtree</span> 
+               <span class="font-semibold">of</span> string
+              </span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec exception anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="exception-Error">
+          <a href="#exception-Error" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">exception</span> </span>
+           <span><span class="">Error</span> 
+            <span class="font-semibold">of</span> 
+            <a href="#type-error" class="cursor-pointer text-orange">error
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-read">
+          <a href="#val-read" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> read : 
+            <span>string <span class="">&#45;&gt;</span></span> 
+            <span>
+             <a href="../Cmi_format/index.html#type-cmi_infos"
+              class="cursor-pointer text-orange">Cmi_format.cmi_infos
+             </a> option
+            </span> * 
+            <span>
+             <a href="#type-cmt_infos" class="cursor-pointer text-orange">
+              cmt_infos
+             </a> option
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">read filename</code> opens
+            filename, and extract both the cmi_infos, if it exists, and
+            the cmt_infos, if it exists. Thus, it can be used with .cmi,
+            .cmt and .cmti files.
+          </p>
+          <p class="mt-4">.cmti files always contain a cmi_infos at the
+            beginning. .cmt files only contain a cmi_infos at the beginning
+            if there is no associated .cmti file.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-read_cmt">
+          <a href="#val-read_cmt" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> read_cmt : 
+            <span>string <span class="">&#45;&gt;</span></span> 
+            <a href="#type-cmt_infos" class="cursor-pointer text-orange">
+             cmt_infos
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-read_cmi">
+          <a href="#val-read_cmi" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> read_cmi : 
+            <span>string <span class="">&#45;&gt;</span></span> 
+            <a href="../Cmi_format/index.html#type-cmi_infos"
+             class="cursor-pointer text-orange">Cmi_format.cmi_infos
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-save_cmt">
+          <a href="#val-save_cmt" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> save_cmt : 
+            <span>string <span class="">&#45;&gt;</span></span> 
+            <span>string <span class="">&#45;&gt;</span></span> 
+            <span>
+             <a href="#type-binary_annots" class="cursor-pointer text-orange">
+              binary_annots
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span>string option</span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Env/index.html#type-t" class="cursor-pointer
+              text-orange">Env.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>
+              <a href="../Cmi_format/index.html#type-cmi_infos"
+               class="cursor-pointer text-orange">Cmi_format.cmi_infos
+              </a> option
+             </span> <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">
+            save_cmt filename modname binary_annots sourcefile initial_env
+            cmi
+           </code> writes a cmt(i) file.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-read_magic_number">
+          <a href="#val-read_magic_number" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> read_magic_number
+             : 
+            <span>
+             <a href="../Stdlib/index.html#type-in_channel"
+              class="cursor-pointer text-orange">Stdlib.in_channel
+             </a> <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-clear">
+          <a href="#val-clear" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> clear : 
+            <span>unit <span class="">&#45;&gt;</span></span> unit
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-add_saved_type">
+          <a href="#val-add_saved_type" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> add_saved_type
+             : 
+            <span>
+             <a href="#type-binary_part" class="cursor-pointer text-orange">
+              binary_part
+             </a> <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-get_saved_types">
+          <a href="#val-get_saved_types" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> get_saved_types
+             : <span>unit <span class="">&#45;&gt;</span></span> 
+            <span>
+             <a href="#type-binary_part" class="cursor-pointer text-orange">
+              binary_part
+             </a> list
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-set_saved_types">
+          <a href="#val-set_saved_types" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> set_saved_types
+             : 
+            <span>
+             <span>
+              <a href="#type-binary_part" class="cursor-pointer text-orange">
+               binary_part
+              </a> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-record_value_dependency">
+          <a href="#val-record_value_dependency" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            record_value_dependency : 
+            <span>
+             <a href="../Types/index.html#type-value_description"
+              class="cursor-pointer text-orange">Types.value_description
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Types/index.html#type-value_description"
+              class="cursor-pointer text-orange">Types.value_description
+             </a> <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="w-full flex-none lg:w-72 border-t lg:border-l bg-gray-100">
+       <div class="flex h-20 border-b relative">
+        <h2 class="text-xl absolute inset-x-0 p-3 bottom-0 mt-7 font-semibold
+         text-gray-500">ocaml-base-compiler.4.11.2
+        </h2>
+       </div>
+       <div class="m-3">
+        <p class="mb-5 italic text-sm">Official release 4.11.2</p>
+        <div class="mb-3">
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="https://ocaml.org">ocaml.org
+          </a>
+         </div>
+        </div>
+        <details class="font-normal mb-2 text-sm">
+         <summary>Other versions</summary><div id="versions_container"></div>
+        </details><h2 class="font-semibold mb-2 text-sm">Authors</h2>
+        <p class="mb-3 text-sm">Xavier Leroy and many contributors</p>
+        <h2 class="font-semibold mb-2 text-sm">Issues</h2>
+        <div class="mb-3">
+         <a class="text-orange cursor-pointer mb-2 text-sm"
+          href="https://github.com/ocaml/opam-repository/issues">
+          github.com/ocaml/opam-repository/issues
+         </a>
+        </div>
+        <details class="font-semibold mb-2 text-sm">
+         <summary>Package dependencies</summary>
+         <div class="font-normal">
+          <ul>
+           <li>
+            <a href="../../../ocaml/index.html" class="text-orange
+             cursor-pointer">ocaml
+            </a>
+           </li>
+           <li>
+            <a href="../../../base-unix/index.html" class="text-orange
+             cursor-pointer">base-unix
+            </a>
+           </li>
+           <li>
+            <a href="../../../base-bigarray/index.html" class="text-orange
+             cursor-pointer">base-bigarray
+            </a>
+           </li>
+           <li>
+            <a href="../../../base-threads/index.html" class="text-orange
+             cursor-pointer">base-threads
+            </a>
+           </li>
+          </ul>
+         </div>
+        </details>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div><script>Voodoo.update('../../version.json')</script>
+ </body>
+</html>

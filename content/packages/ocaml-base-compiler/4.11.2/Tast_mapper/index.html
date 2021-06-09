@@ -1,0 +1,1538 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>Tast_mapper (packages.ocaml-base-compiler.4.11.2.Tast_mapper)
+  </title><link rel="stylesheet" href="../../../tailwind.css"/>
+  <link rel="stylesheet" href="../../../extra.css"/><meta charset="utf-8"/>
+  <meta name="generator" content="odoc 3dfb7aef2f"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <script src="../../../highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="../../../voodoo_client.js"></script>
+  <script
+   src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+   defer="defer">
+  </script>
+ </head>
+ <body class="mx-auto max-w-screen-2xl">
+  <div class="relative">
+   <div class="relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+     <div class="flex justify-between items-center md:justify-start py-6
+      md:space-x-10">
+      <div class="flex justify-start">
+       <a href="https://v3.ocaml.org/">
+        <img src="/colour-logo.svg" alt="" class="h-8 w-auto sm:h-10"/>
+       </a>
+      </div>
+      <nav class="hidden md:flex space-x-10">
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Industry</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/whatisocaml">
+            <p class="text-base font-medium text-gray-900">What is OCaml</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/users">
+            <p class="text-base font-medium text-gray-900">Industrial Users
+            </p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/successstories">
+            <p class="text-base font-medium text-gray-900">Success Stories
+            </p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Resources</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/releases">
+            <p class="text-base font-medium text-gray-900">Releases</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/applications">
+            <p class="text-base font-medium text-gray-900">Applications</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/language">
+            <p class="text-base font-medium text-gray-900">Language</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/archive">
+            <p class="text-base font-medium text-gray-900">Archive</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Community</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/opportunities">
+            <p class="text-base font-medium text-gray-900">Opportunities</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/news">
+            <p class="text-base font-medium text-gray-900">News</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/aroundweb">
+            <p class="text-base font-medium text-gray-900">Around the Web</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="h-screen flex bg-white font-sans">
+   <div class="flex flex-col w-full h-full">
+    <div class="flex-row flex-1">
+     <nav class="bg-orange border-t border-b border-orange flex flex-row">
+      <ol class="max-w-screen-xl w-full px-4 flex space-x-4 sm:px-6 lg:px-8">
+       <li class="flex">
+        <div class="flex items-center">
+         <a href="#" class="text-gray-100 hover:text-gray-500">
+          
+  <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+        </svg>
+  
+          <span class="sr-only">Home</span>
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">packages
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">ocaml-base-compiler
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">4.11.2
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="#" class="ml-4 text-sm font-medium text-gray-100
+          hover:text-gray-500">Tast_mapper
+         </a>
+        </div>
+       </li>
+      </ol>
+     </nav>
+    </div>
+    <div class="flex flex-row flex-1">
+     <div class="w-72 flex-none bg-gray-100 h-screen border-r border-gray-200
+      sticky top-0 hidden lg:block">
+      <div class="flex h-20 border-b relative">
+       <h2 class="text-xl absolute inset-x-0 p-3 px-5 bottom-0 mt-7
+        border-gray-200 font-semibold text-gray-500 font-sans">On this page
+       </h2>
+      </div>
+      <nav class="bg-gray-100 p-5">
+       <ul>
+        <li>
+         <a href="#a-generic-typedtree-mapper" class="cursor-pointer
+          text-orange">A generic Typedtree mapper
+         </a>
+        </li>
+       </ul>
+      </nav>
+     </div>
+     <div class="flex flex-1 flex-col lg:flex-row">
+      <div class="flex-1">
+       <div class="lg:max-w-5xl mx-auto px-3 lg:px-10 mb-10 text-sm">
+        <div class="flex h-20 relative border-b border-gray-200">
+         <div class="relative flex-1 h-20">
+          <h1 class="text-3xl absolute inset-x-0 py-3 bottom-0 font-semibold
+           text-gray-500 font-sans w-full truncate">
+           <code class="font-mono text-gray-800">Tast_mapper</code>
+          </h1>
+         </div>
+         <div class="relative flex-none w-28">
+          <h1 class="text-3xl absolute py-3 bottom-0 right-0 font-semibold
+           text-gray-500 font-sans">Module
+          </h1>
+         </div>
+        </div>
+        <h2 class="text-2xl my-4 text-gray-800 font-sans anchored"
+         id="a-generic-typedtree-mapper">
+         <a href="#a-generic-typedtree-mapper" class="hover-link inline-block
+          -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>A generic Typedtree mapper
+        </h2>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-mapper">
+          <a href="#type-mapper" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> mapper</span>
+           <span> = </span><span>{</span>
+          </code>
+          <table>
+           <tr id="type-mapper.binding_op">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.binding_op" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>binding_op : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Typedtree/index.html#type-binding_op"
+                 class="cursor-pointer text-orange">Typedtree.binding_op
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Typedtree/index.html#type-binding_op"
+                class="cursor-pointer text-orange">Typedtree.binding_op
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.case">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.case" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>case : k. 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <span><span class="">'k</span> 
+                 <a href="../Typedtree/index.html#type-case"
+                  class="cursor-pointer text-orange">Typedtree.case
+                 </a>
+                </span> <span class="">&#45;&gt;</span>
+               </span> 
+               <span><span class="">'k</span> 
+                <a href="../Typedtree/index.html#type-case"
+                 class="cursor-pointer text-orange">Typedtree.case
+                </a>
+               </span>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.class_declaration">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.class_declaration" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>class_declaration : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Typedtree/index.html#type-class_declaration"
+                 class="cursor-pointer text-orange">
+                 Typedtree.class_declaration
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Typedtree/index.html#type-class_declaration"
+                class="cursor-pointer text-orange">
+                Typedtree.class_declaration
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.class_description">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.class_description" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>class_description : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Typedtree/index.html#type-class_description"
+                 class="cursor-pointer text-orange">
+                 Typedtree.class_description
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Typedtree/index.html#type-class_description"
+                class="cursor-pointer text-orange">
+                Typedtree.class_description
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.class_expr">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.class_expr" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>class_expr : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Typedtree/index.html#type-class_expr"
+                 class="cursor-pointer text-orange">Typedtree.class_expr
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Typedtree/index.html#type-class_expr"
+                class="cursor-pointer text-orange">Typedtree.class_expr
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.class_field">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.class_field" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>class_field : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Typedtree/index.html#type-class_field"
+                 class="cursor-pointer text-orange">Typedtree.class_field
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Typedtree/index.html#type-class_field"
+                class="cursor-pointer text-orange">Typedtree.class_field
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.class_signature">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.class_signature" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>class_signature : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Typedtree/index.html#type-class_signature"
+                 class="cursor-pointer text-orange">Typedtree.class_signature
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Typedtree/index.html#type-class_signature"
+                class="cursor-pointer text-orange">Typedtree.class_signature
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.class_structure">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.class_structure" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>class_structure : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Typedtree/index.html#type-class_structure"
+                 class="cursor-pointer text-orange">Typedtree.class_structure
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Typedtree/index.html#type-class_structure"
+                class="cursor-pointer text-orange">Typedtree.class_structure
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.class_type">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.class_type" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>class_type : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Typedtree/index.html#type-class_type"
+                 class="cursor-pointer text-orange">Typedtree.class_type
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Typedtree/index.html#type-class_type"
+                class="cursor-pointer text-orange">Typedtree.class_type
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.class_type_declaration">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.class_type_declaration" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>class_type_declaration : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Typedtree/index.html#type-class_type_declaration"
+                 class="cursor-pointer text-orange">
+                 Typedtree.class_type_declaration
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Typedtree/index.html#type-class_type_declaration"
+                class="cursor-pointer text-orange">
+                Typedtree.class_type_declaration
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.class_type_field">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.class_type_field" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>class_type_field : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Typedtree/index.html#type-class_type_field"
+                 class="cursor-pointer text-orange">
+                 Typedtree.class_type_field
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Typedtree/index.html#type-class_type_field"
+                class="cursor-pointer text-orange">Typedtree.class_type_field
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.env">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.env" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>env : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Env/index.html#type-t" class="cursor-pointer
+                 text-orange">Env.t
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Env/index.html#type-t" class="cursor-pointer
+                text-orange">Env.t
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.expr">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.expr" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>expr : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Typedtree/index.html#type-expression"
+                 class="cursor-pointer text-orange">Typedtree.expression
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Typedtree/index.html#type-expression"
+                class="cursor-pointer text-orange">Typedtree.expression
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.extension_constructor">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.extension_constructor" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>extension_constructor : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Typedtree/index.html#type-extension_constructor"
+                 class="cursor-pointer text-orange">
+                 Typedtree.extension_constructor
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Typedtree/index.html#type-extension_constructor"
+                class="cursor-pointer text-orange">
+                Typedtree.extension_constructor
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.module_binding">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.module_binding" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>module_binding : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Typedtree/index.html#type-module_binding"
+                 class="cursor-pointer text-orange">Typedtree.module_binding
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Typedtree/index.html#type-module_binding"
+                class="cursor-pointer text-orange">Typedtree.module_binding
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.module_coercion">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.module_coercion" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>module_coercion : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Typedtree/index.html#type-module_coercion"
+                 class="cursor-pointer text-orange">Typedtree.module_coercion
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Typedtree/index.html#type-module_coercion"
+                class="cursor-pointer text-orange">Typedtree.module_coercion
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.module_declaration">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.module_declaration" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>module_declaration : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Typedtree/index.html#type-module_declaration"
+                 class="cursor-pointer text-orange">
+                 Typedtree.module_declaration
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Typedtree/index.html#type-module_declaration"
+                class="cursor-pointer text-orange">
+                Typedtree.module_declaration
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.module_substitution">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.module_substitution" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>module_substitution : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Typedtree/index.html#type-module_substitution"
+                 class="cursor-pointer text-orange">
+                 Typedtree.module_substitution
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Typedtree/index.html#type-module_substitution"
+                class="cursor-pointer text-orange">
+                Typedtree.module_substitution
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.module_expr">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.module_expr" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>module_expr : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Typedtree/index.html#type-module_expr"
+                 class="cursor-pointer text-orange">Typedtree.module_expr
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Typedtree/index.html#type-module_expr"
+                class="cursor-pointer text-orange">Typedtree.module_expr
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.module_type">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.module_type" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>module_type : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Typedtree/index.html#type-module_type"
+                 class="cursor-pointer text-orange">Typedtree.module_type
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Typedtree/index.html#type-module_type"
+                class="cursor-pointer text-orange">Typedtree.module_type
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.module_type_declaration">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.module_type_declaration" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>module_type_declaration : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a
+                 href="../Typedtree/index.html#type-module_type_declaration"
+                 class="cursor-pointer text-orange">
+                 Typedtree.module_type_declaration
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Typedtree/index.html#type-module_type_declaration"
+                class="cursor-pointer text-orange">
+                Typedtree.module_type_declaration
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.package_type">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.package_type" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>package_type : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Typedtree/index.html#type-package_type"
+                 class="cursor-pointer text-orange">Typedtree.package_type
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Typedtree/index.html#type-package_type"
+                class="cursor-pointer text-orange">Typedtree.package_type
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.pat">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.pat" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>pat : k. 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <span><span class="">'k</span> 
+                 <a href="../Typedtree/index.html#type-general_pattern"
+                  class="cursor-pointer text-orange">
+                  Typedtree.general_pattern
+                 </a>
+                </span> <span class="">&#45;&gt;</span>
+               </span> 
+               <span><span class="">'k</span> 
+                <a href="../Typedtree/index.html#type-general_pattern"
+                 class="cursor-pointer text-orange">Typedtree.general_pattern
+                </a>
+               </span>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.row_field">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.row_field" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>row_field : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Typedtree/index.html#type-row_field"
+                 class="cursor-pointer text-orange">Typedtree.row_field
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Typedtree/index.html#type-row_field"
+                class="cursor-pointer text-orange">Typedtree.row_field
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.object_field">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.object_field" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>object_field : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Typedtree/index.html#type-object_field"
+                 class="cursor-pointer text-orange">Typedtree.object_field
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Typedtree/index.html#type-object_field"
+                class="cursor-pointer text-orange">Typedtree.object_field
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.open_declaration">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.open_declaration" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>open_declaration : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Typedtree/index.html#type-open_declaration"
+                 class="cursor-pointer text-orange">
+                 Typedtree.open_declaration
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Typedtree/index.html#type-open_declaration"
+                class="cursor-pointer text-orange">Typedtree.open_declaration
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.open_description">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.open_description" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>open_description : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Typedtree/index.html#type-open_description"
+                 class="cursor-pointer text-orange">
+                 Typedtree.open_description
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Typedtree/index.html#type-open_description"
+                class="cursor-pointer text-orange">Typedtree.open_description
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.signature">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.signature" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>signature : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Typedtree/index.html#type-signature"
+                 class="cursor-pointer text-orange">Typedtree.signature
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Typedtree/index.html#type-signature"
+                class="cursor-pointer text-orange">Typedtree.signature
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.signature_item">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.signature_item" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>signature_item : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Typedtree/index.html#type-signature_item"
+                 class="cursor-pointer text-orange">Typedtree.signature_item
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Typedtree/index.html#type-signature_item"
+                class="cursor-pointer text-orange">Typedtree.signature_item
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.structure">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.structure" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>structure : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Typedtree/index.html#type-structure"
+                 class="cursor-pointer text-orange">Typedtree.structure
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Typedtree/index.html#type-structure"
+                class="cursor-pointer text-orange">Typedtree.structure
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.structure_item">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.structure_item" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>structure_item : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Typedtree/index.html#type-structure_item"
+                 class="cursor-pointer text-orange">Typedtree.structure_item
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Typedtree/index.html#type-structure_item"
+                class="cursor-pointer text-orange">Typedtree.structure_item
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.typ">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.typ" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>typ : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Typedtree/index.html#type-core_type"
+                 class="cursor-pointer text-orange">Typedtree.core_type
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Typedtree/index.html#type-core_type"
+                class="cursor-pointer text-orange">Typedtree.core_type
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.type_declaration">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.type_declaration" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>type_declaration : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Typedtree/index.html#type-type_declaration"
+                 class="cursor-pointer text-orange">
+                 Typedtree.type_declaration
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Typedtree/index.html#type-type_declaration"
+                class="cursor-pointer text-orange">Typedtree.type_declaration
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.type_declarations">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.type_declarations" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>type_declarations : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <span>(
+                 <a href="../Asttypes/index.html#type-rec_flag"
+                  class="cursor-pointer text-orange">Asttypes.rec_flag
+                 </a> * 
+                 <span>
+                  <a href="../Typedtree/index.html#type-type_declaration"
+                   class="cursor-pointer text-orange">
+                   Typedtree.type_declaration
+                  </a> list
+                 </span>)
+                </span> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Asttypes/index.html#type-rec_flag"
+                class="cursor-pointer text-orange">Asttypes.rec_flag
+               </a> * 
+               <span>
+                <a href="../Typedtree/index.html#type-type_declaration"
+                 class="cursor-pointer text-orange">
+                 Typedtree.type_declaration
+                </a> list
+               </span>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.type_extension">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.type_extension" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>type_extension : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Typedtree/index.html#type-type_extension"
+                 class="cursor-pointer text-orange">Typedtree.type_extension
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Typedtree/index.html#type-type_extension"
+                class="cursor-pointer text-orange">Typedtree.type_extension
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.type_exception">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.type_exception" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>type_exception : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Typedtree/index.html#type-type_exception"
+                 class="cursor-pointer text-orange">Typedtree.type_exception
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Typedtree/index.html#type-type_exception"
+                class="cursor-pointer text-orange">Typedtree.type_exception
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.type_kind">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.type_kind" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>type_kind : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Typedtree/index.html#type-type_kind"
+                 class="cursor-pointer text-orange">Typedtree.type_kind
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Typedtree/index.html#type-type_kind"
+                class="cursor-pointer text-orange">Typedtree.type_kind
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.value_binding">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.value_binding" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>value_binding : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Typedtree/index.html#type-value_binding"
+                 class="cursor-pointer text-orange">Typedtree.value_binding
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Typedtree/index.html#type-value_binding"
+                class="cursor-pointer text-orange">Typedtree.value_binding
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.value_bindings">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.value_bindings" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>value_bindings : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <span>(
+                 <a href="../Asttypes/index.html#type-rec_flag"
+                  class="cursor-pointer text-orange">Asttypes.rec_flag
+                 </a> * 
+                 <span>
+                  <a href="../Typedtree/index.html#type-value_binding"
+                   class="cursor-pointer text-orange">Typedtree.value_binding
+                  </a> list
+                 </span>)
+                </span> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Asttypes/index.html#type-rec_flag"
+                class="cursor-pointer text-orange">Asttypes.rec_flag
+               </a> * 
+               <span>
+                <a href="../Typedtree/index.html#type-value_binding"
+                 class="cursor-pointer text-orange">Typedtree.value_binding
+                </a> list
+               </span>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.value_description">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.value_description" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>value_description : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Typedtree/index.html#type-value_description"
+                 class="cursor-pointer text-orange">
+                 Typedtree.value_description
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Typedtree/index.html#type-value_description"
+                class="cursor-pointer text-orange">
+                Typedtree.value_description
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-mapper.with_constraint">
+            <td class="anchored pl-4">
+             <a href="#type-mapper.with_constraint" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>with_constraint : 
+               <span>
+                <a href="#type-mapper" class="cursor-pointer text-orange">
+                 mapper
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <span>
+                <a href="../Typedtree/index.html#type-with_constraint"
+                 class="cursor-pointer text-orange">Typedtree.with_constraint
+                </a> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Typedtree/index.html#type-with_constraint"
+                class="cursor-pointer text-orange">Typedtree.with_constraint
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+          </table><code class="font-normal text-sm"><span>}</span></code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-default">
+          <a href="#val-default" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> default : 
+            <a href="#type-mapper" class="cursor-pointer text-orange">mapper
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="w-full flex-none lg:w-72 border-t lg:border-l bg-gray-100">
+       <div class="flex h-20 border-b relative">
+        <h2 class="text-xl absolute inset-x-0 p-3 bottom-0 mt-7 font-semibold
+         text-gray-500">ocaml-base-compiler.4.11.2
+        </h2>
+       </div>
+       <div class="m-3">
+        <p class="mb-5 italic text-sm">Official release 4.11.2</p>
+        <div class="mb-3">
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="https://ocaml.org">ocaml.org
+          </a>
+         </div>
+        </div>
+        <details class="font-normal mb-2 text-sm">
+         <summary>Other versions</summary><div id="versions_container"></div>
+        </details><h2 class="font-semibold mb-2 text-sm">Authors</h2>
+        <p class="mb-3 text-sm">Xavier Leroy and many contributors</p>
+        <h2 class="font-semibold mb-2 text-sm">Issues</h2>
+        <div class="mb-3">
+         <a class="text-orange cursor-pointer mb-2 text-sm"
+          href="https://github.com/ocaml/opam-repository/issues">
+          github.com/ocaml/opam-repository/issues
+         </a>
+        </div>
+        <details class="font-semibold mb-2 text-sm">
+         <summary>Package dependencies</summary>
+         <div class="font-normal">
+          <ul>
+           <li>
+            <a href="../../../ocaml/index.html" class="text-orange
+             cursor-pointer">ocaml
+            </a>
+           </li>
+           <li>
+            <a href="../../../base-unix/index.html" class="text-orange
+             cursor-pointer">base-unix
+            </a>
+           </li>
+           <li>
+            <a href="../../../base-bigarray/index.html" class="text-orange
+             cursor-pointer">base-bigarray
+            </a>
+           </li>
+           <li>
+            <a href="../../../base-threads/index.html" class="text-orange
+             cursor-pointer">base-threads
+            </a>
+           </li>
+          </ul>
+         </div>
+        </details>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div><script>Voodoo.update('../../version.json')</script>
+ </body>
+</html>

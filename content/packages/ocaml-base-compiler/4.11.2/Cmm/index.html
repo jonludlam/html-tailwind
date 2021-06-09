@@ -1,0 +1,2994 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head><title>Cmm (packages.ocaml-base-compiler.4.11.2.Cmm)</title>
+  <link rel="stylesheet" href="../../../tailwind.css"/>
+  <link rel="stylesheet" href="../../../extra.css"/><meta charset="utf-8"/>
+  <meta name="generator" content="odoc 3dfb7aef2f"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <script src="../../../highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="../../../voodoo_client.js"></script>
+  <script
+   src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+   defer="defer">
+  </script>
+ </head>
+ <body class="mx-auto max-w-screen-2xl">
+  <div class="relative">
+   <div class="relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+     <div class="flex justify-between items-center md:justify-start py-6
+      md:space-x-10">
+      <div class="flex justify-start">
+       <a href="https://v3.ocaml.org/">
+        <img src="/colour-logo.svg" alt="" class="h-8 w-auto sm:h-10"/>
+       </a>
+      </div>
+      <nav class="hidden md:flex space-x-10">
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Industry</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/whatisocaml">
+            <p class="text-base font-medium text-gray-900">What is OCaml</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/users">
+            <p class="text-base font-medium text-gray-900">Industrial Users
+            </p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/successstories">
+            <p class="text-base font-medium text-gray-900">Success Stories
+            </p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Resources</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/releases">
+            <p class="text-base font-medium text-gray-900">Releases</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/applications">
+            <p class="text-base font-medium text-gray-900">Applications</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/language">
+            <p class="text-base font-medium text-gray-900">Language</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/archive">
+            <p class="text-base font-medium text-gray-900">Archive</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Community</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/opportunities">
+            <p class="text-base font-medium text-gray-900">Opportunities</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/news">
+            <p class="text-base font-medium text-gray-900">News</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/aroundweb">
+            <p class="text-base font-medium text-gray-900">Around the Web</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="h-screen flex bg-white font-sans">
+   <div class="flex flex-col w-full h-full">
+    <div class="flex-row flex-1">
+     <nav class="bg-orange border-t border-b border-orange flex flex-row">
+      <ol class="max-w-screen-xl w-full px-4 flex space-x-4 sm:px-6 lg:px-8">
+       <li class="flex">
+        <div class="flex items-center">
+         <a href="#" class="text-gray-100 hover:text-gray-500">
+          
+  <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+        </svg>
+  
+          <span class="sr-only">Home</span>
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">packages
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">ocaml-base-compiler
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">4.11.2
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="#" class="ml-4 text-sm font-medium text-gray-100
+          hover:text-gray-500">Cmm
+         </a>
+        </div>
+       </li>
+      </ol>
+     </nav>
+    </div>
+    <div class="flex flex-row flex-1">
+     <div class="w-72 flex-none bg-gray-100 h-screen border-r border-gray-200
+      sticky top-0 hidden lg:block">
+      <div class="flex h-20 border-b relative">
+       <h2 class="text-xl absolute inset-x-0 p-3 px-5 bottom-0 mt-7
+        border-gray-200 font-semibold text-gray-500 font-sans">On this page
+       </h2>
+      </div>
+     </div>
+     <div class="flex flex-1 flex-col lg:flex-row">
+      <div class="flex-1">
+       <div class="lg:max-w-5xl mx-auto px-3 lg:px-10 mb-10 text-sm">
+        <div class="flex h-20 relative border-b border-gray-200">
+         <div class="relative flex-1 h-20">
+          <h1 class="text-3xl absolute inset-x-0 py-3 bottom-0 font-semibold
+           text-gray-500 font-sans w-full truncate">
+           <code class="font-mono text-gray-800">Cmm</code>
+          </h1>
+         </div>
+         <div class="relative flex-none w-28">
+          <h1 class="text-3xl absolute py-3 bottom-0 right-0 font-semibold
+           text-gray-500 font-sans">Module
+          </h1>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-machtype_component">
+          <a href="#type-machtype_component" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> machtype_component
+           </span><span> = </span>
+          </code>
+          <table>
+           <tr id="type-machtype_component.Val">
+            <td class="anchored pl-4">
+             <a href="#type-machtype_component.Val" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Val</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-machtype_component.Addr">
+            <td class="anchored pl-4">
+             <a href="#type-machtype_component.Addr" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Addr</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-machtype_component.Int">
+            <td class="anchored pl-4">
+             <a href="#type-machtype_component.Int" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Int</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-machtype_component.Float">
+            <td class="anchored pl-4">
+             <a href="#type-machtype_component.Float" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Float</span></span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-machtype">
+          <a href="#type-machtype" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> machtype</span>
+           <span> = 
+            <span>
+             <a href="#type-machtype_component" class="cursor-pointer
+              text-orange">machtype_component
+             </a> array
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-typ_void">
+          <a href="#val-typ_void" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> typ_void : 
+            <a href="#type-machtype" class="cursor-pointer text-orange">
+             machtype
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-typ_val">
+          <a href="#val-typ_val" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> typ_val : 
+            <a href="#type-machtype" class="cursor-pointer text-orange">
+             machtype
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-typ_addr">
+          <a href="#val-typ_addr" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> typ_addr : 
+            <a href="#type-machtype" class="cursor-pointer text-orange">
+             machtype
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-typ_int">
+          <a href="#val-typ_int" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> typ_int : 
+            <a href="#type-machtype" class="cursor-pointer text-orange">
+             machtype
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-typ_float">
+          <a href="#val-typ_float" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> typ_float : 
+            <a href="#type-machtype" class="cursor-pointer text-orange">
+             machtype
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-lub_component">
+          <a href="#val-lub_component" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> lub_component
+             : 
+            <span>
+             <a href="#type-machtype_component" class="cursor-pointer
+              text-orange">machtype_component
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-machtype_component" class="cursor-pointer
+              text-orange">machtype_component
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-machtype_component" class="cursor-pointer
+             text-orange">machtype_component
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Least upper bound of two 
+           <code class="font-normal text-sm">machtype_component</code>
+           s.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-ge_component">
+          <a href="#val-ge_component" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> ge_component : 
+            <span>
+             <a href="#type-machtype_component" class="cursor-pointer
+              text-orange">machtype_component
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-machtype_component" class="cursor-pointer
+              text-orange">machtype_component
+             </a> <span class="">&#45;&gt;</span>
+            </span> bool
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Returns 
+           <code class="font-normal text-sm">true</code> iff the first
+            supplied 
+           <code class="font-normal text-sm">machtype_component</code>
+            is greater than or equal to the second under the relation
+            used by <code class="font-normal text-sm">lub_component</code>
+           .
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-integer_comparison">
+          <a href="#type-integer_comparison" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> integer_comparison
+           </span>
+           <span> = 
+            <a href="../Lambda/index.html#type-integer_comparison"
+             class="cursor-pointer text-orange">Lambda.integer_comparison
+            </a>
+           </span><span> = </span>
+          </code>
+          <table>
+           <tr id="type-integer_comparison.Ceq">
+            <td class="anchored pl-4">
+             <a href="#type-integer_comparison.Ceq" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Ceq</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-integer_comparison.Cne">
+            <td class="anchored pl-4">
+             <a href="#type-integer_comparison.Cne" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cne</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-integer_comparison.Clt">
+            <td class="anchored pl-4">
+             <a href="#type-integer_comparison.Clt" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Clt</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-integer_comparison.Cgt">
+            <td class="anchored pl-4">
+             <a href="#type-integer_comparison.Cgt" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cgt</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-integer_comparison.Cle">
+            <td class="anchored pl-4">
+             <a href="#type-integer_comparison.Cle" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cle</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-integer_comparison.Cge">
+            <td class="anchored pl-4">
+             <a href="#type-integer_comparison.Cge" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cge</span></span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-negate_integer_comparison">
+          <a href="#val-negate_integer_comparison" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            negate_integer_comparison : 
+            <span>
+             <a href="#type-integer_comparison" class="cursor-pointer
+              text-orange">integer_comparison
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-integer_comparison" class="cursor-pointer
+             text-orange">integer_comparison
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-swap_integer_comparison">
+          <a href="#val-swap_integer_comparison" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            swap_integer_comparison : 
+            <span>
+             <a href="#type-integer_comparison" class="cursor-pointer
+              text-orange">integer_comparison
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-integer_comparison" class="cursor-pointer
+             text-orange">integer_comparison
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-float_comparison">
+          <a href="#type-float_comparison" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> float_comparison
+           </span>
+           <span> = 
+            <a href="../Lambda/index.html#type-float_comparison"
+             class="cursor-pointer text-orange">Lambda.float_comparison
+            </a>
+           </span><span> = </span>
+          </code>
+          <table>
+           <tr id="type-float_comparison.CFeq">
+            <td class="anchored pl-4">
+             <a href="#type-float_comparison.CFeq" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">CFeq</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-float_comparison.CFneq">
+            <td class="anchored pl-4">
+             <a href="#type-float_comparison.CFneq" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">CFneq</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-float_comparison.CFlt">
+            <td class="anchored pl-4">
+             <a href="#type-float_comparison.CFlt" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">CFlt</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-float_comparison.CFnlt">
+            <td class="anchored pl-4">
+             <a href="#type-float_comparison.CFnlt" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">CFnlt</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-float_comparison.CFgt">
+            <td class="anchored pl-4">
+             <a href="#type-float_comparison.CFgt" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">CFgt</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-float_comparison.CFngt">
+            <td class="anchored pl-4">
+             <a href="#type-float_comparison.CFngt" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">CFngt</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-float_comparison.CFle">
+            <td class="anchored pl-4">
+             <a href="#type-float_comparison.CFle" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">CFle</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-float_comparison.CFnle">
+            <td class="anchored pl-4">
+             <a href="#type-float_comparison.CFnle" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">CFnle</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-float_comparison.CFge">
+            <td class="anchored pl-4">
+             <a href="#type-float_comparison.CFge" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">CFge</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-float_comparison.CFnge">
+            <td class="anchored pl-4">
+             <a href="#type-float_comparison.CFnge" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">CFnge</span></span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-negate_float_comparison">
+          <a href="#val-negate_float_comparison" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            negate_float_comparison : 
+            <span>
+             <a href="#type-float_comparison" class="cursor-pointer
+              text-orange">float_comparison
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-float_comparison" class="cursor-pointer
+             text-orange">float_comparison
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-swap_float_comparison">
+          <a href="#val-swap_float_comparison" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> swap_float_comparison
+             : 
+            <span>
+             <a href="#type-float_comparison" class="cursor-pointer
+              text-orange">float_comparison
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-float_comparison" class="cursor-pointer
+             text-orange">float_comparison
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-label">
+          <a href="#type-label" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> label</span>
+           <span> = int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-new_label">
+          <a href="#val-new_label" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> new_label : 
+            <span>unit <span class="">&#45;&gt;</span></span> 
+            <a href="#type-label" class="cursor-pointer text-orange">label
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-rec_flag">
+          <a href="#type-rec_flag" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> rec_flag</span>
+           <span> = </span>
+          </code>
+          <table>
+           <tr id="type-rec_flag.Nonrecursive">
+            <td class="anchored pl-4">
+             <a href="#type-rec_flag.Nonrecursive" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Nonrecursive</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-rec_flag.Recursive">
+            <td class="anchored pl-4">
+             <a href="#type-rec_flag.Recursive" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Recursive</span></span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-phantom_defining_expr">
+          <a href="#type-phantom_defining_expr" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> 
+            phantom_defining_expr
+           </span><span> = </span>
+          </code>
+          <table>
+           <tr id="type-phantom_defining_expr.Cphantom_const_int">
+            <td class="anchored pl-4">
+             <a href="#type-phantom_defining_expr.Cphantom_const_int"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cphantom_const_int</span> 
+               <span class="font-semibold">of</span> 
+               <a href="../Targetint/index.html#type-t" class="cursor-pointer
+                text-orange">Targetint.t
+               </a>
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>The
+              phantom-let-bound variable is a constant integer. The argument
+              must be the tagged representation of an integer within 
+             the range of type <code class="font-normal text-sm">int</code>
+              on the target. (Analogously to 
+             <code class="font-normal text-sm">Cconst_int</code>.)
+             <span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-phantom_defining_expr.Cphantom_const_symbol">
+            <td class="anchored pl-4">
+             <a href="#type-phantom_defining_expr.Cphantom_const_symbol"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cphantom_const_symbol</span> 
+               <span class="font-semibold">of</span> string
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>The
+              phantom-let-bound variable is an alias for a symbol.
+             <span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-phantom_defining_expr.Cphantom_var">
+            <td class="anchored pl-4">
+             <a href="#type-phantom_defining_expr.Cphantom_var"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cphantom_var</span> 
+               <span class="font-semibold">of</span> 
+               <a href="../Backend_var/index.html#type-t"
+                class="cursor-pointer text-orange">Backend_var.t
+               </a>
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>The
+              phantom-let-bound variable is an alias for another variable.
+              The aliased variable must not be a bound by a phantom let.
+             <span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-phantom_defining_expr.Cphantom_offset_var">
+            <td class="anchored pl-4">
+             <a href="#type-phantom_defining_expr.Cphantom_offset_var"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cphantom_offset_var</span> 
+               <span class="font-semibold">of</span> 
+              </span><span>{</span>
+             </code>
+             <table>
+              <tr id="type-phantom_defining_expr.var">
+               <td class="anchored pl-4">
+                <a href="#type-phantom_defining_expr.var" class="hover-link
+                 inline-block -ml-7 pr-7">
+                 <span class="align-middle text-gray-200 transition text-sm
+                  font-sans opacity-0 hover:text-gray-700">#
+                 </span>
+                </a>
+                <code class="font-normal text-sm">
+                 <span>var : 
+                  <a href="../Backend_var/index.html#type-t"
+                   class="cursor-pointer text-orange">Backend_var.t
+                  </a>;
+                 </span>
+                </code>
+               </td>
+              </tr>
+              <tr id="type-phantom_defining_expr.offset_in_words">
+               <td class="anchored pl-4">
+                <a href="#type-phantom_defining_expr.offset_in_words"
+                 class="hover-link inline-block -ml-7 pr-7">
+                 <span class="align-middle text-gray-200 transition text-sm
+                  font-sans opacity-0 hover:text-gray-700">#
+                 </span>
+                </a>
+                <code class="font-normal text-sm">
+                 <span>offset_in_words : int;</span>
+                </code>
+               </td>
+              </tr>
+             </table><code class="font-normal text-sm"><span>}</span></code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>The
+              phantom-let-bound-variable's value is defined by adding
+              the given number of words to the pointer contained in the
+              given identifier.<span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-phantom_defining_expr.Cphantom_read_field">
+            <td class="anchored pl-4">
+             <a href="#type-phantom_defining_expr.Cphantom_read_field"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cphantom_read_field</span> 
+               <span class="font-semibold">of</span> 
+              </span><span>{</span>
+             </code>
+             <table>
+              <tr id="type-phantom_defining_expr.var">
+               <td class="anchored pl-4">
+                <a href="#type-phantom_defining_expr.var" class="hover-link
+                 inline-block -ml-7 pr-7">
+                 <span class="align-middle text-gray-200 transition text-sm
+                  font-sans opacity-0 hover:text-gray-700">#
+                 </span>
+                </a>
+                <code class="font-normal text-sm">
+                 <span>var : 
+                  <a href="../Backend_var/index.html#type-t"
+                   class="cursor-pointer text-orange">Backend_var.t
+                  </a>;
+                 </span>
+                </code>
+               </td>
+              </tr>
+              <tr id="type-phantom_defining_expr.field">
+               <td class="anchored pl-4">
+                <a href="#type-phantom_defining_expr.field" class="hover-link
+                 inline-block -ml-7 pr-7">
+                 <span class="align-middle text-gray-200 transition text-sm
+                  font-sans opacity-0 hover:text-gray-700">#
+                 </span>
+                </a>
+                <code class="font-normal text-sm"><span>field : int;</span>
+                </code>
+               </td>
+              </tr>
+             </table><code class="font-normal text-sm"><span>}</span></code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>The
+              phantom-let-bound-variable's value is found by adding the
+              given number of words to the pointer contained in the given
+              identifier, then dereferencing.<span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-phantom_defining_expr.Cphantom_read_symbol_field">
+            <td class="anchored pl-4">
+             <a href="#type-phantom_defining_expr.Cphantom_read_symbol_field"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cphantom_read_symbol_field</span> 
+               <span class="font-semibold">of</span> 
+              </span><span>{</span>
+             </code>
+             <table>
+              <tr id="type-phantom_defining_expr.sym">
+               <td class="anchored pl-4">
+                <a href="#type-phantom_defining_expr.sym" class="hover-link
+                 inline-block -ml-7 pr-7">
+                 <span class="align-middle text-gray-200 transition text-sm
+                  font-sans opacity-0 hover:text-gray-700">#
+                 </span>
+                </a>
+                <code class="font-normal text-sm"><span>sym : string;</span>
+                </code>
+               </td>
+              </tr>
+              <tr id="type-phantom_defining_expr.field">
+               <td class="anchored pl-4">
+                <a href="#type-phantom_defining_expr.field" class="hover-link
+                 inline-block -ml-7 pr-7">
+                 <span class="align-middle text-gray-200 transition text-sm
+                  font-sans opacity-0 hover:text-gray-700">#
+                 </span>
+                </a>
+                <code class="font-normal text-sm"><span>field : int;</span>
+                </code>
+               </td>
+              </tr>
+             </table><code class="font-normal text-sm"><span>}</span></code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>As
+              for 
+             <code class="font-normal text-sm">Uphantom_read_var_field</code>
+             , but with the pointer specified by a symbol.
+             <span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-phantom_defining_expr.Cphantom_block">
+            <td class="anchored pl-4">
+             <a href="#type-phantom_defining_expr.Cphantom_block"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cphantom_block</span> 
+               <span class="font-semibold">of</span> 
+              </span><span>{</span>
+             </code>
+             <table>
+              <tr id="type-phantom_defining_expr.tag">
+               <td class="anchored pl-4">
+                <a href="#type-phantom_defining_expr.tag" class="hover-link
+                 inline-block -ml-7 pr-7">
+                 <span class="align-middle text-gray-200 transition text-sm
+                  font-sans opacity-0 hover:text-gray-700">#
+                 </span>
+                </a>
+                <code class="font-normal text-sm"><span>tag : int;</span>
+                </code>
+               </td>
+              </tr>
+              <tr id="type-phantom_defining_expr.fields">
+               <td class="anchored pl-4">
+                <a href="#type-phantom_defining_expr.fields"
+                 class="hover-link inline-block -ml-7 pr-7">
+                 <span class="align-middle text-gray-200 transition text-sm
+                  font-sans opacity-0 hover:text-gray-700">#
+                 </span>
+                </a>
+                <code class="font-normal text-sm">
+                 <span>fields : 
+                  <span>
+                   <a href="../Backend_var/index.html#type-t"
+                    class="cursor-pointer text-orange">Backend_var.t
+                   </a> list
+                  </span>;
+                 </span>
+                </code>
+               </td>
+              </tr>
+             </table><code class="font-normal text-sm"><span>}</span></code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>The
+              phantom-let-bound variable points at a block with the given
+              structure.<span class="sr-only">*)</span>
+            </td>
+           </tr>
+          </table>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-memory_chunk">
+          <a href="#type-memory_chunk" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> memory_chunk</span>
+           <span> = </span>
+          </code>
+          <table>
+           <tr id="type-memory_chunk.Byte_unsigned">
+            <td class="anchored pl-4">
+             <a href="#type-memory_chunk.Byte_unsigned" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Byte_unsigned</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-memory_chunk.Byte_signed">
+            <td class="anchored pl-4">
+             <a href="#type-memory_chunk.Byte_signed" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Byte_signed</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-memory_chunk.Sixteen_unsigned">
+            <td class="anchored pl-4">
+             <a href="#type-memory_chunk.Sixteen_unsigned" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Sixteen_unsigned</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-memory_chunk.Sixteen_signed">
+            <td class="anchored pl-4">
+             <a href="#type-memory_chunk.Sixteen_signed" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Sixteen_signed</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-memory_chunk.Thirtytwo_unsigned">
+            <td class="anchored pl-4">
+             <a href="#type-memory_chunk.Thirtytwo_unsigned"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Thirtytwo_unsigned</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-memory_chunk.Thirtytwo_signed">
+            <td class="anchored pl-4">
+             <a href="#type-memory_chunk.Thirtytwo_signed" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Thirtytwo_signed</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-memory_chunk.Word_int">
+            <td class="anchored pl-4">
+             <a href="#type-memory_chunk.Word_int" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Word_int</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-memory_chunk.Word_val">
+            <td class="anchored pl-4">
+             <a href="#type-memory_chunk.Word_val" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Word_val</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-memory_chunk.Single">
+            <td class="anchored pl-4">
+             <a href="#type-memory_chunk.Single" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Single</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-memory_chunk.Double">
+            <td class="anchored pl-4">
+             <a href="#type-memory_chunk.Double" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Double</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-memory_chunk.Double_u">
+            <td class="anchored pl-4">
+             <a href="#type-memory_chunk.Double_u" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Double_u</span></span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-operation">
+          <a href="#type-operation" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">and</span> operation</span>
+           <span> = </span>
+          </code>
+          <table>
+           <tr id="type-operation.Capply">
+            <td class="anchored pl-4">
+             <a href="#type-operation.Capply" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Capply</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-machtype" class="cursor-pointer text-orange">
+                machtype
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-operation.Cextcall">
+            <td class="anchored pl-4">
+             <a href="#type-operation.Cextcall" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cextcall</span> 
+               <span class="font-semibold">of</span> string * 
+               <a href="#type-machtype" class="cursor-pointer text-orange">
+                machtype
+               </a> * bool * 
+               <span>
+                <a href="#type-label" class="cursor-pointer text-orange">
+                 label
+                </a> option
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-operation.Cload">
+            <td class="anchored pl-4">
+             <a href="#type-operation.Cload" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cload</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-memory_chunk" class="cursor-pointer
+                text-orange">memory_chunk
+               </a> * 
+               <a href="../Asttypes/index.html#type-mutable_flag"
+                class="cursor-pointer text-orange">Asttypes.mutable_flag
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-operation.Calloc">
+            <td class="anchored pl-4">
+             <a href="#type-operation.Calloc" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Calloc</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-operation.Cstore">
+            <td class="anchored pl-4">
+             <a href="#type-operation.Cstore" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cstore</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-memory_chunk" class="cursor-pointer
+                text-orange">memory_chunk
+               </a> * 
+               <a
+                href="../Lambda/index.html#type-initialization_or_assignment"
+                class="cursor-pointer text-orange">
+                Lambda.initialization_or_assignment
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-operation.Caddi">
+            <td class="anchored pl-4">
+             <a href="#type-operation.Caddi" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Caddi</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-operation.Csubi">
+            <td class="anchored pl-4">
+             <a href="#type-operation.Csubi" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Csubi</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-operation.Cmuli">
+            <td class="anchored pl-4">
+             <a href="#type-operation.Cmuli" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cmuli</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-operation.Cmulhi">
+            <td class="anchored pl-4">
+             <a href="#type-operation.Cmulhi" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cmulhi</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-operation.Cdivi">
+            <td class="anchored pl-4">
+             <a href="#type-operation.Cdivi" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cdivi</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-operation.Cmodi">
+            <td class="anchored pl-4">
+             <a href="#type-operation.Cmodi" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cmodi</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-operation.Cand">
+            <td class="anchored pl-4">
+             <a href="#type-operation.Cand" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cand</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-operation.Cor">
+            <td class="anchored pl-4">
+             <a href="#type-operation.Cor" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cor</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-operation.Cxor">
+            <td class="anchored pl-4">
+             <a href="#type-operation.Cxor" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cxor</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-operation.Clsl">
+            <td class="anchored pl-4">
+             <a href="#type-operation.Clsl" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Clsl</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-operation.Clsr">
+            <td class="anchored pl-4">
+             <a href="#type-operation.Clsr" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Clsr</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-operation.Casr">
+            <td class="anchored pl-4">
+             <a href="#type-operation.Casr" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Casr</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-operation.Ccmpi">
+            <td class="anchored pl-4">
+             <a href="#type-operation.Ccmpi" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Ccmpi</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-integer_comparison" class="cursor-pointer
+                text-orange">integer_comparison
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-operation.Caddv">
+            <td class="anchored pl-4">
+             <a href="#type-operation.Caddv" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Caddv</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-operation.Cadda">
+            <td class="anchored pl-4">
+             <a href="#type-operation.Cadda" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cadda</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-operation.Ccmpa">
+            <td class="anchored pl-4">
+             <a href="#type-operation.Ccmpa" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Ccmpa</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-integer_comparison" class="cursor-pointer
+                text-orange">integer_comparison
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-operation.Cnegf">
+            <td class="anchored pl-4">
+             <a href="#type-operation.Cnegf" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cnegf</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-operation.Cabsf">
+            <td class="anchored pl-4">
+             <a href="#type-operation.Cabsf" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cabsf</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-operation.Caddf">
+            <td class="anchored pl-4">
+             <a href="#type-operation.Caddf" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Caddf</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-operation.Csubf">
+            <td class="anchored pl-4">
+             <a href="#type-operation.Csubf" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Csubf</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-operation.Cmulf">
+            <td class="anchored pl-4">
+             <a href="#type-operation.Cmulf" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cmulf</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-operation.Cdivf">
+            <td class="anchored pl-4">
+             <a href="#type-operation.Cdivf" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cdivf</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-operation.Cfloatofint">
+            <td class="anchored pl-4">
+             <a href="#type-operation.Cfloatofint" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cfloatofint</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-operation.Cintoffloat">
+            <td class="anchored pl-4">
+             <a href="#type-operation.Cintoffloat" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cintoffloat</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-operation.Ccmpf">
+            <td class="anchored pl-4">
+             <a href="#type-operation.Ccmpf" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Ccmpf</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-float_comparison" class="cursor-pointer
+                text-orange">float_comparison
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-operation.Craise">
+            <td class="anchored pl-4">
+             <a href="#type-operation.Craise" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Craise</span> 
+               <span class="font-semibold">of</span> 
+               <a href="../Lambda/index.html#type-raise_kind"
+                class="cursor-pointer text-orange">Lambda.raise_kind
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-operation.Ccheckbound">
+            <td class="anchored pl-4">
+             <a href="#type-operation.Ccheckbound" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Ccheckbound</span></span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-expression">
+          <a href="#type-expression" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">and</span> expression</span>
+           <span> = </span>
+          </code>
+          <table>
+           <tr id="type-expression.Cconst_int">
+            <td class="anchored pl-4">
+             <a href="#type-expression.Cconst_int" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cconst_int</span> 
+               <span class="font-semibold">of</span> int * 
+               <a href="../Debuginfo/index.html#type-t" class="cursor-pointer
+                text-orange">Debuginfo.t
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-expression.Cconst_natint">
+            <td class="anchored pl-4">
+             <a href="#type-expression.Cconst_natint" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cconst_natint</span> 
+               <span class="font-semibold">of</span> nativeint * 
+               <a href="../Debuginfo/index.html#type-t" class="cursor-pointer
+                text-orange">Debuginfo.t
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-expression.Cconst_float">
+            <td class="anchored pl-4">
+             <a href="#type-expression.Cconst_float" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cconst_float</span> 
+               <span class="font-semibold">of</span> float * 
+               <a href="../Debuginfo/index.html#type-t" class="cursor-pointer
+                text-orange">Debuginfo.t
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-expression.Cconst_symbol">
+            <td class="anchored pl-4">
+             <a href="#type-expression.Cconst_symbol" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cconst_symbol</span> 
+               <span class="font-semibold">of</span> string * 
+               <a href="../Debuginfo/index.html#type-t" class="cursor-pointer
+                text-orange">Debuginfo.t
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-expression.Cconst_pointer">
+            <td class="anchored pl-4">
+             <a href="#type-expression.Cconst_pointer" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cconst_pointer</span> 
+               <span class="font-semibold">of</span> int * 
+               <a href="../Debuginfo/index.html#type-t" class="cursor-pointer
+                text-orange">Debuginfo.t
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-expression.Cconst_natpointer">
+            <td class="anchored pl-4">
+             <a href="#type-expression.Cconst_natpointer" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cconst_natpointer</span> 
+               <span class="font-semibold">of</span> nativeint * 
+               <a href="../Debuginfo/index.html#type-t" class="cursor-pointer
+                text-orange">Debuginfo.t
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-expression.Cblockheader">
+            <td class="anchored pl-4">
+             <a href="#type-expression.Cblockheader" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cblockheader</span> 
+               <span class="font-semibold">of</span> nativeint * 
+               <a href="../Debuginfo/index.html#type-t" class="cursor-pointer
+                text-orange">Debuginfo.t
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-expression.Cvar">
+            <td class="anchored pl-4">
+             <a href="#type-expression.Cvar" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cvar</span> 
+               <span class="font-semibold">of</span> 
+               <a href="../Backend_var/index.html#type-t"
+                class="cursor-pointer text-orange">Backend_var.t
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-expression.Clet">
+            <td class="anchored pl-4">
+             <a href="#type-expression.Clet" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Clet</span> 
+               <span class="font-semibold">of</span> 
+               <a href="../Backend_var/With_provenance/index.html#type-t"
+                class="cursor-pointer text-orange">
+                Backend_var.With_provenance.t
+               </a> * 
+               <a href="#type-expression" class="cursor-pointer text-orange">
+                expression
+               </a> * 
+               <a href="#type-expression" class="cursor-pointer text-orange">
+                expression
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-expression.Clet_mut">
+            <td class="anchored pl-4">
+             <a href="#type-expression.Clet_mut" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Clet_mut</span> 
+               <span class="font-semibold">of</span> 
+               <a href="../Backend_var/With_provenance/index.html#type-t"
+                class="cursor-pointer text-orange">
+                Backend_var.With_provenance.t
+               </a> * 
+               <a href="#type-machtype" class="cursor-pointer text-orange">
+                machtype
+               </a> * 
+               <a href="#type-expression" class="cursor-pointer text-orange">
+                expression
+               </a> * 
+               <a href="#type-expression" class="cursor-pointer text-orange">
+                expression
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-expression.Cphantom_let">
+            <td class="anchored pl-4">
+             <a href="#type-expression.Cphantom_let" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cphantom_let</span> 
+               <span class="font-semibold">of</span> 
+               <a href="../Backend_var/With_provenance/index.html#type-t"
+                class="cursor-pointer text-orange">
+                Backend_var.With_provenance.t
+               </a> * 
+               <span>
+                <a href="#type-phantom_defining_expr" class="cursor-pointer
+                 text-orange">phantom_defining_expr
+                </a> option
+               </span> * 
+               <a href="#type-expression" class="cursor-pointer text-orange">
+                expression
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-expression.Cassign">
+            <td class="anchored pl-4">
+             <a href="#type-expression.Cassign" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cassign</span> 
+               <span class="font-semibold">of</span> 
+               <a href="../Backend_var/index.html#type-t"
+                class="cursor-pointer text-orange">Backend_var.t
+               </a> * 
+               <a href="#type-expression" class="cursor-pointer text-orange">
+                expression
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-expression.Ctuple">
+            <td class="anchored pl-4">
+             <a href="#type-expression.Ctuple" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Ctuple</span> 
+               <span class="font-semibold">of</span> 
+               <span>
+                <a href="#type-expression" class="cursor-pointer text-orange">
+                 expression
+                </a> list
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-expression.Cop">
+            <td class="anchored pl-4">
+             <a href="#type-expression.Cop" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cop</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-operation" class="cursor-pointer text-orange">
+                operation
+               </a> * 
+               <span>
+                <a href="#type-expression" class="cursor-pointer text-orange">
+                 expression
+                </a> list
+               </span> * 
+               <a href="../Debuginfo/index.html#type-t" class="cursor-pointer
+                text-orange">Debuginfo.t
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-expression.Csequence">
+            <td class="anchored pl-4">
+             <a href="#type-expression.Csequence" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Csequence</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-expression" class="cursor-pointer text-orange">
+                expression
+               </a> * 
+               <a href="#type-expression" class="cursor-pointer text-orange">
+                expression
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-expression.Cifthenelse">
+            <td class="anchored pl-4">
+             <a href="#type-expression.Cifthenelse" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cifthenelse</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-expression" class="cursor-pointer text-orange">
+                expression
+               </a> * 
+               <a href="../Debuginfo/index.html#type-t" class="cursor-pointer
+                text-orange">Debuginfo.t
+               </a> * 
+               <a href="#type-expression" class="cursor-pointer text-orange">
+                expression
+               </a> * 
+               <a href="../Debuginfo/index.html#type-t" class="cursor-pointer
+                text-orange">Debuginfo.t
+               </a> * 
+               <a href="#type-expression" class="cursor-pointer text-orange">
+                expression
+               </a> * 
+               <a href="../Debuginfo/index.html#type-t" class="cursor-pointer
+                text-orange">Debuginfo.t
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-expression.Cswitch">
+            <td class="anchored pl-4">
+             <a href="#type-expression.Cswitch" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cswitch</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-expression" class="cursor-pointer text-orange">
+                expression
+               </a> * <span>int array</span> * 
+               <span>
+                <span>(
+                 <a href="#type-expression" class="cursor-pointer
+                  text-orange">expression
+                 </a> * 
+                 <a href="../Debuginfo/index.html#type-t"
+                  class="cursor-pointer text-orange">Debuginfo.t
+                 </a>)
+                </span> array
+               </span> * 
+               <a href="../Debuginfo/index.html#type-t" class="cursor-pointer
+                text-orange">Debuginfo.t
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-expression.Ccatch">
+            <td class="anchored pl-4">
+             <a href="#type-expression.Ccatch" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Ccatch</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-rec_flag" class="cursor-pointer text-orange">
+                rec_flag
+               </a> * 
+               <span>
+                <span>(int * 
+                 <span>
+                  <span>(
+                   <a href="../Backend_var/With_provenance/index.html#type-t"
+                    class="cursor-pointer text-orange">
+                    Backend_var.With_provenance.t
+                   </a> * 
+                   <a href="#type-machtype" class="cursor-pointer
+                    text-orange">machtype
+                   </a>)
+                  </span> list
+                 </span> * 
+                 <a href="#type-expression" class="cursor-pointer
+                  text-orange">expression
+                 </a> * 
+                 <a href="../Debuginfo/index.html#type-t"
+                  class="cursor-pointer text-orange">Debuginfo.t
+                 </a>)
+                </span> list
+               </span> * 
+               <a href="#type-expression" class="cursor-pointer text-orange">
+                expression
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-expression.Cexit">
+            <td class="anchored pl-4">
+             <a href="#type-expression.Cexit" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cexit</span> 
+               <span class="font-semibold">of</span> int * 
+               <span>
+                <a href="#type-expression" class="cursor-pointer text-orange">
+                 expression
+                </a> list
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-expression.Ctrywith">
+            <td class="anchored pl-4">
+             <a href="#type-expression.Ctrywith" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Ctrywith</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-expression" class="cursor-pointer text-orange">
+                expression
+               </a> * 
+               <a href="../Backend_var/With_provenance/index.html#type-t"
+                class="cursor-pointer text-orange">
+                Backend_var.With_provenance.t
+               </a> * 
+               <a href="#type-expression" class="cursor-pointer text-orange">
+                expression
+               </a> * 
+               <a href="../Debuginfo/index.html#type-t" class="cursor-pointer
+                text-orange">Debuginfo.t
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Every basic block should have a corresponding
+            <code class="font-normal text-sm">Debuginfo.t</code> for 
+           its beginning.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-codegen_option">
+          <a href="#type-codegen_option" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> codegen_option
+           </span><span> = </span>
+          </code>
+          <table>
+           <tr id="type-codegen_option.Reduce_code_size">
+            <td class="anchored pl-4">
+             <a href="#type-codegen_option.Reduce_code_size"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Reduce_code_size</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-codegen_option.No_CSE">
+            <td class="anchored pl-4">
+             <a href="#type-codegen_option.No_CSE" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">No_CSE</span></span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-fundecl">
+          <a href="#type-fundecl" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> fundecl</span>
+           <span> = </span><span>{</span>
+          </code>
+          <table>
+           <tr id="type-fundecl.fun_name">
+            <td class="anchored pl-4">
+             <a href="#type-fundecl.fun_name" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>fun_name : string;</span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-fundecl.fun_args">
+            <td class="anchored pl-4">
+             <a href="#type-fundecl.fun_args" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>fun_args : 
+               <span>
+                <span>(
+                 <a href="../Backend_var/With_provenance/index.html#type-t"
+                  class="cursor-pointer text-orange">
+                  Backend_var.With_provenance.t
+                 </a> * 
+                 <a href="#type-machtype" class="cursor-pointer text-orange">
+                  machtype
+                 </a>)
+                </span> list
+               </span>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-fundecl.fun_body">
+            <td class="anchored pl-4">
+             <a href="#type-fundecl.fun_body" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>fun_body : 
+               <a href="#type-expression" class="cursor-pointer text-orange">
+                expression
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-fundecl.fun_codegen_options">
+            <td class="anchored pl-4">
+             <a href="#type-fundecl.fun_codegen_options" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>fun_codegen_options : 
+               <span>
+                <a href="#type-codegen_option" class="cursor-pointer
+                 text-orange">codegen_option
+                </a> list
+               </span>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-fundecl.fun_dbg">
+            <td class="anchored pl-4">
+             <a href="#type-fundecl.fun_dbg" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>fun_dbg : 
+               <a href="../Debuginfo/index.html#type-t" class="cursor-pointer
+                text-orange">Debuginfo.t
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+          </table><code class="font-normal text-sm"><span>}</span></code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-data_item">
+          <a href="#type-data_item" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> data_item</span>
+           <span> = </span>
+          </code>
+          <table>
+           <tr id="type-data_item.Cdefine_symbol">
+            <td class="anchored pl-4">
+             <a href="#type-data_item.Cdefine_symbol" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cdefine_symbol</span> 
+               <span class="font-semibold">of</span> string
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-data_item.Cglobal_symbol">
+            <td class="anchored pl-4">
+             <a href="#type-data_item.Cglobal_symbol" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cglobal_symbol</span> 
+               <span class="font-semibold">of</span> string
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-data_item.Cint8">
+            <td class="anchored pl-4">
+             <a href="#type-data_item.Cint8" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cint8</span> 
+               <span class="font-semibold">of</span> int
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-data_item.Cint16">
+            <td class="anchored pl-4">
+             <a href="#type-data_item.Cint16" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cint16</span> 
+               <span class="font-semibold">of</span> int
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-data_item.Cint32">
+            <td class="anchored pl-4">
+             <a href="#type-data_item.Cint32" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cint32</span> 
+               <span class="font-semibold">of</span> nativeint
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-data_item.Cint">
+            <td class="anchored pl-4">
+             <a href="#type-data_item.Cint" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cint</span> 
+               <span class="font-semibold">of</span> nativeint
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-data_item.Csingle">
+            <td class="anchored pl-4">
+             <a href="#type-data_item.Csingle" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Csingle</span> 
+               <span class="font-semibold">of</span> float
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-data_item.Cdouble">
+            <td class="anchored pl-4">
+             <a href="#type-data_item.Cdouble" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cdouble</span> 
+               <span class="font-semibold">of</span> float
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-data_item.Csymbol_address">
+            <td class="anchored pl-4">
+             <a href="#type-data_item.Csymbol_address" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Csymbol_address</span> 
+               <span class="font-semibold">of</span> string
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-data_item.Cstring">
+            <td class="anchored pl-4">
+             <a href="#type-data_item.Cstring" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cstring</span> 
+               <span class="font-semibold">of</span> string
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-data_item.Cskip">
+            <td class="anchored pl-4">
+             <a href="#type-data_item.Cskip" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cskip</span> 
+               <span class="font-semibold">of</span> int
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-data_item.Calign">
+            <td class="anchored pl-4">
+             <a href="#type-data_item.Calign" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Calign</span> 
+               <span class="font-semibold">of</span> int
+              </span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-phrase">
+          <a href="#type-phrase" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> phrase</span>
+           <span> = </span>
+          </code>
+          <table>
+           <tr id="type-phrase.Cfunction">
+            <td class="anchored pl-4">
+             <a href="#type-phrase.Cfunction" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cfunction</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-fundecl" class="cursor-pointer text-orange">
+                fundecl
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-phrase.Cdata">
+            <td class="anchored pl-4">
+             <a href="#type-phrase.Cdata" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cdata</span> 
+               <span class="font-semibold">of</span> 
+               <span>
+                <a href="#type-data_item" class="cursor-pointer text-orange">
+                 data_item
+                </a> list
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-ccatch">
+          <a href="#val-ccatch" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> ccatch : 
+            <span>
+             <span>(int * 
+              <span>
+               <span>(
+                <a href="../Backend_var/With_provenance/index.html#type-t"
+                 class="cursor-pointer text-orange">
+                 Backend_var.With_provenance.t
+                </a> * 
+                <a href="#type-machtype" class="cursor-pointer text-orange">
+                 machtype
+                </a>)
+               </span> list
+              </span> * 
+              <a href="#type-expression" class="cursor-pointer text-orange">
+               expression
+              </a> * 
+              <a href="#type-expression" class="cursor-pointer text-orange">
+               expression
+              </a> * 
+              <a href="../Debuginfo/index.html#type-t" class="cursor-pointer
+               text-orange">Debuginfo.t
+              </a>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-expression" class="cursor-pointer text-orange">
+             expression
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-reset">
+          <a href="#val-reset" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> reset : 
+            <span>unit <span class="">&#45;&gt;</span></span> unit
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-iter_shallow_tail">
+          <a href="#val-iter_shallow_tail" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> iter_shallow_tail
+             : 
+            <span>
+             <span>(
+              <span>
+               <a href="#type-expression" class="cursor-pointer text-orange">
+                expression
+               </a> <span class="">&#45;&gt;</span>
+              </span> unit)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-expression" class="cursor-pointer text-orange">
+              expression
+             </a> <span class="">&#45;&gt;</span>
+            </span> bool
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Either apply the callback to all immediate 
+           sub-expressions that can produce the final result for the 
+           expression and return 
+           <code class="font-normal text-sm">true</code>, or do nothing
+            and return <code class="font-normal text-sm">false</code>
+           . Note that the notion of &quot;tail&quot; sub-expression 
+           used here does not match the one used to trigger tail calls;
+            in particular, try...with handlers are considered to be in
+            tail position (because their result become the final result
+            for the expression).
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-map_tail">
+          <a href="#val-map_tail" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> map_tail : 
+            <span>
+             <span>(
+              <span>
+               <a href="#type-expression" class="cursor-pointer text-orange">
+                expression
+               </a> <span class="">&#45;&gt;</span>
+              </span> 
+              <a href="#type-expression" class="cursor-pointer text-orange">
+               expression
+              </a>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-expression" class="cursor-pointer text-orange">
+              expression
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-expression" class="cursor-pointer text-orange">
+             expression
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Apply the transformation to an expression, 
+           trying to push it to all inner sub-expressions that can produce
+            the final result. Same disclaimer as for 
+           <code class="font-normal text-sm">iter_shallow_tail</code>
+            about the notion of &quot;tail&quot; sub-expression.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-map_shallow">
+          <a href="#val-map_shallow" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> map_shallow : 
+            <span>
+             <span>(
+              <span>
+               <a href="#type-expression" class="cursor-pointer text-orange">
+                expression
+               </a> <span class="">&#45;&gt;</span>
+              </span> 
+              <a href="#type-expression" class="cursor-pointer text-orange">
+               expression
+              </a>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-expression" class="cursor-pointer text-orange">
+              expression
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-expression" class="cursor-pointer text-orange">
+             expression
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Apply the transformation to each immediate 
+           sub-expression.
+          </p>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="w-full flex-none lg:w-72 border-t lg:border-l bg-gray-100">
+       <div class="flex h-20 border-b relative">
+        <h2 class="text-xl absolute inset-x-0 p-3 bottom-0 mt-7 font-semibold
+         text-gray-500">ocaml-base-compiler.4.11.2
+        </h2>
+       </div>
+       <div class="m-3">
+        <p class="mb-5 italic text-sm">Official release 4.11.2</p>
+        <div class="mb-3">
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="https://ocaml.org">ocaml.org
+          </a>
+         </div>
+        </div>
+        <details class="font-normal mb-2 text-sm">
+         <summary>Other versions</summary><div id="versions_container"></div>
+        </details><h2 class="font-semibold mb-2 text-sm">Authors</h2>
+        <p class="mb-3 text-sm">Xavier Leroy and many contributors</p>
+        <h2 class="font-semibold mb-2 text-sm">Issues</h2>
+        <div class="mb-3">
+         <a class="text-orange cursor-pointer mb-2 text-sm"
+          href="https://github.com/ocaml/opam-repository/issues">
+          github.com/ocaml/opam-repository/issues
+         </a>
+        </div>
+        <details class="font-semibold mb-2 text-sm">
+         <summary>Package dependencies</summary>
+         <div class="font-normal">
+          <ul>
+           <li>
+            <a href="../../../ocaml/index.html" class="text-orange
+             cursor-pointer">ocaml
+            </a>
+           </li>
+           <li>
+            <a href="../../../base-unix/index.html" class="text-orange
+             cursor-pointer">base-unix
+            </a>
+           </li>
+           <li>
+            <a href="../../../base-bigarray/index.html" class="text-orange
+             cursor-pointer">base-bigarray
+            </a>
+           </li>
+           <li>
+            <a href="../../../base-threads/index.html" class="text-orange
+             cursor-pointer">base-threads
+            </a>
+           </li>
+          </ul>
+         </div>
+        </details>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div><script>Voodoo.update('../../version.json')</script>
+ </body>
+</html>

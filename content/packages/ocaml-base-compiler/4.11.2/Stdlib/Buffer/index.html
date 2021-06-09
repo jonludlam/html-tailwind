@@ -1,0 +1,1607 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>Buffer (packages.ocaml-base-compiler.4.11.2.Stdlib.Buffer)</title>
+  <link rel="stylesheet" href="../../../../tailwind.css"/>
+  <link rel="stylesheet" href="../../../../extra.css"/>
+  <meta charset="utf-8"/><meta name="generator" content="odoc 3dfb7aef2f"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <script src="../../../../highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="../../../../voodoo_client.js"></script>
+  <script
+   src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+   defer="defer">
+  </script>
+ </head>
+ <body class="mx-auto max-w-screen-2xl">
+  <div class="relative">
+   <div class="relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+     <div class="flex justify-between items-center md:justify-start py-6
+      md:space-x-10">
+      <div class="flex justify-start">
+       <a href="https://v3.ocaml.org/">
+        <img src="/colour-logo.svg" alt="" class="h-8 w-auto sm:h-10"/>
+       </a>
+      </div>
+      <nav class="hidden md:flex space-x-10">
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Industry</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/whatisocaml">
+            <p class="text-base font-medium text-gray-900">What is OCaml</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/users">
+            <p class="text-base font-medium text-gray-900">Industrial Users
+            </p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/successstories">
+            <p class="text-base font-medium text-gray-900">Success Stories
+            </p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Resources</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/releases">
+            <p class="text-base font-medium text-gray-900">Releases</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/applications">
+            <p class="text-base font-medium text-gray-900">Applications</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/language">
+            <p class="text-base font-medium text-gray-900">Language</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/archive">
+            <p class="text-base font-medium text-gray-900">Archive</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Community</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/opportunities">
+            <p class="text-base font-medium text-gray-900">Opportunities</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/news">
+            <p class="text-base font-medium text-gray-900">News</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/aroundweb">
+            <p class="text-base font-medium text-gray-900">Around the Web</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="h-screen flex bg-white font-sans">
+   <div class="flex flex-col w-full h-full">
+    <div class="flex-row flex-1">
+     <nav class="bg-orange border-t border-b border-orange flex flex-row">
+      <ol class="max-w-screen-xl w-full px-4 flex space-x-4 sm:px-6 lg:px-8">
+       <li class="flex">
+        <div class="flex items-center">
+         <a href="#" class="text-gray-100 hover:text-gray-500">
+          
+  <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+        </svg>
+  
+          <span class="sr-only">Home</span>
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">packages
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">ocaml-base-compiler
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">4.11.2
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">Stdlib
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="#" class="ml-4 text-sm font-medium text-gray-100
+          hover:text-gray-500">Buffer
+         </a>
+        </div>
+       </li>
+      </ol>
+     </nav>
+    </div>
+    <div class="flex flex-row flex-1">
+     <div class="w-72 flex-none bg-gray-100 h-screen border-r border-gray-200
+      sticky top-0 hidden lg:block">
+      <div class="flex h-20 border-b relative">
+       <h2 class="text-xl absolute inset-x-0 p-3 px-5 bottom-0 mt-7
+        border-gray-200 font-semibold text-gray-500 font-sans">On this page
+       </h2>
+      </div>
+      <nav class="bg-gray-100 p-5">
+       <ul>
+        <li>
+         <a href="#iterators" class="cursor-pointer text-orange">Iterators
+         </a>
+        </li>
+        <li>
+         <a href="#binary-encoding-of-integers" class="cursor-pointer
+          text-orange">Binary encoding of integers
+         </a>
+        </li>
+       </ul>
+      </nav>
+     </div>
+     <div class="flex flex-1 flex-col lg:flex-row">
+      <div class="flex-1">
+       <div class="lg:max-w-5xl mx-auto px-3 lg:px-10 mb-10 text-sm">
+        <div class="flex h-20 relative border-b border-gray-200">
+         <div class="relative flex-1 h-20">
+          <h1 class="text-3xl absolute inset-x-0 py-3 bottom-0 font-semibold
+           text-gray-500 font-sans w-full truncate">
+           <code class="font-mono text-gray-800">Stdlib.Buffer</code>
+          </h1>
+         </div>
+         <div class="relative flex-none w-28">
+          <h1 class="text-3xl absolute py-3 bottom-0 right-0 font-semibold
+           text-gray-500 font-sans">Module
+          </h1>
+         </div>
+        </div><p class="mt-4">Extensible buffers.</p>
+        <p class="mt-4">This module implements buffers that automatically
+          expand as necessary. It provides accumulative concatenation
+          of strings in quasi-linear time (instead of quadratic time 
+         when strings are concatenated pairwise).
+        </p>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-t">
+          <a href="#type-t" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> t</span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">The abstract type of buffers.</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-create">
+          <a href="#val-create" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> create : 
+            <span>int <span class="">&#45;&gt;</span></span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">create n</code>
+            returns a fresh buffer, initially empty. The 
+           <code class="font-normal text-sm">n</code> parameter is the
+            initial size of the internal byte sequence that holds the
+            buffer contents. That byte sequence is automatically reallocated
+            when more than <code class="font-normal text-sm">n</code>
+            characters are stored in the buffer, but shrinks back to 
+           <code class="font-normal text-sm">n</code> characters when
+            <code class="font-normal text-sm">reset</code> is called.
+            For best performance, <code class="font-normal text-sm">n</code>
+            should be of the same order of magnitude as the number of
+            characters that are expected to be stored in the buffer (for
+            instance, 80 for a buffer that holds one output line). Nothing
+            bad will happen if the buffer grows beyond that limit, however.
+            In doubt, take <code class="font-normal text-sm">n = 16</code>
+            for instance. If <code class="font-normal text-sm">n</code>
+            is not between 1 and 
+           <a href="../Sys/index.html#val-max_string_length"
+            class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Sys.max_string_length</code>
+           </a>, it will be clipped to that interval.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-contents">
+          <a href="#val-contents" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> contents : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return a copy of the current contents of the
+            buffer. The buffer itself is unchanged.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-to_bytes">
+          <a href="#val-to_bytes" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> to_bytes : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> bytes
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return a copy of the current contents of the
+            buffer. The buffer itself is unchanged.
+          </p><ul class="at-tags"><li class="since">since 4.02</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-sub">
+          <a href="#val-sub" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sub : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> <span>int <span class="">&#45;&gt;</span></span> 
+            <span>int <span class="">&#45;&gt;</span></span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">Buffer.sub b off len</code>
+            returns a copy of <code class="font-normal text-sm">len</code>
+            bytes from the current contents of the buffer 
+           <code class="font-normal text-sm">b</code>, starting at offset
+            <code class="font-normal text-sm">off</code>.
+          </p>
+          <ul class="at-tags">
+           <li class="raises">raises Invalid_argument 
+            <p class="mt-4">if 
+             <code class="font-normal text-sm">srcoff</code> and 
+             <code class="font-normal text-sm">len</code> do not designate
+              a valid range of <code class="font-normal text-sm">b</code>
+             .
+            </p>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-blit">
+          <a href="#val-blit" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> blit : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> <span>int <span class="">&#45;&gt;</span></span> 
+            <span>bytes <span class="">&#45;&gt;</span></span> 
+            <span>int <span class="">&#45;&gt;</span></span> 
+            <span>int <span class="">&#45;&gt;</span></span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">
+            Buffer.blit src srcoff dst dstoff len
+           </code> copies <code class="font-normal text-sm">len</code>
+            characters from the current contents of the buffer 
+           <code class="font-normal text-sm">src</code>, starting at 
+           offset <code class="font-normal text-sm">srcoff</code> to 
+           <code class="font-normal text-sm">dst</code>, starting at 
+           character <code class="font-normal text-sm">dstoff</code>.
+          </p>
+          <ul class="at-tags">
+           <li class="raises">raises Invalid_argument 
+            <p class="mt-4">if 
+             <code class="font-normal text-sm">srcoff</code> and 
+             <code class="font-normal text-sm">len</code> do not designate
+              a valid range of <code class="font-normal text-sm">src</code>
+             , or if <code class="font-normal text-sm">dstoff</code> 
+             and <code class="font-normal text-sm">len</code> do not 
+             designate a valid range of 
+             <code class="font-normal text-sm">dst</code>.
+            </p>
+           </li>
+          </ul><ul class="at-tags"><li class="since">since 3.11.2</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-nth">
+          <a href="#val-nth" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> nth : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> <span>int <span class="">&#45;&gt;</span></span> 
+            char
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Get the n-th character of the buffer.</p>
+          <ul class="at-tags">
+           <li class="raises">raises Invalid_argument 
+            <p class="mt-4">if index out of bounds</p>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-length">
+          <a href="#val-length" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> length : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> int
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return the number of characters currently contained
+            in the buffer.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-clear">
+          <a href="#val-clear" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> clear : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc"><p class="mt-4">Empty the buffer.</p></div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-reset">
+          <a href="#val-reset" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> reset : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Empty the buffer and deallocate the internal
+            byte sequence holding the buffer contents, replacing it with
+            the initial internal byte sequence of length 
+           <code class="font-normal text-sm">n</code> that was allocated
+            by 
+           <a href="#val-create" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Buffer.create</code>
+           </a> <code class="font-normal text-sm">n</code>. For long-lived
+            buffers that may have grown a lot, 
+           <code class="font-normal text-sm">reset</code> allows faster
+            reclamation of the space used by the buffer.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-add_char">
+          <a href="#val-add_char" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> add_char : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> <span>char <span class="">&#45;&gt;</span></span>
+             unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">add_char b c</code> appends
+            the character <code class="font-normal text-sm">c</code> 
+           at the end of buffer <code class="font-normal text-sm">b</code>
+           .
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-add_utf_8_uchar">
+          <a href="#val-add_utf_8_uchar" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> add_utf_8_uchar
+             : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Uchar/index.html#type-t" class="cursor-pointer
+              text-orange">Stdlib.Uchar.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">add_utf_8_uchar b u</code>
+            appends the 
+           <a href="https://tools.ietf.org/html/rfc3629"
+            class="cursor-pointer text-orange">UTF-8
+           </a> encoding of <code class="font-normal text-sm">u</code>
+            at the end of buffer <code class="font-normal text-sm">b</code>
+           .
+          </p><ul class="at-tags"><li class="since">since 4.06.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-add_utf_16le_uchar">
+          <a href="#val-add_utf_16le_uchar" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> add_utf_16le_uchar
+             : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Uchar/index.html#type-t" class="cursor-pointer
+              text-orange">Stdlib.Uchar.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">add_utf_16le_uchar b u</code>
+            appends the 
+           <a href="https://tools.ietf.org/html/rfc2781"
+            class="cursor-pointer text-orange">UTF-16LE
+           </a> encoding of <code class="font-normal text-sm">u</code>
+            at the end of buffer <code class="font-normal text-sm">b</code>
+           .
+          </p><ul class="at-tags"><li class="since">since 4.06.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-add_utf_16be_uchar">
+          <a href="#val-add_utf_16be_uchar" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> add_utf_16be_uchar
+             : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Uchar/index.html#type-t" class="cursor-pointer
+              text-orange">Stdlib.Uchar.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">add_utf_16be_uchar b u</code>
+            appends the 
+           <a href="https://tools.ietf.org/html/rfc2781"
+            class="cursor-pointer text-orange">UTF-16BE
+           </a> encoding of <code class="font-normal text-sm">u</code>
+            at the end of buffer <code class="font-normal text-sm">b</code>
+           .
+          </p><ul class="at-tags"><li class="since">since 4.06.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-add_string">
+          <a href="#val-add_string" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> add_string : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> <span>string <span class="">&#45;&gt;</span></span>
+             unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">add_string b s</code> appends
+            the string <code class="font-normal text-sm">s</code> at 
+           the end of buffer <code class="font-normal text-sm">b</code>
+           .
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-add_bytes">
+          <a href="#val-add_bytes" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> add_bytes : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> <span>bytes <span class="">&#45;&gt;</span></span>
+             unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">add_bytes b s</code> appends
+            the byte sequence <code class="font-normal text-sm">s</code>
+            at the end of buffer <code class="font-normal text-sm">b</code>
+           .
+          </p><ul class="at-tags"><li class="since">since 4.02</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-add_substring">
+          <a href="#val-add_substring" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> add_substring
+             : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> <span>string <span class="">&#45;&gt;</span></span>
+             <span>int <span class="">&#45;&gt;</span></span> 
+            <span>int <span class="">&#45;&gt;</span></span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">add_substring b s ofs len</code>
+            takes <code class="font-normal text-sm">len</code> characters
+            from offset <code class="font-normal text-sm">ofs</code> 
+           in string <code class="font-normal text-sm">s</code> and appends
+            them at the end of buffer 
+           <code class="font-normal text-sm">b</code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-add_subbytes">
+          <a href="#val-add_subbytes" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> add_subbytes : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> <span>bytes <span class="">&#45;&gt;</span></span>
+             <span>int <span class="">&#45;&gt;</span></span> 
+            <span>int <span class="">&#45;&gt;</span></span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">add_subbytes b s ofs len</code>
+            takes <code class="font-normal text-sm">len</code> characters
+            from offset <code class="font-normal text-sm">ofs</code> 
+           in byte sequence <code class="font-normal text-sm">s</code>
+            and appends them at the end of buffer 
+           <code class="font-normal text-sm">b</code>.
+          </p><ul class="at-tags"><li class="since">since 4.02</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-add_substitute">
+          <a href="#val-add_substitute" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> add_substitute
+             : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>(<span>string <span class="">&#45;&gt;</span></span>
+               string)
+             </span> <span class="">&#45;&gt;</span>
+            </span> <span>string <span class="">&#45;&gt;</span></span>
+             unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">add_substitute b f s</code>
+            appends the string pattern 
+           <code class="font-normal text-sm">s</code> at the end of buffer
+            <code class="font-normal text-sm">b</code> with substitution.
+            The substitution process looks for variables into the pattern
+            and substitutes each variable name by its value, as obtained
+            by applying the mapping 
+           <code class="font-normal text-sm">f</code> to the variable
+            name. Inside the string pattern, a variable name immediately
+            follows a non-escaped <code class="font-normal text-sm">$</code>
+            character and is one of the following:
+          </p>
+          <ul class="list-disc mt-2 mb-4">
+           <li class="ml-4">a non empty sequence of alphanumeric or 
+            <code class="font-normal text-sm">_</code> characters,
+           </li>
+           <li class="ml-4">an arbitrary sequence of characters enclosed
+             by a pair of matching parentheses or curly brackets. An 
+            escaped <code class="font-normal text-sm">$</code> character
+             is a <code class="font-normal text-sm">$</code> that immediately
+             follows a backslash character; it then stands for a plain
+             <code class="font-normal text-sm">$</code>.
+           </li>
+          </ul>
+          <ul class="at-tags">
+           <li class="raises">raises Not_found 
+            <p class="mt-4">if the closing character of a parenthesized
+              variable cannot be found.
+            </p>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-add_buffer">
+          <a href="#val-add_buffer" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> add_buffer : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">add_buffer b1 b2</code> 
+           appends the current contents of buffer 
+           <code class="font-normal text-sm">b2</code> at the end of 
+           buffer <code class="font-normal text-sm">b1</code>. 
+           <code class="font-normal text-sm">b2</code> is not modified.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-add_channel">
+          <a href="#val-add_channel" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> add_channel : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../index.html#type-in_channel" class="cursor-pointer
+              text-orange">Stdlib.in_channel
+             </a> <span class="">&#45;&gt;</span>
+            </span> <span>int <span class="">&#45;&gt;</span></span> 
+            unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">add_channel b ic n</code>
+            reads at most <code class="font-normal text-sm">n</code> 
+           characters from the input channel 
+           <code class="font-normal text-sm">ic</code> and stores them
+            at the end of buffer <code class="font-normal text-sm">b</code>
+           .
+          </p>
+          <ul class="at-tags">
+           <li class="raises">raises End_of_file 
+            <p class="mt-4">if the channel contains fewer than 
+             <code class="font-normal text-sm">n</code> characters. In
+              this case, the characters are still added to the buffer,
+              so as to avoid loss of data.
+            </p>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-output_buffer">
+          <a href="#val-output_buffer" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> output_buffer
+             : 
+            <span>
+             <a href="../index.html#type-out_channel" class="cursor-pointer
+              text-orange">Stdlib.out_channel
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">output_buffer oc b</code>
+            writes the current contents of buffer 
+           <code class="font-normal text-sm">b</code> on the output channel
+            <code class="font-normal text-sm">oc</code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-truncate">
+          <a href="#val-truncate" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> truncate : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> <span>int <span class="">&#45;&gt;</span></span> 
+            unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">truncate b len</code> truncates
+            the length of <code class="font-normal text-sm">b</code> 
+           to <code class="font-normal text-sm">len</code> Note: the 
+           internal byte sequence is not shortened.
+          </p>
+          <ul class="at-tags">
+           <li class="raises">raises Invalid_argument 
+            <p class="mt-4">if 
+             <code class="font-normal text-sm">len &lt; 0</code> or 
+             <code class="font-normal text-sm">len &gt; length b</code>
+             .
+            </p>
+           </li>
+          </ul><ul class="at-tags"><li class="since">since 4.05.0</li></ul>
+         </div>
+        </div>
+        <h2 class="text-2xl my-4 text-gray-800 font-sans anchored"
+         id="iterators">
+         <a href="#iterators" class="hover-link inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Iterators
+        </h2>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-to_seq">
+          <a href="#val-to_seq" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> to_seq : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>char 
+             <a href="../Seq/index.html#type-t" class="cursor-pointer
+              text-orange">Stdlib.Seq.t
+             </a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Iterate on the buffer, in increasing order.
+            Modification of the buffer during iteration is undefined 
+           behavior.
+          </p><ul class="at-tags"><li class="since">since 4.07</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-to_seqi">
+          <a href="#val-to_seqi" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> to_seqi : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span>(int * char)</span> 
+             <a href="../Seq/index.html#type-t" class="cursor-pointer
+              text-orange">Stdlib.Seq.t
+             </a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Iterate on the buffer, in increasing order,
+            yielding indices along chars. Modification of the buffer 
+           during iteration is undefined behavior.
+          </p><ul class="at-tags"><li class="since">since 4.07</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-add_seq">
+          <a href="#val-add_seq" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> add_seq : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>char 
+              <a href="../Seq/index.html#type-t" class="cursor-pointer
+               text-orange">Stdlib.Seq.t
+              </a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc"><p class="mt-4">Add chars to the buffer</p>
+          <ul class="at-tags"><li class="since">since 4.07</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-of_seq">
+          <a href="#val-of_seq" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> of_seq : 
+            <span>
+             <span>char 
+              <a href="../Seq/index.html#type-t" class="cursor-pointer
+               text-orange">Stdlib.Seq.t
+              </a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Create a buffer from the generator</p>
+          <ul class="at-tags"><li class="since">since 4.07</li></ul>
+         </div>
+        </div>
+        <h2 class="text-2xl my-4 text-gray-800 font-sans anchored"
+         id="binary-encoding-of-integers">
+         <a href="#binary-encoding-of-integers" class="hover-link
+          inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Binary encoding of integers
+        </h2>
+        <p class="mt-4">The functions in this section append binary encodings
+          of integers to buffers.
+        </p>
+        <p class="mt-4">Little-endian (resp. big-endian) encoding means
+          that least (resp. most) significant bytes are stored first.
+          Big-endian is also known as network byte order. Native-endian
+          encoding is either little-endian or big-endian depending on
+          
+         <a href="../Sys/index.html#val-big_endian" class="cursor-pointer
+          text-orange">
+          <code class="font-normal text-sm">Sys.big_endian</code>
+         </a>.
+        </p>
+        <p class="mt-4">32-bit and 64-bit integers are represented by
+          the <code class="font-normal text-sm">int32</code> and 
+         <code class="font-normal text-sm">int64</code> types, which 
+         can be interpreted either as signed or unsigned numbers.
+        </p>
+        <p class="mt-4">8-bit and 16-bit integers are represented by 
+         the <code class="font-normal text-sm">int</code> type, which
+          has more bits than the binary encoding. Functions that encode
+          these values truncate their inputs to their least significant
+          bytes.
+        </p>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-add_uint8">
+          <a href="#val-add_uint8" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> add_uint8 : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> <span>int <span class="">&#45;&gt;</span></span> 
+            unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">add_uint8 b i</code> appends
+            a binary unsigned 8-bit integer 
+           <code class="font-normal text-sm">i</code> to 
+           <code class="font-normal text-sm">b</code>.
+          </p><ul class="at-tags"><li class="since">since 4.08</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-add_int8">
+          <a href="#val-add_int8" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> add_int8 : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> <span>int <span class="">&#45;&gt;</span></span> 
+            unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">add_int8 b i</code> appends
+            a binary signed 8-bit integer 
+           <code class="font-normal text-sm">i</code> to 
+           <code class="font-normal text-sm">b</code>.
+          </p><ul class="at-tags"><li class="since">since 4.08</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-add_uint16_ne">
+          <a href="#val-add_uint16_ne" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> add_uint16_ne
+             : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> <span>int <span class="">&#45;&gt;</span></span> 
+            unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">add_uint16_ne b i</code>
+            appends a binary native-endian unsigned 16-bit integer 
+           <code class="font-normal text-sm">i</code> to 
+           <code class="font-normal text-sm">b</code>.
+          </p><ul class="at-tags"><li class="since">since 4.08</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-add_uint16_be">
+          <a href="#val-add_uint16_be" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> add_uint16_be
+             : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> <span>int <span class="">&#45;&gt;</span></span> 
+            unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">add_uint16_be b i</code>
+            appends a binary big-endian unsigned 16-bit integer 
+           <code class="font-normal text-sm">i</code> to 
+           <code class="font-normal text-sm">b</code>.
+          </p><ul class="at-tags"><li class="since">since 4.08</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-add_uint16_le">
+          <a href="#val-add_uint16_le" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> add_uint16_le
+             : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> <span>int <span class="">&#45;&gt;</span></span> 
+            unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">add_uint16_le b i</code>
+            appends a binary little-endian unsigned 16-bit integer 
+           <code class="font-normal text-sm">i</code> to 
+           <code class="font-normal text-sm">b</code>.
+          </p><ul class="at-tags"><li class="since">since 4.08</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-add_int16_ne">
+          <a href="#val-add_int16_ne" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> add_int16_ne : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> <span>int <span class="">&#45;&gt;</span></span> 
+            unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">add_int16_ne b i</code> 
+           appends a binary native-endian signed 16-bit integer 
+           <code class="font-normal text-sm">i</code> to 
+           <code class="font-normal text-sm">b</code>.
+          </p><ul class="at-tags"><li class="since">since 4.08</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-add_int16_be">
+          <a href="#val-add_int16_be" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> add_int16_be : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> <span>int <span class="">&#45;&gt;</span></span> 
+            unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">add_int16_be b i</code> 
+           appends a binary big-endian signed 16-bit integer 
+           <code class="font-normal text-sm">i</code> to 
+           <code class="font-normal text-sm">b</code>.
+          </p><ul class="at-tags"><li class="since">since 4.08</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-add_int16_le">
+          <a href="#val-add_int16_le" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> add_int16_le : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> <span>int <span class="">&#45;&gt;</span></span> 
+            unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">add_int16_le b i</code> 
+           appends a binary little-endian signed 16-bit integer 
+           <code class="font-normal text-sm">i</code> to 
+           <code class="font-normal text-sm">b</code>.
+          </p><ul class="at-tags"><li class="since">since 4.08</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-add_int32_ne">
+          <a href="#val-add_int32_ne" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> add_int32_ne : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> <span>int32 <span class="">&#45;&gt;</span></span>
+             unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">add_int32_ne b i</code> 
+           appends a binary native-endian 32-bit integer 
+           <code class="font-normal text-sm">i</code> to 
+           <code class="font-normal text-sm">b</code>.
+          </p><ul class="at-tags"><li class="since">since 4.08</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-add_int32_be">
+          <a href="#val-add_int32_be" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> add_int32_be : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> <span>int32 <span class="">&#45;&gt;</span></span>
+             unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">add_int32_be b i</code> 
+           appends a binary big-endian 32-bit integer 
+           <code class="font-normal text-sm">i</code> to 
+           <code class="font-normal text-sm">b</code>.
+          </p><ul class="at-tags"><li class="since">since 4.08</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-add_int32_le">
+          <a href="#val-add_int32_le" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> add_int32_le : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> <span>int32 <span class="">&#45;&gt;</span></span>
+             unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">add_int32_le b i</code> 
+           appends a binary little-endian 32-bit integer 
+           <code class="font-normal text-sm">i</code> to 
+           <code class="font-normal text-sm">b</code>.
+          </p><ul class="at-tags"><li class="since">since 4.08</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-add_int64_ne">
+          <a href="#val-add_int64_ne" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> add_int64_ne : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> <span>int64 <span class="">&#45;&gt;</span></span>
+             unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">add_int64_ne b i</code> 
+           appends a binary native-endian 64-bit integer 
+           <code class="font-normal text-sm">i</code> to 
+           <code class="font-normal text-sm">b</code>.
+          </p><ul class="at-tags"><li class="since">since 4.08</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-add_int64_be">
+          <a href="#val-add_int64_be" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> add_int64_be : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> <span>int64 <span class="">&#45;&gt;</span></span>
+             unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">add_int64_be b i</code> 
+           appends a binary big-endian 64-bit integer 
+           <code class="font-normal text-sm">i</code> to 
+           <code class="font-normal text-sm">b</code>.
+          </p><ul class="at-tags"><li class="since">since 4.08</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-add_int64_le">
+          <a href="#val-add_int64_le" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> add_int64_le : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> <span>int64 <span class="">&#45;&gt;</span></span>
+             unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">add_int64_ne b i</code> 
+           appends a binary little-endian 64-bit integer 
+           <code class="font-normal text-sm">i</code> to 
+           <code class="font-normal text-sm">b</code>.
+          </p><ul class="at-tags"><li class="since">since 4.08</li></ul>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="w-full flex-none lg:w-72 border-t lg:border-l bg-gray-100">
+       <div class="flex h-20 border-b relative">
+        <h2 class="text-xl absolute inset-x-0 p-3 bottom-0 mt-7 font-semibold
+         text-gray-500">ocaml-base-compiler.4.11.2
+        </h2>
+       </div>
+       <div class="m-3">
+        <p class="mb-5 italic text-sm">Official release 4.11.2</p>
+        <div class="mb-3">
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="https://ocaml.org">ocaml.org
+          </a>
+         </div>
+        </div>
+        <details class="font-normal mb-2 text-sm">
+         <summary>Other versions</summary><div id="versions_container"></div>
+        </details><h2 class="font-semibold mb-2 text-sm">Authors</h2>
+        <p class="mb-3 text-sm">Xavier Leroy and many contributors</p>
+        <h2 class="font-semibold mb-2 text-sm">Issues</h2>
+        <div class="mb-3">
+         <a class="text-orange cursor-pointer mb-2 text-sm"
+          href="https://github.com/ocaml/opam-repository/issues">
+          github.com/ocaml/opam-repository/issues
+         </a>
+        </div>
+        <details class="font-semibold mb-2 text-sm">
+         <summary>Package dependencies</summary>
+         <div class="font-normal">
+          <ul>
+           <li>
+            <a href="../../../../ocaml/index.html" class="text-orange
+             cursor-pointer">ocaml
+            </a>
+           </li>
+           <li>
+            <a href="../../../../base-unix/index.html" class="text-orange
+             cursor-pointer">base-unix
+            </a>
+           </li>
+           <li>
+            <a href="../../../../base-bigarray/index.html" class="text-orange
+             cursor-pointer">base-bigarray
+            </a>
+           </li>
+           <li>
+            <a href="../../../../base-threads/index.html" class="text-orange
+             cursor-pointer">base-threads
+            </a>
+           </li>
+          </ul>
+         </div>
+        </details>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div><script>Voodoo.update('../../../version.json')</script>
+ </body>
+</html>

@@ -1,0 +1,2100 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>
+   Env (packages.ocaml-base-compiler.4.11.2.Inline_and_simplify_aux.Env)
+  </title><link rel="stylesheet" href="../../../../tailwind.css"/>
+  <link rel="stylesheet" href="../../../../extra.css"/>
+  <meta charset="utf-8"/><meta name="generator" content="odoc 3dfb7aef2f"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <script src="../../../../highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="../../../../voodoo_client.js"></script>
+  <script
+   src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+   defer="defer">
+  </script>
+ </head>
+ <body class="mx-auto max-w-screen-2xl">
+  <div class="relative">
+   <div class="relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+     <div class="flex justify-between items-center md:justify-start py-6
+      md:space-x-10">
+      <div class="flex justify-start">
+       <a href="https://v3.ocaml.org/">
+        <img src="/colour-logo.svg" alt="" class="h-8 w-auto sm:h-10"/>
+       </a>
+      </div>
+      <nav class="hidden md:flex space-x-10">
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Industry</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/whatisocaml">
+            <p class="text-base font-medium text-gray-900">What is OCaml</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/users">
+            <p class="text-base font-medium text-gray-900">Industrial Users
+            </p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/successstories">
+            <p class="text-base font-medium text-gray-900">Success Stories
+            </p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Resources</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/releases">
+            <p class="text-base font-medium text-gray-900">Releases</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/applications">
+            <p class="text-base font-medium text-gray-900">Applications</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/language">
+            <p class="text-base font-medium text-gray-900">Language</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/archive">
+            <p class="text-base font-medium text-gray-900">Archive</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Community</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/opportunities">
+            <p class="text-base font-medium text-gray-900">Opportunities</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/news">
+            <p class="text-base font-medium text-gray-900">News</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/aroundweb">
+            <p class="text-base font-medium text-gray-900">Around the Web</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="h-screen flex bg-white font-sans">
+   <div class="flex flex-col w-full h-full">
+    <div class="flex-row flex-1">
+     <nav class="bg-orange border-t border-b border-orange flex flex-row">
+      <ol class="max-w-screen-xl w-full px-4 flex space-x-4 sm:px-6 lg:px-8">
+       <li class="flex">
+        <div class="flex items-center">
+         <a href="#" class="text-gray-100 hover:text-gray-500">
+          
+  <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+        </svg>
+  
+          <span class="sr-only">Home</span>
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">packages
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">ocaml-base-compiler
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">4.11.2
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">Inline_and_simplify_aux
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="#" class="ml-4 text-sm font-medium text-gray-100
+          hover:text-gray-500">Env
+         </a>
+        </div>
+       </li>
+      </ol>
+     </nav>
+    </div>
+    <div class="flex flex-row flex-1">
+     <div class="w-72 flex-none bg-gray-100 h-screen border-r border-gray-200
+      sticky top-0 hidden lg:block">
+      <div class="flex h-20 border-b relative">
+       <h2 class="text-xl absolute inset-x-0 p-3 px-5 bottom-0 mt-7
+        border-gray-200 font-semibold text-gray-500 font-sans">On this page
+       </h2>
+      </div>
+     </div>
+     <div class="flex flex-1 flex-col lg:flex-row">
+      <div class="flex-1">
+       <div class="lg:max-w-5xl mx-auto px-3 lg:px-10 mb-10 text-sm">
+        <div class="flex h-20 relative border-b border-gray-200">
+         <div class="relative flex-1 h-20">
+          <h1 class="text-3xl absolute inset-x-0 py-3 bottom-0 font-semibold
+           text-gray-500 font-sans w-full truncate">
+           <code class="font-mono text-gray-800">Inline_and_simplify_aux.Env
+           </code>
+          </h1>
+         </div>
+         <div class="relative flex-none w-28">
+          <h1 class="text-3xl absolute py-3 bottom-0 right-0 font-semibold
+           text-gray-500 font-sans">Module
+          </h1>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-t">
+          <a href="#type-t" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> t</span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Environments follow the lexical scopes of the
+            program.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-create">
+          <a href="#val-create" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> create : 
+            <span>never_inline:bool <span class="">&#45;&gt;</span></span>
+             
+            <span>backend:
+             <span>(<span class="font-semibold">module</span> 
+              <a href="../../Backend_intf/module-type-S/index.html"
+               class="cursor-pointer text-orange">Backend_intf.S
+              </a>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> <span>round:int <span class="">&#45;&gt;</span></span>
+             
+            <span>ppf_dump:
+             <a href="../../Stdlib/Format/index.html#type-formatter"
+              class="cursor-pointer text-orange">Stdlib.Format.formatter
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Create a new environment. If 
+           <code class="font-normal text-sm">never_inline</code> is true
+            then the returned environment will prevent 
+           <code class="font-normal text-sm">Inline_and_simplify</code>
+            from inlining. The 
+           <code class="font-normal text-sm">backend</code> parameter
+            is used for passing information about the compiler backend
+            being used. Newly-created environments have inactive 
+           <code class="font-normal text-sm">Freshening</code>s (see 
+           below) and do not initially hold any approximation information.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-backend">
+          <a href="#val-backend" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> backend : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>(<span class="font-semibold">module</span> 
+             <a href="../../Backend_intf/module-type-S/index.html"
+              class="cursor-pointer text-orange">Backend_intf.S
+             </a>)
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Obtain the first-class module that gives 
+           information about the compiler backend being used for compilation.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-really_import_approx">
+          <a href="#val-really_import_approx" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> really_import_approx
+             : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../Simple_value_approx/index.html#type-t"
+              class="cursor-pointer text-orange">Simple_value_approx.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../../Simple_value_approx/index.html#type-t"
+             class="cursor-pointer text-orange">Simple_value_approx.t
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Obtain the really_import_approx function from
+            the backend module.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-round">
+          <a href="#val-round" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> round : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> int
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Which simplification round we are currently in.</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-ppf_dump">
+          <a href="#val-ppf_dump" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> ppf_dump : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../../Stdlib/Format/index.html#type-formatter"
+             class="cursor-pointer text-orange">Stdlib.Format.formatter
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Where to print intermediate asts and similar
+            debug information
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-add">
+          <a href="#val-add" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> add : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../Variable/index.html#type-t" class="cursor-pointer
+              text-orange">Variable.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../Simple_value_approx/index.html#type-t"
+              class="cursor-pointer text-orange">Simple_value_approx.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Add the approximation of a variable---that 
+           is to say, some knowledge about the value(s) the variable 
+           may take on at runtime---to the environment.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-add_outer_scope">
+          <a href="#val-add_outer_scope" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> add_outer_scope
+             : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../Variable/index.html#type-t" class="cursor-pointer
+              text-orange">Variable.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../Simple_value_approx/index.html#type-t"
+              class="cursor-pointer text-orange">Simple_value_approx.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-add_mutable">
+          <a href="#val-add_mutable" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> add_mutable : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../Mutable_variable/index.html#type-t"
+              class="cursor-pointer text-orange">Mutable_variable.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../Simple_value_approx/index.html#type-t"
+              class="cursor-pointer text-orange">Simple_value_approx.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Like <code class="font-normal text-sm">add</code>
+           , but for mutable variables.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-find_exn">
+          <a href="#val-find_exn" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> find_exn : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../Variable/index.html#type-t" class="cursor-pointer
+              text-orange">Variable.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../../Simple_value_approx/index.html#type-t"
+             class="cursor-pointer text-orange">Simple_value_approx.t
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Find the approximation of a given variable,
+            raising a fatal error if the environment does not know about
+            the variable. Use 
+           <code class="font-normal text-sm">find_opt</code> instead 
+           if you need to catch the failure case.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-find_mutable_exn">
+          <a href="#val-find_mutable_exn" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> find_mutable_exn
+             : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../Mutable_variable/index.html#type-t"
+              class="cursor-pointer text-orange">Mutable_variable.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../../Simple_value_approx/index.html#type-t"
+             class="cursor-pointer text-orange">Simple_value_approx.t
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Like 
+           <code class="font-normal text-sm">find_exn</code>, but for
+            mutable variables.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-scope">
+          <a href="#type-scope" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> scope</span>
+           <span> = </span>
+          </code>
+          <table>
+           <tr id="type-scope.Current">
+            <td class="anchored pl-4">
+             <a href="#type-scope.Current" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Current</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-scope.Outer">
+            <td class="anchored pl-4">
+             <a href="#type-scope.Outer" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Outer</span></span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-find_with_scope_exn">
+          <a href="#val-find_with_scope_exn" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> find_with_scope_exn
+             : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../Variable/index.html#type-t" class="cursor-pointer
+              text-orange">Variable.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-scope" class="cursor-pointer text-orange">scope
+            </a> * 
+            <a href="../../Simple_value_approx/index.html#type-t"
+             class="cursor-pointer text-orange">Simple_value_approx.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-find_opt">
+          <a href="#val-find_opt" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> find_opt : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../Variable/index.html#type-t" class="cursor-pointer
+              text-orange">Variable.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../Simple_value_approx/index.html#type-t"
+              class="cursor-pointer text-orange">Simple_value_approx.t
+             </a> option
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Like 
+           <code class="font-normal text-sm">find_exn</code>, but intended
+            for use where the &quot;not present in environment&quot; 
+           case is to be handled by the caller.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-find_list_exn">
+          <a href="#val-find_list_exn" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> find_list_exn
+             : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>
+              <a href="../../Variable/index.html#type-t"
+               class="cursor-pointer text-orange">Variable.t
+              </a> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../Simple_value_approx/index.html#type-t"
+              class="cursor-pointer text-orange">Simple_value_approx.t
+             </a> list
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Like 
+           <code class="font-normal text-sm">find_exn</code>, but for
+            a list of variables.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-does_not_bind">
+          <a href="#val-does_not_bind" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> does_not_bind
+             : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>
+              <a href="../../Variable/index.html#type-t"
+               class="cursor-pointer text-orange">Variable.t
+              </a> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> bool
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-does_not_freshen">
+          <a href="#val-does_not_freshen" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> does_not_freshen
+             : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>
+              <a href="../../Variable/index.html#type-t"
+               class="cursor-pointer text-orange">Variable.t
+              </a> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> bool
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-add_symbol">
+          <a href="#val-add_symbol" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> add_symbol : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../Symbol/index.html#type-t" class="cursor-pointer
+              text-orange">Symbol.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../Simple_value_approx/index.html#type-t"
+              class="cursor-pointer text-orange">Simple_value_approx.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-redefine_symbol">
+          <a href="#val-redefine_symbol" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> redefine_symbol
+             : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../Symbol/index.html#type-t" class="cursor-pointer
+              text-orange">Symbol.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../Simple_value_approx/index.html#type-t"
+              class="cursor-pointer text-orange">Simple_value_approx.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-find_symbol_exn">
+          <a href="#val-find_symbol_exn" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> find_symbol_exn
+             : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../Symbol/index.html#type-t" class="cursor-pointer
+              text-orange">Symbol.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../../Simple_value_approx/index.html#type-t"
+             class="cursor-pointer text-orange">Simple_value_approx.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-find_symbol_opt">
+          <a href="#val-find_symbol_opt" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> find_symbol_opt
+             : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../Symbol/index.html#type-t" class="cursor-pointer
+              text-orange">Symbol.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../Simple_value_approx/index.html#type-t"
+              class="cursor-pointer text-orange">Simple_value_approx.t
+             </a> option
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-find_symbol_fatal">
+          <a href="#val-find_symbol_fatal" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> find_symbol_fatal
+             : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../Symbol/index.html#type-t" class="cursor-pointer
+              text-orange">Symbol.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../../Simple_value_approx/index.html#type-t"
+             class="cursor-pointer text-orange">Simple_value_approx.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-find_or_load_symbol">
+          <a href="#val-find_or_load_symbol" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> find_or_load_symbol
+             : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../Symbol/index.html#type-t" class="cursor-pointer
+              text-orange">Symbol.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../../Simple_value_approx/index.html#type-t"
+             class="cursor-pointer text-orange">Simple_value_approx.t
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-add_projection">
+          <a href="#val-add_projection" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> add_projection
+             : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>projection:
+             <a href="../../Projection/index.html#type-t"
+              class="cursor-pointer text-orange">Projection.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>bound_to:
+             <a href="../../Variable/index.html#type-t" class="cursor-pointer
+              text-orange">Variable.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Note that the given 
+           <code class="font-normal text-sm">bound_to</code> holds the
+            given <code class="font-normal text-sm">projection</code>
+           .
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-find_projection">
+          <a href="#val-find_projection" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> find_projection
+             : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>projection:
+             <a href="../../Projection/index.html#type-t"
+              class="cursor-pointer text-orange">Projection.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../Variable/index.html#type-t" class="cursor-pointer
+              text-orange">Variable.t
+             </a> option
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Determine if the environment knows about a 
+           variable that is bound to the given 
+           <code class="font-normal text-sm">projection</code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-mem">
+          <a href="#val-mem" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> mem : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../Variable/index.html#type-t" class="cursor-pointer
+              text-orange">Variable.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> bool
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Whether the environment has an approximation
+            for the given variable.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-freshening">
+          <a href="#val-freshening" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> freshening : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../../Freshening/index.html#type-t"
+             class="cursor-pointer text-orange">Freshening.t
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return the freshening that should be applied
+            to variables when rewriting code (in 
+           <code class="font-normal text-sm">Inline_and_simplify</code>
+           , etc.) using the given environment.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-set_freshening">
+          <a href="#val-set_freshening" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> set_freshening
+             : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../Freshening/index.html#type-t"
+              class="cursor-pointer text-orange">Freshening.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Set the freshening that should be used as per
+            <code class="font-normal text-sm">freshening</code>, above.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-activate_freshening">
+          <a href="#val-activate_freshening" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> activate_freshening
+             : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Causes every bound variable in code rewritten
+            during inlining and simplification, using the given environment,
+            to be freshened. This is used when descending into subexpressions
+            substituted into existing expressions.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-local">
+          <a href="#val-local" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> local : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Erase all variable approximation information
+            and freshening information from the given environment. However,
+            the freshening activation state is preserved. This function
+            is used when rewriting inside a function declaration, to 
+           avoid (due to a compiler bug) accidental use of variables 
+           from outer scopes that are not accessible.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100"
+          id="val-inside_set_of_closures_declaration">
+          <a href="#val-inside_set_of_closures_declaration" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            inside_set_of_closures_declaration : 
+            <span>
+             <a href="../../Set_of_closures_origin/index.html#type-t"
+              class="cursor-pointer text-orange">Set_of_closures_origin.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> bool
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Determine whether the inliner is currently 
+           inside a function body from the given set of closures. This
+            is used to detect whether a given function call refers to
+            a function which exists somewhere on the current inlining
+            stack.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-at_toplevel">
+          <a href="#val-at_toplevel" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> at_toplevel : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> bool
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Not inside a closure declaration. Toplevel 
+           code is the one evaluated when the compilation unit is loaded
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-is_inside_branch">
+          <a href="#val-is_inside_branch" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> is_inside_branch
+             : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> bool
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-branch_depth">
+          <a href="#val-branch_depth" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> branch_depth : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-inside_branch">
+          <a href="#val-inside_branch" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> inside_branch
+             : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-increase_closure_depth">
+          <a href="#val-increase_closure_depth" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            increase_closure_depth : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-set_never_inline">
+          <a href="#val-set_never_inline" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> set_never_inline
+             : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Mark that call sites contained within code 
+           rewritten using the given environment should never be replaced
+            by inlined (or unrolled) versions of the callee(s).
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100"
+          id="val-set_never_inline_inside_closures">
+          <a href="#val-set_never_inline_inside_closures" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            set_never_inline_inside_closures : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Equivalent to 
+           <code class="font-normal text-sm">set_never_inline</code> 
+           but only applies to code inside a set of closures.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100"
+          id="val-unset_never_inline_inside_closures">
+          <a href="#val-unset_never_inline_inside_closures" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            unset_never_inline_inside_closures : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Unset the restriction from 
+           <code class="font-normal text-sm">set_never_inline_inside_closures
+           </code>
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100"
+          id="val-set_never_inline_outside_closures">
+          <a href="#val-set_never_inline_outside_closures" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            set_never_inline_outside_closures : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Equivalent to 
+           <code class="font-normal text-sm">set_never_inline</code> 
+           but does not apply to code inside a set of closures.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100"
+          id="val-unset_never_inline_outside_closures">
+          <a href="#val-unset_never_inline_outside_closures"
+           class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            unset_never_inline_outside_closures : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Unset the restriction from 
+           <code class="font-normal text-sm">
+            set_never_inline_outside_closures
+           </code>
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-never_inline">
+          <a href="#val-never_inline" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> never_inline : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> bool
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return whether 
+           <code class="font-normal text-sm">set_never_inline</code> 
+           is currently in effect on the given environment.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-inlining_level">
+          <a href="#val-inlining_level" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> inlining_level
+             : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> int
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-inlining_level_up">
+          <a href="#val-inlining_level_up" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> inlining_level_up
+             : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Mark that this environment is used to rewrite
+            code for inlining. This is used by the inlining heuristics
+            to decide whether to continue. Unconditionally inlined does
+            not take this into account.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-actively_unrolling">
+          <a href="#val-actively_unrolling" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> actively_unrolling
+             : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../Set_of_closures_origin/index.html#type-t"
+              class="cursor-pointer text-orange">Set_of_closures_origin.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> <span>int option</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Whether we are actively unrolling a given function.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-start_actively_unrolling">
+          <a href="#val-start_actively_unrolling" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            start_actively_unrolling : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../Set_of_closures_origin/index.html#type-t"
+              class="cursor-pointer text-orange">Set_of_closures_origin.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> <span>int <span class="">&#45;&gt;</span></span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Start actively unrolling a given function 
+           <code class="font-normal text-sm">n</code> times.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100"
+          id="val-continue_actively_unrolling">
+          <a href="#val-continue_actively_unrolling" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            continue_actively_unrolling : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../Set_of_closures_origin/index.html#type-t"
+              class="cursor-pointer text-orange">Set_of_closures_origin.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Unroll a function currently actively being 
+           unrolled.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-unrolling_allowed">
+          <a href="#val-unrolling_allowed" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> unrolling_allowed
+             : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../Set_of_closures_origin/index.html#type-t"
+              class="cursor-pointer text-orange">Set_of_closures_origin.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> bool
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Whether it is permissible to unroll a call 
+           to a recursive function in the given environment.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-inside_unrolled_function">
+          <a href="#val-inside_unrolled_function" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            inside_unrolled_function : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../Set_of_closures_origin/index.html#type-t"
+              class="cursor-pointer text-orange">Set_of_closures_origin.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Whether the given environment is currently 
+           being used to rewrite the body of an unrolled recursive function.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-inlining_allowed">
+          <a href="#val-inlining_allowed" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> inlining_allowed
+             : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../Closure_origin/index.html#type-t"
+              class="cursor-pointer text-orange">Closure_origin.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> bool
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Whether it is permissible to inline a call 
+           to a function in the given environment.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-inside_inlined_function">
+          <a href="#val-inside_inlined_function" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            inside_inlined_function : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../Closure_origin/index.html#type-t"
+              class="cursor-pointer text-orange">Closure_origin.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Whether the given environment is currently 
+           being used to rewrite the body of an inlined function.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-note_entering_closure">
+          <a href="#val-note_entering_closure" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> note_entering_closure
+             : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>closure_id:
+             <a href="../../Closure_id/index.html#type-t"
+              class="cursor-pointer text-orange">Closure_id.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>dbg:
+             <a href="../../Debuginfo/index.html#type-t"
+              class="cursor-pointer text-orange">Debuginfo.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">If collecting inlining statistics, record that
+            the inliner is about to descend into 
+           <code class="font-normal text-sm">closure_id</code>. This 
+           information enables us to produce a stack of closures that
+            form a kind of context around an inlining decision point.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-note_entering_call">
+          <a href="#val-note_entering_call" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> note_entering_call
+             : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>closure_id:
+             <a href="../../Closure_id/index.html#type-t"
+              class="cursor-pointer text-orange">Closure_id.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>dbg:
+             <a href="../../Debuginfo/index.html#type-t"
+              class="cursor-pointer text-orange">Debuginfo.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">If collecting inlining statistics, record that
+            the inliner is about to descend into a call to 
+           <code class="font-normal text-sm">closure_id</code>. This 
+           information enables us to produce a stack of closures that
+            form a kind of context around an inlining decision point.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-note_entering_inlined">
+          <a href="#val-note_entering_inlined" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> note_entering_inlined
+             : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">If collecting inlining statistics, record that
+            the inliner is about to descend into an inlined function 
+           call. This requires that the inliner has already entered the
+            call with 
+           <code class="font-normal text-sm">note_entering_call</code>
+           .
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-note_entering_specialised">
+          <a href="#val-note_entering_specialised" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            note_entering_specialised : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>closure_ids:
+             <a href="../../Closure_id/Set/index.html#type-t"
+              class="cursor-pointer text-orange">Closure_id.Set.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">If collecting inlining statistics, record that
+            the inliner is about to descend into a specialised function
+            definition. This requires that the inliner has already entered
+            the call with 
+           <code class="font-normal text-sm">note_entering_call</code>
+           .
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-enter_closure">
+          <a href="#val-enter_closure" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> enter_closure
+             : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>closure_id:
+             <a href="../../Closure_id/index.html#type-t"
+              class="cursor-pointer text-orange">Closure_id.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>inline_inside:bool <span class="">&#45;&gt;</span></span>
+             
+            <span>dbg:
+             <a href="../../Debuginfo/index.html#type-t"
+              class="cursor-pointer text-orange">Debuginfo.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>f:
+             <span>(
+              <span>
+               <a href="#type-t" class="cursor-pointer text-orange">t</a>
+                <span class="">&#45;&gt;</span>
+              </span> <span class="">'a</span>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> <span class="">'a</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Update a given environment to record that the
+            inliner is about to descend into 
+           <code class="font-normal text-sm">closure_id</code> and pass
+            the resulting environment to 
+           <code class="font-normal text-sm">f</code>. If 
+           <code class="font-normal text-sm">inline_inside</code> is 
+           <code class="font-normal text-sm">false</code> then the 
+           environment passed to <code class="font-normal text-sm">f</code>
+            will be marked as 
+           <code class="font-normal text-sm">never_inline</code> (see
+            above).
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-record_decision">
+          <a href="#val-record_decision" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> record_decision
+             : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../Inlining_stats_types/Decision/index.html#type-t"
+              class="cursor-pointer text-orange">
+              Inlining_stats_types.Decision.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">If collecting inlining statistics, record an
+            inlining decision for the call at the top of the closure 
+           stack stored inside the given environment.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-print">
+          <a href="#val-print" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> print : 
+            <span>
+             <a href="../../Stdlib/Format/index.html#type-formatter"
+              class="cursor-pointer text-orange">Stdlib.Format.formatter
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Print a human-readable version of the given
+            environment.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-set_inline_debuginfo">
+          <a href="#val-set_inline_debuginfo" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> set_inline_debuginfo
+             : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>dbg:
+             <a href="../../Debuginfo/index.html#type-t"
+              class="cursor-pointer text-orange">Debuginfo.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">The environment stores the call-site being 
+           inlined to produce precise location information. This function
+            sets the current call-site being inlined.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-add_inlined_debuginfo">
+          <a href="#val-add_inlined_debuginfo" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> add_inlined_debuginfo
+             : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>dbg:
+             <a href="../../Debuginfo/index.html#type-t"
+              class="cursor-pointer text-orange">Debuginfo.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../../Debuginfo/index.html#type-t" class="cursor-pointer
+             text-orange">Debuginfo.t
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Appends the locations of inlined call-sites
+            to the <code class="font-normal text-sm">~dbg</code> argument
+          </p>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="w-full flex-none lg:w-72 border-t lg:border-l bg-gray-100">
+       <div class="flex h-20 border-b relative">
+        <h2 class="text-xl absolute inset-x-0 p-3 bottom-0 mt-7 font-semibold
+         text-gray-500">ocaml-base-compiler.4.11.2
+        </h2>
+       </div>
+       <div class="m-3">
+        <p class="mb-5 italic text-sm">Official release 4.11.2</p>
+        <div class="mb-3">
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="https://ocaml.org">ocaml.org
+          </a>
+         </div>
+        </div>
+        <details class="font-normal mb-2 text-sm">
+         <summary>Other versions</summary><div id="versions_container"></div>
+        </details><h2 class="font-semibold mb-2 text-sm">Authors</h2>
+        <p class="mb-3 text-sm">Xavier Leroy and many contributors</p>
+        <h2 class="font-semibold mb-2 text-sm">Issues</h2>
+        <div class="mb-3">
+         <a class="text-orange cursor-pointer mb-2 text-sm"
+          href="https://github.com/ocaml/opam-repository/issues">
+          github.com/ocaml/opam-repository/issues
+         </a>
+        </div>
+        <details class="font-semibold mb-2 text-sm">
+         <summary>Package dependencies</summary>
+         <div class="font-normal">
+          <ul>
+           <li>
+            <a href="../../../../ocaml/index.html" class="text-orange
+             cursor-pointer">ocaml
+            </a>
+           </li>
+           <li>
+            <a href="../../../../base-unix/index.html" class="text-orange
+             cursor-pointer">base-unix
+            </a>
+           </li>
+           <li>
+            <a href="../../../../base-bigarray/index.html" class="text-orange
+             cursor-pointer">base-bigarray
+            </a>
+           </li>
+           <li>
+            <a href="../../../../base-threads/index.html" class="text-orange
+             cursor-pointer">base-threads
+            </a>
+           </li>
+          </ul>
+         </div>
+        </details>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div><script>Voodoo.update('../../../version.json')</script>
+ </body>
+</html>

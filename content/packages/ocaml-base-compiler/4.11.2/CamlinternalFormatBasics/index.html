@@ -1,0 +1,4109 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>
+   CamlinternalFormatBasics
+   (packages.ocaml-base-compiler.4.11.2.CamlinternalFormatBasics)
+  </title><link rel="stylesheet" href="../../../tailwind.css"/>
+  <link rel="stylesheet" href="../../../extra.css"/><meta charset="utf-8"/>
+  <meta name="generator" content="odoc 3dfb7aef2f"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <script src="../../../highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="../../../voodoo_client.js"></script>
+  <script
+   src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+   defer="defer">
+  </script>
+ </head>
+ <body class="mx-auto max-w-screen-2xl">
+  <div class="relative">
+   <div class="relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+     <div class="flex justify-between items-center md:justify-start py-6
+      md:space-x-10">
+      <div class="flex justify-start">
+       <a href="https://v3.ocaml.org/">
+        <img src="/colour-logo.svg" alt="" class="h-8 w-auto sm:h-10"/>
+       </a>
+      </div>
+      <nav class="hidden md:flex space-x-10">
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Industry</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/whatisocaml">
+            <p class="text-base font-medium text-gray-900">What is OCaml</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/users">
+            <p class="text-base font-medium text-gray-900">Industrial Users
+            </p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/successstories">
+            <p class="text-base font-medium text-gray-900">Success Stories
+            </p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Resources</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/releases">
+            <p class="text-base font-medium text-gray-900">Releases</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/applications">
+            <p class="text-base font-medium text-gray-900">Applications</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/language">
+            <p class="text-base font-medium text-gray-900">Language</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/archive">
+            <p class="text-base font-medium text-gray-900">Archive</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Community</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/opportunities">
+            <p class="text-base font-medium text-gray-900">Opportunities</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/news">
+            <p class="text-base font-medium text-gray-900">News</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/aroundweb">
+            <p class="text-base font-medium text-gray-900">Around the Web</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="h-screen flex bg-white font-sans">
+   <div class="flex flex-col w-full h-full">
+    <div class="flex-row flex-1">
+     <nav class="bg-orange border-t border-b border-orange flex flex-row">
+      <ol class="max-w-screen-xl w-full px-4 flex space-x-4 sm:px-6 lg:px-8">
+       <li class="flex">
+        <div class="flex items-center">
+         <a href="#" class="text-gray-100 hover:text-gray-500">
+          
+  <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+        </svg>
+  
+          <span class="sr-only">Home</span>
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">packages
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">ocaml-base-compiler
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">4.11.2
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="#" class="ml-4 text-sm font-medium text-gray-100
+          hover:text-gray-500">CamlinternalFormatBasics
+         </a>
+        </div>
+       </li>
+      </ol>
+     </nav>
+    </div>
+    <div class="flex flex-row flex-1">
+     <div class="w-72 flex-none bg-gray-100 h-screen border-r border-gray-200
+      sticky top-0 hidden lg:block">
+      <div class="flex h-20 border-b relative">
+       <h2 class="text-xl absolute inset-x-0 p-3 px-5 bottom-0 mt-7
+        border-gray-200 font-semibold text-gray-500 font-sans">On this page
+       </h2>
+      </div>
+     </div>
+     <div class="flex flex-1 flex-col lg:flex-row">
+      <div class="flex-1">
+       <div class="lg:max-w-5xl mx-auto px-3 lg:px-10 mb-10 text-sm">
+        <div class="flex h-20 relative border-b border-gray-200">
+         <div class="relative flex-1 h-20">
+          <h1 class="text-3xl absolute inset-x-0 py-3 bottom-0 font-semibold
+           text-gray-500 font-sans w-full truncate">
+           <code class="font-mono text-gray-800">CamlinternalFormatBasics
+           </code>
+          </h1>
+         </div>
+         <div class="relative flex-none w-28">
+          <h1 class="text-3xl absolute py-3 bottom-0 right-0 font-semibold
+           text-gray-500 font-sans">Module
+          </h1>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-padty">
+          <a href="#type-padty" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> padty</span>
+           <span> = </span>
+          </code>
+          <table>
+           <tr id="type-padty.Left">
+            <td class="anchored pl-4">
+             <a href="#type-padty.Left" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Left</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-padty.Right">
+            <td class="anchored pl-4">
+             <a href="#type-padty.Right" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Right</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-padty.Zeros">
+            <td class="anchored pl-4">
+             <a href="#type-padty.Zeros" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Zeros</span></span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-int_conv">
+          <a href="#type-int_conv" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> int_conv</span>
+           <span> = </span>
+          </code>
+          <table>
+           <tr id="type-int_conv.Int_d">
+            <td class="anchored pl-4">
+             <a href="#type-int_conv.Int_d" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Int_d</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-int_conv.Int_pd">
+            <td class="anchored pl-4">
+             <a href="#type-int_conv.Int_pd" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Int_pd</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-int_conv.Int_sd">
+            <td class="anchored pl-4">
+             <a href="#type-int_conv.Int_sd" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Int_sd</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-int_conv.Int_i">
+            <td class="anchored pl-4">
+             <a href="#type-int_conv.Int_i" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Int_i</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-int_conv.Int_pi">
+            <td class="anchored pl-4">
+             <a href="#type-int_conv.Int_pi" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Int_pi</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-int_conv.Int_si">
+            <td class="anchored pl-4">
+             <a href="#type-int_conv.Int_si" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Int_si</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-int_conv.Int_x">
+            <td class="anchored pl-4">
+             <a href="#type-int_conv.Int_x" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Int_x</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-int_conv.Int_Cx">
+            <td class="anchored pl-4">
+             <a href="#type-int_conv.Int_Cx" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Int_Cx</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-int_conv.Int_X">
+            <td class="anchored pl-4">
+             <a href="#type-int_conv.Int_X" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Int_X</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-int_conv.Int_CX">
+            <td class="anchored pl-4">
+             <a href="#type-int_conv.Int_CX" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Int_CX</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-int_conv.Int_o">
+            <td class="anchored pl-4">
+             <a href="#type-int_conv.Int_o" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Int_o</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-int_conv.Int_Co">
+            <td class="anchored pl-4">
+             <a href="#type-int_conv.Int_Co" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Int_Co</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-int_conv.Int_u">
+            <td class="anchored pl-4">
+             <a href="#type-int_conv.Int_u" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Int_u</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-int_conv.Int_Cd">
+            <td class="anchored pl-4">
+             <a href="#type-int_conv.Int_Cd" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Int_Cd</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-int_conv.Int_Ci">
+            <td class="anchored pl-4">
+             <a href="#type-int_conv.Int_Ci" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Int_Ci</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-int_conv.Int_Cu">
+            <td class="anchored pl-4">
+             <a href="#type-int_conv.Int_Cu" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Int_Cu</span></span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-float_flag_conv">
+          <a href="#type-float_flag_conv" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> float_flag_conv
+           </span><span> = </span>
+          </code>
+          <table>
+           <tr id="type-float_flag_conv.Float_flag_">
+            <td class="anchored pl-4">
+             <a href="#type-float_flag_conv.Float_flag_" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Float_flag_</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-float_flag_conv.Float_flag_p">
+            <td class="anchored pl-4">
+             <a href="#type-float_flag_conv.Float_flag_p" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Float_flag_p</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-float_flag_conv.Float_flag_s">
+            <td class="anchored pl-4">
+             <a href="#type-float_flag_conv.Float_flag_s" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Float_flag_s</span></span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-float_kind_conv">
+          <a href="#type-float_kind_conv" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> float_kind_conv
+           </span><span> = </span>
+          </code>
+          <table>
+           <tr id="type-float_kind_conv.Float_f">
+            <td class="anchored pl-4">
+             <a href="#type-float_kind_conv.Float_f" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Float_f</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-float_kind_conv.Float_e">
+            <td class="anchored pl-4">
+             <a href="#type-float_kind_conv.Float_e" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Float_e</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-float_kind_conv.Float_E">
+            <td class="anchored pl-4">
+             <a href="#type-float_kind_conv.Float_E" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Float_E</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-float_kind_conv.Float_g">
+            <td class="anchored pl-4">
+             <a href="#type-float_kind_conv.Float_g" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Float_g</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-float_kind_conv.Float_G">
+            <td class="anchored pl-4">
+             <a href="#type-float_kind_conv.Float_G" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Float_G</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-float_kind_conv.Float_F">
+            <td class="anchored pl-4">
+             <a href="#type-float_kind_conv.Float_F" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Float_F</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-float_kind_conv.Float_h">
+            <td class="anchored pl-4">
+             <a href="#type-float_kind_conv.Float_h" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Float_h</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-float_kind_conv.Float_H">
+            <td class="anchored pl-4">
+             <a href="#type-float_kind_conv.Float_H" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Float_H</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-float_kind_conv.Float_CF">
+            <td class="anchored pl-4">
+             <a href="#type-float_kind_conv.Float_CF" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Float_CF</span></span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-float_conv">
+          <a href="#type-float_conv" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> float_conv</span>
+           <span> = 
+            <a href="#type-float_flag_conv" class="cursor-pointer
+             text-orange">float_flag_conv
+            </a> * 
+            <a href="#type-float_kind_conv" class="cursor-pointer
+             text-orange">float_kind_conv
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-char_set">
+          <a href="#type-char_set" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> char_set</span>
+           <span> = string</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-counter">
+          <a href="#type-counter" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> counter</span>
+           <span> = </span>
+          </code>
+          <table>
+           <tr id="type-counter.Line_counter">
+            <td class="anchored pl-4">
+             <a href="#type-counter.Line_counter" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Line_counter</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-counter.Char_counter">
+            <td class="anchored pl-4">
+             <a href="#type-counter.Char_counter" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Char_counter</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-counter.Token_counter">
+            <td class="anchored pl-4">
+             <a href="#type-counter.Token_counter" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Token_counter</span></span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-padding">
+          <a href="#type-padding" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> 
+            <span>('a, 'b) padding</span>
+           </span><span> = </span>
+          </code>
+          <table>
+           <tr id="type-padding.No_padding">
+            <td class="anchored pl-4">
+             <a href="#type-padding.No_padding" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">No_padding</span> : 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'a</span>)
+                </span> 
+                <a href="#type-padding" class="cursor-pointer text-orange">
+                 padding
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-padding.Lit_padding">
+            <td class="anchored pl-4">
+             <a href="#type-padding.Lit_padding" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Lit_padding</span> : 
+               <a href="#type-padty" class="cursor-pointer text-orange">padty
+               </a> * int <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'a</span>)
+                </span> 
+                <a href="#type-padding" class="cursor-pointer text-orange">
+                 padding
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-padding.Arg_padding">
+            <td class="anchored pl-4">
+             <a href="#type-padding.Arg_padding" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Arg_padding</span> : 
+               <a href="#type-padty" class="cursor-pointer text-orange">padty
+               </a> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(<span>int <span class="">&#45;&gt;</span></span>
+                  <span class="">'a</span>, <span class="">'a</span>
+                 )
+                </span> 
+                <a href="#type-padding" class="cursor-pointer text-orange">
+                 padding
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-pad_option">
+          <a href="#type-pad_option" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> pad_option</span>
+           <span> = <span>int option</span></span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-precision">
+          <a href="#type-precision" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> 
+            <span>('a, 'b) precision</span>
+           </span><span> = </span>
+          </code>
+          <table>
+           <tr id="type-precision.No_precision">
+            <td class="anchored pl-4">
+             <a href="#type-precision.No_precision" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">No_precision</span> : 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'a</span>)
+                </span> 
+                <a href="#type-precision" class="cursor-pointer text-orange">
+                 precision
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-precision.Lit_precision">
+            <td class="anchored pl-4">
+             <a href="#type-precision.Lit_precision" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Lit_precision</span> : int 
+               <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'a</span>)
+                </span> 
+                <a href="#type-precision" class="cursor-pointer text-orange">
+                 precision
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-precision.Arg_precision">
+            <td class="anchored pl-4">
+             <a href="#type-precision.Arg_precision" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Arg_precision</span> : 
+               <span>
+                <span>(<span>int <span class="">&#45;&gt;</span></span>
+                  <span class="">'a</span>, <span class="">'a</span>
+                 )
+                </span> 
+                <a href="#type-precision" class="cursor-pointer text-orange">
+                 precision
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-prec_option">
+          <a href="#type-prec_option" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> prec_option</span>
+           <span> = <span>int option</span></span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-custom_arity">
+          <a href="#type-custom_arity" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> 
+            <span>('a, 'b, 'c) custom_arity</span>
+           </span><span> = </span>
+          </code>
+          <table>
+           <tr id="type-custom_arity.Custom_zero">
+            <td class="anchored pl-4">
+             <a href="#type-custom_arity.Custom_zero" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Custom_zero</span> : 
+               <span>
+                <span>(<span class="">'a</span>, string, 
+                 <span class="">'a</span>)
+                </span> 
+                <a href="#type-custom_arity" class="cursor-pointer
+                 text-orange">custom_arity
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-custom_arity.Custom_succ">
+            <td class="anchored pl-4">
+             <a href="#type-custom_arity.Custom_succ" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Custom_succ</span> : 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>)
+                </span> 
+                <a href="#type-custom_arity" class="cursor-pointer
+                 text-orange">custom_arity
+                </a>
+               </span> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(<span class="">'a</span>, 
+                 <span><span class="">'x</span> 
+                  <span class="">&#45;&gt;</span>
+                 </span> <span class="">'b</span>, 
+                 <span><span class="">'x</span> 
+                  <span class="">&#45;&gt;</span>
+                 </span> <span class="">'c</span>)
+                </span> 
+                <a href="#type-custom_arity" class="cursor-pointer
+                 text-orange">custom_arity
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-block_type">
+          <a href="#type-block_type" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> block_type</span>
+           <span> = </span>
+          </code>
+          <table>
+           <tr id="type-block_type.Pp_hbox">
+            <td class="anchored pl-4">
+             <a href="#type-block_type.Pp_hbox" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pp_hbox</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-block_type.Pp_vbox">
+            <td class="anchored pl-4">
+             <a href="#type-block_type.Pp_vbox" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pp_vbox</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-block_type.Pp_hvbox">
+            <td class="anchored pl-4">
+             <a href="#type-block_type.Pp_hvbox" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pp_hvbox</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-block_type.Pp_hovbox">
+            <td class="anchored pl-4">
+             <a href="#type-block_type.Pp_hovbox" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pp_hovbox</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-block_type.Pp_box">
+            <td class="anchored pl-4">
+             <a href="#type-block_type.Pp_box" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pp_box</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-block_type.Pp_fits">
+            <td class="anchored pl-4">
+             <a href="#type-block_type.Pp_fits" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Pp_fits</span></span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-formatting_lit">
+          <a href="#type-formatting_lit" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> formatting_lit
+           </span><span> = </span>
+          </code>
+          <table>
+           <tr id="type-formatting_lit.Close_box">
+            <td class="anchored pl-4">
+             <a href="#type-formatting_lit.Close_box" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Close_box</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-formatting_lit.Close_tag">
+            <td class="anchored pl-4">
+             <a href="#type-formatting_lit.Close_tag" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Close_tag</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-formatting_lit.Break">
+            <td class="anchored pl-4">
+             <a href="#type-formatting_lit.Break" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Break</span> 
+               <span class="font-semibold">of</span> string * int * int
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-formatting_lit.FFlush">
+            <td class="anchored pl-4">
+             <a href="#type-formatting_lit.FFlush" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">FFlush</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-formatting_lit.Force_newline">
+            <td class="anchored pl-4">
+             <a href="#type-formatting_lit.Force_newline" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Force_newline</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-formatting_lit.Flush_newline">
+            <td class="anchored pl-4">
+             <a href="#type-formatting_lit.Flush_newline" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Flush_newline</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-formatting_lit.Magic_size">
+            <td class="anchored pl-4">
+             <a href="#type-formatting_lit.Magic_size" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Magic_size</span> 
+               <span class="font-semibold">of</span> string * int
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-formatting_lit.Escaped_at">
+            <td class="anchored pl-4">
+             <a href="#type-formatting_lit.Escaped_at" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Escaped_at</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-formatting_lit.Escaped_percent">
+            <td class="anchored pl-4">
+             <a href="#type-formatting_lit.Escaped_percent" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Escaped_percent</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-formatting_lit.Scan_indic">
+            <td class="anchored pl-4">
+             <a href="#type-formatting_lit.Scan_indic" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Scan_indic</span> 
+               <span class="font-semibold">of</span> char
+              </span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-formatting_gen">
+          <a href="#type-formatting_gen" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> 
+            <span>('a, 'b, 'c, 'd, 'e, 'f) formatting_gen</span>
+           </span><span> = </span>
+          </code>
+          <table>
+           <tr id="type-formatting_gen.Open_tag">
+            <td class="anchored pl-4">
+             <a href="#type-formatting_gen.Open_tag" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Open_tag</span> : 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="#type-format6" class="cursor-pointer text-orange">
+                 format6
+                </a>
+               </span> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="#type-formatting_gen" class="cursor-pointer
+                 text-orange">formatting_gen
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-formatting_gen.Open_box">
+            <td class="anchored pl-4">
+             <a href="#type-formatting_gen.Open_box" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Open_box</span> : 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="#type-format6" class="cursor-pointer text-orange">
+                 format6
+                </a>
+               </span> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="#type-formatting_gen" class="cursor-pointer
+                 text-orange">formatting_gen
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-fmtty">
+          <a href="#type-fmtty" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">and</span> 
+            <span>('a, 'b, 'c, 'd, 'e, 'f) fmtty</span>
+           </span>
+           <span> = 
+            <span>
+             <span>(<span class="">'a</span>, <span class="">'b</span>
+              , <span class="">'c</span>, <span class="">'d</span>, 
+              <span class="">'e</span>, <span class="">'f</span>, 
+              <span class="">'a</span>, <span class="">'b</span>, 
+              <span class="">'c</span>, <span class="">'d</span>, 
+              <span class="">'e</span>, <span class="">'f</span>)
+             </span> 
+             <a href="#type-fmtty_rel" class="cursor-pointer text-orange">
+              fmtty_rel
+             </a>
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-fmtty_rel">
+          <a href="#type-fmtty_rel" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">and</span> 
+            <span>
+             ('a1, 'b1, 'c1, 'd1, 'e1, 'f1, 'a2, 'b2, 'c2, 'd2, 'e2, 'f2)
+              fmtty_rel
+            </span>
+           </span><span> = </span>
+          </code>
+          <table>
+           <tr id="type-fmtty_rel.Char_ty">
+            <td class="anchored pl-4">
+             <a href="#type-fmtty_rel.Char_ty" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Char_ty</span> : 
+               <span>
+                <span>(<span class="">'a1</span>, <span class="">'b1</span>
+                 , <span class="">'c1</span>, <span class="">'d1</span>
+                 , <span class="">'e1</span>, <span class="">'f1</span>
+                 , <span class="">'a2</span>, <span class="">'b2</span>
+                 , <span class="">'c2</span>, <span class="">'d2</span>
+                 , <span class="">'e2</span>, <span class="">'f2</span>
+                 )
+                </span> 
+                <a href="#type-fmtty_rel" class="cursor-pointer text-orange">
+                 fmtty_rel
+                </a>
+               </span> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(<span>char <span class="">&#45;&gt;</span></span>
+                  <span class="">'a1</span>, <span class="">'b1</span>
+                 , <span class="">'c1</span>, <span class="">'d1</span>
+                 , <span class="">'e1</span>, <span class="">'f1</span>
+                 , <span>char <span class="">&#45;&gt;</span></span>
+                  <span class="">'a2</span>, <span class="">'b2</span>
+                 , <span class="">'c2</span>, <span class="">'d2</span>
+                 , <span class="">'e2</span>, <span class="">'f2</span>
+                 )
+                </span> 
+                <a href="#type-fmtty_rel" class="cursor-pointer text-orange">
+                 fmtty_rel
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-fmtty_rel.String_ty">
+            <td class="anchored pl-4">
+             <a href="#type-fmtty_rel.String_ty" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">String_ty</span> : 
+               <span>
+                <span>(<span class="">'a1</span>, <span class="">'b1</span>
+                 , <span class="">'c1</span>, <span class="">'d1</span>
+                 , <span class="">'e1</span>, <span class="">'f1</span>
+                 , <span class="">'a2</span>, <span class="">'b2</span>
+                 , <span class="">'c2</span>, <span class="">'d2</span>
+                 , <span class="">'e2</span>, <span class="">'f2</span>
+                 )
+                </span> 
+                <a href="#type-fmtty_rel" class="cursor-pointer text-orange">
+                 fmtty_rel
+                </a>
+               </span> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(<span>string <span class="">&#45;&gt;</span></span>
+                  <span class="">'a1</span>, <span class="">'b1</span>
+                 , <span class="">'c1</span>, <span class="">'d1</span>
+                 , <span class="">'e1</span>, <span class="">'f1</span>
+                 , <span>string <span class="">&#45;&gt;</span></span>
+                  <span class="">'a2</span>, <span class="">'b2</span>
+                 , <span class="">'c2</span>, <span class="">'d2</span>
+                 , <span class="">'e2</span>, <span class="">'f2</span>
+                 )
+                </span> 
+                <a href="#type-fmtty_rel" class="cursor-pointer text-orange">
+                 fmtty_rel
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-fmtty_rel.Int_ty">
+            <td class="anchored pl-4">
+             <a href="#type-fmtty_rel.Int_ty" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Int_ty</span> : 
+               <span>
+                <span>(<span class="">'a1</span>, <span class="">'b1</span>
+                 , <span class="">'c1</span>, <span class="">'d1</span>
+                 , <span class="">'e1</span>, <span class="">'f1</span>
+                 , <span class="">'a2</span>, <span class="">'b2</span>
+                 , <span class="">'c2</span>, <span class="">'d2</span>
+                 , <span class="">'e2</span>, <span class="">'f2</span>
+                 )
+                </span> 
+                <a href="#type-fmtty_rel" class="cursor-pointer text-orange">
+                 fmtty_rel
+                </a>
+               </span> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(<span>int <span class="">&#45;&gt;</span></span>
+                  <span class="">'a1</span>, <span class="">'b1</span>
+                 , <span class="">'c1</span>, <span class="">'d1</span>
+                 , <span class="">'e1</span>, <span class="">'f1</span>
+                 , <span>int <span class="">&#45;&gt;</span></span> 
+                 <span class="">'a2</span>, <span class="">'b2</span>
+                 , <span class="">'c2</span>, <span class="">'d2</span>
+                 , <span class="">'e2</span>, <span class="">'f2</span>
+                 )
+                </span> 
+                <a href="#type-fmtty_rel" class="cursor-pointer text-orange">
+                 fmtty_rel
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-fmtty_rel.Int32_ty">
+            <td class="anchored pl-4">
+             <a href="#type-fmtty_rel.Int32_ty" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Int32_ty</span> : 
+               <span>
+                <span>(<span class="">'a1</span>, <span class="">'b1</span>
+                 , <span class="">'c1</span>, <span class="">'d1</span>
+                 , <span class="">'e1</span>, <span class="">'f1</span>
+                 , <span class="">'a2</span>, <span class="">'b2</span>
+                 , <span class="">'c2</span>, <span class="">'d2</span>
+                 , <span class="">'e2</span>, <span class="">'f2</span>
+                 )
+                </span> 
+                <a href="#type-fmtty_rel" class="cursor-pointer text-orange">
+                 fmtty_rel
+                </a>
+               </span> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(<span>int32 <span class="">&#45;&gt;</span></span>
+                  <span class="">'a1</span>, <span class="">'b1</span>
+                 , <span class="">'c1</span>, <span class="">'d1</span>
+                 , <span class="">'e1</span>, <span class="">'f1</span>
+                 , <span>int32 <span class="">&#45;&gt;</span></span>
+                  <span class="">'a2</span>, <span class="">'b2</span>
+                 , <span class="">'c2</span>, <span class="">'d2</span>
+                 , <span class="">'e2</span>, <span class="">'f2</span>
+                 )
+                </span> 
+                <a href="#type-fmtty_rel" class="cursor-pointer text-orange">
+                 fmtty_rel
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-fmtty_rel.Nativeint_ty">
+            <td class="anchored pl-4">
+             <a href="#type-fmtty_rel.Nativeint_ty" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Nativeint_ty</span> : 
+               <span>
+                <span>(<span class="">'a1</span>, <span class="">'b1</span>
+                 , <span class="">'c1</span>, <span class="">'d1</span>
+                 , <span class="">'e1</span>, <span class="">'f1</span>
+                 , <span class="">'a2</span>, <span class="">'b2</span>
+                 , <span class="">'c2</span>, <span class="">'d2</span>
+                 , <span class="">'e2</span>, <span class="">'f2</span>
+                 )
+                </span> 
+                <a href="#type-fmtty_rel" class="cursor-pointer text-orange">
+                 fmtty_rel
+                </a>
+               </span> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(<span>nativeint <span class="">&#45;&gt;</span></span>
+                  <span class="">'a1</span>, <span class="">'b1</span>
+                 , <span class="">'c1</span>, <span class="">'d1</span>
+                 , <span class="">'e1</span>, <span class="">'f1</span>
+                 , <span>nativeint <span class="">&#45;&gt;</span></span>
+                  <span class="">'a2</span>, <span class="">'b2</span>
+                 , <span class="">'c2</span>, <span class="">'d2</span>
+                 , <span class="">'e2</span>, <span class="">'f2</span>
+                 )
+                </span> 
+                <a href="#type-fmtty_rel" class="cursor-pointer text-orange">
+                 fmtty_rel
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-fmtty_rel.Int64_ty">
+            <td class="anchored pl-4">
+             <a href="#type-fmtty_rel.Int64_ty" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Int64_ty</span> : 
+               <span>
+                <span>(<span class="">'a1</span>, <span class="">'b1</span>
+                 , <span class="">'c1</span>, <span class="">'d1</span>
+                 , <span class="">'e1</span>, <span class="">'f1</span>
+                 , <span class="">'a2</span>, <span class="">'b2</span>
+                 , <span class="">'c2</span>, <span class="">'d2</span>
+                 , <span class="">'e2</span>, <span class="">'f2</span>
+                 )
+                </span> 
+                <a href="#type-fmtty_rel" class="cursor-pointer text-orange">
+                 fmtty_rel
+                </a>
+               </span> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(<span>int64 <span class="">&#45;&gt;</span></span>
+                  <span class="">'a1</span>, <span class="">'b1</span>
+                 , <span class="">'c1</span>, <span class="">'d1</span>
+                 , <span class="">'e1</span>, <span class="">'f1</span>
+                 , <span>int64 <span class="">&#45;&gt;</span></span>
+                  <span class="">'a2</span>, <span class="">'b2</span>
+                 , <span class="">'c2</span>, <span class="">'d2</span>
+                 , <span class="">'e2</span>, <span class="">'f2</span>
+                 )
+                </span> 
+                <a href="#type-fmtty_rel" class="cursor-pointer text-orange">
+                 fmtty_rel
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-fmtty_rel.Float_ty">
+            <td class="anchored pl-4">
+             <a href="#type-fmtty_rel.Float_ty" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Float_ty</span> : 
+               <span>
+                <span>(<span class="">'a1</span>, <span class="">'b1</span>
+                 , <span class="">'c1</span>, <span class="">'d1</span>
+                 , <span class="">'e1</span>, <span class="">'f1</span>
+                 , <span class="">'a2</span>, <span class="">'b2</span>
+                 , <span class="">'c2</span>, <span class="">'d2</span>
+                 , <span class="">'e2</span>, <span class="">'f2</span>
+                 )
+                </span> 
+                <a href="#type-fmtty_rel" class="cursor-pointer text-orange">
+                 fmtty_rel
+                </a>
+               </span> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(<span>float <span class="">&#45;&gt;</span></span>
+                  <span class="">'a1</span>, <span class="">'b1</span>
+                 , <span class="">'c1</span>, <span class="">'d1</span>
+                 , <span class="">'e1</span>, <span class="">'f1</span>
+                 , <span>float <span class="">&#45;&gt;</span></span>
+                  <span class="">'a2</span>, <span class="">'b2</span>
+                 , <span class="">'c2</span>, <span class="">'d2</span>
+                 , <span class="">'e2</span>, <span class="">'f2</span>
+                 )
+                </span> 
+                <a href="#type-fmtty_rel" class="cursor-pointer text-orange">
+                 fmtty_rel
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-fmtty_rel.Bool_ty">
+            <td class="anchored pl-4">
+             <a href="#type-fmtty_rel.Bool_ty" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Bool_ty</span> : 
+               <span>
+                <span>(<span class="">'a1</span>, <span class="">'b1</span>
+                 , <span class="">'c1</span>, <span class="">'d1</span>
+                 , <span class="">'e1</span>, <span class="">'f1</span>
+                 , <span class="">'a2</span>, <span class="">'b2</span>
+                 , <span class="">'c2</span>, <span class="">'d2</span>
+                 , <span class="">'e2</span>, <span class="">'f2</span>
+                 )
+                </span> 
+                <a href="#type-fmtty_rel" class="cursor-pointer text-orange">
+                 fmtty_rel
+                </a>
+               </span> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(<span>bool <span class="">&#45;&gt;</span></span>
+                  <span class="">'a1</span>, <span class="">'b1</span>
+                 , <span class="">'c1</span>, <span class="">'d1</span>
+                 , <span class="">'e1</span>, <span class="">'f1</span>
+                 , <span>bool <span class="">&#45;&gt;</span></span>
+                  <span class="">'a2</span>, <span class="">'b2</span>
+                 , <span class="">'c2</span>, <span class="">'d2</span>
+                 , <span class="">'e2</span>, <span class="">'f2</span>
+                 )
+                </span> 
+                <a href="#type-fmtty_rel" class="cursor-pointer text-orange">
+                 fmtty_rel
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-fmtty_rel.Format_arg_ty">
+            <td class="anchored pl-4">
+             <a href="#type-fmtty_rel.Format_arg_ty" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Format_arg_ty</span> : 
+               <span>
+                <span>(<span class="">'g</span>, <span class="">'h</span>
+                 , <span class="">'i</span>, <span class="">'j</span>
+                 , <span class="">'k</span>, <span class="">'l</span>
+                 )
+                </span> 
+                <a href="#type-fmtty" class="cursor-pointer text-orange">
+                 fmtty
+                </a>
+               </span> * 
+               <span>
+                <span>(<span class="">'a1</span>, <span class="">'b1</span>
+                 , <span class="">'c1</span>, <span class="">'d1</span>
+                 , <span class="">'e1</span>, <span class="">'f1</span>
+                 , <span class="">'a2</span>, <span class="">'b2</span>
+                 , <span class="">'c2</span>, <span class="">'d2</span>
+                 , <span class="">'e2</span>, <span class="">'f2</span>
+                 )
+                </span> 
+                <a href="#type-fmtty_rel" class="cursor-pointer text-orange">
+                 fmtty_rel
+                </a>
+               </span> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(
+                 <span>
+                  <span>
+                   <span>(<span class="">'g</span>, <span class="">'h</span>
+                    , <span class="">'i</span>, <span class="">'j</span>
+                    , <span class="">'k</span>, <span class="">'l</span>
+                    )
+                   </span> 
+                   <a href="#type-format6" class="cursor-pointer text-orange">
+                    format6
+                   </a>
+                  </span> <span class="">&#45;&gt;</span>
+                 </span> <span class="">'a1</span>, 
+                 <span class="">'b1</span>, <span class="">'c1</span>
+                 , <span class="">'d1</span>, <span class="">'e1</span>
+                 , <span class="">'f1</span>, 
+                 <span>
+                  <span>
+                   <span>(<span class="">'g</span>, <span class="">'h</span>
+                    , <span class="">'i</span>, <span class="">'j</span>
+                    , <span class="">'k</span>, <span class="">'l</span>
+                    )
+                   </span> 
+                   <a href="#type-format6" class="cursor-pointer text-orange">
+                    format6
+                   </a>
+                  </span> <span class="">&#45;&gt;</span>
+                 </span> <span class="">'a2</span>, 
+                 <span class="">'b2</span>, <span class="">'c2</span>
+                 , <span class="">'d2</span>, <span class="">'e2</span>
+                 , <span class="">'f2</span>)
+                </span> 
+                <a href="#type-fmtty_rel" class="cursor-pointer text-orange">
+                 fmtty_rel
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-fmtty_rel.Format_subst_ty">
+            <td class="anchored pl-4">
+             <a href="#type-fmtty_rel.Format_subst_ty" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Format_subst_ty</span> : 
+               <span>
+                <span>(<span class="">'g</span>, <span class="">'h</span>
+                 , <span class="">'i</span>, <span class="">'j</span>
+                 , <span class="">'k</span>, <span class="">'l</span>
+                 , <span class="">'g1</span>, <span class="">'b1</span>
+                 , <span class="">'c1</span>, <span class="">'j1</span>
+                 , <span class="">'d1</span>, <span class="">'a1</span>
+                 )
+                </span> 
+                <a href="#type-fmtty_rel" class="cursor-pointer text-orange">
+                 fmtty_rel
+                </a>
+               </span> * 
+               <span>
+                <span>(<span class="">'g</span>, <span class="">'h</span>
+                 , <span class="">'i</span>, <span class="">'j</span>
+                 , <span class="">'k</span>, <span class="">'l</span>
+                 , <span class="">'g2</span>, <span class="">'b2</span>
+                 , <span class="">'c2</span>, <span class="">'j2</span>
+                 , <span class="">'d2</span>, <span class="">'a2</span>
+                 )
+                </span> 
+                <a href="#type-fmtty_rel" class="cursor-pointer text-orange">
+                 fmtty_rel
+                </a>
+               </span> * 
+               <span>
+                <span>(<span class="">'a1</span>, <span class="">'b1</span>
+                 , <span class="">'c1</span>, <span class="">'d1</span>
+                 , <span class="">'e1</span>, <span class="">'f1</span>
+                 , <span class="">'a2</span>, <span class="">'b2</span>
+                 , <span class="">'c2</span>, <span class="">'d2</span>
+                 , <span class="">'e2</span>, <span class="">'f2</span>
+                 )
+                </span> 
+                <a href="#type-fmtty_rel" class="cursor-pointer text-orange">
+                 fmtty_rel
+                </a>
+               </span> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(
+                 <span>
+                  <span>
+                   <span>(<span class="">'g</span>, <span class="">'h</span>
+                    , <span class="">'i</span>, <span class="">'j</span>
+                    , <span class="">'k</span>, <span class="">'l</span>
+                    )
+                   </span> 
+                   <a href="#type-format6" class="cursor-pointer text-orange">
+                    format6
+                   </a>
+                  </span> <span class="">&#45;&gt;</span>
+                 </span> <span class="">'g1</span>, 
+                 <span class="">'b1</span>, <span class="">'c1</span>
+                 , <span class="">'j1</span>, <span class="">'e1</span>
+                 , <span class="">'f1</span>, 
+                 <span>
+                  <span>
+                   <span>(<span class="">'g</span>, <span class="">'h</span>
+                    , <span class="">'i</span>, <span class="">'j</span>
+                    , <span class="">'k</span>, <span class="">'l</span>
+                    )
+                   </span> 
+                   <a href="#type-format6" class="cursor-pointer text-orange">
+                    format6
+                   </a>
+                  </span> <span class="">&#45;&gt;</span>
+                 </span> <span class="">'g2</span>, 
+                 <span class="">'b2</span>, <span class="">'c2</span>
+                 , <span class="">'j2</span>, <span class="">'e2</span>
+                 , <span class="">'f2</span>)
+                </span> 
+                <a href="#type-fmtty_rel" class="cursor-pointer text-orange">
+                 fmtty_rel
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-fmtty_rel.Alpha_ty">
+            <td class="anchored pl-4">
+             <a href="#type-fmtty_rel.Alpha_ty" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Alpha_ty</span> : 
+               <span>
+                <span>(<span class="">'a1</span>, <span class="">'b1</span>
+                 , <span class="">'c1</span>, <span class="">'d1</span>
+                 , <span class="">'e1</span>, <span class="">'f1</span>
+                 , <span class="">'a2</span>, <span class="">'b2</span>
+                 , <span class="">'c2</span>, <span class="">'d2</span>
+                 , <span class="">'e2</span>, <span class="">'f2</span>
+                 )
+                </span> 
+                <a href="#type-fmtty_rel" class="cursor-pointer text-orange">
+                 fmtty_rel
+                </a>
+               </span> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(
+                 <span>
+                  <span>(
+                   <span><span class="">'b1</span> 
+                    <span class="">&#45;&gt;</span>
+                   </span> 
+                   <span><span class="">'x</span> 
+                    <span class="">&#45;&gt;</span>
+                   </span> <span class="">'c1</span>)
+                  </span> <span class="">&#45;&gt;</span>
+                 </span> 
+                 <span><span class="">'x</span> 
+                  <span class="">&#45;&gt;</span>
+                 </span> <span class="">'a1</span>, 
+                 <span class="">'b1</span>, <span class="">'c1</span>
+                 , <span class="">'d1</span>, <span class="">'e1</span>
+                 , <span class="">'f1</span>, 
+                 <span>
+                  <span>(
+                   <span><span class="">'b2</span> 
+                    <span class="">&#45;&gt;</span>
+                   </span> 
+                   <span><span class="">'x</span> 
+                    <span class="">&#45;&gt;</span>
+                   </span> <span class="">'c2</span>)
+                  </span> <span class="">&#45;&gt;</span>
+                 </span> 
+                 <span><span class="">'x</span> 
+                  <span class="">&#45;&gt;</span>
+                 </span> <span class="">'a2</span>, 
+                 <span class="">'b2</span>, <span class="">'c2</span>
+                 , <span class="">'d2</span>, <span class="">'e2</span>
+                 , <span class="">'f2</span>)
+                </span> 
+                <a href="#type-fmtty_rel" class="cursor-pointer text-orange">
+                 fmtty_rel
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-fmtty_rel.Theta_ty">
+            <td class="anchored pl-4">
+             <a href="#type-fmtty_rel.Theta_ty" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Theta_ty</span> : 
+               <span>
+                <span>(<span class="">'a1</span>, <span class="">'b1</span>
+                 , <span class="">'c1</span>, <span class="">'d1</span>
+                 , <span class="">'e1</span>, <span class="">'f1</span>
+                 , <span class="">'a2</span>, <span class="">'b2</span>
+                 , <span class="">'c2</span>, <span class="">'d2</span>
+                 , <span class="">'e2</span>, <span class="">'f2</span>
+                 )
+                </span> 
+                <a href="#type-fmtty_rel" class="cursor-pointer text-orange">
+                 fmtty_rel
+                </a>
+               </span> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(
+                 <span>
+                  <span>(
+                   <span><span class="">'b1</span> 
+                    <span class="">&#45;&gt;</span>
+                   </span> <span class="">'c1</span>)
+                  </span> <span class="">&#45;&gt;</span>
+                 </span> <span class="">'a1</span>, 
+                 <span class="">'b1</span>, <span class="">'c1</span>
+                 , <span class="">'d1</span>, <span class="">'e1</span>
+                 , <span class="">'f1</span>, 
+                 <span>
+                  <span>(
+                   <span><span class="">'b2</span> 
+                    <span class="">&#45;&gt;</span>
+                   </span> <span class="">'c2</span>)
+                  </span> <span class="">&#45;&gt;</span>
+                 </span> <span class="">'a2</span>, 
+                 <span class="">'b2</span>, <span class="">'c2</span>
+                 , <span class="">'d2</span>, <span class="">'e2</span>
+                 , <span class="">'f2</span>)
+                </span> 
+                <a href="#type-fmtty_rel" class="cursor-pointer text-orange">
+                 fmtty_rel
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-fmtty_rel.Any_ty">
+            <td class="anchored pl-4">
+             <a href="#type-fmtty_rel.Any_ty" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Any_ty</span> : 
+               <span>
+                <span>(<span class="">'a1</span>, <span class="">'b1</span>
+                 , <span class="">'c1</span>, <span class="">'d1</span>
+                 , <span class="">'e1</span>, <span class="">'f1</span>
+                 , <span class="">'a2</span>, <span class="">'b2</span>
+                 , <span class="">'c2</span>, <span class="">'d2</span>
+                 , <span class="">'e2</span>, <span class="">'f2</span>
+                 )
+                </span> 
+                <a href="#type-fmtty_rel" class="cursor-pointer text-orange">
+                 fmtty_rel
+                </a>
+               </span> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(
+                 <span><span class="">'x</span> 
+                  <span class="">&#45;&gt;</span>
+                 </span> <span class="">'a1</span>, 
+                 <span class="">'b1</span>, <span class="">'c1</span>
+                 , <span class="">'d1</span>, <span class="">'e1</span>
+                 , <span class="">'f1</span>, 
+                 <span><span class="">'x</span> 
+                  <span class="">&#45;&gt;</span>
+                 </span> <span class="">'a2</span>, 
+                 <span class="">'b2</span>, <span class="">'c2</span>
+                 , <span class="">'d2</span>, <span class="">'e2</span>
+                 , <span class="">'f2</span>)
+                </span> 
+                <a href="#type-fmtty_rel" class="cursor-pointer text-orange">
+                 fmtty_rel
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-fmtty_rel.Reader_ty">
+            <td class="anchored pl-4">
+             <a href="#type-fmtty_rel.Reader_ty" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Reader_ty</span> : 
+               <span>
+                <span>(<span class="">'a1</span>, <span class="">'b1</span>
+                 , <span class="">'c1</span>, <span class="">'d1</span>
+                 , <span class="">'e1</span>, <span class="">'f1</span>
+                 , <span class="">'a2</span>, <span class="">'b2</span>
+                 , <span class="">'c2</span>, <span class="">'d2</span>
+                 , <span class="">'e2</span>, <span class="">'f2</span>
+                 )
+                </span> 
+                <a href="#type-fmtty_rel" class="cursor-pointer text-orange">
+                 fmtty_rel
+                </a>
+               </span> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(
+                 <span><span class="">'x</span> 
+                  <span class="">&#45;&gt;</span>
+                 </span> <span class="">'a1</span>, 
+                 <span class="">'b1</span>, <span class="">'c1</span>
+                 , 
+                 <span>
+                  <span>(
+                   <span><span class="">'b1</span> 
+                    <span class="">&#45;&gt;</span>
+                   </span> <span class="">'x</span>)
+                  </span> <span class="">&#45;&gt;</span>
+                 </span> <span class="">'d1</span>, 
+                 <span class="">'e1</span>, <span class="">'f1</span>
+                 , 
+                 <span><span class="">'x</span> 
+                  <span class="">&#45;&gt;</span>
+                 </span> <span class="">'a2</span>, 
+                 <span class="">'b2</span>, <span class="">'c2</span>
+                 , 
+                 <span>
+                  <span>(
+                   <span><span class="">'b2</span> 
+                    <span class="">&#45;&gt;</span>
+                   </span> <span class="">'x</span>)
+                  </span> <span class="">&#45;&gt;</span>
+                 </span> <span class="">'d2</span>, 
+                 <span class="">'e2</span>, <span class="">'f2</span>
+                 )
+                </span> 
+                <a href="#type-fmtty_rel" class="cursor-pointer text-orange">
+                 fmtty_rel
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-fmtty_rel.Ignored_reader_ty">
+            <td class="anchored pl-4">
+             <a href="#type-fmtty_rel.Ignored_reader_ty" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Ignored_reader_ty</span> : 
+               <span>
+                <span>(<span class="">'a1</span>, <span class="">'b1</span>
+                 , <span class="">'c1</span>, <span class="">'d1</span>
+                 , <span class="">'e1</span>, <span class="">'f1</span>
+                 , <span class="">'a2</span>, <span class="">'b2</span>
+                 , <span class="">'c2</span>, <span class="">'d2</span>
+                 , <span class="">'e2</span>, <span class="">'f2</span>
+                 )
+                </span> 
+                <a href="#type-fmtty_rel" class="cursor-pointer text-orange">
+                 fmtty_rel
+                </a>
+               </span> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(<span class="">'a1</span>, <span class="">'b1</span>
+                 , <span class="">'c1</span>, 
+                 <span>
+                  <span>(
+                   <span><span class="">'b1</span> 
+                    <span class="">&#45;&gt;</span>
+                   </span> <span class="">'x</span>)
+                  </span> <span class="">&#45;&gt;</span>
+                 </span> <span class="">'d1</span>, 
+                 <span class="">'e1</span>, <span class="">'f1</span>
+                 , <span class="">'a2</span>, <span class="">'b2</span>
+                 , <span class="">'c2</span>, 
+                 <span>
+                  <span>(
+                   <span><span class="">'b2</span> 
+                    <span class="">&#45;&gt;</span>
+                   </span> <span class="">'x</span>)
+                  </span> <span class="">&#45;&gt;</span>
+                 </span> <span class="">'d2</span>, 
+                 <span class="">'e2</span>, <span class="">'f2</span>
+                 )
+                </span> 
+                <a href="#type-fmtty_rel" class="cursor-pointer text-orange">
+                 fmtty_rel
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-fmtty_rel.End_of_fmtty">
+            <td class="anchored pl-4">
+             <a href="#type-fmtty_rel.End_of_fmtty" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">End_of_fmtty</span> : 
+               <span>
+                <span>(<span class="">'f1</span>, <span class="">'b1</span>
+                 , <span class="">'c1</span>, <span class="">'d1</span>
+                 , <span class="">'d1</span>, <span class="">'f1</span>
+                 , <span class="">'f2</span>, <span class="">'b2</span>
+                 , <span class="">'c2</span>, <span class="">'d2</span>
+                 , <span class="">'d2</span>, <span class="">'f2</span>
+                 )
+                </span> 
+                <a href="#type-fmtty_rel" class="cursor-pointer text-orange">
+                 fmtty_rel
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-fmt">
+          <a href="#type-fmt" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">and</span> 
+            <span>('a, 'b, 'c, 'd, 'e, 'f) fmt</span>
+           </span><span> = </span>
+          </code>
+          <table>
+           <tr id="type-fmt.Char">
+            <td class="anchored pl-4">
+             <a href="#type-fmt.Char" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Char</span> : 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="#type-fmt" class="cursor-pointer text-orange">fmt
+                </a>
+               </span> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(<span>char <span class="">&#45;&gt;</span></span>
+                  <span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="#type-fmt" class="cursor-pointer text-orange">fmt
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-fmt.Caml_char">
+            <td class="anchored pl-4">
+             <a href="#type-fmt.Caml_char" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Caml_char</span> : 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="#type-fmt" class="cursor-pointer text-orange">fmt
+                </a>
+               </span> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(<span>char <span class="">&#45;&gt;</span></span>
+                  <span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="#type-fmt" class="cursor-pointer text-orange">fmt
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-fmt.String">
+            <td class="anchored pl-4">
+             <a href="#type-fmt.String" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">String</span> : 
+               <span>
+                <span>(<span class="">'x</span>, 
+                 <span>string <span class="">&#45;&gt;</span></span> 
+                 <span class="">'a</span>)
+                </span> 
+                <a href="#type-padding" class="cursor-pointer text-orange">
+                 padding
+                </a>
+               </span> * 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="#type-fmt" class="cursor-pointer text-orange">fmt
+                </a>
+               </span> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(<span class="">'x</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="#type-fmt" class="cursor-pointer text-orange">fmt
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-fmt.Caml_string">
+            <td class="anchored pl-4">
+             <a href="#type-fmt.Caml_string" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Caml_string</span> : 
+               <span>
+                <span>(<span class="">'x</span>, 
+                 <span>string <span class="">&#45;&gt;</span></span> 
+                 <span class="">'a</span>)
+                </span> 
+                <a href="#type-padding" class="cursor-pointer text-orange">
+                 padding
+                </a>
+               </span> * 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="#type-fmt" class="cursor-pointer text-orange">fmt
+                </a>
+               </span> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(<span class="">'x</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="#type-fmt" class="cursor-pointer text-orange">fmt
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-fmt.Int">
+            <td class="anchored pl-4">
+             <a href="#type-fmt.Int" class="hover-link inline-block -ml-7
+              pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Int</span> : 
+               <a href="#type-int_conv" class="cursor-pointer text-orange">
+                int_conv
+               </a> * 
+               <span>
+                <span>(<span class="">'x</span>, <span class="">'y</span>)
+                </span> 
+                <a href="#type-padding" class="cursor-pointer text-orange">
+                 padding
+                </a>
+               </span> * 
+               <span>
+                <span>(<span class="">'y</span>, 
+                 <span>int <span class="">&#45;&gt;</span></span> 
+                 <span class="">'a</span>)
+                </span> 
+                <a href="#type-precision" class="cursor-pointer text-orange">
+                 precision
+                </a>
+               </span> * 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="#type-fmt" class="cursor-pointer text-orange">fmt
+                </a>
+               </span> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(<span class="">'x</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="#type-fmt" class="cursor-pointer text-orange">fmt
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-fmt.Int32">
+            <td class="anchored pl-4">
+             <a href="#type-fmt.Int32" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Int32</span> : 
+               <a href="#type-int_conv" class="cursor-pointer text-orange">
+                int_conv
+               </a> * 
+               <span>
+                <span>(<span class="">'x</span>, <span class="">'y</span>)
+                </span> 
+                <a href="#type-padding" class="cursor-pointer text-orange">
+                 padding
+                </a>
+               </span> * 
+               <span>
+                <span>(<span class="">'y</span>, 
+                 <span>int32 <span class="">&#45;&gt;</span></span> 
+                 <span class="">'a</span>)
+                </span> 
+                <a href="#type-precision" class="cursor-pointer text-orange">
+                 precision
+                </a>
+               </span> * 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="#type-fmt" class="cursor-pointer text-orange">fmt
+                </a>
+               </span> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(<span class="">'x</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="#type-fmt" class="cursor-pointer text-orange">fmt
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-fmt.Nativeint">
+            <td class="anchored pl-4">
+             <a href="#type-fmt.Nativeint" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Nativeint</span> : 
+               <a href="#type-int_conv" class="cursor-pointer text-orange">
+                int_conv
+               </a> * 
+               <span>
+                <span>(<span class="">'x</span>, <span class="">'y</span>)
+                </span> 
+                <a href="#type-padding" class="cursor-pointer text-orange">
+                 padding
+                </a>
+               </span> * 
+               <span>
+                <span>(<span class="">'y</span>, 
+                 <span>nativeint <span class="">&#45;&gt;</span></span>
+                  <span class="">'a</span>)
+                </span> 
+                <a href="#type-precision" class="cursor-pointer text-orange">
+                 precision
+                </a>
+               </span> * 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="#type-fmt" class="cursor-pointer text-orange">fmt
+                </a>
+               </span> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(<span class="">'x</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="#type-fmt" class="cursor-pointer text-orange">fmt
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-fmt.Int64">
+            <td class="anchored pl-4">
+             <a href="#type-fmt.Int64" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Int64</span> : 
+               <a href="#type-int_conv" class="cursor-pointer text-orange">
+                int_conv
+               </a> * 
+               <span>
+                <span>(<span class="">'x</span>, <span class="">'y</span>)
+                </span> 
+                <a href="#type-padding" class="cursor-pointer text-orange">
+                 padding
+                </a>
+               </span> * 
+               <span>
+                <span>(<span class="">'y</span>, 
+                 <span>int64 <span class="">&#45;&gt;</span></span> 
+                 <span class="">'a</span>)
+                </span> 
+                <a href="#type-precision" class="cursor-pointer text-orange">
+                 precision
+                </a>
+               </span> * 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="#type-fmt" class="cursor-pointer text-orange">fmt
+                </a>
+               </span> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(<span class="">'x</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="#type-fmt" class="cursor-pointer text-orange">fmt
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-fmt.Float">
+            <td class="anchored pl-4">
+             <a href="#type-fmt.Float" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Float</span> : 
+               <a href="#type-float_conv" class="cursor-pointer text-orange">
+                float_conv
+               </a> * 
+               <span>
+                <span>(<span class="">'x</span>, <span class="">'y</span>)
+                </span> 
+                <a href="#type-padding" class="cursor-pointer text-orange">
+                 padding
+                </a>
+               </span> * 
+               <span>
+                <span>(<span class="">'y</span>, 
+                 <span>float <span class="">&#45;&gt;</span></span> 
+                 <span class="">'a</span>)
+                </span> 
+                <a href="#type-precision" class="cursor-pointer text-orange">
+                 precision
+                </a>
+               </span> * 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="#type-fmt" class="cursor-pointer text-orange">fmt
+                </a>
+               </span> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(<span class="">'x</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="#type-fmt" class="cursor-pointer text-orange">fmt
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-fmt.Bool">
+            <td class="anchored pl-4">
+             <a href="#type-fmt.Bool" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Bool</span> : 
+               <span>
+                <span>(<span class="">'x</span>, 
+                 <span>bool <span class="">&#45;&gt;</span></span> 
+                 <span class="">'a</span>)
+                </span> 
+                <a href="#type-padding" class="cursor-pointer text-orange">
+                 padding
+                </a>
+               </span> * 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="#type-fmt" class="cursor-pointer text-orange">fmt
+                </a>
+               </span> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(<span class="">'x</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="#type-fmt" class="cursor-pointer text-orange">fmt
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-fmt.Flush">
+            <td class="anchored pl-4">
+             <a href="#type-fmt.Flush" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Flush</span> : 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="#type-fmt" class="cursor-pointer text-orange">fmt
+                </a>
+               </span> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="#type-fmt" class="cursor-pointer text-orange">fmt
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-fmt.String_literal">
+            <td class="anchored pl-4">
+             <a href="#type-fmt.String_literal" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">String_literal</span> : string * 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="#type-fmt" class="cursor-pointer text-orange">fmt
+                </a>
+               </span> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="#type-fmt" class="cursor-pointer text-orange">fmt
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-fmt.Char_literal">
+            <td class="anchored pl-4">
+             <a href="#type-fmt.Char_literal" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Char_literal</span> : char * 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="#type-fmt" class="cursor-pointer text-orange">fmt
+                </a>
+               </span> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="#type-fmt" class="cursor-pointer text-orange">fmt
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-fmt.Format_arg">
+            <td class="anchored pl-4">
+             <a href="#type-fmt.Format_arg" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Format_arg</span> : 
+               <a href="#type-pad_option" class="cursor-pointer text-orange">
+                pad_option
+               </a> * 
+               <span>
+                <span>(<span class="">'g</span>, <span class="">'h</span>
+                 , <span class="">'i</span>, <span class="">'j</span>
+                 , <span class="">'k</span>, <span class="">'l</span>
+                 )
+                </span> 
+                <a href="#type-fmtty" class="cursor-pointer text-orange">
+                 fmtty
+                </a>
+               </span> * 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="#type-fmt" class="cursor-pointer text-orange">fmt
+                </a>
+               </span> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(
+                 <span>
+                  <span>
+                   <span>(<span class="">'g</span>, <span class="">'h</span>
+                    , <span class="">'i</span>, <span class="">'j</span>
+                    , <span class="">'k</span>, <span class="">'l</span>
+                    )
+                   </span> 
+                   <a href="#type-format6" class="cursor-pointer text-orange">
+                    format6
+                   </a>
+                  </span> <span class="">&#45;&gt;</span>
+                 </span> <span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="#type-fmt" class="cursor-pointer text-orange">fmt
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-fmt.Format_subst">
+            <td class="anchored pl-4">
+             <a href="#type-fmt.Format_subst" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Format_subst</span> : 
+               <a href="#type-pad_option" class="cursor-pointer text-orange">
+                pad_option
+               </a> * 
+               <span>
+                <span>(<span class="">'g</span>, <span class="">'h</span>
+                 , <span class="">'i</span>, <span class="">'j</span>
+                 , <span class="">'k</span>, <span class="">'l</span>
+                 , <span class="">'g2</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'j2</span>
+                 , <span class="">'d</span>, <span class="">'a</span>
+                 )
+                </span> 
+                <a href="#type-fmtty_rel" class="cursor-pointer text-orange">
+                 fmtty_rel
+                </a>
+               </span> * 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="#type-fmt" class="cursor-pointer text-orange">fmt
+                </a>
+               </span> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(
+                 <span>
+                  <span>
+                   <span>(<span class="">'g</span>, <span class="">'h</span>
+                    , <span class="">'i</span>, <span class="">'j</span>
+                    , <span class="">'k</span>, <span class="">'l</span>
+                    )
+                   </span> 
+                   <a href="#type-format6" class="cursor-pointer text-orange">
+                    format6
+                   </a>
+                  </span> <span class="">&#45;&gt;</span>
+                 </span> <span class="">'g2</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'j2</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="#type-fmt" class="cursor-pointer text-orange">fmt
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-fmt.Alpha">
+            <td class="anchored pl-4">
+             <a href="#type-fmt.Alpha" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Alpha</span> : 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="#type-fmt" class="cursor-pointer text-orange">fmt
+                </a>
+               </span> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(
+                 <span>
+                  <span>(
+                   <span><span class="">'b</span> 
+                    <span class="">&#45;&gt;</span>
+                   </span> 
+                   <span><span class="">'x</span> 
+                    <span class="">&#45;&gt;</span>
+                   </span> <span class="">'c</span>)
+                  </span> <span class="">&#45;&gt;</span>
+                 </span> 
+                 <span><span class="">'x</span> 
+                  <span class="">&#45;&gt;</span>
+                 </span> <span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="#type-fmt" class="cursor-pointer text-orange">fmt
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-fmt.Theta">
+            <td class="anchored pl-4">
+             <a href="#type-fmt.Theta" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Theta</span> : 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="#type-fmt" class="cursor-pointer text-orange">fmt
+                </a>
+               </span> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(
+                 <span>
+                  <span>(
+                   <span><span class="">'b</span> 
+                    <span class="">&#45;&gt;</span>
+                   </span> <span class="">'c</span>)
+                  </span> <span class="">&#45;&gt;</span>
+                 </span> <span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="#type-fmt" class="cursor-pointer text-orange">fmt
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-fmt.Formatting_lit">
+            <td class="anchored pl-4">
+             <a href="#type-fmt.Formatting_lit" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Formatting_lit</span> : 
+               <a href="#type-formatting_lit" class="cursor-pointer
+                text-orange">formatting_lit
+               </a> * 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="#type-fmt" class="cursor-pointer text-orange">fmt
+                </a>
+               </span> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="#type-fmt" class="cursor-pointer text-orange">fmt
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-fmt.Formatting_gen">
+            <td class="anchored pl-4">
+             <a href="#type-fmt.Formatting_gen" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Formatting_gen</span> : 
+               <span>
+                <span>(<span class="">'a1</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d1</span>
+                 , <span class="">'e1</span>, <span class="">'f1</span>
+                 )
+                </span> 
+                <a href="#type-formatting_gen" class="cursor-pointer
+                 text-orange">formatting_gen
+                </a>
+               </span> * 
+               <span>
+                <span>(<span class="">'f1</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'e1</span>
+                 , <span class="">'e2</span>, <span class="">'f2</span>
+                 )
+                </span> 
+                <a href="#type-fmt" class="cursor-pointer text-orange">fmt
+                </a>
+               </span> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(<span class="">'a1</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d1</span>
+                 , <span class="">'e2</span>, <span class="">'f2</span>
+                 )
+                </span> 
+                <a href="#type-fmt" class="cursor-pointer text-orange">fmt
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-fmt.Reader">
+            <td class="anchored pl-4">
+             <a href="#type-fmt.Reader" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Reader</span> : 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="#type-fmt" class="cursor-pointer text-orange">fmt
+                </a>
+               </span> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(
+                 <span><span class="">'x</span> 
+                  <span class="">&#45;&gt;</span>
+                 </span> <span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, 
+                 <span>
+                  <span>(
+                   <span><span class="">'b</span> 
+                    <span class="">&#45;&gt;</span>
+                   </span> <span class="">'x</span>)
+                  </span> <span class="">&#45;&gt;</span>
+                 </span> <span class="">'d</span>, <span class="">'e</span>
+                 , <span class="">'f</span>)
+                </span> 
+                <a href="#type-fmt" class="cursor-pointer text-orange">fmt
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-fmt.Scan_char_set">
+            <td class="anchored pl-4">
+             <a href="#type-fmt.Scan_char_set" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Scan_char_set</span> : 
+               <a href="#type-pad_option" class="cursor-pointer text-orange">
+                pad_option
+               </a> * 
+               <a href="#type-char_set" class="cursor-pointer text-orange">
+                char_set
+               </a> * 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="#type-fmt" class="cursor-pointer text-orange">fmt
+                </a>
+               </span> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(<span>string <span class="">&#45;&gt;</span></span>
+                  <span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="#type-fmt" class="cursor-pointer text-orange">fmt
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-fmt.Scan_get_counter">
+            <td class="anchored pl-4">
+             <a href="#type-fmt.Scan_get_counter" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Scan_get_counter</span> : 
+               <a href="#type-counter" class="cursor-pointer text-orange">
+                counter
+               </a> * 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="#type-fmt" class="cursor-pointer text-orange">fmt
+                </a>
+               </span> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(<span>int <span class="">&#45;&gt;</span></span>
+                  <span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="#type-fmt" class="cursor-pointer text-orange">fmt
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-fmt.Scan_next_char">
+            <td class="anchored pl-4">
+             <a href="#type-fmt.Scan_next_char" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Scan_next_char</span> : 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="#type-fmt" class="cursor-pointer text-orange">fmt
+                </a>
+               </span> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(<span>char <span class="">&#45;&gt;</span></span>
+                  <span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="#type-fmt" class="cursor-pointer text-orange">fmt
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-fmt.Ignored_param">
+            <td class="anchored pl-4">
+             <a href="#type-fmt.Ignored_param" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Ignored_param</span> : 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'y</span>, <span class="">'x</span>
+                 )
+                </span> 
+                <a href="#type-ignored" class="cursor-pointer text-orange">
+                 ignored
+                </a>
+               </span> * 
+               <span>
+                <span>(<span class="">'x</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'y</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="#type-fmt" class="cursor-pointer text-orange">fmt
+                </a>
+               </span> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="#type-fmt" class="cursor-pointer text-orange">fmt
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-fmt.Custom">
+            <td class="anchored pl-4">
+             <a href="#type-fmt.Custom" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Custom</span> : 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'x</span>
+                 , <span class="">'y</span>)
+                </span> 
+                <a href="#type-custom_arity" class="cursor-pointer
+                 text-orange">custom_arity
+                </a>
+               </span> * 
+               <span>(<span>unit <span class="">&#45;&gt;</span></span>
+                 <span class="">'x</span>)
+               </span> * 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="#type-fmt" class="cursor-pointer text-orange">fmt
+                </a>
+               </span> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(<span class="">'y</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="#type-fmt" class="cursor-pointer text-orange">fmt
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-fmt.End_of_format">
+            <td class="anchored pl-4">
+             <a href="#type-fmt.End_of_format" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">End_of_format</span> : 
+               <span>
+                <span>(<span class="">'f</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'e</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="#type-fmt" class="cursor-pointer text-orange">fmt
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+         <div class="spec-doc"><p class="mt-4">List of format elements.</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-ignored">
+          <a href="#type-ignored" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">and</span> 
+            <span>('a, 'b, 'c, 'd, 'e, 'f) ignored</span>
+           </span><span> = </span>
+          </code>
+          <table>
+           <tr id="type-ignored.Ignored_char">
+            <td class="anchored pl-4">
+             <a href="#type-ignored.Ignored_char" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Ignored_char</span> : 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'d</span>, <span class="">'a</span>
+                 )
+                </span> 
+                <a href="#type-ignored" class="cursor-pointer text-orange">
+                 ignored
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-ignored.Ignored_caml_char">
+            <td class="anchored pl-4">
+             <a href="#type-ignored.Ignored_caml_char" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Ignored_caml_char</span> : 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'d</span>, <span class="">'a</span>
+                 )
+                </span> 
+                <a href="#type-ignored" class="cursor-pointer text-orange">
+                 ignored
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-ignored.Ignored_string">
+            <td class="anchored pl-4">
+             <a href="#type-ignored.Ignored_string" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Ignored_string</span> : 
+               <a href="#type-pad_option" class="cursor-pointer text-orange">
+                pad_option
+               </a> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'d</span>, <span class="">'a</span>
+                 )
+                </span> 
+                <a href="#type-ignored" class="cursor-pointer text-orange">
+                 ignored
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-ignored.Ignored_caml_string">
+            <td class="anchored pl-4">
+             <a href="#type-ignored.Ignored_caml_string" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Ignored_caml_string</span> : 
+               <a href="#type-pad_option" class="cursor-pointer text-orange">
+                pad_option
+               </a> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'d</span>, <span class="">'a</span>
+                 )
+                </span> 
+                <a href="#type-ignored" class="cursor-pointer text-orange">
+                 ignored
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-ignored.Ignored_int">
+            <td class="anchored pl-4">
+             <a href="#type-ignored.Ignored_int" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Ignored_int</span> : 
+               <a href="#type-int_conv" class="cursor-pointer text-orange">
+                int_conv
+               </a> * 
+               <a href="#type-pad_option" class="cursor-pointer text-orange">
+                pad_option
+               </a> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'d</span>, <span class="">'a</span>
+                 )
+                </span> 
+                <a href="#type-ignored" class="cursor-pointer text-orange">
+                 ignored
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-ignored.Ignored_int32">
+            <td class="anchored pl-4">
+             <a href="#type-ignored.Ignored_int32" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Ignored_int32</span> : 
+               <a href="#type-int_conv" class="cursor-pointer text-orange">
+                int_conv
+               </a> * 
+               <a href="#type-pad_option" class="cursor-pointer text-orange">
+                pad_option
+               </a> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'d</span>, <span class="">'a</span>
+                 )
+                </span> 
+                <a href="#type-ignored" class="cursor-pointer text-orange">
+                 ignored
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-ignored.Ignored_nativeint">
+            <td class="anchored pl-4">
+             <a href="#type-ignored.Ignored_nativeint" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Ignored_nativeint</span> : 
+               <a href="#type-int_conv" class="cursor-pointer text-orange">
+                int_conv
+               </a> * 
+               <a href="#type-pad_option" class="cursor-pointer text-orange">
+                pad_option
+               </a> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'d</span>, <span class="">'a</span>
+                 )
+                </span> 
+                <a href="#type-ignored" class="cursor-pointer text-orange">
+                 ignored
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-ignored.Ignored_int64">
+            <td class="anchored pl-4">
+             <a href="#type-ignored.Ignored_int64" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Ignored_int64</span> : 
+               <a href="#type-int_conv" class="cursor-pointer text-orange">
+                int_conv
+               </a> * 
+               <a href="#type-pad_option" class="cursor-pointer text-orange">
+                pad_option
+               </a> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'d</span>, <span class="">'a</span>
+                 )
+                </span> 
+                <a href="#type-ignored" class="cursor-pointer text-orange">
+                 ignored
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-ignored.Ignored_float">
+            <td class="anchored pl-4">
+             <a href="#type-ignored.Ignored_float" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Ignored_float</span> : 
+               <a href="#type-pad_option" class="cursor-pointer text-orange">
+                pad_option
+               </a> * 
+               <a href="#type-prec_option" class="cursor-pointer text-orange">
+                prec_option
+               </a> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'d</span>, <span class="">'a</span>
+                 )
+                </span> 
+                <a href="#type-ignored" class="cursor-pointer text-orange">
+                 ignored
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-ignored.Ignored_bool">
+            <td class="anchored pl-4">
+             <a href="#type-ignored.Ignored_bool" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Ignored_bool</span> : 
+               <a href="#type-pad_option" class="cursor-pointer text-orange">
+                pad_option
+               </a> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'d</span>, <span class="">'a</span>
+                 )
+                </span> 
+                <a href="#type-ignored" class="cursor-pointer text-orange">
+                 ignored
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-ignored.Ignored_format_arg">
+            <td class="anchored pl-4">
+             <a href="#type-ignored.Ignored_format_arg" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Ignored_format_arg</span> : 
+               <a href="#type-pad_option" class="cursor-pointer text-orange">
+                pad_option
+               </a> * 
+               <span>
+                <span>(<span class="">'g</span>, <span class="">'h</span>
+                 , <span class="">'i</span>, <span class="">'j</span>
+                 , <span class="">'k</span>, <span class="">'l</span>
+                 )
+                </span> 
+                <a href="#type-fmtty" class="cursor-pointer text-orange">
+                 fmtty
+                </a>
+               </span> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'d</span>, <span class="">'a</span>
+                 )
+                </span> 
+                <a href="#type-ignored" class="cursor-pointer text-orange">
+                 ignored
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-ignored.Ignored_format_subst">
+            <td class="anchored pl-4">
+             <a href="#type-ignored.Ignored_format_subst" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Ignored_format_subst</span> : 
+               <a href="#type-pad_option" class="cursor-pointer text-orange">
+                pad_option
+               </a> * 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="#type-fmtty" class="cursor-pointer text-orange">
+                 fmtty
+                </a>
+               </span> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="#type-ignored" class="cursor-pointer text-orange">
+                 ignored
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-ignored.Ignored_reader">
+            <td class="anchored pl-4">
+             <a href="#type-ignored.Ignored_reader" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Ignored_reader</span> : 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, 
+                 <span>
+                  <span>(
+                   <span><span class="">'b</span> 
+                    <span class="">&#45;&gt;</span>
+                   </span> <span class="">'x</span>)
+                  </span> <span class="">&#45;&gt;</span>
+                 </span> <span class="">'d</span>, <span class="">'d</span>
+                 , <span class="">'a</span>)
+                </span> 
+                <a href="#type-ignored" class="cursor-pointer text-orange">
+                 ignored
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-ignored.Ignored_scan_char_set">
+            <td class="anchored pl-4">
+             <a href="#type-ignored.Ignored_scan_char_set" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Ignored_scan_char_set</span> : 
+               <a href="#type-pad_option" class="cursor-pointer text-orange">
+                pad_option
+               </a> * 
+               <a href="#type-char_set" class="cursor-pointer text-orange">
+                char_set
+               </a> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'d</span>, <span class="">'a</span>
+                 )
+                </span> 
+                <a href="#type-ignored" class="cursor-pointer text-orange">
+                 ignored
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-ignored.Ignored_scan_get_counter">
+            <td class="anchored pl-4">
+             <a href="#type-ignored.Ignored_scan_get_counter"
+              class="hover-link inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Ignored_scan_get_counter</span> : 
+               <a href="#type-counter" class="cursor-pointer text-orange">
+                counter
+               </a> <span class="">&#45;&gt;</span> 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'d</span>, <span class="">'a</span>
+                 )
+                </span> 
+                <a href="#type-ignored" class="cursor-pointer text-orange">
+                 ignored
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-ignored.Ignored_scan_next_char">
+            <td class="anchored pl-4">
+             <a href="#type-ignored.Ignored_scan_next_char" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Ignored_scan_next_char</span> : 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'d</span>, <span class="">'a</span>
+                 )
+                </span> 
+                <a href="#type-ignored" class="cursor-pointer text-orange">
+                 ignored
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-format6">
+          <a href="#type-format6" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">and</span> 
+            <span>('a, 'b, 'c, 'd, 'e, 'f) format6</span>
+           </span><span> = </span>
+          </code>
+          <table>
+           <tr id="type-format6.Format">
+            <td class="anchored pl-4">
+             <a href="#type-format6.Format" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Format</span> 
+               <span class="font-semibold">of</span> 
+               <span>
+                <span>(<span class="">'a</span>, <span class="">'b</span>
+                 , <span class="">'c</span>, <span class="">'d</span>
+                 , <span class="">'e</span>, <span class="">'f</span>
+                 )
+                </span> 
+                <a href="#type-fmt" class="cursor-pointer text-orange">fmt
+                </a>
+               </span> * string
+              </span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-concat_fmtty">
+          <a href="#val-concat_fmtty" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> concat_fmtty : 
+            <span>
+             <span>
+              <span>(<span class="">'g1</span>, <span class="">'b1</span>
+               , <span class="">'c1</span>, <span class="">'j1</span>
+               , <span class="">'d1</span>, <span class="">'a1</span>
+               , <span class="">'g2</span>, <span class="">'b2</span>
+               , <span class="">'c2</span>, <span class="">'j2</span>
+               , <span class="">'d2</span>, <span class="">'a2</span>
+               )
+              </span> 
+              <a href="#type-fmtty_rel" class="cursor-pointer text-orange">
+               fmtty_rel
+              </a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>
+              <span>(<span class="">'a1</span>, <span class="">'b1</span>
+               , <span class="">'c1</span>, <span class="">'d1</span>
+               , <span class="">'e1</span>, <span class="">'f1</span>
+               , <span class="">'a2</span>, <span class="">'b2</span>
+               , <span class="">'c2</span>, <span class="">'d2</span>
+               , <span class="">'e2</span>, <span class="">'f2</span>
+               )
+              </span> 
+              <a href="#type-fmtty_rel" class="cursor-pointer text-orange">
+               fmtty_rel
+              </a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>(<span class="">'g1</span>, <span class="">'b1</span>
+              , <span class="">'c1</span>, <span class="">'j1</span>
+              , <span class="">'e1</span>, <span class="">'f1</span>
+              , <span class="">'g2</span>, <span class="">'b2</span>
+              , <span class="">'c2</span>, <span class="">'j2</span>
+              , <span class="">'e2</span>, <span class="">'f2</span>
+              )
+             </span> 
+             <a href="#type-fmtty_rel" class="cursor-pointer text-orange">
+              fmtty_rel
+             </a>
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-erase_rel">
+          <a href="#val-erase_rel" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> erase_rel : 
+            <span>
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'b</span>
+               , <span class="">'c</span>, <span class="">'d</span>
+               , <span class="">'e</span>, <span class="">'f</span>
+               , <span class="">'g</span>, <span class="">'h</span>
+               , <span class="">'i</span>, <span class="">'j</span>
+               , <span class="">'k</span>, <span class="">'l</span>
+               )
+              </span> 
+              <a href="#type-fmtty_rel" class="cursor-pointer text-orange">
+               fmtty_rel
+              </a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>(<span class="">'a</span>, <span class="">'b</span>
+              , <span class="">'c</span>, <span class="">'d</span>, 
+              <span class="">'e</span>, <span class="">'f</span>)
+             </span> 
+             <a href="#type-fmtty" class="cursor-pointer text-orange">fmtty
+             </a>
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-concat_fmt">
+          <a href="#val-concat_fmt" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> concat_fmt : 
+            <span>
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'b</span>
+               , <span class="">'c</span>, <span class="">'d</span>
+               , <span class="">'e</span>, <span class="">'f</span>
+               )
+              </span> 
+              <a href="#type-fmt" class="cursor-pointer text-orange">fmt</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>
+              <span>(<span class="">'f</span>, <span class="">'b</span>
+               , <span class="">'c</span>, <span class="">'e</span>
+               , <span class="">'g</span>, <span class="">'h</span>
+               )
+              </span> 
+              <a href="#type-fmt" class="cursor-pointer text-orange">fmt</a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>(<span class="">'a</span>, <span class="">'b</span>
+              , <span class="">'c</span>, <span class="">'d</span>, 
+              <span class="">'g</span>, <span class="">'h</span>)
+             </span> 
+             <a href="#type-fmt" class="cursor-pointer text-orange">fmt</a>
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="w-full flex-none lg:w-72 border-t lg:border-l bg-gray-100">
+       <div class="flex h-20 border-b relative">
+        <h2 class="text-xl absolute inset-x-0 p-3 bottom-0 mt-7 font-semibold
+         text-gray-500">ocaml-base-compiler.4.11.2
+        </h2>
+       </div>
+       <div class="m-3">
+        <p class="mb-5 italic text-sm">Official release 4.11.2</p>
+        <div class="mb-3">
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="https://ocaml.org">ocaml.org
+          </a>
+         </div>
+        </div>
+        <details class="font-normal mb-2 text-sm">
+         <summary>Other versions</summary><div id="versions_container"></div>
+        </details><h2 class="font-semibold mb-2 text-sm">Authors</h2>
+        <p class="mb-3 text-sm">Xavier Leroy and many contributors</p>
+        <h2 class="font-semibold mb-2 text-sm">Issues</h2>
+        <div class="mb-3">
+         <a class="text-orange cursor-pointer mb-2 text-sm"
+          href="https://github.com/ocaml/opam-repository/issues">
+          github.com/ocaml/opam-repository/issues
+         </a>
+        </div>
+        <details class="font-semibold mb-2 text-sm">
+         <summary>Package dependencies</summary>
+         <div class="font-normal">
+          <ul>
+           <li>
+            <a href="../../../ocaml/index.html" class="text-orange
+             cursor-pointer">ocaml
+            </a>
+           </li>
+           <li>
+            <a href="../../../base-unix/index.html" class="text-orange
+             cursor-pointer">base-unix
+            </a>
+           </li>
+           <li>
+            <a href="../../../base-bigarray/index.html" class="text-orange
+             cursor-pointer">base-bigarray
+            </a>
+           </li>
+           <li>
+            <a href="../../../base-threads/index.html" class="text-orange
+             cursor-pointer">base-threads
+            </a>
+           </li>
+          </ul>
+         </div>
+        </details>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div><script>Voodoo.update('../../version.json')</script>
+ </body>
+</html>

@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>Magic_number (packages.ocaml-base-compiler.4.11.2.Misc.Magic_number)
+  </title><link rel="stylesheet" href="../../../../tailwind.css"/>
+  <link rel="stylesheet" href="../../../../extra.css"/>
+  <meta charset="utf-8"/><meta name="generator" content="odoc 3dfb7aef2f"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <script src="../../../../highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="../../../../voodoo_client.js"></script>
+  <script
+   src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+   defer="defer">
+  </script>
+ </head>
+ <body class="mx-auto max-w-screen-2xl">
+  <div class="relative">
+   <div class="relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+     <div class="flex justify-between items-center md:justify-start py-6
+      md:space-x-10">
+      <div class="flex justify-start">
+       <a href="https://v3.ocaml.org/">
+        <img src="/colour-logo.svg" alt="" class="h-8 w-auto sm:h-10"/>
+       </a>
+      </div>
+      <nav class="hidden md:flex space-x-10">
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Industry</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/whatisocaml">
+            <p class="text-base font-medium text-gray-900">What is OCaml</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/users">
+            <p class="text-base font-medium text-gray-900">Industrial Users
+            </p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/successstories">
+            <p class="text-base font-medium text-gray-900">Success Stories
+            </p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Resources</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/releases">
+            <p class="text-base font-medium text-gray-900">Releases</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/applications">
+            <p class="text-base font-medium text-gray-900">Applications</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/language">
+            <p class="text-base font-medium text-gray-900">Language</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/archive">
+            <p class="text-base font-medium text-gray-900">Archive</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Community</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/opportunities">
+            <p class="text-base font-medium text-gray-900">Opportunities</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/news">
+            <p class="text-base font-medium text-gray-900">News</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/aroundweb">
+            <p class="text-base font-medium text-gray-900">Around the Web</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="h-screen flex bg-white font-sans">
+   <div class="flex flex-col w-full h-full">
+    <div class="flex-row flex-1">
+     <nav class="bg-orange border-t border-b border-orange flex flex-row">
+      <ol class="max-w-screen-xl w-full px-4 flex space-x-4 sm:px-6 lg:px-8">
+       <li class="flex">
+        <div class="flex items-center">
+         <a href="#" class="text-gray-100 hover:text-gray-500">
+          
+  <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+        </svg>
+  
+          <span class="sr-only">Home</span>
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">packages
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">ocaml-base-compiler
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">4.11.2
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">Misc
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="#" class="ml-4 text-sm font-medium text-gray-100
+          hover:text-gray-500">Magic_number
+         </a>
+        </div>
+       </li>
+      </ol>
+     </nav>
+    </div>
+    <div class="flex flex-row flex-1">
+     <div class="w-72 flex-none bg-gray-100 h-screen border-r border-gray-200
+      sticky top-0 hidden lg:block">
+      <div class="flex h-20 border-b relative">
+       <h2 class="text-xl absolute inset-x-0 p-3 px-5 bottom-0 mt-7
+        border-gray-200 font-semibold text-gray-500 font-sans">On this page
+       </h2>
+      </div>
+      <nav class="bg-gray-100 p-5">
+       <ul>
+        <li>
+         <a href="#parsing-magic-numbers" class="cursor-pointer text-orange">
+          Parsing magic numbers
+         </a>
+        </li>
+        <li>
+         <a href="#checking-that-magic-numbers-are-current"
+          class="cursor-pointer text-orange">Checking that magic numbers
+           are current
+         </a>
+        </li>
+        <li>
+         <a href="#information-on-magic-numbers" class="cursor-pointer
+          text-orange">Information on magic numbers
+         </a>
+        </li>
+        <li>
+         <a href="#raw-representations" class="cursor-pointer text-orange">
+          Raw representations
+         </a>
+        </li>
+       </ul>
+      </nav>
+     </div>
+     <div class="flex flex-1 flex-col lg:flex-row">
+      <div class="flex-1">
+       <div class="lg:max-w-5xl mx-auto px-3 lg:px-10 mb-10 text-sm">
+        <div class="flex h-20 relative border-b border-gray-200">
+         <div class="relative flex-1 h-20">
+          <h1 class="text-3xl absolute inset-x-0 py-3 bottom-0 font-semibold
+           text-gray-500 font-sans w-full truncate">
+           <code class="font-mono text-gray-800">Misc.Magic_number</code>
+          </h1>
+         </div>
+         <div class="relative flex-none w-28">
+          <h1 class="text-3xl absolute py-3 bottom-0 right-0 font-semibold
+           text-gray-500 font-sans">Module
+          </h1>
+         </div>
+        </div>
+        <p class="mt-4">a typical magic number is &quot;Caml1999I011&quot;;
+          it is formed of an alphanumeric prefix, here Caml1990I, followed
+          by a version, here 011. The prefix identifies the kind of the
+          versioned data: here the I indicates that it is the magic number
+          for .cmi files.
+        </p>
+        <p class="mt-4">All magic numbers have the same byte length, 
+         <code class="font-normal text-sm">magic_length</code>, and this
+          is important for users as it gives them the number of bytes
+          to read to obtain the byte sequence that should be a magic 
+         number. Typical user code will look like:
+        </p>
+        <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+         <code class="font-normal text-sm">
+          let ic = open_in_bin path in
+          let magic =
+            try really_input_string ic Magic_number.magic_length
+            with End_of_file -&gt; ... in
+          match Magic_number.parse magic with
+          | Error parse_error -&gt; ...
+          | Ok info -&gt; ...
+         </code>
+        </pre>
+        <p class="mt-4">A given compiler version expects one specific
+          version for each kind of object file, and will fail if given
+          an unsupported version. Because versions grow monotonically,
+          you can compare the parsed version with the expected &quot;current
+          version&quot; for a kind, to tell whether the wrong-magic object
+          file comes from the past or from the future.
+        </p>
+        <p class="mt-4">An example of code block that expects the 
+         &quot;currently supported version&quot; of a given kind of magic
+          numbers, here <code class="font-normal text-sm">Cmxa</code>
+         , is as follows:
+        </p>
+        <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+         <code class="font-normal text-sm">
+          let ic = open_in_bin path in
+          begin
+            try Magic_number.(expect_current Cmxa (get_info ic)) with
+            | Parse_error error -&gt; ...
+            | Unexpected error -&gt; ...
+          end;
+          ...
+         </code>
+        </pre>
+        <p class="mt-4">Parse errors distinguish inputs that are 
+         <code class="font-normal text-sm">Not_a_magic_number str</code>
+         , which are likely to come from the file being completely different,
+          and <code class="font-normal text-sm">Truncated str</code>,
+          raised by headers that are the (possibly empty) prefix of a
+          valid magic number.
+        </p>
+        <p class="mt-4">Unexpected errors correspond to valid magic numbers
+          that are not the one expected, either because it corresponds
+          to a different kind, or to a newer or older version.
+        </p>
+        <p class="mt-4">The helper functions 
+         <code class="font-normal text-sm">explain_parse_error</code>
+          and 
+         <code class="font-normal text-sm">explain_unexpected_error</code>
+          will generate a textual explanation of each error, for use 
+         in error messages.
+        </p><ul class="at-tags"><li class="since">since 4.11.0</li></ul>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-native_obj_config">
+          <a href="#type-native_obj_config" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> native_obj_config
+           </span><span> = </span><span>{</span>
+          </code>
+          <table>
+           <tr id="type-native_obj_config.flambda">
+            <td class="anchored pl-4">
+             <a href="#type-native_obj_config.flambda" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>flambda : bool;</span>
+             </code>
+            </td>
+           </tr>
+          </table><code class="font-normal text-sm"><span>}</span></code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">native object files have a format and magic
+            number that depend on certain native-compiler configuration
+            parameters. This configuration space is expressed by the 
+           <code class="font-normal text-sm">native_obj_config</code>
+            type.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-native_obj_config">
+          <a href="#val-native_obj_config" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> native_obj_config
+             : 
+            <a href="#type-native_obj_config" class="cursor-pointer
+             text-orange">native_obj_config
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">the native object file configuration of the
+            active/configured compiler.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-version">
+          <a href="#type-version" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> version</span>
+           <span> = int</span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-kind">
+          <a href="#type-kind" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> kind</span>
+           <span> = </span>
+          </code>
+          <table>
+           <tr id="type-kind.Exec">
+            <td class="anchored pl-4">
+             <a href="#type-kind.Exec" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Exec</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-kind.Cmi">
+            <td class="anchored pl-4">
+             <a href="#type-kind.Cmi" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cmi</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-kind.Cmo">
+            <td class="anchored pl-4">
+             <a href="#type-kind.Cmo" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cmo</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-kind.Cma">
+            <td class="anchored pl-4">
+             <a href="#type-kind.Cma" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cma</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-kind.Cmx">
+            <td class="anchored pl-4">
+             <a href="#type-kind.Cmx" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cmx</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-native_obj_config" class="cursor-pointer
+                text-orange">native_obj_config
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-kind.Cmxa">
+            <td class="anchored pl-4">
+             <a href="#type-kind.Cmxa" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cmxa</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-native_obj_config" class="cursor-pointer
+                text-orange">native_obj_config
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-kind.Cmxs">
+            <td class="anchored pl-4">
+             <a href="#type-kind.Cmxs" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cmxs</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-kind.Cmt">
+            <td class="anchored pl-4">
+             <a href="#type-kind.Cmt" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Cmt</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-kind.Ast_impl">
+            <td class="anchored pl-4">
+             <a href="#type-kind.Ast_impl" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Ast_impl</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-kind.Ast_intf">
+            <td class="anchored pl-4">
+             <a href="#type-kind.Ast_intf" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Ast_intf</span></span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-info">
+          <a href="#type-info" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> info</span>
+           <span> = </span><span>{</span>
+          </code>
+          <table>
+           <tr id="type-info.kind">
+            <td class="anchored pl-4">
+             <a href="#type-info.kind" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>kind : 
+               <a href="#type-kind" class="cursor-pointer text-orange">kind
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-info.version">
+            <td class="anchored pl-4">
+             <a href="#type-info.version" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>version : 
+               <a href="#type-version" class="cursor-pointer text-orange">
+                version
+               </a>;
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>Note:
+              some versions of the compiler use the same 
+             <code class="font-normal text-sm">version</code> suffix 
+             for all kinds, but others use different versions counters
+              for different kinds. We may only assume that versions are
+              growing monotonically (not necessarily always by one) between
+              compiler versions.<span class="sr-only">*)</span>
+            </td>
+           </tr>
+          </table><code class="font-normal text-sm"><span>}</span></code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-raw">
+          <a href="#type-raw" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> raw</span>
+           <span> = string</span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">the type of raw magic numbers, such as 
+           &quot;Caml1999A027&quot; for the .cma files of OCaml 4.10
+          </p>
+         </div>
+        </div>
+        <h4 class="text-lg text-gray-900 text-gray-800 font-sans anchored"
+         id="parsing-magic-numbers">
+         <a href="#parsing-magic-numbers" class="hover-link inline-block
+          -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Parsing magic numbers
+        </h4>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-parse_error">
+          <a href="#type-parse_error" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> parse_error</span>
+           <span> = </span>
+          </code>
+          <table>
+           <tr id="type-parse_error.Truncated">
+            <td class="anchored pl-4">
+             <a href="#type-parse_error.Truncated" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Truncated</span> 
+               <span class="font-semibold">of</span> string
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-parse_error.Not_a_magic_number">
+            <td class="anchored pl-4">
+             <a href="#type-parse_error.Not_a_magic_number" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Not_a_magic_number</span> 
+               <span class="font-semibold">of</span> string
+              </span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-explain_parse_error">
+          <a href="#val-explain_parse_error" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> explain_parse_error
+             : 
+            <span>
+             <span>
+              <a href="#type-kind" class="cursor-pointer text-orange">kind
+              </a> option
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-parse_error" class="cursor-pointer text-orange">
+              parse_error
+             </a> <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Produces an explanation for a parse error. 
+           If no kind is provided, we use an unspecific formulation 
+           suggesting that any compiler-produced object file would have
+            been satisfying.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-parse">
+          <a href="#val-parse" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> parse : 
+            <span>
+             <a href="#type-raw" class="cursor-pointer text-orange">raw</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>(
+              <a href="#type-info" class="cursor-pointer text-orange">info
+              </a>, 
+              <a href="#type-parse_error" class="cursor-pointer text-orange">
+               parse_error
+              </a>)
+             </span> 
+             <a href="../../Stdlib/index.html#type-result"
+              class="cursor-pointer text-orange">Stdlib.result
+             </a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc"><p class="mt-4">Parses a raw magic number</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-read_info">
+          <a href="#val-read_info" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> read_info : 
+            <span>
+             <a href="../../Stdlib/index.html#type-in_channel"
+              class="cursor-pointer text-orange">Stdlib.in_channel
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>(
+              <a href="#type-info" class="cursor-pointer text-orange">info
+              </a>, 
+              <a href="#type-parse_error" class="cursor-pointer text-orange">
+               parse_error
+              </a>)
+             </span> 
+             <a href="../../Stdlib/index.html#type-result"
+              class="cursor-pointer text-orange">Stdlib.result
+             </a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Read a raw magic number from an input channel.</p>
+          <p class="mt-4">If the data read 
+           <code class="font-normal text-sm">str</code> is not a valid
+            magic number, it can be recovered from the 
+           <code class="font-normal text-sm">
+            Truncated str | Not_a_magic_number str
+           </code> payload of the 
+           <code class="font-normal text-sm">Error parse_error</code>
+            case.
+          </p>
+          <p class="mt-4">If parsing succeeds with an 
+           <code class="font-normal text-sm">Ok info</code> result, we
+            know that exactly 
+           <code class="font-normal text-sm">magic_length</code> bytes
+            have been consumed from the input_channel.
+          </p>
+          <p class="mt-4">If you also wish to enforce that the magic 
+           number is at the current version, see 
+           <a href="#val-read_current_info" class="cursor-pointer
+            text-orange">
+            <code class="font-normal text-sm">read_current_info</code>
+           </a> below.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-magic_length">
+          <a href="#val-magic_length" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> magic_length : int
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">all magic numbers take the same number of bytes</p>
+         </div>
+        </div>
+        <h4 class="text-lg text-gray-900 text-gray-800 font-sans anchored"
+         id="checking-that-magic-numbers-are-current">
+         <a href="#checking-that-magic-numbers-are-current" class="hover-link
+          inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Checking that magic numbers are current
+        </h4>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-unexpected">
+          <a href="#type-unexpected" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> 
+            <span>'a unexpected</span>
+           </span><span> = </span><span>{</span>
+          </code>
+          <table>
+           <tr id="type-unexpected.expected">
+            <td class="anchored pl-4">
+             <a href="#type-unexpected.expected" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>expected : <span class="">'a</span>;</span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-unexpected.actual">
+            <td class="anchored pl-4">
+             <a href="#type-unexpected.actual" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>actual : <span class="">'a</span>;</span>
+             </code>
+            </td>
+           </tr>
+          </table><code class="font-normal text-sm"><span>}</span></code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-unexpected_error">
+          <a href="#type-unexpected_error" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> unexpected_error
+           </span><span> = </span>
+          </code>
+          <table>
+           <tr id="type-unexpected_error.Kind">
+            <td class="anchored pl-4">
+             <a href="#type-unexpected_error.Kind" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Kind</span> 
+               <span class="font-semibold">of</span> 
+               <span>
+                <a href="#type-kind" class="cursor-pointer text-orange">kind
+                </a> 
+                <a href="#type-unexpected" class="cursor-pointer text-orange">
+                 unexpected
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-unexpected_error.Version">
+            <td class="anchored pl-4">
+             <a href="#type-unexpected_error.Version" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Version</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-kind" class="cursor-pointer text-orange">kind
+               </a> * 
+               <span>
+                <a href="#type-version" class="cursor-pointer text-orange">
+                 version
+                </a> 
+                <a href="#type-unexpected" class="cursor-pointer text-orange">
+                 unexpected
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-check_current">
+          <a href="#val-check_current" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> check_current
+             : 
+            <span>
+             <a href="#type-kind" class="cursor-pointer text-orange">kind</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-info" class="cursor-pointer text-orange">info</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>(unit, 
+              <a href="#type-unexpected_error" class="cursor-pointer
+               text-orange">unexpected_error
+              </a>)
+             </span> 
+             <a href="../../Stdlib/index.html#type-result"
+              class="cursor-pointer text-orange">Stdlib.result
+             </a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">check_current kind info</code>
+            checks that the provided magic 
+           <code class="font-normal text-sm">info</code> is the current
+            version of <code class="font-normal text-sm">kind</code>'s
+            magic header.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-explain_unexpected_error">
+          <a href="#val-explain_unexpected_error" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            explain_unexpected_error : 
+            <span>
+             <a href="#type-unexpected_error" class="cursor-pointer
+              text-orange">unexpected_error
+             </a> <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Provides an explanation of the 
+           <code class="font-normal text-sm">unexpected_error</code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-error">
+          <a href="#type-error" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> error</span>
+           <span> = </span>
+          </code>
+          <table>
+           <tr id="type-error.Parse_error">
+            <td class="anchored pl-4">
+             <a href="#type-error.Parse_error" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Parse_error</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-parse_error" class="cursor-pointer text-orange">
+                parse_error
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-error.Unexpected_error">
+            <td class="anchored pl-4">
+             <a href="#type-error.Unexpected_error" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">Unexpected_error</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-unexpected_error" class="cursor-pointer
+                text-orange">unexpected_error
+               </a>
+              </span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-read_current_info">
+          <a href="#val-read_current_info" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> read_current_info
+             : 
+            <span>expected_kind:
+             <span>
+              <a href="#type-kind" class="cursor-pointer text-orange">kind
+              </a> option
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../../Stdlib/index.html#type-in_channel"
+              class="cursor-pointer text-orange">Stdlib.in_channel
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>(
+              <a href="#type-info" class="cursor-pointer text-orange">info
+              </a>, 
+              <a href="#type-error" class="cursor-pointer text-orange">error
+              </a>)
+             </span> 
+             <a href="../../Stdlib/index.html#type-result"
+              class="cursor-pointer text-orange">Stdlib.result
+             </a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Read a magic number as 
+           <code class="font-normal text-sm">read_info</code>, and check
+            that it is the current version as its kind. If the 
+           <code class="font-normal text-sm">expected_kind</code> argument
+            is <code class="font-normal text-sm">None</code>, any kind
+            is accepted.
+          </p>
+         </div>
+        </div>
+        <h4 class="text-lg text-gray-900 text-gray-800 font-sans anchored"
+         id="information-on-magic-numbers">
+         <a href="#information-on-magic-numbers" class="hover-link
+          inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Information on magic numbers
+        </h4>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-string_of_kind">
+          <a href="#val-string_of_kind" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> string_of_kind
+             : 
+            <span>
+             <a href="#type-kind" class="cursor-pointer text-orange">kind</a>
+              <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">a user-printable string for a kind, eg. 
+           &quot;exec&quot; or &quot;cmo&quot;, to use in error messages.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-human_name_of_kind">
+          <a href="#val-human_name_of_kind" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> human_name_of_kind
+             : 
+            <span>
+             <a href="#type-kind" class="cursor-pointer text-orange">kind</a>
+              <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">a user-meaningful name for a kind, eg. 
+           &quot;executable file&quot; or &quot;bytecode object file&quot;,
+            to use in error messages.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-current_raw">
+          <a href="#val-current_raw" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> current_raw : 
+            <span>
+             <a href="#type-kind" class="cursor-pointer text-orange">kind</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-raw" class="cursor-pointer text-orange">raw</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">the current magic number of each kind</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-current_version">
+          <a href="#val-current_version" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> current_version
+             : 
+            <span>
+             <a href="#type-kind" class="cursor-pointer text-orange">kind</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-version" class="cursor-pointer text-orange">
+             version
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">the current version of each kind</p>
+         </div>
+        </div>
+        <h4 class="text-lg text-gray-900 text-gray-800 font-sans anchored"
+         id="raw-representations">
+         <a href="#raw-representations" class="hover-link inline-block 
+          -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Raw representations
+        </h4><p class="mt-4">Mainly for internal usage and testing.</p>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-raw_kind">
+          <a href="#type-raw_kind" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> raw_kind</span>
+           <span> = string</span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">the type of raw magic numbers kinds, such as
+            &quot;Caml1999A&quot; for .cma files
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-parse_kind">
+          <a href="#val-parse_kind" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> parse_kind : 
+            <span>
+             <a href="#type-raw_kind" class="cursor-pointer text-orange">
+              raw_kind
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-kind" class="cursor-pointer text-orange">kind</a>
+              option
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">parse a raw kind into a kind</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-raw_kind">
+          <a href="#val-raw_kind" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> raw_kind : 
+            <span>
+             <a href="#type-kind" class="cursor-pointer text-orange">kind</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-raw_kind" class="cursor-pointer text-orange">
+             raw_kind
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">the current raw representation of a kind.</p>
+          <p class="mt-4">In some cases the raw representation of a kind
+            has changed over compiler versions, so other files of the
+            same kind may have different raw kinds. Note that all currently
+            known cases are parsed correctly by 
+           <code class="font-normal text-sm">parse_kind</code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-raw">
+          <a href="#val-raw" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> raw : 
+            <span>
+             <a href="#type-info" class="cursor-pointer text-orange">info</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-raw" class="cursor-pointer text-orange">raw</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">A valid raw representation of the magic number.</p>
+          <p class="mt-4">Due to past and future changes in the string
+            representation of magic numbers, we cannot guarantee that
+            the raw strings returned for past and future versions actually
+            match the expectations of those compilers. The representation
+            is accurate for current versions, and it is correctly parsed
+            back into the desired version by the parsing functions above.
+          </p>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="w-full flex-none lg:w-72 border-t lg:border-l bg-gray-100">
+       <div class="flex h-20 border-b relative">
+        <h2 class="text-xl absolute inset-x-0 p-3 bottom-0 mt-7 font-semibold
+         text-gray-500">ocaml-base-compiler.4.11.2
+        </h2>
+       </div>
+       <div class="m-3">
+        <p class="mb-5 italic text-sm">Official release 4.11.2</p>
+        <div class="mb-3">
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="https://ocaml.org">ocaml.org
+          </a>
+         </div>
+        </div>
+        <details class="font-normal mb-2 text-sm">
+         <summary>Other versions</summary><div id="versions_container"></div>
+        </details><h2 class="font-semibold mb-2 text-sm">Authors</h2>
+        <p class="mb-3 text-sm">Xavier Leroy and many contributors</p>
+        <h2 class="font-semibold mb-2 text-sm">Issues</h2>
+        <div class="mb-3">
+         <a class="text-orange cursor-pointer mb-2 text-sm"
+          href="https://github.com/ocaml/opam-repository/issues">
+          github.com/ocaml/opam-repository/issues
+         </a>
+        </div>
+        <details class="font-semibold mb-2 text-sm">
+         <summary>Package dependencies</summary>
+         <div class="font-normal">
+          <ul>
+           <li>
+            <a href="../../../../ocaml/index.html" class="text-orange
+             cursor-pointer">ocaml
+            </a>
+           </li>
+           <li>
+            <a href="../../../../base-unix/index.html" class="text-orange
+             cursor-pointer">base-unix
+            </a>
+           </li>
+           <li>
+            <a href="../../../../base-bigarray/index.html" class="text-orange
+             cursor-pointer">base-bigarray
+            </a>
+           </li>
+           <li>
+            <a href="../../../../base-threads/index.html" class="text-orange
+             cursor-pointer">base-threads
+            </a>
+           </li>
+          </ul>
+         </div>
+        </details>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div><script>Voodoo.update('../../../version.json')</script>
+ </body>
+</html>

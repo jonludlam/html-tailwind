@@ -1,0 +1,2771 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head><title>4.11.2 (packages.ocaml-base-compiler.4.11.2)</title>
+  <link rel="stylesheet" href="../../tailwind.css"/>
+  <link rel="stylesheet" href="../../extra.css"/><meta charset="utf-8"/>
+  <meta name="generator" content="odoc 3dfb7aef2f"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <script src="../../highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="../../voodoo_client.js"></script>
+  <script
+   src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+   defer="defer">
+  </script>
+ </head>
+ <body class="mx-auto max-w-screen-2xl">
+  <div class="relative">
+   <div class="relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+     <div class="flex justify-between items-center md:justify-start py-6
+      md:space-x-10">
+      <div class="flex justify-start">
+       <a href="https://v3.ocaml.org/">
+        <img src="/colour-logo.svg" alt="" class="h-8 w-auto sm:h-10"/>
+       </a>
+      </div>
+      <nav class="hidden md:flex space-x-10">
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Industry</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/whatisocaml">
+            <p class="text-base font-medium text-gray-900">What is OCaml</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/users">
+            <p class="text-base font-medium text-gray-900">Industrial Users
+            </p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/successstories">
+            <p class="text-base font-medium text-gray-900">Success Stories
+            </p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Resources</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/releases">
+            <p class="text-base font-medium text-gray-900">Releases</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/applications">
+            <p class="text-base font-medium text-gray-900">Applications</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/language">
+            <p class="text-base font-medium text-gray-900">Language</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/archive">
+            <p class="text-base font-medium text-gray-900">Archive</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Community</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/opportunities">
+            <p class="text-base font-medium text-gray-900">Opportunities</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/news">
+            <p class="text-base font-medium text-gray-900">News</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/aroundweb">
+            <p class="text-base font-medium text-gray-900">Around the Web</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="h-screen flex bg-white font-sans">
+   <div class="flex flex-col w-full h-full">
+    <div class="flex-row flex-1">
+     <nav class="bg-orange border-t border-b border-orange flex flex-row">
+      <ol class="max-w-screen-xl w-full px-4 flex space-x-4 sm:px-6 lg:px-8">
+       <li class="flex">
+        <div class="flex items-center">
+         <a href="#" class="text-gray-100 hover:text-gray-500">
+          
+  <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+        </svg>
+  
+          <span class="sr-only">Home</span>
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">packages
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">ocaml-base-compiler
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="#" class="ml-4 text-sm font-medium text-gray-100
+          hover:text-gray-500">4.11.2
+         </a>
+        </div>
+       </li>
+      </ol>
+     </nav>
+    </div>
+    <div class="flex flex-row flex-1">
+     <div class="w-72 flex-none bg-gray-100 h-screen border-r border-gray-200
+      sticky top-0 hidden lg:block">
+      <div class="flex h-20 border-b relative">
+       <h2 class="text-xl absolute inset-x-0 p-3 px-5 bottom-0 mt-7
+        border-gray-200 font-semibold text-gray-500 font-sans">On this page
+       </h2>
+      </div>
+      <nav class="bg-gray-100 p-5">
+       <ul>
+        <li>
+         <a href="#libraries" class="cursor-pointer text-orange">Libraries
+         </a>
+         <ul>
+          <li>
+           <a href="#ocamltoplevel" class="cursor-pointer text-orange">
+            ocamltoplevel
+           </a>
+          </li>
+          <li>
+           <a href="#ocamloptcomp" class="cursor-pointer text-orange">
+            ocamloptcomp
+           </a>
+          </li>
+          <li>
+           <a href="#ocamlmiddleend" class="cursor-pointer text-orange">
+            ocamlmiddleend
+           </a>
+          </li>
+          <li>
+           <a href="#ocamlcommon" class="cursor-pointer text-orange">
+            ocamlcommon
+           </a>
+          </li>
+          <li>
+           <a href="#ocamlbytecomp" class="cursor-pointer text-orange">
+            ocamlbytecomp
+           </a>
+          </li>
+          <li>
+           <a href="#odoc_info" class="cursor-pointer text-orange">odoc_info
+           </a>
+          </li>
+          <li>
+           <a href="#threads" class="cursor-pointer text-orange">threads</a>
+          </li>
+          <li><a href="#unix" class="cursor-pointer text-orange">unix</a>
+          </li>
+          <li><a href="#str" class="cursor-pointer text-orange">str</a></li>
+          <li><a href="#stdlib" class="cursor-pointer text-orange">stdlib</a>
+          </li>
+          <li>
+           <a href="#raw_spacetime_lib" class="cursor-pointer text-orange">
+            raw_spacetime_lib
+           </a>
+          </li>
+          <li>
+           <a href="#dynlink" class="cursor-pointer text-orange">dynlink</a>
+          </li>
+          <li>
+           <a href="#bigarray" class="cursor-pointer text-orange">bigarray
+           </a>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </nav>
+     </div>
+     <div class="flex flex-1 flex-col lg:flex-row">
+      <div class="flex-1">
+       <div class="lg:max-w-5xl mx-auto px-3 lg:px-10 mb-10 text-sm">
+        <div class="flex h-20 relative border-b border-gray-200">
+         <div class="relative flex-1 h-20">
+          <h1 class="text-3xl absolute inset-x-0 py-3 bottom-0 font-semibold
+           text-gray-500 font-sans w-full truncate">
+           <code class="font-mono text-gray-800">ocaml-base-compiler</code>
+          </h1>
+         </div>
+         <div class="relative flex-none w-20">
+          <h1 class="text-3xl absolute py-3 bottom-0 right-0 font-semibold
+           text-gray-500 font-sans">
+          </h1>
+         </div>
+        </div>
+        <h2 class="text-2xl my-4 text-gray-800 font-sans anchored"
+         id="libraries">
+         <a href="#libraries" class="hover-link inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Libraries
+        </h2>
+        <p class="mt-4">This package provides the following libraries
+          (via ocamlobjinfo):
+        </p>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans
+         anchored" id="ocamltoplevel">
+         <a href="#ocamltoplevel" class="hover-link inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>ocamltoplevel
+        </h3><p class="mt-4">Documentation: </p>
+        <ul class="modules">
+         <li>
+          <a href="Genprintval/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Genprintval</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Toploop/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Toploop</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Trace/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Trace</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Topdirs/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Topdirs</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Topmain/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Topmain</code>
+          </a> 
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans
+         anchored" id="ocamloptcomp">
+         <a href="#ocamloptcomp" class="hover-link inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>ocamloptcomp
+        </h3><p class="mt-4">Documentation: </p>
+        <ul class="modules">
+         <li>
+          <a href="Internal_variable_names/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Internal_variable_names</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Linkage_name/index.html" class="cursor-pointer
+           text-orange"><code class="font-normal text-sm">Linkage_name</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Compilation_unit/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Compilation_unit</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Variable/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Variable</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Closure_element/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Closure_element</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Closure_id/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Closure_id</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Symbol/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Symbol</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Backend_var/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Backend_var</code>
+          </a> 
+          <span class="synopsis">Variables used in the backend, optionally
+            equipped with &quot;provenance&quot; information, used for
+            the emission of debugging information.
+          </span>
+         </li>
+         <li>
+          <a href="Clambda_primitives/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Clambda_primitives</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Printclambda_primitives/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Printclambda_primitives</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Clambda/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Clambda</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Printclambda/index.html" class="cursor-pointer
+           text-orange"><code class="font-normal text-sm">Printclambda</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Semantics_of_primitives/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Semantics_of_primitives</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Convert_primitives/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Convert_primitives</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Id_types/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Id_types</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Export_id/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Export_id</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Tag/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Tag</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Mutable_variable/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Mutable_variable</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Set_of_closures_id/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Set_of_closures_id</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Set_of_closures_origin/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Set_of_closures_origin</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Closure_origin/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Closure_origin</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Var_within_closure/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Var_within_closure</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Static_exception/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Static_exception</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Pass_wrapper/index.html" class="cursor-pointer
+           text-orange"><code class="font-normal text-sm">Pass_wrapper</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Allocated_const/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Allocated_const</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Parameter/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Parameter</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Projection/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Projection</code>
+          </a> 
+          <span class="synopsis">Representation of projections from closures
+            and blocks.
+          </span>
+         </li>
+         <li>
+          <a href="Flambda/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Flambda</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Flambda_iterators/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Flambda_iterators</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Flambda_utils/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Flambda_utils</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Freshening/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Freshening</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Effect_analysis/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Effect_analysis</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Inlining_cost/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Inlining_cost</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Simple_value_approx/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Simple_value_approx</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Export_info/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Export_info</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Export_info_for_pack/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Export_info_for_pack</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Compilenv/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Compilenv</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Closure/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Closure</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Closure_middle_end/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Closure_middle_end</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Import_approx/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Import_approx</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Lift_code/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Lift_code</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Closure_conversion_aux/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Closure_conversion_aux</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Closure_conversion/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Closure_conversion</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Initialize_symbol_to_let_symbol/index.html"
+           class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Initialize_symbol_to_let_symbol
+           </code>
+          </a> 
+         </li>
+         <li>
+          <a href="Lift_let_to_initialize_symbol/index.html"
+           class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Lift_let_to_initialize_symbol
+           </code>
+          </a> 
+         </li>
+         <li>
+          <a href="Find_recursive_functions/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Find_recursive_functions</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Invariant_params/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Invariant_params</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Inconstant_idents/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Inconstant_idents</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Alias_analysis/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Alias_analysis</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Lift_constants/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Lift_constants</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Share_constants/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Share_constants</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Simplify_common/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Simplify_common</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Remove_unused_arguments/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Remove_unused_arguments</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Remove_unused_closure_vars/index.html"
+           class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Remove_unused_closure_vars
+           </code>
+          </a> 
+         </li>
+         <li>
+          <a href="Remove_unused_program_constructs/index.html"
+           class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Remove_unused_program_constructs
+           </code>
+          </a> 
+         </li>
+         <li>
+          <a href="Simplify_boxed_integer_ops/index.html"
+           class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Simplify_boxed_integer_ops
+           </code>
+          </a> 
+         </li>
+         <li>
+          <a href="Simplify_primitives/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Simplify_primitives</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Inlining_stats_types/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Inlining_stats_types</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Inlining_stats/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Inlining_stats</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Inline_and_simplify_aux/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Inline_and_simplify_aux</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Remove_free_vars_equal_to_args/index.html"
+           class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Remove_free_vars_equal_to_args
+           </code>
+          </a> 
+          <span class="synopsis">Replace free variables in closures known
+            to be equal to specialised arguments of such closures with
+            those specialised arguments.
+          </span>
+         </li>
+         <li>
+          <a href="Extract_projections/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Extract_projections</code>
+          </a> 
+          <span class="synopsis">Identify projections from variables 
+           used in function bodies (free variables or specialised args,
+            for example, according to 
+           <code class="font-normal text-sm">which_variables</code> below).
+            Projections from variables that are also used boxed are not
+            returned.
+          </span>
+         </li>
+         <li>
+          <a href="Augment_specialised_args/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Augment_specialised_args</code>
+          </a> 
+          <span class="synopsis">Helper module for adding specialised
+            arguments to sets of closures.
+          </span>
+         </li>
+         <li>
+          <a href="Unbox_free_vars_of_closures/index.html"
+           class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Unbox_free_vars_of_closures
+           </code>
+          </a> 
+          <span class="synopsis">When approximations of free variables
+            of closures indicate that they are closures or blocks, rewrite
+            projections from such blocks to new variables (which become
+            free in the closures), with the defining expressions of the
+            projections lifted out of the corresponding sets of closures.
+          </span>
+         </li>
+         <li>
+          <a href="Unbox_specialised_args/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Unbox_specialised_args</code>
+          </a> 
+          <span class="synopsis">When approximations of specialised arguments
+            indicate that they are closures or blocks, add more specialised
+            arguments corresponding to the projections from such blocks
+            (with definitions of such projections lifted out), such that
+            the original specialised arguments may later be eliminated.
+          </span>
+         </li>
+         <li>
+          <a href="Unbox_closures/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Unbox_closures</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Inlining_transforms/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Inlining_transforms</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Inlining_decision/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Inlining_decision</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Inline_and_simplify/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Inline_and_simplify</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Ref_to_variables/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Ref_to_variables</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Flambda_invariants/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Flambda_invariants</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Traverse_for_exported_symbols/index.html"
+           class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Traverse_for_exported_symbols
+           </code>
+          </a> 
+         </li>
+         <li>
+          <a href="Build_export_info/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Build_export_info</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Closure_offsets/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Closure_offsets</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Un_anf/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Un_anf</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Flambda_to_clambda/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Flambda_to_clambda</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Flambda_middle_end/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Flambda_middle_end</code>
+          </a> 
+         </li>
+         <li>
+          <a href="X86_proc/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">X86_proc</code>
+          </a> 
+          <span class="synopsis">Definitions shared between the 32 and
+            64 bit Intel backends.
+          </span>
+         </li>
+         <li>
+          <a href="X86_dsl/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">X86_dsl</code>
+          </a> 
+          <span class="synopsis">Helpers for Intel code generators</span>
+         </li>
+         <li>
+          <a href="X86_gas/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">X86_gas</code>
+          </a> 
+          <span class="synopsis">Emit assembly instructions for gas.</span>
+         </li>
+         <li>
+          <a href="X86_masm/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">X86_masm</code>
+          </a> 
+          <span class="synopsis">Emit assembly instructions for MASM 
+           (Intel syntax).
+          </span>
+         </li>
+         <li>
+          <a href="Arch/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Arch</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Cmm/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Cmm</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Printcmm/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Printcmm</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Reg/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Reg</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Reg_with_debug_info/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Reg_with_debug_info</code>
+          </a> 
+          <span class="synopsis">Registers equipped with information 
+           used for generating debugging information.
+          </span>
+         </li>
+         <li>
+          <a href="Reg_availability_set/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Reg_availability_set</code>
+          </a> <span class="synopsis">Register availability sets.</span>
+         </li>
+         <li>
+          <a href="Mach/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Mach</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Proc/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Proc</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Afl_instrument/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Afl_instrument</code>
+          </a> <span class="synopsis">Instrumentation for afl-fuzz.</span>
+         </li>
+         <li>
+          <a href="Strmatch/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Strmatch</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Cmmgen_state/index.html" class="cursor-pointer
+           text-orange"><code class="font-normal text-sm">Cmmgen_state</code>
+          </a> 
+          <span class="synopsis">Mutable state used by 
+           <code class="font-normal text-sm">Cmmgen</code>.
+          </span>
+         </li>
+         <li>
+          <a href="Cmm_helpers/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Cmm_helpers</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Cmmgen/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Cmmgen</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Interval/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Interval</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Printmach/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Printmach</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Selectgen/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Selectgen</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Spacetime_profiling/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Spacetime_profiling</code>
+          </a> 
+          <span class="synopsis">Insertion of instrumentation code for
+            Spacetime profiling.
+          </span>
+         </li>
+         <li>
+          <a href="Selection/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Selection</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Comballoc/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Comballoc</code>
+          </a> 
+         </li>
+         <li>
+          <a href="CSEgen/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">CSEgen</code>
+          </a> 
+         </li>
+         <li>
+          <a href="CSE/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">CSE</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Liveness/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Liveness</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Spill/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Spill</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Split/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Split</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Interf/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Interf</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Coloring/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Coloring</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Linscan/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Linscan</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Reloadgen/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Reloadgen</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Reload/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Reload</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Deadcode/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Deadcode</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Linear/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Linear</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Printlinear/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Printlinear</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Linearize/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Linearize</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Available_regs/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Available_regs</code>
+          </a> 
+          <span class="synopsis">Available registers analysis used to
+            determine which variables may be shown in the debugger.
+          </span>
+         </li>
+         <li>
+          <a href="Compute_ranges_intf/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Compute_ranges_intf</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Compute_ranges/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Compute_ranges</code>
+          </a> 
+          <span class="synopsis">Coalescing of per-instruction information
+            into possibly-discontiguous regions of code delimited by 
+           labels. This is used for collating register availability and
+            lexical block scoping information into a concise form.
+          </span>
+         </li>
+         <li>
+          <a href="Schedgen/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Schedgen</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Scheduling/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Scheduling</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Branch_relaxation_intf/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Branch_relaxation_intf</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Branch_relaxation/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Branch_relaxation</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Emitaux/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Emitaux</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Emit/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Emit</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Asmgen/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Asmgen</code>
+          </a> <span class="synopsis">From Lambda to assembly code</span>
+         </li>
+         <li>
+          <a href="Asmlink/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Asmlink</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Asmlibrarian/index.html" class="cursor-pointer
+           text-orange"><code class="font-normal text-sm">Asmlibrarian</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Asmpackager/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Asmpackager</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Opterrors/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Opterrors</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Optcompile/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Optcompile</code>
+          </a> 
+          <span class="synopsis">Native compilation for .ml and .mli files.
+          </span>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans
+         anchored" id="ocamlmiddleend">
+         <a href="#ocamlmiddleend" class="hover-link inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>ocamlmiddleend
+        </h3><p class="mt-4">Documentation: </p>
+        <ul class="modules">
+         <li>
+          <a href="Internal_variable_names/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Internal_variable_names</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Linkage_name/index.html" class="cursor-pointer
+           text-orange"><code class="font-normal text-sm">Linkage_name</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Compilation_unit/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Compilation_unit</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Variable/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Variable</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Closure_element/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Closure_element</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Closure_id/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Closure_id</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Symbol/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Symbol</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Backend_var/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Backend_var</code>
+          </a> 
+          <span class="synopsis">Variables used in the backend, optionally
+            equipped with &quot;provenance&quot; information, used for
+            the emission of debugging information.
+          </span>
+         </li>
+         <li>
+          <a href="Clambda_primitives/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Clambda_primitives</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Printclambda_primitives/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Printclambda_primitives</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Clambda/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Clambda</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Printclambda/index.html" class="cursor-pointer
+           text-orange"><code class="font-normal text-sm">Printclambda</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Semantics_of_primitives/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Semantics_of_primitives</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Convert_primitives/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Convert_primitives</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Id_types/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Id_types</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Export_id/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Export_id</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Tag/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Tag</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Mutable_variable/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Mutable_variable</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Set_of_closures_id/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Set_of_closures_id</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Set_of_closures_origin/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Set_of_closures_origin</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Closure_origin/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Closure_origin</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Var_within_closure/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Var_within_closure</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Static_exception/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Static_exception</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Pass_wrapper/index.html" class="cursor-pointer
+           text-orange"><code class="font-normal text-sm">Pass_wrapper</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Allocated_const/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Allocated_const</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Parameter/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Parameter</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Projection/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Projection</code>
+          </a> 
+          <span class="synopsis">Representation of projections from closures
+            and blocks.
+          </span>
+         </li>
+         <li>
+          <a href="Flambda/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Flambda</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Flambda_iterators/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Flambda_iterators</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Flambda_utils/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Flambda_utils</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Freshening/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Freshening</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Effect_analysis/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Effect_analysis</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Inlining_cost/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Inlining_cost</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Simple_value_approx/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Simple_value_approx</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Export_info/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Export_info</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Export_info_for_pack/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Export_info_for_pack</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Compilenv/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Compilenv</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Closure/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Closure</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Closure_middle_end/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Closure_middle_end</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Import_approx/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Import_approx</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Lift_code/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Lift_code</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Closure_conversion_aux/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Closure_conversion_aux</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Closure_conversion/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Closure_conversion</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Initialize_symbol_to_let_symbol/index.html"
+           class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Initialize_symbol_to_let_symbol
+           </code>
+          </a> 
+         </li>
+         <li>
+          <a href="Lift_let_to_initialize_symbol/index.html"
+           class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Lift_let_to_initialize_symbol
+           </code>
+          </a> 
+         </li>
+         <li>
+          <a href="Find_recursive_functions/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Find_recursive_functions</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Invariant_params/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Invariant_params</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Inconstant_idents/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Inconstant_idents</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Alias_analysis/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Alias_analysis</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Lift_constants/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Lift_constants</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Share_constants/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Share_constants</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Simplify_common/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Simplify_common</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Remove_unused_arguments/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Remove_unused_arguments</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Remove_unused_closure_vars/index.html"
+           class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Remove_unused_closure_vars
+           </code>
+          </a> 
+         </li>
+         <li>
+          <a href="Remove_unused_program_constructs/index.html"
+           class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Remove_unused_program_constructs
+           </code>
+          </a> 
+         </li>
+         <li>
+          <a href="Simplify_boxed_integer_ops/index.html"
+           class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Simplify_boxed_integer_ops
+           </code>
+          </a> 
+         </li>
+         <li>
+          <a href="Simplify_primitives/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Simplify_primitives</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Inlining_stats_types/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Inlining_stats_types</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Inlining_stats/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Inlining_stats</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Inline_and_simplify_aux/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Inline_and_simplify_aux</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Remove_free_vars_equal_to_args/index.html"
+           class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Remove_free_vars_equal_to_args
+           </code>
+          </a> 
+          <span class="synopsis">Replace free variables in closures known
+            to be equal to specialised arguments of such closures with
+            those specialised arguments.
+          </span>
+         </li>
+         <li>
+          <a href="Extract_projections/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Extract_projections</code>
+          </a> 
+          <span class="synopsis">Identify projections from variables 
+           used in function bodies (free variables or specialised args,
+            for example, according to 
+           <code class="font-normal text-sm">which_variables</code> below).
+            Projections from variables that are also used boxed are not
+            returned.
+          </span>
+         </li>
+         <li>
+          <a href="Augment_specialised_args/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Augment_specialised_args</code>
+          </a> 
+          <span class="synopsis">Helper module for adding specialised
+            arguments to sets of closures.
+          </span>
+         </li>
+         <li>
+          <a href="Unbox_free_vars_of_closures/index.html"
+           class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Unbox_free_vars_of_closures
+           </code>
+          </a> 
+          <span class="synopsis">When approximations of free variables
+            of closures indicate that they are closures or blocks, rewrite
+            projections from such blocks to new variables (which become
+            free in the closures), with the defining expressions of the
+            projections lifted out of the corresponding sets of closures.
+          </span>
+         </li>
+         <li>
+          <a href="Unbox_specialised_args/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Unbox_specialised_args</code>
+          </a> 
+          <span class="synopsis">When approximations of specialised arguments
+            indicate that they are closures or blocks, add more specialised
+            arguments corresponding to the projections from such blocks
+            (with definitions of such projections lifted out), such that
+            the original specialised arguments may later be eliminated.
+          </span>
+         </li>
+         <li>
+          <a href="Unbox_closures/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Unbox_closures</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Inlining_transforms/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Inlining_transforms</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Inlining_decision/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Inlining_decision</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Inline_and_simplify/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Inline_and_simplify</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Ref_to_variables/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Ref_to_variables</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Flambda_invariants/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Flambda_invariants</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Traverse_for_exported_symbols/index.html"
+           class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Traverse_for_exported_symbols
+           </code>
+          </a> 
+         </li>
+         <li>
+          <a href="Build_export_info/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Build_export_info</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Closure_offsets/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Closure_offsets</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Un_anf/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Un_anf</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Flambda_to_clambda/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Flambda_to_clambda</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Flambda_middle_end/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Flambda_middle_end</code>
+          </a> 
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans
+         anchored" id="ocamlcommon">
+         <a href="#ocamlcommon" class="hover-link inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>ocamlcommon
+        </h3><p class="mt-4">Documentation: </p>
+        <ul class="modules">
+         <li>
+          <a href="Config/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Config</code>
+          </a> <span class="synopsis">System configuration</span>
+         </li>
+         <li>
+          <a href="Build_path_prefix_map/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Build_path_prefix_map</code>
+          </a> 
+          <span class="synopsis">Rewrite paths for reproducible builds</span>
+         </li>
+         <li>
+          <a href="Misc/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Misc</code>
+          </a> 
+          <span class="synopsis">Miscellaneous useful types and functions
+          </span>
+         </li>
+         <li>
+          <a href="Identifiable/index.html" class="cursor-pointer
+           text-orange"><code class="font-normal text-sm">Identifiable</code>
+          </a> 
+          <span class="synopsis">Uniform interface for common data structures
+            over various things.
+          </span>
+         </li>
+         <li>
+          <a href="Numbers/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Numbers</code>
+          </a> 
+          <span class="synopsis">Modules about numbers, some of which
+            satisfy 
+           <a href="Identifiable/module-type-S/index.html"
+            class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Identifiable.S</code>
+           </a>.
+          </span>
+         </li>
+         <li>
+          <a href="Arg_helper/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Arg_helper</code>
+          </a> 
+          <span class="synopsis">Decipher command line arguments of the
+            form &lt;value&gt; | &lt;key&gt;=&lt;value&gt;
+           <code class="font-normal text-sm">,...</code>
+          </span>
+         </li>
+         <li>
+          <a href="Clflags/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Clflags</code>
+          </a> <span class="synopsis">Command line flags</span>
+         </li>
+         <li>
+          <a href="Profile/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Profile</code>
+          </a> <span class="synopsis">Compiler performance recording</span>
+         </li>
+         <li>
+          <a href="Load_path/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Load_path</code>
+          </a> 
+          <span class="synopsis">Management of include directories.</span>
+         </li>
+         <li>
+          <a href="Terminfo/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Terminfo</code>
+          </a> 
+          <span class="synopsis">Basic interface to the terminfo database
+          </span>
+         </li>
+         <li>
+          <a href="Ccomp/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Ccomp</code>
+          </a> 
+          <span class="synopsis">Compiling C files and building C libraries
+          </span>
+         </li>
+         <li>
+          <a href="Warnings/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Warnings</code>
+          </a> <span class="synopsis">Warning definitions</span>
+         </li>
+         <li>
+          <a href="Consistbl/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Consistbl</code>
+          </a> 
+          <span class="synopsis">Consistency tables: for checking consistency
+            of module CRCs
+          </span>
+         </li>
+         <li>
+          <a href="Strongly_connected_components/index.html"
+           class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Strongly_connected_components
+           </code>
+          </a> 
+          <span class="synopsis">Kosaraju's algorithm for strongly connected
+            components.
+          </span>
+         </li>
+         <li>
+          <a href="Targetint/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Targetint</code>
+          </a> 
+          <span class="synopsis">Target processor-native integers.</span>
+         </li>
+         <li>
+          <a href="Int_replace_polymorphic_compare/index.html"
+           class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Int_replace_polymorphic_compare
+           </code>
+          </a> 
+         </li>
+         <li>
+          <a href="Domainstate/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Domainstate</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Location/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Location</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Longident/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Longident</code>
+          </a> 
+          <span class="synopsis">Long identifiers, used in parsetree.</span>
+         </li>
+         <li>
+          <a href="Docstrings/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Docstrings</code>
+          </a> <span class="synopsis">Documentation comments</span>
+         </li>
+         <li>
+          <a href="Syntaxerr/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Syntaxerr</code>
+          </a> 
+          <span class="synopsis">Auxiliary type for reporting syntax errors
+          </span>
+         </li>
+         <li>
+          <a href="Ast_helper/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Ast_helper</code>
+          </a> 
+          <span class="synopsis">Helpers to produce Parsetree fragments
+          </span>
+         </li>
+         <li>
+          <a href="Pprintast/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Pprintast</code>
+          </a> 
+          <span class="synopsis">Pretty-printers for 
+           <a href="Parsetree/index.html" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Parsetree</code>
+           </a>
+          </span>
+         </li>
+         <li>
+          <a href="CamlinternalMenhirLib/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">CamlinternalMenhirLib</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Parser/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Parser</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Lexer/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Lexer</code>
+          </a> <span class="synopsis">The lexical analyzer</span>
+         </li>
+         <li>
+          <a href="Parse/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Parse</code>
+          </a> <span class="synopsis">Entry points in the parser</span>
+         </li>
+         <li>
+          <a href="Printast/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Printast</code>
+          </a> 
+          <span class="synopsis">Raw printer for 
+           <a href="Parsetree/index.html" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Parsetree</code>
+           </a>
+          </span>
+         </li>
+         <li>
+          <a href="Ast_mapper/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Ast_mapper</code>
+          </a> <span class="synopsis">The interface of a -ppx rewriter</span>
+         </li>
+         <li>
+          <a href="Ast_iterator/index.html" class="cursor-pointer
+           text-orange"><code class="font-normal text-sm">Ast_iterator</code>
+          </a> 
+          <span class="synopsis">
+           <code class="font-normal text-sm">iterator</code> enables 
+           AST inspection using open recursion. A typical mapper would
+            be based on 
+           <code class="font-normal text-sm">default_iterator</code>,
+            a trivial iterator, and will fall back on it for handling
+            the syntax it does not modify.
+          </span>
+         </li>
+         <li>
+          <a href="Attr_helper/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Attr_helper</code>
+          </a> <span class="synopsis">Helpers for attributes</span>
+         </li>
+         <li>
+          <a href="Builtin_attributes/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Builtin_attributes</code>
+          </a> 
+          <span class="synopsis">Support for some of the builtin attributes
+          </span>
+         </li>
+         <li>
+          <a href="Ast_invariants/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Ast_invariants</code>
+          </a> <span class="synopsis">Check AST invariants</span>
+         </li>
+         <li>
+          <a href="Depend/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Depend</code>
+          </a> <span class="synopsis">Module dependencies.</span>
+         </li>
+         <li>
+          <a href="Ident/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Ident</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Path/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Path</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Primitive/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Primitive</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Type_immediacy/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Type_immediacy</code>
+          </a> <span class="synopsis">Immediacy status of a type</span>
+         </li>
+         <li>
+          <a href="Types/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Types</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Btype/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Btype</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Oprint/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Oprint</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Subst/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Subst</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Predef/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Predef</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Datarepr/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Datarepr</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Cmi_format/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Cmi_format</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Persistent_env/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Persistent_env</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Env/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Env</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Typedtree/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Typedtree</code>
+          </a> 
+          <span class="synopsis">Abstract syntax tree after typing</span>
+         </li>
+         <li>
+          <a href="Printtyped/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Printtyped</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Ctype/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Ctype</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Printtyp/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Printtyp</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Includeclass/index.html" class="cursor-pointer
+           text-orange"><code class="font-normal text-sm">Includeclass</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Mtype/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Mtype</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Envaux/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Envaux</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Includecore/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Includecore</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Tast_iterator/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Tast_iterator</code>
+          </a> 
+          <span class="synopsis">Allows the implementation of typed tree
+            inspection using open recursion
+          </span>
+         </li>
+         <li>
+          <a href="Tast_mapper/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Tast_mapper</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Stypes/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Stypes</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Cmt_format/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Cmt_format</code>
+          </a> <span class="synopsis">cmt and cmti files format.</span>
+         </li>
+         <li>
+          <a href="Cmt2annot/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Cmt2annot</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Untypeast/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Untypeast</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Includemod/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Includemod</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Typetexp/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Typetexp</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Printpat/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Printpat</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Parmatch/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Parmatch</code>
+          </a> 
+          <span class="synopsis">Detection of partial matches and unused
+            match cases.
+          </span>
+         </li>
+         <li>
+          <a href="Typedecl_properties/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Typedecl_properties</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Typedecl_variance/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Typedecl_variance</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Typedecl_unboxed/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Typedecl_unboxed</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Typedecl_immediacy/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Typedecl_immediacy</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Typedecl_separability/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Typedecl_separability</code>
+          </a> 
+          <span class="synopsis">The OCaml runtime assumes for type-directed
+            optimizations that all types are &quot;separable&quot;. A
+            type is &quot;separable&quot; if either all its inhabitants
+            (the values of this type) are floating-point numbers, or 
+           none of them are.
+          </span>
+         </li>
+         <li>
+          <a href="Typedecl/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Typedecl</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Typeopt/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Typeopt</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Rec_check/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Rec_check</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Typecore/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Typecore</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Typeclass/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Typeclass</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Typemod/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Typemod</code>
+          </a> 
+          <span class="synopsis">Type-checking of the module language
+            and typed ast hooks
+          </span>
+         </li>
+         <li>
+          <a href="Debuginfo/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Debuginfo</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Lambda/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Lambda</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Printlambda/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Printlambda</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Switch/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Switch</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Matching/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Matching</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Translobj/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Translobj</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Translattribute/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Translattribute</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Translprim/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Translprim</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Translcore/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Translcore</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Translclass/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Translclass</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Translmod/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Translmod</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Simplif/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Simplif</code>
+          </a> <span class="synopsis">Lambda simplification.</span>
+         </li>
+         <li>
+          <a href="Runtimedef/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Runtimedef</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Meta/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Meta</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Opcodes/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Opcodes</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Bytesections/index.html" class="cursor-pointer
+           text-orange"><code class="font-normal text-sm">Bytesections</code>
+          </a> 
+          <span class="synopsis">Recording sections written to a bytecode
+            executable file
+          </span>
+         </li>
+         <li>
+          <a href="Dll/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Dll</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Symtable/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Symtable</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Pparse/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Pparse</code>
+          </a> 
+          <span class="synopsis">Driver for the parser and external 
+           preprocessors.
+          </span>
+         </li>
+         <li>
+          <a href="Compenv/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Compenv</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Main_args/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Main_args</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Compmisc/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Compmisc</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Makedepend/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Makedepend</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Compile_common/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Compile_common</code>
+          </a> 
+          <span class="synopsis">Common compilation pipeline between 
+           bytecode and native.
+          </span>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans
+         anchored" id="ocamlbytecomp">
+         <a href="#ocamlbytecomp" class="hover-link inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>ocamlbytecomp
+        </h3><p class="mt-4">Documentation: </p>
+        <ul class="modules">
+         <li>
+          <a href="Instruct/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Instruct</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Bytegen/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Bytegen</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Printinstr/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Printinstr</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Emitcode/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Emitcode</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Bytelink/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Bytelink</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Bytelibrarian/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Bytelibrarian</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Bytepackager/index.html" class="cursor-pointer
+           text-orange"><code class="font-normal text-sm">Bytepackager</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Errors/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Errors</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Compile/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Compile</code>
+          </a> 
+          <span class="synopsis">Bytecode compilation for .ml and .mli files.
+          </span>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans
+         anchored" id="odoc_info">
+         <a href="#odoc_info" class="hover-link inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>odoc_info
+        </h3><p class="mt-4">Documentation: </p>
+        <ul class="modules">
+         <li>
+          <a href="Odoc_config/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Odoc_config</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Odoc_messages/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Odoc_messages</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Odoc_global/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Odoc_global</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Odoc_types/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Odoc_types</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Odoc_misc/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Odoc_misc</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Odoc_text_parser/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Odoc_text_parser</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Odoc_text_lexer/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Odoc_text_lexer</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Odoc_text/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Odoc_text</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Odoc_name/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Odoc_name</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Odoc_parameter/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Odoc_parameter</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Odoc_value/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Odoc_value</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Odoc_type/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Odoc_type</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Odoc_extension/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Odoc_extension</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Odoc_exception/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Odoc_exception</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Odoc_class/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Odoc_class</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Odoc_module/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Odoc_module</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Odoc_print/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Odoc_print</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Odoc_str/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Odoc_str</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Odoc_comments_global/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Odoc_comments_global</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Odoc_parser/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Odoc_parser</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Odoc_lexer/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Odoc_lexer</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Odoc_see_lexer/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Odoc_see_lexer</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Odoc_env/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Odoc_env</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Odoc_merge/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Odoc_merge</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Odoc_sig/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Odoc_sig</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Odoc_ast/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Odoc_ast</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Odoc_control/index.html" class="cursor-pointer
+           text-orange"><code class="font-normal text-sm">Odoc_control</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Odoc_inherit/index.html" class="cursor-pointer
+           text-orange"><code class="font-normal text-sm">Odoc_inherit</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Odoc_search/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Odoc_search</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Odoc_scan/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Odoc_scan</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Odoc_cross/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Odoc_cross</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Odoc_comments/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Odoc_comments</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Odoc_dep/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Odoc_dep</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Odoc_analyse/index.html" class="cursor-pointer
+           text-orange"><code class="font-normal text-sm">Odoc_analyse</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Odoc_info/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Odoc_info</code>
+          </a> 
+          <span class="synopsis">Interface to the information collected
+            in source files.
+          </span>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans
+         anchored" id="threads">
+         <a href="#threads" class="hover-link inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>threads
+        </h3><p class="mt-4">Documentation: </p>
+        <ul class="modules">
+         <li>
+          <a href="Thread/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Thread</code>
+          </a> 
+          <span class="synopsis">Lightweight threads for Posix 
+           <code class="font-normal text-sm">1003.1c</code> and Win32.
+          </span>
+         </li>
+         <li>
+          <a href="Mutex/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Mutex</code>
+          </a> <span class="synopsis">Locks for mutual exclusion.</span>
+         </li>
+         <li>
+          <a href="Condition/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Condition</code>
+          </a> 
+          <span class="synopsis">Condition variables to synchronize between
+            threads.
+          </span>
+         </li>
+         <li>
+          <a href="Event/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Event</code>
+          </a> 
+          <span class="synopsis">First-class synchronous communication.
+          </span>
+         </li>
+         <li>
+          <a href="ThreadUnix/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">ThreadUnix</code>
+          </a> <span class="synopsis">Thread-compatible system calls.</span>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans
+         anchored" id="unix">
+         <a href="#unix" class="hover-link inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>unix
+        </h3><p class="mt-4">Documentation: </p>
+        <ul class="modules">
+         <li>
+          <a href="Unix/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Unix</code>
+          </a> <span class="synopsis">Interface to the Unix system.</span>
+         </li>
+         <li>
+          <a href="UnixLabels/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">UnixLabels</code>
+          </a> 
+          <span class="synopsis">Interface to the Unix system. To use
+            as replacement to default 
+           <a href="Unix/index.html" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Unix</code>
+           </a> module, add 
+           <code class="font-normal text-sm">module Unix = UnixLabels</code>
+            in your implementation.
+          </span>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans
+         anchored" id="str">
+         <a href="#str" class="hover-link inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>str
+        </h3><p class="mt-4">Documentation: </p>
+        <ul class="modules">
+         <li>
+          <a href="Str/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Str</code>
+          </a> 
+          <span class="synopsis">Regular expressions and high-level string
+            processing
+          </span>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans
+         anchored" id="stdlib">
+         <a href="#stdlib" class="hover-link inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>stdlib
+        </h3><p class="mt-4">Documentation: </p>
+        <ul class="modules">
+         <li>
+          <a href="CamlinternalFormatBasics/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">CamlinternalFormatBasics</code>
+          </a> 
+         </li>
+         <li>
+          <a href="Stdlib/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Stdlib</code>
+          </a> <span class="synopsis">The OCaml Standard library.</span>
+         </li>
+         <li>
+          <a href="CamlinternalLazy/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">CamlinternalLazy</code>
+          </a> 
+          <span class="synopsis">Run-time support for lazy values. All
+            functions in this module are for system use only, not for
+            the casual user.
+          </span>
+         </li>
+         <li>
+          <a href="CamlinternalFormat/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">CamlinternalFormat</code>
+          </a> 
+         </li>
+         <li>
+          <a href="CamlinternalOO/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">CamlinternalOO</code>
+          </a> 
+          <span class="synopsis">Run-time support for objects and classes.
+            All functions in this module are for system use only, not
+            for the casual user.
+          </span>
+         </li>
+         <li>
+          <a href="CamlinternalMod/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">CamlinternalMod</code>
+          </a> 
+          <span class="synopsis">Run-time support for recursive modules.
+            All functions in this module are for system use only, not
+            for the casual user.
+          </span>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans
+         anchored" id="raw_spacetime_lib">
+         <a href="#raw_spacetime_lib" class="hover-link inline-block 
+          -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>raw_spacetime_lib
+        </h3><p class="mt-4">Documentation: </p>
+        <ul class="modules">
+         <li>
+          <a href="Raw_spacetime_lib/index.html" class="cursor-pointer
+           text-orange">
+           <code class="font-normal text-sm">Raw_spacetime_lib</code>
+          </a> 
+          <span class="synopsis">Access to the information recorded by
+            the <code class="font-normal text-sm">Spacetime</code> module.
+            (It is intended that this module will be used by post-processors
+            rather than users wishing to understand their programs.) 
+           For 64-bit targets only. This module may be used from any 
+           program, not just one compiled with a compiler configured 
+           for Spacetime.
+          </span>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans
+         anchored" id="dynlink">
+         <a href="#dynlink" class="hover-link inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>dynlink
+        </h3><p class="mt-4">Documentation: </p>
+        <ul class="modules">
+         <li><code class="font-normal text-sm">Dynlink_compilerlibs</code> 
+         </li>
+         <li><code class="font-normal text-sm">Dynlink_types</code> </li>
+         <li><code class="font-normal text-sm">Dynlink_platform_intf</code> 
+         </li>
+         <li><code class="font-normal text-sm">Dynlink_common</code> </li>
+         <li>
+          <a href="Dynlink/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Dynlink</code>
+          </a> 
+          <span class="synopsis">Dynamic loading of .cmo, .cma and .cmxs
+            files.
+          </span>
+         </li>
+        </ul>
+        <h3 class="text-xl my-4 text-gray-900 text-gray-800 font-sans
+         anchored" id="bigarray">
+         <a href="#bigarray" class="hover-link inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>bigarray
+        </h3><p class="mt-4">Documentation: </p>
+        <ul class="modules">
+         <li>
+          <a href="Bigarray/index.html" class="cursor-pointer text-orange">
+           <code class="font-normal text-sm">Bigarray</code>
+          </a> 
+         </li>
+        </ul>
+       </div>
+      </div>
+      <div class="w-full flex-none lg:w-72 border-t lg:border-l bg-gray-100">
+       <div class="flex h-20 border-b relative">
+        <h2 class="text-xl absolute inset-x-0 p-3 bottom-0 mt-7 font-semibold
+         text-gray-500">ocaml-base-compiler.4.11.2
+        </h2>
+       </div>
+       <div class="m-3">
+        <p class="mb-5 italic text-sm">Official release 4.11.2</p>
+        <div class="mb-3">
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="https://ocaml.org">ocaml.org
+          </a>
+         </div>
+        </div>
+        <details class="font-normal mb-2 text-sm">
+         <summary>Other versions</summary><div id="versions_container"></div>
+        </details><h2 class="font-semibold mb-2 text-sm">Authors</h2>
+        <p class="mb-3 text-sm">Xavier Leroy and many contributors</p>
+        <h2 class="font-semibold mb-2 text-sm">Issues</h2>
+        <div class="mb-3">
+         <a class="text-orange cursor-pointer mb-2 text-sm"
+          href="https://github.com/ocaml/opam-repository/issues">
+          github.com/ocaml/opam-repository/issues
+         </a>
+        </div>
+        <details class="font-semibold mb-2 text-sm">
+         <summary>Package dependencies</summary>
+         <div class="font-normal">
+          <ul>
+           <li>
+            <a href="../../ocaml/index.html" class="text-orange
+             cursor-pointer">ocaml
+            </a>
+           </li>
+           <li>
+            <a href="../../base-unix/index.html" class="text-orange
+             cursor-pointer">base-unix
+            </a>
+           </li>
+           <li>
+            <a href="../../base-bigarray/index.html" class="text-orange
+             cursor-pointer">base-bigarray
+            </a>
+           </li>
+           <li>
+            <a href="../../base-threads/index.html" class="text-orange
+             cursor-pointer">base-threads
+            </a>
+           </li>
+          </ul>
+         </div>
+        </details>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div><script>Voodoo.update('../version.json')</script>
+ </body>
+</html>

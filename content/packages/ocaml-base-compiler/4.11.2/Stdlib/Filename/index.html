@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>Filename (packages.ocaml-base-compiler.4.11.2.Stdlib.Filename)
+  </title><link rel="stylesheet" href="../../../../tailwind.css"/>
+  <link rel="stylesheet" href="../../../../extra.css"/>
+  <meta charset="utf-8"/><meta name="generator" content="odoc 3dfb7aef2f"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <script src="../../../../highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="../../../../voodoo_client.js"></script>
+  <script
+   src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+   defer="defer">
+  </script>
+ </head>
+ <body class="mx-auto max-w-screen-2xl">
+  <div class="relative">
+   <div class="relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+     <div class="flex justify-between items-center md:justify-start py-6
+      md:space-x-10">
+      <div class="flex justify-start">
+       <a href="https://v3.ocaml.org/">
+        <img src="/colour-logo.svg" alt="" class="h-8 w-auto sm:h-10"/>
+       </a>
+      </div>
+      <nav class="hidden md:flex space-x-10">
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Industry</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/whatisocaml">
+            <p class="text-base font-medium text-gray-900">What is OCaml</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/users">
+            <p class="text-base font-medium text-gray-900">Industrial Users
+            </p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/successstories">
+            <p class="text-base font-medium text-gray-900">Success Stories
+            </p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Resources</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/releases">
+            <p class="text-base font-medium text-gray-900">Releases</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/applications">
+            <p class="text-base font-medium text-gray-900">Applications</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/language">
+            <p class="text-base font-medium text-gray-900">Language</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/archive">
+            <p class="text-base font-medium text-gray-900">Archive</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Community</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/opportunities">
+            <p class="text-base font-medium text-gray-900">Opportunities</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/news">
+            <p class="text-base font-medium text-gray-900">News</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/aroundweb">
+            <p class="text-base font-medium text-gray-900">Around the Web</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="h-screen flex bg-white font-sans">
+   <div class="flex flex-col w-full h-full">
+    <div class="flex-row flex-1">
+     <nav class="bg-orange border-t border-b border-orange flex flex-row">
+      <ol class="max-w-screen-xl w-full px-4 flex space-x-4 sm:px-6 lg:px-8">
+       <li class="flex">
+        <div class="flex items-center">
+         <a href="#" class="text-gray-100 hover:text-gray-500">
+          
+  <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+        </svg>
+  
+          <span class="sr-only">Home</span>
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">packages
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">ocaml-base-compiler
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">4.11.2
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">Stdlib
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="#" class="ml-4 text-sm font-medium text-gray-100
+          hover:text-gray-500">Filename
+         </a>
+        </div>
+       </li>
+      </ol>
+     </nav>
+    </div>
+    <div class="flex flex-row flex-1">
+     <div class="w-72 flex-none bg-gray-100 h-screen border-r border-gray-200
+      sticky top-0 hidden lg:block">
+      <div class="flex h-20 border-b relative">
+       <h2 class="text-xl absolute inset-x-0 p-3 px-5 bottom-0 mt-7
+        border-gray-200 font-semibold text-gray-500 font-sans">On this page
+       </h2>
+      </div>
+     </div>
+     <div class="flex flex-1 flex-col lg:flex-row">
+      <div class="flex-1">
+       <div class="lg:max-w-5xl mx-auto px-3 lg:px-10 mb-10 text-sm">
+        <div class="flex h-20 relative border-b border-gray-200">
+         <div class="relative flex-1 h-20">
+          <h1 class="text-3xl absolute inset-x-0 py-3 bottom-0 font-semibold
+           text-gray-500 font-sans w-full truncate">
+           <code class="font-mono text-gray-800">Stdlib.Filename</code>
+          </h1>
+         </div>
+         <div class="relative flex-none w-28">
+          <h1 class="text-3xl absolute py-3 bottom-0 right-0 font-semibold
+           text-gray-500 font-sans">Module
+          </h1>
+         </div>
+        </div><p class="mt-4">Operations on file names.</p>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-current_dir_name">
+          <a href="#val-current_dir_name" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> current_dir_name
+             : string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">The conventional name for the current directory
+            (e.g. <code class="font-normal text-sm">.</code> in Unix).
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-parent_dir_name">
+          <a href="#val-parent_dir_name" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> parent_dir_name
+             : string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">The conventional name for the parent of the
+            current directory (e.g. 
+           <code class="font-normal text-sm">..</code> in Unix).
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-dir_sep">
+          <a href="#val-dir_sep" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> dir_sep : string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">The directory separator (e.g. 
+           <code class="font-normal text-sm">/</code> in Unix). 
+          </p><ul class="at-tags"><li class="since">since 3.11.2</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-concat">
+          <a href="#val-concat" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> concat : 
+            <span>string <span class="">&#45;&gt;</span></span> 
+            <span>string <span class="">&#45;&gt;</span></span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">concat dir file</code> returns
+            a file name that designates file 
+           <code class="font-normal text-sm">file</code> in directory
+            <code class="font-normal text-sm">dir</code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-is_relative">
+          <a href="#val-is_relative" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> is_relative : 
+            <span>string <span class="">&#45;&gt;</span></span> bool
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return 
+           <code class="font-normal text-sm">true</code> if the file 
+           name is relative to the current directory, 
+           <code class="font-normal text-sm">false</code> if it is absolute
+            (i.e. in Unix, starts with 
+           <code class="font-normal text-sm">/</code>).
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-is_implicit">
+          <a href="#val-is_implicit" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> is_implicit : 
+            <span>string <span class="">&#45;&gt;</span></span> bool
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return 
+           <code class="font-normal text-sm">true</code> if the file 
+           name is relative and does not start with an explicit reference
+            to the current directory (
+           <code class="font-normal text-sm">./</code> or 
+           <code class="font-normal text-sm">../</code> in Unix), 
+           <code class="font-normal text-sm">false</code> if it starts
+            with an explicit reference to the root directory or the current
+            directory.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-check_suffix">
+          <a href="#val-check_suffix" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> check_suffix : 
+            <span>string <span class="">&#45;&gt;</span></span> 
+            <span>string <span class="">&#45;&gt;</span></span> bool
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">check_suffix name suff</code>
+            returns <code class="font-normal text-sm">true</code> if 
+           the filename <code class="font-normal text-sm">name</code>
+            ends with the suffix 
+           <code class="font-normal text-sm">suff</code>.
+          </p>
+          <p class="mt-4">Under Windows ports (including Cygwin), comparison
+            is case-insensitive, relying on 
+           <code class="font-normal text-sm">String.lowercase_ascii</code>
+           . Note that this does not match exactly the interpretation
+            of case-insensitive filename equivalence from Windows.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-chop_suffix">
+          <a href="#val-chop_suffix" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> chop_suffix : 
+            <span>string <span class="">&#45;&gt;</span></span> 
+            <span>string <span class="">&#45;&gt;</span></span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">chop_suffix name suff</code>
+            removes the suffix <code class="font-normal text-sm">suff</code>
+            from the filename <code class="font-normal text-sm">name</code>
+           . The behavior is undefined if 
+           <code class="font-normal text-sm">name</code> does not end
+            with the suffix <code class="font-normal text-sm">suff</code>
+           . <code class="font-normal text-sm">chop_suffix_opt</code>
+            is thus recommended instead.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-chop_suffix_opt">
+          <a href="#val-chop_suffix_opt" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> chop_suffix_opt
+             : <span>suffix:string <span class="">&#45;&gt;</span></span>
+             <span>string <span class="">&#45;&gt;</span></span> 
+            <span>string option</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">chop_suffix_opt ~suffix filename
+           </code> removes the suffix from the 
+           <code class="font-normal text-sm">filename</code> if possible,
+            or returns <code class="font-normal text-sm">None</code> 
+           if the filename does not end with the suffix.
+          </p>
+          <p class="mt-4">Under Windows ports (including Cygwin), comparison
+            is case-insensitive, relying on 
+           <code class="font-normal text-sm">String.lowercase_ascii</code>
+           . Note that this does not match exactly the interpretation
+            of case-insensitive filename equivalence from Windows.
+          </p><ul class="at-tags"><li class="since">since 4.08</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-extension">
+          <a href="#val-extension" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> extension : 
+            <span>string <span class="">&#45;&gt;</span></span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">extension name</code> is
+            the shortest suffix <code class="font-normal text-sm">ext</code>
+            of <code class="font-normal text-sm">name0</code> where:
+          </p>
+          <ul class="list-disc mt-2 mb-4">
+           <li class="ml-4"><code class="font-normal text-sm">name0</code>
+             is the longest suffix of 
+            <code class="font-normal text-sm">name</code> that does not
+             contain a directory separator;
+           </li>
+           <li class="ml-4"><code class="font-normal text-sm">ext</code>
+             starts with a period;
+           </li>
+           <li class="ml-4"><code class="font-normal text-sm">ext</code>
+             is preceded by at least one non-period character in 
+            <code class="font-normal text-sm">name0</code>.
+           </li>
+          </ul>
+          <p class="mt-4">If such a suffix does not exist, 
+           <code class="font-normal text-sm">extension name</code> is
+            the empty string.
+          </p><ul class="at-tags"><li class="since">since 4.04</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-remove_extension">
+          <a href="#val-remove_extension" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> remove_extension
+             : <span>string <span class="">&#45;&gt;</span></span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return the given file name without its extension,
+            as defined in 
+           <a href="#val-extension" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Filename.extension</code>
+           </a>. If the extension is empty, the function returns the 
+           given file name.
+          </p>
+          <p class="mt-4">The following invariant holds for any file 
+           name <code class="font-normal text-sm">s</code>:
+          </p>
+          <p class="mt-4">
+           <code class="font-normal text-sm">
+            remove_extension s ^ extension s = s
+           </code>
+          </p><ul class="at-tags"><li class="since">since 4.04</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-chop_extension">
+          <a href="#val-chop_extension" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> chop_extension
+             : <span>string <span class="">&#45;&gt;</span></span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Same as 
+           <a href="#val-remove_extension" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Filename.remove_extension
+            </code>
+           </a>, but raise 
+           <code class="font-normal text-sm">Invalid_argument</code> 
+           if the given name has an empty extension.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-basename">
+          <a href="#val-basename" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> basename : 
+            <span>string <span class="">&#45;&gt;</span></span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Split a file name into directory name / base
+            file name. If <code class="font-normal text-sm">name</code>
+            is a valid file name, then 
+           <code class="font-normal text-sm">
+            concat (dirname name) (basename name)
+           </code> returns a file name which is equivalent to 
+           <code class="font-normal text-sm">name</code>. Moreover, after
+            setting the current directory to 
+           <code class="font-normal text-sm">dirname name</code> (with
+            
+           <a href="../Sys/index.html#val-chdir" class="cursor-pointer
+            text-orange"><code class="font-normal text-sm">Sys.chdir</code>
+           </a>), references to 
+           <code class="font-normal text-sm">basename name</code> (which
+            is a relative file name) designate the same file as 
+           <code class="font-normal text-sm">name</code> before the call
+            to 
+           <a href="../Sys/index.html#val-chdir" class="cursor-pointer
+            text-orange"><code class="font-normal text-sm">Sys.chdir</code>
+           </a>.
+          </p>
+          <p class="mt-4">This function conforms to the specification
+            of POSIX.1-2008 for the 
+           <code class="font-normal text-sm">basename</code> utility.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-dirname">
+          <a href="#val-dirname" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> dirname : 
+            <span>string <span class="">&#45;&gt;</span></span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">See 
+           <a href="#val-basename" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Filename.basename</code>
+           </a>. This function conforms to the specification of POSIX.1-2008
+            for the <code class="font-normal text-sm">dirname</code> 
+           utility.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-null">
+          <a href="#val-null" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> null : string</span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">null</code>
+            is <code class="font-normal text-sm">&quot;/dev/null&quot;</code>
+            on POSIX and 
+           <code class="font-normal text-sm">&quot;NUL&quot;</code> on
+            Windows. It represents a file on the OS that discards all
+            writes and returns end of file on reads.
+          </p><ul class="at-tags"><li class="since">since 4.10.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-temp_file">
+          <a href="#val-temp_file" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> temp_file : 
+            <span>?temp_dir:string <span class="">&#45;&gt;</span></span>
+             <span>string <span class="">&#45;&gt;</span></span> 
+            <span>string <span class="">&#45;&gt;</span></span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">temp_file prefix suffix</code>
+            returns the name of a fresh temporary file in the temporary
+            directory. The base name of the temporary file is formed 
+           by concatenating <code class="font-normal text-sm">prefix</code>
+           , then a suitably chosen integer number, then 
+           <code class="font-normal text-sm">suffix</code>. The optional
+            argument <code class="font-normal text-sm">temp_dir</code>
+            indicates the temporary directory to use, defaulting to the
+            current result of 
+           <a href="#val-get_temp_dir_name" class="cursor-pointer
+            text-orange">
+            <code class="font-normal text-sm">Filename.get_temp_dir_name
+            </code>
+           </a>. The temporary file is created empty, with permissions
+            <code class="font-normal text-sm">0o600</code> (readable 
+           and writable only by the file owner). The file is guaranteed
+            to be different from any other file that existed when 
+           <code class="font-normal text-sm">temp_file</code> was called.
+          </p>
+          <ul class="at-tags">
+           <li class="raises">raises Sys_error 
+            <p class="mt-4">if the file could not be created.</p>
+           </li>
+          </ul>
+          <ul class="at-tags">
+           <li class="before">before 3.11.2 
+            <p class="mt-4">no ?temp_dir optional argument</p>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-open_temp_file">
+          <a href="#val-open_temp_file" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> open_temp_file
+             : 
+            <span>?mode:
+             <span>
+              <a href="../index.html#type-open_flag" class="cursor-pointer
+               text-orange">Stdlib.open_flag
+              </a> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> <span>?perms:int <span class="">&#45;&gt;</span></span>
+             <span>?temp_dir:string <span class="">&#45;&gt;</span></span>
+            
+            <span>string <span class="">&#45;&gt;</span></span> 
+            <span>string <span class="">&#45;&gt;</span></span> string
+             * 
+            <a href="../index.html#type-out_channel" class="cursor-pointer
+             text-orange">Stdlib.out_channel
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Same as 
+           <a href="#val-temp_file" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Filename.temp_file</code>
+           </a>, but returns both the name of a fresh temporary file,
+            and an output channel opened (atomically) on this file. This
+            function is more secure than 
+           <code class="font-normal text-sm">temp_file</code>: there 
+           is no risk that the temporary file will be modified (e.g. 
+           replaced by a symbolic link) before the program opens it. 
+           The optional argument 
+           <code class="font-normal text-sm">mode</code> is a list of
+            additional flags to control the opening of the file. It can
+            contain one or several of 
+           <code class="font-normal text-sm">Open_append</code>, 
+           <code class="font-normal text-sm">Open_binary</code>, and 
+           <code class="font-normal text-sm">Open_text</code>. The default
+            is <code class="font-normal text-sm">[Open_text]</code> (open
+            in text mode). The file is created with permissions 
+           <code class="font-normal text-sm">perms</code> (defaults to
+            readable and writable only by the file owner, 
+           <code class="font-normal text-sm">0o600</code>).
+          </p>
+          <ul class="at-tags">
+           <li class="raises">raises Sys_error 
+            <p class="mt-4">if the file could not be opened.</p>
+           </li>
+          </ul>
+          <ul class="at-tags">
+           <li class="before">before 4.03.0 
+            <p class="mt-4">no ?perms optional argument</p>
+           </li>
+          </ul>
+          <ul class="at-tags">
+           <li class="before">before 3.11.2 
+            <p class="mt-4">no ?temp_dir optional argument</p>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-get_temp_dir_name">
+          <a href="#val-get_temp_dir_name" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> get_temp_dir_name
+             : <span>unit <span class="">&#45;&gt;</span></span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">The name of the temporary directory: Under 
+           Unix, the value of the 
+           <code class="font-normal text-sm">TMPDIR</code> environment
+            variable, or &quot;/tmp&quot; if the variable is not set.
+            Under Windows, the value of the 
+           <code class="font-normal text-sm">TEMP</code> environment 
+           variable, or &quot;.&quot; if the variable is not set. The
+            temporary directory can be changed with 
+           <a href="#val-set_temp_dir_name" class="cursor-pointer
+            text-orange">
+            <code class="font-normal text-sm">Filename.set_temp_dir_name
+            </code>
+           </a>.
+          </p><ul class="at-tags"><li class="since">since 4.00.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-set_temp_dir_name">
+          <a href="#val-set_temp_dir_name" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> set_temp_dir_name
+             : <span>string <span class="">&#45;&gt;</span></span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Change the temporary directory returned by 
+           <a href="#val-get_temp_dir_name" class="cursor-pointer
+            text-orange">
+            <code class="font-normal text-sm">Filename.get_temp_dir_name
+            </code>
+           </a> and used by 
+           <a href="#val-temp_file" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Filename.temp_file</code>
+           </a> and 
+           <a href="#val-open_temp_file" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Filename.open_temp_file</code>
+           </a>.
+          </p><ul class="at-tags"><li class="since">since 4.00.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-temp_dir_name">
+          <a href="#val-temp_dir_name" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> temp_dir_name
+             : string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">The name of the initial temporary directory:
+            Under Unix, the value of the 
+           <code class="font-normal text-sm">TMPDIR</code> environment
+            variable, or &quot;/tmp&quot; if the variable is not set.
+            Under Windows, the value of the 
+           <code class="font-normal text-sm">TEMP</code> environment 
+           variable, or &quot;.&quot; if the variable is not set.
+          </p>
+          <ul class="at-tags">
+           <li class="deprecated">deprecated 
+            <p class="mt-4">You should use 
+             <code class="font-normal text-sm">Filename</code>
+             .get_temp_dir_name instead.
+            </p>
+           </li>
+          </ul><ul class="at-tags"><li class="since">since 3.09.1</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-quote">
+          <a href="#val-quote" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> quote : 
+            <span>string <span class="">&#45;&gt;</span></span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return a quoted version of a file name, suitable
+            for use as one argument in a command line, escaping all 
+           meta-characters. Warning: under Windows, the output is only
+            suitable for use with programs that follow the standard Windows
+            quoting conventions.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-quote_command">
+          <a href="#val-quote_command" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> quote_command
+             : <span>string <span class="">&#45;&gt;</span></span> 
+            <span>?stdin:string <span class="">&#45;&gt;</span></span>
+             <span>?stdout:string <span class="">&#45;&gt;</span></span>
+             <span>?stderr:string <span class="">&#45;&gt;</span></span>
+            
+            <span><span>string list</span> <span class="">&#45;&gt;</span>
+            </span> string
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">quote_command cmd args</code>
+            returns a quoted command line, suitable for use as an argument
+            to 
+           <a href="../Sys/index.html#val-command" class="cursor-pointer
+            text-orange"><code class="font-normal text-sm">Sys.command</code>
+           </a>, 
+           <a href="../../Unix/index.html#val-system" class="cursor-pointer
+            text-orange"><code class="font-normal text-sm">Unix.system</code>
+           </a>, and the 
+           <a href="../../Unix/index.html#val-open_process"
+            class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Unix.open_process</code>
+           </a> functions.
+          </p>
+          <p class="mt-4">The string 
+           <code class="font-normal text-sm">cmd</code> is the command
+            to call. The list <code class="font-normal text-sm">args</code>
+            is the list of arguments to pass to this command. It can 
+           be empty.
+          </p>
+          <p class="mt-4">The optional arguments 
+           <code class="font-normal text-sm">?stdin</code> and 
+           <code class="font-normal text-sm">?stdout</code> and 
+           <code class="font-normal text-sm">?stderr</code> are file 
+           names used to redirect the standard input, the standard output,
+            or the standard error of the command. If 
+           <code class="font-normal text-sm">~stdin:f</code> is given,
+            a redirection <code class="font-normal text-sm">&lt; f</code>
+            is performed and the standard input of the command reads 
+           from file <code class="font-normal text-sm">f</code>. If 
+           <code class="font-normal text-sm">~stdout:f</code> is given,
+            a redirection <code class="font-normal text-sm">&gt; f</code>
+            is performed and the standard output of the command is written
+            to file <code class="font-normal text-sm">f</code>. If 
+           <code class="font-normal text-sm">~stderr:f</code> is given,
+            a redirection <code class="font-normal text-sm">2&gt; f</code>
+            is performed and the standard error of the command is written
+            to file <code class="font-normal text-sm">f</code>. If both
+            <code class="font-normal text-sm">~stdout:f</code> and 
+           <code class="font-normal text-sm">~stderr:f</code> are given,
+            with the exact same file name 
+           <code class="font-normal text-sm">f</code>, a 
+           <code class="font-normal text-sm">2&gt;&amp;1</code> redirection
+            is performed so that the standard output and the standard
+            error of the command are interleaved and redirected to the
+            same file <code class="font-normal text-sm">f</code>.
+          </p>
+          <p class="mt-4">Under Unix and Cygwin, the command, the arguments,
+            and the redirections if any are quoted using 
+           <a href="#val-quote" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">Filename.quote</code>
+           </a>, then concatenated. Under Win32, additional quoting is
+            performed as required by the 
+           <code class="font-normal text-sm">cmd.exe</code> shell that
+            is called by 
+           <a href="../Sys/index.html#val-command" class="cursor-pointer
+            text-orange"><code class="font-normal text-sm">Sys.command</code>
+           </a>.
+          </p>
+          <ul class="at-tags">
+           <li class="raises">raises Failure 
+            <p class="mt-4">if the command cannot be escaped on the current
+              platform.
+            </p>
+           </li>
+          </ul>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="w-full flex-none lg:w-72 border-t lg:border-l bg-gray-100">
+       <div class="flex h-20 border-b relative">
+        <h2 class="text-xl absolute inset-x-0 p-3 bottom-0 mt-7 font-semibold
+         text-gray-500">ocaml-base-compiler.4.11.2
+        </h2>
+       </div>
+       <div class="m-3">
+        <p class="mb-5 italic text-sm">Official release 4.11.2</p>
+        <div class="mb-3">
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="https://ocaml.org">ocaml.org
+          </a>
+         </div>
+        </div>
+        <details class="font-normal mb-2 text-sm">
+         <summary>Other versions</summary><div id="versions_container"></div>
+        </details><h2 class="font-semibold mb-2 text-sm">Authors</h2>
+        <p class="mb-3 text-sm">Xavier Leroy and many contributors</p>
+        <h2 class="font-semibold mb-2 text-sm">Issues</h2>
+        <div class="mb-3">
+         <a class="text-orange cursor-pointer mb-2 text-sm"
+          href="https://github.com/ocaml/opam-repository/issues">
+          github.com/ocaml/opam-repository/issues
+         </a>
+        </div>
+        <details class="font-semibold mb-2 text-sm">
+         <summary>Package dependencies</summary>
+         <div class="font-normal">
+          <ul>
+           <li>
+            <a href="../../../../ocaml/index.html" class="text-orange
+             cursor-pointer">ocaml
+            </a>
+           </li>
+           <li>
+            <a href="../../../../base-unix/index.html" class="text-orange
+             cursor-pointer">base-unix
+            </a>
+           </li>
+           <li>
+            <a href="../../../../base-bigarray/index.html" class="text-orange
+             cursor-pointer">base-bigarray
+            </a>
+           </li>
+           <li>
+            <a href="../../../../base-threads/index.html" class="text-orange
+             cursor-pointer">base-threads
+            </a>
+           </li>
+          </ul>
+         </div>
+        </details>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div><script>Voodoo.update('../../../version.json')</script>
+ </body>
+</html>

@@ -1,0 +1,1714 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head><title>Set (packages.ocaml-base-compiler.4.11.2.Path.Set)</title>
+  <link rel="stylesheet" href="../../../../tailwind.css"/>
+  <link rel="stylesheet" href="../../../../extra.css"/>
+  <meta charset="utf-8"/><meta name="generator" content="odoc 3dfb7aef2f"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <script src="../../../../highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="../../../../voodoo_client.js"></script>
+  <script
+   src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+   defer="defer">
+  </script>
+ </head>
+ <body class="mx-auto max-w-screen-2xl">
+  <div class="relative">
+   <div class="relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+     <div class="flex justify-between items-center md:justify-start py-6
+      md:space-x-10">
+      <div class="flex justify-start">
+       <a href="https://v3.ocaml.org/">
+        <img src="/colour-logo.svg" alt="" class="h-8 w-auto sm:h-10"/>
+       </a>
+      </div>
+      <nav class="hidden md:flex space-x-10">
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Industry</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/whatisocaml">
+            <p class="text-base font-medium text-gray-900">What is OCaml</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/users">
+            <p class="text-base font-medium text-gray-900">Industrial Users
+            </p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/successstories">
+            <p class="text-base font-medium text-gray-900">Success Stories
+            </p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Resources</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/releases">
+            <p class="text-base font-medium text-gray-900">Releases</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/applications">
+            <p class="text-base font-medium text-gray-900">Applications</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/language">
+            <p class="text-base font-medium text-gray-900">Language</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/archive">
+            <p class="text-base font-medium text-gray-900">Archive</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Community</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/opportunities">
+            <p class="text-base font-medium text-gray-900">Opportunities</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/news">
+            <p class="text-base font-medium text-gray-900">News</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/aroundweb">
+            <p class="text-base font-medium text-gray-900">Around the Web</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="h-screen flex bg-white font-sans">
+   <div class="flex flex-col w-full h-full">
+    <div class="flex-row flex-1">
+     <nav class="bg-orange border-t border-b border-orange flex flex-row">
+      <ol class="max-w-screen-xl w-full px-4 flex space-x-4 sm:px-6 lg:px-8">
+       <li class="flex">
+        <div class="flex items-center">
+         <a href="#" class="text-gray-100 hover:text-gray-500">
+          
+  <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+        </svg>
+  
+          <span class="sr-only">Home</span>
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">packages
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">ocaml-base-compiler
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">4.11.2
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">Path
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="#" class="ml-4 text-sm font-medium text-gray-100
+          hover:text-gray-500">Set
+         </a>
+        </div>
+       </li>
+      </ol>
+     </nav>
+    </div>
+    <div class="flex flex-row flex-1">
+     <div class="w-72 flex-none bg-gray-100 h-screen border-r border-gray-200
+      sticky top-0 hidden lg:block">
+      <div class="flex h-20 border-b relative">
+       <h2 class="text-xl absolute inset-x-0 p-3 px-5 bottom-0 mt-7
+        border-gray-200 font-semibold text-gray-500 font-sans">On this page
+       </h2>
+      </div>
+      <nav class="bg-gray-100 p-5">
+       <ul>
+        <li>
+         <a href="#iterators" class="cursor-pointer text-orange">Iterators
+         </a>
+        </li>
+       </ul>
+      </nav>
+     </div>
+     <div class="flex flex-1 flex-col lg:flex-row">
+      <div class="flex-1">
+       <div class="lg:max-w-5xl mx-auto px-3 lg:px-10 mb-10 text-sm">
+        <div class="flex h-20 relative border-b border-gray-200">
+         <div class="relative flex-1 h-20">
+          <h1 class="text-3xl absolute inset-x-0 py-3 bottom-0 font-semibold
+           text-gray-500 font-sans w-full truncate">
+           <code class="font-mono text-gray-800">Path.Set</code>
+          </h1>
+         </div>
+         <div class="relative flex-none w-28">
+          <h1 class="text-3xl absolute py-3 bottom-0 right-0 font-semibold
+           text-gray-500 font-sans">Module
+          </h1>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-elt">
+          <a href="#type-elt" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> elt</span>
+           <span> = 
+            <a href="../index.html#type-t" class="cursor-pointer text-orange">
+             t
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">The type of the set elements.</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-t">
+          <a href="#type-t" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> t</span>
+          </code>
+         </div>
+         <div class="spec-doc"><p class="mt-4">The type of sets.</p></div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-empty">
+          <a href="#val-empty" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> empty : 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div><div class="spec-doc"><p class="mt-4">The empty set.</p></div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-is_empty">
+          <a href="#val-is_empty" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> is_empty : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> bool
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Test whether a set is empty or not.</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-mem">
+          <a href="#val-mem" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> mem : 
+            <span>
+             <a href="#type-elt" class="cursor-pointer text-orange">elt</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> bool
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">mem x s</code>
+            tests whether <code class="font-normal text-sm">x</code> 
+           belongs to the set <code class="font-normal text-sm">s</code>
+           .
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-add">
+          <a href="#val-add" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> add : 
+            <span>
+             <a href="#type-elt" class="cursor-pointer text-orange">elt</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">add x s</code>
+            returns a set containing all elements of 
+           <code class="font-normal text-sm">s</code>, plus 
+           <code class="font-normal text-sm">x</code>. If 
+           <code class="font-normal text-sm">x</code> was already in 
+           <code class="font-normal text-sm">s</code>, 
+           <code class="font-normal text-sm">s</code> is returned unchanged
+            (the result of the function is then physically equal to 
+           <code class="font-normal text-sm">s</code>).
+          </p>
+          <ul class="at-tags">
+           <li class="before">before 4.03 
+            <p class="mt-4">Physical equality was not ensured.</p>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-singleton">
+          <a href="#val-singleton" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> singleton : 
+            <span>
+             <a href="#type-elt" class="cursor-pointer text-orange">elt</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">singleton x</code> returns
+            the one-element set containing only 
+           <code class="font-normal text-sm">x</code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-remove">
+          <a href="#val-remove" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> remove : 
+            <span>
+             <a href="#type-elt" class="cursor-pointer text-orange">elt</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">remove x s</code>
+            returns a set containing all elements of 
+           <code class="font-normal text-sm">s</code>, except 
+           <code class="font-normal text-sm">x</code>. If 
+           <code class="font-normal text-sm">x</code> was not in 
+           <code class="font-normal text-sm">s</code>, 
+           <code class="font-normal text-sm">s</code> is returned unchanged
+            (the result of the function is then physically equal to 
+           <code class="font-normal text-sm">s</code>).
+          </p>
+          <ul class="at-tags">
+           <li class="before">before 4.03 
+            <p class="mt-4">Physical equality was not ensured.</p>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-union">
+          <a href="#val-union" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> union : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div><div class="spec-doc"><p class="mt-4">Set union.</p></div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-inter">
+          <a href="#val-inter" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> inter : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc"><p class="mt-4">Set intersection.</p></div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-disjoint">
+          <a href="#val-disjoint" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> disjoint : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> bool
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Test if two sets are disjoint.</p>
+          <ul class="at-tags"><li class="since">since 4.08.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-diff">
+          <a href="#val-diff" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> diff : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Set difference: 
+           <code class="font-normal text-sm">diff s1 s2</code> contains
+            the elements of <code class="font-normal text-sm">s1</code>
+            that are not in <code class="font-normal text-sm">s2</code>
+           .
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-compare">
+          <a href="#val-compare" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> compare : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> int
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Total ordering between sets. Can be used as
+            the ordering function for doing sets of sets.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-equal">
+          <a href="#val-equal" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> equal : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> bool
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">equal s1 s2</code> tests
+            whether the sets <code class="font-normal text-sm">s1</code>
+            and <code class="font-normal text-sm">s2</code> are equal,
+            that is, contain equal elements.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-subset">
+          <a href="#val-subset" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> subset : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> bool
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">subset s1 s2</code> tests
+            whether the set <code class="font-normal text-sm">s1</code>
+            is a subset of the set 
+           <code class="font-normal text-sm">s2</code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-iter">
+          <a href="#val-iter" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> iter : 
+            <span>
+             <span>(
+              <span>
+               <a href="#type-elt" class="cursor-pointer text-orange">elt</a>
+                <span class="">&#45;&gt;</span>
+              </span> unit)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">iter f s</code>
+            applies <code class="font-normal text-sm">f</code> in turn
+            to all elements of <code class="font-normal text-sm">s</code>
+           . The elements of <code class="font-normal text-sm">s</code>
+            are presented to <code class="font-normal text-sm">f</code>
+            in increasing order with respect to the ordering over the
+            type of the elements.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-map">
+          <a href="#val-map" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> map : 
+            <span>
+             <span>(
+              <span>
+               <a href="#type-elt" class="cursor-pointer text-orange">elt</a>
+                <span class="">&#45;&gt;</span>
+              </span> 
+              <a href="#type-elt" class="cursor-pointer text-orange">elt</a>
+              )
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">map f s</code>
+            is the set whose elements are 
+           <code class="font-normal text-sm">f a0</code>,
+           <code class="font-normal text-sm">f a1</code>... 
+           <code class="font-normal text-sm">f
+                                                     aN</code>
+           , where <code class="font-normal text-sm">a0</code>,
+           <code class="font-normal text-sm">a1</code>...
+           <code class="font-normal text-sm">aN</code> are the elements
+            of <code class="font-normal text-sm">s</code>.
+          </p>
+          <p class="mt-4">The elements are passed to 
+           <code class="font-normal text-sm">f</code> in increasing order
+            with respect to the ordering over the type of the elements.
+          </p>
+          <p class="mt-4">If no element of 
+           <code class="font-normal text-sm">s</code> is changed by 
+           <code class="font-normal text-sm">f</code>, 
+           <code class="font-normal text-sm">s</code> is returned unchanged.
+            (If each output of <code class="font-normal text-sm">f</code>
+            is physically equal to its input, the returned set is physically
+            equal to <code class="font-normal text-sm">s</code>.)
+          </p><ul class="at-tags"><li class="since">since 4.04.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-fold">
+          <a href="#val-fold" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> fold : 
+            <span>
+             <span>(
+              <span>
+               <a href="#type-elt" class="cursor-pointer text-orange">elt</a>
+                <span class="">&#45;&gt;</span>
+              </span> 
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> <span class="">'a</span>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+            </span> <span class="">'a</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">fold f s a</code>
+            computes 
+           <code class="font-normal text-sm">(f xN ... (f x2 (f x1 a))...)
+           </code>, where <code class="font-normal text-sm">x1 ... xN</code>
+            are the elements of <code class="font-normal text-sm">s</code>
+           , in increasing order.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-for_all">
+          <a href="#val-for_all" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> for_all : 
+            <span>
+             <span>(
+              <span>
+               <a href="#type-elt" class="cursor-pointer text-orange">elt</a>
+                <span class="">&#45;&gt;</span>
+              </span> bool)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> bool
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">for_all p s</code> checks
+            if all elements of the set satisfy the predicate 
+           <code class="font-normal text-sm">p</code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-exists">
+          <a href="#val-exists" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> exists : 
+            <span>
+             <span>(
+              <span>
+               <a href="#type-elt" class="cursor-pointer text-orange">elt</a>
+                <span class="">&#45;&gt;</span>
+              </span> bool)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> bool
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">exists p s</code>
+            checks if at least one element of the set satisfies the predicate
+            <code class="font-normal text-sm">p</code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-filter">
+          <a href="#val-filter" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> filter : 
+            <span>
+             <span>(
+              <span>
+               <a href="#type-elt" class="cursor-pointer text-orange">elt</a>
+                <span class="">&#45;&gt;</span>
+              </span> bool)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">filter p s</code>
+            returns the set of all elements in 
+           <code class="font-normal text-sm">s</code> that satisfy predicate
+            <code class="font-normal text-sm">p</code>. If 
+           <code class="font-normal text-sm">p</code> satisfies every
+            element in <code class="font-normal text-sm">s</code>, 
+           <code class="font-normal text-sm">s</code> is returned unchanged
+            (the result of the function is then physically equal to 
+           <code class="font-normal text-sm">s</code>).
+          </p>
+          <ul class="at-tags">
+           <li class="before">before 4.03 
+            <p class="mt-4">Physical equality was not ensured.</p>
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-filter_map">
+          <a href="#val-filter_map" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> filter_map : 
+            <span>
+             <span>(
+              <span>
+               <a href="#type-elt" class="cursor-pointer text-orange">elt</a>
+                <span class="">&#45;&gt;</span>
+              </span> 
+              <span>
+               <a href="#type-elt" class="cursor-pointer text-orange">elt</a>
+                option
+              </span>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">filter_map f s</code> returns
+            the set of all <code class="font-normal text-sm">v</code>
+            such that <code class="font-normal text-sm">f x = Some v</code>
+            for some element <code class="font-normal text-sm">x</code>
+            of <code class="font-normal text-sm">s</code>.
+          </p><p class="mt-4">For example,</p>
+          <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+           <code class="font-normal text-sm">
+            filter_map (fun n -&gt; if n mod 2 = 0 then Some (n / 2) else
+            None) s
+           </code>
+          </pre>
+          <p class="mt-4">is the set of halves of the even elements of
+            <code class="font-normal text-sm">s</code>.
+          </p>
+          <p class="mt-4">If no element of 
+           <code class="font-normal text-sm">s</code> is changed or dropped
+            by <code class="font-normal text-sm">f</code> (if 
+           <code class="font-normal text-sm">f x = Some x</code> for 
+           each element <code class="font-normal text-sm">x</code>), 
+           then <code class="font-normal text-sm">s</code> is returned
+            unchanged: the result of the function is then physically 
+           equal to <code class="font-normal text-sm">s</code>.
+          </p><ul class="at-tags"><li class="since">since 4.11.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-partition">
+          <a href="#val-partition" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> partition : 
+            <span>
+             <span>(
+              <span>
+               <a href="#type-elt" class="cursor-pointer text-orange">elt</a>
+                <span class="">&#45;&gt;</span>
+              </span> bool)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             * <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">partition p s</code> returns
+            a pair of sets <code class="font-normal text-sm">(s1, s2)</code>
+           , where <code class="font-normal text-sm">s1</code> is the
+            set of all the elements of 
+           <code class="font-normal text-sm">s</code> that satisfy the
+            predicate <code class="font-normal text-sm">p</code>, and
+            <code class="font-normal text-sm">s2</code> is the set of
+            all the elements of <code class="font-normal text-sm">s</code>
+            that do not satisfy <code class="font-normal text-sm">p</code>
+           .
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-cardinal">
+          <a href="#val-cardinal" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> cardinal : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> int
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return the number of elements of a set.</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-elements">
+          <a href="#val-elements" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> elements : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-elt" class="cursor-pointer text-orange">elt</a>
+              list
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return the list of all elements of the given
+            set. The returned list is sorted in increasing order with
+            respect to the ordering 
+           <code class="font-normal text-sm">Ord.compare</code>, where
+            <code class="font-normal text-sm">Ord</code> is the argument
+            given to <code class="font-normal text-sm">Set</code>.Make
+           .
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-min_elt">
+          <a href="#val-min_elt" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> min_elt : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-elt" class="cursor-pointer text-orange">elt</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return the smallest element of the given set
+            (with respect to the 
+           <code class="font-normal text-sm">Ord.compare</code> ordering),
+            or raise <code class="font-normal text-sm">Not_found</code>
+            if the set is empty.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-min_elt_opt">
+          <a href="#val-min_elt_opt" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> min_elt_opt : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-elt" class="cursor-pointer text-orange">elt</a>
+              option
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return the smallest element of the given set
+            (with respect to the 
+           <code class="font-normal text-sm">Ord.compare</code> ordering),
+            or <code class="font-normal text-sm">None</code> if the set
+            is empty.
+          </p><ul class="at-tags"><li class="since">since 4.05</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-max_elt">
+          <a href="#val-max_elt" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> max_elt : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-elt" class="cursor-pointer text-orange">elt</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Same as 
+           <code class="font-normal text-sm">Set</code>.S.min_elt, but
+            returns the largest element of the given set.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-max_elt_opt">
+          <a href="#val-max_elt_opt" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> max_elt_opt : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-elt" class="cursor-pointer text-orange">elt</a>
+              option
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Same as 
+           <code class="font-normal text-sm">Set</code>.S.min_elt_opt
+           , but returns the largest element of the given set.
+          </p><ul class="at-tags"><li class="since">since 4.05</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-choose">
+          <a href="#val-choose" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> choose : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-elt" class="cursor-pointer text-orange">elt</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return one element of the given set, or raise
+            <code class="font-normal text-sm">Not_found</code> if the
+            set is empty. Which element is chosen is unspecified, but
+            equal elements will be chosen for equal sets.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-choose_opt">
+          <a href="#val-choose_opt" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> choose_opt : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-elt" class="cursor-pointer text-orange">elt</a>
+              option
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return one element of the given set, or 
+           <code class="font-normal text-sm">None</code> if the set is
+            empty. Which element is chosen is unspecified, but equal 
+           elements will be chosen for equal sets.
+          </p><ul class="at-tags"><li class="since">since 4.05</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-split">
+          <a href="#val-split" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> split : 
+            <span>
+             <a href="#type-elt" class="cursor-pointer text-orange">elt</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+             * bool * 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">split x s</code>
+            returns a triple 
+           <code class="font-normal text-sm">(l, present, r)</code>, 
+           where <code class="font-normal text-sm">l</code> is the set
+            of elements of <code class="font-normal text-sm">s</code>
+            that are strictly less than 
+           <code class="font-normal text-sm">x</code>; 
+           <code class="font-normal text-sm">r</code> is the set of elements
+            of <code class="font-normal text-sm">s</code> that are strictly
+            greater than <code class="font-normal text-sm">x</code>; 
+           <code class="font-normal text-sm">present</code> is 
+           <code class="font-normal text-sm">false</code> if 
+           <code class="font-normal text-sm">s</code> contains no element
+            equal to <code class="font-normal text-sm">x</code>, or 
+           <code class="font-normal text-sm">true</code> if 
+           <code class="font-normal text-sm">s</code> contains an element
+            equal to <code class="font-normal text-sm">x</code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-find">
+          <a href="#val-find" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> find : 
+            <span>
+             <a href="#type-elt" class="cursor-pointer text-orange">elt</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-elt" class="cursor-pointer text-orange">elt</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">find x s</code>
+            returns the element of <code class="font-normal text-sm">s</code>
+            equal to <code class="font-normal text-sm">x</code> (according
+            to <code class="font-normal text-sm">Ord.compare</code>),
+            or raise <code class="font-normal text-sm">Not_found</code>
+            if no such element exists.
+          </p><ul class="at-tags"><li class="since">since 4.01.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-find_opt">
+          <a href="#val-find_opt" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> find_opt : 
+            <span>
+             <a href="#type-elt" class="cursor-pointer text-orange">elt</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-elt" class="cursor-pointer text-orange">elt</a>
+              option
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">find_opt x s</code> returns
+            the element of <code class="font-normal text-sm">s</code>
+            equal to <code class="font-normal text-sm">x</code> (according
+            to <code class="font-normal text-sm">Ord.compare</code>),
+            or <code class="font-normal text-sm">None</code> if no such
+            element exists.
+          </p><ul class="at-tags"><li class="since">since 4.05</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-find_first">
+          <a href="#val-find_first" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> find_first : 
+            <span>
+             <span>(
+              <span>
+               <a href="#type-elt" class="cursor-pointer text-orange">elt</a>
+                <span class="">&#45;&gt;</span>
+              </span> bool)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-elt" class="cursor-pointer text-orange">elt</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">find_first f s</code>, where
+            <code class="font-normal text-sm">f</code> is a monotonically
+            increasing function, returns the lowest element 
+           <code class="font-normal text-sm">e</code> of 
+           <code class="font-normal text-sm">s</code> such that 
+           <code class="font-normal text-sm">f e</code>, or raises 
+           <code class="font-normal text-sm">Not_found</code> if no such
+            element exists.
+          </p>
+          <p class="mt-4">For example, 
+           <code class="font-normal text-sm">
+            find_first (fun e -&gt; Ord.compare e x &gt;= 0) s
+           </code> will return the first element 
+           <code class="font-normal text-sm">e</code> of 
+           <code class="font-normal text-sm">s</code> where 
+           <code class="font-normal text-sm">Ord.compare e x &gt;= 0</code>
+            (intuitively: <code class="font-normal text-sm">e &gt;= x</code>
+           ), or raise <code class="font-normal text-sm">Not_found</code>
+            if <code class="font-normal text-sm">x</code> is greater 
+           than any element of <code class="font-normal text-sm">s</code>
+           .
+          </p><ul class="at-tags"><li class="since">since 4.05</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-find_first_opt">
+          <a href="#val-find_first_opt" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> find_first_opt
+             : 
+            <span>
+             <span>(
+              <span>
+               <a href="#type-elt" class="cursor-pointer text-orange">elt</a>
+                <span class="">&#45;&gt;</span>
+              </span> bool)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-elt" class="cursor-pointer text-orange">elt</a>
+              option
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">find_first_opt f s</code>
+           , where <code class="font-normal text-sm">f</code> is a 
+           monotonically increasing function, returns an option containing
+            the lowest element <code class="font-normal text-sm">e</code>
+            of <code class="font-normal text-sm">s</code> such that 
+           <code class="font-normal text-sm">f e</code>, or 
+           <code class="font-normal text-sm">None</code> if no such element
+            exists.
+          </p><ul class="at-tags"><li class="since">since 4.05</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-find_last">
+          <a href="#val-find_last" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> find_last : 
+            <span>
+             <span>(
+              <span>
+               <a href="#type-elt" class="cursor-pointer text-orange">elt</a>
+                <span class="">&#45;&gt;</span>
+              </span> bool)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-elt" class="cursor-pointer text-orange">elt</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">find_last f s</code>, where
+            <code class="font-normal text-sm">f</code> is a monotonically
+            decreasing function, returns the highest element 
+           <code class="font-normal text-sm">e</code> of 
+           <code class="font-normal text-sm">s</code> such that 
+           <code class="font-normal text-sm">f e</code>, or raises 
+           <code class="font-normal text-sm">Not_found</code> if no such
+            element exists.
+          </p><ul class="at-tags"><li class="since">since 4.05</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-find_last_opt">
+          <a href="#val-find_last_opt" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> find_last_opt
+             : 
+            <span>
+             <span>(
+              <span>
+               <a href="#type-elt" class="cursor-pointer text-orange">elt</a>
+                <span class="">&#45;&gt;</span>
+              </span> bool)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-elt" class="cursor-pointer text-orange">elt</a>
+              option
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">find_last_opt f s</code>
+           , where <code class="font-normal text-sm">f</code> is a 
+           monotonically decreasing function, returns an option containing
+            the highest element <code class="font-normal text-sm">e</code>
+            of <code class="font-normal text-sm">s</code> such that 
+           <code class="font-normal text-sm">f e</code>, or 
+           <code class="font-normal text-sm">None</code> if no such element
+            exists.
+          </p><ul class="at-tags"><li class="since">since 4.05</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-of_list">
+          <a href="#val-of_list" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> of_list : 
+            <span>
+             <span>
+              <a href="#type-elt" class="cursor-pointer text-orange">elt</a>
+               list
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">of_list l</code>
+            creates a set from a list of elements. This is usually more
+            efficient than folding 
+           <code class="font-normal text-sm">add</code> over the list,
+            except perhaps for lists with many duplicated elements.
+          </p><ul class="at-tags"><li class="since">since 4.02.0</li></ul>
+         </div>
+        </div>
+        <h2 class="text-2xl my-4 text-gray-800 font-sans anchored"
+         id="iterators">
+         <a href="#iterators" class="hover-link inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Iterators
+        </h2>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-to_seq_from">
+          <a href="#val-to_seq_from" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> to_seq_from : 
+            <span>
+             <a href="#type-elt" class="cursor-pointer text-orange">elt</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-elt" class="cursor-pointer text-orange">elt</a>
+              
+             <a href="../../Stdlib/Seq/index.html#type-t"
+              class="cursor-pointer text-orange">Stdlib.Seq.t
+             </a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">to_seq_from x s</code> iterates
+            on a subset of the elements of 
+           <code class="font-normal text-sm">s</code> in ascending order,
+            from <code class="font-normal text-sm">x</code> or above.
+          </p><ul class="at-tags"><li class="since">since 4.07</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-to_seq">
+          <a href="#val-to_seq" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> to_seq : 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="#type-elt" class="cursor-pointer text-orange">elt</a>
+              
+             <a href="../../Stdlib/Seq/index.html#type-t"
+              class="cursor-pointer text-orange">Stdlib.Seq.t
+             </a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Iterate on the whole set, in ascending order</p>
+          <ul class="at-tags"><li class="since">since 4.07</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-add_seq">
+          <a href="#val-add_seq" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> add_seq : 
+            <span>
+             <span>
+              <a href="#type-elt" class="cursor-pointer text-orange">elt</a>
+               
+              <a href="../../Stdlib/Seq/index.html#type-t"
+               class="cursor-pointer text-orange">Stdlib.Seq.t
+              </a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><a href="#type-t" class="cursor-pointer text-orange">t</a>
+              <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Add the given elements to the set, in order.</p>
+          <ul class="at-tags"><li class="since">since 4.07</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-of_seq">
+          <a href="#val-of_seq" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> of_seq : 
+            <span>
+             <span>
+              <a href="#type-elt" class="cursor-pointer text-orange">elt</a>
+               
+              <a href="../../Stdlib/Seq/index.html#type-t"
+               class="cursor-pointer text-orange">Stdlib.Seq.t
+              </a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-t" class="cursor-pointer text-orange">t</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Build a set from the given bindings</p>
+          <ul class="at-tags"><li class="since">since 4.07</li></ul>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="w-full flex-none lg:w-72 border-t lg:border-l bg-gray-100">
+       <div class="flex h-20 border-b relative">
+        <h2 class="text-xl absolute inset-x-0 p-3 bottom-0 mt-7 font-semibold
+         text-gray-500">ocaml-base-compiler.4.11.2
+        </h2>
+       </div>
+       <div class="m-3">
+        <p class="mb-5 italic text-sm">Official release 4.11.2</p>
+        <div class="mb-3">
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="https://ocaml.org">ocaml.org
+          </a>
+         </div>
+        </div>
+        <details class="font-normal mb-2 text-sm">
+         <summary>Other versions</summary><div id="versions_container"></div>
+        </details><h2 class="font-semibold mb-2 text-sm">Authors</h2>
+        <p class="mb-3 text-sm">Xavier Leroy and many contributors</p>
+        <h2 class="font-semibold mb-2 text-sm">Issues</h2>
+        <div class="mb-3">
+         <a class="text-orange cursor-pointer mb-2 text-sm"
+          href="https://github.com/ocaml/opam-repository/issues">
+          github.com/ocaml/opam-repository/issues
+         </a>
+        </div>
+        <details class="font-semibold mb-2 text-sm">
+         <summary>Package dependencies</summary>
+         <div class="font-normal">
+          <ul>
+           <li>
+            <a href="../../../../ocaml/index.html" class="text-orange
+             cursor-pointer">ocaml
+            </a>
+           </li>
+           <li>
+            <a href="../../../../base-unix/index.html" class="text-orange
+             cursor-pointer">base-unix
+            </a>
+           </li>
+           <li>
+            <a href="../../../../base-bigarray/index.html" class="text-orange
+             cursor-pointer">base-bigarray
+            </a>
+           </li>
+           <li>
+            <a href="../../../../base-threads/index.html" class="text-orange
+             cursor-pointer">base-threads
+            </a>
+           </li>
+          </ul>
+         </div>
+        </details>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div><script>Voodoo.update('../../../version.json')</script>
+ </body>
+</html>

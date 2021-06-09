@@ -1,0 +1,1647 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head><title>Gc (packages.ocaml-base-compiler.4.11.2.Stdlib.Gc)</title>
+  <link rel="stylesheet" href="../../../../tailwind.css"/>
+  <link rel="stylesheet" href="../../../../extra.css"/>
+  <meta charset="utf-8"/><meta name="generator" content="odoc 3dfb7aef2f"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <script src="../../../../highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="../../../../voodoo_client.js"></script>
+  <script
+   src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+   defer="defer">
+  </script>
+ </head>
+ <body class="mx-auto max-w-screen-2xl">
+  <div class="relative">
+   <div class="relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+     <div class="flex justify-between items-center md:justify-start py-6
+      md:space-x-10">
+      <div class="flex justify-start">
+       <a href="https://v3.ocaml.org/">
+        <img src="/colour-logo.svg" alt="" class="h-8 w-auto sm:h-10"/>
+       </a>
+      </div>
+      <nav class="hidden md:flex space-x-10">
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Industry</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/whatisocaml">
+            <p class="text-base font-medium text-gray-900">What is OCaml</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/users">
+            <p class="text-base font-medium text-gray-900">Industrial Users
+            </p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/successstories">
+            <p class="text-base font-medium text-gray-900">Success Stories
+            </p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Resources</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/releases">
+            <p class="text-base font-medium text-gray-900">Releases</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/applications">
+            <p class="text-base font-medium text-gray-900">Applications</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/language">
+            <p class="text-base font-medium text-gray-900">Language</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/archive">
+            <p class="text-base font-medium text-gray-900">Archive</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Community</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/opportunities">
+            <p class="text-base font-medium text-gray-900">Opportunities</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/news">
+            <p class="text-base font-medium text-gray-900">News</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/aroundweb">
+            <p class="text-base font-medium text-gray-900">Around the Web</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="h-screen flex bg-white font-sans">
+   <div class="flex flex-col w-full h-full">
+    <div class="flex-row flex-1">
+     <nav class="bg-orange border-t border-b border-orange flex flex-row">
+      <ol class="max-w-screen-xl w-full px-4 flex space-x-4 sm:px-6 lg:px-8">
+       <li class="flex">
+        <div class="flex items-center">
+         <a href="#" class="text-gray-100 hover:text-gray-500">
+          
+  <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+        </svg>
+  
+          <span class="sr-only">Home</span>
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">packages
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">ocaml-base-compiler
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">4.11.2
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">Stdlib
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="#" class="ml-4 text-sm font-medium text-gray-100
+          hover:text-gray-500">Gc
+         </a>
+        </div>
+       </li>
+      </ol>
+     </nav>
+    </div>
+    <div class="flex flex-row flex-1">
+     <div class="w-72 flex-none bg-gray-100 h-screen border-r border-gray-200
+      sticky top-0 hidden lg:block">
+      <div class="flex h-20 border-b relative">
+       <h2 class="text-xl absolute inset-x-0 p-3 px-5 bottom-0 mt-7
+        border-gray-200 font-semibold text-gray-500 font-sans">On this page
+       </h2>
+      </div>
+     </div>
+     <div class="flex flex-1 flex-col lg:flex-row">
+      <div class="flex-1">
+       <div class="lg:max-w-5xl mx-auto px-3 lg:px-10 mb-10 text-sm">
+        <div class="flex h-20 relative border-b border-gray-200">
+         <div class="relative flex-1 h-20">
+          <h1 class="text-3xl absolute inset-x-0 py-3 bottom-0 font-semibold
+           text-gray-500 font-sans w-full truncate">
+           <code class="font-mono text-gray-800">Stdlib.Gc</code>
+          </h1>
+         </div>
+         <div class="relative flex-none w-28">
+          <h1 class="text-3xl absolute py-3 bottom-0 right-0 font-semibold
+           text-gray-500 font-sans">Module
+          </h1>
+         </div>
+        </div>
+        <p class="mt-4">Memory management control and statistics; finalised
+          values.
+        </p>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-stat">
+          <a href="#type-stat" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> stat</span>
+           <span> = </span><span>{</span>
+          </code>
+          <table>
+           <tr id="type-stat.minor_words">
+            <td class="anchored pl-4">
+             <a href="#type-stat.minor_words" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>minor_words : float;</span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>Number
+              of words allocated in the minor heap since the program 
+             was started.<span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-stat.promoted_words">
+            <td class="anchored pl-4">
+             <a href="#type-stat.promoted_words" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>promoted_words : float;</span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>Number
+              of words allocated in the minor heap that survived a minor
+              collection and were moved to the major heap since the program
+              was started.<span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-stat.major_words">
+            <td class="anchored pl-4">
+             <a href="#type-stat.major_words" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>major_words : float;</span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>Number
+              of words allocated in the major heap, including the promoted
+              words, since the program was started.
+             <span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-stat.minor_collections">
+            <td class="anchored pl-4">
+             <a href="#type-stat.minor_collections" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>minor_collections : int;</span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>Number
+              of minor collections since the program was started.
+             <span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-stat.major_collections">
+            <td class="anchored pl-4">
+             <a href="#type-stat.major_collections" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>major_collections : int;</span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>Number
+              of major collection cycles completed since the program 
+             was started.<span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-stat.heap_words">
+            <td class="anchored pl-4">
+             <a href="#type-stat.heap_words" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>heap_words : int;</span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>Total
+              size of the major heap, in words.
+             <span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-stat.heap_chunks">
+            <td class="anchored pl-4">
+             <a href="#type-stat.heap_chunks" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>heap_chunks : int;</span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>Number
+              of contiguous pieces of memory that make up the major heap.
+             <span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-stat.live_words">
+            <td class="anchored pl-4">
+             <a href="#type-stat.live_words" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>live_words : int;</span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>Number
+              of words of live data in the major heap, including the 
+             header words.<span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-stat.live_blocks">
+            <td class="anchored pl-4">
+             <a href="#type-stat.live_blocks" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>live_blocks : int;</span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>Number
+              of live blocks in the major heap.
+             <span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-stat.free_words">
+            <td class="anchored pl-4">
+             <a href="#type-stat.free_words" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>free_words : int;</span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>Number
+              of words in the free list.<span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-stat.free_blocks">
+            <td class="anchored pl-4">
+             <a href="#type-stat.free_blocks" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>free_blocks : int;</span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>Number
+              of blocks in the free list.<span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-stat.largest_free">
+            <td class="anchored pl-4">
+             <a href="#type-stat.largest_free" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>largest_free : int;</span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>Size
+              (in words) of the largest block in the free list.
+             <span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-stat.fragments">
+            <td class="anchored pl-4">
+             <a href="#type-stat.fragments" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>fragments : int;</span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>Number
+              of wasted words due to fragmentation. These are 1-words
+              free blocks placed between two live blocks. They are not
+              available for allocation.<span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-stat.compactions">
+            <td class="anchored pl-4">
+             <a href="#type-stat.compactions" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>compactions : int;</span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>Number
+              of heap compactions since the program was started.
+             <span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-stat.top_heap_words">
+            <td class="anchored pl-4">
+             <a href="#type-stat.top_heap_words" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>top_heap_words : int;</span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>Maximum
+              size reached by the major heap, in words.
+             <span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-stat.stack_size">
+            <td class="anchored pl-4">
+             <a href="#type-stat.stack_size" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>stack_size : int;</span>
+             </code>
+            </td>
+           </tr>
+          </table><code class="font-normal text-sm"><span>}</span></code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">The memory management counters are returned
+            in a <code class="font-normal text-sm">stat</code> record.
+          </p>
+          <p class="mt-4">The total amount of memory allocated by the
+            program since it was started is (in words) 
+           <code class="font-normal text-sm">
+            minor_words + major_words - promoted_words
+           </code>. Multiply by the word size (4 on a 32-bit machine,
+            8 on a 64-bit machine) to get the number of bytes.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-control">
+          <a href="#type-control" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> control</span>
+           <span> = </span><span>{</span>
+          </code>
+          <table>
+           <tr id="type-control.minor_heap_size">
+            <td class="anchored pl-4">
+             <a href="#type-control.minor_heap_size" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span><span class="font-semibold">mutable</span> 
+               minor_heap_size : int;
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>The
+              size (in words) of the minor heap. Changing this parameter
+              will trigger a minor collection. Default: 256k.
+             <span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-control.major_heap_increment">
+            <td class="anchored pl-4">
+             <a href="#type-control.major_heap_increment" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span><span class="font-semibold">mutable</span> 
+               major_heap_increment : int;
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>How
+              much to add to the major heap when increasing it. If this
+              number is less than or equal to 1000, it is a percentage
+              of the current heap size (i.e. setting it to 100 will double
+              the heap size at each increase). If it is more than 1000,
+              it is a fixed number of words that will be added to the
+              heap. Default: 15.<span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-control.space_overhead">
+            <td class="anchored pl-4">
+             <a href="#type-control.space_overhead" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span><span class="font-semibold">mutable</span> space_overhead
+                : int;
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>The
+              major GC speed is computed from this parameter. This is
+              the memory that will be &quot;wasted&quot; because the 
+             GC does not immediately collect unreachable blocks. It is
+              expressed as a percentage of the memory used for live data.
+              The GC will work more (use more CPU time and collect blocks
+              more eagerly) if 
+             <code class="font-normal text-sm">space_overhead</code> 
+             is smaller. Default: 80.<span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-control.verbose">
+            <td class="anchored pl-4">
+             <a href="#type-control.verbose" class="hover-link inline-block
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span><span class="font-semibold">mutable</span> verbose : int;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-control.max_overhead">
+            <td class="anchored pl-4">
+             <a href="#type-control.max_overhead" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span><span class="font-semibold">mutable</span> max_overhead
+                : int;
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>Heap
+              compaction is triggered when the estimated amount of 
+             &quot;wasted&quot; memory is more than 
+             <code class="font-normal text-sm">max_overhead</code> percent
+              of the amount of live data. If 
+             <code class="font-normal text-sm">max_overhead</code> is
+              set to 0, heap compaction is triggered at the end of each
+              major GC cycle (this setting is intended for testing purposes
+              only). If 
+             <code class="font-normal text-sm">max_overhead &gt;= 1000000
+             </code>, compaction is never triggered. If compaction is
+              permanently disabled, it is strongly suggested to set 
+             <code class="font-normal text-sm">allocation_policy</code>
+              to 2. Default: 500.<span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-control.stack_limit">
+            <td class="anchored pl-4">
+             <a href="#type-control.stack_limit" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span><span class="font-semibold">mutable</span> stack_limit
+                : int;
+              </span>
+             </code>
+            </td>
+            <td class="def-doc pl-4"><span class="sr-only">(*</span>The
+              maximum size of the stack (in words). This is only relevant
+              to the byte-code runtime, as the native code runtime uses
+              the operating system's stack. Default: 1024k.
+             <span class="sr-only">*)</span>
+            </td>
+           </tr>
+           <tr id="type-control.allocation_policy">
+            <td class="anchored pl-4">
+             <a href="#type-control.allocation_policy" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span><span class="font-semibold">mutable</span> 
+               allocation_policy : int;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-control.window_size">
+            <td class="anchored pl-4">
+             <a href="#type-control.window_size" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>window_size : int;</span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-control.custom_major_ratio">
+            <td class="anchored pl-4">
+             <a href="#type-control.custom_major_ratio" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>custom_major_ratio : int;</span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-control.custom_minor_ratio">
+            <td class="anchored pl-4">
+             <a href="#type-control.custom_minor_ratio" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>custom_minor_ratio : int;</span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-control.custom_minor_max_size">
+            <td class="anchored pl-4">
+             <a href="#type-control.custom_minor_max_size" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>custom_minor_max_size : int;</span>
+             </code>
+            </td>
+           </tr>
+          </table><code class="font-normal text-sm"><span>}</span></code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">The GC parameters are given as a 
+           <code class="font-normal text-sm">control</code> record. Note
+            that these parameters can also be initialised by setting 
+           the OCAMLRUNPARAM environment variable. See the documentation
+            of <code class="font-normal text-sm">ocamlrun</code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-stat">
+          <a href="#val-stat" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> stat : 
+            <span>unit <span class="">&#45;&gt;</span></span> 
+            <a href="#type-stat" class="cursor-pointer text-orange">stat</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return the current values of the memory management
+            counters in a <code class="font-normal text-sm">stat</code>
+            record. This function examines every heap block to get the
+            statistics.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-quick_stat">
+          <a href="#val-quick_stat" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> quick_stat : 
+            <span>unit <span class="">&#45;&gt;</span></span> 
+            <a href="#type-stat" class="cursor-pointer text-orange">stat</a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Same as 
+           <code class="font-normal text-sm">stat</code> except that 
+           <code class="font-normal text-sm">live_words</code>, 
+           <code class="font-normal text-sm">live_blocks</code>, 
+           <code class="font-normal text-sm">free_words</code>, 
+           <code class="font-normal text-sm">free_blocks</code>, 
+           <code class="font-normal text-sm">largest_free</code>, and
+            <code class="font-normal text-sm">fragments</code> are set
+            to 0. This function is much faster than 
+           <code class="font-normal text-sm">stat</code> because it does
+            not need to go through the heap.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-counters">
+          <a href="#val-counters" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> counters : 
+            <span>unit <span class="">&#45;&gt;</span></span> float * 
+            float * float
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return 
+           <code class="font-normal text-sm">
+            (minor_words, promoted_words, major_words)
+           </code>. This function is as fast as 
+           <code class="font-normal text-sm">quick_stat</code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-minor_words">
+          <a href="#val-minor_words" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> minor_words : 
+            <span>unit <span class="">&#45;&gt;</span></span> float
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Number of words allocated in the minor heap
+            since the program was started. This number is accurate in
+            byte-code programs, but only an approximation in programs
+            compiled to native code.
+          </p>
+          <p class="mt-4">In native code this function does not allocate.</p>
+          <ul class="at-tags"><li class="since">since 4.04</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-get">
+          <a href="#val-get" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> get : 
+            <span>unit <span class="">&#45;&gt;</span></span> 
+            <a href="#type-control" class="cursor-pointer text-orange">
+             control
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return the current values of the GC parameters
+            in a <code class="font-normal text-sm">control</code> record.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-set">
+          <a href="#val-set" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> set : 
+            <span>
+             <a href="#type-control" class="cursor-pointer text-orange">
+              control
+             </a> <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">set r</code>
+            changes the GC parameters according to the 
+           <code class="font-normal text-sm">control</code> record 
+           <code class="font-normal text-sm">r</code>. The normal usage
+            is: 
+           <code class="font-normal text-sm">
+            Gc.set { (Gc.get()) with Gc.verbose = 0x00d }
+           </code>
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-minor">
+          <a href="#val-minor" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> minor : 
+            <span>unit <span class="">&#45;&gt;</span></span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Trigger a minor collection.</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-major_slice">
+          <a href="#val-major_slice" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> major_slice : 
+            <span>int <span class="">&#45;&gt;</span></span> int
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">major_slice n</code> Do 
+           a minor collection and a slice of major collection. 
+           <code class="font-normal text-sm">n</code> is the size of 
+           the slice: the GC will do enough work to free (on average)
+            <code class="font-normal text-sm">n</code> words of memory.
+            If <code class="font-normal text-sm">n</code> = 0, the GC
+            will try to do enough work to ensure that the next automatic
+            slice has no work to do. This function returns an unspecified
+            integer (currently: 0).
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-major">
+          <a href="#val-major" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> major : 
+            <span>unit <span class="">&#45;&gt;</span></span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Do a minor collection and finish the current
+            major collection cycle.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-full_major">
+          <a href="#val-full_major" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> full_major : 
+            <span>unit <span class="">&#45;&gt;</span></span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Do a minor collection, finish the current major
+            collection cycle, and perform a complete new cycle. This 
+           will collect all currently unreachable blocks.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-compact">
+          <a href="#val-compact" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> compact : 
+            <span>unit <span class="">&#45;&gt;</span></span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Perform a full major collection and compact
+            the heap. Note that heap compaction is a lengthy operation.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-print_stat">
+          <a href="#val-print_stat" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> print_stat : 
+            <span>
+             <a href="../index.html#type-out_channel" class="cursor-pointer
+              text-orange">Stdlib.out_channel
+             </a> <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Print the current values of the memory management
+            counters (in human-readable form) into the channel argument.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-allocated_bytes">
+          <a href="#val-allocated_bytes" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> allocated_bytes
+             : <span>unit <span class="">&#45;&gt;</span></span> float
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return the total number of bytes allocated 
+           since the program was started. It is returned as a 
+           <code class="font-normal text-sm">float</code> to avoid overflow
+            problems with <code class="font-normal text-sm">int</code>
+            on 32-bit machines.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-get_minor_free">
+          <a href="#val-get_minor_free" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> get_minor_free
+             : <span>unit <span class="">&#45;&gt;</span></span> int
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return the current size of the free space inside
+            the minor heap.
+          </p><ul class="at-tags"><li class="since">since 4.03.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-get_bucket">
+          <a href="#val-get_bucket" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> get_bucket : 
+            <span>int <span class="">&#45;&gt;</span></span> int
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">get_bucket n</code> returns
+            the current size of the 
+           <code class="font-normal text-sm">n</code>-th future bucket
+            of the GC smoothing system. The unit is one millionth of 
+           a full GC.
+          </p>
+          <ul class="at-tags">
+           <li class="raises">raises Invalid_argument 
+            <p class="mt-4">if <code class="font-normal text-sm">n</code>
+              is negative, return 0 if n is larger than the smoothing
+              window.
+            </p>
+           </li>
+          </ul><ul class="at-tags"><li class="since">since 4.03.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-get_credit">
+          <a href="#val-get_credit" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> get_credit : 
+            <span>unit <span class="">&#45;&gt;</span></span> int
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">get_credit ()</code> returns
+            the current size of the &quot;work done in advance&quot; 
+           counter of the GC smoothing system. The unit is one millionth
+            of a full GC.
+          </p><ul class="at-tags"><li class="since">since 4.03.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100"
+          id="val-huge_fallback_count">
+          <a href="#val-huge_fallback_count" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> huge_fallback_count
+             : <span>unit <span class="">&#45;&gt;</span></span> int
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Return the number of times we tried to map 
+           huge pages and had to fall back to small pages. This is always
+            0 if <code class="font-normal text-sm">OCAMLRUNPARAM</code>
+            contains <code class="font-normal text-sm">H=1</code>.
+          </p><ul class="at-tags"><li class="since">since 4.03.0</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-finalise">
+          <a href="#val-finalise" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> finalise : 
+            <span>
+             <span>(
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> unit)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">finalise f v</code> registers
+            <code class="font-normal text-sm">f</code> as a finalisation
+            function for <code class="font-normal text-sm">v</code>. 
+           <code class="font-normal text-sm">v</code> must be heap-allocated.
+            <code class="font-normal text-sm">f</code> will be called
+            with <code class="font-normal text-sm">v</code> as argument
+            at some point between the first time 
+           <code class="font-normal text-sm">v</code> becomes unreachable
+            (including through weak pointers) and the time 
+           <code class="font-normal text-sm">v</code> is collected by
+            the GC. Several functions can be registered for the same 
+           value, or even several instances of the same function. Each
+            instance will be called once (or never, if the program terminates
+            before <code class="font-normal text-sm">v</code> becomes
+            unreachable).
+          </p>
+          <p class="mt-4">The GC will call the finalisation functions
+            in the order of deallocation. When several values become 
+           unreachable at the same time (i.e. during the same GC cycle),
+            the finalisation functions will be called in the reverse 
+           order of the corresponding calls to 
+           <code class="font-normal text-sm">finalise</code>. If 
+           <code class="font-normal text-sm">finalise</code> is called
+            in the same order as the values are allocated, that means
+            each value is finalised before the values it depends upon.
+            Of course, this becomes false if additional dependencies 
+           are introduced by assignments.
+          </p>
+          <p class="mt-4">In the presence of multiple OCaml threads it
+            should be assumed that any particular finaliser may be executed
+            in any of the threads.
+          </p>
+          <p class="mt-4">Anything reachable from the closure of finalisation
+            functions is considered reachable, so the following code 
+           will not work as expected:
+          </p>
+          <ul class="list-disc mt-2 mb-4">
+           <li class="ml-4">
+            <code class="font-normal text-sm">
+              let v = ... in Gc.finalise (fun _ -&gt; ...v...) v 
+            </code>
+           </li>
+          </ul>
+          <p class="mt-4">Instead you should make sure that 
+           <code class="font-normal text-sm">v</code> is not in the closure
+            of the finalisation function by writing:
+          </p>
+          <ul class="list-disc mt-2 mb-4">
+           <li class="ml-4">
+            <code class="font-normal text-sm">
+              let f = fun x -&gt; ...  let v = ... in Gc.finalise f v 
+            </code>
+           </li>
+          </ul>
+          <p class="mt-4">The <code class="font-normal text-sm">f</code>
+            function can use all features of OCaml, including assignments
+            that make the value reachable again. It can also loop forever
+            (in this case, the other finalisation functions will not 
+           be called during the execution of f, unless it calls 
+           <code class="font-normal text-sm">finalise_release</code>).
+            It can call <code class="font-normal text-sm">finalise</code>
+            on <code class="font-normal text-sm">v</code> or other values
+            to register other functions or even itself. It can raise 
+           an exception; in this case the exception will interrupt whatever
+            the program was doing when the function was called.
+          </p>
+          <p class="mt-4"><code class="font-normal text-sm">finalise</code>
+            will raise 
+           <code class="font-normal text-sm">Invalid_argument</code> 
+           if <code class="font-normal text-sm">v</code> is not guaranteed
+            to be heap-allocated. Some examples of values that are not
+            heap-allocated are integers, constant constructors, booleans,
+            the empty array, the empty list, the unit value. The exact
+            list of what is heap-allocated or not is 
+           implementation-dependent. Some constant values can be 
+           heap-allocated but never deallocated during the lifetime of
+            the program, for example a list of integer constants; this
+            is also implementation-dependent. Note that values of types
+            <code class="font-normal text-sm">float</code> are sometimes
+            allocated and sometimes not, so finalising them is unsafe,
+            and <code class="font-normal text-sm">finalise</code> will
+            also raise 
+           <code class="font-normal text-sm">Invalid_argument</code> 
+           for them. Values of type 
+           <code class="font-normal text-sm">'a Lazy.t</code> (for any
+            <code class="font-normal text-sm">'a</code>) are like 
+           <code class="font-normal text-sm">float</code> in this respect,
+            except that the compiler sometimes optimizes them in a way
+            that prevents <code class="font-normal text-sm">finalise</code>
+            from detecting them. In this case, it will not raise 
+           <code class="font-normal text-sm">Invalid_argument</code>,
+            but you should still avoid calling 
+           <code class="font-normal text-sm">finalise</code> on lazy 
+           values.
+          </p>
+          <p class="mt-4">The results of calling 
+           <a href="../String/index.html#val-make" class="cursor-pointer
+            text-orange"><code class="font-normal text-sm">String.make</code>
+           </a>, 
+           <a href="../Bytes/index.html#val-make" class="cursor-pointer
+            text-orange"><code class="font-normal text-sm">Bytes.make</code>
+           </a>, 
+           <a href="../Bytes/index.html#val-create" class="cursor-pointer
+            text-orange">
+            <code class="font-normal text-sm">Bytes.create</code>
+           </a>, 
+           <a href="../Array/index.html#val-make" class="cursor-pointer
+            text-orange"><code class="font-normal text-sm">Array.make</code>
+           </a>, and 
+           <a href="../index.html#type-ref" class="cursor-pointer
+            text-orange"><code class="font-normal text-sm">Stdlib.ref</code>
+           </a> are guaranteed to be heap-allocated and non-constant 
+           except when the length argument is 
+           <code class="font-normal text-sm">0</code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-finalise_last">
+          <a href="#val-finalise_last" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> finalise_last
+             : 
+            <span>
+             <span>(<span>unit <span class="">&#45;&gt;</span></span> unit)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">same as 
+           <a href="#val-finalise" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">finalise</code>
+           </a> except the value is not given as argument. So you can't
+            use the given value for the computation of the finalisation
+            function. The benefit is that the function is called after
+            the value is unreachable for the last time instead of the
+            first time. So contrary to 
+           <a href="#val-finalise" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">finalise</code>
+           </a> the value will never be reachable again or used again.
+            In particular every weak pointer and ephemeron that contained
+            this value as key or data is unset before running the 
+           finalisation function. Moreover the finalisation functions
+            attached with 
+           <a href="#val-finalise" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">finalise</code>
+           </a> are always called before the finalisation functions attached
+            with 
+           <a href="#val-finalise_last" class="cursor-pointer text-orange">
+            <code class="font-normal text-sm">finalise_last</code>
+           </a>.
+          </p><ul class="at-tags"><li class="since">since 4.04</li></ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-finalise_release">
+          <a href="#val-finalise_release" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> finalise_release
+             : <span>unit <span class="">&#45;&gt;</span></span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">A finalisation function may call 
+           <code class="font-normal text-sm">finalise_release</code> 
+           to tell the GC that it can launch the next finalisation function
+            without waiting for the current one to return.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-alarm">
+          <a href="#type-alarm" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> alarm</span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">An alarm is a piece of data that calls a user
+            function at the end of each major GC cycle. The following
+            functions are provided to create and delete alarms.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-create_alarm">
+          <a href="#val-create_alarm" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> create_alarm : 
+            <span>
+             <span>(<span>unit <span class="">&#45;&gt;</span></span> unit)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-alarm" class="cursor-pointer text-orange">alarm
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">create_alarm f</code> will
+            arrange for <code class="font-normal text-sm">f</code> to
+            be called at the end of each major GC cycle, starting with
+            the current cycle or the next one. A value of type 
+           <code class="font-normal text-sm">alarm</code> is returned
+            that you can use to call 
+           <code class="font-normal text-sm">delete_alarm</code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-delete_alarm">
+          <a href="#val-delete_alarm" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> delete_alarm : 
+            <span>
+             <a href="#type-alarm" class="cursor-pointer text-orange">alarm
+             </a> <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">delete_alarm a</code> will
+            stop the calls to the function associated to 
+           <code class="font-normal text-sm">a</code>. Calling 
+           <code class="font-normal text-sm">delete_alarm a</code> again
+            has no effect.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-eventlog_pause">
+          <a href="#val-eventlog_pause" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> eventlog_pause
+             : <span>unit <span class="">&#45;&gt;</span></span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">eventlog_pause ()</code>
+            will pause the collection of traces in the runtime. Traces
+            are collected if the program is linked to the instrumented
+            runtime and started with the environment variable 
+           OCAML_EVENTLOG_ENABLED. Events are flushed to disk after pausing,
+            and no new events will be recorded until 
+           <code class="font-normal text-sm">eventlog_resume</code> is
+            called.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value external anchored p-2 text-sm rounded
+          border-l-4 border-orange my-3 bg-gray-100" id="val-eventlog_resume">
+          <a href="#val-eventlog_resume" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> eventlog_resume
+             : <span>unit <span class="">&#45;&gt;</span></span> unit
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">eventlog_resume ()</code>
+            will resume the collection of traces in the runtime. Traces
+            are collected if the program is linked to the instrumented
+            runtime and started with the environment variable 
+           OCAML_EVENTLOG_ENABLED. This call can be used after calling
+            <code class="font-normal text-sm">eventlog_pause</code>, 
+           or if the program was started with OCAML_EVENTLOG_ENABLED=p.
+            (which pauses the collection of traces before the first event.)
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec module anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="module-Memprof">
+          <a href="#module-Memprof" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">module</span> </span>
+           <span>
+            <a href="Memprof/index.html" class="cursor-pointer text-orange">
+             Memprof
+            </a>
+           </span>
+           <span> : <span class="font-semibold">sig</span> ... 
+            <span class="font-semibold">end</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">Memprof</code>
+            is a sampling engine for allocated memory words. Every allocated
+            word has a probability of being sampled equal to a configurable
+            sampling rate. Once a block is sampled, it becomes tracked.
+            A tracked block triggers a user-defined callback as soon 
+           as it is allocated, promoted or deallocated.
+          </p>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="w-full flex-none lg:w-72 border-t lg:border-l bg-gray-100">
+       <div class="flex h-20 border-b relative">
+        <h2 class="text-xl absolute inset-x-0 p-3 bottom-0 mt-7 font-semibold
+         text-gray-500">ocaml-base-compiler.4.11.2
+        </h2>
+       </div>
+       <div class="m-3">
+        <p class="mb-5 italic text-sm">Official release 4.11.2</p>
+        <div class="mb-3">
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="https://ocaml.org">ocaml.org
+          </a>
+         </div>
+        </div>
+        <details class="font-normal mb-2 text-sm">
+         <summary>Other versions</summary><div id="versions_container"></div>
+        </details><h2 class="font-semibold mb-2 text-sm">Authors</h2>
+        <p class="mb-3 text-sm">Xavier Leroy and many contributors</p>
+        <h2 class="font-semibold mb-2 text-sm">Issues</h2>
+        <div class="mb-3">
+         <a class="text-orange cursor-pointer mb-2 text-sm"
+          href="https://github.com/ocaml/opam-repository/issues">
+          github.com/ocaml/opam-repository/issues
+         </a>
+        </div>
+        <details class="font-semibold mb-2 text-sm">
+         <summary>Package dependencies</summary>
+         <div class="font-normal">
+          <ul>
+           <li>
+            <a href="../../../../ocaml/index.html" class="text-orange
+             cursor-pointer">ocaml
+            </a>
+           </li>
+           <li>
+            <a href="../../../../base-unix/index.html" class="text-orange
+             cursor-pointer">base-unix
+            </a>
+           </li>
+           <li>
+            <a href="../../../../base-bigarray/index.html" class="text-orange
+             cursor-pointer">base-bigarray
+            </a>
+           </li>
+           <li>
+            <a href="../../../../base-threads/index.html" class="text-orange
+             cursor-pointer">base-threads
+            </a>
+           </li>
+          </ul>
+         </div>
+        </details>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div><script>Voodoo.update('../../../version.json')</script>
+ </body>
+</html>

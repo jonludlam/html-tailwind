@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head><title>Parmatch (packages.ocaml-base-compiler.4.11.2.Parmatch)</title>
+  <link rel="stylesheet" href="../../../tailwind.css"/>
+  <link rel="stylesheet" href="../../../extra.css"/><meta charset="utf-8"/>
+  <meta name="generator" content="odoc 3dfb7aef2f"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <script src="../../../highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="../../../voodoo_client.js"></script>
+  <script
+   src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+   defer="defer">
+  </script>
+ </head>
+ <body class="mx-auto max-w-screen-2xl">
+  <div class="relative">
+   <div class="relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+     <div class="flex justify-between items-center md:justify-start py-6
+      md:space-x-10">
+      <div class="flex justify-start">
+       <a href="https://v3.ocaml.org/">
+        <img src="/colour-logo.svg" alt="" class="h-8 w-auto sm:h-10"/>
+       </a>
+      </div>
+      <nav class="hidden md:flex space-x-10">
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Industry</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/whatisocaml">
+            <p class="text-base font-medium text-gray-900">What is OCaml</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/users">
+            <p class="text-base font-medium text-gray-900">Industrial Users
+            </p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/successstories">
+            <p class="text-base font-medium text-gray-900">Success Stories
+            </p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Resources</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/releases">
+            <p class="text-base font-medium text-gray-900">Releases</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/applications">
+            <p class="text-base font-medium text-gray-900">Applications</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/language">
+            <p class="text-base font-medium text-gray-900">Language</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/archive">
+            <p class="text-base font-medium text-gray-900">Archive</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Community</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/opportunities">
+            <p class="text-base font-medium text-gray-900">Opportunities</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/news">
+            <p class="text-base font-medium text-gray-900">News</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/aroundweb">
+            <p class="text-base font-medium text-gray-900">Around the Web</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="h-screen flex bg-white font-sans">
+   <div class="flex flex-col w-full h-full">
+    <div class="flex-row flex-1">
+     <nav class="bg-orange border-t border-b border-orange flex flex-row">
+      <ol class="max-w-screen-xl w-full px-4 flex space-x-4 sm:px-6 lg:px-8">
+       <li class="flex">
+        <div class="flex items-center">
+         <a href="#" class="text-gray-100 hover:text-gray-500">
+          
+  <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+        </svg>
+  
+          <span class="sr-only">Home</span>
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">packages
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">ocaml-base-compiler
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">4.11.2
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="#" class="ml-4 text-sm font-medium text-gray-100
+          hover:text-gray-500">Parmatch
+         </a>
+        </div>
+       </li>
+      </ol>
+     </nav>
+    </div>
+    <div class="flex flex-row flex-1">
+     <div class="w-72 flex-none bg-gray-100 h-screen border-r border-gray-200
+      sticky top-0 hidden lg:block">
+      <div class="flex h-20 border-b relative">
+       <h2 class="text-xl absolute inset-x-0 p-3 px-5 bottom-0 mt-7
+        border-gray-200 font-semibold text-gray-500 font-sans">On this page
+       </h2>
+      </div>
+     </div>
+     <div class="flex flex-1 flex-col lg:flex-row">
+      <div class="flex-1">
+       <div class="lg:max-w-5xl mx-auto px-3 lg:px-10 mb-10 text-sm">
+        <div class="flex h-20 relative border-b border-gray-200">
+         <div class="relative flex-1 h-20">
+          <h1 class="text-3xl absolute inset-x-0 py-3 bottom-0 font-semibold
+           text-gray-500 font-sans w-full truncate">
+           <code class="font-mono text-gray-800">Parmatch</code>
+          </h1>
+         </div>
+         <div class="relative flex-none w-28">
+          <h1 class="text-3xl absolute py-3 bottom-0 right-0 font-semibold
+           text-gray-500 font-sans">Module
+          </h1>
+         </div>
+        </div>
+        <p class="mt-4">Detection of partial matches and unused match cases.
+        </p>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-omega">
+          <a href="#val-omega" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> omega : 
+            <a href="../Typedtree/index.html#type-pattern"
+             class="cursor-pointer text-orange">Typedtree.pattern
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">aka. &quot;Tpat_any&quot; or &quot;_&quot;</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-omegas">
+          <a href="#val-omegas" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> omegas : 
+            <span>int <span class="">&#45;&gt;</span></span> 
+            <span>
+             <a href="../Typedtree/index.html#type-pattern"
+              class="cursor-pointer text-orange">Typedtree.pattern
+             </a> list
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">List.init (fun _ -&gt; omega)
+           </code>
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-omega_list">
+          <a href="#val-omega_list" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> omega_list : 
+            <span><span><span class="">'a</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Typedtree/index.html#type-pattern"
+              class="cursor-pointer text-orange">Typedtree.pattern
+             </a> list
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">List.map (fun _ -&gt; omega)
+           </code>
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec module anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="module-Pattern_head">
+          <a href="#module-Pattern_head" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">module</span> </span>
+           <span>
+            <a href="Pattern_head/index.html" class="cursor-pointer
+             text-orange">Pattern_head
+            </a>
+           </span>
+           <span> : <span class="font-semibold">sig</span> ... 
+            <span class="font-semibold">end</span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-normalize_pat">
+          <a href="#val-normalize_pat" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> normalize_pat
+             : 
+            <span>
+             <a href="../Typedtree/index.html#type-pattern"
+              class="cursor-pointer text-orange">Typedtree.pattern
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Typedtree/index.html#type-pattern"
+             class="cursor-pointer text-orange">Typedtree.pattern
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Keep only the &quot;head&quot; of a pattern:
+            all arguments are replaced by 
+           <code class="font-normal text-sm">omega</code>, so are variables.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-const_compare">
+          <a href="#val-const_compare" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> const_compare
+             : 
+            <span>
+             <a href="../Asttypes/index.html#type-constant"
+              class="cursor-pointer text-orange">Asttypes.constant
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Asttypes/index.html#type-constant"
+              class="cursor-pointer text-orange">Asttypes.constant
+             </a> <span class="">&#45;&gt;</span>
+            </span> int
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">const_compare c1 c2</code>
+            compares the actual values represented by 
+           <code class="font-normal text-sm">c1</code> and 
+           <code class="font-normal text-sm">c2</code>, while simply 
+           using <code class="font-normal text-sm">Stdlib.compare</code>
+            would compare the representations.
+          </p><p class="mt-4">cf. MPR#5758</p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-le_pat">
+          <a href="#val-le_pat" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> le_pat : 
+            <span>
+             <a href="../Typedtree/index.html#type-pattern"
+              class="cursor-pointer text-orange">Typedtree.pattern
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Typedtree/index.html#type-pattern"
+              class="cursor-pointer text-orange">Typedtree.pattern
+             </a> <span class="">&#45;&gt;</span>
+            </span> bool
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">le_pat p q</code>
+            means: forall V, V matches q implies V matches p
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-le_pats">
+          <a href="#val-le_pats" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> le_pats : 
+            <span>
+             <span>
+              <a href="../Typedtree/index.html#type-pattern"
+               class="cursor-pointer text-orange">Typedtree.pattern
+              </a> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>
+              <a href="../Typedtree/index.html#type-pattern"
+               class="cursor-pointer text-orange">Typedtree.pattern
+              </a> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> bool
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">le_pats (p1 .. pm) (q1 .. qn)
+           </code> means: forall i &lt;= m, 
+           <code class="font-normal text-sm">le_pat pi qi</code>
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec module anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="module-Compat">
+          <a href="#module-Compat" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">module</span> </span>
+           <span>
+            <a href="Compat/index.html" class="cursor-pointer text-orange">
+             Compat
+            </a>
+           </span>
+           <span> (
+            <a href="Compat/argument-1-_/index.html" class="cursor-pointer
+             text-orange">_
+            </a> : <span class="font-semibold">sig</span> ... 
+            <span class="font-semibold">end</span>) : 
+            <span class="font-semibold">sig</span> ... 
+            <span class="font-semibold">end</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Exported compatibility functor, abstracted 
+           over constructor equality
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec exception anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="exception-Empty">
+          <a href="#exception-Empty" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">exception</span> </span>
+           <span><span class="">Empty</span></span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-lub">
+          <a href="#val-lub" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> lub : 
+            <span>
+             <a href="../Typedtree/index.html#type-pattern"
+              class="cursor-pointer text-orange">Typedtree.pattern
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Typedtree/index.html#type-pattern"
+              class="cursor-pointer text-orange">Typedtree.pattern
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Typedtree/index.html#type-pattern"
+             class="cursor-pointer text-orange">Typedtree.pattern
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">lub p q</code>
+            is a pattern that matches all values matched by 
+           <code class="font-normal text-sm">p</code> and 
+           <code class="font-normal text-sm">q</code>. May raise 
+           <code class="font-normal text-sm">Empty</code>, when 
+           <code class="font-normal text-sm">p</code> and 
+           <code class="font-normal text-sm">q</code> are not compatible.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-lubs">
+          <a href="#val-lubs" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> lubs : 
+            <span>
+             <span>
+              <a href="../Typedtree/index.html#type-pattern"
+               class="cursor-pointer text-orange">Typedtree.pattern
+              </a> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>
+              <a href="../Typedtree/index.html#type-pattern"
+               class="cursor-pointer text-orange">Typedtree.pattern
+              </a> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Typedtree/index.html#type-pattern"
+              class="cursor-pointer text-orange">Typedtree.pattern
+             </a> list
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">lubs [p1; ...; pn] [q1; ...; qk]
+           </code>, where <code class="font-normal text-sm">n &lt; k</code>
+           , is 
+           <code class="font-normal text-sm">[lub p1 q1; ...; lub pk qk]
+           </code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-get_mins">
+          <a href="#val-get_mins" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> get_mins : 
+            <span>
+             <span>(
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> bool)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span><span><span class="">'a</span> list</span> 
+             <span class="">&#45;&gt;</span>
+            </span> <span><span class="">'a</span> list</span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-set_args">
+          <a href="#val-set_args" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> set_args : 
+            <span>
+             <a href="../Typedtree/index.html#type-pattern"
+              class="cursor-pointer text-orange">Typedtree.pattern
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>
+              <a href="../Typedtree/index.html#type-pattern"
+               class="cursor-pointer text-orange">Typedtree.pattern
+              </a> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Typedtree/index.html#type-pattern"
+              class="cursor-pointer text-orange">Typedtree.pattern
+             </a> list
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Those two functions recombine one pattern and
+            its arguments: For instance: (_,_)::p1::p2::rem -&gt; (p1,
+            p2)::rem The second one will replace mutable arguments by
+            '_'
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-set_args_erase_mutable">
+          <a href="#val-set_args_erase_mutable" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            set_args_erase_mutable : 
+            <span>
+             <a href="../Typedtree/index.html#type-pattern"
+              class="cursor-pointer text-orange">Typedtree.pattern
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>
+              <a href="../Typedtree/index.html#type-pattern"
+               class="cursor-pointer text-orange">Typedtree.pattern
+              </a> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Typedtree/index.html#type-pattern"
+              class="cursor-pointer text-orange">Typedtree.pattern
+             </a> list
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-pat_of_constr">
+          <a href="#val-pat_of_constr" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> pat_of_constr
+             : 
+            <span>
+             <a href="../Typedtree/index.html#type-pattern"
+              class="cursor-pointer text-orange">Typedtree.pattern
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Types/index.html#type-constructor_description"
+              class="cursor-pointer text-orange">
+              Types.constructor_description
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Typedtree/index.html#type-pattern"
+             class="cursor-pointer text-orange">Typedtree.pattern
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-complete_constrs">
+          <a href="#val-complete_constrs" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> complete_constrs
+             : 
+            <span>
+             <a href="../Typedtree/index.html#type-pattern"
+              class="cursor-pointer text-orange">Typedtree.pattern
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>
+              <a href="../Types/index.html#type-constructor_tag"
+               class="cursor-pointer text-orange">Types.constructor_tag
+              </a> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Types/index.html#type-constructor_description"
+              class="cursor-pointer text-orange">
+              Types.constructor_description
+             </a> list
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-pat_explosion">
+          <a href="#type-pat_explosion" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> pat_explosion</span>
+           <span> = </span>
+          </code>
+          <table>
+           <tr id="type-pat_explosion.PE_single">
+            <td class="anchored pl-4">
+             <a href="#type-pat_explosion.PE_single" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">PE_single</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-pat_explosion.PE_gadt_cases">
+            <td class="anchored pl-4">
+             <a href="#type-pat_explosion.PE_gadt_cases" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">PE_gadt_cases</span></span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">ppat_of_type</code> builds
+            an untyped pattern from its expected type, for explosion 
+           of wildcard patterns in Typecore.type_pat.
+          </p><p class="mt-4">There are four interesting cases:</p>
+          <ul class="list-disc mt-2 mb-4">
+           <li class="ml-4">the type is empty (
+            <code class="font-normal text-sm">PT_empty</code>)
+           </li>
+           <li class="ml-4">no further explosion is necessary (
+            <code class="font-normal text-sm">PT_any</code>)
+           </li>
+           <li class="ml-4">a single pattern is generated, from a record
+             or tuple type or a single-variant type (
+            <code class="font-normal text-sm">PE_single</code>)
+           </li>
+           <li class="ml-4">an or-pattern is generated, in the case that
+             all branches are GADT constructors (
+            <code class="font-normal text-sm">PE_gadt_cases</code>).
+           </li>
+          </ul>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-ppat_of_type">
+          <a href="#type-ppat_of_type" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> ppat_of_type</span>
+           <span> = </span>
+          </code>
+          <table>
+           <tr id="type-ppat_of_type.PT_empty">
+            <td class="anchored pl-4">
+             <a href="#type-ppat_of_type.PT_empty" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">PT_empty</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-ppat_of_type.PT_any">
+            <td class="anchored pl-4">
+             <a href="#type-ppat_of_type.PT_any" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">PT_any</span></span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-ppat_of_type.PT_pattern">
+            <td class="anchored pl-4">
+             <a href="#type-ppat_of_type.PT_pattern" class="hover-link
+              inline-block -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm"><span>| </span>
+              <span><span class="">PT_pattern</span> 
+               <span class="font-semibold">of</span> 
+               <a href="#type-pat_explosion" class="cursor-pointer
+                text-orange">pat_explosion
+               </a> * 
+               <a href="../Parsetree/index.html#type-pattern"
+                class="cursor-pointer text-orange">Parsetree.pattern
+               </a> * 
+               <span>
+                <span>(string, 
+                 <a href="../Types/index.html#type-constructor_description"
+                  class="cursor-pointer text-orange">
+                  Types.constructor_description
+                 </a>)
+                </span> 
+                <a href="../Stdlib/Hashtbl/index.html#type-t"
+                 class="cursor-pointer text-orange">Stdlib.Hashtbl.t
+                </a>
+               </span> * 
+               <span>
+                <span>(string, 
+                 <a href="../Types/index.html#type-label_description"
+                  class="cursor-pointer text-orange">Types.label_description
+                 </a>)
+                </span> 
+                <a href="../Stdlib/Hashtbl/index.html#type-t"
+                 class="cursor-pointer text-orange">Stdlib.Hashtbl.t
+                </a>
+               </span>
+              </span>
+             </code>
+            </td>
+           </tr>
+          </table>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-ppat_of_type">
+          <a href="#val-ppat_of_type" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> ppat_of_type : 
+            <span>
+             <a href="../Env/index.html#type-t" class="cursor-pointer
+              text-orange">Env.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Types/index.html#type-type_expr"
+              class="cursor-pointer text-orange">Types.type_expr
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="#type-ppat_of_type" class="cursor-pointer text-orange">
+             ppat_of_type
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-pressure_variants">
+          <a href="#val-pressure_variants" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> pressure_variants
+             : 
+            <span>
+             <a href="../Env/index.html#type-t" class="cursor-pointer
+              text-orange">Env.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>
+              <a href="../Typedtree/index.html#type-pattern"
+               class="cursor-pointer text-orange">Typedtree.pattern
+              </a> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100"
+          id="val-pressure_variants_in_computation_pattern">
+          <a href="#val-pressure_variants_in_computation_pattern"
+           class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            pressure_variants_in_computation_pattern : 
+            <span>
+             <a href="../Env/index.html#type-t" class="cursor-pointer
+              text-orange">Env.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>
+              <span>
+               <a href="../Typedtree/index.html#type-computation"
+                class="cursor-pointer text-orange">Typedtree.computation
+               </a> 
+               <a href="../Typedtree/index.html#type-general_pattern"
+                class="cursor-pointer text-orange">Typedtree.general_pattern
+               </a>
+              </span> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-check_partial">
+          <a href="#val-check_partial" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> check_partial
+             : 
+            <span>
+             <span>(
+              <span>
+               <span>
+                <span>(string, 
+                 <a href="../Types/index.html#type-constructor_description"
+                  class="cursor-pointer text-orange">
+                  Types.constructor_description
+                 </a>)
+                </span> 
+                <a href="../Stdlib/Hashtbl/index.html#type-t"
+                 class="cursor-pointer text-orange">Stdlib.Hashtbl.t
+                </a>
+               </span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span>
+               <span>
+                <span>(string, 
+                 <a href="../Types/index.html#type-label_description"
+                  class="cursor-pointer text-orange">Types.label_description
+                 </a>)
+                </span> 
+                <a href="../Stdlib/Hashtbl/index.html#type-t"
+                 class="cursor-pointer text-orange">Stdlib.Hashtbl.t
+                </a>
+               </span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span>
+               <a href="../Parsetree/index.html#type-pattern"
+                class="cursor-pointer text-orange">Parsetree.pattern
+               </a> <span class="">&#45;&gt;</span>
+              </span> 
+              <span>
+               <a href="../Typedtree/index.html#type-pattern"
+                class="cursor-pointer text-orange">Typedtree.pattern
+               </a> option
+              </span>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Location/index.html#type-t" class="cursor-pointer
+              text-orange">Location.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>
+              <span>
+               <a href="../Typedtree/index.html#type-value"
+                class="cursor-pointer text-orange">Typedtree.value
+               </a> 
+               <a href="../Typedtree/index.html#type-case"
+                class="cursor-pointer text-orange">Typedtree.case
+               </a>
+              </span> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <a href="../Typedtree/index.html#type-partial"
+             class="cursor-pointer text-orange">Typedtree.partial
+            </a>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">check_partial pred loc caselist
+           </code> and 
+           <code class="font-normal text-sm">
+            check_unused refute pred caselist
+           </code> are called with a function 
+           <code class="font-normal text-sm">pred</code> which will be
+            given counter-example candidates: they may be partially 
+           ill-typed, and have to be type-checked to extract a valid 
+           counter-example. <code class="font-normal text-sm">pred</code>
+            returns a valid counter-example or 
+           <code class="font-normal text-sm">None</code>. 
+           <code class="font-normal text-sm">refute</code> indicates 
+           that <code class="font-normal text-sm">check_unused</code>
+            was called on a refutation clause.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-check_unused">
+          <a href="#val-check_unused" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> check_unused : 
+            <span>
+             <span>(<span>bool <span class="">&#45;&gt;</span></span>
+               
+              <span>
+               <span>
+                <span>(string, 
+                 <a href="../Types/index.html#type-constructor_description"
+                  class="cursor-pointer text-orange">
+                  Types.constructor_description
+                 </a>)
+                </span> 
+                <a href="../Stdlib/Hashtbl/index.html#type-t"
+                 class="cursor-pointer text-orange">Stdlib.Hashtbl.t
+                </a>
+               </span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span>
+               <span>
+                <span>(string, 
+                 <a href="../Types/index.html#type-label_description"
+                  class="cursor-pointer text-orange">Types.label_description
+                 </a>)
+                </span> 
+                <a href="../Stdlib/Hashtbl/index.html#type-t"
+                 class="cursor-pointer text-orange">Stdlib.Hashtbl.t
+                </a>
+               </span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span>
+               <a href="../Parsetree/index.html#type-pattern"
+                class="cursor-pointer text-orange">Parsetree.pattern
+               </a> <span class="">&#45;&gt;</span>
+              </span> 
+              <span>
+               <a href="../Typedtree/index.html#type-pattern"
+                class="cursor-pointer text-orange">Typedtree.pattern
+               </a> option
+              </span>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>
+              <span>
+               <a href="../Typedtree/index.html#type-value"
+                class="cursor-pointer text-orange">Typedtree.value
+               </a> 
+               <a href="../Typedtree/index.html#type-case"
+                class="cursor-pointer text-orange">Typedtree.case
+               </a>
+              </span> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-irrefutable">
+          <a href="#val-irrefutable" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> irrefutable : 
+            <span>
+             <a href="../Typedtree/index.html#type-pattern"
+              class="cursor-pointer text-orange">Typedtree.pattern
+             </a> <span class="">&#45;&gt;</span>
+            </span> bool
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-inactive">
+          <a href="#val-inactive" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> inactive : 
+            <span>partial:
+             <a href="../Typedtree/index.html#type-partial"
+              class="cursor-pointer text-orange">Typedtree.partial
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a href="../Typedtree/index.html#type-pattern"
+              class="cursor-pointer text-orange">Typedtree.pattern
+             </a> <span class="">&#45;&gt;</span>
+            </span> bool
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">An inactive pattern is a pattern, matching 
+           against which can be duplicated, erased or delayed without
+            change in observable behavior of the program. Patterns containing
+            (lazy _) subpatterns or reads of mutable fields are active.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-check_ambiguous_bindings">
+          <a href="#val-check_ambiguous_bindings" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> 
+            check_ambiguous_bindings : 
+            <span>
+             <span>
+              <span>
+               <a href="../Typedtree/index.html#type-value"
+                class="cursor-pointer text-orange">Typedtree.value
+               </a> 
+               <a href="../Typedtree/index.html#type-case"
+                class="cursor-pointer text-orange">Typedtree.case
+               </a>
+              </span> list
+             </span> <span class="">&#45;&gt;</span>
+            </span> unit
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-some_private_tag">
+          <a href="#val-some_private_tag" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> some_private_tag
+             : 
+            <a href="../Asttypes/index.html#type-label" class="cursor-pointer
+             text-orange">Asttypes.label
+            </a>
+           </span>
+          </code>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="w-full flex-none lg:w-72 border-t lg:border-l bg-gray-100">
+       <div class="flex h-20 border-b relative">
+        <h2 class="text-xl absolute inset-x-0 p-3 bottom-0 mt-7 font-semibold
+         text-gray-500">ocaml-base-compiler.4.11.2
+        </h2>
+       </div>
+       <div class="m-3">
+        <p class="mb-5 italic text-sm">Official release 4.11.2</p>
+        <div class="mb-3">
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="https://ocaml.org">ocaml.org
+          </a>
+         </div>
+        </div>
+        <details class="font-normal mb-2 text-sm">
+         <summary>Other versions</summary><div id="versions_container"></div>
+        </details><h2 class="font-semibold mb-2 text-sm">Authors</h2>
+        <p class="mb-3 text-sm">Xavier Leroy and many contributors</p>
+        <h2 class="font-semibold mb-2 text-sm">Issues</h2>
+        <div class="mb-3">
+         <a class="text-orange cursor-pointer mb-2 text-sm"
+          href="https://github.com/ocaml/opam-repository/issues">
+          github.com/ocaml/opam-repository/issues
+         </a>
+        </div>
+        <details class="font-semibold mb-2 text-sm">
+         <summary>Package dependencies</summary>
+         <div class="font-normal">
+          <ul>
+           <li>
+            <a href="../../../ocaml/index.html" class="text-orange
+             cursor-pointer">ocaml
+            </a>
+           </li>
+           <li>
+            <a href="../../../base-unix/index.html" class="text-orange
+             cursor-pointer">base-unix
+            </a>
+           </li>
+           <li>
+            <a href="../../../base-bigarray/index.html" class="text-orange
+             cursor-pointer">base-bigarray
+            </a>
+           </li>
+           <li>
+            <a href="../../../base-threads/index.html" class="text-orange
+             cursor-pointer">base-threads
+            </a>
+           </li>
+          </ul>
+         </div>
+        </details>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div><script>Voodoo.update('../../version.json')</script>
+ </body>
+</html>
