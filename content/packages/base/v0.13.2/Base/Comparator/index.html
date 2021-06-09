@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head><title>Comparator (packages.base.v0.13.2.Base.Comparator)</title>
+  <link rel="stylesheet" href="../../../../tailwind.css"/>
+  <link rel="stylesheet" href="../../../../extra.css"/>
+  <meta charset="utf-8"/><meta name="generator" content="odoc 3dfb7aef2f"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <script src="../../../../highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="../../../../voodoo_client.js"></script>
+  <script
+   src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+   defer="defer">
+  </script>
+ </head>
+ <body class="mx-auto max-w-screen-2xl">
+  <div class="relative">
+   <div class="relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+     <div class="flex justify-between items-center md:justify-start py-6
+      md:space-x-10">
+      <div class="flex justify-start">
+       <a href="https://v3.ocaml.org/">
+        <img src="/colour-logo.svg" alt="" class="h-8 w-auto sm:h-10"/>
+       </a>
+      </div>
+      <nav class="hidden md:flex space-x-10">
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Industry</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/whatisocaml">
+            <p class="text-base font-medium text-gray-900">What is OCaml</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/users">
+            <p class="text-base font-medium text-gray-900">Industrial Users
+            </p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/successstories">
+            <p class="text-base font-medium text-gray-900">Success Stories
+            </p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Resources</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/releases">
+            <p class="text-base font-medium text-gray-900">Releases</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/applications">
+            <p class="text-base font-medium text-gray-900">Applications</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/language">
+            <p class="text-base font-medium text-gray-900">Language</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/archive">
+            <p class="text-base font-medium text-gray-900">Archive</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Community</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/opportunities">
+            <p class="text-base font-medium text-gray-900">Opportunities</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/news">
+            <p class="text-base font-medium text-gray-900">News</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/aroundweb">
+            <p class="text-base font-medium text-gray-900">Around the Web</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="h-screen flex bg-white font-sans">
+   <div class="flex flex-col w-full h-full">
+    <div class="flex-row flex-1">
+     <nav class="bg-orange border-t border-b border-orange flex flex-row">
+      <ol class="max-w-screen-xl w-full px-4 flex space-x-4 sm:px-6 lg:px-8">
+       <li class="flex">
+        <div class="flex items-center">
+         <a href="#" class="text-gray-100 hover:text-gray-500">
+          
+  <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+        </svg>
+  
+          <span class="sr-only">Home</span>
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">packages
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">base
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">v0.13.2
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">Base
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="#" class="ml-4 text-sm font-medium text-gray-100
+          hover:text-gray-500">Comparator
+         </a>
+        </div>
+       </li>
+      </ol>
+     </nav>
+    </div>
+    <div class="flex flex-row flex-1">
+     <div class="w-72 flex-none bg-gray-100 h-screen border-r border-gray-200
+      sticky top-0 hidden lg:block">
+      <div class="flex h-20 border-b relative">
+       <h2 class="text-xl absolute inset-x-0 p-3 px-5 bottom-0 mt-7
+        border-gray-200 font-semibold text-gray-500 font-sans">On this page
+       </h2>
+      </div>
+     </div>
+     <div class="flex flex-1 flex-col lg:flex-row">
+      <div class="flex-1">
+       <div class="lg:max-w-5xl mx-auto px-3 lg:px-10 mb-10 text-sm">
+        <div class="flex h-20 relative border-b border-gray-200">
+         <div class="relative flex-1 h-20">
+          <h1 class="text-3xl absolute inset-x-0 py-3 bottom-0 font-semibold
+           text-gray-500 font-sans w-full truncate">
+           <code class="font-mono text-gray-800">Base.Comparator</code>
+          </h1>
+         </div>
+         <div class="relative flex-none w-28">
+          <h1 class="text-3xl absolute py-3 bottom-0 right-0 font-semibold
+           text-gray-500 font-sans">Module
+          </h1>
+         </div>
+        </div>
+        <p class="mt-4">A type-indexed value that allows one to compare
+          (and for generating error messages, serialize) values of the
+          type in question.
+        </p>
+        <p class="mt-4">One of the type parameters is a phantom parameter
+          used to distinguish comparators potentially built on different
+          comparison functions. In particular, we want to distinguish
+          those using polymorphic compare from those using a monomorphic
+          compare.
+        </p>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-t">
+          <a href="#type-t" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> 
+            <span>('a, 'witness) t</span>
+           </span><span> = <span class="font-semibold">private</span> </span>
+           <span>{</span>
+          </code>
+          <table>
+           <tr id="type-t.compare">
+            <td class="anchored pl-4">
+             <a href="#type-t.compare" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>compare : 
+               <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+               </span> 
+               <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+               </span> int;
+              </span>
+             </code>
+            </td>
+           </tr>
+           <tr id="type-t.sexp_of_t">
+            <td class="anchored pl-4">
+             <a href="#type-t.sexp_of_t" class="hover-link inline-block 
+              -ml-7 pr-7">
+              <span class="align-middle text-gray-200 transition text-sm
+               font-sans opacity-0 hover:text-gray-700">#
+              </span>
+             </a>
+             <code class="font-normal text-sm">
+              <span>sexp_of_t : 
+               <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+               </span> 
+               <a href="../Sexp/index.html#type-t" class="cursor-pointer
+                text-orange">Sexp.t
+               </a>;
+              </span>
+             </code>
+            </td>
+           </tr>
+          </table><code class="font-normal text-sm"><span>}</span></code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="type-comparator">
+          <a href="#type-comparator" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">type</span> 
+            <span>('a, 'b) comparator</span>
+           </span>
+           <span> = 
+            <span>
+             <span>(<span class="">'a</span>, <span class="">'b</span>)
+             </span> 
+             <a href="#type-t" class="cursor-pointer text-orange">t</a>
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec module-type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="module-type-S">
+          <a href="#module-type-S" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">module</span> 
+            <span class="font-semibold">type</span> 
+           </span>
+           <span>
+            <a href="module-type-S/index.html" class="cursor-pointer
+             text-orange">S
+            </a>
+           </span>
+           <span> = <span class="font-semibold">sig</span> ... 
+            <span class="font-semibold">end</span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec module-type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="module-type-S1">
+          <a href="#module-type-S1" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">module</span> 
+            <span class="font-semibold">type</span> 
+           </span>
+           <span>
+            <a href="module-type-S1/index.html" class="cursor-pointer
+             text-orange">S1
+            </a>
+           </span>
+           <span> = <span class="font-semibold">sig</span> ... 
+            <span class="font-semibold">end</span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec module-type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="module-type-S_fc">
+          <a href="#module-type-S_fc" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">module</span> 
+            <span class="font-semibold">type</span> 
+           </span>
+           <span>
+            <a href="module-type-S_fc/index.html" class="cursor-pointer
+             text-orange">S_fc
+            </a>
+           </span>
+           <span> = <span class="font-semibold">sig</span> ... 
+            <span class="font-semibold">end</span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-make">
+          <a href="#val-make" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> make : 
+            <span>compare:
+             <span>(
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> 
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> int)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>sexp_of_t:
+             <span>(
+              <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+              </span> 
+              <a href="../Sexp/index.html#type-t" class="cursor-pointer
+               text-orange">Sexp.t
+              </a>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>(<span class="font-semibold">module</span> 
+             <a href="module-type-S_fc/index.html" class="cursor-pointer
+              text-orange">S_fc
+             </a> <span class="font-semibold">with</span> 
+             <span class="font-semibold">type</span> 
+             <a href="module-type-S_fc/index.html#type-comparable_t"
+              class="cursor-pointer text-orange">comparable_t
+             </a> = <span class="">'a</span>)
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">make</code>
+            creates a comparator witness for the given comparison. It
+            is intended as a lightweight alternative to the functors 
+           below, to be used like so: 
+           <code class="font-normal text-sm">
+            include (val Comparator.make ~compare ~sexp_of_t)
+           </code>
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec module anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="module-Poly">
+          <a href="#module-Poly" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">module</span> </span>
+           <span>
+            <a href="Poly/index.html" class="cursor-pointer text-orange">Poly
+            </a>
+           </span>
+           <span> : 
+            <a href="module-type-S1/index.html" class="cursor-pointer
+             text-orange">S1
+            </a> <span class="font-semibold">with</span> 
+            <span><span class="font-semibold">type</span> 
+             <span>'a 
+              <a href="module-type-S1/index.html#type-t"
+               class="cursor-pointer text-orange">t
+              </a>
+             </span> = <span class="">'a</span>
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec module anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="module-S_to_S1">
+          <a href="#module-S_to_S1" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">module</span> </span>
+           <span>
+            <a href="S_to_S1/index.html" class="cursor-pointer text-orange">
+             S_to_S1
+            </a>
+           </span>
+           <span> (
+            <a href="S_to_S1/argument-1-S/index.html" class="cursor-pointer
+             text-orange">S
+            </a> : 
+            <a href="module-type-S/index.html" class="cursor-pointer
+             text-orange">S
+            </a>) : 
+            <a href="module-type-S1/index.html" class="cursor-pointer
+             text-orange">S1
+            </a> <span class="font-semibold">with</span> 
+            <span><span class="font-semibold">type</span> 
+             <span>'a 
+              <a href="module-type-S1/index.html#type-t"
+               class="cursor-pointer text-orange">t
+              </a>
+             </span> = 
+             <a href="S_to_S1/argument-1-S/index.html#type-t"
+              class="cursor-pointer text-orange">S.t
+             </a>
+            </span> <span class="font-semibold">with</span> 
+            <span><span class="font-semibold">type</span> 
+             <a href="module-type-S1/index.html#type-comparator_witness"
+              class="cursor-pointer text-orange">comparator_witness
+             </a> = 
+             <a
+              href="S_to_S1/argument-1-S/index.html#type-comparator_witness"
+              class="cursor-pointer text-orange">S.comparator_witness
+             </a>
+            </span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec module anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="module-Make">
+          <a href="#module-Make" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">module</span> </span>
+           <span>
+            <a href="Make/index.html" class="cursor-pointer text-orange">Make
+            </a>
+           </span>
+           <span> (
+            <a href="Make/argument-1-M/index.html" class="cursor-pointer
+             text-orange">M
+            </a> : <span class="font-semibold">sig</span> ... 
+            <span class="font-semibold">end</span>) : 
+            <a href="module-type-S/index.html" class="cursor-pointer
+             text-orange">S
+            </a> <span class="font-semibold">with</span> 
+            <span><span class="font-semibold">type</span> 
+             <a href="module-type-S/index.html#type-t" class="cursor-pointer
+              text-orange">t
+             </a> := 
+             <a href="Make/argument-1-M/index.html#type-t"
+              class="cursor-pointer text-orange">M.t
+             </a>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">Make</code>
+            creates a <code class="font-normal text-sm">comparator</code>
+            value and its phantom 
+           <code class="font-normal text-sm">comparator_witness</code>
+            type for a nullary type.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec module anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="module-Make1">
+          <a href="#module-Make1" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">module</span> </span>
+           <span>
+            <a href="Make1/index.html" class="cursor-pointer text-orange">
+             Make1
+            </a>
+           </span>
+           <span> (
+            <a href="Make1/argument-1-M/index.html" class="cursor-pointer
+             text-orange">M
+            </a> : <span class="font-semibold">sig</span> ... 
+            <span class="font-semibold">end</span>) : 
+            <a href="module-type-S1/index.html" class="cursor-pointer
+             text-orange">S1
+            </a> <span class="font-semibold">with</span> 
+            <span><span class="font-semibold">type</span> 
+             <span>'a 
+              <a href="module-type-S1/index.html#type-t"
+               class="cursor-pointer text-orange">t
+              </a>
+             </span> := 
+             <span><span class="">'a</span> 
+              <a href="Make1/argument-1-M/index.html#type-t"
+               class="cursor-pointer text-orange">M.t
+              </a>
+             </span>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">Make1</code>
+            creates a <code class="font-normal text-sm">comparator</code>
+            value and its phantom 
+           <code class="font-normal text-sm">comparator_witness</code>
+            type for a unary type. It takes a 
+           <code class="font-normal text-sm">compare</code> and 
+           <code class="font-normal text-sm">sexp_of_t</code> that have
+            non-standard types because the 
+           <code class="font-normal text-sm">Comparator.t</code> type
+            doesn't allow passing in additional values for the type argument.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec module-type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="module-type-Derived">
+          <a href="#module-type-Derived" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">module</span> 
+            <span class="font-semibold">type</span> 
+           </span>
+           <span>
+            <a href="module-type-Derived/index.html" class="cursor-pointer
+             text-orange">Derived
+            </a>
+           </span>
+           <span> = <span class="font-semibold">sig</span> ... 
+            <span class="font-semibold">end</span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec module anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="module-Derived">
+          <a href="#module-Derived" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">module</span> </span>
+           <span>
+            <a href="Derived/index.html" class="cursor-pointer text-orange">
+             Derived
+            </a>
+           </span>
+           <span> (
+            <a href="Derived/argument-1-M/index.html" class="cursor-pointer
+             text-orange">M
+            </a> : <span class="font-semibold">sig</span> ... 
+            <span class="font-semibold">end</span>) : 
+            <a href="module-type-Derived/index.html" class="cursor-pointer
+             text-orange">Derived
+            </a> <span class="font-semibold">with</span> 
+            <span><span class="font-semibold">type</span> 
+             <span>'a 
+              <a href="module-type-Derived/index.html#type-t"
+               class="cursor-pointer text-orange">t
+              </a>
+             </span> := 
+             <span><span class="">'a</span> 
+              <a href="Derived/argument-1-M/index.html#type-t"
+               class="cursor-pointer text-orange">M.t
+              </a>
+             </span>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">Derived</code>
+            creates a <code class="font-normal text-sm">comparator</code>
+            function that constructs a comparator for the type 
+           <code class="font-normal text-sm">'a t</code> given a comparator
+            for the type <code class="font-normal text-sm">'a</code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec module-type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="module-type-Derived2">
+          <a href="#module-type-Derived2" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">module</span> 
+            <span class="font-semibold">type</span> 
+           </span>
+           <span>
+            <a href="module-type-Derived2/index.html" class="cursor-pointer
+             text-orange">Derived2
+            </a>
+           </span>
+           <span> = <span class="font-semibold">sig</span> ... 
+            <span class="font-semibold">end</span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec module anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="module-Derived2">
+          <a href="#module-Derived2" class="hover-link inline-block -ml-7
+           pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">module</span> </span>
+           <span>
+            <a href="Derived2/index.html" class="cursor-pointer text-orange">
+             Derived2
+            </a>
+           </span>
+           <span> (
+            <a href="Derived2/argument-1-M/index.html" class="cursor-pointer
+             text-orange">M
+            </a> : <span class="font-semibold">sig</span> ... 
+            <span class="font-semibold">end</span>) : 
+            <a href="module-type-Derived2/index.html" class="cursor-pointer
+             text-orange">Derived2
+            </a> <span class="font-semibold">with</span> 
+            <span><span class="font-semibold">type</span> 
+             <span>('a, 'b) 
+              <a href="module-type-Derived2/index.html#type-t"
+               class="cursor-pointer text-orange">t
+              </a>
+             </span> := 
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'b</span>)
+              </span> 
+              <a href="Derived2/argument-1-M/index.html#type-t"
+               class="cursor-pointer text-orange">M.t
+              </a>
+             </span>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4"><code class="font-normal text-sm">Derived2</code>
+            creates a <code class="font-normal text-sm">comparator</code>
+            function that constructs a comparator for the type 
+           <code class="font-normal text-sm">('a, 'b) t</code> given 
+           comparators for the type 
+           <code class="font-normal text-sm">'a</code> and 
+           <code class="font-normal text-sm">'b</code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec module-type anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="module-type-Derived_phantom">
+          <a href="#module-type-Derived_phantom" class="hover-link
+           inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">module</span> 
+            <span class="font-semibold">type</span> 
+           </span>
+           <span>
+            <a href="module-type-Derived_phantom/index.html"
+             class="cursor-pointer text-orange">Derived_phantom
+            </a>
+           </span>
+           <span> = <span class="font-semibold">sig</span> ... 
+            <span class="font-semibold">end</span>
+           </span>
+          </code>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec module anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="module-Derived_phantom">
+          <a href="#module-Derived_phantom" class="hover-link inline-block
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">module</span> </span>
+           <span>
+            <a href="Derived_phantom/index.html" class="cursor-pointer
+             text-orange">Derived_phantom
+            </a>
+           </span>
+           <span> (
+            <a href="Derived_phantom/argument-1-M/index.html"
+             class="cursor-pointer text-orange">M
+            </a> : <span class="font-semibold">sig</span> ... 
+            <span class="font-semibold">end</span>) : 
+            <a href="module-type-Derived_phantom/index.html"
+             class="cursor-pointer text-orange">Derived_phantom
+            </a> <span class="font-semibold">with</span> 
+            <span><span class="font-semibold">type</span> 
+             <span>('a, 'b) 
+              <a href="module-type-Derived_phantom/index.html#type-t"
+               class="cursor-pointer text-orange">t
+              </a>
+             </span> := 
+             <span>
+              <span>(<span class="">'a</span>, <span class="">'b</span>)
+              </span> 
+              <a href="Derived_phantom/argument-1-M/index.html#type-t"
+               class="cursor-pointer text-orange">M.t
+              </a>
+             </span>
+            </span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">
+           <code class="font-normal text-sm">Derived_phantom</code> creates
+            a <code class="font-normal text-sm">comparator</code> function
+            that constructs a comparator for the type 
+           <code class="font-normal text-sm">('a, 'b) t</code> given 
+           a comparator for the type 
+           <code class="font-normal text-sm">'a</code>.
+          </p>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="w-full flex-none lg:w-72 border-t lg:border-l bg-gray-100">
+       <div class="flex h-20 border-b relative">
+        <h2 class="text-xl absolute inset-x-0 p-3 bottom-0 mt-7 font-semibold
+         text-gray-500">base.v0.13.2
+        </h2>
+       </div>
+       <div class="m-3">
+        <p class="mb-5 italic text-sm">
+         Full standard library replacement for OCaml
+        </p>
+        <div class="mb-3">
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="https://github.com/janestreet/base">
+           github.com/janestreet/base
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1.323l3.954 1.582 1.599-.8a1 1 0 01.894 1.79l-1.233.616 1.738 5.42a1 1 0 01-.285 1.05A3.989 3.989 0 0115 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.715-5.349L11 6.477V16h2a1 1 0 110 2H7a1 1 0 110-2h2V6.477L6.237 7.582l1.715 5.349a1 1 0 01-.285 1.05A3.989 3.989 0 015 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.738-5.42-1.233-.617a1 1 0 01.894-1.788l1.599.799L9 4.323V3a1 1 0 011-1zm-5 8.274l-.818 2.552c.25.112.526.174.818.174.292 0 .569-.062.818-.174L5 10.274zm10 0l-.818 2.552c.25.112.526.174.818.174.292 0 .569-.062.818-.174L15 10.274z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="../../LICENSE.md.html">LICENSE.md
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
+</svg>
+    
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="../../README.org.html">README.org
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" />
+</svg>
+  
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="../../CHANGES.md.html">CHANGES.md
+          </a>
+         </div>
+        </div>
+        <details class="font-normal mb-2 text-sm">
+         <summary>Other versions</summary><div id="versions_container"></div>
+        </details><h2 class="font-semibold mb-2 text-sm">Authors</h2>
+        <p class="mb-3 text-sm">Jane Street Group, LLC</p>
+        <h2 class="font-semibold mb-2 text-sm">Issues</h2>
+        <div class="mb-3">
+         <a class="text-orange cursor-pointer mb-2 text-sm"
+          href="https://github.com/janestreet/base/issues">
+          github.com/janestreet/base/issues
+         </a>
+        </div>
+        <details class="font-semibold mb-2 text-sm">
+         <summary>Package dependencies</summary>
+         <div class="font-normal">
+          <ul>
+           <li>
+            <a href="../../../../ocaml/index.html" class="text-orange
+             cursor-pointer">ocaml
+            </a>
+           </li>
+           <li>
+            <a href="../../../../sexplib0/index.html" class="text-orange
+             cursor-pointer">sexplib0
+            </a>
+           </li>
+           <li>
+            <a href="../../../../dune/index.html" class="text-orange
+             cursor-pointer">dune
+            </a>
+           </li>
+           <li>
+            <a href="../../../../dune-configurator/index.html"
+             class="text-orange cursor-pointer">dune-configurator
+            </a>
+           </li>
+          </ul>
+         </div>
+        </details>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div><script>Voodoo.update('../../../version.json')</script>
+ </body>
+</html>

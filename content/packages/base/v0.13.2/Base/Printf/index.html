@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head><title>Printf (packages.base.v0.13.2.Base.Printf)</title>
+  <link rel="stylesheet" href="../../../../tailwind.css"/>
+  <link rel="stylesheet" href="../../../../extra.css"/>
+  <meta charset="utf-8"/><meta name="generator" content="odoc 3dfb7aef2f"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <script src="../../../../highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="../../../../voodoo_client.js"></script>
+  <script
+   src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+   defer="defer">
+  </script>
+ </head>
+ <body class="mx-auto max-w-screen-2xl">
+  <div class="relative">
+   <div class="relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+     <div class="flex justify-between items-center md:justify-start py-6
+      md:space-x-10">
+      <div class="flex justify-start">
+       <a href="https://v3.ocaml.org/">
+        <img src="/colour-logo.svg" alt="" class="h-8 w-auto sm:h-10"/>
+       </a>
+      </div>
+      <nav class="hidden md:flex space-x-10">
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Industry</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/whatisocaml">
+            <p class="text-base font-medium text-gray-900">What is OCaml</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/users">
+            <p class="text-base font-medium text-gray-900">Industrial Users
+            </p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/industry/successstories">
+            <p class="text-base font-medium text-gray-900">Success Stories
+            </p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Resources</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/releases">
+            <p class="text-base font-medium text-gray-900">Releases</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/applications">
+            <p class="text-base font-medium text-gray-900">Applications</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/language">
+            <p class="text-base font-medium text-gray-900">Language</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/resources/archive">
+            <p class="text-base font-medium text-gray-900">Archive</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div x-data="{ isOn: false }" @click="isOn = !isOn" class="relative">
+        <button class="text-gray-500 bg-white rounded-md inline-flex
+         items-center text-base font-medium hover:text-gray-900
+         focus:outline-none focus:ring-2 focus:ring-offset-2
+         focus:ring-yellow-500"><span>Community</span>
+         
+  <svg aria-hidden=
+                  "true" class=
+                  "text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
+                  fill="currentColor" viewbox="0 0 20 20" xmlns=
+                  "http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" d=
+                  "M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  fill-rule="evenodd"></path></svg>
+  
+        </button>
+        <div
+         :class="{ 'opacity-100' : isOn, 'translate-y-0': isOn, 'opacity-0': !isOn, 'translate-y-1': !isOn, 'hidden': !isOn }"
+         class="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 
+         px-2 w-screen max-w-xs hidden sm:px-0">
+         <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5
+          overflow-hidden">
+          <div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/opportunities">
+            <p class="text-base font-medium text-gray-900">Opportunities</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/news">
+            <p class="text-base font-medium text-gray-900">News</p>
+           </a>
+           <a class="-m-3 p-3 block rounded-md hover:bg-gray-50 transition
+            ease-in-out duration--150"
+            href="https://v3.ocaml.org/community/aroundweb">
+            <p class="text-base font-medium text-gray-900">Around the Web</p>
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="h-screen flex bg-white font-sans">
+   <div class="flex flex-col w-full h-full">
+    <div class="flex-row flex-1">
+     <nav class="bg-orange border-t border-b border-orange flex flex-row">
+      <ol class="max-w-screen-xl w-full px-4 flex space-x-4 sm:px-6 lg:px-8">
+       <li class="flex">
+        <div class="flex items-center">
+         <a href="#" class="text-gray-100 hover:text-gray-500">
+          
+  <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+        </svg>
+  
+          <span class="sr-only">Home</span>
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">packages
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">base
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">v0.13.2
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="../index.html" class="ml-4 text-sm font-medium
+          text-gray-100 hover:text-gray-500">Base
+         </a>
+        </div>
+       </li>
+       <li class="flex">
+        <div class="flex items-center text-gray-100">
+         
+    <svg class="flex-shrink-0 w-6 h-full text-gray-100" viewBox="0 0 24 44" preserveAspectRatio="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z" />
+      </svg>
+    
+         <a href="#" class="ml-4 text-sm font-medium text-gray-100
+          hover:text-gray-500">Printf
+         </a>
+        </div>
+       </li>
+      </ol>
+     </nav>
+    </div>
+    <div class="flex flex-row flex-1">
+     <div class="w-72 flex-none bg-gray-100 h-screen border-r border-gray-200
+      sticky top-0 hidden lg:block">
+      <div class="flex h-20 border-b relative">
+       <h2 class="text-xl absolute inset-x-0 p-3 px-5 bottom-0 mt-7
+        border-gray-200 font-semibold text-gray-500 font-sans">On this page
+       </h2>
+      </div>
+      <nav class="bg-gray-100 p-5">
+       <ul>
+        <li>
+         <a href="#formatting-error-and-exit-functions" class="cursor-pointer
+          text-orange">Formatting error and exit functions
+         </a>
+        </li>
+       </ul>
+      </nav>
+     </div>
+     <div class="flex flex-1 flex-col lg:flex-row">
+      <div class="flex-1">
+       <div class="lg:max-w-5xl mx-auto px-3 lg:px-10 mb-10 text-sm">
+        <div class="flex h-20 relative border-b border-gray-200">
+         <div class="relative flex-1 h-20">
+          <h1 class="text-3xl absolute inset-x-0 py-3 bottom-0 font-semibold
+           text-gray-500 font-sans w-full truncate">
+           <code class="font-mono text-gray-800">Base.Printf</code>
+          </h1>
+         </div>
+         <div class="relative flex-none w-28">
+          <h1 class="text-3xl absolute py-3 bottom-0 right-0 font-semibold
+           text-gray-500 font-sans">Module
+          </h1>
+         </div>
+        </div><p class="mt-4">Functions for formatted output.</p>
+        <p class="mt-4"><code class="font-normal text-sm">fprintf</code>
+          and related functions format their arguments according to the
+          given format string. The format string is a character string
+          which contains two types of objects: plain characters, which
+          are simply copied to the output channel, and conversion 
+         specifications, each of which causes conversion and printing
+          of arguments.
+        </p>
+        <p class="mt-4">Conversion specifications have the following form:
+        </p>
+        <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+         <code class="font-normal text-sm">
+          % [flags] [width] [.precision] type
+         </code>
+        </pre>
+        <p class="mt-4">In short, a conversion specification consists
+          in the <code class="font-normal text-sm">%</code> character,
+          followed by optional modifiers and a type which is made of 
+         one or two characters.
+        </p><p class="mt-4">The types and their meanings are:</p>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4"><code class="font-normal text-sm">d</code>,
+           <code class="font-normal text-sm">i</code>: convert an integer
+           argument to signed decimal.
+         </li>
+         <li class="ml-4"><code class="font-normal text-sm">u</code>,
+           <code class="font-normal text-sm">n</code>, 
+          <code class="font-normal text-sm">l</code>, 
+          <code class="font-normal text-sm">L</code>, or 
+          <code class="font-normal text-sm">N</code>: convert an integer
+           argument to unsigned decimal. Warning: 
+          <code class="font-normal text-sm">n</code>, 
+          <code class="font-normal text-sm">l</code>, 
+          <code class="font-normal text-sm">L</code>, and 
+          <code class="font-normal text-sm">N</code> are used for 
+          <code class="font-normal text-sm">scanf</code>, and should 
+          not be used for <code class="font-normal text-sm">printf</code>
+          .
+         </li>
+         <li class="ml-4"><code class="font-normal text-sm">x</code>:
+           convert an integer argument to unsigned hexadecimal, using
+           lowercase letters.
+         </li>
+         <li class="ml-4"><code class="font-normal text-sm">X</code>:
+           convert an integer argument to unsigned hexadecimal, using
+           uppercase letters.
+         </li>
+         <li class="ml-4"><code class="font-normal text-sm">o</code>:
+           convert an integer argument to unsigned octal.
+         </li>
+         <li class="ml-4"><code class="font-normal text-sm">s</code>:
+           insert a string argument.
+         </li>
+         <li class="ml-4"><code class="font-normal text-sm">S</code>:
+           convert a string argument to OCaml syntax (double quotes, 
+          escapes).
+         </li>
+         <li class="ml-4"><code class="font-normal text-sm">c</code>:
+           insert a character argument.
+         </li>
+         <li class="ml-4"><code class="font-normal text-sm">C</code>:
+           convert a character argument to OCaml syntax (single quotes,
+           escapes).
+         </li>
+         <li class="ml-4"><code class="font-normal text-sm">f</code>:
+           convert a floating-point argument to decimal notation, in 
+          the style <code class="font-normal text-sm">dddd.ddd</code>
+          .
+         </li>
+         <li class="ml-4"><code class="font-normal text-sm">F</code>:
+           convert a floating-point argument to OCaml syntax (
+          <code class="font-normal text-sm">dddd.</code> or 
+          <code class="font-normal text-sm">dddd.ddd</code> or 
+          <code class="font-normal text-sm">d.ddd e+-dd</code>).
+         </li>
+         <li class="ml-4"><code class="font-normal text-sm">e</code> 
+          or <code class="font-normal text-sm">E</code>: convert a 
+          floating-point argument to decimal notation, in the style 
+          <code class="font-normal text-sm">d.ddd e+-dd</code> (mantissa
+           and exponent).
+         </li>
+         <li class="ml-4"><code class="font-normal text-sm">g</code> 
+          or <code class="font-normal text-sm">G</code>: convert a 
+          floating-point argument to decimal notation, in style 
+          <code class="font-normal text-sm">f</code> or 
+          <code class="font-normal text-sm">e</code>, 
+          <code class="font-normal text-sm">E</code> (whichever is more
+           compact). Moreover, any trailing zeros are removed from the
+           fractional part of the result and the decimal-point character
+           is removed if there is no fractional part remaining.
+         </li>
+         <li class="ml-4"><code class="font-normal text-sm">h</code> 
+          or <code class="font-normal text-sm">H</code>: convert a 
+          floating-point argument to hexadecimal notation, in the style
+           <code class="font-normal text-sm">0xh.hhhh e+-dd</code> 
+          (hexadecimal mantissa, exponent in decimal and denotes a power
+           of 2).
+         </li>
+         <li class="ml-4"><code class="font-normal text-sm">B</code>:
+           convert a boolean argument to the string true or false
+         </li>
+         <li class="ml-4"><code class="font-normal text-sm">b</code>:
+           convert a boolean argument (deprecated; do not use in new 
+          programs).
+         </li>
+         <li class="ml-4"><code class="font-normal text-sm">ld</code>
+          , <code class="font-normal text-sm">li</code>, 
+          <code class="font-normal text-sm">lu</code>, 
+          <code class="font-normal text-sm">lx</code>, 
+          <code class="font-normal text-sm">lX</code>, 
+          <code class="font-normal text-sm">lo</code>: convert an int32
+           argument to the format specified by the second letter (decimal,
+           hexadecimal, etc).
+         </li>
+         <li class="ml-4"><code class="font-normal text-sm">nd</code>
+          , <code class="font-normal text-sm">ni</code>, 
+          <code class="font-normal text-sm">nu</code>, 
+          <code class="font-normal text-sm">nx</code>, 
+          <code class="font-normal text-sm">nX</code>, 
+          <code class="font-normal text-sm">no</code>: convert a nativeint
+           argument to the format specified by the second letter.
+         </li>
+         <li class="ml-4"><code class="font-normal text-sm">Ld</code>
+          , <code class="font-normal text-sm">Li</code>, 
+          <code class="font-normal text-sm">Lu</code>, 
+          <code class="font-normal text-sm">Lx</code>, 
+          <code class="font-normal text-sm">LX</code>, 
+          <code class="font-normal text-sm">Lo</code>: convert an int64
+           argument to the format specified by the second letter.
+         </li>
+         <li class="ml-4"><code class="font-normal text-sm">a</code>:
+           user-defined printer. Take two arguments and apply the first
+           one to outchan (the current output channel) and to the second
+           argument. The first argument must therefore have type 
+          <code class="font-normal text-sm">out_channel -&gt; 'b -&gt; unit
+          </code> and the second <code class="font-normal text-sm">'b</code>
+          . The output produced by the function is inserted in the output
+           of <code class="font-normal text-sm">fprintf</code> at the
+           current point.
+         </li>
+         <li class="ml-4"><code class="font-normal text-sm">t</code>:
+           same as <code class="font-normal text-sm">%a</code>, but take
+           only one argument (with type 
+          <code class="font-normal text-sm">out_channel -&gt; unit</code>
+          ) and apply it to <code class="font-normal text-sm">outchan</code>
+          .
+         </li>
+         <li class="ml-4"><code class="font-normal text-sm">{ fmt %}</code>
+          : convert a format string argument to its type digest. The 
+          argument must have the same type as the internal format string
+           <code class="font-normal text-sm">fmt</code>.
+         </li>
+         <li class="ml-4"><code class="font-normal text-sm">( fmt %)</code>
+          : format string substitution. Take a format string argument
+           and substitute it to the internal format string fmt to print
+           following arguments. The argument must have the same type 
+          as the internal format string fmt.
+         </li>
+         <li class="ml-4"><code class="font-normal text-sm">!</code>:
+           take no argument and flush the output.
+         </li>
+         <li class="ml-4"><code class="font-normal text-sm">%</code>:
+           take no argument and output one 
+          <code class="font-normal text-sm">%</code> character.
+         </li>
+         <li class="ml-4"><code class="font-normal text-sm">@</code>:
+           take no argument and output one 
+          <code class="font-normal text-sm">@</code> character.
+         </li>
+         <li class="ml-4"><code class="font-normal text-sm">,</code>:
+           take no argument and output nothing: a no-op delimiter for
+           conversion specifications.
+         </li>
+        </ul>
+        <p class="mt-4">The optional 
+         <code class="font-normal text-sm">flags</code> are:
+        </p>
+        <ul class="list-disc mt-2 mb-4">
+         <li class="ml-4"><code class="font-normal text-sm">-</code>:
+           left-justify the output (default is right justification).
+         </li>
+         <li class="ml-4"><code class="font-normal text-sm">0</code>:
+           for numerical conversions, pad with zeroes instead of spaces.
+         </li>
+         <li class="ml-4"><code class="font-normal text-sm">+</code>:
+           for signed numerical conversions, prefix number with a 
+          <code class="font-normal text-sm">+</code> sign if positive.
+         </li>
+         <li class="ml-4">space: for signed numerical conversions, prefix
+           number with a space if positive.
+         </li>
+         <li class="ml-4"><code class="font-normal text-sm">#</code>:
+           request an alternate formatting style for the hexadecimal 
+          and octal integer types (<code class="font-normal text-sm">x</code>
+          , <code class="font-normal text-sm">X</code>, 
+          <code class="font-normal text-sm">o</code>, 
+          <code class="font-normal text-sm">lx</code>, 
+          <code class="font-normal text-sm">lX</code>, 
+          <code class="font-normal text-sm">lo</code>, 
+          <code class="font-normal text-sm">Lx</code>, 
+          <code class="font-normal text-sm">LX</code>, 
+          <code class="font-normal text-sm">Lo</code>).
+         </li>
+        </ul>
+        <p class="mt-4">The optional 
+         <code class="font-normal text-sm">width</code> is an integer
+          indicating the minimal width of the result. For instance, 
+         <code class="font-normal text-sm">%6d</code> prints an integer,
+          prefixing it with spaces to fill at least 6 characters.
+        </p>
+        <p class="mt-4">The optional 
+         <code class="font-normal text-sm">precision</code> is a dot 
+         <code class="font-normal text-sm">.</code> followed by an integer
+          indicating how many digits follow the decimal point in the 
+         <code class="font-normal text-sm">%f</code>, 
+         <code class="font-normal text-sm">%e</code>, and 
+         <code class="font-normal text-sm">%E</code> conversions. For
+          instance, <code class="font-normal text-sm">%.4f</code> prints
+          a <code class="font-normal text-sm">float</code> with 4 fractional
+          digits.
+        </p>
+        <p class="mt-4">The integer in a 
+         <code class="font-normal text-sm">width</code> or 
+         <code class="font-normal text-sm">precision</code> can also 
+         be specified as <code class="font-normal text-sm">*</code>, 
+         in which case an extra integer argument is taken to specify 
+         the corresponding <code class="font-normal text-sm">width</code>
+          or <code class="font-normal text-sm">precision</code>. This
+          integer argument precedes immediately the argument to print.
+          For instance, <code class="font-normal text-sm">%.*f</code>
+          prints a float with as many fractional digits as the value 
+         of the argument given before the float.
+        </p>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-ifprintf">
+          <a href="#val-ifprintf" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> ifprintf : 
+            <span><span class="">'a</span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>
+              <span>(<span class="">'r</span>, <span class="">'a</span>
+               , <span class="">'c</span>, unit)
+              </span> 
+              <a
+               href="../../../../ocaml-base-compiler/4.11.2/Stdlib/index.html#type-format4"
+               class="cursor-pointer text-orange">Stdlib.format4
+              </a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> <span class="">'r</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Same as 
+           <code class="font-normal text-sm">fprintf</code>, but does
+            not print anything. Useful for ignoring some material when
+            conditionally printing.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-sprintf">
+          <a href="#val-sprintf" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> sprintf : 
+            <span>
+             <span><span>(<span class="">'r</span>, unit, string)</span>
+               
+              <a
+               href="../../../../ocaml-base-compiler/4.11.2/Stdlib/index.html#type-format"
+               class="cursor-pointer text-orange">Stdlib.format
+              </a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> <span class="">'r</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Same as 
+           <code class="font-normal text-sm">fprintf</code>, but instead
+            of printing on an output channel, returns a string.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-bprintf">
+          <a href="#val-bprintf" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> bprintf : 
+            <span>
+             <a
+              href="../../../../ocaml-base-compiler/4.11.2/Stdlib/Buffer/index.html#type-t"
+              class="cursor-pointer text-orange">Caml.Buffer.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>
+              <span>(<span class="">'r</span>, 
+               <a
+                href="../../../../ocaml-base-compiler/4.11.2/Stdlib/Buffer/index.html#type-t"
+                class="cursor-pointer text-orange">Caml.Buffer.t
+               </a>, unit)
+              </span> 
+              <a
+               href="../../../../ocaml-base-compiler/4.11.2/Stdlib/index.html#type-format"
+               class="cursor-pointer text-orange">Stdlib.format
+              </a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> <span class="">'r</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Same as 
+           <code class="font-normal text-sm">fprintf</code>, but instead
+            of printing on an output channel, appends the formatted arguments
+            to the given extensible buffer.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-ksprintf">
+          <a href="#val-ksprintf" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> ksprintf : 
+            <span>
+             <span>(<span>string <span class="">&#45;&gt;</span></span>
+               <span class="">'a</span>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>
+              <span>(<span class="">'r</span>, unit, string, 
+               <span class="">'a</span>)
+              </span> 
+              <a
+               href="../../../../ocaml-base-compiler/4.11.2/Stdlib/index.html#type-format4"
+               class="cursor-pointer text-orange">Stdlib.format4
+              </a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> <span class="">'r</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Same as 
+           <code class="font-normal text-sm">sprintf</code>, but instead
+            of returning the string, passes it to the first argument.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-kbprintf">
+          <a href="#val-kbprintf" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> kbprintf : 
+            <span>
+             <span>(
+              <span>
+               <a
+                href="../../../../ocaml-base-compiler/4.11.2/Stdlib/Buffer/index.html#type-t"
+                class="cursor-pointer text-orange">Caml.Buffer.t
+               </a> <span class="">&#45;&gt;</span>
+              </span> <span class="">'a</span>)
+             </span> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <a
+              href="../../../../ocaml-base-compiler/4.11.2/Stdlib/Buffer/index.html#type-t"
+              class="cursor-pointer text-orange">Caml.Buffer.t
+             </a> <span class="">&#45;&gt;</span>
+            </span> 
+            <span>
+             <span>
+              <span>(<span class="">'r</span>, 
+               <a
+                href="../../../../ocaml-base-compiler/4.11.2/Stdlib/Buffer/index.html#type-t"
+                class="cursor-pointer text-orange">Caml.Buffer.t
+               </a>, unit, <span class="">'a</span>)
+              </span> 
+              <a
+               href="../../../../ocaml-base-compiler/4.11.2/Stdlib/index.html#type-format4"
+               class="cursor-pointer text-orange">Stdlib.format4
+              </a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> <span class="">'r</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Same as 
+           <code class="font-normal text-sm">bprintf</code>, but instead
+            of returning immediately, passes the buffer, after printing,
+            to its first argument.
+          </p>
+         </div>
+        </div>
+        <h6 class="text-gray-800 font-sans anchored"
+         id="formatting-error-and-exit-functions">
+         <a href="#formatting-error-and-exit-functions" class="hover-link
+          inline-block -ml-7 pr-4">
+          <span class="align-middle text-gray-200 transition text-sm
+           font-sans opacity-0 hover:text-gray-700">#
+          </span>
+         </a>Formatting error and exit functions
+        </h6>
+        <p class="mt-4">These functions have a polymorphic return type,
+          since they do not return. Naively, this doesn't mix well with
+          variadic functions: if you define, say,
+        </p>
+        <pre class="bg-gray-100 p-3 my-2 overflow-auto">
+         <code class="font-normal text-sm">
+          let f fmt = ksprintf (fun s -&gt; failwith s) fmt
+         </code>
+        </pre>
+        <p class="mt-4">then you find that 
+         <code class="font-normal text-sm">f &quot;%d&quot; : int -&gt; 'a
+         </code>, as you'd expect, and 
+         <code class="font-normal text-sm">f &quot;%d&quot; 7 : 'a</code>
+         . The problem with this is that 
+         <code class="font-normal text-sm">'a</code> unifies with (say)
+          <code class="font-normal text-sm">int -&gt; 'b</code>, so 
+         <code class="font-normal text-sm">f &quot;%d&quot; 7 4</code>
+          is not a type error -- the 
+         <code class="font-normal text-sm">4</code> is simply ignored.
+        </p>
+        <p class="mt-4">To mitigate this problem, these functions all
+          take a final unit parameter. These rarely arise as formatting
+          positional parameters (they can do with e.g. &quot;%a&quot;,
+          but not in a useful way) so they serve as an effective signpost
+          for &quot;end of formatting arguments&quot;.
+        </p>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-failwithf">
+          <a href="#val-failwithf" class="hover-link inline-block -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> failwithf : 
+            <span>
+             <span>
+              <span>(<span class="">'r</span>, unit, string, 
+               <span>unit <span class="">&#45;&gt;</span></span> 
+               <span class="">_</span>)
+              </span> 
+              <a
+               href="../../../../ocaml-base-compiler/4.11.2/Stdlib/index.html#type-format4"
+               class="cursor-pointer text-orange">Stdlib.format4
+              </a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> <span class="">'r</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Raises 
+           <code class="font-normal text-sm">Failure</code>.
+          </p>
+         </div>
+        </div>
+        <div class="mt-8">
+         <div class="spec value anchored p-2 text-sm rounded border-l-4
+          border-orange my-3 bg-gray-100" id="val-invalid_argf">
+          <a href="#val-invalid_argf" class="hover-link inline-block 
+           -ml-7 pr-7">
+           <span class="align-middle text-gray-200 transition text-sm
+            font-sans opacity-0 hover:text-gray-700">#
+           </span>
+          </a>
+          <code class="font-normal text-sm">
+           <span><span class="font-semibold">val</span> invalid_argf : 
+            <span>
+             <span>
+              <span>(<span class="">'r</span>, unit, string, 
+               <span>unit <span class="">&#45;&gt;</span></span> 
+               <span class="">_</span>)
+              </span> 
+              <a
+               href="../../../../ocaml-base-compiler/4.11.2/Stdlib/index.html#type-format4"
+               class="cursor-pointer text-orange">Stdlib.format4
+              </a>
+             </span> <span class="">&#45;&gt;</span>
+            </span> <span class="">'r</span>
+           </span>
+          </code>
+         </div>
+         <div class="spec-doc">
+          <p class="mt-4">Raises 
+           <code class="font-normal text-sm">Invalid_arg</code>.
+          </p>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="w-full flex-none lg:w-72 border-t lg:border-l bg-gray-100">
+       <div class="flex h-20 border-b relative">
+        <h2 class="text-xl absolute inset-x-0 p-3 bottom-0 mt-7 font-semibold
+         text-gray-500">base.v0.13.2
+        </h2>
+       </div>
+       <div class="m-3">
+        <p class="mb-5 italic text-sm">
+         Full standard library replacement for OCaml
+        </p>
+        <div class="mb-3">
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="https://github.com/janestreet/base">
+           github.com/janestreet/base
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1.323l3.954 1.582 1.599-.8a1 1 0 01.894 1.79l-1.233.616 1.738 5.42a1 1 0 01-.285 1.05A3.989 3.989 0 0115 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.715-5.349L11 6.477V16h2a1 1 0 110 2H7a1 1 0 110-2h2V6.477L6.237 7.582l1.715 5.349a1 1 0 01-.285 1.05A3.989 3.989 0 015 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.738-5.42-1.233-.617a1 1 0 01.894-1.788l1.599.799L9 4.323V3a1 1 0 011-1zm-5 8.274l-.818 2.552c.25.112.526.174.818.174.292 0 .569-.062.818-.174L5 10.274zm10 0l-.818 2.552c.25.112.526.174.818.174.292 0 .569-.062.818-.174L15 10.274z" clip-rule="evenodd" />
+</svg>
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="../../LICENSE.md.html">LICENSE.md
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
+</svg>
+    
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="../../README.org.html">README.org
+          </a>
+         </div>
+         <div class="flex space-x-2">
+          
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" />
+</svg>
+  
+          <a class="text-orange cursor-pointer mb-2 text-sm"
+           href="../../CHANGES.md.html">CHANGES.md
+          </a>
+         </div>
+        </div>
+        <details class="font-normal mb-2 text-sm">
+         <summary>Other versions</summary><div id="versions_container"></div>
+        </details><h2 class="font-semibold mb-2 text-sm">Authors</h2>
+        <p class="mb-3 text-sm">Jane Street Group, LLC</p>
+        <h2 class="font-semibold mb-2 text-sm">Issues</h2>
+        <div class="mb-3">
+         <a class="text-orange cursor-pointer mb-2 text-sm"
+          href="https://github.com/janestreet/base/issues">
+          github.com/janestreet/base/issues
+         </a>
+        </div>
+        <details class="font-semibold mb-2 text-sm">
+         <summary>Package dependencies</summary>
+         <div class="font-normal">
+          <ul>
+           <li>
+            <a href="../../../../ocaml/index.html" class="text-orange
+             cursor-pointer">ocaml
+            </a>
+           </li>
+           <li>
+            <a href="../../../../sexplib0/index.html" class="text-orange
+             cursor-pointer">sexplib0
+            </a>
+           </li>
+           <li>
+            <a href="../../../../dune/index.html" class="text-orange
+             cursor-pointer">dune
+            </a>
+           </li>
+           <li>
+            <a href="../../../../dune-configurator/index.html"
+             class="text-orange cursor-pointer">dune-configurator
+            </a>
+           </li>
+          </ul>
+         </div>
+        </details>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div><script>Voodoo.update('../../../version.json')</script>
+ </body>
+</html>
